@@ -598,7 +598,6 @@ subroutine dyn_init(dyn_in, dyn_out)
    use hybrid_mod,         only: get_loop_ranges, config_thread_region
    use dimensions_mod,     only: nu_scale_top, nu_lev, nu_div_lev
    use dimensions_mod,     only: ksponge_end, kmvis_ref, kmcnd_ref,rho_ref,km_sponge_factor
-   use dimensions_mod,     only: kmvisi_ref, kmcndi_ref,rhoi_ref
    use dimensions_mod,     only: cnst_name_gll, cnst_longname_gll
    use dimensions_mod,     only: irecons_tracer_lev, irecons_tracer, otau, kord_tr, kord_tr_cslam
    use prim_driver_mod,    only: prim_init2
@@ -608,6 +607,7 @@ subroutine dyn_init(dyn_in, dyn_out)
    use phys_control,       only: phys_getopts
    use physconst,          only: get_molecular_diff_coef_reference
    use control_mod,        only: vert_remap_uvTq_alg, vert_remap_tracer_alg
+   use std_atm_profile,    only: std_atm_height
    ! Dummy arguments:
    type(dyn_import_t), intent(out) :: dyn_in
    type(dyn_export_t), intent(out) :: dyn_out
@@ -615,7 +615,7 @@ subroutine dyn_init(dyn_in, dyn_out)
    ! Local variables
    integer             :: ithr, nets, nete, ie, k, kmol_end
    real(r8), parameter :: Tinit = 300.0_r8
-   real(r8)            :: press, ptop, tref
+   real(r8)            :: press(1), ptop, tref,z(1)
 
    type(hybrid_t)      :: hybrid
 
@@ -772,9 +772,6 @@ subroutine dyn_init(dyn_in, dyn_out)
      tref = 1000._r8     !mean value at model top for solar max
      km_sponge_factor = molecular_diff
      km_sponge_factor_local = molecular_diff
-     call get_molecular_diff_coef_reference(1,nlev+1,tref,&
-          (hvcoord%hyai(:)+hvcoord%hybi(:))*hvcoord%ps0, km_sponge_factor_local,&
-          kmvisi_ref,kmcndi_ref,rhoi_ref)
      !
      ! get rho, kmvis and kmcnd at mid-levels
      !
@@ -786,8 +783,10 @@ subroutine dyn_init(dyn_in, dyn_out)
        ! only apply molecular viscosity where viscosity is > 1000 m/s^2
        if (MIN(kmvis_ref(k)/rho_ref(k),kmcnd_ref(k)/(cpair*rho_ref(k)))>1000.0_r8) then
          if (masterproc) then
-            write(iulog,'(a,i3,2e11.4)') "k, p, km_sponge_factor                   :",k, &
-               (hvcoord%hyam(k)+hvcoord%hybm(k))*hvcoord%ps0,km_sponge_factor(k)
+           press = (hvcoord%hyam(k)+hvcoord%hybm(k))*hvcoord%ps0
+           call std_atm_height(press,z)
+           write(iulog,'(a,i3,3e11.4)') "k, p, z, km_sponge_factor                   :",k, &
+                press, z,km_sponge_factor(k)
             write(iulog,'(a,2e11.4)') "kmvis_ref/rho_ref, kmcnd_ref/(cp*rho_ref): ", &
                kmvis_ref(k)/rho_ref(k),kmcnd_ref(k)/(cpair*rho_ref(k))
          end if
@@ -815,7 +814,7 @@ subroutine dyn_init(dyn_in, dyn_out)
      do k=1,nlev
        press = (hvcoord%hyam(k)+hvcoord%hybm(k))*hvcoord%ps0
        ptop  = hvcoord%hyai(1)*hvcoord%ps0
-       nu_scale_top(k) = 8.0_r8*(1.0_r8+tanh(1.0_r8*log(ptop/press))) ! tau will be maximum 8 at model top
+       nu_scale_top(k) = 8.0_r8*(1.0_r8+tanh(1.0_r8*log(ptop/press(1)))) ! tau will be maximum 8 at model top
        if (nu_scale_top(k).ge.0.15_r8) then
          ksponge_end = k
        else
@@ -829,8 +828,11 @@ subroutine dyn_init(dyn_in, dyn_out)
    if (masterproc) then
      write(iulog,*) subname//": ksponge_end = ",ksponge_end
      if (nu_top>0) then
-       do k=1,ksponge_end
-         write(iulog,'(a,i3,1e11.4)') subname//": nu_scale_top ",k,nu_scale_top(k)
+       do k=1,ksponge_end+1
+         press = (hvcoord%hyam(k)+hvcoord%hybm(k))*hvcoord%ps0
+         call std_atm_height(press,z)
+         write(iulog,'(a,i3,4e11.4)') subname//": k, p, z, nu_scale_top, nu ",k,press,z,&
+              nu_scale_top(k),nu_scale_top(k)*nu_top
        end do
      end if
    end if

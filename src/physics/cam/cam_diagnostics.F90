@@ -255,6 +255,7 @@ contains
     call addfld ('OMEGA500',   horiz_only,  'A', 'Pa/s',      'Vertical velocity at 500 mbar pressure surface')
 
     call addfld ('PSL',        horiz_only,  'A', 'Pa','Sea level pressure')
+    call addfld ('PMID',       (/ 'lev' /), 'A', 'Pa', 'Pressure at layer midpoints')
 
     call addfld ('T1000',      horiz_only,  'A', 'K','Temperature at 1000 mbar pressure surface')
     call addfld ('T925',       horiz_only,  'A', 'K','Temperature at 925 mbar pressure surface')
