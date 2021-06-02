@@ -687,8 +687,14 @@ contains
 
         write(iulog,'(a,f10.2,a,f10.2,a)') '* dt    (del2 sponge           ; u,v,T,dM) < ',&
              dt_max_laplacian_top,'s',dt_dyn_del2_actual,'s'
-        if (dt_dyn_del2_actual>dt_max_laplacian_top) &
-             write(iulog,*) 'WARNING: theoretically unstable in sponge; increase se_hypervis_subcycle_sponge'
+        if (dt_dyn_del2_actual>dt_max_laplacian_top) then
+          if (k==1) then
+            write(iulog,*) 'WARNING: theoretically unstable in sponge; increase se_hypervis_subcycle_sponge',&
+                           ' (this WARNING can sometimes be ignored in level 1)'
+          else
+            write(iulog,*) 'WARNING: theoretically unstable in sponge; increase se_hypervis_subcycle_sponge'
+          endif
+        end if
       end do
       write(iulog,*) ' '
       if (hypervis_power /= 0) then

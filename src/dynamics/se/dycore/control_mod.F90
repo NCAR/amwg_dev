@@ -107,12 +107,6 @@ module control_mod
   integer, public, parameter :: neast = 8
 
   !
-  ! parameters for sponge layer Rayleigh damping
-  !
-  real(r8), public :: raytau0
-  real(r8), public :: raykrange
-  integer,  public :: rayk0 
-  !
   ! molecular diffusion
   !  
   real(r8), public :: molecular_diff = -1.0_r8
