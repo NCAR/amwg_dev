@@ -481,7 +481,6 @@ contains
     call addfld ('QBOT',       horiz_only,  'A', 'kg/kg','Lowest model level water vapor mixing ratio')
 
     call addfld ('PSDRY',      horiz_only,  'A', 'Pa', 'Dry surface pressure')
-    call addfld ('PMID',       (/ 'lev' /), 'A', 'Pa', 'Pressure at layer midpoints')
     call addfld ('PDELDRY',    (/ 'lev' /), 'A', 'Pa', 'Dry pressure difference between levels')
 
     ! outfld calls in diag_conv
