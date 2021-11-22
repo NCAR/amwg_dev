@@ -1,0 +1,13 @@
+&modelio
+  diri = "/glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2.hf/bld/glc"
+  diro = "/glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2.hf/run"
+  logfile = "glc.log.9218863.chadmin1.ib0.cheyenne.ucar.edu.210702-002728"
+/
+&pio_inparm
+  pio_netcdf_format = "64bit_offset"
+  pio_numiotasks = -99
+  pio_rearranger = 2
+  pio_root = 1
+  pio_stride = 36
+  pio_typename = "pnetcdf"
+/

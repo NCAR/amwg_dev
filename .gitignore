@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Ignore PBS files (.o files)
+run.*.o*
+st_archive.*.o*

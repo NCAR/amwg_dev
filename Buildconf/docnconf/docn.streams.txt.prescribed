@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<file id="stream" version="1.0">
+<dataSource>
+   GENERIC
+</dataSource>
+<domainInfo>
+  <variableNames>
+     time    time
+        xc      lon
+        yc      lat
+        area    area
+        mask    mask
+  </variableNames>
+  <filePath>
+     /glade/p/cesmdata/cseg/inputdata/ocn/docn7
+  </filePath>
+  <fileNames>
+     domain.ocn.1x1.111007.nc
+  </fileNames>
+</domainInfo>
+<fieldInfo>
+   <variableNames>
+     SST_cpl t
+   </variableNames>
+   <filePath>
+     /glade/p/cesmdata/cseg/inputdata/atm/cam/sst
+   </filePath>
+   <fileNames>
+    sst_HadOIBl_bc_1x1_1850_2017_c180507.nc
+   </fileNames>
+   <offset>
+      0
+   </offset>
+</fieldInfo>
+</file>
