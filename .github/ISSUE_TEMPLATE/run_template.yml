@@ -20,12 +20,19 @@ body:
     id: Casedir
     attributes:
       label: Case directory
-      description: This is the case directory. 
+      description: Enter the location of teh case directory on github and/or locally  
       render: shell
   
   - type: textarea
-    id: logs
+    id: Sandbox
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: Sandbox
+      description: Enter the location of the sandbox on github and/or locally  
+      render: shell
+  
+  - type: textarea
+    id: other
+    attributes:
+      label: Amny other relevant information
+      description: Please enter any relevant information/comments about this run.
       render: shell
