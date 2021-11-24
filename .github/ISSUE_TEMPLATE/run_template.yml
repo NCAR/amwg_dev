@@ -1,4 +1,4 @@
-name: Simulation template (in yml) 
+iname: Simulation template (in yml) 
 description: Documenting information about a CESM simulation you have performed
 title: "Casename (enter the name of the run here)"
 labels: ["AMWG"]
@@ -12,7 +12,7 @@ body:
       label: Description of the run
       description: Please enter a short description of the run here
       placeholder: Tell us what you see!
-      value: ""
+      value: "Enter Description"
     validations:
       required: true
   - type: dropdown
