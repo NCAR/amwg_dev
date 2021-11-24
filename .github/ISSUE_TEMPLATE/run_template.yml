@@ -20,19 +20,26 @@ body:
     id: Casedir
     attributes:
       label: Case directory
-      description: Enter the location of teh case directory on github and/or locally  
-      value: "Enter Description"
+      description: Enter the location of the case directory on github and/or locally  
+      value: "Enter case directory location"
   
   - type: textarea
     id: Sandbox
     attributes:
       label: Sandbox
       description: Enter the location of the sandbox on github and/or locally  
-      render: shell
+      value: "Enter sandbox location"
+ 
+   - type: textarea
+    id: Contact
+    attributes:
+      label: Contact info
+      description: Enter the contact information (person who did the run, science lead, etc...)
+      value: "Enter contact information"
   
   - type: textarea
     id: other
     attributes:
-      label: Amny other relevant information
+      label: Any other relevant information
       description: Please enter any relevant information/comments about this run.
-      render: shell
+      value: "Enter relevant info"
