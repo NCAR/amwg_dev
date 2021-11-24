@@ -15,25 +15,7 @@ body:
       value: "Enter Description"
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Type of run
-      description: What was the type of simulation?
-      options:
-        - Development (Default)
-        - Production (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: Machine?
-      multiple: true
-      options:
-        - Cheyenne
-        - Deracheo
-        - Isumi
+
   - type: textarea
     id: logs
     attributes:
