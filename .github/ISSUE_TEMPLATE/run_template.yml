@@ -1,22 +1,18 @@
-name: CESM Simulations  
+name: Simulation template (in yml) 
 description: Documenting information about a CESM simulation you have performed
-title: "CESM3/CAM7 Run: "
+title: "Casename (enter the name of the run here)"
 labels: ["AMWG"]
 assignees:
-  - swrneale
+  - Enter your name here
   
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: textarea
-    id: what-happened
+    id: Description of the run
     attributes:
-      label: What happened
-      description: Also tell us, what did you expect to happen?
+      label: Description of the run
+      description: Please enter a short description of the run here
       placeholder: Tell us what you see!
-      value: "A bug happened!"
+      value: "En ter description"
     validations:
       required: true
   - type: dropdown
