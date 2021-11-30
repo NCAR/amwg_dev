@@ -23,7 +23,7 @@ module control_mod
                                           ! every rsplit tracer timesteps
   logical, public :: variable_nsplit=.false.
 
-  integer, public :: phys_dyn_cp = 0 !=0; no thermal energy scaling of T increment
+  integer, public :: phys_dyn_cp = 1 !=0; no thermal energy scaling of T increment
                                      !=1; scale increment for cp consistency between dynamics and physics
 
   logical, public :: refined_mesh
