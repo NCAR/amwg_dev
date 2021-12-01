@@ -4594,8 +4594,18 @@ if (zm_org) then
    org2Tpert = 0._r8
 endif
 nit_lheat = 2 ! iterations for ds,dq changes from condensation freezing.
-dmpdz=-1.e-3_r8       ! Entrainment rate. (-ve for /m)
-dmpdz_lnd=-1.e-3_r8
+
+!+++ hannay
+!dmpdz=-1.e-3_r8       ! Entrainment rate. (-ve for /m)
+!dmpdz_lnd=-1.e-3_r8
+
+dmpdz=-0.8e-3_r8       ! Entrainment rate. (-ve for /m)                                                                                                                                                                                    
+
+dmpdz_lnd=-0.8e-3_r8
+
+!--- hannay
+
+
 !dmpdpc = 3.e-2_r8   ! In cloud entrainment rate (/mb).
 lwmax = 1.e-3_r8    ! Need to put formula in for this.
 tscool = -10.0_r8   ! Temp at which water loading freezes in the cloud.
