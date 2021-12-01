@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="scamsas_cam6_2_007.01-1367-ga0f77dc3c">
+    <entry id="MODEL_VERSION" value="cam6_2_011-1294-ga0f77dc3c">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -299,7 +299,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.f09_L32_cam6_3_019_plus_CESM2.2.001_zm2.hf">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_dyn_cp0.hf">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -308,15 +308,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2_buggy/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2_buggy">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.e21.FWscHIST.f09_L32_cam6_3_019_plus_CESM2.2.001_zm2.hf">
+    <entry id="CASE" value="f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_dyn_cp0.hf">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -328,7 +328,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/cime/config/cesm/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2_buggy/cime/config/cesm/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
