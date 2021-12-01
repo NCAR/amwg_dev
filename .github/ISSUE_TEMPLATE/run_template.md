@@ -21,7 +21,7 @@ Locally:
 
 On github:
 https://github.com/NCAR/amwg_dev/tree/cam6_3_019_plus_CESM2.2/
-hash: a0f77dc
+hash: 1cda71d
 
 **Diagnostics:**
 [https://webext.cgd.ucar.edu/FWscHIST/$CASE/atm/](https://webext.cgd.ucar.edu/FWscHIST/$CASE/atm/)
