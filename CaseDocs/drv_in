@@ -128,7 +128,7 @@
   budget_ltend = 0
   budget_month = 1
   case_desc = "UNSET"
-  case_name = "f.e21.FWscHIST.ne30_L48_cam6_3_019_plus_CESM2.2.001_zm2.hf2"
+  case_name = "f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2.hf2"
   cime_model = "cesm"
   coldair_outbreak_mod = .true.
   constant_zenith_deg = -1
@@ -203,7 +203,7 @@
   scmlon = -999.
   shr_map_dopole = .true.
   single_column = .false.
-  start_type = "startup"
+  start_type = "continue"
   tchkpt_dir = "./timing/checkpoints"
   tfreeze_option = "mushy"
   timing_dir = "./timing"
