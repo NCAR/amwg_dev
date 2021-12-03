@@ -1,10 +1,10 @@
 &modelio
-  diri = "/glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_PPM.hf/bld/esp"
-  diro = "/glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_PPM.hf/run"
-  logfile = "esp.log.1661613.chadmin1.ib0.cheyenne.ucar.edu.211129-183854"
+  diri = "/glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder.001.hf2/bld/esp"
+  diro = "/glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder.001.hf2/run"
+  logfile = "esp.log.1704457.chadmin1.ib0.cheyenne.ucar.edu.211202-150241"
 /
 &pio_inparm
-  pio_netcdf_format = ""
+  pio_netcdf_format = "64bit_offset"
   pio_numiotasks = -99
   pio_rearranger = -99
   pio_root = -99

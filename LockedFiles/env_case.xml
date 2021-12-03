@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cam6_2_011-1294-ga0f77dc3c">
+    <entry id="MODEL_VERSION" value="cam6_3_006-672-gb2c1f8e1">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -39,7 +39,7 @@
     <entry id="GRIDS_SPEC_FILE" value="$CIMEROOT/config/$MODEL/config_grids.xml">
       <type>char</type>
       <desc>file containing specification of all supported model grids, domains and mapping files (for documentation only - DO NOT EDIT)</desc>
-      <schema>$CIMEROOT/config/xml_schemas/config_grids_v2.1.xsd</schema>
+      <schema>$CIMEROOT/config/xml_schemas/config_grids_v2.2.xsd</schema>
     </entry>
     <entry id="MACHINES_SPEC_FILE" value="$CIMEROOT/config/$MODEL/machines/config_machines.xml">
       <type>char</type>
@@ -109,7 +109,7 @@
       <schema version="2.0">$CIMEROOT/config/xml_schemas/entry_id.xsd</schema>
       <schema version="3.0">$CIMEROOT/config/xml_schemas/entry_id_version3.xsd</schema>
     </entry>
-    <entry id="CONFIG_CPL_FILE_MODEL_SPECIFIC" value="$CIMEROOT/src/drivers/$COMP_INTERFACE/cime_config/config_component_$MODEL.xml">
+    <entry id="CONFIG_CPL_FILE_MODEL_SPECIFIC">
       <type>char</type>
       <desc>file containing all component specific driver configuration variables (for documentation only - DO NOT EDIT)</desc>
       <schema version="2.0">$CIMEROOT/config/xml_schemas/entry_id.xsd</schema>
@@ -179,17 +179,17 @@
     </entry>
   </group>
   <group id="case_comps">
-    <entry id="COMP_ROOT_DIR_CPL" value="$CIMEROOT/src/drivers/$COMP_INTERFACE">
+    <entry id="COMP_ROOT_DIR_CPL" value="$SRCROOT/components/cpl7/driver">
       <type>char</type>
       <desc>Root directory of the case driver/coupler component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_OCN" value="$CIMEROOT/src/components/data_comps_$COMP_INTERFACE/docn">
+    <entry id="COMP_ROOT_DIR_OCN" value="$SRCROOT/components/cpl7/components/data_comps_$COMP_INTERFACE/docn">
       <type>char</type>
       <desc>Root directory of the case ocean component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_WAV" value="$CIMEROOT/src/components/stub_comps_$COMP_INTERFACE/swav">
+    <entry id="COMP_ROOT_DIR_WAV" value="$SRCROOT/components/cpl7/components/stub_comps_$COMP_INTERFACE/swav">
       <type>char</type>
       <desc>Root directory of the case wave model component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
@@ -214,12 +214,12 @@
       <desc>Root directory of the case land model component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_IAC" value="$CIMEROOT/src/components/stub_comps_$COMP_INTERFACE/siac">
+    <entry id="COMP_ROOT_DIR_IAC" value="$SRCROOT/components/cpl7/components/stub_comps_$COMP_INTERFACE/siac">
       <type>char</type>
       <desc>Root directory of the case integrated assessment component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_ESP" value="$CIMEROOT/src/components/stub_comps_$COMP_INTERFACE/sesp">
+    <entry id="COMP_ROOT_DIR_ESP" value="$SRCROOT/components/cpl7/components/stub_comps_$COMP_INTERFACE/sesp">
       <type>char</type>
       <desc>Root directory of the case external system processing (esp) component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
@@ -277,6 +277,16 @@
       <valid_values>cism</valid_values>
       <desc>Name of land ice-sheet component</desc>
     </entry>
+    <entry id="CISM_USE_GREENLAND" value="TRUE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether to include the Greenland Ice Sheet in this CISM simulation</desc>
+    </entry>
+    <entry id="CISM_USE_ANTARCTICA" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether to include the Antarctica Ice Sheet in this CISM simulation</desc>
+    </entry>
     <entry id="COMP_WAV" value="swav">
       <type>char</type>
       <valid_values>swav</valid_values>
@@ -299,7 +309,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_PPM.hf">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder.001.hf2">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -308,15 +318,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_035.tphysac/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_035.tphysac">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_PPM.hf">
+    <entry id="CASE" value="f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder.001.hf2">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -328,7 +338,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/cime/config/cesm/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_035.tphysac/cime/config/cesm/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -345,6 +355,16 @@
     <entry id="REALUSER" value="hannay">
       <type>char</type>
       <desc>username of user who created case</desc>
+    </entry>
+    <entry id="CASE_GROUP">
+      <type>char</type>
+      <desc>
+      Optional string denoting that this case is part of a case group
+    </desc>
+    </entry>
+    <entry id="CASE_HASH" value="651cef12e7c97481945c35f97661e1607969e4c1651c1ef9904d39caff7107e4">
+      <type>char</type>
+      <desc>Unique identifier for case</desc>
     </entry>
   </group>
   <group id="run_metadata">

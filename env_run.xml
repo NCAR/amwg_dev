@@ -220,7 +220,7 @@
       ignored.  default: false
     </desc>
     </entry>
-    <entry id="CONTINUE_RUN" value="TRUE">
+    <entry id="CONTINUE_RUN" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -233,7 +233,7 @@
       Set to TRUE when continuing a run.
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="0">
+    <entry id="RESUBMIT" value="3">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -253,7 +253,7 @@
       timing tests.
     </desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:1661613.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1661618.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:1704457.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1704460.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -319,9 +319,9 @@
       <valid_values>ESMF_LOGKIND_SINGLE,ESMF_LOGKIND_MULTI,ESMF_LOGKIND_MULTI_ON_ERROR,ESMF_LOGKIND_NONE</valid_values>
       <desc>
       Determines what ESMF log files (if any) are generated when
-	  USE_ESMF_LIB is TRUE.
+          USE_ESMF_LIB is TRUE.
       ESMF_LOGKIND_SINGLE: Use a single log file, combining messages from
-	  all of the PETs. Not supported on some platforms.
+          all of the PETs. Not supported on some platforms.
       ESMF_LOGKIND_MULTI: Use multiple log files -- one per PET.
       ESMF_LOGKIND_NONE: Do not issue messages to a log file.
       By default, no ESMF log files are generated.
@@ -331,8 +331,8 @@
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Turns on component barriers for component timing.
-	  This variable is for testing and debugging only and should never
-	  be set for a production run.
+          This variable is for testing and debugging only and should never
+          be set for a production run.
     </desc>
     </entry>
     <entry id="CPL_DECOMP" value="0">
@@ -1011,7 +1011,7 @@
     </entry>
     <entry id="PIO_TYPENAME">
       <type>char</type>
-      <valid_values>netcdf,pnetcdf,nothing</valid_values>
+      <valid_values>netcdf,pnetcdf,netcdf4p,netcdf4c,nothing</valid_values>
       <desc>pio io type</desc>
       <values>
         <value compclass="ATM">pnetcdf</value>
@@ -1491,6 +1491,15 @@
       (arbitrary initial conditions). Setting this value in the xml file will take
       precedence over any settings for finidat in the $CASEROOT/user_nl_ctsm file.</desc>
     </entry>
+    <entry id="NEONSITE">
+      <type>char</type>
+      <valid_values>                                                                                      
+      ABBY,BLAN,CPER,DEJU,GRSM,HEAL,KONA,LENO,NIWO,ONAQ,PUUM,SERC,SRER,TALL,TREE,WOOD,
+      BARR,BONA,DCFS,DELA,GUAN,JERC,KONZ,MLBS,NOGP,ORNL,RMNP,SJER,STEI,TEAK,UKFS,WREF,
+      BART,CLBJ,DSNY,HARV,JORN,LAJA,MOAB,OAES,OSBS,SCBI,SOAP,STER,TOOL,UNDE,YELL
+    </valid_values>
+      <desc>Name of site for NEON tower data</desc>
+    </entry>
   </group>
   <group id="run_component_cice">
     <entry id="CICE_NAMELIST_OPTS">
@@ -1625,13 +1634,26 @@
   <group id="run_component_cism">
     <entry id="CISM_PHYS" value="cism2">
       <type>char</type>
-      <valid_values>cism1,cism2</valid_values>
+      <valid_values>cism2</valid_values>
       <desc>Version of CISM physics/dynamics to use</desc>
+    </entry>
+    <entry id="CISM_EVOLVE_GREENLAND" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether CISM ice evolution is on or off for Greenland.</desc>
+    </entry>
+    <entry id="CISM_EVOLVE_ANTARCTICA" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether CISM ice evolution is on or off for Antarctica.</desc>
     </entry>
     <entry id="CISM_EVOLVE" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether CISM ice evolution is on or off.
+      <desc>Whether CISM ice evolution is on or off for CISM as a whole.
+     This must be TRUE if CISM_EVOLVE_ICESHEET is TRUE for any ICESHEET,
+     and FALSE if CISM_EVOLVE_ICESHEET is FALSE for all ICESHEETs that
+     are present in this run.
 
      Setting CISM_EVOLVE to FALSE in a hybrid case also forces the use
      of observed initial conditions, as if you had also set

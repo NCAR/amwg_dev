@@ -14,13 +14,17 @@ nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
 
 fexcl1 = ' '  
 
+
+
 fincl1 = 'U','V','Q','T','PSL','OMEGA','PS','PRECC','PRECL','UTGWORO','VTGWORO',
 
          'TS', 'TAUX','TAUY','TAUBLJX','TAUBLJY','TAUGWX','TAUGWY','FLNT','FLNS','FSNS','FSNT',
 
          'LHFLX','SHFLX','TMQ','FLDS','FSDS','FSDSC','SWCF','LWCF','PRECSC','PRECSL',  'DTCOND','Z3', 'PSL'
 
-         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB'
+         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB',
+
+         'ZMDQ','CMFMCDZM','DPDLFLIQ','DPDLFICE','PCLDTOP','CLDTOP'
 
 fincl2 = 'TROP_T', 'TROP_P', 'Q', 'T','U850','V850','U200','V200','PRECT','PRECC','PRECL','PBLH',
 
@@ -32,11 +36,13 @@ fincl2 = 'TROP_T', 'TROP_P', 'Q', 'T','U850','V850','U200','V200','PRECT','PRECC
 
          'LWCF','PS','PSL','TMQ','LHFLX','SHFLX','T500','OMEGA500','CLDLOW'
 
-fincl3 = 'U:I','V:I','T:I', 'OMEGA:I','PS:I','PMID:I', 'OMEGA500','PRECT','U200','U850','FLUT','Q:I'
+fincl3 = 'U:I','V:I','T:I', 'OMEGA:I','PS:I','PMID:I', 'OMEGA500','PRECT','U200','U850','FLUT','Q:I', 'ZMDT:I','ZMDQ:I','CMFMCDZM:I','DPDLFLIQ:I','DPDLFICE:I','PCLDTOP:I','CLDTOP:I'
 
 fincl4 = 'PRECT','PRECC'
 
 fincl8 = 'Z3:I','U850:I','V850:I','Z500:I','PS:I', 'PMID:I'
+
+
 
 
 
@@ -61,6 +67,10 @@ se_rsplit            = 3
 se_nsplit           = 2
 
 se_hypervis_subcycle =  4
+
+
+
+zmconv_parcel_pbl = .true.
 
 
 
