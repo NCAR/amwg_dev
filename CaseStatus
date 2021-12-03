@@ -1,30 +1,28 @@
-2021-11-23 15:49:24: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS= -pcols 9 --append  </command>
+2021-11-24 13:56:32: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS= -pcols 9 --append  </command>
  ---------------------------------------------------
-2021-11-23 15:49:24: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam6 -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 58  </command>
+2021-11-24 13:56:32: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam6 -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 32  </command>
  ---------------------------------------------------
-2021-11-23 15:49:25: case.setup starting 
+2021-11-24 13:56:33: case.setup starting 
  ---------------------------------------------------
-2021-11-23 15:49:27: case.setup success 
+2021-11-24 13:56:34: case.setup success 
  ---------------------------------------------------
-2021-11-23 15:49:27: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+2021-11-24 13:56:35: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
  ---------------------------------------------------
-2021-11-23 15:49:28: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2021-11-24 13:56:35: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2021-11-23 15:49:28: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2021-11-24 13:56:35: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2021-11-23 15:49:29: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2021-11-24 13:56:35: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2021-11-23 15:49:29: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2021-11-24 13:56:36: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2021-11-23 15:49:29: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+2021-11-24 13:56:36: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
  ---------------------------------------------------
-2021-11-23 15:49:30: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+2021-11-24 13:56:36: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
  ---------------------------------------------------
-2021-11-23 15:49:30: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2021-11-24 13:56:36: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2021-11-23 15:49:58: case.build starting 
- ---------------------------------------------------
-2021-11-23 15:51:08: case.build starting 
+2021-11-24 13:56:51: case.build starting 
  ---------------------------------------------------
 CESM version is cam6_2_011-1294-ga0f77dc3c
 Processing externals description file : Externals.cfg
@@ -73,138 +71,88 @@ Checking status of externals: clm, fates, ptclm, mosart, cime, cice, fms, fms, c
         clean sandbox, on pumas_cam-release_v1.12
     ./src/physics/silhs
         clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
-2021-11-23 16:01:06: case.build success 
+2021-11-24 14:06:59: case.build success 
  ---------------------------------------------------
-2021-11-23 16:01:21: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2021-11-24 14:07:14: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=economy,RESUBMIT=3,STOP_N=1,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2021-11-23 16:08:49: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2021-11-24 14:07:15: case.submit starting 
  ---------------------------------------------------
-2021-11-23 16:08:50: case.submit starting 
+2021-11-24 14:07:29: case.submit success case.run:1595465.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1595467.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2021-11-23 16:09:02: case.submit success case.run:1583760.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1583761.chadmin1.ib0.cheyenne.ucar.edu
+2021-11-24 19:18:33: case.run starting 
  ---------------------------------------------------
-2021-11-23 16:59:12: case.run starting 
+2021-11-24 19:18:39: model execution starting 
  ---------------------------------------------------
-2021-11-23 16:59:19: model execution starting 
+2021-11-24 21:18:25: model execution success 
  ---------------------------------------------------
-2021-11-23 22:53:42: model execution success 
+2021-11-24 21:18:25: case.run success 
  ---------------------------------------------------
-2021-11-23 22:53:42: case.run success 
+2021-11-24 21:18:32: st_archive starting 
  ---------------------------------------------------
-2021-11-23 22:53:48: st_archive starting 
+2021-11-24 21:18:43: st_archive success 
  ---------------------------------------------------
-2021-11-23 22:54:11: st_archive success 
+2021-11-24 21:18:43: case.submit starting 
  ---------------------------------------------------
-2021-11-23 22:54:11: case.submit starting 
+2021-11-24 21:18:46: case.submit success case.run:1599845.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1599846.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2021-11-23 22:54:24: case.submit success case.run:1587466.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1587467.chadmin1.ib0.cheyenne.ucar.edu
+2021-11-24 21:59:29: case.run starting 
  ---------------------------------------------------
-2021-11-23 22:56:50: case.run starting 
+2021-11-24 21:59:35: model execution starting 
  ---------------------------------------------------
-2021-11-23 22:56:58: model execution starting 
+2021-11-24 23:57:38: model execution success 
  ---------------------------------------------------
-2021-11-24 04:43:15: model execution success 
+2021-11-24 23:57:38: case.run success 
  ---------------------------------------------------
-2021-11-24 04:43:15: case.run success 
+2021-11-24 23:57:44: st_archive starting 
  ---------------------------------------------------
-2021-11-24 04:43:21: st_archive starting 
+2021-11-24 23:57:56: st_archive success 
  ---------------------------------------------------
-2021-11-24 04:43:36: st_archive success 
+2021-11-24 23:57:56: case.submit starting 
  ---------------------------------------------------
-2021-11-24 04:43:36: case.submit starting 
+2021-11-24 23:57:59: case.submit success case.run:1601841.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1601842.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2021-11-24 04:43:39: case.submit success case.run:1589577.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1589578.chadmin1.ib0.cheyenne.ucar.edu
+2021-11-24 23:58:05: case.run starting 
  ---------------------------------------------------
-2021-11-24 04:43:44: case.run starting 
+2021-11-24 23:58:11: model execution starting 
  ---------------------------------------------------
-2021-11-24 04:43:51: model execution starting 
+2021-11-25 01:11:24: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64  /glade/scratch/hannay/f.e21.FWscHIST.ne30_L32_cam6_3_019_plus_CESM2.2.001.hf2/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.e21.FWscHIST.ne30_L32_cam6_3_019_plus_CESM2.2.001.hf2/run'
  ---------------------------------------------------
-2021-11-24 10:30:48: model execution success 
+2021-11-25 01:11:24: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64  /glade/scratch/hannay/f.e21.FWscHIST.ne30_L32_cam6_3_019_plus_CESM2.2.001.hf2/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/f.e21.FWscHIST.ne30_L32_cam6_3_019_plus_CESM2.2.001.hf2/run/cesm.log.1601841.chadmin1.ib0.cheyenne.ucar.edu.211124-235805
  ---------------------------------------------------
-2021-11-24 10:30:48: case.run success 
+2021-11-29 09:48:40: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
  ---------------------------------------------------
-2021-11-24 10:30:56: st_archive starting 
+2021-11-29 09:48:44: case.submit starting 
  ---------------------------------------------------
-2021-11-24 10:31:10: st_archive success 
+2021-11-29 09:48:56: case.submit success case.run:1653196.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1653197.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2021-11-24 10:31:10: case.submit starting 
+2021-11-29 09:49:00: case.run starting 
  ---------------------------------------------------
-2021-11-24 10:31:15: case.submit success case.run:1591897.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1591898.chadmin1.ib0.cheyenne.ucar.edu
+2021-11-29 09:49:06: model execution starting 
  ---------------------------------------------------
-2021-11-24 10:31:20: case.run starting 
+2021-11-29 11:46:29: model execution success 
  ---------------------------------------------------
-2021-11-24 10:31:27: model execution starting 
+2021-11-29 11:46:29: case.run success 
  ---------------------------------------------------
-2021-11-24 16:22:15: model execution success 
+2021-11-29 11:46:40: st_archive starting 
  ---------------------------------------------------
-2021-11-24 16:22:15: case.run success 
+2021-11-29 11:46:54: st_archive success 
  ---------------------------------------------------
-2021-11-24 16:22:24: st_archive starting 
+2021-11-29 11:46:54: case.submit starting 
  ---------------------------------------------------
-2021-11-24 16:22:40: st_archive success 
+2021-11-29 11:46:58: case.submit success case.run:1655023.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1655024.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2021-11-24 16:22:40: case.submit starting 
+2021-11-29 11:47:01: case.run starting 
  ---------------------------------------------------
-2021-11-24 16:22:45: case.submit success case.run:1596810.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1596811.chadmin1.ib0.cheyenne.ucar.edu
+2021-11-29 11:47:07: model execution starting 
  ---------------------------------------------------
-2021-11-24 16:36:27: case.run starting 
+2021-11-29 13:43:52: model execution success 
  ---------------------------------------------------
-2021-11-24 16:36:35: model execution starting 
+2021-11-29 13:43:52: case.run success 
  ---------------------------------------------------
-2021-11-24 22:25:56: model execution success 
+2021-11-29 13:44:29: st_archive starting 
  ---------------------------------------------------
-2021-11-24 22:25:56: case.run success 
- ---------------------------------------------------
-2021-11-24 22:26:05: st_archive starting 
- ---------------------------------------------------
-2021-11-24 22:26:19: st_archive success 
- ---------------------------------------------------
-2021-11-24 22:26:19: case.submit starting 
- ---------------------------------------------------
-2021-11-24 22:26:24: case.submit success case.run:1600884.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1600885.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2021-11-24 22:26:29: case.run starting 
- ---------------------------------------------------
-2021-11-24 22:26:35: model execution starting 
- ---------------------------------------------------
-2021-11-25 01:14:33: model execution error 
-ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64  /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_mg-num-step8.hf/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_mg-num-step8.hf/run'
- ---------------------------------------------------
-2021-11-25 01:14:33: case.run error 
-ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64  /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_mg-num-step8.hf/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
-See log file for details: /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2_mg-num-step8.hf/run/cesm.log.1600884.chadmin1.ib0.cheyenne.ucar.edu.211124-222629
- ---------------------------------------------------
-2021-11-29 09:45:58: case.submit starting 
- ---------------------------------------------------
-2021-11-29 09:46:08: case.submit success case.run:1653167.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1653168.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2021-11-29 09:46:26: case.run starting 
- ---------------------------------------------------
-2021-11-29 09:46:33: model execution starting 
- ---------------------------------------------------
-2021-11-29 15:34:16: model execution success 
- ---------------------------------------------------
-2021-11-29 15:34:16: case.run success 
- ---------------------------------------------------
-2021-11-29 15:34:26: st_archive starting 
- ---------------------------------------------------
-2021-11-29 15:34:42: st_archive success 
- ---------------------------------------------------
-2021-11-29 15:34:42: case.submit starting 
- ---------------------------------------------------
-2021-11-29 15:34:47: case.submit success case.run:1658425.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1658426.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2021-11-29 15:41:28: case.run starting 
- ---------------------------------------------------
-2021-11-29 15:41:35: model execution starting 
- ---------------------------------------------------
-2021-11-29 21:05:30: xmlchange success <command> ./xmlchange RESUBMIT=0  </command>
- ---------------------------------------------------
-2021-11-29 21:30:57: model execution success 
- ---------------------------------------------------
-2021-11-29 21:30:57: case.run success 
- ---------------------------------------------------
-2021-11-29 21:31:13: st_archive starting 
- ---------------------------------------------------
-2021-11-29 21:31:26: st_archive success 
+2021-11-29 13:44:39: st_archive success 
  ---------------------------------------------------
