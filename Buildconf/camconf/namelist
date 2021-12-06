@@ -1,13 +1,10 @@
 &comp_inparm 
 
- dtime = 900
+ ncdata = 'f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001.cam.i.1989-01-01-00000.nc'
+ dtime = 1800
 
 
-ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne60_58L_GRID_48_taperstart10km_lowtop_BL10_v3p1_beta1p75_Top_43km.nc'
-
- bnd_topo               = '/glade/p/cesmdata/inputdata/atm/cam/topo/se/ne60pg3_nc3000_Co030_Fi001_PF_nullRR_Nsw021_20171012.nc'
-
-
+ncdata = '/glade/p/cesmdata/cseg/inputdata/cesm2_init/f.e21.ne30_ne30_F2000climo.cesm2_1.003/0025-01-01/f.e21.ne30_ne30_F2000climo.cesm2_1.003.cam.i.0025-01-01-00000.nc'
 
 mfilt           = 0,5,20,40,120,240,365,73,365
 
@@ -21,7 +18,7 @@ fincl1 = 'U','V','Q','T','PSL','OMEGA','PS','PRECC','PRECL','UTGWORO','VTGWORO',
 
          'LHFLX','SHFLX','TMQ','FLDS','FSDS','FSDSC','SWCF','LWCF','PRECSC','PRECSL',  'DTCOND','Z3', 'PSL'
 
-         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB', 'FREQZM'  
+         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB'
 
 fincl2 = 'TROP_T', 'TROP_P', 'Q', 'T','U850','V850','U200','V200','PRECT','PRECC','PRECL','PBLH',
 

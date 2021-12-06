@@ -22,7 +22,7 @@
     </entry>
   </group>
   <group id="run_begin_stop_restart">
-    <entry id="RUN_TYPE" value="startup">
+    <entry id="RUN_TYPE" value="hybrid">
       <type>char</type>
       <valid_values>startup,hybrid,branch</valid_values>
       <desc>
@@ -253,7 +253,7 @@
       timing tests.
     </desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:9600987.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9600990.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:1341809.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1341811.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -438,7 +438,7 @@
       <type>real</type>
       <desc>Longitude to find nearest points for points mode (only used if PTS_MODE is TRUE)</desc>
     </entry>
-    <entry id="ATM_DOMAIN_FILE" value="domain.lnd.ne60np4.pg3_gx1v7.170628.nc">
+    <entry id="ATM_DOMAIN_FILE" value="domain.lnd.ne30np4.pg3_gx1v7.170605.nc">
       <type>char</type>
       <desc>atm domain file</desc>
     </entry>
@@ -446,7 +446,7 @@
       <type>char</type>
       <desc>path of atm domain file</desc>
     </entry>
-    <entry id="LND_DOMAIN_FILE" value="domain.lnd.ne60np4.pg3_gx1v7.170628.nc">
+    <entry id="LND_DOMAIN_FILE" value="domain.lnd.ne30np4.pg3_gx1v7.170605.nc">
       <type>char</type>
       <desc>lnd domain file</desc>
     </entry>
@@ -478,7 +478,7 @@
       <type>char</type>
       <desc>path of iac domain file</desc>
     </entry>
-    <entry id="ICE_DOMAIN_FILE" value="domain.ocn.ne60np4.pg3_gx1v7.170628.nc">
+    <entry id="ICE_DOMAIN_FILE" value="domain.ocn.ne30np4.pg3_gx1v7_170605.nc">
       <type>char</type>
       <desc>ice domain file</desc>
     </entry>
@@ -486,7 +486,7 @@
       <type>char</type>
       <desc>path of ice domain file</desc>
     </entry>
-    <entry id="OCN_DOMAIN_FILE" value="domain.ocn.ne60np4.pg3_gx1v7.170628.nc">
+    <entry id="OCN_DOMAIN_FILE" value="domain.ocn.ne30np4.pg3_gx1v7_170605.nc">
       <type>char</type>
       <desc>ocn domain file</desc>
     </entry>
@@ -610,7 +610,7 @@
       <valid_values>X,Y</valid_values>
       <desc>lnd2atm state mapping file decomp type</desc>
     </entry>
-    <entry id="LND2GLC_FMAPNAME" value="/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_gland4km_aave.210712.nc">
+    <entry id="LND2GLC_FMAPNAME" value="cpl/gridmaps/ne30pg3/map_ne30pg3_TO_gland4km_aave.180515.nc">
       <type>char</type>
       <desc>lnd2glc flux mapping file</desc>
     </entry>
@@ -619,7 +619,7 @@
       <valid_values>X,Y</valid_values>
       <desc>lnd2glc flux mapping file decomp type</desc>
     </entry>
-    <entry id="LND2GLC_SMAPNAME" value="/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_gland4km_blin.210712.nc">
+    <entry id="LND2GLC_SMAPNAME" value="cpl/gridmaps/ne30pg3/map_ne30pg3_TO_gland4km_blin.180515.nc">
       <type>char</type>
       <desc>lnd2glc state mapping file</desc>
     </entry>
@@ -628,7 +628,7 @@
       <valid_values>X,Y</valid_values>
       <desc>lnd2glc state mapping file decomp type</desc>
     </entry>
-    <entry id="LND2ROF_FMAPNAME" value="/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_r05_aave.210712.nc">
+    <entry id="LND2ROF_FMAPNAME" value="lnd/clm2/mappingdata/maps/ne30pg3/map_ne30pg3_to_0.5x0.5_nomask_aave_da_c180515.nc">
       <type>char</type>
       <desc>lnd2rof flux mapping file</desc>
     </entry>
@@ -637,7 +637,7 @@
       <valid_values>X,Y</valid_values>
       <desc>lnd2rof flux mapping file decomp type</desc>
     </entry>
-    <entry id="ROF2LND_FMAPNAME" value="/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_r05_TO_ne60pg3_aave.210712.nc">
+    <entry id="ROF2LND_FMAPNAME" value="lnd/clm2/mappingdata/maps/ne30pg3/map_0.5x0.5_nomask_to_ne30pg3_aave_da_c180515.nc">
       <type>char</type>
       <desc>rof2lnd flux mapping file</desc>
     </entry>
@@ -674,7 +674,7 @@
       <valid_values>X,Y</valid_values>
       <desc>rof2ocn runoff mapping file decomp type</desc>
     </entry>
-    <entry id="GLC2LND_FMAPNAME" value="/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc">
+    <entry id="GLC2LND_FMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_TO_ne30pg3_aave.180510.nc">
       <type>char</type>
       <desc>glc2lnd flux mapping file</desc>
     </entry>
@@ -683,7 +683,7 @@
       <valid_values>X,Y</valid_values>
       <desc>glc2lnd flux mapping file decomp type</desc>
     </entry>
-    <entry id="GLC2LND_SMAPNAME" value="/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc">
+    <entry id="GLC2LND_SMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_TO_ne30pg3_aave.180510.nc">
       <type>char</type>
       <desc>glc2lnd state mapping file</desc>
     </entry>
@@ -1153,7 +1153,7 @@
     This xml variable is only used to set the driver namelist variables,
     atm_cpl_dt, lnd_cpl_dt, ocn_cpl_dt, ice_cpl_dt, glc_cpl_dt, rof_cpl_dt, wav_cpl_dt, and esp_dt.</desc>
     </entry>
-    <entry id="ATM_NCPL" value="96">
+    <entry id="ATM_NCPL" value="48">
       <type>integer</type>
       <desc>Number of atm coupling intervals per NCPL_BASE_PERIOD.
     This is used to set the driver namelist atm_cpl_dt, equal to basedt/ATM_NCPL,

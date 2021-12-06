@@ -16,7 +16,7 @@
   history_dir = "./"
   history_file = "unknown"
   history_precision = 4
-  ice_ic = "default"
+  ice_ic = "f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001.cice.r.1989-01-01-00000.nc"
   incond_dir = "./"
   incond_file = "iceh_ic"
   istep0 = 0
@@ -38,12 +38,12 @@
   year_init = 0
 /
 &grid_nml
-  grid_file = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.ne60np4.pg3_gx1v7.170628.nc"
+  grid_file = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.ne30np4.pg3_gx1v7_170605.nc"
   grid_format = "nc"
   grid_type = "latlon"
   gridcpl_file = "unknown_gridcpl_file"
   kcatbound = 0
-  kmt_file = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.ne60np4.pg3_gx1v7.170628.nc"
+  kmt_file = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.ne30np4.pg3_gx1v7_170605.nc"
 /
 &tracer_nml
   restart_aero = .false.
