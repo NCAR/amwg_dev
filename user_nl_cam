@@ -2,7 +2,7 @@
 ncdata = '/glade/p/cesmdata/cseg/inputdata/cesm2_init/f.e21.ne30_ne30_F2000climo.cesm2_1.003/0025-01-01/f.e21.ne30_ne30_F2000climo.cesm2_1.003.cam.i.0025-01-01-00000.nc'
 mfilt           = 0,5,20,40,120,240,365,73,365
 nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
-fexcl1 = ' '  
+fexcl1 = ' '
 fincl1 = 'U','V','Q','T','PSL','OMEGA','PS','PRECC','PRECL','UTGWORO','VTGWORO',
          'TS', 'TAUX','TAUY','TAUBLJX','TAUBLJY','TAUGWX','TAUGWY','FLNT','FLNS','FSNS','FSNT',
          'LHFLX','SHFLX','TMQ','FLDS','FSDS','FSDSC','SWCF','LWCF','PRECSC','PRECSL',  'DTCOND','Z3', 'PSL'
