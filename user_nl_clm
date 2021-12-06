@@ -1,2 +1,5 @@
  check_finidat_year_consistency = .false.
  use_init_interp = .true. 
+ fsurdat = '/glade/work/aherring/grids/uniform-res/ne60np4.pg3/clm_surfdata_5_0/surfdata_ne60pg3_SSP5-8.5_78pfts_CMIP6_simyr1850_c210709.nc'
+ flanduse_timeseries = '/glade/scratch/aherring/for_rene/cesm2_2_alpha06d.poparctic/components/clm/tools/mksurfdata_map/landuse.timeseries_ne60pg3_SSP5-8.5_78pfts_CMIP6_simyr1850-2100_c210709.nc'
+ finidat = 'f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001.clm2.r.1989-01-01-00000.nc'

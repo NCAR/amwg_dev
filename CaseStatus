@@ -1,30 +1,127 @@
-2021-11-24 13:54:22: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS= -pcols 9 --append  </command>
+2021-07-09 15:21:12: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam6 -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 58  </command>
  ---------------------------------------------------
-2021-11-24 13:54:22: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam6 -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 48  </command>
+2021-07-09 15:21:14: case.setup starting 
  ---------------------------------------------------
-2021-11-24 13:54:22: case.setup starting 
+2021-07-09 15:21:16: case.setup success 
  ---------------------------------------------------
-2021-11-24 13:54:24: case.setup success 
+2021-07-09 15:21:47: case.setup starting 
  ---------------------------------------------------
-2021-11-24 13:54:24: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+2021-07-09 15:21:48: case.setup success 
  ---------------------------------------------------
-2021-11-24 13:54:24: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2021-07-09 15:22:00: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
  ---------------------------------------------------
-2021-11-24 13:54:25: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2021-07-09 15:22:00: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2021-11-24 13:54:25: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2021-07-09 15:22:00: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2021-11-24 13:54:25: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2021-07-09 15:22:01: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2021-11-24 13:54:25: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+2021-07-09 15:22:01: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2021-11-24 13:54:26: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+2021-07-09 15:22:01: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne60_ne60_mg17_L48_revert-J.001  </command>
  ---------------------------------------------------
-2021-11-24 13:54:26: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2021-07-09 15:22:01: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
  ---------------------------------------------------
-2021-11-24 13:54:35: case.build starting 
+2021-07-09 15:22:02: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-CESM version is cam6_2_011-1294-ga0f77dc3c
+2021-07-09 15:24:46: case.build starting 
+ ---------------------------------------------------
+2021-07-09 15:24:50: case.build error 
+ERROR: Could not download refcase from any server
+ ---------------------------------------------------
+2021-07-09 15:25:43: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+ ---------------------------------------------------
+2021-07-09 15:25:43: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+ ---------------------------------------------------
+2021-07-09 15:25:43: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2021-07-09 15:25:44: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+ ---------------------------------------------------
+2021-07-09 15:25:44: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+ ---------------------------------------------------
+2021-07-09 15:25:44: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+ ---------------------------------------------------
+2021-07-09 15:25:44: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+ ---------------------------------------------------
+2021-07-09 15:25:45: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+ ---------------------------------------------------
+2021-07-09 15:26:24: case.build starting 
+ ---------------------------------------------------
+2021-07-09 15:26:26: case.build error 
+ERROR: Command /glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/components/clm/bld/build-namelist failed rc=255
+out=
+err=ERROR : CLM build-namelist::CLMBuildNamelist::add_default() : No default value found for flanduse_timeseries.
+            Are defaults provided for this resolution and land mask?
+ ---------------------------------------------------
+2021-07-09 15:29:23: xmlchange success <command> ./xmlchange RUN_TYPE=startup  </command>
+ ---------------------------------------------------
+2021-07-09 15:30:21: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+ ---------------------------------------------------
+2021-07-09 15:30:21: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+ ---------------------------------------------------
+2021-07-09 15:30:21: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2021-07-09 15:30:21: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+ ---------------------------------------------------
+2021-07-09 15:30:21: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+ ---------------------------------------------------
+2021-07-09 15:30:22: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+ ---------------------------------------------------
+2021-07-09 15:30:22: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+ ---------------------------------------------------
+2021-07-09 15:30:22: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+ ---------------------------------------------------
+2021-07-12 12:09:48: xmlchange success <command> ./xmlchange GLC2LND_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/cpl/gridmaps/gland4km/map_gland4km_TO_ne30pg3_aave.180510.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:16:08: xmlchange success <command> ./xmlchange GLC2LND_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne30pg3_aave.180510.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:18:26: xmlchange success <command> ./xmlchange GLC2LND_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:21:28: xmlchange success <command> ./xmlchange GLC2LND_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:21:29: xmlchange success <command> ./xmlchange ROF2LND_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_r05_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:23:57: xmlchange success <command> ./xmlchange GLC2LND_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:23:57: xmlchange success <command> ./xmlchange ROF2LND_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_r05_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:23:57: xmlchange success <command> ./xmlchange LND2ROF_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_r05_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:26:42: xmlchange success <command> ./xmlchange GLC2LND_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:26:42: xmlchange success <command> ./xmlchange ROF2LND_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_r05_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:26:43: xmlchange success <command> ./xmlchange LND2ROF_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_r05_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:26:43: xmlchange success <command> ./xmlchange LND2GLC_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_gland4km_blin.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:26:43: xmlchange success <command> ./xmlchange LND2GLC_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_gland4km_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:27:25: xmlchange success <command> ./xmlchange GLC2LND_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:27:26: xmlchange success <command> ./xmlchange ROF2LND_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_r05_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:27:26: xmlchange success <command> ./xmlchange LND2ROF_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_r05_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:27:26: xmlchange success <command> ./xmlchange LND2GLC_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_gland4km_blin.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:27:26: xmlchange success <command> ./xmlchange LND2GLC_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_gland4km_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:29:56: xmlchange success <command> ./xmlchange LND2ROF_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_r05_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:29:56: xmlchange success <command> ./xmlchange ROF2LND_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_r05_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:29:56: xmlchange success <command> ./xmlchange LND2GLC_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_gland4km_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:29:56: xmlchange success <command> ./xmlchange LND2GLC_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_ne60pg3_TO_gland4km_blin.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:29:57: xmlchange success <command> ./xmlchange GLC2LND_FMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:29:57: xmlchange success <command> ./xmlchange GLC2LND_SMAPNAME=/glade/work/aherring/grids/uniform-res/ne60np4.pg3/maps/map_gland4km_TO_ne60pg3_aave.210712.nc  </command>
+ ---------------------------------------------------
+2021-07-12 12:31:41: case.build starting 
+ ---------------------------------------------------
+CESM version is scamsas_cam6_2_007.01-1367-ga0f77dc3c
 Processing externals description file : Externals.cfg
 Processing externals description file : Externals_CLM.cfg
 Processing externals description file : Externals_FMS.cfg
@@ -71,90 +168,253 @@ Checking status of externals: clm, fates, ptclm, mosart, cime, cice, fms, fms, c
         clean sandbox, on pumas_cam-release_v1.12
     ./src/physics/silhs
         clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
-2021-11-24 14:04:32: case.build success 
+2021-07-12 12:40:17: case.build success 
  ---------------------------------------------------
-2021-11-24 14:04:48: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=economy,RESUBMIT=3,STOP_N=1,STOP_OPTION=nyears  </command>
+2021-07-12 12:40:51: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2021-11-24 14:04:48: case.submit starting 
+2021-07-12 12:41:04: xmlchange success <command> ./xmlchange JOB_QUEUE=premium  </command>
  ---------------------------------------------------
-2021-11-24 14:04:58: case.submit success case.run:1595449.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1595450.chadmin1.ib0.cheyenne.ucar.edu
+2021-07-12 12:41:27: case.submit starting 
  ---------------------------------------------------
-2021-11-24 14:37:18: case.run starting 
+2021-07-12 12:41:36: case.submit error 
+ERROR: Could not find all inputdata on any server
  ---------------------------------------------------
-2021-11-24 14:37:24: model execution starting 
+2021-07-12 12:42:12: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
  ---------------------------------------------------
-2021-11-24 17:27:33: model execution success 
+2021-07-12 12:42:12: xmlchange success <command> ./xmlchange STOP_N=1  </command>
  ---------------------------------------------------
-2021-11-24 17:27:33: case.run success 
+2021-07-12 12:42:12: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2021-11-24 17:28:02: st_archive starting 
+2021-07-12 12:42:12: xmlchange success <command> ./xmlchange RESUBMIT=10  </command>
  ---------------------------------------------------
-2021-11-24 17:28:19: st_archive success 
+2021-07-12 12:42:12: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2021-11-24 17:28:19: case.submit starting 
+2021-07-12 12:42:12: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
  ---------------------------------------------------
-2021-11-24 17:28:34: case.submit success case.run:1597669.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1597671.chadmin1.ib0.cheyenne.ucar.edu
+2021-07-12 12:42:13: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
  ---------------------------------------------------
-2021-11-24 19:49:20: case.run starting 
+2021-07-12 12:42:14: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2021-11-24 19:49:26: model execution starting 
+2021-07-12 12:42:19: case.submit starting 
  ---------------------------------------------------
-2021-11-24 22:35:42: model execution success 
+2021-07-12 12:42:28: case.submit error 
+ERROR: Could not find all inputdata on any server
  ---------------------------------------------------
-2021-11-24 22:35:42: case.run success 
+2021-07-12 12:43:12: case.submit starting 
  ---------------------------------------------------
-2021-11-24 22:36:00: st_archive starting 
+2021-07-12 12:43:20: case.submit error 
+ERROR: Could not find all inputdata on any server
  ---------------------------------------------------
-2021-11-24 22:36:36: st_archive success 
+2021-07-12 12:45:01: case.submit starting 
  ---------------------------------------------------
-2021-11-24 22:36:36: case.submit starting 
+2021-07-12 12:45:31: case.submit success case.run:9387174.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9387180.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2021-11-24 22:36:40: case.submit success case.run:1601027.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1601028.chadmin1.ib0.cheyenne.ucar.edu
+2021-07-12 13:36:03: case.run starting 
  ---------------------------------------------------
-2021-11-24 22:37:27: case.run starting 
+2021-07-12 13:36:10: model execution starting 
  ---------------------------------------------------
-2021-11-24 22:37:34: model execution starting 
+2021-07-12 13:43:48: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 8640  omplace -tm open64  /glade/scratch/hannay/f.e21.FWscHIST.ne60_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2.hf/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.e21.FWscHIST.ne60_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2.hf/run'
  ---------------------------------------------------
-2021-11-25 01:11:50: model execution error 
-ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64  /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_cam6_3_019_plus_CESM2.2.001.hf2/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_cam6_3_019_plus_CESM2.2.001.hf2/run'
+2021-07-12 13:43:48: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 8640  omplace -tm open64  /glade/scratch/hannay/f.e21.FWscHIST.ne60_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2.hf/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/f.e21.FWscHIST.ne60_L48_BL10_cam6_3_019_plus_CESM2.2.001_zm2.hf/run/cesm.log.9387174.chadmin1.ib0.cheyenne.ucar.edu.210712-133603
  ---------------------------------------------------
-2021-11-25 01:11:50: case.run error 
-ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64  /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_cam6_3_019_plus_CESM2.2.001.hf2/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
-See log file for details: /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_cam6_3_019_plus_CESM2.2.001.hf2/run/cesm.log.1601027.chadmin1.ib0.cheyenne.ucar.edu.211124-223727
+2021-07-12 14:09:46: xmlchange success <command> ./xmlchange RUN_TYPE=startup  </command>
  ---------------------------------------------------
-2021-11-29 09:47:55: xmlchange success <command> ./xmlchange JOB_QUEUE=economy  </command>
+2021-07-12 14:10:04: case.submit starting 
  ---------------------------------------------------
-2021-11-29 09:47:58: case.submit starting 
+2021-07-12 14:10:29: case.submit success case.run:9389665.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9389671.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2021-11-29 09:48:22: case.submit success case.run:1653193.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1653195.chadmin1.ib0.cheyenne.ucar.edu
+2021-07-12 14:23:42: case.run starting 
  ---------------------------------------------------
-2021-11-29 09:48:28: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
+2021-07-12 14:23:48: model execution starting 
  ---------------------------------------------------
-2021-11-29 09:48:40: case.run starting 
+2021-07-12 20:04:30: model execution success 
  ---------------------------------------------------
-2021-11-29 09:48:47: model execution starting 
+2021-07-12 20:04:30: case.run success 
  ---------------------------------------------------
-2021-11-29 12:34:56: model execution success 
+2021-07-12 20:04:41: st_archive starting 
  ---------------------------------------------------
-2021-11-29 12:34:56: case.run success 
+2021-07-12 20:05:17: st_archive success 
  ---------------------------------------------------
-2021-11-29 12:35:03: st_archive starting 
+2021-07-12 20:05:17: case.submit starting 
  ---------------------------------------------------
-2021-11-29 12:35:19: st_archive success 
+2021-07-12 20:05:20: case.submit success case.run:9398666.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9398667.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2021-11-29 12:35:19: case.submit starting 
+2021-07-12 20:54:45: case.run starting 
  ---------------------------------------------------
-2021-11-29 12:35:27: case.submit success case.run:1655327.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1655328.chadmin1.ib0.cheyenne.ucar.edu
+2021-07-12 20:54:51: model execution starting 
  ---------------------------------------------------
-2021-11-29 12:35:31: case.run starting 
+2021-07-13 02:29:18: model execution success 
  ---------------------------------------------------
-2021-11-29 12:35:37: model execution starting 
+2021-07-13 02:29:18: case.run success 
  ---------------------------------------------------
-2021-11-29 15:21:42: model execution success 
+2021-07-13 02:29:48: st_archive starting 
  ---------------------------------------------------
-2021-11-29 15:21:42: case.run success 
+2021-07-13 02:30:23: st_archive success 
  ---------------------------------------------------
-2021-11-29 15:21:59: st_archive starting 
+2021-07-13 02:30:23: case.submit starting 
  ---------------------------------------------------
-2021-11-29 15:22:12: st_archive success 
+2021-07-13 02:30:32: case.submit success case.run:9403180.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9403182.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-13 03:41:50: case.run starting 
+ ---------------------------------------------------
+2021-07-13 03:41:55: model execution starting 
+ ---------------------------------------------------
+2021-07-13 09:56:59: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
+ ---------------------------------------------------
+2021-07-13 16:17:38: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
+ ---------------------------------------------------
+2021-07-13 16:17:45: case.submit starting 
+ ---------------------------------------------------
+2021-07-13 16:18:06: case.submit success case.run:9415093.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9415097.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-14 04:56:19: case.run starting 
+ ---------------------------------------------------
+2021-07-14 04:56:24: model execution starting 
+ ---------------------------------------------------
+2021-07-14 10:36:41: model execution success 
+ ---------------------------------------------------
+2021-07-14 10:36:41: case.run success 
+ ---------------------------------------------------
+2021-07-14 10:37:23: st_archive starting 
+ ---------------------------------------------------
+2021-07-14 10:37:58: st_archive success 
+ ---------------------------------------------------
+2021-07-14 10:37:58: case.submit starting 
+ ---------------------------------------------------
+2021-07-14 10:38:02: case.submit success case.run:9428401.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9428402.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-15 00:58:19: case.run starting 
+ ---------------------------------------------------
+2021-07-15 00:58:24: model execution starting 
+ ---------------------------------------------------
+2021-07-15 06:32:50: model execution success 
+ ---------------------------------------------------
+2021-07-15 06:32:50: case.run success 
+ ---------------------------------------------------
+2021-07-15 06:33:00: st_archive starting 
+ ---------------------------------------------------
+2021-07-15 06:33:35: st_archive success 
+ ---------------------------------------------------
+2021-07-15 06:33:35: case.submit starting 
+ ---------------------------------------------------
+2021-07-15 06:33:41: case.submit success case.run:9456317.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9456319.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-15 06:33:51: case.run starting 
+ ---------------------------------------------------
+2021-07-15 06:33:56: model execution starting 
+ ---------------------------------------------------
+2021-07-15 12:12:47: model execution success 
+ ---------------------------------------------------
+2021-07-15 12:12:48: case.run success 
+ ---------------------------------------------------
+2021-07-15 15:26:50: case.submit starting 
+ ---------------------------------------------------
+2021-07-15 15:28:22: case.submit success case.run:9469174.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9469202.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-15 16:38:39: st_archive starting 
+ ---------------------------------------------------
+2021-07-15 16:39:16: st_archive success 
+ ---------------------------------------------------
+2021-07-15 16:39:16: case.submit starting 
+ ---------------------------------------------------
+2021-07-15 16:39:24: case.submit success case.run:9471113.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9471114.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-16 06:02:08: case.run starting 
+ ---------------------------------------------------
+2021-07-16 06:02:13: model execution starting 
+ ---------------------------------------------------
+2021-07-16 11:40:55: model execution success 
+ ---------------------------------------------------
+2021-07-16 11:40:56: case.run success 
+ ---------------------------------------------------
+2021-07-16 11:41:07: st_archive starting 
+ ---------------------------------------------------
+2021-07-16 11:41:43: st_archive success 
+ ---------------------------------------------------
+2021-07-16 11:41:43: case.submit starting 
+ ---------------------------------------------------
+2021-07-16 11:41:50: case.submit success case.run:9493266.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9493267.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-17 04:10:02: case.run starting 
+ ---------------------------------------------------
+2021-07-17 04:10:08: model execution starting 
+ ---------------------------------------------------
+2021-07-17 09:44:59: model execution success 
+ ---------------------------------------------------
+2021-07-17 09:44:59: case.run success 
+ ---------------------------------------------------
+2021-07-17 09:45:24: st_archive starting 
+ ---------------------------------------------------
+2021-07-17 09:45:59: st_archive success 
+ ---------------------------------------------------
+2021-07-17 09:45:59: case.submit starting 
+ ---------------------------------------------------
+2021-07-17 09:46:09: case.submit success case.run:9510573.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9510578.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-19 01:28:52: case.run starting 
+ ---------------------------------------------------
+2021-07-19 01:28:57: model execution starting 
+ ---------------------------------------------------
+2021-07-19 07:09:27: model execution success 
+ ---------------------------------------------------
+2021-07-19 07:09:27: case.run success 
+ ---------------------------------------------------
+2021-07-19 07:09:39: st_archive starting 
+ ---------------------------------------------------
+2021-07-19 07:10:11: st_archive success 
+ ---------------------------------------------------
+2021-07-19 07:10:11: case.submit starting 
+ ---------------------------------------------------
+2021-07-19 07:10:18: case.submit success case.run:9536560.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9536561.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-19 07:10:29: case.run starting 
+ ---------------------------------------------------
+2021-07-19 07:10:34: model execution starting 
+ ---------------------------------------------------
+2021-07-19 12:49:01: model execution success 
+ ---------------------------------------------------
+2021-07-19 12:49:01: case.run success 
+ ---------------------------------------------------
+2021-07-19 12:50:14: st_archive starting 
+ ---------------------------------------------------
+2021-07-19 12:50:52: st_archive success 
+ ---------------------------------------------------
+2021-07-19 12:50:52: case.submit starting 
+ ---------------------------------------------------
+2021-07-19 12:51:03: case.submit success case.run:9540691.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9540694.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-23 13:05:15: case.run starting 
+ ---------------------------------------------------
+2021-07-23 13:05:21: model execution starting 
+ ---------------------------------------------------
+2021-07-23 18:48:30: model execution success 
+ ---------------------------------------------------
+2021-07-23 18:48:30: case.run success 
+ ---------------------------------------------------
+2021-07-23 18:50:10: st_archive starting 
+ ---------------------------------------------------
+2021-07-23 18:50:42: st_archive success 
+ ---------------------------------------------------
+2021-07-23 18:50:42: case.submit starting 
+ ---------------------------------------------------
+2021-07-23 18:50:54: case.submit success case.run:9600987.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9600990.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2021-07-26 04:28:26: case.run starting 
+ ---------------------------------------------------
+2021-07-26 04:28:31: model execution starting 
+ ---------------------------------------------------
+2021-07-30 22:00:16: case.run starting 
+ ---------------------------------------------------
+2021-07-30 22:00:22: model execution starting 
+ ---------------------------------------------------
+2021-07-31 03:32:03: model execution success 
+ ---------------------------------------------------
+2021-07-31 03:32:03: case.run success 
+ ---------------------------------------------------
+2021-07-31 03:32:14: st_archive starting 
+ ---------------------------------------------------
+2021-07-31 03:32:53: st_archive success 
  ---------------------------------------------------
