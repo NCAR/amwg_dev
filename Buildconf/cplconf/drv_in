@@ -128,7 +128,7 @@
   budget_ltend = 0
   budget_month = 1
   case_desc = "UNSET"
-  case_name = "f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder_clubbdiffusion.001.hf2"
+  case_name = "f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.002_zm2_zmke_4.hf"
   cime_model = "cesm"
   coldair_outbreak_mod = .true.
   constant_zenith_deg = -1
@@ -150,7 +150,7 @@
   flux_epbal = "off"
   flux_max_iteration = 5
   force_stop_at = "month"
-  glc_gnam = "gris4"
+  glc_gnam = "gland4"
   glc_renormalize_smb = "on_if_glc_coupled_fluxes"
   histaux_a2x = .false.
   histaux_a2x1hr = .false.
@@ -182,7 +182,7 @@
   mct_usealltoall = .false.
   mct_usevector = .false.
   model_doi_url = "https://doi.org/10.5065/D67H1H0V"
-  model_version = "cam6_3_006-676-g148296dc"
+  model_version = "scamsas_cam6_2_007.01-1367-ga0f77dc3c"
   ocn_gnam = "ne30np4.pg3"
   ocn_surface_flux_scheme = 0
   orb_eccen = 1.e36
@@ -203,7 +203,7 @@
   scmlon = -999.
   shr_map_dopole = .true.
   single_column = .false.
-  start_type = "startup"
+  start_type = "continue"
   tchkpt_dir = "./timing/checkpoints"
   tfreeze_option = "mushy"
   timing_dir = "./timing"
@@ -262,13 +262,13 @@
   pause_active_wav = .false.
   pause_n = 0
   pause_option = "never"
-  restart_n = 2
+  restart_n = 1
   restart_option = "nyears"
   restart_ymd = -999
   rof_cpl_dt = 10800
   start_tod = 0
   start_ymd = 19790101
-  stop_n = 2
+  stop_n = 1
   stop_option = "nyears"
   stop_ymd = -999
   tprof_n = -999

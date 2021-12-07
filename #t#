@@ -1,0 +1,24 @@
+/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.002_zm2_detmods_entr4.hf
+
+/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2
+
+### go to sandbox 
+cd /glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2
+
+git remote add hannay https://github.com/cecilehannay/CAM.git
+
+git fetch hannay
+
+# create a new branch called cam7_sandbox
+git checkout -b cam7_sandbox
+
+git status
+git commit -a -m "Added bug fix to SE dycore"
+
+# this as a new branch to github
+git push -u hannay cam7_sandbox
+
+
+git log --oneline -1
+
+7e67b2136 Added bug fix to SE dycore

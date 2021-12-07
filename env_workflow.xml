@@ -5,17 +5,17 @@
       control jobs that will be submitted and their dependancies.
     </header>
   <group id="case.run">
-    <entry id="template" value="template.case.run">
+    <entry id="prereq" value="$BUILD_COMPLETE and not $TEST">
       <type>char</type>
     </entry>
-    <entry id="prereq" value="$BUILD_COMPLETE and not $TEST">
+    <entry id="template" value="template.case.run">
       <type>char</type>
     </entry>
     <entry id="CHARGE_ACCOUNT" value="93300722">
       <type>char</type>
       <desc>project to charge in scripts if different from PROJECT</desc>
     </entry>
-    <entry id="PROJECT" value="93300722">
+    <entry id="PROJECT" value="P93300642">
       <type>char</type>
       <desc>project for project-sensitive build and run paths, and job scripts</desc>
     </entry>
@@ -42,22 +42,22 @@
       <type>char</type>
       <desc>Store user override for walltime</desc>
     </entry>
-    <entry id="USER_REQUESTED_QUEUE">
+    <entry id="USER_REQUESTED_QUEUE" value="regular">
       <type>char</type>
       <desc>Store user override for queue</desc>
     </entry>
   </group>
   <group id="case.st_archive">
-    <entry id="template" value="template.st_archive">
+    <entry id="prereq" value="$DOUT_S">
       <type>char</type>
     </entry>
     <entry id="dependency" value="case.run or case.test">
       <type>char</type>
     </entry>
-    <entry id="prereq" value="$DOUT_S">
+    <entry id="task_count" value="1">
       <type>char</type>
     </entry>
-    <entry id="task_count" value="1">
+    <entry id="template" value="template.st_archive">
       <type>char</type>
     </entry>
     <entry id="tasks_per_node" value="1">
@@ -70,7 +70,7 @@
       <type>char</type>
       <desc>project to charge in scripts if different from PROJECT</desc>
     </entry>
-    <entry id="PROJECT" value="93300722">
+    <entry id="PROJECT" value="P93300642">
       <type>char</type>
       <desc>project for project-sensitive build and run paths, and job scripts</desc>
     </entry>
@@ -88,7 +88,7 @@
    the format specified by walltime format defined in
    config_batch.xml</desc>
     </entry>
-    <entry id="JOB_QUEUE" value="share">
+    <entry id="JOB_QUEUE" value="regular">
       <type>char</type>
       <valid_values/>
       <desc>The machine queue in which to submit the job.  Default determined in config_machines.xml can be overwritten by testing</desc>
@@ -97,7 +97,7 @@
       <type>char</type>
       <desc>Store user override for walltime</desc>
     </entry>
-    <entry id="USER_REQUESTED_QUEUE">
+    <entry id="USER_REQUESTED_QUEUE" value="regular">
       <type>char</type>
       <desc>Store user override for queue</desc>
     </entry>
