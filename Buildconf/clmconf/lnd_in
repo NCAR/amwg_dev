@@ -15,12 +15,13 @@
  h2osno_max = 10000.0
  hist_master_list_file = .false.
  irrigate = .true.
- maxpatch_glcmec = 10
+ maxpatch_glc = 10
  n_dom_landunits = 0
  n_dom_pfts = 0
  nlevsno = 12
  nsegspc = 35
- paramfile = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/paramdata/clm50_params.c200905.nc'
+ o3_veg_stress_method = 'unset'
+ paramfile = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/paramdata/clm50_params.c210528.nc'
  run_zero_weight_urban = .false.
  snow_cover_fraction_method = 'SwensonLawrence2012'
  soil_layerstruct_predefined = '20SL_8.5m'
@@ -66,6 +67,7 @@
  model_year_align_popdens = 1850
  popdensmapalgo = 'bilinear'
  stream_fldfilename_popdens = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2017_HYDEv3.2_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2016_c180202.nc'
+ stream_meshfile_popdens = 'none'
  stream_year_first_popdens = 1850
  stream_year_last_popdens = 2016
 /
@@ -107,6 +109,8 @@
 /
 &cnphenology
  initial_seed_at_planting = 3.d00
+ min_crtical_dayl_depends_on_lat = .false.
+ onset_thresh_depends_on_veg = .false.
 /
 &clm_soilhydrology_inparm
 /
@@ -130,8 +134,6 @@
  init_interp_method = 'general'
 /
 &century_soilbgcdecompcascade
- initial_cstocks = 200.0d00, 200.0d00, 200.0d00
- initial_cstocks_depth = 1.50d00
 /
 &soilhydrology_inparm
  baseflow_scalar = 0.001d00
@@ -171,6 +173,7 @@
 /
 &canopyfluxes_inparm
  itmax_canopy_fluxes = 40
+ use_biomass_heat_storage = .false.
  use_undercanopy_stability = .false.
 /
 &aerosol
@@ -302,6 +305,7 @@
 !#--------------------------------------------------------------------------------------------------------------------------
 !# lnd_in:: Comment:
 !# This namelist was created using the following command-line:
-!#     /glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/cime/scripts/Tools/../.. -infile /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L32_cam6_3_019_plus_CESM2.2.001.hf/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L32_cam6_3_019_plus_CESM2.2.001.hf/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=19790101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type startup -envxml_dir /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L32_cam6_3_019_plus_CESM2.2.001.hf -configuration clm -structure standard -lnd_frac /glade/p/cesmdata/cseg/inputdata/share/domains/domain.lnd.ne30np4.pg3_gx1v7.170605.nc -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L32_cam6_3_019_plus_CESM2.2.001.hf/Buildconf/clmconf/config_cache.xml -bgc bgc -crop -clm_accelerated_spinup off -lnd_tuning_mode clm5_0_cam6.0 -mask gx1v7
-!# For help on options use: /glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/components/clm/bld/CLM build-namelist -help
+!#     /glade/work/hannay/cesm_tags/cam6_3_035.tphysac/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cam6_3_035.tphysac/cime/scripts/Tools/../.. -infile /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder_clubbdiffusion.001.hf2/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder_clubbdiffusion.001.hf2/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=19790101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type startup -envxml_dir /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder_clubbdiffusion.001.hf2 -configuration clm -structure standard -lnd_frac /glade/p/cesmdata/cseg/inputdata/share/domains/domain.lnd.ne30np4.pg3_gx1v7.170605.nc -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_zm2_reorder_clubbdiffusion.001.hf2/Buildconf/clmconf/config_cache.xml -driver mct -bgc bgc -crop -clm_accelerated_spinup off -lnd_tuning_mode clm5_0_cam6.0 -mask gx1v7
+!# 
+!# For help on options use: /glade/work/hannay/cesm_tags/cam6_3_035.tphysac/components/clm/bld/CLM build-namelist -help
 !#--------------------------------------------------------------------------------------------------------------------------
