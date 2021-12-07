@@ -40,6 +40,10 @@
       <type>integer</type>
       <desc>pes or cores per node for mpitasks </desc>
     </entry>
+    <entry id="MAX_GPUS_PER_NODE" value="0">
+      <type>integer</type>
+      <desc>maximum number of GPUs allowed per node </desc>
+    </entry>
     <entry id="COSTPES_PER_NODE" value="$MAX_MPITASKS_PER_NODE">
       <type>integer</type>
       <desc>pes or cores per node for accounting purposes </desc>
@@ -174,6 +178,10 @@
         <value compclass="IAC">1</value>
       </values>
       <desc>The mpi global processors stride associated with the mpi tasks for the a component</desc>
+    </entry>
+    <entry id="NGPUS_PER_NODE" value="0">
+      <type>integer</type>
+      <desc> Number of GPUs per node used for simulation </desc>
     </entry>
   </group>
 </file>
