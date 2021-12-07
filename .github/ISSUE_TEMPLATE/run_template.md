@@ -9,7 +9,7 @@ assignees: ''
 **Description:**
 
 **Case directory:**
-Locally (if available):
+Locally (if still available):
 /glade/p/cesmdata/cseg/runs/cesm2_0/$CASE
 
 On github (if available):
@@ -21,6 +21,7 @@ Locally (if still available):
 
 On github (if available):
 https://github.com/NCAR/amwg_dev/tree/cam6_3_035.tphysac/
+hash: 148296dc
 
 **Diagnostics:**
 AMWG diags (if available)
