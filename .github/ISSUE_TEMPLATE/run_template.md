@@ -16,12 +16,11 @@ On github (if available):
 https://github.com/NCAR/amwg_dev/tree/$CASE
 
 **Sandbox:**
-Locally (if available):
-/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2
+Locally (if still available):
+/glade/work/hannay/cesm_tags/cam6_3_035.tphysac
 
 On github (if available):
-https://github.com/NCAR/amwg_dev/tree/cam6_3_019_plus_CESM2.2/
-hash: 1cda71d
+https://github.com/NCAR/amwg_dev/tree/cam6_3_035.tphysac/
 
 **Diagnostics:**
 AMWG diags (if available)
