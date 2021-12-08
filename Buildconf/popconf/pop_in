@@ -8,13 +8,13 @@
  tropic_distribution_type = 'cartesian'
 /
 &io_nml
- log_filename = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/ocn.log.1382084.chadmin1.ib0.cheyenne.ucar.edu.211108-051633'
+ log_filename = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/ocn.log.1354919.chadmin1.ib0.cheyenne.ucar.edu.211105-024339'
  lredirect_stdout = .true.
  luse_pointer_files = .true.
  num_iotasks = 1
 /
 &time_manager_nml
- accel_file = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_depth_accel'
+ accel_file = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_depth_accel'
  allow_leapyear = .false.
  date_separator = '-'
  dt_count =  24
@@ -31,7 +31,7 @@
  laccel = .false.
  robert_alpha =  1.0 
  robert_nu =     0.1 
- runid = 'b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf'
+ runid = 'b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf'
  stop_count = 1000
  stop_option = 'nyear'
  time_mix_freq = 17
@@ -48,13 +48,13 @@
  lremove_points = .false.
  n_topo_smooth = 0
  partial_bottom_cells = .false.
- region_info_file = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_region_ids'
+ region_info_file = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_region_ids'
  region_mask_file = '/glade/p/cesmdata/cseg/inputdata/ocn/pop/gx1v7/grid/region_mask_20151008.ieeei4'
  sfc_layer_opt = 'varthick'
  topography_file = '/glade/p/cesmdata/cseg/inputdata/ocn/pop/gx1v7/grid/topography_20161215.ieeei4'
  topography_opt = 'file'
- topography_outfile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.h.topography_bathymetry.ieeer8'
- vert_grid_file = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_vert_grid'
+ topography_outfile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.h.topography_bathymetry.ieeer8'
+ vert_grid_file = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_vert_grid'
  vert_grid_opt = 'file'
 /
 &pop1d_nml
@@ -63,7 +63,7 @@
  init_ts_file = '/glade/p/cesmdata/cseg/inputdata/ocn/pop/gx1v7/ic/ts_WOA13v2_jan_ic_gx1v7_20170706.ieeer8'
  init_ts_file_fmt = 'nc'
  init_ts_option = 'ccsm_continue'
- init_ts_outfile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.h.ts_ic'
+ init_ts_outfile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.h.ts_ic'
  init_ts_outfile_fmt = 'nc'
  init_ts_perturb = 0.0e-3
  init_ts_suboption = 'null'
@@ -75,12 +75,12 @@
  diag_cfl_freq_opt = 'nmonth'
  diag_global_freq = 1
  diag_global_freq_opt = 'nmonth'
- diag_outfile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/./b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.dd'
+ diag_outfile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/./b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.dd'
  diag_transp_freq = 1
  diag_transp_freq_opt = 'nmonth'
- diag_transport_file = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_transport_contents'
- diag_transport_outfile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/./b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.dt'
- diag_velocity_outfile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/./b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.dv'
+ diag_transport_file = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_transport_contents'
+ diag_transport_outfile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/./b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.dt'
+ diag_velocity_outfile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/./b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.dv'
  ldiag_velocity = .true.
 /
 &budget_diagnostics_nml
@@ -96,7 +96,7 @@
  restart_fmt = 'nc'
  restart_freq = 100000
  restart_freq_opt = 'nyear'
- restart_outfile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.r'
+ restart_outfile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.r'
  restart_start =  0
  restart_start_opt = 'nstep'
 /
@@ -107,35 +107,35 @@
  ltavg_one_time_header = .false. .false. .false. .false. .false.
  ltavg_streams_index_present = .true.
  n_tavg_streams = 5
- tavg_contents = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_tavg_contents'
+ tavg_contents = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_tavg_contents'
  tavg_file_freq = 1 1 1 1 1
  tavg_file_freq_opt = 'nmonth' 'nmonth' 'once' 'nmonth' 'nyear'
  tavg_fmt_in = 'nc' 'nc' 'nc' 'nc' 'nc'
  tavg_fmt_out = 'nc' 'nc' 'nc' 'nc' 'nc'
  tavg_freq = 1 1 1 1 1
  tavg_freq_opt = 'nmonth' 'nday' 'once' 'nday' 'nyear'
- tavg_infile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.hrestart.end'
+ tavg_infile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.hrestart.end'
  tavg_offset_days = 2 2 2 2 2
  tavg_offset_months = 1 1 1 1 1
  tavg_offset_years = 1 1 1 1 1
- tavg_outfile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.h'
+ tavg_outfile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.h'
  tavg_start = 0 0 0 0 0
  tavg_start_opt = 'nstep' 'nstep' 'nstep' 'nstep' 'nstep'
  tavg_stream_filestrings = 'nmonth1' 'nday1' 'once' 'ecosys.nday1' 'ecosys.nyear1'
 /
 &history_nml
- history_contents = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_history_contents'
+ history_contents = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_history_contents'
  history_fmt = 'nc'
  history_freq = 1
  history_freq_opt = 'never'
- history_outfile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.hs'
+ history_outfile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.hs'
 /
 &movie_nml
- movie_contents = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_movie_contents'
+ movie_contents = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_movie_contents'
  movie_fmt = 'nc'
  movie_freq = 1
  movie_freq_opt = 'never'
- movie_outfile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.hm'
+ movie_outfile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.hm'
 /
 &solvers
  convergencecheckfreq = 10
@@ -285,7 +285,7 @@
  ah_bkg_bottom = 0.0
  ah_bkg_srfbl = 3.0e7
  ah_bolus = 3.0e7
- buoyancy_freq_filename = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/buoyancy_freq'
+ buoyancy_freq_filename = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/buoyancy_freq'
  buoyancy_freq_fmt = 'nc'
  const_eg = 1.2
  diag_gm_bolus = .true.
@@ -343,7 +343,7 @@
  u_perp = 5.0
  var_viscosity_infile = 'ccsm-internal'
  var_viscosity_infile_fmt = 'bin'
- var_viscosity_outfile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.hv'
+ var_viscosity_outfile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.hv'
  var_viscosity_outfile_fmt = 'nc'
  vconst_1 = 0.6e7
  vconst_2 = 0.5
@@ -511,12 +511,12 @@
  ldebug = .false.
 /
 &overflows_nml
- overflows_diag_outfile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/./b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.do'
- overflows_infile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_overflow'
+ overflows_diag_outfile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/./b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.do'
+ overflows_infile = '/glade/scratch/hannay/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf/run/gx1v7_overflow'
  overflows_interactive = .true.
  overflows_on = .true.
  overflows_restart_type = 'ccsm_continue'
- overflows_restfile = './b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.ro'
+ overflows_restfile = './b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf.pop.ro'
 /
 &niw_nml
  lniw_mixing = .false.
