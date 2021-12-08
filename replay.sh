@@ -2,21 +2,71 @@
 
 set -e
 
-# Created 2021-12-07 14:48:44
+# Created 2021-10-27 15:02:59
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_cam6_3_035.tphysac_reorder.001.hf2"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e21.BWsc1850.ne30_L32_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf"
 
-/glade/work/hannay/cesm_tags/cam6_3_035.tphysac/cime/scripts/create_newcase --compset HIST_CAM60%WCSC_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_SIAC_SESP --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
+/glade/work/hannay/cesm_tags/cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm/cime/scripts/create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_POP2%ECO_MOSART_CISM2%NOEVOLVE_WW3_SIAC_SESP_BGC%BDRD --res ne30pg3_g17 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
+./xmlchange NTASKS_ATM=1152
+
+./xmlchange NTASKS_CPL=1152
+
+./xmlchange NTASKS_OCN=24
+
+./xmlchange NTASKS_WAV=36
+
+./xmlchange NTASKS_GLC=1152
+
+./xmlchange NTASKS_ICE=288
+
+./xmlchange NTASKS_ROF=828
+
+./xmlchange NTASKS_LND=828
+
+./xmlchange NTASKS_ESP=1
+
+./xmlchange ROOTPE_ATM=0
+
+./xmlchange ROOTPE_CPL=0
+
+./xmlchange ROOTPE_OCN=1152
+
+./xmlchange ROOTPE_WAV=1116
+
+./xmlchange ROOTPE_GLC=0
+
+./xmlchange ROOTPE_ICE=828
+
+./xmlchange ROOTPE_ROF=0
+
+./xmlchange ROOTPE_LND=0
+
+./xmlchange ROOTPE_ESP=0
+
+./xmlchange NTHRDS=1
+
+./xmlchange NTASKS_OCN=144
+
+./xmlchange NTASKS_ATM=1800,NTASKS_CPL=1800,NTASKS_LND=900,NTASKS_ROF=900,NTASKS_ICE=900
+
+./xmlchange ROOTPE_OCN=1800,ROOTPE_ICE=900
+
+./xmlchange NTASKS_LND=1080,NTASKS_ROF=1080,NTASKS_ICE=720,ROOTPE_ICE=1080
+
 ./xmlchange CAM_CONFIG_OPTS= -pcols 9 --append
 
-./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 32
+./xmlchange CAM_CONFIG_OPTS=-phys cam6 -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 58
+
+./xmlchange CAM_CONFIG_OPTS= -pcols 9 --append
+
+./xmlchange CAM_CONFIG_OPTS=-phys cam6 -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 32
 
 ./case.setup
 
-./xmlchange RUN_STARTDATE=1979-01-01
+./xmlchange RUN_STARTDATE=0001-01-01
 
 ./xmlchange STOP_N=2
 
@@ -26,25 +76,29 @@ cd "${CASEDIR}"
 
 ./xmlchange RUN_TYPE=hybrid
 
-./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001
+./xmlchange RUN_REFCASE=b.e21.B1850.f09_g17.CMIP6-piControl.001
 
-./xmlchange RUN_REFDATE=1989-01-01
+./xmlchange RUN_REFDATE=0501-01-01
 
 ./xmlchange GET_REFCASE=TRUE
 
-./case.build
+./preview_namelists
 
-./case.build --clean-all
+./xmlchange --noecho CPL_I2O_PER_CAT=TRUE
 
-./case.setup --reset
-
-./case.build --clean-all
-
-./case.setup --reset
-
-./xmlchange CAM_CONFIG_OPTS= -pcols 9 --append
-
-./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 48
+./preview_namelists
 
 ./case.build
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
+
+./case.submit
+
+./case.submit
+
+./xmlchange RESUBMIT=25
+
+./case.submit
+
+./xmlchange RESUBMIT=25
 
