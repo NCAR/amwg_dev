@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2021-12-07 15:51:32
+# Created 2021-12-08 15:30:17
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_reorder_zm2.001.hf2"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_035.tphysac_reorder_zm2_tau7200.001.hf"
 
 /glade/work/hannay/cesm_tags/cam6_3_035.tphysac/cime/scripts/create_newcase --compset HIST_CAM60%WCSC_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_SIAC_SESP --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
@@ -32,11 +32,7 @@ cd "${CASEDIR}"
 
 ./xmlchange GET_REFCASE=TRUE
 
+./preview_namelists
+
 ./case.build
-
-./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=1,STOP_OPTION=nyears
-
-./case.submit
-
-./case.submit
 
