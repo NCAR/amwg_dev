@@ -84,13 +84,13 @@
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="b.e21.B1850.f09_g17.CMIP6-piControl.001">
+    <entry id="RUN_REFCASE" value="f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="0501-01-01">
+    <entry id="RUN_REFDATE" value="1989-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -110,7 +110,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="0001-01-01">
+    <entry id="RUN_STARTDATE" value="1979-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -253,7 +253,7 @@
       timing tests.
     </desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:1131229.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1131230.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:1825411.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1825412.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -478,7 +478,7 @@
       <type>char</type>
       <desc>path of iac domain file</desc>
     </entry>
-    <entry id="ICE_DOMAIN_FILE" value="domain.ocn.gx1v7.151008.nc">
+    <entry id="ICE_DOMAIN_FILE" value="domain.ocn.ne30np4.pg3_gx1v7_170605.nc">
       <type>char</type>
       <desc>ice domain file</desc>
     </entry>
@@ -486,7 +486,7 @@
       <type>char</type>
       <desc>path of ice domain file</desc>
     </entry>
-    <entry id="OCN_DOMAIN_FILE" value="domain.ocn.gx1v7.151008.nc">
+    <entry id="OCN_DOMAIN_FILE" value="domain.ocn.ne30np4.pg3_gx1v7_170605.nc">
       <type>char</type>
       <desc>ocn domain file</desc>
     </entry>
@@ -502,7 +502,7 @@
       <type>char</type>
       <desc>path of glc domain file</desc>
     </entry>
-    <entry id="ATM2OCN_FMAPNAME" value="cpl/gridmaps/ne30pg3/map_ne30pg3_TO_gx1v7_aave.190215.nc">
+    <entry id="ATM2OCN_FMAPNAME" value="idmap">
       <type>char</type>
       <desc>atm2ocn flux mapping file</desc>
     </entry>
@@ -511,7 +511,7 @@
       <valid_values>X,Y</valid_values>
       <desc>atm2ocn flux mapping file decomp type</desc>
     </entry>
-    <entry id="ATM2OCN_SMAPNAME" value="cpl/gridmaps/ne30pg3/map_ne30pg3_TO_gx1v7_blin.190215.nc">
+    <entry id="ATM2OCN_SMAPNAME" value="idmap">
       <type>char</type>
       <desc>atm2ocn state mapping file</desc>
     </entry>
@@ -520,7 +520,7 @@
       <valid_values>X,Y</valid_values>
       <desc>atm2ocn state mapping file decomp type</desc>
     </entry>
-    <entry id="ATM2OCN_VMAPNAME" value="cpl/gridmaps/ne30pg3/map_ne30pg3_TO_gx1v7_blin.190215.nc">
+    <entry id="ATM2OCN_VMAPNAME" value="idmap">
       <type>char</type>
       <desc>atm2ocn vector mapping file</desc>
     </entry>
@@ -565,7 +565,7 @@
       <valid_values>X,Y</valid_values>
       <desc>atm2rof state mapping file decomp type</desc>
     </entry>
-    <entry id="ATM2WAV_SMAPNAME" value="cpl/gridmaps/ne30pg3/map_ne30pg3_TO_ww3a_blin.190215.nc">
+    <entry id="ATM2WAV_SMAPNAME" value="idmap">
       <type>char</type>
       <desc>atm2wav state mapping file</desc>
     </entry>
@@ -574,7 +574,7 @@
       <valid_values>X,Y</valid_values>
       <desc>atm2wav state mapping file decomp type</desc>
     </entry>
-    <entry id="OCN2ATM_FMAPNAME" value="cpl/gridmaps/gx1v7/map_gx1v7_TO_ne30pg3_aave.190215.nc">
+    <entry id="OCN2ATM_FMAPNAME" value="idmap">
       <type>char</type>
       <desc>ocn2atm flux mapping file</desc>
     </entry>
@@ -583,7 +583,7 @@
       <valid_values>X,Y</valid_values>
       <desc>ocn2atm flux mapping file decomp type</desc>
     </entry>
-    <entry id="OCN2ATM_SMAPNAME" value="cpl/gridmaps/gx1v7/map_gx1v7_TO_ne30pg3_aave.190215.nc">
+    <entry id="OCN2ATM_SMAPNAME" value="idmap">
       <type>char</type>
       <desc>ocn2atm state mapping file</desc>
     </entry>
@@ -646,7 +646,7 @@
       <valid_values>X,Y</valid_values>
       <desc>rof2lnd flux mapping file decomp type</desc>
     </entry>
-    <entry id="ROF2OCN_FMAPNAME" value="cpl/gridmaps/r05/map_r05_TO_gx1v7_aave.161012.nc">
+    <entry id="ROF2OCN_FMAPNAME" value="idmap">
       <type>char</type>
       <desc>rof2ocn flux mapping file - the default value idmap_ignore, if set, will be ignored by buildnml and
     will generate a runtime error if in fact a file is required for the given compset</desc>
@@ -656,7 +656,7 @@
       <valid_values>X,Y</valid_values>
       <desc>rof2ocn flux mapping file decomp type</desc>
     </entry>
-    <entry id="ROF2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_gx1v7_nn_open_ocean_nnsm_e1000r300_marginal_sea_170413.nc">
+    <entry id="ROF2OCN_LIQ_RMAPNAME" value="idmap">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
@@ -665,7 +665,7 @@
       <valid_values>X,Y</valid_values>
       <desc>rof2ocn runoff mapping file decomp type</desc>
     </entry>
-    <entry id="ROF2OCN_ICE_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_gx1v7_nnsm_e1000r300_170413.nc">
+    <entry id="ROF2OCN_ICE_RMAPNAME" value="idmap">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
@@ -742,7 +742,7 @@
       <valid_values>X,Y</valid_values>
       <desc>glc2ocn state mapping file decomp type</desc>
     </entry>
-    <entry id="GLC2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_gx1v7_nn_open_ocean_nnsm_e1000r300_marginal_sea_171105.nc">
+    <entry id="GLC2OCN_LIQ_RMAPNAME" value="idmap_ignore">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for liquid runoff - the default value idmap_ignore, if set, will be ignored by buildnml and
     will generate a runtime error if in fact a file is required for the given compset</desc>
@@ -752,7 +752,7 @@
       <valid_values>X,Y</valid_values>
       <desc>glc2ocn runoff mapping file decomp type for liquid runoff</desc>
     </entry>
-    <entry id="GLC2OCN_ICE_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_gx1v7_nnsm_e1000r300_171105.nc">
+    <entry id="GLC2OCN_ICE_RMAPNAME" value="idmap_ignore">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for ice runoff - the default value idmap_ignore, if set, will be ignored by buildnml and
     will generate a runtime error if in fact a file is required for the given compset</desc>
@@ -782,7 +782,7 @@
       <valid_values>X,Y</valid_values>
       <desc>ocn2glc state mapping file decomp type</desc>
     </entry>
-    <entry id="OCN2WAV_SMAPNAME" value="cpl/gridmaps/gx1v7/map_gx1v7_TO_ww3a_splice_170214.nc">
+    <entry id="OCN2WAV_SMAPNAME" value="idmap">
       <type>char</type>
       <desc>ocn2wav state mapping file</desc>
     </entry>
@@ -791,7 +791,7 @@
       <valid_values>X,Y</valid_values>
       <desc>ocn2wav state mapping file decomp type</desc>
     </entry>
-    <entry id="ICE2WAV_SMAPNAME" value="cpl/gridmaps/gx1v7/map_gx1v7_TO_ww3a_splice_170214.nc">
+    <entry id="ICE2WAV_SMAPNAME" value="idmap">
       <type>char</type>
       <desc>ice2wav state mapping file</desc>
     </entry>
@@ -800,7 +800,7 @@
       <valid_values>X,Y</valid_values>
       <desc>ice2wav state mapping file decomp type</desc>
     </entry>
-    <entry id="WAV2OCN_SMAPNAME" value="cpl/gridmaps/ww3a/map_ww3a_TO_gx1v7_splice_170214.nc">
+    <entry id="WAV2OCN_SMAPNAME" value="idmap">
       <type>char</type>
       <desc>wav2ocn state mapping file</desc>
     </entry>
@@ -1118,12 +1118,12 @@
     </entry>
   </group>
   <group id="run_coupling">
-    <entry id="CPL_I2O_PER_CAT" value="TRUE">
+    <entry id="CPL_I2O_PER_CAT" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>determine if per ice thickness category fields are passed from ice to ocean - DO NOT EDIT (set by POP build-namelist)</desc>
     </entry>
-    <entry id="CCSM_BGC" value="CO2C">
+    <entry id="CCSM_BGC" value="CO2A">
       <type>char</type>
       <valid_values>none,CO2A,CO2B,CO2C</valid_values>
       <desc>Activates additional CO2-related fields to be exchanged between components. Possible values are:
@@ -1171,7 +1171,7 @@
     This is used to set the driver namelist ice_cpl_dt, equal to basedt/ICE_NCPL
     where basedt is equal to NCPL_BASE_PERIOD in seconds.</desc>
     </entry>
-    <entry id="OCN_NCPL" value="24">
+    <entry id="OCN_NCPL" value="$ATM_NCPL">
       <type>integer</type>
       <desc>Number of ocn coupling intervals per NCPL_BASE_PERIOD.
     Thisn is used to set the driver namelist ocn_cpl_dt, equal to basedt/OCN_NCPL
@@ -1210,7 +1210,7 @@
     This is used to set the driver namelist wav_cpl_dt, equal to basedt/WAV_NCPL
     where basedt is equal to NCPL_BASE_PERIOD in seconds.</desc>
     </entry>
-    <entry id="CPL_SEQ_OPTION" value="RASM_OPTION1">
+    <entry id="CPL_SEQ_OPTION" value="CESM1_MOD_TIGHT">
       <type>char</type>
       <valid_values>CESM1_MOD,CESM1_MOD_TIGHT,RASM_OPTION1,RASM_OPTION2,NUOPC,NUOPC_TIGHT</valid_values>
       <desc>
@@ -1335,7 +1335,7 @@
     </entry>
   </group>
   <group id="run_budgets">
-    <entry id="BUDGETS" value="TRUE">
+    <entry id="BUDGETS" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>logical that turns on diagnostic budgets for driver</desc>
@@ -1379,7 +1379,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="waccm_sc_1850_cam6">
+    <entry id="CAM_NML_USE_CASE" value="waccm_sc_hist_cam6">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1394,7 +1394,7 @@
       modify this value for your experiment, use your own user-defined
       component sets.</desc>
     </entry>
-    <entry id="CAM_NAMELIST_OPTS" value=" co2_cycle_rad_passive=.true. ">
+    <entry id="CAM_NAMELIST_OPTS">
       <type>char</type>
       <valid_values/>
       <desc>CAM specific namelist settings for -namelist option Provides
@@ -1436,7 +1436,7 @@
     subgrid heterogeneity, shallower soil, etc.
     </desc>
     </entry>
-    <entry id="CLM_NML_USE_CASE" value="1850_control">
+    <entry id="CLM_NML_USE_CASE" value="20thC_transient">
       <type>char</type>
       <desc>CLM namelist use_case.
       Determines the use-case that will be sent to the CLM build-namelist utility.
@@ -1507,86 +1507,121 @@
       <desc>CICE specific namelist settings for -namelist option</desc>
     </entry>
   </group>
-  <group id="run_component_pop">
-    <entry id="OCN_CHL_TYPE" value="prognostic">
+  <group id="run_component_docn">
+    <entry id="DOCN_MODE" value="prescribed">
       <type>char</type>
-      <valid_values>diagnostic,prognostic</valid_values>
-      <desc>
-      Determines provenance of surface Chl for radiative penetration,
-      computations. This option is used in the POP ecosystem model.
-      The default is diagnostic.
+      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,null</valid_values>
+      <desc> DOCN mode. The data ocean component (DOCN) always returns SSTs to the
+    driver. The atmosphere/ocean fluxes are computed in the
+    coupler. Therefore, the data ocean model does not compute fluxes like
+    the data ice model. DOCN has two distinct modes of operation. It can
+    run as a pure data model, reading in ocean SSTs (normally
+    climatological) from input datasets, performing time/spatial
+    interpolations, and passing these to the coupler. Alternatively,
+    DOCN can compute updated SSTs by running as a slab ocean model where
+    bottom ocean heat flux convergence and boundary layer depths are read
+    in and used with the atmosphere/ocean and ice/ocean fluxes obtained
+    from the driver.
+    --- A setting of prescribed assumes the only field in the input stream is SST.
+    It also assumes the SST is in Celsius and must be converted to Kelvin.
+    All other fields are set to zero except for ocean salinity, which is set to a
+    constant reference salinity value. Normally the ice fraction data is found in
+    the same data files that provide SST data to the data ocean model. They are
+    normally found in the same file because the SST and ice fraction data are derived
+    from the same observational data sets and are consistent with each other.
+    --- Settings of som (slab ocean model) or  som_aquap (aquaplanet slab ocean) are
+    prognostic modes which compute a prognostic sea surface temperature and a
+    freeze/melt potential (surface Q-flux) used by the sea ice model.  This
+    calculation requires an external SOM forcing data file that includes
+    ocean mixed layer depths and bottom-of-the-slab Q-fluxes.
+    Scientifically appropriate bottom-of-the-slab Q-fluxes are normally
+    ocean resolution dependent and are derived from the ocean model output
+    of a fully coupled CCSM run.  Note that while this mode runs out of
+    the box, the default SOM forcing file is not scientifically
+    appropriate and is provided for testing and development purposes only.
+    Users must create scientifically appropriate data for their particular
+    application.  A tool is available to derive valid SOM forcing.
+    --- A setting of sst_aquapN (where "N" is an integer index value) is a
+    type of prescribed SST mode used specifically for an aquaplanet setup in
+    which global SSTs correspond to an analytic form set by the index value.
+    Currently, indices for 10 SST profiles are supported [e.g., index 3 corresponds
+    to the "QOBS" profile of Neale and Hoskins (2001, Atmos. Sci. Lett.)].
+    With source code modifications, it is possible for users to create their own
+    analytic SST distributions and match them to indices 11 or greater.
     </desc>
     </entry>
-    <entry id="OCN_TAVG_TRACER_BUDGET" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>tavg output control for tracer-budget terms</desc>
-    </entry>
-    <entry id="OCN_TAVG_HIFREQ" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>tavg output control for high-frequency output</desc>
-    </entry>
-    <entry id="OCN_ONEDIM" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>TRUE turns off all horizontal motion in POP (single column)</desc>
-    </entry>
-    <entry id="OCN_PHYS_DEV" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>TRUE uses development parameter settings that haven't necessarily
-          been scientifically vetted for all compsets in the POP namelist</desc>
-    </entry>
-    <entry id="OCN_NDEP_DRIVER" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>TRUE means pop uses nitrogen deposition provided by coupler</desc>
-    </entry>
-    <entry id="OCN_TRANSIENT" value="unset">
+    <entry id="DOCN_SOM_FILENAME" value="UNSET">
       <type>char</type>
-      <valid_values>unset,CORE2_NYF,CORE2,CORE2_OMIP,JRA,JRA_OMIP,1850-2000,rcp4.5,rcp8.5,ssp126,ssp245,ssp370,ssp585</valid_values>
-      <desc>Determine settings for transient forcing datasets (e.g., atmospheric pCFC
-      concentrations). The create_newcase command selects the appropriate setting for this
-      variable based on the specified compset. This option is used in the POP ecosystem model.
-      Users should NOT EDIT this setting.</desc>
+      <valid_values/>
+      <desc>Sets SOM forcing filename.
+    This is only used when DOCN_MODE=som.</desc>
     </entry>
-    <entry id="OCN_ICE_FORCING" value="active">
+    <entry id="DOCN_AQP_FILENAME" value="UNSET">
       <type>char</type>
-      <valid_values>active,inactive</valid_values>
-      <desc>Determine under-ice forcing settings.
-      The active option yields settings that are appropriate for coupling to an active ice model
-      (e.g., a B or G-type compset). The inactive option yields settings that are appropriate for
-      coupling to a data ice model (e.g., a C-type compset). The create_newcase command
-      selects the appropriate setting for this variable based on the specified compset.
-      Users should NOT EDIT this setting.</desc>
+      <valid_values/>
+      <desc>Sets aquaplanet forcing filename instead of using an analytic form.
+    This is only used when DOCN_MODE=sst_aquapfile.</desc>
     </entry>
-    <entry id="OCN_CO2_TYPE" value="diagnostic">
+    <entry id="DOCN_AQPCONST_VALUE" value="-1">
+      <type>real</type>
+      <valid_values/>
+      <desc>Sets globally constant SST value</desc>
+    </entry>
+    <entry id="SSTICE_STREAM" value="CAMDATA">
       <type>char</type>
-      <valid_values>constant,prognostic,diagnostic,box_atm_co2</valid_values>
-      <desc>Determines provenance of atmospheric CO2 for gas flux computation.
-      This option is used in the POP ecosystem model.
-      The default is constant.</desc>
+      <valid_values/>
+      <desc>Prescribed SST and ice coverage stream name.
+    Sets SST and ice coverage stream name.
+    This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="OCN_BGC_CONFIG" value="latest">
+    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2017_c180507.nc">
       <type>char</type>
-      <valid_values>latest,latest+cocco,cesm2.1,cesm2.1+cocco,cesm2.0,SPECTRA1.0</valid_values>
-      <desc>Version of ocean BGC tunings to use (default values can be overwritten by user_nl_pop and user_nl_marbl)</desc>
+      <valid_values/>
+      <desc>Prescribed SST and ice coverage data file name.
+    Sets SST and ice coverage data file name.
+    This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="POP_PHYS_CYCLE_YEARS_IN_CYCLE" value="0">
+  </group>
+  <group id="run_component_cam_sstice">
+    <entry id="SSTICE_GRID_FILENAME" value="$DIN_LOC_ROOT/ocn/docn7/domain.ocn.1x1.111007.nc">
+      <type>char</type>
+      <valid_values/>
+      <desc>Prescribed SST and ice coverage grid file name.
+    Sets SST and ice coverage grid file name for prescribed runs.
+    This is only used when DOCN_MODE=prescribed.</desc>
+    </entry>
+    <entry id="SSTICE_YEAR_ALIGN" value="1850">
       <type>integer</type>
-      <desc>number of years to run before cycling POP physics
-    POP physics cycling only occurs if POP_PHYS_CYCLE_YEARS_IN_CYCLE&gt;0
-    and pre- and post-run scripts are specified in env vars
-    PRERUN_SCRIPT and POSTRUN_SCRIPT</desc>
+      <valid_values/>
+      <desc>The model year that corresponds to SSTICE_YEAR_START on the data file.
+    Prescribed SST and ice coverage data will be aligned so that the first year of
+    data corresponds to SSTICE_YEAR_ALIGN in the model. For instance, if the first
+    year of prescribed data is the same as the first year of the model run, this
+    should be set to the year given in RUN_STARTDATE.
+    If SSTICE_YEAR_ALIGN is later than the model's starting year, or if the model is
+    run after the prescribed data ends (as determined by SSTICE_YEAR_END), the
+    default behavior is to assume that the data from SSTICE_YEAR_START to
+    SSTICE_YEAR_END cyclically repeats. This behavior is controlled by the
+    "taxmode" stream option; see the data model documentation for more details.
+    This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="POP_PHYS_CYCLE_MONTHS_RUN_SINCE_CYCLE" value="0">
+    <entry id="SSTICE_YEAR_START" value="1850">
       <type>integer</type>
-      <desc>number of months run since most recent cycling of POP physics</desc>
+      <valid_values/>
+      <desc>The first year of data to use from SSTICE_DATA_FILENAME.
+    This is the first year of prescribed SST and ice coverage data to use. For
+    example, if a data file has data for years 0-99, and SSTICE_YEAR_START is 10,
+    years 0-9 in the file will not be used.
+    This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="POP_PASSIVE_TRACER_RESTART_OVERRIDE" value="none">
-      <type>char</type>
-      <desc>if not equal to none, then passive tracers modules use this as their restart file</desc>
+    <entry id="SSTICE_YEAR_END" value="2016">
+      <type>integer</type>
+      <valid_values/>
+      <desc>The last year of data to use from SSTICE_DATA_FILENAME.
+    This is the last year of prescribed SST and ice coverage data to use. For
+    example, if a data file has data for years 0-99, and value is 49,
+    years 50-99 in the file will not be used.
+    This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
   </group>
   <group id="run_component_mosart">

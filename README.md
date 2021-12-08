@@ -1,13 +1,11 @@
 # amwg_cases
 
 # case: 
-b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.004_zm2.hf
+f.e21.FWscHIST.ne30_L32_cam6_3_035.tphysac_reorder.001.hf2
 
 # sandbox:  
-https://github.com/NCAR/amwg_dev/tree/cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm/
-hash: cd7baff
-
-
+https://github.com/NCAR/amwg_dev/tree/cam6_3_035.tphysac/
+hash: 148296d
 
 
 

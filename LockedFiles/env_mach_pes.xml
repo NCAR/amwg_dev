@@ -23,13 +23,12 @@
     The following values should not be set by the user since they'll be
     overwritten by scripts: TOTALPES, NTASKS_PER_INST
     </header>
-  <comment>none</comment>
   <group id="mach_pes_last">
-    <entry id="COST_PES" value="1944">
+    <entry id="COST_PES" value="2160">
       <type>integer</type>
       <desc>pes or cores used relative to MAX_MPITASKS_PER_NODE for accounting (0 means TOTALPES is valid)</desc>
     </entry>
-    <entry id="TOTALPES" value="1944">
+    <entry id="TOTALPES" value="2160">
       <type>integer</type>
       <desc>total number of physical cores used (setup automatically - DO NOT EDIT)</desc>
     </entry>
@@ -63,31 +62,31 @@
     <entry id="NTASKS">
       <type>integer</type>
       <values>
-        <value compclass="ATM">1800</value>
-        <value compclass="CPL">1800</value>
-        <value compclass="OCN">144</value>
-        <value compclass="WAV">36</value>
-        <value compclass="GLC">1152</value>
-        <value compclass="ICE">720</value>
-        <value compclass="ROF">1080</value>
-        <value compclass="LND">1080</value>
-        <value compclass="ESP">1</value>
-        <value compclass="IAC">1</value>
+        <value compclass="ATM">2160</value>
+        <value compclass="CPL">2160</value>
+        <value compclass="OCN">2160</value>
+        <value compclass="WAV">2160</value>
+        <value compclass="GLC">2160</value>
+        <value compclass="ICE">2160</value>
+        <value compclass="ROF">2160</value>
+        <value compclass="LND">2160</value>
+        <value compclass="ESP">2160</value>
+        <value compclass="IAC">2160</value>
       </values>
       <desc>number of tasks for each component</desc>
     </entry>
     <entry id="NTASKS_PER_INST">
       <type>integer</type>
       <values>
-        <value compclass="ATM">1800</value>
-        <value compclass="OCN">144</value>
-        <value compclass="WAV">36</value>
-        <value compclass="GLC">1152</value>
-        <value compclass="ICE">720</value>
-        <value compclass="ROF">1080</value>
-        <value compclass="LND">1080</value>
-        <value compclass="ESP">1</value>
-        <value compclass="IAC">1</value>
+        <value compclass="ATM">2160</value>
+        <value compclass="OCN">2160</value>
+        <value compclass="WAV">2160</value>
+        <value compclass="GLC">2160</value>
+        <value compclass="ICE">2160</value>
+        <value compclass="ROF">2160</value>
+        <value compclass="LND">2160</value>
+        <value compclass="ESP">2160</value>
+        <value compclass="IAC">2160</value>
       </values>
       <desc>Number of tasks per instance for each component. DO NOT EDIT: Set automatically by case.setup based on NTASKS, NINST and MULTI_DRIVER</desc>
     </entry>
@@ -112,10 +111,10 @@
       <values>
         <value compclass="ATM">0</value>
         <value compclass="CPL">0</value>
-        <value compclass="OCN">1800</value>
-        <value compclass="WAV">1116</value>
+        <value compclass="OCN">0</value>
+        <value compclass="WAV">0</value>
         <value compclass="GLC">0</value>
-        <value compclass="ICE">1080</value>
+        <value compclass="ICE">0</value>
         <value compclass="ROF">0</value>
         <value compclass="LND">0</value>
         <value compclass="ESP">0</value>

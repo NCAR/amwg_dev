@@ -1,50 +1,48 @@
-2021-10-19 16:19:05: ./create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_POP2%ECO_MOSART_CISM2%NOEVOLVE_WW3_SIAC_SESP_BGC%BDRD --res ne30pg3_g17 --case /glade/p/cesmdata/cseg/runs/cesm2_0/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.004_zm2.hf --run-unsupported --project 93300722
+2021-12-07 11:16:26: ./create_newcase --compset HIST_CAM60%WCSC_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_SIAC_SESP --res ne30pg3_ne30pg3_mg17 --case /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L32_cam6_3_035.tphysac_reorder.001.hf2 --run-unsupported --pecount 2160 --project 93300722
  ---------------------------------------------------
-2021-10-19 16:19:05: Compset longname is 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_POP2%ECO_MOSART_CISM2%NOEVOLVE_WW3_SIAC_SESP_BGC%BDRD
+2021-12-07 11:16:26: Compset longname is HIST_CAM60%WCSC_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_SIAC_SESP
  ---------------------------------------------------
-2021-10-19 16:19:05: Compset specification file is /glade/work/hannay/cesm_tags/cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm/cime_config/config_compsets.xml
+2021-12-07 11:16:26: Compset specification file is /glade/work/hannay/cesm_tags/cam6_3_035.tphysac/cime_config/config_compsets.xml
  ---------------------------------------------------
-2021-10-19 16:19:05: Pes     specification file is /glade/work/hannay/cesm_tags/cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm/cime_config/config_pes.xml
+2021-12-07 11:16:26: Pes     specification file is /glade/work/hannay/cesm_tags/cam6_3_035.tphysac/cime_config/config_pes.xml
  ---------------------------------------------------
-2021-10-19 16:19:05: Forcing is 1850
+2021-12-07 11:16:26: Forcing is Historic transient 
  ---------------------------------------------------
-2021-10-19 16:19:05: Component CPL is Biogeochemistry intercomponent  with diagnostic CO2
+2021-12-07 11:16:26: Using None coupler instances
  ---------------------------------------------------
-2021-10-19 16:19:05: Using None coupler instances
+2021-12-07 11:16:26: Component ATM is CAM cam6 physics:WACCM specified chemistry:
  ---------------------------------------------------
-2021-10-19 16:19:05: Component ATM is CAM cam6 physics:WACCM specified chemistry:
+2021-12-07 11:16:26: ATM_GRID is ne30np4.pg3
  ---------------------------------------------------
-2021-10-19 16:19:05: ATM_GRID is ne30np4.pg3
+2021-12-07 11:16:26: Component LND is clm5.0:BGC (vert. resol. CN and methane) with prognostic crop:
  ---------------------------------------------------
-2021-10-19 16:19:05: Component LND is clm5.0:BGC (vert. resol. CN and methane) with prognostic crop:
+2021-12-07 11:16:26: LND_GRID is ne30np4.pg3
  ---------------------------------------------------
-2021-10-19 16:19:05: LND_GRID is ne30np4.pg3
+2021-12-07 11:16:26: Component ICE is Sea ICE (cice) model version 5 :prescribed cice
  ---------------------------------------------------
-2021-10-19 16:19:05: Component ICE is Sea ICE (cice) model version 5
+2021-12-07 11:16:26: ICE_GRID is ne30np4.pg3
  ---------------------------------------------------
-2021-10-19 16:19:05: ICE_GRID is gx1v7
+2021-12-07 11:16:26: Component OCN is DOCN   prescribed ocean mode
  ---------------------------------------------------
-2021-10-19 16:19:05: Component OCN is POP2 Ecosystem
+2021-12-07 11:16:26: OCN_GRID is ne30np4.pg3
  ---------------------------------------------------
-2021-10-19 16:19:05: OCN_GRID is gx1v7
+2021-12-07 11:16:26: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
  ---------------------------------------------------
-2021-10-19 16:19:05: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+2021-12-07 11:16:26: ROF_GRID is r05
  ---------------------------------------------------
-2021-10-19 16:19:05: ROF_GRID is r05
+2021-12-07 11:16:26: Component GLC is cism2:cism ice evolution turned off (this is the standard configuration unless you're explicitly interested in ice evolution):
  ---------------------------------------------------
-2021-10-19 16:19:05: Component GLC is cism2:cism ice evolution turned off (this is the standard configuration unless you're explicitly interested in ice evolution):
+2021-12-07 11:16:26: GLC_GRID is gris4
  ---------------------------------------------------
-2021-10-19 16:19:05: GLC_GRID is gris4
+2021-12-07 11:16:26: Component WAV is Stub wave component
  ---------------------------------------------------
-2021-10-19 16:19:05: Component WAV is Wave Watch
+2021-12-07 11:16:26: WAV_GRID is null
  ---------------------------------------------------
-2021-10-19 16:19:05: WAV_GRID is ww3a
+2021-12-07 11:16:26: Component IAC is Stub iac component
  ---------------------------------------------------
-2021-10-19 16:19:05: Component IAC is Stub iac component
+2021-12-07 11:16:26: IAC_GRID is null
  ---------------------------------------------------
-2021-10-19 16:19:05: IAC_GRID is null
+2021-12-07 11:16:26: Component ESP is Stub external system processing (ESP) component
  ---------------------------------------------------
-2021-10-19 16:19:05: Component ESP is Stub external system processing (ESP) component
- ---------------------------------------------------
-2021-10-19 16:19:05: ESP_GRID is None
+2021-12-07 11:16:26: ESP_GRID is None
  ---------------------------------------------------

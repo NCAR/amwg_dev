@@ -85,37 +85,13 @@
         <tfile disposition="move">casename.cice.h.1976-01-01-00000.nc</tfile>
       </test_file_names>
     </comp_archive_spec>
-    <comp_archive_spec compclass="ocn" compname="pop">
-      <rest_file_extension>r</rest_file_extension>
-      <rest_file_extension>r[ho]</rest_file_extension>
-      <rest_file_extension>rh.*</rest_file_extension>
-      <hist_file_extension>h\d*.*\.nc$</hist_file_extension>
-      <hist_file_extension>d[dovt]</hist_file_extension>
+    <comp_archive_spec compclass="ocn" compname="docn">
+      <rest_file_extension>rs*\d*</rest_file_extension>
       <rest_history_varname>unset</rest_history_varname>
       <rpointer>
-        <rpointer_file>rpointer.ocn$NINST_STRING.restart</rpointer_file>
-        <rpointer_content>./$CASE.pop$NINST_STRING.r.$DATENAME.nc,RESTART_FMT=nc</rpointer_content>
+        <rpointer_file>rpointer.ocn$NINST_STRING</rpointer_file>
+        <rpointer_content>$CASE.docn$NINST_STRING.r.$DATENAME.nc,$CASE.docn$NINST_STRING.rs1.$DATENAME.bin</rpointer_content>
       </rpointer>
-      <rpointer>
-        <rpointer_file>rpointer.ocn$NINST_STRING.ovf</rpointer_file>
-        <rpointer_content>./$CASE.pop$NINST_STRING.ro.$DATENAME</rpointer_content>
-      </rpointer>
-      <rpointer>
-        <rpointer_file>rpointer.ocn$NINST_STRING.tavg</rpointer_file>
-        <rpointer_content>./$CASE.pop$NINST_STRING.rh.$DATENAME.nc</rpointer_content>
-      </rpointer>
-      <test_file_names>
-        <tfile disposition="copy">rpointer.pop</tfile>
-        <tfile disposition="copy">casename.pop_0001.r.1976-01-01-00000.nc</tfile>
-        <tfile disposition="copy">casename.pop.r.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.pop.h.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.pop.h.1975-02-01-00000.nc</tfile>
-        <tfile disposition="move">casename.pop.h0.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.pop.dd.1976-01-01-00000</tfile>
-        <tfile disposition="copy">casename.pop.rh.ecosys.nyear1.1976-01-01-00000.nc</tfile>
-        <tfile disposition="ignore">casename.pop.r.1975-01-01-00000.nc</tfile>
-        <tfile disposition="ignore">anothercasename.pop.r.1976-01-01-00000.nc</tfile>
-      </test_file_names>
     </comp_archive_spec>
     <comp_archive_spec compclass="rof" compname="mosart">
       <rest_file_extension>r</rest_file_extension>
@@ -155,15 +131,6 @@
         <tfile disposition="ignore">casename.cism.h.1976-01-01-00000.nc.base</tfile>
         <tfile disposition="ignore">anothercasename.cism.r.1976-01-01-00000.nc</tfile>
       </test_file_names>
-    </comp_archive_spec>
-    <comp_archive_spec compclass="wav" compname="ww3">
-      <rest_file_extension>r</rest_file_extension>
-      <hist_file_extension>hi.*\.nc$</hist_file_extension>
-      <rest_history_varname>unset</rest_history_varname>
-      <rpointer>
-        <rpointer_file>rpointer.wav$NINST_STRING</rpointer_file>
-        <rpointer_content>unset</rpointer_content>
-      </rpointer>
     </comp_archive_spec>
     <comp_archive_spec compclass="cpl" compname="drv">
       <rest_file_extension>r</rest_file_extension>
