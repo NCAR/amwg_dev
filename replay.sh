@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2021-10-08 14:54:24
+# Created 2021-10-19 16:19:05
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.003_zm2.hf"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.004_zm2.hf"
 
 /glade/work/hannay/cesm_tags/cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm/cime/scripts/create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_POP2%ECO_MOSART_CISM2%NOEVOLVE_WW3_SIAC_SESP_BGC%BDRD --res ne30pg3_g17 --case "${CASEDIR}" --run-unsupported --project 93300722
 
@@ -84,13 +84,27 @@ cd "${CASEDIR}"
 
 ./preview_namelists
 
+./case.build
+
 ./preview_namelists
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
+
+./case.submit
+
+./case.build
 
 ./case.build
 
 ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
 
 ./case.submit
+
+./case.build
+
+./case.build --clean-all
+
+./case.build
 
 ./case.submit
 

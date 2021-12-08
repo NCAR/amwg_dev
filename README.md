@@ -1,7 +1,7 @@
 # amwg_cases
 
 # case: 
-b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.003_zm2.hf
+b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.004_zm2.hf
 
 # sandbox:  
 https://github.com/NCAR/amwg_dev/tree/cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm/
