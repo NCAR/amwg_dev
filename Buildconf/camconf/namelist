@@ -4,7 +4,7 @@
  dtime = 1800
 
 
-ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_32L_CAM_32L_grid_Top_42km.nc'
+ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
 
 
 
@@ -74,7 +74,7 @@ se_hypervis_subcycle =  4
 
 
 
-zmconv_parcel_pbl = .false.
+zmconv_parcel_pbl = .true.
 
 
 
