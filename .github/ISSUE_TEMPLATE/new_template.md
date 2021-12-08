@@ -1,5 +1,5 @@
 ---
-name: Simulation template
+name: Simulation template for run with cam6_3_019_plus_CESM2.2
 about: Documenting information about a CAM/CESM simulation you have performed
 title: Casename (enter the name of the run here)
 labels: AMWG
