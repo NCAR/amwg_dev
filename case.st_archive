@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Batch system directives
-#PBS -N st_archive.b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf
+#PBS -N st_archive.b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.003_zm2.hf
 #PBS  -r n 
 #PBS  -j oe 
 #PBS  -V 
@@ -15,7 +15,7 @@ is called by case.submit on batch systems.
 """
 
 import sys, os, time
-os.chdir( '/glade/p/cesmdata/cseg/runs/cesm2_0/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.001_zm2.hf')
+os.chdir( '/glade/p/cesmdata/cseg/runs/cesm2_0/b.e21.BWsc1850.ne30_L48_BL10_cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm.003_zm2.hf')
 
 _LIBDIR = os.path.join("/glade/work/hannay/cesm_tags/cesm2_3_alpha05c_cam6_3_028_cam6_parcel_zm/cime", "scripts", "Tools")
 sys.path.append(_LIBDIR)
