@@ -190,8 +190,8 @@
  clubb_l_predict_upwp_vpwp		=  .false. 
  clubb_l_rcm_supersat_adj		=  .false. 
  clubb_l_stability_correct_tau_zm		=  .true.  
- clubb_l_trapezoidal_rule_zm		= .true.
- clubb_l_trapezoidal_rule_zt		= .true.
+ clubb_l_trapezoidal_rule_zm		=  .false. 
+ clubb_l_trapezoidal_rule_zt		=  .false. 
  clubb_l_upwind_xpyp_ta		=  .true.  
  clubb_l_use_c11_richardson		=  .false. 
  clubb_l_use_c7_richardson		=  .false. 
@@ -476,7 +476,7 @@
  zmconv_momcu		=  0.7000D0 
  zmconv_num_cin		=  1       
  zmconv_org		=  .false. 
- zmconv_parcel_pbl		= .true.
+ zmconv_parcel_pbl		= .false.
  zmconv_tau		=  3600.0    
  zmconv_tiedke_add		=  0.5     
 /

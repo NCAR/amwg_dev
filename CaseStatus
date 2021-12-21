@@ -1,41 +1,39 @@
-2021-12-15 17:46:26: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS= -pcols 9 --append  </command>
+2021-12-21 11:34:46: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS= -pcols 9 --append  </command>
  ---------------------------------------------------
-2021-12-15 17:46:26: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 58  </command>
+2021-12-21 11:34:46: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 58  </command>
  ---------------------------------------------------
-2021-12-15 17:46:27: case.setup starting 
+2021-12-21 11:34:47: case.setup starting 
  ---------------------------------------------------
-2021-12-15 17:46:28: case.setup success 
+2021-12-21 11:34:48: case.setup success 
  ---------------------------------------------------
-2021-12-15 17:46:29: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+2021-12-21 11:34:49: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
  ---------------------------------------------------
-2021-12-15 17:46:29: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2021-12-21 11:34:49: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2021-12-15 17:46:29: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2021-12-21 11:34:49: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2021-12-15 17:46:29: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2021-12-21 11:34:50: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2021-12-15 17:46:30: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2021-12-21 11:34:50: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2021-12-15 17:46:30: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+2021-12-21 11:34:50: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
  ---------------------------------------------------
-2021-12-15 17:46:30: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+2021-12-21 11:34:51: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
  ---------------------------------------------------
-2021-12-15 17:46:31: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2021-12-21 11:34:51: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2021-12-15 17:47:30: case.build starting 
+2021-12-21 11:35:02: case.build starting 
  ---------------------------------------------------
-2021-12-15 17:49:26: case.build starting 
- ---------------------------------------------------
-2021-12-15 17:50:55: case.build starting 
+2021-12-21 11:37:42: case.build starting 
  ---------------------------------------------------
 CESM version is cam6_3_006-676-g148296dc
 Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CDEPS.cfg
+Processing externals description file : Externals_CISM.cfg
 Processing externals description file : Externals_CLM.cfg
 Processing externals description file : Externals_FMS.cfg
-Processing externals description file : Externals_CISM.cfg
-Processing externals description file : Externals_CDEPS.cfg
 Processing externals description file : Externals_CAM.cfg
-Checking status of externals: clm, fates, ptclm, mosart, cime, cpl7, parallelio, cice, cmeps, share, fms, fms, cism, source_cism, rtm, cdeps, genf90, fox, cam, silhs, clubb, pumas, atmos_phys, cosp2, chem_proc, mpas, atmos_cubed_sphere, carma, cice6, mct, 
+Checking status of externals: cice, cice6, cmeps, cdeps, fox, genf90, cpl7, share, mct, parallelio, cime, cism, source_cism, clm, fates, ptclm, fms, fms, mosart, rtm, cam, chem_proc, carma, cosp2, clubb, silhs, pumas, atmos_phys, atmos_cubed_sphere, mpas, 
 e-  ./chem_proc
         -, not checked out --> chem_proc5_0_04
     ./cime
@@ -94,5 +92,147 @@ e-  ./src/physics/carma/base
         clean sandbox, on pumas_cam-release_v1.17
     ./src/physics/silhs
         clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
-2021-12-15 18:03:27: case.build success 
+2021-12-21 11:50:00: case.build success 
+ ---------------------------------------------------
+2021-12-21 11:50:23: case.build starting 
+ ---------------------------------------------------
+CESM version is cam6_3_006-676-g148296dc
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CDEPS.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_FMS.cfg
+Processing externals description file : Externals_CAM.cfg
+Checking status of externals: cice, cice6, cmeps, cdeps, fox, genf90, cpl7, share, mct, parallelio, cime, cism, source_cism, clm, fates, ptclm, fms, fms, mosart, rtm, cam, chem_proc, carma, cosp2, clubb, silhs, pumas, atmos_phys, atmos_cubed_sphere, mpas, 
+e-  ./chem_proc
+        -, not checked out --> chem_proc5_0_04
+    ./cime
+        clean sandbox, on cime6.0.6
+    ./components/cdeps
+        clean sandbox, on cdeps0.12.21
+    ./components/cdeps/fox
+        clean sandbox, on 4.1.2.1
+    ./components/cdeps/share/genf90
+        clean sandbox, on genf90_200608
+    ./components/cice
+        clean sandbox, on cice5_20210802
+e-o ./components/cice6
+        -, not checked out --> cesm_cice6_2_0_5
+    ./components/cism
+        clean sandbox, on cismwrap_2_1_88
+    ./components/cism/source_cism
+        clean sandbox, on cism_main_2.01.004
+    ./components/clm
+        clean sandbox, on ctsm5.1.dev053
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.46.2_api.16.1.0
+    ./components/clm/tools/site_and_regional/PTCLM
+        clean sandbox, on PTCLM2_20210810
+    ./components/cmeps
+        clean sandbox, on cmeps0.13.25
+    ./components/cpl7
+        clean sandbox, on cpl7.0.5
+    ./components/mosart
+        clean sandbox, on mosart1_0_43
+    ./components/rtm
+        clean sandbox, on rtm1_0_77
+    ./libraries/FMS
+        clean sandbox, on fi_20211011
+    ./libraries/FMS/src
+        clean sandbox, on xanadu_esm4_20190304
+    ./libraries/mct
+        clean sandbox, on MCT_2.11.0
+    ./libraries/parallelio
+        clean sandbox, on pio2_5_4
+    ./share
+        clean sandbox, on share1.0.7
+    ./src/atmos_phys
+        clean sandbox, on atmos_phys0_00_011
+e-  ./src/dynamics/fv3/atmos_cubed_sphere
+        -, not checked out --> fv3_cesm.04
+e-  ./src/dynamics/mpas/dycore
+        -, not checked out --> 
+e-  ./src/physics/carma/base
+        -, not checked out --> carma3_49
+    ./src/physics/clubb
+        clean sandbox, on clubb_release_b76a124_20200220_c20200320
+    ./src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./src/physics/pumas
+        clean sandbox, on pumas_cam-release_v1.17
+    ./src/physics/silhs
+        clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
+2021-12-21 11:50:47: case.build success 
+ ---------------------------------------------------
+2021-12-21 11:51:03: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2021-12-21 11:51:22: case.build starting 
+ ---------------------------------------------------
+CESM version is cam6_3_006-676-g148296dc
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CDEPS.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_FMS.cfg
+Processing externals description file : Externals_CAM.cfg
+Checking status of externals: cice, cice6, cmeps, cdeps, fox, genf90, cpl7, share, mct, parallelio, cime, cism, source_cism, clm, fates, ptclm, fms, fms, mosart, rtm, cam, chem_proc, carma, cosp2, clubb, silhs, pumas, atmos_phys, atmos_cubed_sphere, mpas, 
+e-  ./chem_proc
+        -, not checked out --> chem_proc5_0_04
+    ./cime
+        clean sandbox, on cime6.0.6
+    ./components/cdeps
+        clean sandbox, on cdeps0.12.21
+    ./components/cdeps/fox
+        clean sandbox, on 4.1.2.1
+    ./components/cdeps/share/genf90
+        clean sandbox, on genf90_200608
+    ./components/cice
+        clean sandbox, on cice5_20210802
+e-o ./components/cice6
+        -, not checked out --> cesm_cice6_2_0_5
+    ./components/cism
+        clean sandbox, on cismwrap_2_1_88
+    ./components/cism/source_cism
+        clean sandbox, on cism_main_2.01.004
+    ./components/clm
+        clean sandbox, on ctsm5.1.dev053
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.46.2_api.16.1.0
+    ./components/clm/tools/site_and_regional/PTCLM
+        clean sandbox, on PTCLM2_20210810
+    ./components/cmeps
+        clean sandbox, on cmeps0.13.25
+    ./components/cpl7
+        clean sandbox, on cpl7.0.5
+    ./components/mosart
+        clean sandbox, on mosart1_0_43
+    ./components/rtm
+        clean sandbox, on rtm1_0_77
+    ./libraries/FMS
+        clean sandbox, on fi_20211011
+    ./libraries/FMS/src
+        clean sandbox, on xanadu_esm4_20190304
+    ./libraries/mct
+        clean sandbox, on MCT_2.11.0
+    ./libraries/parallelio
+        clean sandbox, on pio2_5_4
+    ./share
+        clean sandbox, on share1.0.7
+    ./src/atmos_phys
+        clean sandbox, on atmos_phys0_00_011
+e-  ./src/dynamics/fv3/atmos_cubed_sphere
+        -, not checked out --> fv3_cesm.04
+e-  ./src/dynamics/mpas/dycore
+        -, not checked out --> 
+e-  ./src/physics/carma/base
+        -, not checked out --> carma3_49
+    ./src/physics/clubb
+        clean sandbox, on clubb_release_b76a124_20200220_c20200320
+    ./src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./src/physics/pumas
+        clean sandbox, on pumas_cam-release_v1.17
+    ./src/physics/silhs
+        clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
+2021-12-21 11:51:46: case.build success 
  ---------------------------------------------------
