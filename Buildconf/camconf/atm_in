@@ -30,7 +30,7 @@
  fincl1		= 'U', 'V', 'Q', 'T', 'PSL', 'OMEGA', 'PS', 'PRECC', 'PRECL', 'UTGWORO', 'VTGWORO', 'TS',
          'TAUX', 'TAUY', 'TAUBLJX', 'TAUBLJY', 'TAUGWX', 'TAUGWY', 'FLNT', 'FLNS', 'FSNS', 'FSNT', 'LHFLX', 'SHFLX',
          'TMQ', 'FLDS', 'FSDS', 'FSDSC', 'SWCF', 'LWCF', 'PRECSC', 'PRECSL', 'DTCOND', 'Z3', 'PSL', 'PBLH',
-         'ZMDT', 'ZMDT', 'STEND_CLUBB', 'RVMTEND_CLUBB'
+         'ZMDT', 'ZMDT', 'STEND_CLUBB', 'RVMTEND_CLUBB', 'FREQZM'
  fincl2		= 'TROP_T', 'TROP_P', 'Q', 'T', 'U850', 'V850', 'U200', 'V200', 'PRECT', 'PRECC', 'PRECL', 'PBLH',
          'OMEGA500', 'FLUT', 'Z500', 'T500', 'PS', 'PMID:I', 'TREFHTMN:M', 'TREFHTMX:X', 'TSMN:M', 'TSMX:X', 'PBLH', 'ZMDT',
          'ZMDT', 'STEND_CLUBB', 'RVMTEND_CLUBB', 'PRECT', 'PRECL', 'U200', 'V200', 'U850', 'V850', 'FLUT', 'Z500', 'TREFHT',
@@ -46,7 +46,7 @@
 /
 &cam_initfiles_nl
  bnd_topo		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/topo/se/ne30pg3_nc3000_Co060_Fi001_PF_nullRR_Nsw042_20171014.nc'
- ncdata		= '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
+ ncdata		= '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_93L_GRID_83L_10BL_Top_86km.nc'
  use_topo_file		=  .true.  
 /
 &check_energy_nl
@@ -216,7 +216,7 @@
  se_fvm_supercycling_jet		= -1
  se_horz_num_threads		=  0 
  se_hypervis_dynamic_ref_state		=  .false.  
- se_hypervis_subcycle		= 4
+ se_hypervis_subcycle		= 3
  se_hypervis_subcycle_q		= 1                 
  se_hypervis_subcycle_sponge		=  1  
  se_kmax_jet		= -1
@@ -226,7 +226,7 @@
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
  se_ne		= 30
- se_nsplit		= 2
+ se_nsplit		= 3
  se_nu		= -1
  se_nu_div		=  -1 
  se_nu_p		= -1 
@@ -234,7 +234,7 @@
  se_phys_dyn_cp		= 1
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
- se_rsplit		= 3
+ se_rsplit		= 6
  se_statediag_numtrac		= 3
  se_statefreq		=  0 
  se_tracer_num_threads		=  0 
@@ -266,7 +266,7 @@
  pgwv		= 32
  pgwv_long		= 0
  rdg_beta_cd_llb		= 1.0D0
- tau_0_ubc		= .false.
+ tau_0_ubc		= .true.
  taubgnd		= 1.25D-3
  trpd_leewv_rdg_beta		= .false.
  use_gw_rdg_beta		= .true.

@@ -1,13 +1,13 @@
 
-ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
+ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_93L_GRID_83L_10BL_Top_86km.nc'
 
 mfilt           = 0,5,20,40,120,240,365,73,365
 nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
-fexcl1 = ' '
+fexcl1 = ' '  
 fincl1 = 'U','V','Q','T','PSL','OMEGA','PS','PRECC','PRECL','UTGWORO','VTGWORO',
          'TS', 'TAUX','TAUY','TAUBLJX','TAUBLJY','TAUGWX','TAUGWY','FLNT','FLNS','FSNS','FSNT',
          'LHFLX','SHFLX','TMQ','FLDS','FSDS','FSDSC','SWCF','LWCF','PRECSC','PRECSL',  'DTCOND','Z3', 'PSL'
-         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB'
+         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB','FREQZM' 
 fincl2 = 'TROP_T', 'TROP_P', 'Q', 'T','U850','V850','U200','V200','PRECT','PRECC','PRECL','PBLH',
          'OMEGA500','FLUT','Z500','T500','PS','PMID:I','TREFHTMN:M', 'TREFHTMX:X','TSMN:M', 'TSMX:X',
          'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB',
@@ -22,10 +22,10 @@ interpolate_nlat = 192,192,192,192
 interpolate_nlon = 288,288,288,288
 
 se_nu_top = 1.25e5
-tau_0_ubc = .false.
+tau_0_ubc = .true.
 qbo_use_forcing              = .false.
 
-se_rsplit            = 3
-se_nsplit           = 2
-se_hypervis_subcycle =  4
+se_nsplit=3
+se_rsplit=6
+se_hypervis_subcycle=3
 
