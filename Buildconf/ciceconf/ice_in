@@ -16,7 +16,7 @@
   history_dir = "./"
   history_file = "unknown"
   history_precision = 4
-  ice_ic = "f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001.cice.r.1989-01-01-00000.nc"
+  ice_ic = "b.e21.BHIST.f09_g17.CMIP6-historical.001.cice.r.1970-01-01-00000.nc"
   incond_dir = "./"
   incond_file = "iceh_ic"
   istep0 = 0
@@ -38,12 +38,12 @@
   year_init = 0
 /
 &grid_nml
-  grid_file = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.ne30np4.pg3_gx1v7_170605.nc"
+  grid_file = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.fv0.9x1.25_gx1v7.151020.nc"
   grid_format = "nc"
   grid_type = "latlon"
   gridcpl_file = "unknown_gridcpl_file"
   kcatbound = 0
-  kmt_file = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.ne30np4.pg3_gx1v7_170605.nc"
+  kmt_file = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.fv0.9x1.25_gx1v7.151020.nc"
 /
 &tracer_nml
   restart_aero = .false.
@@ -384,12 +384,12 @@
   prescribed_ice = .true.
   prescribed_ice_fill = .false.
   stream_domareaname = "area"
-  stream_domfilename = "/glade/p/cesmdata/cseg/inputdata/ocn/docn7/domain.ocn.1x1.111007.nc"
+  stream_domfilename = "/glade/p/cesmdata/cseg/inputdata/share/domains/domain.ocn.fv0.9x1.25_gx1v7.151020.nc"
   stream_dommaskname = "mask"
   stream_domtvarname = "time"
   stream_domxvarname = "xc"
   stream_domyvarname = "yc"
-  stream_fldfilename = "/glade/p/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2017_c180507.nc"
+  stream_fldfilename = "/glade/p/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_0.9x1.25_1850_2017_c180507.nc"
   stream_fldvarname = "ice_cov"
   stream_mapread = "NOT_SET"
   stream_year_first = 1850

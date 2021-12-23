@@ -1,11 +1,7 @@
 &comp_inparm 
 
- ncdata = 'f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001.cam.i.1989-01-01-00000.nc'
+ ncdata = 'b.e21.BHIST.f09_g17.CMIP6-historical.001.cam.i.1970-01-01-00000.nc'
  dtime = 1800
-
-
-ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_93L_GRID_83L_10BL_Top_86km.nc'
-
 
 
 mfilt           = 0,5,20,40,120,240,365,73,365
@@ -20,7 +16,7 @@ fincl1 = 'U','V','Q','T','PSL','OMEGA','PS','PRECC','PRECL','UTGWORO','VTGWORO',
 
          'LHFLX','SHFLX','TMQ','FLDS','FSDS','FSDSC','SWCF','LWCF','PRECSC','PRECSL',  'DTCOND','Z3', 'PSL'
 
-         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB','FREQZM' 
+         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB', 'FREQZM' 
 
 fincl2 = 'TROP_T', 'TROP_P', 'Q', 'T','U850','V850','U200','V200','PRECT','PRECC','PRECL','PBLH',
 
@@ -40,27 +36,13 @@ fincl8 = 'Z3:I','U850:I','V850:I','Z500:I','PS:I', 'PMID:I'
 
 
 
-interpolate_output = .true.,.true.,.true.,.true.
-
-interpolate_nlat = 192,192,192,192
-
-interpolate_nlon = 288,288,288,288
-
-
-
-se_nu_top = 1.25e5
-
-tau_0_ubc = .true.
+tau_0_ubc = .false.
 
 qbo_use_forcing              = .false.
 
 
 
-se_nsplit=3
-
-se_rsplit=6
-
-se_hypervis_subcycle=3
+npr_yz         = 60,30,30,60
 
 
 

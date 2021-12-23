@@ -24,11 +24,11 @@
     overwritten by scripts: TOTALPES, NTASKS_PER_INST
     </header>
   <group id="mach_pes_last">
-    <entry id="COST_PES" value="4320">
+    <entry id="COST_PES" value="5400">
       <type>integer</type>
       <desc>pes or cores used relative to MAX_MPITASKS_PER_NODE for accounting (0 means TOTALPES is valid)</desc>
     </entry>
-    <entry id="TOTALPES" value="4320">
+    <entry id="TOTALPES" value="5400">
       <type>integer</type>
       <desc>total number of physical cores used (setup automatically - DO NOT EDIT)</desc>
     </entry>
@@ -58,45 +58,45 @@
     <entry id="NTASKS">
       <type>integer</type>
       <values>
-        <value compclass="ATM">4320</value>
-        <value compclass="CPL">4320</value>
-        <value compclass="OCN">4320</value>
-        <value compclass="WAV">4320</value>
-        <value compclass="GLC">4320</value>
-        <value compclass="ICE">4320</value>
-        <value compclass="ROF">4320</value>
-        <value compclass="LND">4320</value>
-        <value compclass="ESP">4320</value>
-        <value compclass="IAC">4320</value>
+        <value compclass="ATM">1800</value>
+        <value compclass="CPL">1800</value>
+        <value compclass="OCN">1800</value>
+        <value compclass="WAV">1800</value>
+        <value compclass="GLC">1800</value>
+        <value compclass="ICE">1800</value>
+        <value compclass="ROF">1800</value>
+        <value compclass="LND">1800</value>
+        <value compclass="ESP">1800</value>
+        <value compclass="IAC">1800</value>
       </values>
       <desc>number of tasks for each component</desc>
     </entry>
     <entry id="NTASKS_PER_INST">
       <type>integer</type>
       <values>
-        <value compclass="ATM">4320</value>
-        <value compclass="OCN">4320</value>
-        <value compclass="WAV">4320</value>
-        <value compclass="GLC">4320</value>
-        <value compclass="ICE">4320</value>
-        <value compclass="ROF">4320</value>
-        <value compclass="LND">4320</value>
-        <value compclass="ESP">4320</value>
-        <value compclass="IAC">4320</value>
+        <value compclass="ATM">1800</value>
+        <value compclass="OCN">1800</value>
+        <value compclass="WAV">1800</value>
+        <value compclass="GLC">1800</value>
+        <value compclass="ICE">1800</value>
+        <value compclass="ROF">1800</value>
+        <value compclass="LND">1800</value>
+        <value compclass="ESP">1800</value>
+        <value compclass="IAC">1800</value>
       </values>
       <desc>Number of tasks per instance for each component. DO NOT EDIT: Set automatically by case.setup based on NTASKS, NINST and MULTI_DRIVER</desc>
     </entry>
     <entry id="NTHRDS">
       <type>integer</type>
       <values>
-        <value compclass="ATM">1</value>
-        <value compclass="CPL">1</value>
-        <value compclass="OCN">1</value>
-        <value compclass="WAV">1</value>
-        <value compclass="GLC">1</value>
-        <value compclass="ICE">1</value>
-        <value compclass="ROF">1</value>
-        <value compclass="LND">1</value>
+        <value compclass="ATM">3</value>
+        <value compclass="CPL">3</value>
+        <value compclass="OCN">3</value>
+        <value compclass="WAV">3</value>
+        <value compclass="GLC">3</value>
+        <value compclass="ICE">3</value>
+        <value compclass="ROF">3</value>
+        <value compclass="LND">3</value>
         <value compclass="ESP">1</value>
         <value compclass="IAC">1</value>
       </values>

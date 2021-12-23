@@ -84,13 +84,13 @@
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001">
+    <entry id="RUN_REFCASE" value="b.e21.BHIST.f09_g17.CMIP6-historical.001">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="1989-01-01">
+    <entry id="RUN_REFDATE" value="1970-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -110,7 +110,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="1979-01-01">
+    <entry id="RUN_STARTDATE" value="1970-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -129,7 +129,7 @@
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="1">
+    <entry id="STOP_N" value="2">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -233,7 +233,7 @@
       Set to TRUE when continuing a run.
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="0">
+    <entry id="RESUBMIT" value="4">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -253,7 +253,7 @@
       timing tests.
     </desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:41529.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:41530.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:1226111.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1226112.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -438,7 +438,7 @@
       <type>real</type>
       <desc>Longitude to find nearest points for points mode (only used if PTS_MODE is TRUE)</desc>
     </entry>
-    <entry id="ATM_DOMAIN_FILE" value="domain.lnd.ne30np4.pg3_gx1v7.170605.nc">
+    <entry id="ATM_DOMAIN_FILE" value="domain.lnd.fv0.9x1.25_gx1v7.151020.nc">
       <type>char</type>
       <desc>atm domain file</desc>
     </entry>
@@ -446,7 +446,7 @@
       <type>char</type>
       <desc>path of atm domain file</desc>
     </entry>
-    <entry id="LND_DOMAIN_FILE" value="domain.lnd.ne30np4.pg3_gx1v7.170605.nc">
+    <entry id="LND_DOMAIN_FILE" value="domain.lnd.fv0.9x1.25_gx1v7.151020.nc">
       <type>char</type>
       <desc>lnd domain file</desc>
     </entry>
@@ -478,7 +478,7 @@
       <type>char</type>
       <desc>path of iac domain file</desc>
     </entry>
-    <entry id="ICE_DOMAIN_FILE" value="domain.ocn.ne30np4.pg3_gx1v7_170605.nc">
+    <entry id="ICE_DOMAIN_FILE" value="domain.ocn.fv0.9x1.25_gx1v7.151020.nc">
       <type>char</type>
       <desc>ice domain file</desc>
     </entry>
@@ -486,7 +486,7 @@
       <type>char</type>
       <desc>path of ice domain file</desc>
     </entry>
-    <entry id="OCN_DOMAIN_FILE" value="domain.ocn.ne30np4.pg3_gx1v7_170605.nc">
+    <entry id="OCN_DOMAIN_FILE" value="domain.ocn.fv0.9x1.25_gx1v7.151020.nc">
       <type>char</type>
       <desc>ocn domain file</desc>
     </entry>
@@ -610,7 +610,7 @@
       <valid_values>X,Y</valid_values>
       <desc>lnd2atm state mapping file decomp type</desc>
     </entry>
-    <entry id="LND2GLC_FMAPNAME" value="cpl/gridmaps/ne30pg3/map_ne30pg3_TO_gland4km_aave.180515.nc">
+    <entry id="LND2GLC_FMAPNAME" value="cpl/gridmaps/fv0.9x1.25/map_fv0.9x1.25_TO_gland4km_aave.170429.nc">
       <type>char</type>
       <desc>lnd2glc flux mapping file</desc>
     </entry>
@@ -619,7 +619,7 @@
       <valid_values>X,Y</valid_values>
       <desc>lnd2glc flux mapping file decomp type</desc>
     </entry>
-    <entry id="LND2GLC_SMAPNAME" value="cpl/gridmaps/ne30pg3/map_ne30pg3_TO_gland4km_blin.180515.nc">
+    <entry id="LND2GLC_SMAPNAME" value="cpl/gridmaps/fv0.9x1.25/map_fv0.9x1.25_TO_gland4km_blin.170429.nc">
       <type>char</type>
       <desc>lnd2glc state mapping file</desc>
     </entry>
@@ -628,7 +628,7 @@
       <valid_values>X,Y</valid_values>
       <desc>lnd2glc state mapping file decomp type</desc>
     </entry>
-    <entry id="LND2ROF_FMAPNAME" value="lnd/clm2/mappingdata/maps/ne30pg3/map_ne30pg3_to_0.5x0.5_nomask_aave_da_c180515.nc">
+    <entry id="LND2ROF_FMAPNAME" value="lnd/clm2/mappingdata/maps/0.9x1.25/map_0.9x1.25_nomask_to_0.5x0.5_nomask_aave_da_c120522.nc">
       <type>char</type>
       <desc>lnd2rof flux mapping file</desc>
     </entry>
@@ -637,7 +637,7 @@
       <valid_values>X,Y</valid_values>
       <desc>lnd2rof flux mapping file decomp type</desc>
     </entry>
-    <entry id="ROF2LND_FMAPNAME" value="lnd/clm2/mappingdata/maps/ne30pg3/map_0.5x0.5_nomask_to_ne30pg3_aave_da_c180515.nc">
+    <entry id="ROF2LND_FMAPNAME" value="lnd/clm2/mappingdata/maps/0.9x1.25/map_0.5x0.5_nomask_to_0.9x1.25_nomask_aave_da_c121019.nc">
       <type>char</type>
       <desc>rof2lnd flux mapping file</desc>
     </entry>
@@ -674,7 +674,7 @@
       <valid_values>X,Y</valid_values>
       <desc>rof2ocn runoff mapping file decomp type</desc>
     </entry>
-    <entry id="GLC2LND_FMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_TO_ne30pg3_aave.180510.nc">
+    <entry id="GLC2LND_FMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_TO_fv0.9x1.25_aave.170429.nc">
       <type>char</type>
       <desc>glc2lnd flux mapping file</desc>
     </entry>
@@ -683,7 +683,7 @@
       <valid_values>X,Y</valid_values>
       <desc>glc2lnd flux mapping file decomp type</desc>
     </entry>
-    <entry id="GLC2LND_SMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_TO_ne30pg3_aave.180510.nc">
+    <entry id="GLC2LND_SMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_TO_fv0.9x1.25_aave.170429.nc">
       <type>char</type>
       <desc>glc2lnd state mapping file</desc>
     </entry>
@@ -1565,7 +1565,7 @@
     Sets SST and ice coverage stream name.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2017_c180507.nc">
+    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_0.9x1.25_1850_2017_c180507.nc">
       <type>char</type>
       <valid_values/>
       <desc>Prescribed SST and ice coverage data file name.
@@ -1574,7 +1574,7 @@
     </entry>
   </group>
   <group id="run_component_cam_sstice">
-    <entry id="SSTICE_GRID_FILENAME" value="$DIN_LOC_ROOT/ocn/docn7/domain.ocn.1x1.111007.nc">
+    <entry id="SSTICE_GRID_FILENAME" value="$DIN_LOC_ROOT/share/domains/domain.ocn.fv0.9x1.25_gx1v7.151020.nc">
       <type>char</type>
       <valid_values/>
       <desc>Prescribed SST and ice coverage grid file name.
