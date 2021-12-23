@@ -320,7 +320,7 @@
     </entry>
   </group>
   <group id="build_component_cam">
-    <entry id="CAM_CPPDEFS" value="  -Dwaccm_debug   -DPLON=1 -DPLAT=1 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DCAM  -D_WK_GRAD -DNP=4 -DHAVE_F2003_PTR_BND_REMAP -DFVM_TRACERS -D_MPI -DPLEV=58 -DPCNST=41 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
+    <entry id="CAM_CPPDEFS" value="    -DPLON=1 -DPLAT=1 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DCAM  -D_WK_GRAD -DNP=4 -DHAVE_F2003_PTR_BND_REMAP -DFVM_TRACERS -D_MPI -DPLEV=58 -DPCNST=33 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
       <type>char</type>
       <valid_values/>
       <desc>CAM cpp definitions (setup automatically - DO NOT EDIT)</desc>
@@ -330,7 +330,7 @@
       <valid_values>eul,fv,fv3,se,mpas</valid_values>
       <desc>CAM dynamical core</desc>
     </entry>
-    <entry id="CAM_CONFIG_OPTS" value="-phys cam6 -age_of_air_trcs -chem waccm_sc_mam4 -cppdefs -Dwaccm_debug -nlev 58">
+    <entry id="CAM_CONFIG_OPTS" value="-phys cam6 -nlev 58">
       <type>char</type>
       <valid_values/>
       <desc>
