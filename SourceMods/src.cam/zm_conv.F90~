@@ -742,6 +742,7 @@ subroutine zm_convr(lchnk   ,ncol    , &
 !
    do i = 1,ncol
       zs(i) = geos(i)*rgrav
+     
       pf(i,pver+1) = paph(i,pver+1)*0.01_r8
       zf(i,pver+1) = zi(i,pver+1) + zs(i)
    end do
@@ -784,6 +785,8 @@ subroutine zm_convr(lchnk   ,ncol    , &
       wm_incldg(i) = 0._r8
    end do
 
+
+   
    if( cam_physpkg_is('cam3')) then
 
       !  For cam3 physics package, call non-dilute
@@ -802,9 +805,9 @@ subroutine zm_convr(lchnk   ,ncol    , &
       call buoyan_dilute(lchnk   ,ncol    , &
                   q       ,t       ,omega   ,p       ,z       ,pf       , &
                   tp      ,qstp    ,tl      ,rl      ,cape     , &
-                  pblt    ,lcl     ,lel     ,lon     ,maxi     , &
+                  pblt    ,pblh    ,lcl     ,lel     ,lon     ,maxi     , &
                   rgas    ,grav    ,cpres   ,msg     , &
-                  zf,     tpert   , org2d  , landfrac, wm_incld)
+                  zi,     tpert   , org2d  , landfrac, wm_incld)
    end if
 
 !
@@ -1502,8 +1505,10 @@ subroutine zm_conv_evap(ncol,lchnk, &
     prec(:ncol) = prec(:ncol)*1000._r8
 
 ! determine saturation vapor pressure
-    call qsat(t(1:ncol, 1:pver), pmid(1:ncol, 1:pver), &
-         es(1:ncol, 1:pver), qs(1:ncol, 1:pver))
+    
+    do k = 1,pver
+       call qsat(t(1:ncol,k), pmid(1:ncol,k), es(1:ncol,k), qs(1:ncol,k), ncol)
+    end do
 
 ! determine ice fraction in rain production (use cloud water parameterization fraction at present)
     call cldfrc_fice(ncol, t, fice, fsnow_conv)
@@ -2802,7 +2807,7 @@ subroutine cldprp(lchnk   , &
    real(r8) cp                   ! heat capacity of dry air
 
 !
-! Local workspace
+! Local workspace 
 !
    real(r8) gamma(pcols,pver)
    real(r8) dz(pcols,pver)
@@ -3811,7 +3816,8 @@ subroutine closure(lchnk   , &
                           (1._r8+0.608_r8*q(i,k))*dqmdt(i,k)))*grav*thetavp(i,k)/thetavm(i,k)
          end if
       end do
-   end do
+   end do 
+
 !
    do k = msg + 1,pver
       do i = il1g,il2g
@@ -3856,7 +3862,7 @@ subroutine closure(lchnk   , &
          else
             tau_wz(i) =  10000._r8
          end if
-!         write(iulog,*)'ZMTAU', tau_wz(i)
+         write(iulog,*)'ZMTAU', tau_wz(i)
          dltaa = -1._r8* (cape(i)-capelmt)
          if (dadt(i) /= 0._r8) mb(i) = max(dltaa/tau/dadt(i),0._r8)
       end do
@@ -4028,9 +4034,9 @@ end subroutine q1q2_pjr
 subroutine buoyan_dilute(lchnk   ,ncol    , &
                   q       ,t       ,omega ,p       ,z       ,pf      , &
                   tp      ,qstp    ,tl      ,rl      ,cape    , &
-                  pblt    ,lcl     ,lel     ,lon     ,mx      , &
+                  pblt    ,pbl_z   ,lcl     ,lel     ,lon     ,mx      , &
                   rd      ,grav    ,cp      ,msg     , &
-                  zf,      tpert   ,org     ,landfrac ,wm_incld)
+                  zi,      tpert   ,org     ,landfrac ,wm_incld)
 !----------------------------------------------------------------------- 
 !
 ! Purpose: 
@@ -4071,10 +4077,11 @@ subroutine buoyan_dilute(lchnk   ,ncol    , &
    real(r8), intent(in) :: z(pcols,pver)        ! height
    real(r8), intent(in) :: pf(pcols,pver+1)     ! pressure at interfaces
    real(r8), intent(in) :: pblt(pcols)          ! index of pbl depth
+   real(r8), intent(in) :: pbl_z(pcols)         ! RBN: Previously diagnosed PBL height     
    real(r8), intent(in) :: tpert(pcols)         ! perturbation temperature by pbl processes
    
 ! RBN: Use z interface for parcel calculations.
-   real(r8), intent(in) :: zf(pcols,pver+1)     ! height at interfaces
+   real(r8), intent(in) :: zi(pcols,pver+1)     ! height at interfaces
    
 !
 ! output arguments
@@ -4136,7 +4143,6 @@ subroutine buoyan_dilute(lchnk   ,ncol    , &
    real(r8)           :: parcel_dp(pcols)     ! Pressure integral over parcel mixing depth (usually pblt)
    real(r8)           :: parcel_hdp(pcols)    ! Pressure*MSE integral over parcel mixing depth (usually pblt)
    real(r8)           :: parcel_qdp(pcols)    ! Pressure*q integral over parcel mixing depth (usually pblt)  
-   real(r8)           :: pbl_z(pcols)         ! Previously diagnosed PBL height
    real(r8)           :: hpar(pcols)          ! Initial MSE of the parcel 
    real(r8)           :: qpar(pcols)          ! Initial humidity of the parcel
    real(r8)           :: ql(pcols)          ! Initial parcel humidity (for ientropy routine)
@@ -4175,8 +4181,9 @@ subroutine buoyan_dilute(lchnk   ,ncol    , &
       cape(i) = 0._r8
       hmax(i) = 0._r8
       first_kelt0 = .True.
-      pbl_z(i) = z(i,pblt(i)) 
-      parcel_ztop(i) = pbl_z(i) ! Boundary layer top for now, could be something else.
+!      pbl_z(i) = z(i,pblt(i)) 
+      
+      parcel_ztop(i) = 0.5_r8*pbl_z(i) ! Boundary layer top for now, could be something else.
       parcel_hdp(i) = 0._r8
       parcel_dp(i) = 0._r8
       parcel_qdp(i) = 0._r8
@@ -4208,36 +4215,40 @@ subroutine buoyan_dilute(lchnk   ,ncol    , &
 ! Should be well mixed by other processes no in the very near PBL.
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-   
+
 
 if (lparcel_pbl) then
-!   write(iulog,*) 'START OF LPARCEL_PBL CODE'
+
 ! Vertical profile of MSE and pressure weighted of the same.
    hmn_lev = cp*t + grav*z + rl*q
    dp_lev(:ncol,1:pver) = pf(:ncol,2:pver+1)-pf(:ncol,1:pver)
    hmn_zdp = hmn_lev*dp_lev
    q_zdp = q*dp_lev
 
-!   write(iulog,*) 'dp_lev'
-!   write(iulog,*) dp_lev
       
-! Mix profile over vertical length scale of 0.5*PBLH.
+! Mix profile over vertical length scale of parcel_ztop.
 ! RBN XXX Still Needs to be fully tested XXXXX
       
    do i = 1,ncol ! Loop columns
-      do k = pver,msg + 1,-1
-         if (zf(i,k+1) <= parcel_ztop(i)) then
+      do k = pver,msg + 1,-1 ! Loop levels bottom to top.
+
+
+         if (zi(i,k+1) <= parcel_ztop(i)) then ! Has to be relative to surface geo height.
             ipar = k
-            dp_zfrac =  min(1._r8,(parcel_ztop(i)-zf(i,k+1))/(zf(i,k)-zf(i,k+1))) ! Fraction of grid cell depth (mostly 1, except when parcel_ztop is in between levels.
-!            write(iulog,*) 'dp_zfrac',dp_zfrac
+
+            if (k.eq.pver) then ! Always at least the full depth of lowest model layer.
+               dp_zfrac = 1._r8 
+            else
+               dp_zfrac =  min(1._r8,(parcel_ztop(i)-zi(i,k+1))/(zi(i,k)-zi(i,k+1))) ! Fraction of grid cell depth (mostly 1, except when parcel_ztop is in between levels.
+            end if
+!          
             parcel_hdp(i) = parcel_hdp(i)+hmn_zdp(i,k)*dp_zfrac ! Sum parcel profile up to a certain level.
             parcel_qdp(i) = parcel_qdp(i)+q_zdp(i,k)*dp_zfrac ! Sum parcel profile up to a certain level.
             parcel_dp(i)  = parcel_dp(i)+dp_lev(i,k)*dp_zfrac ! SUM dp's for weighting of parcel_hdp 
 
-!            write(iulog,*) 'k,phdp,pdp,dp_zfrac'
-!            write(iulog,*) k, parcel_hdp(i), parcel_dp(i), dp_zfrac
          end if
       end do
+      
       hpar(i) = parcel_hdp(i)/parcel_dp(i)
       qpar(i) = parcel_qdp(i)/parcel_dp(i)
       mx(i) = ipar       
@@ -4291,16 +4302,15 @@ end if ! Default method of determining parcel launch properties.
 if (lparcel_pbl) then
          
 ! For parcel dilute need to invert hpar and qpar.
-! Now need to supply ql(i) as it is mixed parcel version, just q(i,max(i)) in default
+! Now need to supply ql(i) as it is mixed parcel version, just q(i,mx(i)) in default
   
    do i = 1,ncol             ! Initialise LCL variables.
+      
       lcl(i) = mx(i)
-      tl(i) = (hpar(i)-rl*qpar(i)-grav*parcel_ztop(i))/cp
+!      tl(i) = (hpar(i)-rl*qpar(i)-grav*parcel_ztop(i))/cp
+      tl(i) = t(i,mx(i))
       ql(i) = qpar(i)
       pl(i) = p(i,mx(i))
-
-!      write(iulog,*) 'tl,hpar,rl,qpar,grav,parcel_ztop,cp'
-!      write(iulog,*) tl(i),hpar(i),rl,qpar(i),grav,parcel_ztop(i),cp
 
    end do
     
@@ -4383,7 +4393,7 @@ end if ! Mixed parcel properties
                plev_ke(i,k) = pini_ke
             end if
             if (k < mx(i).and.plge600(i)) then
-               plev_ke(i,k) = plev_ke(i,k) + pe2ke_eff*rd*buoy(i,k)*log(pf(i,k+1)/pf(i,k)) + 0.5*w_nrg(i,k)*w_nrg(i,k)
+               plev_ke(i,k) = plev_ke(i,k) + pe2ke_eff*rd*buoy(i,k)*log(pf(i,k+1)/pf(i,k)) + 0.5_r8*w_nrg(i,k)*w_nrg(i,k)
                w_incld(i,k) = sqrt(max(0._r8,2._r8*plev_ke(i,k)))
                if (plev_ke(i,k) <= 0._r8 .and. first_kelt0(i)) then ! Parcel terminates at level of zero energy
                   knt(i) = min(num_cin,knt(i) + 1)
@@ -4444,25 +4454,17 @@ end if ! Mixed parcel properties
 
 ! For dynamic parcel, Now we know convective top let's find mean in-cloud w
 
-!   write(iulog,*) 'LCL,KHMAX,PLCL,TLCL,LEL,HMAX'
-!   write(iulog,*) real(lcl,r8),real(mx,r8),pl,tl,real(lel,r8),hmax
-!   write(iulog,*) 'BUOY'
-!   write(iulog,*) buoy
-
    if (lparcel_dynamic) then
       do k = msg + 1,pver
          do i = 1,ncol
-!            write(iulog,*) 'PRESSURES: k=',i
-!            write(iulog,*) pf(i,k+1),pf(i,k),pf(i,lcl(i)-1),pf(i,lel(i))
-            if ( k >= lel(i) .and. k <= lcl(i) - 1) then
-                 
+            if ( k >= lel(i) .and. k <= lcl(i) - 1) then                 
                  wm_incld(i) =  wm_incld(i)+w_incld(i,k)*(pf(i,k+1)-pf(i,k))/(pf(i,lcl(i))-pf(i,lel(i)))
             end if
          end do
       end do
  
-!      write(iulog,*)'WMINCLD =',wm_incld
-!      write(iulog,*)'MINCLD =',w_incld
+      write(iulog,*)'WMINCLD =',wm_incld
+      write(iulog,*)'MINCLD =',w_incld
 
    end if
 
@@ -4592,8 +4594,18 @@ if (zm_org) then
    org2Tpert = 0._r8
 endif
 nit_lheat = 2 ! iterations for ds,dq changes from condensation freezing.
-dmpdz=-1.e-3_r8       ! Entrainment rate. (-ve for /m)
-dmpdz_lnd=-1.e-3_r8
+
+!+++ hannay
+!dmpdz=-1.e-3_r8       ! Entrainment rate. (-ve for /m)
+!dmpdz_lnd=-1.e-3_r8
+
+dmpdz=-0.8e-3_r8       ! Entrainment rate. (-ve for /m)                                                                                                                                                                                    
+
+dmpdz_lnd=-0.8e-3_r8
+
+!--- hannay
+
+
 !dmpdpc = 3.e-2_r8   ! In cloud entrainment rate (/mb).
 lwmax = 1.e-3_r8    ! Need to put formula in for this.
 tscool = -10.0_r8   ! Temp at which water loading freezes in the cloud.
@@ -4970,7 +4982,7 @@ end SUBROUTINE ientropy
 ! Wrapper for qsat_water that does translation between Pa and hPa
 ! qsat_water uses Pa internally, so get it right, need to pass in Pa.
 ! Afterward, set es back to hPa.
-elemental subroutine qsat_hPa(t, p, es, qm)
+subroutine qsat_hPa(t, p, es, qm)
   use wv_saturation, only: qsat_water
 
   ! Inputs
