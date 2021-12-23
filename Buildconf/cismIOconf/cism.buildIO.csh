@@ -1,15 +1,15 @@
 #! /bin/csh -f
 
 # -----------------------------------------------------------------------------
-# NOTICE: This script was custom-generated for /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.002_zm2_zmke_4.hf.
+# NOTICE: This script was custom-generated for /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001.hf.
 #
 #         DO NOT COPY to another case!
 #
-#         Use this script ONLY in /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.002_zm2_zmke_4.hf.
+#         Use this script ONLY in /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001.hf.
 # -----------------------------------------------------------------------------
 
-set sourcemod_dir  = /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.002_zm2_zmke_4.hf/SourceMods/src.cism/source_cism
-set cism_confIOdir = /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.002_zm2_zmke_4.hf/Buildconf/cismIOconf
+set sourcemod_dir  = /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001.hf/SourceMods/src.cism/source_cism
+set cism_confIOdir = /glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_019_plus_CESM2.2.001.hf/Buildconf/cismIOconf
 
 # -----------------------------------------------------------------------------
 # NOTE: If you are viewing this script within the bld subdirectory of the cism
