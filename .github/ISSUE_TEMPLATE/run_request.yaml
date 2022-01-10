@@ -1,9 +1,7 @@
 name: Run request
 description: This is for CAM developpers who requested a new development simulation.
-title: "Title for your simulation request"
+title: "One line description for your simulation request"
 labels: ["Run request"]
-assignees:
-  - Enter your name here
 
 body:
   - type: textarea
@@ -12,23 +10,30 @@ body:
       label: Description of the run
       description: Please enter a short description of the run here
       placeholder: Tell us what you see!
-      value: "Enter Description"
+      value: "Short description of the run [Required]"
     validations:
       required: true
 
   - type: textarea
-    id: Casedir
+    id: Namelist
     attributes:
       label: Namelist modifications
       description: Enter any namelist modification.
-      value: "Enter any namelist modification"
+      value: "Enter any namelist modification [Optional]"
 
+  - type: textarea
+    id: Source Mods
+    attributes:
+      label: Source modifications
+      description: Enter any source modification.
+      value: "Enter any source modification [Optional]"
+      
   - type: textarea
     id: Sandbox
     attributes:
       label: Sandbox
-      description: Enter the location of the sandbox on github and/or locally
-      value: "Enter sandbox location"
+      description: If you require the run to be done with a specific sandbox, please enter the info.
+      value: "Enter sandbox location [Optional]"
 
   - type: textarea
     id: Contact
