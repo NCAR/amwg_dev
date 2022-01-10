@@ -1,7 +1,7 @@
-name: Simulation template (in yml)
-description: Documenting information about a CESM simulation you have performed
-title: "Casename (enter the name of the run here)"
-labels: ["AMWG"]
+name: Run request (in yaml)
+description: Brief Summuary of the simulation you want. 
+title: "Title for your simulation request"
+labels: ["Run request"]
 assignees:
   - Enter your name here
 
@@ -19,9 +19,9 @@ body:
   - type: textarea
     id: Casedir
     attributes:
-      label: Case directory
-      description: Enter the location of the case directory on github and/or locally
-      value: "Enter case directory location"
+      label: Namelist modifications
+      description: Enter any namelist modification.
+      value: "Enter any namelist modification"
 
   - type: textarea
     id: Sandbox
