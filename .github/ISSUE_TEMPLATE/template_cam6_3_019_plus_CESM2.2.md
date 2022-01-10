@@ -2,7 +2,7 @@
 name: Simulation template for run with cam6_3_019_plus_CESM2.2
 about: Documenting information about a CAM/CESM simulation you have performed
 title: Casename (enter the name of the run here)
-labels: Issue Type: Run description
+labels: 'Issue Type: Run description'
 assignees: ''
 ---
 
