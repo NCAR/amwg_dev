@@ -2,7 +2,7 @@
 name: Simulation template for run with cam6_3_035.tphysac
 about: Documenting information about a CAM/CESM simulation. 
 title: Casename (enter the name of the run here)
-labels: AMWG
+labels: 'Issue Type: Run description'
 assignees: ''
 ---
 
