@@ -1,6 +1,6 @@
 ---
-name: Run description. This contains information about the location of the run directory, sandbox, etc (Simulation with cam6_3_035.tphysac)
-about: Documenting information about a CAM/CESM simulation. 
+name: Run description (Simulation with cam6_3_035.tphysac)
+about: Documenting information about a CAM/CESM simulation. This contains information about the location of the run directory, sandbox, etc 
 title: Casename (enter the name of the run here)
 labels: 'Issue Type: Run description'
 assignees: ''
