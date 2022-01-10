@@ -1,8 +1,8 @@
 ---
-name: Simulation template for run with cam6_3_035.tphysac
-about: Documenting information about a CAM/CESM simulation you have performed
+name: Run description. This contains information about the location of the run directory, sandbox, etc (Simulation with cam6_3_035.tphysac)
+about: Documenting information about a CAM/CESM simulation. 
 title: Casename (enter the name of the run here)
-labels: AMWG
+labels: Issue Type: Run description
 assignees: ''
 ---
 
