@@ -8,7 +8,7 @@ body:
     id: Description
     attributes:
       label: Description of the run
-      description: Description of the run and its purpose
+      description: Please enter a short escription of the run and its purpose
       value: "Short description of the run [Required]"
     validations:
       required: true
@@ -17,29 +17,31 @@ body:
     id: Namelist
     attributes:
       label: Namelist modifications
-      description: Enter any namelist modification.
-      value: "Enter any namelist modification [Optional]"
+      description: Please enter any namelist modification.
+      value: "Namelist modification [Optional]"
 
   - type: textarea
     id: SourceMods
     attributes:
       label: Source modifications
-      description: Enter any source modification.
-      value: "Enter any source modification [Optional]"
+      description: Please enter any source modification.
+      value: "Source modification [Optional]"
       
   - type: textarea
     id: Sandbox
     attributes:
       label: Sandbox
       description: If you require the run to be done with a specific sandbox, please enter the info.
-      value: "Enter sandbox location [Optional]"
+      value: "Requested sandbox or tag [Optional]"
 
   - type: textarea
     id: Contact
     attributes:
       label: Contact info
       description: Enter the contact information (person who did the run, science lead, etc...)
-      value: "Enter contact information"
+      value: "Contact information"  
+    validations:
+      required: true
 
   - type: textarea
     id: other
