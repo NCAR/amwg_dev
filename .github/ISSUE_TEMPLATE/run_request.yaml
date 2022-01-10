@@ -8,8 +8,7 @@ body:
     id: Description
     attributes:
       label: Description of the run
-      description: Please enter a short description of the run here
-      placeholder: Tell us what you see!
+      description: Description of the run and its purpose
       value: "Short description of the run [Required]"
     validations:
       required: true
