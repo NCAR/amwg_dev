@@ -1,6 +1,6 @@
 ---
-name: Simulation template for run with cam6_3_019_plus_CESM2.2
-about: Documenting information about a CAM/CESM simulation you have performed
+name: Run description (Simulation with am6_3_019_plus_CESM2.2)
+about: Documenting information about a CAM/CESM simulation. This contains information about the location of the run directory, sandbox, etc 
 title: Casename (enter the name of the run here)
 labels: 'Issue Type: Run description'
 assignees: ''
