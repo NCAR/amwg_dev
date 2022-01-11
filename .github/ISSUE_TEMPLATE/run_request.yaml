@@ -8,8 +8,8 @@ body:
     id: Description
     attributes:
       label: Description of the run
-      description: Please enter a short escription of the run and its purpose
-      value: "Short description of the run [Required]"
+      description: Please enter a short description of the run and its purpose[Required]
+      value: " "
     validations:
       required: true
 
@@ -17,15 +17,15 @@ body:
     id: Namelist
     attributes:
       label: Namelist modifications
-      description: Please enter any namelist modification.
-      value: "Namelist modification [Optional]"
+      description: Please enter any namelist modification [Optional].
+      value: " "
 
   - type: textarea
     id: SourceMods
     attributes:
       label: Source modifications
-      description: Please enter any source modification.
-      value: "Source modification [Optional]"
+      description: Please enter any source modification [Optional].
+      value: " "
       
   - type: textarea
     id: Sandbox
