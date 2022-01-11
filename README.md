@@ -1,9 +1,8 @@
 # amwg_cases
 
 # case: 
-f.e21.FWscHIST.f09_L32_cam6_3_019_plus_CESM2.2.001_zm2.hf
+f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001
 
 # sandbox:  
-https://github.com/NCAR/amwg_dev/tree/cam6_3_019_plus_CESM2.2/
-hash: 1cda71d
-
+https://github.com/ESCOMP/CAM/tree/cam6_3_041
+hash: 963ebdc

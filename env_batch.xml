@@ -11,13 +11,6 @@
       <desc>The batch system type to use for this machine.</desc>
     </entry>
   </group>
-  <group id="job_submission">
-    <entry id="PROJECT_REQUIRED" value="TRUE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>whether the PROJECT value is required on this machine</desc>
-    </entry>
-  </group>
   <batch_system type="pbs">
     <batch_query args="-f">qstat</batch_query>
     <batch_submit>qsub </batch_submit>

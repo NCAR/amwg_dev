@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="scamsas_cam6_2_007.01-1367-ga0f77dc3c">
+    <entry id="MODEL_VERSION" value="cam6_3_041">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -39,7 +39,7 @@
     <entry id="GRIDS_SPEC_FILE" value="$CIMEROOT/config/$MODEL/config_grids.xml">
       <type>char</type>
       <desc>file containing specification of all supported model grids, domains and mapping files (for documentation only - DO NOT EDIT)</desc>
-      <schema>$CIMEROOT/config/xml_schemas/config_grids_v2.1.xsd</schema>
+      <schema>$CIMEROOT/config/xml_schemas/config_grids_v2.2.xsd</schema>
     </entry>
     <entry id="MACHINES_SPEC_FILE" value="$CIMEROOT/config/$MODEL/machines/config_machines.xml">
       <type>char</type>
@@ -65,6 +65,10 @@
       <type>char</type>
       <desc>file containing compiler specifications for target model primary component (for documentation only - DO NOT EDIT)</desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compilers_v2.xsd</schema>
+    </entry>
+    <entry id="CMAKE_MACROS_DIR" value="$CIMEROOT/config/$MODEL/machines/cmake_macros">
+      <type>char</type>
+      <desc>Directory containing cmake macros (for documentation only - DO NOT EDIT)</desc>
     </entry>
     <entry id="PIO_SPEC_FILE" value="$CIMEROOT/config/$MODEL/machines/config_pio.xml">
       <type>char</type>
@@ -109,7 +113,7 @@
       <schema version="2.0">$CIMEROOT/config/xml_schemas/entry_id.xsd</schema>
       <schema version="3.0">$CIMEROOT/config/xml_schemas/entry_id_version3.xsd</schema>
     </entry>
-    <entry id="CONFIG_CPL_FILE_MODEL_SPECIFIC" value="$CIMEROOT/src/drivers/$COMP_INTERFACE/cime_config/config_component_$MODEL.xml">
+    <entry id="CONFIG_CPL_FILE_MODEL_SPECIFIC">
       <type>char</type>
       <desc>file containing all component specific driver configuration variables (for documentation only - DO NOT EDIT)</desc>
       <schema version="2.0">$CIMEROOT/config/xml_schemas/entry_id.xsd</schema>
@@ -173,18 +177,18 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="HIST_CAM60%WCSC_CLM50%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_CISM2%NOEVOLVE_SWAV_SIAC_SESP">
+    <entry id="COMPSET" value="HIST_CAM60%WCSC_CLM50%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
   </group>
   <group id="case_comps">
-    <entry id="COMP_ROOT_DIR_CPL" value="$CIMEROOT/src/drivers/$COMP_INTERFACE">
+    <entry id="COMP_ROOT_DIR_CPL" value="$SRCROOT/components/cmeps">
       <type>char</type>
       <desc>Root directory of the case driver/coupler component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_OCN" value="$CIMEROOT/src/components/data_comps_$COMP_INTERFACE/docn">
+    <entry id="COMP_ROOT_DIR_OCN" value="$SRCROOT/components/cdeps/docn">
       <type>char</type>
       <desc>Root directory of the case ocean component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
@@ -194,7 +198,7 @@
       <desc>Root directory of the case wave model component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_GLC" value="$SRCROOT/components/cism/">
+    <entry id="COMP_ROOT_DIR_GLC" value="$CIMEROOT/src/components/stub_comps_$COMP_INTERFACE/sglc">
       <type>char</type>
       <desc>Root directory of the case land ice component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
@@ -214,7 +218,7 @@
       <desc>Root directory of the case land model component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_IAC" value="$CIMEROOT/src/components/stub_comps_$COMP_INTERFACE/siac">
+    <entry id="COMP_ROOT_DIR_IAC" value="unset">
       <type>char</type>
       <desc>Root directory of the case integrated assessment component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
@@ -231,7 +235,7 @@
     </entry>
   </group>
   <group id="case_comp">
-    <entry id="COMP_CLASSES" value="CPL,ATM,LND,ICE,OCN,ROF,GLC,WAV,IAC,ESP">
+    <entry id="COMP_CLASSES" value="CPL,ATM,LND,ICE,OCN,ROF,GLC,WAV,ESP">
       <type>char</type>
       <desc>List of component classes supported by this driver</desc>
     </entry>
@@ -272,20 +276,15 @@
       <valid_values>mosart</valid_values>
       <desc>Name of river component</desc>
     </entry>
-    <entry id="COMP_GLC" value="cism">
+    <entry id="COMP_GLC" value="sglc">
       <type>char</type>
-      <valid_values>cism</valid_values>
-      <desc>Name of land ice-sheet component</desc>
+      <valid_values>sglc</valid_values>
+      <desc>Name of land-ice component</desc>
     </entry>
     <entry id="COMP_WAV" value="swav">
       <type>char</type>
       <valid_values>swav</valid_values>
       <desc>Name of wave component</desc>
-    </entry>
-    <entry id="COMP_IAC" value="siac">
-      <type>char</type>
-      <valid_values>siac</valid_values>
-      <desc>Name of iac component</desc>
     </entry>
     <entry id="COMP_ESP" value="sesp">
       <type>char</type>
@@ -299,7 +298,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.f09_L32_cam6_3_019_plus_CESM2.2.001_zm2.hf">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -308,15 +307,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_041/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_041">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.e21.FWscHIST.f09_L32_cam6_3_019_plus_CESM2.2.001_zm2.hf">
+    <entry id="CASE" value="f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -328,7 +327,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_019_plus_CESM2.2/cime/config/cesm/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_041/cime/config/cesm/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -345,6 +344,28 @@
     <entry id="REALUSER" value="hannay">
       <type>char</type>
       <desc>username of user who created case</desc>
+    </entry>
+    <entry id="CASE_HASH" value="895a6a1d1967c2aec16d06dd3729f1ea393020b4e05acbf07d6594eff7ea615b">
+      <type>char</type>
+      <desc>Unique identifier for case</desc>
+    </entry>
+  </group>
+  <group id="config_batch">
+    <entry id="mpirun">
+      <type>char</type>
+      <desc>The mpi run command associated with the machine configured batch system</desc>
+    </entry>
+    <entry id="module_system" value="UNSET">
+      <type>char</type>
+      <desc>The module system type defined for this machine</desc>
+    </entry>
+    <entry id="module_init_path" value="UNSET">
+      <type>char</type>
+      <desc>The module initialization path for module system defined for this machine</desc>
+    </entry>
+    <entry id="module_cmd_path" value="UNSET">
+      <type>char</type>
+      <desc>The module command path for module system defined for this machine</desc>
     </entry>
   </group>
   <group id="run_metadata">

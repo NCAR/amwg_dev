@@ -87,6 +87,7 @@
     </comp_archive_spec>
     <comp_archive_spec compclass="ocn" compname="docn">
       <rest_file_extension>rs*\d*</rest_file_extension>
+      <rest_file_extension>rs1</rest_file_extension>
       <rest_history_varname>unset</rest_history_varname>
       <rpointer>
         <rpointer_file>rpointer.ocn$NINST_STRING</rpointer_file>
@@ -111,45 +112,17 @@
         <tfile disposition="ignore">casename.mosart.h0.1976-01-01-00000.nc.base</tfile>
       </test_file_names>
     </comp_archive_spec>
-    <comp_archive_spec compclass="glc" compname="cism">
-      <rest_file_extension>[ri]</rest_file_extension>
-      <hist_file_extension>h\d*.*\.nc$</hist_file_extension>
-      <hist_file_extension>initial_hist</hist_file_extension>
-      <rest_history_varname>unset</rest_history_varname>
-      <rpointer>
-        <rpointer_file>rpointer.glc$NINST_STRING</rpointer_file>
-        <rpointer_content>./$CASE.cism$NINST_STRING.r.$DATENAME.nc</rpointer_content>
-      </rpointer>
-      <test_file_names>
-        <tfile disposition="copy">rpointer.glc</tfile>
-        <tfile disposition="copy">rpointer.glc_9999</tfile>
-        <tfile disposition="ignore">casename.cism.r.1975-01-01-00000.nc</tfile>
-        <tfile disposition="copy">casename.cism.r.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.cism.initial_hist.0001-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.cism.h.1975-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.cism.h.1976-01-01-00000.nc</tfile>
-        <tfile disposition="ignore">casename.cism.h.1976-01-01-00000.nc.base</tfile>
-        <tfile disposition="ignore">anothercasename.cism.r.1976-01-01-00000.nc</tfile>
-      </test_file_names>
-    </comp_archive_spec>
     <comp_archive_spec compclass="cpl" compname="drv">
       <rest_file_extension>r</rest_file_extension>
-      <hist_file_extension>hi\..*\.nc$</hist_file_extension>
-      <hist_file_extension>ha\..*\.nc$</hist_file_extension>
-      <hist_file_extension>h\w+\..*\.nc$</hist_file_extension>
+      <hist_file_extension>hi?\d*.*\.nc$</hist_file_extension>
       <rest_history_varname>unset</rest_history_varname>
       <rpointer>
-        <rpointer_file>rpointer$NINST_STRING.drv</rpointer_file>
+        <rpointer_file>rpointer.cpl$NINST_STRING</rpointer_file>
         <rpointer_content>$CASE.cpl$NINST_STRING.r.$DATENAME.nc</rpointer_content>
       </rpointer>
       <test_file_names>
         <tfile disposition="move">cpl_0001.log.5548574.chadmin1.180228-124723.gz</tfile>
         <tfile disposition="copy">casename.cpl.r.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.cpl.hi.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.cpl.ha.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.cpl.ha2x1d.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.cpl.ha2x1h.1976-01-01-00000.nc</tfile>
-        <tfile disposition="move">casename.cpl.hl2x1yr_glc.1976-01-01-00000.nc</tfile>
         <tfile disposition="copy">rpointer.drv_0001</tfile>
         <tfile disposition="copy">rpointer.drv</tfile>
         <tfile disposition="ignore">casenamenot.cpl.r.1976-01-01-00000.nc</tfile>
