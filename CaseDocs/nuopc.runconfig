@@ -75,7 +75,7 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001
+     case_name = f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      flds_bgc_oi = .false.
@@ -251,13 +251,13 @@ CLOCK_attributes::
      ice_cpl_dt = 1800
      lnd_cpl_dt = 1800
      ocn_cpl_dt = 1800
-     restart_n = 1
+     restart_n = 2
      restart_option = nyears
      restart_ymd = -999
      rof_cpl_dt = 10800
      start_tod = 0
      start_ymd = 19790101
-     stop_n = 1
+     stop_n = 2
      stop_option = nyears
      stop_tod = 0
      stop_ymd = -999
@@ -305,52 +305,52 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = med.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = med.log.220111-125740
 ::
 
 DRV_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = drv.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = drv.log.220111-125740
 ::
 
 ATM_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = atm.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = atm.log.220111-125740
 ::
 
 LND_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = lnd.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = lnd.log.220111-125740
 ::
 
 ICE_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = ice.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = ice.log.220111-125740
 ::
 
 OCN_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = ocn.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = ocn.log.220111-125740
 ::
 
 ROF_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = rof.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = rof.log.220111-125740
 ::
 
 GLC_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = glc.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = glc.log.220111-125740
 ::
 
 WAV_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = wav.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = wav.log.220111-125740
 ::
 
 ESP_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = esp.log.2405439.chadmin1.ib0.cheyenne.ucar.edu.220111-122502
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1.hf.001/run
+     logfile = esp.log.220111-125740
 ::
 
