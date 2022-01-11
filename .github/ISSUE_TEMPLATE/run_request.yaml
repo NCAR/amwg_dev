@@ -9,7 +9,7 @@ body:
     attributes:
       label: Description of the run
       description: Please enter a short description of the run and its purpose[Required]
-      value: " "
+      value: "Description"
     validations:
       required: true
 
@@ -18,21 +18,21 @@ body:
     attributes:
       label: Namelist modifications
       description: Please enter any namelist modification [Optional].
-      value: " "
+      value: "Namelist"
 
   - type: textarea
     id: SourceMods
     attributes:
       label: Source modifications
       description: Please enter any source modification [Optional].
-      value: " "
+      value: "SourceMods"
       
   - type: textarea
     id: Sandbox
     attributes:
       label: Sandbox
-      description: If you require the run to be done with a specific sandbox, please enter the info.
-      value: "Requested sandbox or tag [Optional]"
+      description: If you require the run to be done with a specific sandbox, please enter the info [Optional].
+      value: "Requested sandbox or tag "
 
   - type: textarea
     id: Contact
