@@ -7,15 +7,15 @@
     this is done automatically by the scripts.
     </header>
   <group id="build_grid">
-    <entry id="GRID" value="a%ne30np4.pg2_l%ne30np4.pg2_oi%ne30np4.pg2_r%r05_g%null_w%null_z%null_m%gx1v7">
+    <entry id="GRID" value="a%ne30np4.pg3_l%ne30np4.pg3_oi%ne30np4.pg3_r%r05_g%null_w%null_z%null_m%gx1v7">
       <type>char</type>
       <desc>Model grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ATM_GRID" value="ne30np4.pg2">
+    <entry id="ATM_GRID" value="ne30np4.pg3">
       <type>char</type>
       <desc>atmosphere grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ATM_NX" value="21600">
+    <entry id="ATM_NX" value="48600">
       <type>integer</type>
       <desc>number of atmosphere cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -23,11 +23,11 @@
       <type>integer</type>
       <desc>number of atmosphere cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="LND_GRID" value="ne30np4.pg2">
+    <entry id="LND_GRID" value="ne30np4.pg3">
       <type>char</type>
       <desc>land grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="LND_NX" value="21600">
+    <entry id="LND_NX" value="48600">
       <type>integer</type>
       <desc>number of land cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -35,11 +35,11 @@
       <type>integer</type>
       <desc>number of land cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="OCN_GRID" value="ne30np4.pg2">
+    <entry id="OCN_GRID" value="ne30np4.pg3">
       <type>char</type>
       <desc>ocn grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="OCN_NX" value="21600">
+    <entry id="OCN_NX" value="48600">
       <type>integer</type>
       <desc>number of ocn cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -47,11 +47,11 @@
       <type>integer</type>
       <desc>number of ocn cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_GRID" value="ne30np4.pg2">
+    <entry id="ICE_GRID" value="ne30np4.pg3">
       <type>char</type>
       <desc>ice grid (must equal ocn grid) - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_NX" value="21600">
+    <entry id="ICE_NX" value="48600">
       <type>integer</type>
       <desc>number of ice cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -368,7 +368,7 @@
       can manually set the values of CICE_BLCKX, CICE_BLCKY, CICE_MXBLCKS,
       CICE_DECOMPTYPE, and CICE_DECOMPSETTING".</desc>
     </entry>
-    <entry id="CICE_BLCKX" value="10">
+    <entry id="CICE_BLCKX" value="20">
       <type>integer</type>
       <valid_values/>
       <desc>Size of cice block in first horiz dimension
@@ -384,7 +384,7 @@
       This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
       to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
     </entry>
-    <entry id="CICE_MXBLCKS" value="1">
+    <entry id="CICE_MXBLCKS" value="2">
       <type>integer</type>
       <valid_values/>
       <desc>Max number of cice blocks per processor (do not edit if CICE_AUTO_DECOMP is true)
@@ -405,7 +405,7 @@
       This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
       to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
     </entry>
-    <entry id="CICE_CPPDEFS" value=" -Dncdf -DNUMIN=11 -DNUMAX=99  -DNICECAT=1 -DNXGLOB=21600 -DNYGLOB=1 -DNTRAERO=0 -DNTRISO=0 -DNBGCLYR=0 -DNICELYR=8 -DNSNWLYR=3 -DTRAGE=1 -DTRFY=1 -DTRLVL=1 -DTRPND=1 -DTRBRI=0 -DTRBGCS=0 -DBLCKX=10 -DBLCKY=1 -DMXBLCKS=1">
+    <entry id="CICE_CPPDEFS" value=" -Dncdf -DNUMIN=11 -DNUMAX=99  -DNICECAT=1 -DNXGLOB=48600 -DNYGLOB=1 -DNTRAERO=0 -DNTRISO=0 -DNBGCLYR=0 -DNICELYR=8 -DNSNWLYR=3 -DTRAGE=1 -DTRFY=1 -DTRLVL=1 -DTRPND=1 -DTRBRI=0 -DTRBGCS=0 -DBLCKX=20 -DBLCKY=1 -DMXBLCKS=2">
       <type>char</type>
       <valid_values/>
       <desc>CICE cpp definitions (setup automatically - DO NOT EDIT)</desc>

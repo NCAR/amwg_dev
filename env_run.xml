@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:2563839.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:2563840.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:2561661.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:2561663.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -523,7 +523,7 @@
       <desc>Longitude of grid location, in single column mode interpolate datasets to this location
           in single point mode assume all datasets are at this location</desc>
     </entry>
-    <entry id="PTS_DOMAINFILE" value="$DIN_LOC_ROOT/share/domains/domain.lnd.ne30np4.pg2_gx1v7.200626.nc">
+    <entry id="PTS_DOMAINFILE" value="$DIN_LOC_ROOT/share/domains/domain.lnd.ne30np4.pg3_gx1v7.170605.nc">
       <type>char</type>
       <desc>used only if if PTS_LAT and PTS_LON are greater than or
           equal to 0.  If this is the case then if PTS_DOMAINFILE is not
@@ -531,7 +531,7 @@
           PTS_LAT and PTS_LON will be done and the component mesh will have
           this nearest neighbor value. </desc>
     </entry>
-    <entry id="LND_DOMAIN_FILE" value="domain.lnd.ne30np4.pg2_gx1v7.200626.nc">
+    <entry id="LND_DOMAIN_FILE" value="domain.lnd.ne30np4.pg3_gx1v7.170605.nc">
       <type>char</type>
       <desc>lnd domain file</desc>
     </entry>
@@ -539,11 +539,11 @@
       <type>char</type>
       <desc>path of lnd domain file</desc>
     </entry>
-    <entry id="ATM_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="ATM_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>atm mesh file (full pathname)</desc>
     </entry>
-    <entry id="LND_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="LND_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>lnd mesh file (full pathname)</desc>
     </entry>
@@ -555,11 +555,11 @@
       <type>char</type>
       <desc>wav mesh file (full pathname)</desc>
     </entry>
-    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>ice mesh file (full pahtname)</desc>
     </entry>
-    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>ocn mesh file (full pathname)</desc>
     </entry>
