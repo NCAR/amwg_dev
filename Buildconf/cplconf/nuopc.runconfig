@@ -75,7 +75,7 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001
+     case_name = f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      flds_bgc_oi = .false.
@@ -83,6 +83,7 @@ ALLCOMP_attributes::
      flds_co2b = .false.
      flds_co2c = .false.
      flds_i2o_per_cat = .false.
+     flds_r2l_stream_channel_depths = .false.
      flds_wiso = .false.
      flux_convergence = 0.01
      flux_max_iteration = 5
@@ -305,52 +306,52 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = med.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = med.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 DRV_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = drv.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = drv.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 ATM_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = atm.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = atm.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 LND_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = lnd.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = lnd.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 ICE_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = ice.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = ice.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 OCN_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = ocn.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = ocn.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 ROF_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = rof.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = rof.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 GLC_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = glc.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = glc.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 WAV_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = wav.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = wav.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 
 ESP_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz1_zmtop50.hf.001/run
-     logfile = esp.log.2561661.chadmin1.ib0.cheyenne.ucar.edu.220121-085311
+     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_046_control.hf.001/run
+     logfile = esp.log.2733405.chadmin1.ib0.cheyenne.ucar.edu.220203-155834
 ::
 

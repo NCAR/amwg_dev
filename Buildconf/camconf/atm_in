@@ -309,6 +309,7 @@
  micro_do_massless_droplet_destroyer		=   .false. 
  micro_do_sb_physics		= .false.
  micro_mg_accre_enhan_fact		=   1.D0    
+ micro_mg_accre_sees_auto		=  .true. 
  micro_mg_adjust_cpt		= .false.
  micro_mg_autocon_fact		=   0.01D0    
  micro_mg_autocon_lwp_exp		=   2.47D0    
@@ -320,8 +321,10 @@
  micro_mg_effi_factor		=   1.D0    
  micro_mg_homog_size		=   25.D-6    
  micro_mg_iaccr_factor		=   1.D0    
+ micro_mg_implicit_fall		=  .true. 
  micro_mg_max_nicons		=   1.D8    
  micro_mg_num_steps		=                                  1          
+ micro_mg_precip_fall_corr		= .true.
  micro_mg_precip_frac_method		= 'in_cloud'
  micro_mg_sub_version		=                                  0          
  micro_mg_version		=                                  3          
