@@ -6,7 +6,7 @@ Repo for AMWG development simulations.
 ## Development simulations
 - The list of development simulations can be found under ["Issues"](https://github.com/NCAR/amwg_dev/issues). 
   - Each simulation is a github issue. 
-  - Simulations can be sorted with labels (L58, FWscHIST, tag). 
+  - Simulations can be sorted with labels (for instance, vertical grid: L58, compset: FWscHIST, tag: cam6_3_48). 
   
 - Simulation requests should be entered as ["Run request"](https://github.com/NCAR/amwg_dev/issues/new/choose). 
   - Please provide as much details as possible. 
