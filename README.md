@@ -1,16 +1,16 @@
-# amwg_dev
+# amwg_dev repo
 Repo for AMWG development simulations. 
 - Development runs are under ["Issues"](https://github.com/NCAR/amwg_dev/issues) (including cases directories and model sandboxes). 
 - Relevant discussions to model development can be found under ["Discussions"](https://github.com/NCAR/amwg_dev/discussions).
 
 ## Development simulations
-The list of development simulations can be found under ["Issues"](https://github.com/NCAR/amwg_dev/issues).
+- The list of development simulations can be found under ["Issues"](https://github.com/NCAR/amwg_dev/issues). 
 
-Simulation requests should be entered as ["Run request"](https://github.com/NCAR/amwg_dev/issues/new/choose)
+  Each simulation is an issue. Simulations can be sorted with labels. 
 
-- Case directories: Relevant case directories are stored as ["tags"](https://github.com/NCAR/amwg_dev/tags). 
+- Simulation requests should be entered as ["Run request"](https://github.com/NCAR/amwg_dev/issues/new/choose). 
 
-- Sandboxes: Sandboxes are stored as ["branches"](https://github.com/NCAR/amwg_dev/branches)
+  Please provide as much details as possible. 
 
 ## Discussions 
-Discussions relevant to CAM7 development could be posted under ["Discussions"](https://github.com/NCAR/amwg_dev/discussions)
+- Discussions relevant to CAM7 development could be posted under ["Discussions"](https://github.com/NCAR/amwg_dev/discussions)
