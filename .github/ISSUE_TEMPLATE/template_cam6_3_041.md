@@ -12,14 +12,14 @@ assignees: ''
 Locally (if still available):
 /glade/p/cesmdata/cseg/runs/cesm2_0/$CASE
 
-On github (if available):
+On github:
 https://github.com/NCAR/amwg_dev/tree/$CASE
 
 **Sandbox:**
 Locally (if still available):
 /glade/work/hannay/cesm_tags/cam6_3_041
 
-On github (if available):
+On github:
 https://github.com/ESCOMP/CAM/tree/cam6_3_041
 hash: 963ebdc
 
