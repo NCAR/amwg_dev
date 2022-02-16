@@ -1278,8 +1278,8 @@ module advance_clubb_core_module
 
       if ( jctop > 2 ) then
          where( (p_in_pa_zm < p_in_pa_zm(jctop)).AND. &
-                (p_in_pa_zm > 5000._core_rknd) )
-          Kh_zm_thermo = 3._core_rknd ! 10._core_rknd
+                (p_in_pa_zm > 7500._core_rknd) )
+          Kh_zm_thermo = 1._core_rknd ! 10._core_rknd
          end where
       end if
       
