@@ -1,7 +1,29 @@
 &drydep_inparm
- drydep_list		= 'DMS','H2O2','H2SO4','SO2'
+ drydep_list		= 'ALKNIT', 'ALKOOH', 'BCARY', 'BENZENE', 'BENZOOH', 'BEPOMUC', 'BIGALD', 'BIGALD1', 'BIGALD2', 'BIGALD3', 'BIGALD4',
+         'BIGALK', 'BIGENE', 'BZALD', 'BZOOH', 'C2H2', 'C2H4', 'C2H5OH', 'C2H5OOH', 'C2H6', 'C3H6', 'C3H7OOH',
+         'C3H8', 'C6H5OOH', 'CH2O', 'CH3CHO', 'CH3CN', 'CH3COCH3', 'CH3COCHO', 'CH3COOH', 'CH3COOOH', 'CH3OH', 'CH3OOH',
+         'CO', 'CRESOL', 'DMS', 'EOOH', 'GLYALD', 'GLYOXAL', 'H2O2', 'H2SO4', 'HCN', 'HCOOH', 'HNO3',
+         'HO2NO2', 'HONITR', 'HPALD', 'HYAC', 'HYDRALD', 'IEPOX', 'ISOP', 'ISOPNITA', 'ISOPNITB', 'ISOPNO3', 'ISOPNOOH',
+         'ISOPOOH', 'IVOC', 'MACR', 'MACROOH', 'MEK', 'MEKOOH', 'MPAN', 'MTERP', 'MVK', 'N2O5', 'NC4CH2OH',
+         'NC4CHO', 'NH3', 'NH4', 'NO', 'NO2', 'NOA', 'NTERPOOH', 'O3', 'O3S', 'ONITR', 'PAN',
+         'PBZNIT', 'PHENOL', 'PHENOOH', 'POOH', 'ROOH', 'SO2', 'SOAG0', 'SOAG1', 'SOAG2', 'SOAG3', 'SOAG4',
+         'SVOC', 'TEPOMUC', 'TERP2OOH', 'TERPNIT', 'TERPOOH', 'TERPROD1', 'TERPROD2', 'TOLOOH', 'TOLUENE', 'XOOH', 'XYLENES',
+         'XYLENOOH', 'XYLOL', 'XYLOLOOH'
 /
 &megan_emis_nl
+ megan_factors_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/trop_mozart/emis/megan21_emis_factors_78pft_c20161108.nc'
+ megan_mapped_emisfctrs		= .false.
+ megan_specifier		= 'ISOP = isoprene', 'MTERP = carene_3 + pinene_a + thujene_a + bornene + terpineol_4 + terpineol_a + terpinyl_ACT_a + myrtenal + sabinene + pinene_b + camphene + fenchene_a + limonene + phellandrene_a + terpinene_a + terpinene_g + terpinolene + phellandrene_b + linalool + ionone_b + geranyl_acetone + neryl_acetone + jasmone + verbenene + ipsenol + myrcene + ocimene_t_b + ocimene_al + ocimene_c_b + 2met_nonatriene',
+         'BCARY = farnescene_a + caryophyllene_b + acoradiene + aromadendrene + bergamotene_a + bergamotene_b + bisabolene_a + bisabolene_b + bourbonene_b + cadinene_d + cadinene_g + cedrene_a + copaene_a + cubebene_a + cubebene_b + elemene_b + farnescene_b + germacrene_B + germacrene_D + gurjunene_b + humulene_a + humulene_g + isolongifolene + longifolene + longipinene + muurolene_a + muurolene_g + selinene_b + selinene_d + nerolidol_c + nerolidol_t', 'BIGALK = tricyclene + camphor + fenchone + thujone_a + thujone_b + cineole_1_8 + borneol + bornyl_ACT + cedrol + decanal + heptanal + heptane + hexane + nonanal + octanal + octanol + oxopentanal + pentane + hexanal + hexanol_1 + pentanal + heptanone',
+         'BIGENE = 2met_styrene + estragole + piperitone + linalool_OXD_c + linalool_OXD_t + dodecene_1 + met_heptenone + nonenal + octenol_1e3ol + tetradecene_1 + butene + diallyl_2s + met_propenyl_2s + met_jasmonate + hexenal_c3 + hexenal_t2 + hexenol_c3 + hexenyl_ACT_c3', 'TOLUENE = toluene + met_benzoate + phenyl_CCO + met_salicylate + indole + anisole + benzyl-acetate + benzyl-alcohol + Napthalene',
+         'XYLENES = cymene_p + cymene_o + homosalate + meta-cymenene', 'CH3OH = methanol',
+         'CH3COCH3 = acetone', 'CH3CHO = acetaldehyde',
+         'C2H5OH = ethanol', 'HCOOH = formic_acid',
+         'CH2O = formaldehyde', 'CH3COOH = acetic_acid',
+         'BZALD = benzaldehyde', 'MEK = butanone_2',
+         'CO = carbon_monoxide', 'C2H6 = ethane',
+         'C2H4 = ethene', 'HCN = hydrogen_cyanide',
+         'C3H8 = propane', 'C3H6 = propene'
 /
 &fire_emis_nl
 /

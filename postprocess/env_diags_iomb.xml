@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+
+<config_definition>
+
+<!-- ======================================================================= -->
+<!-- env_diags_[component].xml                                               -->
+<!-- boolean (True / False) controls for enabling post processing tasks      -->
+<!-- ======================================================================= -->
+
+
+
+<!-- ======================================================================= -->
+<!-- Machine dependent diagnostics observation files root path -->
+<!-- ======================================================================= -->
+<entry id="IOMBDIAG_DIAGOBSROOT" value="/glade/p/cesm/omwg/obs_data/IOMB" />
+
+
+  
+    
+       
+    
+  
+    
+<!-- ======================================================================= -->
+<!--  -->
+<!-- ======================================================================= -->
+       
+<!-- Description:  Package Version -->
+<!-- Valid Values:  -->
+<entry id="IOMBDIAG_VERSION" value="iomb_version" />
+       
+    
+  
+    
+  
+    
+  
+
+  
+    
+       
+    
+  
+    
+<!-- ======================================================================= -->
+<!--  -->
+<!-- ======================================================================= -->
+       
+<!-- Description:  matplotlib backend for generating graphics, should be exported to the environment! -->
+<!-- Valid Values: Agg -->
+<entry id="IOMBDIAG_MPLBACKEND" value="Agg" />
+       
+<!-- Description:  Environment variable for the model data root path. These are data files downloaded using the ilamb-fetch command. NOTE: this is machine and / or user dependent. Variable name ILAMB_ROOT is used to specify the data root for IOMB as well. -->
+<!-- Valid Values: /path/to/IOMB_ROOT -->
+<entry id="IOMBDIAG_ILAMB_ROOT" value="$IOMBDIAG_DIAGOBSROOT" />
+       
+    
+  
+    
+  
+    
+  
+
+  
+    
+       
+    
+  
+    
+<!-- ======================================================================= -->
+<!--  -->
+<!-- ======================================================================= -->
+       
+<!-- Description:  whether to use a standard or templated configuration file. NOTE: Templated is not implemented at this time. -->
+<!-- Valid Values: standard -->
+<entry id="IOMBDIAG_CONFIG_TYPE" value="standard" />
+       
+<!-- Description:  name of the directory containing the standard or template configuration file -->
+<!-- Valid Values: None -->
+<entry id="IOMBDIAG_CONFIG_DIRECTORY" value="$POSTPROCESS_PATH/diagnostics/diagnostics/imb/Config/" />
+       
+<!-- Description:  name of the standard or template filename to use -->
+<!-- Valid Values: None -->
+<entry id="IOMBDIAG_CONFIG_NAME" value="iomb-sample.cfg" />
+       
+    
+  
+    
+  
+    
+  
+
+  
+    
+       
+    
+  
+    
+<!-- ======================================================================= -->
+<!--  -->
+<!-- ======================================================================= -->
+       
+<!-- Description:  imb diagnostics executable name. Must be an absolute path or available in the virtualenv or in the users path. -->
+<!-- Valid Values: ilamb-run -->
+<entry id="IOMBDIAG_EXENAME" value="ilamb-run" />
+       
+<!-- Description:  root directory containing the model data -->
+<!-- Valid Values: /path/to/model/root -->
+<entry id="IOMBDIAG_MODELROOT" value="$IOMBDIAG_DIAGOBSROOT/MODELS" />
+       
+<!-- Description:  output root directory containing the html and diagnostics plots -->
+<!-- Valid Values: /path/to/model/output/root -->
+<entry id="IOMBDIAG_OUTPUTROOT" value="$DOUT_S_ROOT/ocn/proc/iomb" />
+       
+<!-- Description:  model directory name -->
+<!-- Valid Values:  -->
+<entry id="IOMBDIAG_MODELNAME" value="CLM50r243GSWP3" />
+       
+<!-- Description:  required command line options passed to IOMBDIAG_EXENAME -->
+<!-- Valid Values: None -->
+<entry id="IOMBDIAG_CLI_REQUIRED" value=" --config $CASEROOT/$IOMBDIAG_CONFIG_NAME --model_root $IOMBDIAG_MODELROOT/  --models $IOMBDIAG_MODELNAME --build_dir $IOMBDIAG_OUTPUTROOT" />
+       
+<!-- Description:  optional command line options passed to IOMBDIAG_EXENAME -->
+<!-- Valid Values:  -->
+<entry id="IOMBDIAG_CLI_OPTIONAL" value="--regions global --filter _historical_ --disable_logging" />
+       
+<!-- Description:  Complete list of command line options to pass to IOMBDIAG_EXENAME -->
+<!-- Valid Values: None -->
+<entry id="IOMBDIAG_CLI" value="$IOMBDIAG_CLI_REQUIRED $IOMBDIAG_CLI_OPTIONAL" />
+       
+    
+  
+    
+  
+    
+  
+
+
+</config_definition>

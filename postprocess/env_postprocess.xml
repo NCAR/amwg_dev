@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+
+<config_definition>
+
+<!-- ======================================================================= -->
+<!-- env_postprocess.xml                                                     -->
+<!-- ======================================================================= -->
+
+
+<!-- standalone postprocessing directory (True or False) -->
+<entry id="STANDALONE" value="FALSE" />
+
+
+  
+    
+       
+    
+  
+    
+<!-- ======================================================================= -->
+<!--  -->
+<!-- ======================================================================= -->
+       
+<!-- Description: location of caseroot directory on local disk. CASEROOT is the same as PP_CASE_PATH for stand-alone postprocessing cases --> 
+<entry id="CASEROOT" value="/glade/u/home/tilmes/cesm_dev/cesm2_ch/CAM7_tests/f.e21.FWscHIST_chemistry.ne30pg3_L58_cam6_3_041_control.001" />
+       
+<!-- Description: location of postprocess directory created in the caseroot on local disk --> 
+<entry id="PP_CASE_PATH" value="/glade/u/home/tilmes/cesm_dev/cesm2_ch/CAM7_tests/f.e21.FWscHIST_chemistry.ne30pg3_L58_cam6_3_041_control.001/postprocess" />
+       
+<!-- Description: case name --> 
+<entry id="CASE" value="f.e21.FWscHIST_chemistry.ne30pg3_L58_cam6_3_041_control.001" />
+       
+<!-- Description: post processing directory location on local machine where cesm-env2 python virtualenv is located. --> 
+<entry id="POSTPROCESS_PATH" value="/glade/p/cesm/postprocessing" />
+       
+<!-- Description: post processing directory location on local machine where DAV specific cesm-env2 python virtualenv is located. --> 
+<entry id="POSTPROCESS_PATH_DAV" value="undefined" />
+       
+<!-- Description: Fully qualified path to the location of the short term archive output, DOUT_S_ROOT, on local disk where case history files reside. Assumes the adherence to the CESM file naming conventions. --> 
+<entry id="DOUT_S_ROOT" value="/glade/scratch/tilmes/archive/f.e21.FWscHIST_chemistry.ne30pg3_L58_cam6_3_041_control.001" />
+       
+<!-- Description: Atmosphere model grid --> 
+<entry id="ATM_GRID" value="ne30np4.pg3" />
+       
+<!-- Description: Sea-Ice model grid --> 
+<entry id="ICE_GRID" value="ne30np4.pg3" />
+       
+<!-- Description: Sea-Ice model grid NX - default 320 for 1-degree ocean grid --> 
+<entry id="ICE_NX" value="48600" />
+       
+<!-- Description: Sea-Ice model grid NY - default 384 for 1-degree ocean grid --> 
+<entry id="ICE_NY" value="1" />
+       
+<!-- Description: Land model grid --> 
+<entry id="LND_GRID" value="ne30np4.pg3" />
+       
+<!-- Description: Ocean model grid --> 
+<entry id="OCN_GRID" value="ne30np4.pg3" />
+       
+<!-- Description: CESM tag used to create this case --> 
+<entry id="CESM_TAG" value="undefined" />
+       
+<!-- Description: User name of person running this set of diagnostics --> 
+<entry id="USER_NAME" value="tilmes" />
+       
+    
+  
+    
+  
+    
+  
+
+  
+    
+       
+    
+  
+    
+<!-- ======================================================================= -->
+<!--  -->
+<!-- ======================================================================= -->
+       
+<!-- Description: Path to the post processing python virtual environment created by the create_python_env.sh script in the postprocessing directory. The create_python_env.sh script is run once per CESM source code installation. --> 
+<entry id="POSTPROCESS_VIRTUALENV" value="$POSTPROCESS_PATH/cesm-env2" />
+       
+<!-- Description: If TRUE, create the single variable time series files using the history time slice files. All the time invariant metadata is included in each variable time series file header. Rules for how the time series variable files are created are specified in the env_archive.xml file. --> 
+<entry id="GENERATE_TIMESERIES" value="TRUE" />
+       
+<!-- Description: If TRUE, create only complete chunks of variable timeseries data files as determined by the env_timeseries.xml tseries_filecat_tper and tseries_filecat_n elements. If FALSE, then incomplete chunks of variable timeseries data will be created and appended to upon subsequent running of the timeseries script. Default is TRUE. --> 
+<entry id="TIMESERIES_COMPLETECHUNK" value="FALSE" />
+       
+<!-- Description: If TRUE, create all variable timeseries files for all history streams regardless of the settings listed in the env_timeseries.xml tseries_create element. If set to FALSE, then use the tseries_create element setting in env_timeseries.xml for customized generation of timeseries files based on the history stream. --> 
+<entry id="TIMESERIES_GENERATE_ALL" value="TRUE" />
+       
+<!-- Description: Fully-qualified rootdir path to input raw history time-slice data. Note: [compname]/hist will be appended automatically. --> 
+<entry id="TIMESERIES_INPUT_ROOTDIR" value="$DOUT_S_ROOT" />
+       
+<!-- Description: Fully-qualified rootdir path to output variable time series data files. Note: [compname]/proc/tseries/[tper] will be appended automatically. --> 
+<entry id="TIMESERIES_OUTPUT_ROOTDIR" value="$DOUT_S_ROOT" />
+       
+<!-- Description: If TRUE, this calls the atm_averages script which launches the parallel python wrapper script atm_avg_generator.py to generate climatological files using the pyAverager tool. Settings for creating the averages are specified in the env_diags_atm.xml file. --> 
+<entry id="GENERATE_AVGS_ATM" value="TRUE" />
+       
+<!-- Description: If TRUE, this calls the atm_diagnostics script with launches the  AMWG diagnostics package parallel python wrapper script atm_diags_generator.py to generate climatological plots associated with the run job output. See the AMWG diagnostics documentation for more details. Settings for creating the diagnostics are specified in the env_diags_atm.xml file. --> 
+<entry id="GENERATE_DIAGS_ATM" value="TRUE" />
+       
+<!-- Description: If TRUE, this calls the ice_averages script which launches the parallel python wrapper script ice_avg_generator.py to generate climatological files using the pyAverager tool. Settings for creating the averages are specified in the env_diags_ice.xml file. --> 
+<entry id="GENERATE_AVGS_ICE" value="TRUE" />
+       
+<!-- Description: If TRUE, this calls the ice_diagnostics script which launches the PCWG diagnostics package parallel python wrapper script ice_diags_generator.py to generate climatological plots associated with the run job output. See the PCWG diagnostics documentation for more details. Settings for creating the diagnostics are specified in the env_diags_ice.xml file. --> 
+<entry id="GENERATE_DIAGS_ICE" value="TRUE" />
+       
+<!-- Description: If TRUE, this calls the lnd_averages script which launches the parallel python wrapper script lnd_avg_generator.py to generate climatological files using the pyAverager tool. Settings for creating the averages are specified in the env_diags_lnd.xml file. --> 
+<entry id="GENERATE_AVGS_LND" value="TRUE" />
+       
+<!-- Description: If TRUE, this calls the lnd_regrid script which launches the parallel python wrapper script lnd_regrid_generator.py to regrid climatological files in parallel. Settings for creating the regridded files are specified in the env_diags_lnd.xml file. --> 
+<entry id="GENERATE_REGRID_LND" value="TRUE" />
+       
+<!-- Description: If TRUE, this calls the lnd_diagnostics script which launches the LMWG diagnostics package parallel python wrapper script lnd_diags_generator.py to generate climatological plots associated with the run job output. See the LMWG diagnostics documentation for more details. Settings for creating the diagnostics are specified in the env_diags_lnd.xml file. --> 
+<entry id="GENERATE_DIAGS_LND" value="TRUE" />
+       
+<!-- Description: If TRUE, this calls the ocn_averages script which launches the parallel python wrapper script ocn_avg_generator.py to generate climatological files using the pyAverager tool. Settings for creating the averages are specified in the env_diags_ocn.xml file. --> 
+<entry id="GENERATE_AVGS_OCN" value="TRUE" />
+       
+<!-- Description: If TRUE, this calls the OMWG diagnostics package parallel python wrapper script to generate climatological plots associated with the run job output. See the OMWG diagnostics documentation for more details. Settings for creating the diagnostics are specified in the env_diags_ocn.xml file. --> 
+<entry id="GENERATE_DIAGS_OCN" value="TRUE" />
+       
+<!-- Description: If TRUE, standardize the data.  This option will conform the data to CMIP experiment specifications. --> 
+<entry id="STANDARDIZE_TIMESERIES" value="FALSE" />
+       
+<!-- Description: If TRUE, this calls the ilamb script which launches the ILAMB diagnostics package parallel python wrapper script ilamb-run. Settings for creating the diagnostics are specified in the env_ilamb.xml file. --> 
+<entry id="GENERATE_ILAMB" value="TRUE" />
+       
+    
+  
+    
+  
+    
+  
+
+  
+    
+       
+    
+  
+    
+<!-- ======================================================================= -->
+<!--  -->
+<!-- ======================================================================= -->
+       
+<!-- Description: Remote web host machine to serve HTML pages and diagnostics plots. --> 
+<entry id="GLOBAL_WEBHOST" value="" />
+       
+<!-- Description: Remote web host login name which can be used with ssh keys. If ssh key is not setup, then will prompt for login on remote web host machine. --> 
+<entry id="GLOBAL_WEBLOGIN" value="" />
+       
+<!-- Description: Remote machine path to diagnostics directory. --> 
+<entry id="GLOBAL_REMOTE_WEBDIR" value="" />
+       
+    
+  
+    
+  
+    
+  
+
+<!-- ====================================== -->
+</config_definition>

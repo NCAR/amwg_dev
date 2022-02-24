@@ -200,7 +200,7 @@
       a restart file.
     </desc>
     </entry>
-    <entry id="RUN_REFDIR" value="cesm2_init">
+    <entry id="RUN_REFDIR" value="ccsm4_init">
       <type>char</type>
       <desc>
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
@@ -224,7 +224,7 @@
       Reference time of day (seconds) for hybrid or branch runs (sssss)
     </desc>
     </entry>
-    <entry id="GET_REFCASE" value="TRUE">
+    <entry id="GET_REFCASE" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -244,14 +244,14 @@
       Run start time-of-day
     </desc>
     </entry>
-    <entry id="STOP_OPTION" value="nyears">
+    <entry id="STOP_OPTION" value="nmonths">
       <type>char</type>
       <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,end</valid_values>
       <desc>
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="1">
+    <entry id="STOP_N" value="12">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:2843596.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:2843597.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:3027558.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:3027559.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>

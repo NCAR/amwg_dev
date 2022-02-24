@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<config_definition>
+
+<!-- ======================================================================= -->
+<!-- env_postprocess.xml                                                     -->
+<!-- ======================================================================= -->
+
+
+<!-- standalone postprocessing directory (True or False) -->
+<entry id="STANDALONE" value="FALSE" />
+
+
+  
+    
+       
+    
+  
+    
+<!-- ======================================================================= -->
+<!--  -->
+<!-- ======================================================================= -->
+       
+<!-- Description: The full path file name to the global attributes files.  This file contains the attributes that will be added to all files. --> 
+<entry id="CONFORM_GLOBAL_ATTRIBUTES" value="/glade/p/cesm/conform-input/cmip6_input/CESM_CMIP6.ga" />
+       
+<!-- Description: The full path file name to the CESM definitions file.  This file contains the definitions to go from CESM raw output to the standardized variable name. --> 
+<entry id="CONFORM_CESM_DEFINITIONS" value="/glade/p/cesm/conform-input/cmip6_input/CESM_MastList.def" />
+       
+<!-- Description: The CMIP experiment name to generate the needed input for. --> 
+<entry id="CONFORM_EXP_NAME" value="" />
+       
+<!-- Description: The directory to create the conform input files into. --> 
+<entry id="CONFORM_JSON_DIRECTORY" value="$PP_CASE_PATH" />
+       
+<!-- Description: The base directory for the conform output. --> 
+<entry id="CONFORM_OUTPUT_DIR" value="" />
+       
+<!-- Description: JSON file which contains the variable information for extra fields to add. --> 
+<entry id="CONFORM_EXTRA_FIELD_JSON" value="/glade/p/cesm/conform-input/extra_field_input/extra_vars.json" />
+       
+<!-- Description: The base directory for extra conform input.  This is usually reserved for netcdf files that contain grid information. --> 
+<entry id="CONFORM_EXTRA_FIELD_NETCDF_DIR" value="/glade/p/cesm/conform-input/extra_field_input/" />
+       
+    
+  
+    
+  
+    
+  
+
+<!-- ====================================== -->
+</config_definition>

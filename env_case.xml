@@ -298,7 +298,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz3_zmtop75.hf.001">
+    <entry id="CASEROOT" value="/glade/p/cesm/chwg_dev/tilmes/cases/cesm2_ch/CAM7_tests/f.e21.FWscHIST_chemistry.ne30pg3_L58_cam6_3_041_control.001">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -311,11 +311,11 @@
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_041">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_041/cime/..">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.e21.FWscHIST.ne30_L48_BL10_cam6_3_041_kzz3_zmtop75.hf.001">
+    <entry id="CASE" value="f.e21.FWscHIST_chemistry.ne30pg3_L58_cam6_3_041_control.001">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -341,11 +341,11 @@
       <type>char</type>
       <desc>case user name</desc>
     </entry>
-    <entry id="REALUSER" value="hannay">
+    <entry id="REALUSER" value="tilmes">
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="d053a13ccfb066a1a0d31f94edb50c50ad32ae10da4f5c87ba4649190c7889aa">
+    <entry id="CASE_HASH" value="c6f4f067fbd798cb6b550f97a3910aff97d5716d7459c69b1e26522b03bd2a8f">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
