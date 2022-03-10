@@ -2417,6 +2417,18 @@ Default: FALSE
 
 <!-- Cloud Macro/Micro-physics -->
 
+<entry id="l_dribble_tend_into_macmic_loop" type="logical" category="conv"
+       group="phys_ctl_nl" valid_values="" >
+Do tendency dribbling during macmic loop.
+Default: FALSE
+</entry>
+
+<entry id="dribble_start_step" type="integer" category="conv"
+       group="phys_ctl_nl" valid_values="" >
+Start step of the tendency dribbling during macmic loop.
+Default: 1
+</entry>
+
 <entry id="cld_macmic_num_steps" type="integer" category="conv"
        group="phys_ctl_nl" valid_values="" >
 Number of macrophysics/microphysics substeps.
