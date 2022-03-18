@@ -75,7 +75,7 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001
+     case_name = f.c6_3_41.FWscHIST.ne30_L58_macmic6.001
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      flds_bgc_oi = .false.
@@ -106,8 +106,8 @@ ALLCOMP_attributes::
      orb_obliq = 1.e36
      scol_lat = -999.99
      scol_lon = -999.99
-     single_column_lnd_domainfile = /glade/p/cesmdata/cseg/inputdata/share/domains/domain.lnd.ne30np4.pg2_gx1v7.200626.nc
-     start_type = continue
+     single_column_lnd_domainfile = /glade/p/cesmdata/cseg/inputdata/share/domains/domain.lnd.ne30np4.pg3_gx1v7.170605.nc
+     start_type = startup
      tfreeze_option = mushy
      username = hannay
      write_restart_at_endofrun = .false.
@@ -120,7 +120,7 @@ MED_attributes::
      atm2lnd_map = idmap
      atm2ocn_map = idmap
      atm2wav_map = unset
-     atm_nx = 21600
+     atm_nx = 48600
      atm_ny = 1
      budget_ann = 1
      budget_daily = 0
@@ -218,17 +218,17 @@ MED_attributes::
      history_option_wav_inst = never
      ice2atm_map = idmap
      ice2wav_smapname = unset
-     ice_nx = 21600
+     ice_nx = 48600
      ice_ny = 1
      info_debug = 1
      lnd2atm_map = idmap
      lnd2rof_map = unset
-     lnd_nx = 21600
+     lnd_nx = 48600
      lnd_ny = 1
      mapuv_with_cart3d = .false.
      ocn2atm_map = idmap
      ocn2wav_smapname = unset
-     ocn_nx = 21600
+     ocn_nx = 48600
      ocn_ny = 1
      rof2lnd_map = unset
      rof2ocn_fmapname = unset
@@ -270,14 +270,14 @@ CLOCK_attributes::
 ATM_attributes::
      Verbosity = off
      aqua_planet = .false.
-     mesh_atm = /glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc
+     mesh_atm = /glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
      perpetual = .false.
      perpetual_ymd = -999
 ::
 
 ICE_attributes::
      Verbosity = off
-     mesh_ice = /glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc
+     mesh_ice = /glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
 ::
 
 GLC_attributes::
@@ -286,12 +286,12 @@ GLC_attributes::
 
 LND_attributes::
      Verbosity = off
-     mesh_lnd = /glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc
+     mesh_lnd = /glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
 ::
 
 OCN_attributes::
      Verbosity = off
-     mesh_ocn = /glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc
+     mesh_ocn = /glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
 ::
 
 ROF_attributes::
@@ -305,52 +305,52 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = med.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = med.log.220318-144434
 ::
 
 DRV_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = drv.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = drv.log.220318-144434
 ::
 
 ATM_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = atm.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = atm.log.220318-144434
 ::
 
 LND_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = lnd.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = lnd.log.220318-144434
 ::
 
 ICE_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = ice.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = ice.log.220318-144434
 ::
 
 OCN_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = ocn.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = ocn.log.220318-144434
 ::
 
 ROF_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = rof.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = rof.log.220318-144434
 ::
 
 GLC_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = glc.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = glc.log.220318-144434
 ::
 
 WAV_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = wav.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = wav.log.220318-144434
 ::
 
 ESP_modelio::
-     diro = /glade/scratch/hannay/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001/run
-     logfile = esp.log.2578806.chadmin1.ib0.cheyenne.ucar.edu.220122-020040
+     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_macmic6.001/run
+     logfile = esp.log.220318-144434
 ::
 
