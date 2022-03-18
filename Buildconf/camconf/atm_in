@@ -232,7 +232,7 @@
  se_fvm_supercycling_jet		= -1
  se_horz_num_threads		=  0 
  se_hypervis_dynamic_ref_state		=  .false.  
- se_hypervis_subcycle		= 4
+ se_hypervis_subcycle		= 3
  se_hypervis_subcycle_q		= 1                 
  se_hypervis_subcycle_sponge		=  1  
  se_kmax_jet		= -1
@@ -242,7 +242,7 @@
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
  se_ne		= 30
- se_nsplit		= 2
+ se_nsplit		= 1
  se_nu		= -1
  se_nu_div		=  -1 
  se_nu_p		= -1 
@@ -250,7 +250,7 @@
  se_phys_dyn_cp		= 1
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
- se_rsplit		= 3
+ se_rsplit		= 1
  se_sponge_del4_lev		=  -1 
  se_sponge_del4_nu_div_fac		=  -1 
  se_sponge_del4_nu_fac		=  -1 
@@ -353,7 +353,7 @@
  cam_physpkg		= 'cam_dev'
  cam_snapshot_after_num		=    -1 
  cam_snapshot_before_num		=   -1 
- cld_macmic_num_steps		= 6
+ cld_macmic_num_steps		= 1
  convproc_do_aer		= .true.
  deep_scheme		= 'ZM'
  do_clubb_sgs		=  .true.  

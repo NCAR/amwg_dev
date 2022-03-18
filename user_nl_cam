@@ -28,13 +28,13 @@ fincl1 = 'T', 'Q', 'PS', 'PSL', 'U', 'V', 'Z3', 'OMEGA', 'CLOUD', 'QRL', 'QRS',
 fincl2 = 'TROP_T', 'TROP_P', 'Q','T','U', 'V', 'OMEGA', 'QRS', 'QRL','PS', 'Z3','PMID'
 fincl4 = 'PRECC','PRECL'
 
-cld_macmic_num_steps=6
-
 interpolate_output = .true.,.true.,.true.
 interpolate_nlat = 192,192,192
 interpolate_nlon = 288,288,288
 
-se_rsplit            = 3
-se_nsplit           = 2
-se_hypervis_subcycle =  4
+se_nsplit = 1
+se_rsplit = 1
+se_hypervis_subcycle = 3
+
+cld_macmic_num_steps=1
 
