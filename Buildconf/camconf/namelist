@@ -1,7 +1,7 @@
 &comp_inparm 
 
  ncdata = 'f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001.cam.i.1989-01-01-00000.nc'
- dtime = 300
+ dtime = 1800
 
 
 ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
@@ -70,15 +70,19 @@ interpolate_nlon = 288,288,288
 
 
 
-se_nsplit = 1
+se_rsplit            = 3
 
-se_rsplit = 1
+se_nsplit           = 2
 
-se_hypervis_subcycle = 3
+se_hypervis_subcycle =  4
 
 
 
-cld_macmic_num_steps=1
+cld_macmic_num_steps=6
+
+l_dribble_tend_into_macmic_loop = .true.
+
+dribble_start_step = 2
 
 
 

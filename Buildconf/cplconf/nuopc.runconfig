@@ -75,7 +75,7 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001
+     case_name = f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      flds_bgc_oi = .false.
@@ -242,15 +242,15 @@ MED_attributes::
 ::
 
 CLOCK_attributes::
-     atm_cpl_dt = 300
+     atm_cpl_dt = 1800
      calendar = NO_LEAP
      end_restart = .false.
      glc_avg_period = yearly
-     glc_cpl_dt = 300
+     glc_cpl_dt = 1800
      history_ymd = -999
-     ice_cpl_dt = 300
-     lnd_cpl_dt = 300
-     ocn_cpl_dt = 300
+     ice_cpl_dt = 1800
+     lnd_cpl_dt = 1800
+     ocn_cpl_dt = 1800
      restart_n = 1
      restart_option = nyears
      restart_ymd = -999
@@ -264,7 +264,7 @@ CLOCK_attributes::
      tprof_n = -999
      tprof_option = never
      tprof_ymd = -999
-     wav_cpl_dt = 300
+     wav_cpl_dt = 1800
 ::
 
 ATM_attributes::
@@ -305,52 +305,52 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = med.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = med.log.220318-144717
 ::
 
 DRV_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = drv.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = drv.log.220318-144717
 ::
 
 ATM_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = atm.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = atm.log.220318-144717
 ::
 
 LND_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = lnd.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = lnd.log.220318-144717
 ::
 
 ICE_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = ice.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = ice.log.220318-144717
 ::
 
 OCN_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = ocn.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = ocn.log.220318-144717
 ::
 
 ROF_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = rof.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = rof.log.220318-144717
 ::
 
 GLC_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = glc.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = glc.log.220318-144717
 ::
 
 WAV_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = wav.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = wav.log.220318-144717
 ::
 
 ESP_modelio::
-     diro = /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_nosubcycle.001/run
-     logfile = esp.log.220318-144848
+     diro = /glade/scratch/hannay/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001/run
+     logfile = esp.log.220318-144717
 ::
 
