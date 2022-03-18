@@ -1,6 +1,5 @@
-! Users should add all user specific namelist changes below in the form of 
-! namelist_var = new_namelist_value 
-ncdata = '/glade/p/cesm/chwg_dev/tilmes/inputdata/init/cam7/1979-01-01-00000/f.e21.FWHISTBgcCrop.f09_f09_mg17.CMIP6-AMIP-WACCM.001.cam.i.1979-01-01-00000.map_TO_ne30_57L.nc'
+
+ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
 
 mfilt           = 0,5,20,40,120,240,365,73,365
 nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
@@ -11,84 +10,21 @@ fincl1 = 'U','V','Q','T','PSL','OMEGA','PS','PRECC','PRECL','UTGWORO','VTGWORO',
          'LHFLX','SHFLX','TMQ','FLDS','FSDS','FSDSC','SWCF','LWCF','PRECSC','PRECSL',  'DTCOND','Z3', 'PSL'
          'PBLH','ZMDT', 'ZMDQ', 'STEND_CLUBB','RVMTEND_CLUBB',
          'ZMDQ','CMFMC_DP','DPDLFLIQ','DPDLFICE','PCLDTOP','CLDTOP', 'KVH_CLUBB',
-         'DTCORE','PTEQ','DCQ','QTGW','CT_H2O','DCQ','MPDQ',
-          'NO3','O3','OH','HO2','NO','NO2','HNO3','CO','CH4','N2O','N2O5','H2O','CH4','CH4_CHML',
-         'CFC113','CFC114','CFC115','CCL4','CH3CCL3','CH3CL','HCFC22','HCFC141B','HCFC142B','CF2CLBR','CF3BR','H2402',
-         
-fincl2 = 'TROP_T', 'TROP_P', 'Q', 'T','U850','V850','U200','PRECT','PRECC','PRECL','PBLH',
+         'DTCORE','DQCORE','PTEQ','DCQ','QTGW','CT_H2O','DCQ','MPDQ'
+fincl2 = 'TROP_T', 'TROP_P', 'Q', 'T','U850','V850','U200','V200','PRECT','PRECC','PRECL','PBLH',
          'OMEGA500','FLUT','Z500','T500','PS','PMID:I','TREFHTMN:M', 'TREFHTMX:X','TSMN:M', 'TSMX:X',
          'PBLH','ZMDT', 'ZMDQ', 'STEND_CLUBB','RVMTEND_CLUBB',
          'PRECT','PRECL','U200','V200','U850','V850','FLUT','Z500','TREFHT','TS','CLDTOT','SWCF',
-         'LWCF','PS','PSL','TMQ','LHFLX','SHFLX','T500','OMEGA500','CLDLOW',
-         'CT_CO', 'VDCO', 'TACO', 'CT_H2O', 'VD01', 'TAQ', 'CT_O3', 'VDO3', 'TAO3', 'CT_O3S', 'VDO3S', 'TAO3S'
-fincl3 = 'U:I','V:I','T:I', 'OMEGA:I','PS:I','PMID:I', 'OMEGA500','PRECT','U200','U850','FLUT','Q:I', 'ZMDT:I','ZMDQ:I',
-         'CMFMC_DP:I','DPDLFLIQ:I','DPDLFICE:I','PCLDTOP:I','CLDTOP:I' ,
-       'DTCORE:I','PTEQ:I','DCQ:I','QTGW:I','CT_H2O:I','DCQ:I','MPDQ:I'
+         'LWCF','PS','PSL','TMQ','LHFLX','SHFLX','T500','OMEGA500','CLDLOW'
+fincl3 = 'U:I','V:I','T:I', 'OMEGA:I','PS:I','PMID:I', 'OMEGA500','PRECT','U200','U850','FLUT','Q:I', 'ZMDT:I','ZMDQ:I','CMFMC_DP:I','DPDLFLIQ:I','DPDLFICE:I','PCLDTOP:I','CLDTOP:I' ,
+       'DTCORE:I','DQCORE:I','PTEQ:I','DCQ:I','QTGW:I','CT_H2O:I','DCQ:I','MPDQ:I'
 fincl4 = 'PRECT','PRECC'
 
-fincl8         = 'PS', 'PSL', 'U', 'V', 'T', 'Z3', 'PHIS', 'FRONTGF:I', 'OMEGA', 'O3',
-         'REFF_AERO', 'SAD_AERO', 'so4_a1', 'so4_a2', 'so4_a3', 'AODVISstdn', 'NITROP_PD', 'dgnumwet1', 'dgnumwet2', 'dgnumwet3',
-         'CO2', 'H', 'NO', 'O'
- mfilt          =            1,    5,  20,  40, 120, 240, 365,  73, 365
- nhtfrq         =           0,  -24,  -6,  -3,  -1,   1, -24,-120,-240
-
-
-gw_dc          = 2.5D0  
-pgwv           = 32
-effgw_beres_dp         = 0.7D0
-tau_0_ubc              = .false. 
-micro_mg_do_graupel            =  .true. 
-micro_mg_version               =                                  3  
-use_gw_convect_dp              = .true.
-use_gw_front           = .true. 
-
-tracer_cnst_file               = ''
-tracer_cnst_specifier          = ''
-prescribed_ozone_file          = ''
-prescribed_strataero_file      = ''
-
-
-interpolate_output = .true.,.true.,.true.,.true.,.true.,.true.,.true.,.true.
-interpolate_nlat = 192,192,192,192,192,192,192,192
-interpolate_nlon = 288,288,288,288,288,288,288,288
+interpolate_output = .true.,.true.,.true.,.true.
+interpolate_nlat = 192,192,192,192
+interpolate_nlon = 288,288,288,288
 
 se_rsplit            = 3
 se_nsplit           = 2
 se_hypervis_subcycle =  4
-
-flbc_file              = '/glade/p/cesmdata/cseg/inputdata/atm/waccm/lb/LBC_17500116-20150116_CMIP6_0p5degLat_c180227.nc'
-flbc_list              = 'CCL4', 'CF2CLBR', 'CF3BR', 'CFC11', 'CFC113', 'CFC12', 'CH3BR', 'CH3CCL3', 'CH3CL', 'CH4',
-         'CO2', 'H2', 'HCFC22', 'N2O', 'CFC114', 'CFC115', 'HCFC141B', 'HCFC142B', 'H2402', 'OCS', 'SF6', 'CFC11eq'
- 
-
-&rxn_rate_diags_nl
- rxn_rate_sums          = 'RO2_NO_sum  = NO_HO2 + CH3O2_NO + HOCH2OO_NO + EO2_NO + C2H5O2_NO + CH3CO3_NO + C3H7O2_NO + PO2_NO + RO2_NO + ENEO2_NO + ENEO2_NOb + MEKO2_NO + MACRO2_NOa + MACRO2_NOb +',
-         'MCO3_NO + ISOPAO2_NO + ISOPBO2_NO + ALKO2_NO + ALKO2_NOb + XO2_NO + TOLO2_NO + PHENO2_NO + C6H5O2_NO + BENZO2_NO + MALO2_NO + BZOO_NO + ACBZO2_NO + DICARBO2_NO +',
-         'MDIALO2_NO + XYLOLO2_NO + XYLENO2_NO + TERPO2_NO + TERP2O2_NO + NTERPO2_NO',
-         'RO2_NO3_sum = NO3_HO2 + MACRO2_NO3 + MCO3_NO3 + ISOPAO2_NO3 + ISOPBO2_NO3 + XO2_NO3',
-         'RO2_HO2_sum = CH3O2_HO2 + HOCH2OO_HO2 + EO2_HO2 + C2H5O2_HO2 + CH3CO3_HO2 + C3H7O2_HO2 + PO2_HO2 + RO2_HO2 + MEKO2_HO2 + MACRO2_HO2 + ISOPAO2_HO2 + ISOPBO2_HO2 + ALKO2_HO2 +',
-         'XO2_HO2 + TOLO2_HO2 + PHENO2_HO2 + C6H5O2_HO2 + BENZO2_HO2 + MALO2_HO2 + BZOO_HO2 + ACBZO2_HO2 + DICARBO2_HO2 + MDIALO2_HO2 + XYLOLO2_HO2 + XYLENO2_HO2 + TERPO2_HO2 +',
-         'TERP2O2_HO2 + NTERPO2_HO2',
-         'RO2_RO2_sum = CH3O2_CH3O2a + CH3O2_CH3O2b + C2H5O2_CH3O2 + C2H5O2_C2H5O2 + CH3CO3_CH3O2 + CH3CO3_CH3CO3 + C3H7O2_CH3O2 + RO2_CH3O2 + MACRO2_CH3O2 + MACRO2_CH3CO3 + MCO3_CH3O2 +',
-         ' MCO3_CH3CO3 + MCO3_MCO3 + ISOPAO2_CH3O2 + ISOPBO2_CH3O2 + ISOPAO2_CH3CO3 + ISOPBO2_CH3CO3 + XO2_CH3O2 + XO2_CH3CO3',
-         'RCO2_NO2_sum = CH3CO3_NO2 + MCO3_NO2',
-          'O3_Prod_Trop = NO_HO2 + CH3O2_NO + PO2_NO + CH3CO3_NO + C2H5O2_NO + .92*ISOPAO2_NO + .92*ISOPBO2_NO + MACRO2_NOa + MCO3_NO + C3H7O2_NO + RO2_NO + XO2_NO + .9*TOLO2_NO +',
-         ' .9*PHENO2_NO + .9*C6H5O2_NO + .9*BENZO2_NO + .9*MALO2_NO + .9*BZOO_NO + .9*ACBZO2_NO + .9*DICARBO2_NO + .9*MDIALO2_NO  + .9*XYLOLO2_NO + .9*XYLENO2_NO + TERPO2_NO +',
-         ' TERP2O2_NO + NTERPO2_NO + ALKO2_NO + ENEO2_NO +  EO2_NO + MEKO2_NO + HOCH2OO_NO + jonitr',
-         'O3_Loss_Trop = C3H6_O3 + .9*ISOP_O3 + C2H4_O3 + .8*MVK_O3 + 0.8*MACR_O3 + MTERP_O3 + BCARY_O3',
-         'OddOx_Prod_JO2 = 2.0*jo2_a + 2.0*jo2_b',
-         'OddOx_Ox_Loss  = 2.0*O_O3 + O1D_H2O + 2.0*O_O + 2.0*O1D_O3 + O1D_H2',
-         'OddOx_HOx_Loss = HO2_O + HO2_O3 + OH_O + OH_O3 + H_O3 + H2_O + H2O2_O',
-         'OddOx_NOx_Loss = 2.0*NO2_O + 2.0*jno3_b',
-         'OddOx_CLOxBROx_Loss = 2.0*CLO_O + 2.0*jcl2o2 + 2.0*CLO_CLOa + 2.0*CLO_CLOb + 2.0*BRO_CLOb + 2.0*BRO_CLOc + 2.0*BRO_BRO + 2.0*BRO_O + CLO_HO2 + BRO_HO2',
-         'OddOx_Loss_SMLT = 2.0*O_O3 + O1D_H2O + HO2_O + HO2_O3 + OH_O + OH_O3 + H_O3 + 2.0*NO2_O + 2.0*jno3_b + 2.0*CLO_O + 2.0*jcl2o2 + 2.0*CLO_CLOa + 2.0*CLO_CLOb + 2.0*BRO_CLOb + 2.0*BRO_CLOc +',
-         ' 2.0*BRO_BRO + 2.0*BRO_O + CLO_HO2 + BRO_HO2 + H2_O + H2O2_O + 2.0*O_O + 2.0*O1D_O3 + O1D_H2',
-         'OddOx_Loss_Tot = 2.0*O_O3 + O1D_H2O + HO2_O + HO2_O3 + OH_O + OH_O3 + H_O3 + 2.0*NO2_O + 2.0*jno3_b + 2.0*CLO_O + 2.0*jcl2o2 + 2.0*CLO_CLOa + 2.0*CLO_CLOb + 2.0*BRO_CLOb + 2.0*BRO_CLOc +',
-         ' 2.0*BRO_BRO + 2.0*BRO_O + CLO_HO2 + BRO_HO2 + H2_O + H2O2_O + 2.0*O_O + 2.0*O1D_O3 + O1D_H2 + C3H6_O3 + .9*ISOP_O3 + C2H4_O3 + .8*MVK_O3 + 0.8*MACR_O3 + MTERP_O3 + BCARY_O3',
-         'OddOx_Prod_Tot = 2.0*jo2_a + 2.0*jo2_b + NO_HO2 + CH3O2_NO + PO2_NO + CH3CO3_NO + C2H5O2_NO + .92*ISOPAO2_NO + .92*ISOPBO2_NO + MACRO2_NOa + MCO3_NO + C3H7O2_NO + RO2_NO + XO2_NO + .9*TOLO2_NO +',
-         ' .9*PHENO2_NO + .9*C6H5O2_NO + .9*BENZO2_NO + .9*MALO2_NO + .9*BZOO_NO + .9*ACBZO2_NO + .9*DICARBO2_NO + .9*MDIALO2_NO  + .9*XYLOLO2_NO + .9*XYLENO2_NO + TERPO2_NO + TERP2O2_NO + NTERPO2_NO +',
-         ' ALKO2_NO + ENEO2_NO +  EO2_NO + MEKO2_NO + HOCH2OO_NO + jonitr',
-         'O3S_Loss = 2.0*O_O3 + O1D_H2O + OH_O3 + HO2_O3 + HO2_O + OH_O + H_O3 + 2.0*NO2_O + 2.0*jno3_b + 2.0*CLO_O + 2.0*jcl2o2 + 2.0*CLO_CLOa + 2.0*CLO_CLOb + 2.0*BRO_CLOb + 2.0*BRO_CLOc +',
-         ' 2.0*BRO_BRO + 2.0*BRO_O + CLO_HO2 + BRO_HO2 + H2_O + H2O2_O + 2.0*O_O + 2.0*O1D_O3 + O1D_H2 + C3H6_O3 + .9*ISOP_O3 + C2H4_O3 + .8*MVK_O3 + 0.8*MACR_O3 + MTERP_O3 + BCARY_O3'
-/
 

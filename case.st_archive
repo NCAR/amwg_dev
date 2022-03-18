@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # Batch system directives
-#PBS -N st_archive.f.e21.FWscHIST_chemistry.ne30pg3_L58_cam6_3_041_control.001
+#PBS -N st_archive.f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001
 #PBS  -r n 
 #PBS  -j oe 
 #PBS  -V 
 #PBS  -S /bin/bash  
-#PBS  -l select=1:mpiprocs=1:ompthreads=1
+#PBS  -l select=1:ncpus=1:mpiprocs=1:ompthreads=1
 
 """
 Performs short term archiving for restart files, history and rpointer
@@ -15,7 +15,7 @@ is called by case.submit on batch systems.
 """
 
 import sys, os, time
-os.chdir( '/glade/p/cesm/chwg_dev/tilmes/cases/cesm2_ch/CAM7_tests/f.e21.FWscHIST_chemistry.ne30pg3_L58_cam6_3_041_control.001')
+os.chdir( '/glade/p/cesmdata/cseg/runs/cesm2_0/f.e21.FWscHIST.ne30pg2_L48_BL10_cam6_3_041_control.hf.001')
 
 _LIBDIR = os.path.join("/glade/work/hannay/cesm_tags/cam6_3_041/cime", "scripts", "Tools")
 sys.path.append(_LIBDIR)
