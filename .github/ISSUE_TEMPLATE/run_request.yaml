@@ -9,7 +9,7 @@ body:
     attributes:
       label: Description of the run
       description: Please enter a short description of the run and its purpose[Required]
-      value: ""
+      value: " "
     validations:
       required: true
 
@@ -18,7 +18,7 @@ body:
     attributes:
       label: Suffix in the casename
       description: Please enter the suffix for the casename. The suffix will appear in the casename as "f.$TAG.$COMPSET.$RESOLUTION_$SUFFIX.001" [Optional]
-      value: 
+      value: " " 
     validations:
       required: False
 
