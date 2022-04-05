@@ -17,8 +17,8 @@ body:
     id: Suffix
     attributes:
       label: Suffix in the casename
-      description: Please enter the suffix for the casename [Optional]
-      value: " f.$TAG.$COMPSET.$RESOLUTION_$SUFFIX.001"
+      description: Please enter the suffix for the casename. "f.$TAG.$COMPSET.$RESOLUTION_$SUFFIX.001" [Optional]
+      value: 
     validations:
       required: False
 
