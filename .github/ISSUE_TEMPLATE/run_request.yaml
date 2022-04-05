@@ -17,7 +17,8 @@ body:
     id: Suffix
     attributes:
       label: Suffix in the casename
-      description: Please enter the suffix for the casename. The suffix will appear in the casename as "f.$TAG.$COMPSET.$RESOLUTION_$SUFFIX.001" [Optional]
+      description: Please enter the suffix for the casename. The suffix will appear in the casename as 
+      "f.$TAG.$COMPSET.$RES.$SUFFIX.001" [Optional]
       value: "Suffix" 
     validations:
       required: False
@@ -41,7 +42,7 @@ body:
     attributes:
       label: Sandbox
       description: If you require the run to be done with a specific sandbox, please enter the info [Optional].
-      value: "Requested sandbox or tag "
+      value: "Requested sandbox or tag"
 
   - type: textarea
     id: Contact
