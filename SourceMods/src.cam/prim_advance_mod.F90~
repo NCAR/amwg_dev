@@ -506,7 +506,7 @@ contains
     if (nu_t == 0 .and. nu == 0 .and. nu_p==0 ) return;
 
     ptop = hvcoord%hyai(1)*hvcoord%ps0
-
+#ifdef old
     if (hypervis_dynamic_ref_state) then
       !
       ! use dynamic reference pressure (P. Callaghan)
@@ -546,7 +546,7 @@ contains
         end if
       end do
     end do
-
+#endif
     kbeg=1; kend=nlev
 
     kblk = kend - kbeg + 1
@@ -561,9 +561,12 @@ contains
       call calc_tot_energy_dynamics(elem,fvm,nets,nete,nt,qn0,'dBH')
 
       rhypervis_subcycle=1.0_r8/real(hypervis_subcycle,kind=r8)
-
+#ifdef old
       call biharmonic_wk_dp3d(elem,dptens,dpflux,ttens,vtens,deriv,edge3,hybrid,nt,nets,nete,kbeg,kend,hvcoord,&
-           dp3d_ref=dp3d_ref,T_ref=T_ref,pmid_ref=pmid_ref)!modified
+           dp3d_ref=dp3d_ref,pmid_ref=pmid_ref)
+#else
+      call biharmonic_wk_dp3d(elem,dptens,dpflux,ttens,vtens,deriv,edge3,hybrid,nt,nets,nete,kbeg,kend,hvcoord)
+#endif
 
       do ie=nets,nete
         ! compute mean flux
