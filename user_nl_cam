@@ -26,17 +26,15 @@ fincl1 = 'T', 'Q', 'PS', 'PSL', 'U', 'V', 'Z3', 'OMEGA', 'CLOUD', 'QRL', 'QRS',
 'BURDENSOA','BURDENSEASALT','BURDENPOM','CCN3','CDNUMC','FICE','PBLH','RELHUM'
 
 fincl2 = 'TROP_T', 'TROP_P', 'Q','T','U', 'V', 'OMEGA', 'QRS', 'QRL','PS', 'Z3','PMID'
+fincl3 =  'FT:I', 'FQ_gll:I', 'PMID:I', 'OMEGA:I', 'OMEGA500:I' 
+
 fincl4 = 'PRECC','PRECL'
 
-interpolate_output = .true.,.true.,.true.
-interpolate_nlat = 192,192,192
-interpolate_nlon = 288,288,288
+interpolate_output = .true.,.true.
+interpolate_nlat = 192,192
+interpolate_nlon = 288,288
 
 se_rsplit            = 3
 se_nsplit           = 2
 se_hypervis_subcycle =  4
-
-cld_macmic_num_steps=6
-l_dribble_tend_into_macmic_loop = .true.
-dribble_start_step = 2
 

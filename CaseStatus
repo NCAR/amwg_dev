@@ -1,30 +1,30 @@
-2022-03-18 10:18:41: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev  -chem waccm_sc_mam4 -nlev 58  </command>
+2022-04-06 08:53:44: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev  -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-03-18 10:18:41: case.setup starting 
+2022-04-06 08:53:44: case.setup starting 
  ---------------------------------------------------
-2022-03-18 10:18:42: case.setup success 
+2022-04-06 08:53:46: case.setup success 
  ---------------------------------------------------
-2022-03-18 10:18:43: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+2022-04-06 08:53:46: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
  ---------------------------------------------------
-2022-03-18 10:18:43: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2022-04-06 08:53:46: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2022-03-18 10:18:43: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2022-04-06 08:53:47: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-03-18 10:18:44: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2022-04-06 08:53:47: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2022-03-18 10:18:44: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2022-04-06 08:53:47: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2022-03-18 10:18:44: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+2022-04-06 08:53:48: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
  ---------------------------------------------------
-2022-03-18 10:18:45: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+2022-04-06 08:53:48: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
  ---------------------------------------------------
-2022-03-18 10:18:45: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2022-04-06 08:53:48: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2022-03-18 10:18:45: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2022-04-06 08:53:49: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
  ---------------------------------------------------
-2022-03-18 10:19:06: case.build starting 
+2022-04-06 08:54:16: case.build starting 
  ---------------------------------------------------
-CESM version is cam6_3_006-751-gddea6050
+CESM version is cam6_3_041
 Processing externals description file : Externals.cfg
 Processing externals description file : Externals_CDEPS.cfg
 Processing externals description file : Externals_CISM.cfg
@@ -88,47 +88,32 @@ e-o ./components/cice6
         clean sandbox, on pumas_cam-release_v1.17
     ./src/physics/silhs
         clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
-2022-03-18 10:31:59: case.build success 
+2022-04-06 09:07:03: case.build success 
  ---------------------------------------------------
-2022-03-18 10:32:14: xmlchange success <command> ./xmlchange JOB_QUEUE=premium,STOP_N=1,STOP_OPTION=nmonths,RESUBMIT=0  </command>
+2022-04-06 09:15:33: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-03-18 10:32:19: case.submit starting 
+2022-04-06 09:18:05: case.submit starting 3673580.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-03-18 10:32:19: case.submit error 
-ERROR: Command: 'qsub -q premium -l walltime=12:00:00 -A 93300722 -v ARGS_FOR_SCRIPT='--resubmit' .case.run' failed with error 'qsub: Invalid account, available accounts:
-Project, Status, Active
-P03010039, Normal, True
-P19010000, Normal, True
-CESM0002, Normal, True
-UCUB0090, Normal, True
-P93300642, Normal, True
-P93300042, Normal, True
-P93300324, Normal, True
-CESM0019, Normal, True
-P93300606, Normal, True
-P93300065, Normal, True' from dir '/glade/p/cesmdata/cseg/runs/cesm2_0/f.c6_3_41d.FWscHIST.ne30_L58_macmic6_dribble.001'
+2022-04-06 09:18:05: case.submit success 3673580.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-03-18 10:32:53: xmlchange success <command> ./xmlchange PROJECT=P93300642  </command>
+2022-04-06 09:29:01: case.run starting 3673579.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-03-18 10:32:58: case.submit starting 3337935.chadmin1.ib0.cheyenne.ucar.edu
+2022-04-06 09:29:06: model execution starting 3673579.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-03-18 10:32:58: case.submit success 3337935.chadmin1.ib0.cheyenne.ucar.edu
+2022-04-06 09:31:37: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_exner.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_exner.001/run'
  ---------------------------------------------------
-2022-03-18 11:00:37: case.run starting 3337934.chadmin1.ib0.cheyenne.ucar.edu
+2022-04-06 09:31:37: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_exner.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/f.c6_3_41.FWscHIST.ne30_L58_exner.001/run/cesm.log.3673579.chadmin1.ib0.cheyenne.ucar.edu.220406-092901
  ---------------------------------------------------
-2022-03-18 11:00:43: model execution starting 3337934.chadmin1.ib0.cheyenne.ucar.edu
+2022-04-06 09:42:48: case.submit starting 3673847.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-03-18 11:18:50: model execution success 3337934.chadmin1.ib0.cheyenne.ucar.edu
+2022-04-06 09:42:48: case.submit success 3673847.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-03-18 11:18:50: case.run success 3337934.chadmin1.ib0.cheyenne.ucar.edu
+2022-04-06 13:31:30: case.run starting 3673846.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-03-18 11:18:56: st_archive starting 3337935.chadmin1.ib0.cheyenne.ucar.edu
+2022-04-06 13:31:35: model execution starting 3673846.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-03-18 11:19:02: st_archive success 3337935.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-03-18 14:47:10: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2022-03-18 14:47:18: case.submit starting 3341020.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-03-18 14:47:18: case.submit success 3341020.chadmin1.ib0.cheyenne.ucar.edu
+2022-04-06 13:42:49: xmlchange success <command> ./xmlchange STOP_N=2,RESUBMIT=5  </command>
  ---------------------------------------------------

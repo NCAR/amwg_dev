@@ -41,10 +41,11 @@
          'FSNTOA', 'AODDUST', 'AODVIS', 'ACTREL', 'ACTNL', 'ACTREI', 'FCTL', 'FCTI', 'ACTNI', 'BURDENSO4', 'BURDENBC',
          'BURDENDUST', 'BURDENSOA', 'BURDENSEASALT', 'BURDENPOM', 'CCN3', 'CDNUMC', 'FICE', 'PBLH', 'RELHUM'
  fincl2		= 'TROP_T','TROP_P','Q','T','U','V','OMEGA','QRS','QRL','PS','Z3','PMID'
+ fincl3		= 'FT:I','FQ_gll:I','PMID:I','OMEGA:I','OMEGA500:I'
  fincl4		= 'PRECC','PRECL'
- interpolate_nlat		= 192,192,192
- interpolate_nlon		= 288,288,288
- interpolate_output		= .true.,.true.,.true.
+ interpolate_nlat		= 192,192
+ interpolate_nlon		= 288,288
+ interpolate_output		= .true.,.true.
  mfilt		= 0,5,20,40,120,240,365,73,365
  nhtfrq		= 0,-24,-6,-3,-1,1,-24,-24
 /
@@ -353,11 +354,10 @@
  cam_physpkg		= 'cam_dev'
  cam_snapshot_after_num		=    -1 
  cam_snapshot_before_num		=   -1 
- cld_macmic_num_steps		= 6
+ cld_macmic_num_steps		=  3 
  convproc_do_aer		= .true.
  deep_scheme		= 'ZM'
  do_clubb_sgs		=  .true.  
- dribble_start_step		= 2
  eddy_scheme		= 'CLUBB_SGS'
  history_aero_optics		=           .false.  
  history_aerosol		=               .false.  
@@ -371,7 +371,6 @@
  history_vdiag		=                 .false.  
  history_waccm		=  .true.   
  history_waccmx		=                .false.  
- l_dribble_tend_into_macmic_loop		= .true.
  macrop_scheme		= 'CLUBB_SGS'
  microp_scheme		= 'MG'
  radiation_scheme		= 'rrtmg'
