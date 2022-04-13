@@ -14,59 +14,39 @@ nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
 
 fexcl1 = ' '  
 
+fincl1 = 'U','V','Q','T','PSL','OMEGA','PS','PRECC','PRECL','UTGWORO','VTGWORO',
 
+         'TS', 'TAUX','TAUY','TAUBLJX','TAUBLJY','TAUGWX','TAUGWY','FLNT','FLNS','FSNS','FSNT',
 
-empty_htapes = .true.
+         'LHFLX','SHFLX','TMQ','FLDS','FSDS','FSDSC','SWCF','LWCF','PRECSC','PRECSL',  'DTCOND','Z3', 'PSL'
 
+         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB', 'FREQZM' 
 
+fincl2 = 'TROP_T', 'TROP_P', 'Q', 'T','U850','V850','U200','V200','PRECT','PRECC','PRECL','PBLH',
 
-fincl1 = 'T', 'Q', 'PS', 'PSL', 'U', 'V', 'Z3', 'OMEGA', 'CLOUD', 'QRL', 'QRS', 
+         'OMEGA500','FLUT','Z500','T500','PS','PMID:I','TREFHTMN:M', 'TREFHTMX:X','TSMN:M', 'TSMX:X',
 
-'ZMDT', 'ZMDQ', 'RVMTEND_CLUBB', 'STEND_CLUBB', 'FSNT', 'FLNT', 'FLUT','FLNS', 
+         'PBLH','ZMDT', 'ZMDT', 'STEND_CLUBB','RVMTEND_CLUBB',
 
-'FSNS', 'FSNSC','FSNTC','FLNSC', 'FLNTC','FSDS','FSDSC'
+         'PRECT','PRECL','U200','V200','U850','V850','FLUT','Z500','TREFHT','TS','CLDTOT','SWCF',
 
-'OMEGA500', 'PRECT', 'PRECL', 'PRECC', 'PRECSC', 'PRECSL', 
+         'LWCF','PS','PSL','TMQ','LHFLX','SHFLX','T500','OMEGA500','CLDLOW'
 
-'LWCF', 'SWCF','LHFLX','SHFLX','TGCLDLWP', 'TGCLDIWP',
+fincl3 = 'U:I','V:I','T:I', 'OMEGA:I','PS:I','PMID:I', 'OMEGA500','PRECT','U200','U850','FLUT'
 
-'DQCORE','PTEQ','DCQ','QTGW','CT_H2O','MPDQ','EVAPPREC','EVAPSNOW','DTCORE',
+fincl4 = 'PRECT','PRECC'
 
-'TFIX','PTTEND','DTCOND','DTV','TTGW','MPDT','RCMTEND_CLUBB', 'MPDLIQ','MPDICE','PMID','PINT','WPTHLP_CLUBB','WPRTP_CLUBB','CLDLIQ','CLDICE',
-
-'TAUX','TAUY','U10','TREFHT', 'CH4','CLDTOT','CLDLOW','CLDMED','CLDHGH','CMFMC_DP','FREQZM','CAPE',  'UTGW_TOTAL',  'VTGW_TOTAL ', 
-
-'UTGWORO ',  'VTGWORO ',   'QFLX ',  'PRECC ',  'FSNTOA ',
-
- 'T ','Q','PS','PSL','U','V','Z3','OMEGA','CLOUD','QRL','QRS','ZMDT','ZMDQ','RVMTEND_CLUBB',
-
-'STEND_CLUBB','FSNT','FLNT','FLUT','FLNS','FSNS','FSNSC','FSNTC','FLNSC','FLNTC','FSDS',
-
-'FSDSC','OMEGA500','PRECT','PRECL','PRECSC','PRECSL','LWCF','SWCF','LHFLX','SHFLX','TGCLDLWP','TGCLDIWP',
-
-'PTEQ','QTGW','PMID','PINT','WPTHLP_CLUBB','WPRTP_CLUBB','CLDLIQ','CLDICE','TAUX','TAUY','U10','TREFHT',
-
-'CLDTOT','CLDMED','CLDLOW','CLDHGH','CMFMC_DP','FREQZM','CAPE',
-
-'UTGW_TOTAL','VTGW_TOTAL','UTGWORO','VTGWORO','QFLX','PRECC','FSNTOA','AODDUST','AODVIS',
-
-'ACTREL','ACTNL','ACTREI','FCTL','FCTI','ACTNI','BURDENSO4','BURDENBC','BURDENDUST',
-
-'BURDENSOA','BURDENSEASALT','BURDENPOM','CCN3','CDNUMC','FICE','PBLH','RELHUM'
+fincl8 = 'Z3:I','U850:I','V850:I','Z500:I','PS:I', 'PMID:I'
 
 
 
-fincl2 = 'TROP_T', 'TROP_P', 'Q','T','U', 'V', 'OMEGA', 'QRS', 'QRL','PS', 'Z3','PMID'
-
-fincl4 = 'PRECC','PRECL'
 
 
+interpolate_output = .true.,.true., .true.,.true., .true.,.true.
 
-interpolate_output = .true.,.true.,.true.
+interpolate_nlat = 192,192,192,192,192,192
 
-interpolate_nlat = 192,192,192
-
-interpolate_nlon = 288,288,288
+interpolate_nlon = 288,288 288,288,, 288,288
 
 
 
@@ -75,14 +55,6 @@ se_rsplit            = 3
 se_nsplit           = 2
 
 se_hypervis_subcycle =  4
-
-
-
-cld_macmic_num_steps=6
-
-l_dribble_tend_into_macmic_loop = .true.
-
-dribble_start_step = 2
 
 
 
