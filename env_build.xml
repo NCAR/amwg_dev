@@ -7,7 +7,7 @@
     this is done automatically by the scripts.
     </header>
   <group id="build_grid">
-    <entry id="GRID" value="a%ne30np4.pg3_l%ne30np4.pg3_oi%ne30np4.pg3_r%r05_g%null_w%null_z%null_m%gx1v7">
+    <entry id="GRID" value="a%ne30np4.pg3_l%ne30np4.pg3_oi%tx0.66v1_r%r05_g%gris4_w%null_z%null_m%tx0.66v1">
       <type>char</type>
       <desc>Model grid - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -35,31 +35,31 @@
       <type>integer</type>
       <desc>number of land cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="OCN_GRID" value="ne30np4.pg3">
+    <entry id="OCN_GRID" value="tx0.66v1">
       <type>char</type>
       <desc>ocn grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="OCN_NX" value="48600">
+    <entry id="OCN_NX" value="540">
       <type>integer</type>
       <desc>number of ocn cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="OCN_NY" value="1">
+    <entry id="OCN_NY" value="458">
       <type>integer</type>
       <desc>number of ocn cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_GRID" value="ne30np4.pg3">
+    <entry id="ICE_GRID" value="tx0.66v1">
       <type>char</type>
       <desc>ice grid (must equal ocn grid) - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_NX" value="48600">
+    <entry id="ICE_NX" value="540">
       <type>integer</type>
       <desc>number of ice cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_NY" value="1">
+    <entry id="ICE_NY" value="458">
       <type>integer</type>
       <desc>number of ice cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_NCAT" value="1">
+    <entry id="ICE_NCAT" value="5">
       <type>integer</type>
       <desc>number of ice thickness categories - DO NOT EDIT (set by CICE configure)</desc>
     </entry>
@@ -75,15 +75,15 @@
       <type>integer</type>
       <desc>number of rof cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="GLC_GRID" value="null">
+    <entry id="GLC_GRID" value="gris4">
       <type>char</type>
       <desc>glacier (glc) grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="GLC_NX" value="0">
+    <entry id="GLC_NX" value="416">
       <type>integer</type>
       <desc>number of glc cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="GLC_NY" value="0">
+    <entry id="GLC_NY" value="704">
       <type>integer</type>
       <desc>number of glc cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -99,7 +99,7 @@
       <type>integer</type>
       <desc>number of wav cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="MASK_GRID" value="gx1v7">
+    <entry id="MASK_GRID" value="tx0.66v1">
       <type>char</type>
       <desc>grid mask - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -281,7 +281,7 @@
     </entry>
   </group>
   <group id="build_status">
-    <entry id="BUILD_COMPLETE" value="TRUE">
+    <entry id="BUILD_COMPLETE" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Status output: if TRUE, models have been built successfully. (DO NOT EDIT)&gt;</desc>
@@ -291,7 +291,7 @@
       <valid_values/>
       <desc>Status: smp status of previous build, coded string. (DO NOT EDIT)</desc>
     </entry>
-    <entry id="SMP_VALUE" value="c0a0l0i0o0r0">
+    <entry id="SMP_VALUE" value="c0a0l0i0o0r0g0">
       <type>char</type>
       <valid_values/>
       <desc>Status: smp status of current case, coded string (DO NOT EDIT)</desc>
@@ -301,7 +301,7 @@
       <valid_values/>
       <desc>Status: ninst status of previous build, coded string. (DO NOT EDIT)&gt;</desc>
     </entry>
-    <entry id="NINST_VALUE" value="c1a1l1i1o1r1">
+    <entry id="NINST_VALUE" value="c1a1l1i1o1r1g1">
       <type>char</type>
       <valid_values/>
       <desc>Status: ninst status of current case, coded string (DO NOT EDIT)</desc>
@@ -343,72 +343,15 @@
       <desc>Flag to enable building the LILAC cap and coupling code</desc>
     </entry>
   </group>
-  <group id="build_component_cice">
-    <entry id="CICE_MODE" value="prescribed">
+  <group id="build_component_mom">
+    <entry id="MOM6_MEMORY_MODE" value="dynamic_nonsymmetric">
       <type>char</type>
-      <valid_values>prognostic,prescribed,thermo_only</valid_values>
-      <desc>Option to the CICE configure utility for the -mode argument (default is prognostic)</desc>
-    </entry>
-    <entry id="CICE_CONFIG_OPTS" value=" -phys cice5 ">
-      <type>char</type>
-      <desc>CICE configure options, see CICE configure utility for details.
-      Provides option(s) for the CLM configure utility.
-      CICE_CONFIG_OPTS are normally set as compset variables (e.g., -ntr_aero 3)
-      and in general should not be modified for supported compsets.
-      It is recommended that if you want to modify this value for your experiment,
-      you should use your own user-defined component sets via using create_newcase
-      with a compset_file argument.
-      This is an advanced flag and should only be used by expert users.
+      <valid_values>dynamic_nonsymmetric,dynamic_symmetric</valid_values>
+      <desc> This variable controls MOM6 memory mode. In non-symmetric mode (default), all arrays are
+           given the same shape. In symmetric mode, declarations are dependent on the variables
+           staggered location on the Arakawa C grid. This allows loops to be symmetric and stencils
+           to be applied more uniformly.
     </desc>
-    </entry>
-    <entry id="CICE_AUTO_DECOMP" value="true">
-      <type>logical</type>
-      <valid_values>true,false</valid_values>
-      <desc>This is for experts only - if CICE_AUTO_DECOMP is set to false, then
-      can manually set the values of CICE_BLCKX, CICE_BLCKY, CICE_MXBLCKS,
-      CICE_DECOMPTYPE, and CICE_DECOMPSETTING".</desc>
-    </entry>
-    <entry id="CICE_BLCKX" value="20">
-      <type>integer</type>
-      <valid_values/>
-      <desc>Size of cice block in first horiz dimension
-      (DO NOT EDIT if CICE_AUTO_DECOMP is true).
-      This is for experts only - automatically set if CICE_AUTO_DECOMP
-      is true to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
-    </entry>
-    <entry id="CICE_BLCKY" value="1">
-      <type>integer</type>
-      <valid_values/>
-      <desc>Size of cice block in second horiz dimension
-      (DO NOT EDIT if CICE_AUTO_DECOMP is true).
-      This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
-      to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
-    </entry>
-    <entry id="CICE_MXBLCKS" value="2">
-      <type>integer</type>
-      <valid_values/>
-      <desc>Max number of cice blocks per processor (do not edit if CICE_AUTO_DECOMP is true)
-      This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
-      to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
-    </entry>
-    <entry id="CICE_DECOMPTYPE" value="roundrobin">
-      <type>char</type>
-      <valid_values>cartesian,rake,sectrobin,spacecurve,roundrobin,sectrobin,sectcart,null</valid_values>
-      <desc>cice block distribution type (do not edit if CICE_AUTO_DECOMP is true)
-      This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
-      to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
-    </entry>
-    <entry id="CICE_DECOMPSETTING" value="square-ice">
-      <type>char</type>
-      <valid_values>slenderX1,slenderX2,square-ice,square-pop,blocks,null</valid_values>
-      <desc>cice decomp setting for decomp type (do not edit if CICE_AUTO_DECOMP is true)
-      This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
-      to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
-    </entry>
-    <entry id="CICE_CPPDEFS" value=" -Dncdf -DNUMIN=11 -DNUMAX=99  -DNICECAT=1 -DNXGLOB=48600 -DNYGLOB=1 -DNTRAERO=0 -DNTRISO=0 -DNBGCLYR=0 -DNICELYR=8 -DNSNWLYR=3 -DTRAGE=1 -DTRFY=1 -DTRLVL=1 -DTRPND=1 -DTRBRI=0 -DTRBGCS=0 -DBLCKX=20 -DBLCKY=1 -DMXBLCKS=2">
-      <type>char</type>
-      <valid_values/>
-      <desc>CICE cpp definitions (setup automatically - DO NOT EDIT)</desc>
     </entry>
   </group>
   <group id="build_component_mosart">

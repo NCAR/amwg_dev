@@ -1,0 +1,315 @@
+"MOM6 diagnostic fields table for CESM case: bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002"
+1 1 1 0 0 0
+### Section-1: File List
+#========================
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr",                       1,  "years",  1, "days",   "time", 1, "years"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo",                 1,  "months", 1, "days",   "time", 1, "months"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo",                   1,  "months", 1, "days",   "time", 1, "months"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo",                    1,  "months", 1, "days",   "time", 1, "months"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr",                       1,  "days",   1, "days",   "time", 1, "years"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static",                        -1, "days",   1, "days",   "time"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.agulhas_section%4yr",           1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bab_al_mandeb_Strait%4yr",      1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Barents_opening%4yr",           1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bering_Strait%4yr",             1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Davis_Strait%4yr",              1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Denmark_Strait%4yr",            1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Drake_Passage%4yr",             1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.English_Channel%4yr",           1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Fram_Strait%4yr",               1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Florida_Bahamas%4yr",           1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Gibraltar_Strait%4yr",          1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Hormuz_Strait%4yr",             1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Iceland_Norway%4yr",            1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Indonesian_Throughflow%4yr",    1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Mozambique_Channel%4yr",        1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Pacific_undercurrent%4yr",      1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Taiwan_Luzon%4yr",              1,  "days",   1, "days",   "time", 365, "days"
+"bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Windward_Passage%4yr",          1,  "days",   1, "days",   "time", 365, "days"
+
+### Section-2: Fields List
+#=========================
+# bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr
+"ocean_model","taux","taux","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","tauy","tauy","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","ustar","ustar","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+# mass/vol
+"ocean_model","PRCmE","PRCmE","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","lprec","lprec","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","fprec","fprec","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","evap","evap","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","vprec","vprec","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","lrunoff","lrunoff","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","frunoff","frunoff","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","seaice_melt","seaice_melt","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+# heat
+"ocean_model","net_heat_coupler","net_heat_coupler","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","net_heat_surface","net_heat_surface","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","frazil","frazil","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","sensible","sensible","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","latent","latent","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","LwLatSens","LwLatSens","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","SW","SW","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","LW","LW","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","Heat_PmE","Heat_PmE","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","seaice_melt_heat","seaice_melt_heat","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_lrunoff","heat_content_lrunoff","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_frunoff","heat_content_frunoff","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_icemelt","heat_content_icemelt","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_lprec","heat_content_lprec","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_fprec","heat_content_fprec","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_vprec","heat_content_vprec","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_cond","heat_content_cond","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_evap","heat_content_evap","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_massout","heat_content_massout","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_massin","heat_content_massin","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_content_surfwater","heat_content_surfwater","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","internal_heat","internal_heat","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","heat_added","heat_added","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","latent_evap","latent_evap","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","latent_fprec_diag","latent_fprec_diag","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","latent_frunoff","latent_frunoff","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+# others
+"ocean_model","temp_int","temp_int","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","salt_int","salt_int","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","hfds","hfds","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","p_surf","p_surf","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","salt_flux","salt_flux","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","salt_flux_in","salt_flux_in","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","vprec_global_adjustment","vprec_global_adjustment","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","net_fresh_water_global_adjustment","net_fresh_water_global_adjustment","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","salt_flux_global_restoring_adjustment","salt_flux_global_restoring_adjustment","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","net_massout","net_massout","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+"ocean_model","net_massin","net_massin","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.frc%4yr","all",.true.,"none", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo"
+"ocean_model_rho2", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_rho2", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_rho2", "vhGM",    "vhGM",    "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_rho2", "vhml",    "vhml",    "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_rho2", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_rho2", "uhGM",    "uhGM",    "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_rho2", "uhml",    "uhml",    "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.rho2%4yr-%2mo", "all", "mean", "none", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo"
+"ocean_model", "uo",           "uo",           "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "vo",           "vo",           "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "h",            "h",            "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "e",            "e",            "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "thetao",       "thetao",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "so",           "so",           "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "rhoinsitu",    "rhoinsitu",    "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "KE",           "KE",           "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "rhopot0",      "rhopot0",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "soga",         "soga",         "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "thetaoga",     "thetaoga",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "uh",           "uh",           "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "vh",           "vh",           "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "vhbt",         "vhbt",         "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "uhbt",         "uhbt",         "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "KPP_OBLdepth", "oml",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "SSH",          "SSH",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "tos",          "tos",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "sos",          "sos",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "SSU",          "SSU",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "SSV",          "SSV",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "mass_wt",      "mass_wt",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "opottempmint", "opottempmint", "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "somint",       "somint",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "Rd_dx",        "Rd_dx",        "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "speed",        "speed",        "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "mlotst",       "mlotst",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "diftrelo",     "diftrelo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "diftrblo",     "diftrblo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "difmxybo",     "difmxybo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "difmxylo",     "difmxylo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "volcello",     "volcello",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "vmo",          "vmo",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "vhGM",         "vhGM",         "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "vhml",         "vhml",         "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "umo",          "umo",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "uhGM",         "uhGM",         "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "uhml",         "uhml",         "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "agessc",       "agessc",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "T_ady_2d",     "T_ady_2d",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "T_adx_2d",     "T_adx_2d",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "T_diffy_2d",   "T_diffy_2d",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "T_diffx_2d",   "T_diffx_2d",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "T_lbd_diffx_2d", "T_lbd_diffx_2d",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "T_lbd_diffy_2d", "T_lbd_diffy_2d",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.hm%4yr-%2mo", "all", "mean", "none", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo"
+"ocean_model_z", "uo",       "uo",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "vo",       "vo",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "h",        "h",        "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "e",        "e",        "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "thetao",   "thetao",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "so",       "so",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "rhoinsitu","rhoinsitu","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "KE",       "KE",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "rhopot0",  "rhopot0",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "vmo",          "vmo",    "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "vhGM",         "vhGM",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "vhml",         "vhml",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "umo",          "umo",    "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "uhGM",         "uhGM",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "uhml",         "uhml",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model_z", "agessc",       "agessc", "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.h%4yr-%2mo", "all", "mean", "none", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr"
+"ocean_model", "SSH",          "SSH",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "tos",          "tos",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "sos",          "sos",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "SSU",          "SSU",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "SSV",          "SSV",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "mass_wt",      "mass_wt",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "opottempmint", "opottempmint", "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "somint",       "somint",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "Rd_dx",        "Rd_dx",        "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "speed",        "speed",        "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "mlotst",       "mlotst",       "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+"ocean_model", "KPP_OBLdepth", "oml",          "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.sfc%4yr", "all", "mean", "none", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static"
+"ocean_model", "geolon",     "geolon",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "geolat",     "geolat",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "geolon_c",   "geolon_c",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "geolat_c",   "geolat_c",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "geolon_u",   "geolon_u",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "geolat_u",   "geolat_u",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "geolon_v",   "geolon_v",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "geolat_v",   "geolat_v",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "area_t",     "area_t",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "depth_ocean","depth_ocean","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "wet",        "wet",        "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "wet_c",      "wet_c",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "wet_u",      "wet_u",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "wet_v",      "wet_v",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+"ocean_model", "Coriolis",   "Coriolis",   "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.static", "all", ".false.", "none", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.agulhas_section%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.agulhas_section%4yr", "all", ".true.", "20.1 20.1 -70.0 -34.6 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.agulhas_section%4yr", "all", ".true.", "20.1 20.1 -70.0 -34.6 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.agulhas_section%4yr", "all", ".true.", "20.1 20.1 -70.0 -34.6 -1 -1", 2
+"ocean_model", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.agulhas_section%4yr", "all", ".true.", "20.1 20.1 -70.0 -34.6 -1 -1", 2
+"ocean_model", "uo",      "uo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.agulhas_section%4yr", "all", ".true.", "20.1 20.1 -70.0 -34.6 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bab_al_mandeb_Strait%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bab_al_mandeb_Strait%4yr", "all", ".true.", "45.0 45.0 10.5 13.5 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bab_al_mandeb_Strait%4yr", "all", ".true.", "45.0 45.0 10.5 13.5 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bab_al_mandeb_Strait%4yr", "all", ".true.", "45.0 45.0 10.5 13.5 -1 -1", 2
+"ocean_model", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bab_al_mandeb_Strait%4yr", "all", ".true.", "45.0 45.0 10.5 13.5 -1 -1", 2
+"ocean_model", "uo",      "uo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bab_al_mandeb_Strait%4yr", "all", ".true.", "45.0 45.0 10.5 13.5 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Barents_opening%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Barents_opening%4yr", "all", ".true.", "-5.2 18.8  78.93 78.93 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Barents_opening%4yr", "all", ".true.", "-5.2 18.8  78.93 78.93 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Barents_opening%4yr", "all", ".true.", "-5.2 18.8  78.93 78.93 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Barents_opening%4yr", "all", ".true.", "-5.2 18.8  78.93 78.93 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Barents_opening%4yr", "all", ".true.", "-5.2 18.8  78.93 78.93 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bering_Strait%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bering_Strait%4yr", "all", ".true.", "-174.5  -171.5 66.6 66.6 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bering_Strait%4yr", "all", ".true.", "-174.5  -171.5 66.6 66.6 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bering_Strait%4yr", "all", ".true.", "-174.5  -171.5 66.6 66.6 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bering_Strait%4yr", "all", ".true.", "-174.5  -171.5 66.6 66.6 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Bering_Strait%4yr", "all", ".true.", "-174.5  -171.5 66.6 66.6 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Davis_Strait%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Davis_Strait%4yr", "all", ".true.", "-53.5 -45.3 69.5 69.5 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Davis_Strait%4yr", "all", ".true.", "-53.5 -45.3 69.5 69.5 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Davis_Strait%4yr", "all", ".true.", "-53.5 -45.3 69.5 69.5 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Davis_Strait%4yr", "all", ".true.", "-53.5 -45.3 69.5 69.5 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Davis_Strait%4yr", "all", ".true.", "-53.5 -45.3 69.5 69.5 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Denmark_Strait%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Denmark_Strait%4yr", "all", ".true.", "-38.50 -21.5 65.0 65.0 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Denmark_Strait%4yr", "all", ".true.", "-38.50 -21.5 65.0 65.0 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Denmark_Strait%4yr", "all", ".true.", "-38.50 -21.5 65.0 65.0 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Denmark_Strait%4yr", "all", ".true.", "-38.50 -21.5 65.0 65.0 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Denmark_Strait%4yr", "all", ".true.", "-38.50 -21.5 65.0 65.0 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Drake_Passage%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Drake_Passage%4yr", "all", ".true.", "-67.0 -67.0 -69.0 -55.2 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Drake_Passage%4yr", "all", ".true.", "-67.0 -67.0 -69.0 -55.2 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Drake_Passage%4yr", "all", ".true.", "-67.0 -67.0 -69.0 -55.2 -1 -1", 2
+"ocean_model", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Drake_Passage%4yr", "all", ".true.", "-67.0 -67.0 -69.0 -55.2 -1 -1", 2
+"ocean_model", "uo",      "uo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Drake_Passage%4yr", "all", ".true.", "-67.0 -67.0 -69.0 -55.2 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.English_Channel%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.English_Channel%4yr", "all", ".true.", "0.0 0.0 51.0 52.9 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.English_Channel%4yr", "all", ".true.", "0.0 0.0 51.0 52.9 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.English_Channel%4yr", "all", ".true.", "0.0 0.0 51.0 52.9 -1 -1", 2
+"ocean_model", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.English_Channel%4yr", "all", ".true.", "0.0 0.0 51.0 52.9 -1 -1", 2
+"ocean_model", "uo",      "uo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.English_Channel%4yr", "all", ".true.", "0.0 0.0 51.0 52.9 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Fram_Strait%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Fram_Strait%4yr", "all", ".true.", "-21.0 -9.8 80.5 80.5 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Fram_Strait%4yr", "all", ".true.", "-21.0 -9.8 80.5 80.5 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Fram_Strait%4yr", "all", ".true.", "-21.0 -9.8 80.5 80.5 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Fram_Strait%4yr", "all", ".true.", "-21.0 -9.8 80.5 80.5 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Fram_Strait%4yr", "all", ".true.", "-21.0 -9.8 80.5 80.5 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Florida_Bahamas%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Florida_Bahamas%4yr", "all", ".true.", "-80.1 -77.9 25.3 25.3 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Florida_Bahamas%4yr", "all", ".true.", "-80.1 -77.9 25.3 25.3 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Florida_Bahamas%4yr", "all", ".true.", "-80.1 -77.9 25.3 25.3 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Florida_Bahamas%4yr", "all", ".true.", "-80.1 -77.9 25.3 25.3 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Florida_Bahamas%4yr", "all", ".true.", "-80.1 -77.9 25.3 25.3 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Gibraltar_Strait%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Gibraltar_Strait%4yr", "all", ".true.", "-6.5 -6.5 34.3 37.4 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Gibraltar_Strait%4yr", "all", ".true.", "-6.5 -6.5 34.3 37.4 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Gibraltar_Strait%4yr", "all", ".true.", "-6.5 -6.5 34.3 37.4 -1 -1", 2
+"ocean_model", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Gibraltar_Strait%4yr", "all", ".true.", "-6.5 -6.5 34.3 37.4 -1 -1", 2
+"ocean_model", "uo",      "uo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Gibraltar_Strait%4yr", "all", ".true.", "-6.5 -6.5 34.3 37.4 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Hormuz_Strait%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Hormuz_Strait%4yr", "all", ".true.", "55.9 55.9 25.0 27.5 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Hormuz_Strait%4yr", "all", ".true.", "55.9 55.9 25.0 27.5 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Hormuz_Strait%4yr", "all", ".true.", "55.9 55.9 25.0 27.5 -1 -1", 2
+"ocean_model", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Hormuz_Strait%4yr", "all", ".true.", "55.9 55.9 25.0 27.5 -1 -1", 2
+"ocean_model", "uo",      "uo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Hormuz_Strait%4yr", "all", ".true.", "55.9 55.9 25.0 27.5 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Iceland_Norway%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Iceland_Norway%4yr", "all", ".true.", "-21.5 1.5 65.0 65.0 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Iceland_Norway%4yr", "all", ".true.", "-21.5 1.5 65.0 65.0 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Iceland_Norway%4yr", "all", ".true.", "-21.5 1.5 65.0 65.0 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Iceland_Norway%4yr", "all", ".true.", "-21.5 1.5 65.0 65.0 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Iceland_Norway%4yr", "all", ".true.", "-21.5 1.5 65.0 65.0 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Indonesian_Throughflow%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Indonesian_Throughflow%4yr", "all", ".true.", "-246.5 -220.8 -7.0 -7.0 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Indonesian_Throughflow%4yr", "all", ".true.", "-246.5 -220.8 -7.0 -7.0 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Indonesian_Throughflow%4yr", "all", ".true.", "-246.5 -220.8 -7.0 -7.0 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Indonesian_Throughflow%4yr", "all", ".true.", "-246.5 -220.8 -7.0 -7.0 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Indonesian_Throughflow%4yr", "all", ".true.", "-246.5 -220.8 -7.0 -7.0 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Mozambique_Channel%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Mozambique_Channel%4yr", "all", ".true.", "39.9 44.7 -16.0 -16.0 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Mozambique_Channel%4yr", "all", ".true.", "39.9 44.7 -16.0 -16.0 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Mozambique_Channel%4yr", "all", ".true.", "39.9 44.7 -16.0 -16.0 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Mozambique_Channel%4yr", "all", ".true.", "39.9 44.7 -16.0 -16.0 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Mozambique_Channel%4yr", "all", ".true.", "39.9 44.7 -16.0 -16.0 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Pacific_undercurrent%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Pacific_undercurrent%4yr", "all", ".true.", "-155.0 -155.0 -2.0 2.0 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Pacific_undercurrent%4yr", "all", ".true.", "-155.0 -155.0 -2.0 2.0 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Pacific_undercurrent%4yr", "all", ".true.", "-155.0 -155.0 -2.0 2.0 -1 -1", 2
+"ocean_model", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Pacific_undercurrent%4yr", "all", ".true.", "-155.0 -155.0 -2.0 2.0 -1 -1", 2
+"ocean_model", "uo",      "uo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Pacific_undercurrent%4yr", "all", ".true.", "-155.0 -155.0 -2.0 2.0 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Taiwan_Luzon%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Taiwan_Luzon%4yr", "all", ".true.", "-239.0 -239.0 18.8 22.5 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Taiwan_Luzon%4yr", "all", ".true.", "-239.0 -239.0 18.8 22.5 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Taiwan_Luzon%4yr", "all", ".true.", "-239.0 -239.0 18.8 22.5 -1 -1", 2
+"ocean_model", "umo",     "umo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Taiwan_Luzon%4yr", "all", ".true.", "-239.0 -239.0 18.8 22.5 -1 -1", 2
+"ocean_model", "uo",      "uo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Taiwan_Luzon%4yr", "all", ".true.", "-239.0 -239.0 18.8 22.5 -1 -1", 2
+
+# "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Windward_Passage%4yr"
+"ocean_model", "volcello","volcello","bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Windward_Passage%4yr", "all", ".true.", "-74.2 -73.2 20.39 20.39 -1 -1", 2
+"ocean_model", "thetao",  "thetao",  "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Windward_Passage%4yr", "all", ".true.", "-74.2 -73.2 20.39 20.39 -1 -1", 2
+"ocean_model", "so",      "so",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Windward_Passage%4yr", "all", ".true.", "-74.2 -73.2 20.39 20.39 -1 -1", 2
+"ocean_model", "vmo",     "vmo",     "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Windward_Passage%4yr", "all", ".true.", "-74.2 -73.2 20.39 20.39 -1 -1", 2
+"ocean_model", "vo",      "vo",      "bmom.e23.f09_t061_zstar_N65.nuopc.GM_tuning.002.mom6.Windward_Passage%4yr", "all", ".true.", "-74.2 -73.2 20.39 20.39 -1 -1", 2
+

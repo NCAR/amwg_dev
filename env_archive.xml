@@ -85,13 +85,34 @@
         <tfile disposition="move">casename.cice.h.1976-01-01-00000.nc</tfile>
       </test_file_names>
     </comp_archive_spec>
-    <comp_archive_spec compclass="ocn" compname="docn">
-      <rest_file_extension>rs*\d*</rest_file_extension>
-      <rest_file_extension>rs1</rest_file_extension>
-      <rest_history_varname>unset</rest_history_varname>
+    <comp_archive_spec compclass="ocn" compname="mom">
+      <rest_file_extension>r</rest_file_extension>
+      <hist_file_extension>h.?[_\d+]+.nc$</hist_file_extension>
+      <hist_file_extension>hm.?[_\d+]+.nc$</hist_file_extension>
+      <hist_file_extension>frc.?[_\d+]+.nc$</hist_file_extension>
+      <hist_file_extension>sfc.?[_\d+]+.nc$</hist_file_extension>
+      <hist_file_extension>rho2.?[_\d+]+.nc$</hist_file_extension>
+      <hist_file_extension>agulhas_section.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Bab_al_mandeb_Strait.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Barents_opening.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Bering_Strait.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Davis_Strait.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Denmark_Strait.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Drake_Passage.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>English_Channel.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Fram_Strait.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Florida_Bahamas.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Gibraltar_Strait.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Hormuz_Strait.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Iceland_Norway.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Indonesian_Throughflow.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Mozambique_Channel.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Pacific_undercurrent.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Taiwan_Luzon.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>Windward_Passage.?[_\d+]+.nc</hist_file_extension>
+      <hist_file_extension>static.nc$</hist_file_extension>
       <rpointer>
         <rpointer_file>rpointer.ocn$NINST_STRING</rpointer_file>
-        <rpointer_content>$CASE.docn$NINST_STRING.r.$DATENAME.nc,$CASE.docn$NINST_STRING.rs1.$DATENAME.bin</rpointer_content>
       </rpointer>
     </comp_archive_spec>
     <comp_archive_spec compclass="rof" compname="mosart">
@@ -110,6 +131,46 @@
         <tfile disposition="copy">casename.mosart.rh4.1976-01-01-00000.nc</tfile>
         <tfile disposition="move">casename.mosart.h0.1976-01-01-00000.nc</tfile>
         <tfile disposition="ignore">casename.mosart.h0.1976-01-01-00000.nc.base</tfile>
+      </test_file_names>
+    </comp_archive_spec>
+    <comp_archive_spec compclass="glc" compname="cism">
+      <rest_file_extension>[a-z]+\.r</rest_file_extension>
+      <hist_file_extension>[a-z]+\.h\..*\.nc$</hist_file_extension>
+      <hist_file_extension>[a-z]+\.initial_hist\..*\.nc$</hist_file_extension>
+      <hist_file_ext_regex>\w+\.\w+</hist_file_ext_regex>
+      <rest_history_varname>unset</rest_history_varname>
+      <rpointer>
+        <rpointer_file>rpointer.glc.ais$NINST_STRING</rpointer_file>
+        <rpointer_content>./$CASE.cism$NINST_STRING.ais.r.$DATENAME.nc</rpointer_content>
+      </rpointer>
+      <rpointer>
+        <rpointer_file>rpointer.glc.gris$NINST_STRING</rpointer_file>
+        <rpointer_content>./$CASE.cism$NINST_STRING.gris.r.$DATENAME.nc</rpointer_content>
+      </rpointer>
+      <test_file_names>
+        <tfile disposition="copy">rpointer.glc.ais</tfile>
+        <tfile disposition="copy">rpointer.glc.gris</tfile>
+        <tfile disposition="copy">rpointer.glc.ais_9999</tfile>
+        <tfile disposition="copy">rpointer.glc.gris_9999</tfile>
+        <tfile disposition="ignore">casename.cism.gris.r.1975-01-01-00000.nc</tfile>
+        <tfile disposition="copy">casename.cism.ais.r.1976-01-01-00000.nc</tfile>
+        <tfile disposition="copy">casename.cism.gris.r.1976-01-01-00000.nc</tfile>
+        <tfile disposition="copy">casename.cism_0001.ais.r.1976-01-01-00000.nc</tfile>
+        <tfile disposition="copy">casename.cism_0001.gris.r.1976-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism.ais.initial_hist.0001-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism.gris.initial_hist.0001-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism.ais.h.1975-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism.ais.h.1976-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism.gris.h.1975-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism.gris.h.1976-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism_0001.ais.initial_hist.0001-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism_0001.gris.initial_hist.0001-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism_0001.ais.h.1975-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism_0001.ais.h.1976-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism_0001.gris.h.1975-01-01-00000.nc</tfile>
+        <tfile disposition="move">casename.cism_0001.gris.h.1976-01-01-00000.nc</tfile>
+        <tfile disposition="ignore">casename.cism.gris.h.1976-01-01-00000.nc.base</tfile>
+        <tfile disposition="ignore">anothercasename.cism.gris.r.1976-01-01-00000.nc</tfile>
       </test_file_names>
     </comp_archive_spec>
     <comp_archive_spec compclass="cpl" compname="drv">

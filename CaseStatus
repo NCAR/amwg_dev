@@ -1,30 +1,55 @@
-2022-04-20 10:05:27: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-04-22 15:14:26: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-04-20 10:05:28: case.setup starting 
+2022-04-22 15:14:27: xmlchange success <command> ./xmlchange ATM_GRID=ne30np4.pg3  </command>
  ---------------------------------------------------
-2022-04-20 10:05:30: case.setup success 
+2022-04-22 15:14:30: case.setup starting 
  ---------------------------------------------------
-2022-04-20 10:05:30: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+2022-04-22 15:14:31: case.setup success 
  ---------------------------------------------------
-2022-04-20 10:05:30: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2022-04-22 15:14:56: case.build starting 
  ---------------------------------------------------
-2022-04-20 10:05:31: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2022-04-22 15:14:58: case.build error 
+ERROR: Command /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cam/bld/build-namelist -ntasks 3600 -csmdata /glade/p/cesmdata/cseg/inputdata -infile /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.003/Buildconf/camconf/namelist -start_ymd 00010101 -ignore_ic_year -use_case 1850_cam6 -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.003/Buildconf/cam.input_data_list -namelist " &atmexp  co2_cycle_rad_passive=.true. /"  failed rc=255
+out=CAM build-namelist - ERROR: No default value found for ncdata
+user defined attributes:
+key=ic_md  val=00010101
+err=Smartmatch is experimental at /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cam/bld/perl5lib/Build/ChemNamelist.pm line 274.
+Died at /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cam/bld/build-namelist line 4149.
  ---------------------------------------------------
-2022-04-20 10:05:31: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2022-04-22 15:16:30: case.build starting 
  ---------------------------------------------------
-2022-04-20 10:05:32: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2022-04-22 15:19:53: case.build starting 
  ---------------------------------------------------
-2022-04-20 10:05:32: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+2022-04-22 15:22:09: case.build starting 
  ---------------------------------------------------
-2022-04-20 10:05:32: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+2022-04-22 15:25:25: case.build starting 
  ---------------------------------------------------
-2022-04-20 10:05:33: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2022-04-22 15:27:01: case.build starting 
  ---------------------------------------------------
-2022-04-20 10:05:33: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2022-04-22 15:32:19: case.build error 
+ERROR: /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cdeps/cime_config/buildlib FAILED, cat /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.003/bld/CDEPS.bldlog.220422-152701
  ---------------------------------------------------
-2022-04-20 10:06:02: case.build starting 
+2022-04-22 15:32:34: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=1,STOP_N=1,STOP_OPTION=nmonths  </command>
  ---------------------------------------------------
-CESM version is cesm2_3_beta08
+2022-04-22 15:32:35: xmlchange success <command> ./xmlchange JOB_QUEUE=premium  </command>
+ ---------------------------------------------------
+2022-04-22 15:32:40: case.submit starting 
+ ---------------------------------------------------
+2022-04-22 15:32:40: case.submit error 
+ERROR: Build complete is not True please rebuild the model by calling case.build
+ ---------------------------------------------------
+2022-04-22 15:33:07: case.build starting 
+ ---------------------------------------------------
+2022-04-22 15:34:43: case.build starting 
+ ---------------------------------------------------
+2022-04-22 15:40:01: case.build error 
+ERROR: /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cdeps/cime_config/buildlib FAILED, cat /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.003/bld/CDEPS.bldlog.220422-153443
+ ---------------------------------------------------
+2022-04-22 15:46:54: case.build starting 
+ ---------------------------------------------------
+2022-04-22 15:51:45: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2_3_beta08-10-gc14b86f
 Processing externals description file : Externals.cfg
 Processing externals description file : Externals_CAM.cfg
 Processing externals description file : Externals.cfg
@@ -36,13 +61,13 @@ Processing externals description file : Externals_CLM.cfg
 Processing externals description file : Externals_FMS.cfg
 Processing externals description file : Externals.cfg
 Processing externals description file : ../Externals_MOM.cfg
-Processing submodules description file : /glade/work/hannay/cesm_tags/cesm2_3_beta08_cam6_3_041_MOM/components/mom/MOM6/.gitmodules
+Processing submodules description file : /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/mom/MOM6/.gitmodules
 Processing externals description file : Externals_POP.cfg
-Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, silhs, pumas, atmos_phys, atmos_cubed_sphere, mpas, cice, cice6, cice, icepack, cmeps, cdeps, fox, genf90, cpl7, share, mct, parallelio, cime, cism, source_cism, clm, fates, fms, fms, mom, mom, pkg/cvmix-src, pkg/gsw-fortran, mosart, pop, cvmix, marbl, rtm, ww3, ww3dev, 
+Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, silhs, pumas, atmos_phys, atmos_cubed_sphere, mpas, cice5, cice6, cice, icepack, cmeps, cdeps, fox, genf90, cpl7, share, mct, parallelio, cime, cism, source_cism, clm, fates, fms, fms, mom, mom, pkg/cvmix-src, pkg/gsw-fortran, mosart, pop, cvmix, marbl, rtm, ww3, ww3dev, 
  M  ./ccs_config
-        modified sandbox, on ccs_config_cesm0.0.16
-    ./cime
-        clean sandbox, on cime6.0.15
+        modified sandbox, on ccs_config_cesm0.0.24
+ M  ./cime
+        modified sandbox, on cime6.0.16
     ./components/cam
         clean sandbox, on cam6_3_041
     ./components/cam/chem_proc
@@ -70,29 +95,29 @@ Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, s
     ./components/cdeps/share/genf90
         clean sandbox, on genf90_200608
     ./components/cice
-        clean sandbox, on cice5_20210802
-    ./components/cice6
-        clean sandbox, on cesm_cice6_2_0_5
-    ./components/cice6/src
-        clean sandbox, on cice6_20210713
-    ./components/cice6/src/icepack
-        clean sandbox, on a80472b547aa6d7a85f8ae5e1449273a323e0371
+        clean sandbox, on cesm_cice6_2_0_16
+    ./components/cice/src
+        clean sandbox, on cice6_20211214c
+    ./components/cice/src/icepack
+        clean sandbox, on 152bd701e0cf3ec4385e5ce81918ba94e7a791cb
+    ./components/cice5
+        clean sandbox, on cice5_20220128
     ./components/cism
         clean sandbox, on cismwrap_2_1_95
     ./components/cism/source_cism
         clean sandbox, on cism_main_2.01.011
-    ./components/clm
-        clean sandbox, on ctsm5.1.dev082
+ M  ./components/clm
+        modified sandbox, on ctsm5.1.dev082
     ./components/clm/src/fates
         clean sandbox, on sci.1.54.0_api.22.0.0
     ./components/cmeps
-        clean sandbox, on cmeps0.13.47
+        clean sandbox, on cmeps0.13.54
     ./components/cpl7
         clean sandbox, on cpl7.0.12
   o ./components/mom
-        clean sandbox, on mi_220225
-s   ./components/mom/MOM6
-        clean sandbox, d7744594d02b5a20673cd34e93e244ee306a34e4 --> dev/ncar_220225
+        clean sandbox, on mi_220422
+    ./components/mom/MOM6
+        clean sandbox, on dev/ncar_220422
     ./components/mom/MOM6/pkg/CVMix-src
         clean sandbox, on v0.98-beta
     ./components/mom/MOM6/pkg/GSW-Fortran
@@ -111,8 +136,8 @@ s   ./components/mom/MOM6
         clean sandbox, on ww3_210803
   o ./components/ww3dev
         clean sandbox, on dev/unified_220202
-  o ./libraries/FMS
-        clean sandbox, on fi_20210708b
+s o ./libraries/FMS
+        clean sandbox, 1a4ae42ee0f4beb7a516c08c71d89f91c1fc681d --> origin/update_src
     ./libraries/FMS/src
         clean sandbox, on 2020.04.03
     ./libraries/mct
@@ -121,5 +146,47 @@ s   ./components/mom/MOM6
         clean sandbox, on pio2_5_6
     ./share
         clean sandbox, on share1.0.10
-2022-04-20 10:08:30: case.build success 
+2022-04-22 16:13:20: case.build success 
+ ---------------------------------------------------
+2022-04-22 16:26:57: case.submit starting 3889434.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:26:57: case.submit success 3889434.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:33:54: case.run starting 3889432.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:34:00: model execution starting 3889432.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:59:28: model execution success 3889432.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:59:28: case.run success 3889432.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:59:46: st_archive starting 3889434.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:59:54: st_archive success 3889434.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:59:57: case.submit starting 3890018.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 16:59:57: case.submit success 3890018.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 17:06:37: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2022-04-22 17:06:47: case.submit starting 3890084.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 17:06:47: case.submit success 3890084.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 17:35:31: case.run starting 3890083.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 17:35:36: model execution starting 3890083.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-04-22 17:46:37: case.setup starting 
+ ---------------------------------------------------
+2022-04-22 17:46:38: case.setup success 
+ ---------------------------------------------------
+2022-04-22 17:46:57: case.build starting 
+ ---------------------------------------------------
+2022-04-22 17:47:48: build.clean starting 
+ ---------------------------------------------------
+2022-04-22 17:47:58: build.clean success 
+ ---------------------------------------------------
+2022-04-22 17:48:11: case.build starting 
  ---------------------------------------------------

@@ -2,35 +2,57 @@
 
 set -e
 
-# Created 2022-04-20 10:05:15
+# Created 2022-04-22 15:12:51
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm2_3_b08_mom.FWscHIST.ne30_L58.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.003"
 
-/glade/work/hannay/cesm_tags/cesm2_3_beta08_cam6_3_041_MOM/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722 --driver nuopc
+/glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/cime/scripts/create_newcase --compset B1850MOM --res ne30pg3_t061 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
 ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58
 
+./xmlchange ATM_GRID=ne30np4.pg3
+
 ./case.setup
 
-./xmlchange RUN_STARTDATE=1979-01-01
+./case.build
 
-./xmlchange STOP_N=2
+./case.build
 
-./xmlchange STOP_OPTION=nyears
+./case.build
 
-./xmlchange RESUBMIT=5
+./case.build
 
-./xmlchange RUN_TYPE=hybrid
+./case.build
 
-./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001
+./case.build
 
-./xmlchange RUN_REFDATE=1989-01-01
+./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=1,STOP_N=1,STOP_OPTION=nmonths
 
-./xmlchange GET_REFCASE=TRUE
+./xmlchange JOB_QUEUE=premium
 
-./xmlchange RUN_REFDIR=cesm2_init
+./case.submit
+
+./case.build
+
+./case.build
+
+./case.build
+
+./case.build
+
+./case.submit
+
+./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
+
+./case.submit
+
+./case.setup --reset
+
+./case.build
+
+./case.build --clean-all
 
 ./case.build
 
