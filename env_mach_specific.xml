@@ -42,6 +42,9 @@
     <modules compiler="pgi">
       <command name="load">pgi/20.4</command>
     </modules>
+    <modules compiler="nvhpc">
+      <command name="load">nvhpc/22.2</command>
+    </modules>
     <modules DEBUG="TRUE" compiler="intel" mpilib="!mpi-serial">
       <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/intel/19.1.1/</command>
       <command name="load">esmf-8.2.0b23-ncdfio-mpt-g</command>
@@ -49,6 +52,9 @@
     <modules DEBUG="FALSE" compiler="intel" mpilib="!mpi-serial">
       <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/intel/19.1.1/</command>
       <command name="load">esmf-8.2.0b23-ncdfio-mpt-O</command>
+    </modules>
+    <modules mpilib="mpi-serial">
+      <command name="load">mpi-serial/2.3.0</command>
     </modules>
     <modules DEBUG="TRUE" compiler="intel" mpilib="mpi-serial">
       <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/intel/19.1.1/</command>
@@ -90,6 +96,22 @@
       <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/pgi/20.4/</command>
       <command name="load">esmf-8.2.0b23-ncdfio-mpt-O</command>
     </modules>
+    <modules DEBUG="FALSE" compiler="nvhpc" mpilib="mpt">
+      <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/nvhpc/21.11</command>
+      <command name="load">esmf-8.3.0b05-ncdfio-mpt-O</command>
+    </modules>
+    <modules DEBUG="TRUE" compiler="nvhpc" mpilib="mpt">
+      <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/nvhpc/21.11</command>
+      <command name="load">esmf-8.3.0b05-ncdfio-mpt-g</command>
+    </modules>
+    <modules DEBUG="FALSE" compiler="nvhpc" mpilib="openmpi">
+      <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/nvhpc/21.11</command>
+      <command name="load">esmf-8.3.0b05-ncdfio-openmpi-O</command>
+    </modules>
+    <modules DEBUG="TRUE" compiler="nvhpc" mpilib="openmpi">
+      <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/nvhpc/21.11</command>
+      <command name="load">esmf-8.3.0b05-ncdfio-openmpi-g</command>
+    </modules>
     <modules DEBUG="TRUE" compiler="pgi" mpilib="openmpi">
       <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/pgi/20.4/</command>
       <command name="load">esmf-8.2.0b23-ncdfio-openmpi-g</command>
@@ -106,10 +128,18 @@
       <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/pgi/20.4/</command>
       <command name="load">esmf-8.2.0b23-ncdfio-mpiuni-O</command>
     </modules>
+    <modules DEBUG="TRUE" compiler="nvhpc" mpilib="mpi-serial">
+      <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/nvhpc/21.11</command>
+      <command name="load">esmf-8.3.0b05-ncdfio-mpiuni-O</command>
+    </modules>
+    <modules DEBUG="FALSE" compiler="nvhpc" mpilib="mpi-serial">
+      <command name="use">/glade/p/cesmdata/cseg/PROGS/modulefiles/esmfpkgs/nvhpc/21.11</command>
+      <command name="load">esmf-8.3.0b05-ncdfio-mpiuni-O</command>
+    </modules>
     <modules compiler="gnu" mpilib="mpt">
-      <command name="load">mpt/2.21</command>
-      <command name="load">netcdf-mpi/4.7.3</command>
-      <command name="load">pnetcdf/1.12.1</command>
+      <command name="load">mpt/2.25</command>
+      <command name="load">netcdf-mpi/4.8.1</command>
+      <command name="load">pnetcdf/1.12.2</command>
     </modules>
     <modules compiler="intel" mpilib="mpt">
       <command name="load">mpt/2.22</command>
@@ -117,9 +147,19 @@
       <command name="load">pnetcdf/1.12.2</command>
     </modules>
     <modules compiler="pgi" mpilib="mpt">
-      <command name="load">mpt/2.19</command>
+      <command name="load">mpt/2.22</command>
       <command name="load">netcdf-mpi/4.7.4</command>
       <command name="load">pnetcdf/1.12.1</command>
+    </modules>
+    <modules compiler="nvhpc" mpilib="mpt">
+      <command name="load">mpt/2.25</command>
+      <command name="load">netcdf-mpi/4.8.1</command>
+      <command name="load">pnetcdf/1.12.2</command>
+    </modules>
+    <modules compiler="nvhpc" mpilib="openmpi">
+      <command name="load">openmpi/4.1.1</command>
+      <command name="load">netcdf-mpi/4.8.1</command>
+      <command name="load">pnetcdf/1.12.2</command>
     </modules>
     <modules compiler="pgi" mpilib="openmpi">
       <command name="load">openmpi/4.0.5</command>
@@ -140,6 +180,15 @@
     </modules>
     <modules compiler="pgi" mpilib="mpi-serial">
       <command name="load">netcdf/4.7.4</command>
+    </modules>
+    <modules compiler="nvhpc" mpilib="mpi-serial">
+      <command name="load">netcdf/4.8.1</command>
+    </modules>
+    <modules DEBUG="FALSE" compiler="!pgi">
+      <command name="load">pio/2.5.6</command>
+    </modules>
+    <modules DEBUG="TRUE" compiler="!pgi">
+      <command name="load">pio/2.5.6d</command>
     </modules>
   </module_system>
   <environment_variables>

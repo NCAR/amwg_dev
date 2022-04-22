@@ -10,7 +10,7 @@
   <group id="run_coupling">
     <entry id="COUPLING_MODE" value="cesm">
       <type>char</type>
-      <valid_values>cesm,nems_orig,nems_orig_data,nems_frac,hafs</valid_values>
+      <valid_values>cesm</valid_values>
       <desc>coupling mode</desc>
     </entry>
     <entry id="CPL_I2O_PER_CAT" value="FALSE">
@@ -251,7 +251,7 @@
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="1">
+    <entry id="STOP_N" value="2">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -328,7 +328,7 @@
       ignored.  default: false
     </desc>
     </entry>
-    <entry id="CONTINUE_RUN" value="TRUE">
+    <entry id="CONTINUE_RUN" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="0">
+    <entry id="RESUBMIT" value="5">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:3719646.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:3719647.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -523,7 +523,7 @@
       <desc>Longitude of grid location, in single column mode interpolate datasets to this location
           in single point mode assume all datasets are at this location</desc>
     </entry>
-    <entry id="PTS_DOMAINFILE" value="$DIN_LOC_ROOT/share/domains/domain.lnd.ne30np4.pg3_gx1v7.170605.nc">
+    <entry id="PTS_DOMAINFILE" value="UNSET">
       <type>char</type>
       <desc>used only if if PTS_LAT and PTS_LON are greater than or
           equal to 0.  If this is the case then if PTS_DOMAINFILE is not
@@ -531,7 +531,7 @@
           PTS_LAT and PTS_LON will be done and the component mesh will have
           this nearest neighbor value. </desc>
     </entry>
-    <entry id="LND_DOMAIN_FILE" value="domain.lnd.ne30np4.pg3_gx1v7.170605.nc">
+    <entry id="LND_DOMAIN_FILE" value="UNSET">
       <type>char</type>
       <desc>lnd domain file</desc>
     </entry>
@@ -728,6 +728,16 @@
     This is usually a shared disk area.
     Default values for the target machine are in the
     $CIMEROOT/machines/config_machines.xml</desc>
+    </entry>
+    <entry id="DIN_STAGING_ROOT" value="UNSET">
+      <type>char</type>
+      <desc>
+      On some systems the filesystem of DIN_LOC_ROOT is not available on compute nodes and
+      data must be staged to a temporary location.  If this variable is defined it will
+      be used as the root directory of an inputdata staging area.
+      Default values for the target machine are in the
+      $CIMEROOT/machines/config_machines.xml
+    </desc>
     </entry>
   </group>
   <group id="run_dout">
@@ -1173,6 +1183,14 @@
       such a dataset would be 1x1pt_boulderCO_c090722. The default value is UNSET.
       This is an advanced flag and should only be used by expert users.</desc>
     </entry>
+    <entry id="CLM_USRDAT_DIR" value="UNSET">
+      <type>char</type>
+      <desc>Directory name for user-created surface, landuse, and datm datasets.
+      This is used as an argument in user_mods namelists (e.g. user_nl_clm,
+      user_nl_datm_streams) generated with the subset_data script. Users
+      should modify this variable (in shell_commands or elsewhere) to set the
+      location of user-created data. The default value is UNSET.</desc>
+    </entry>
     <entry id="CLM_FORCE_COLDSTART" value="off">
       <type>char</type>
       <valid_values>on,off</valid_values>
@@ -1184,7 +1202,7 @@
     </entry>
     <entry id="NEONSITE">
       <type>char</type>
-      <valid_values>                                                                                      
+      <valid_values>
       ABBY,BLAN,CPER,DEJU,GRSM,HEAL,KONA,LENO,NIWO,ONAQ,PUUM,SERC,SRER,TALL,TREE,WOOD,
       BARR,BONA,DCFS,DELA,GUAN,JERC,KONZ,MLBS,NOGP,ORNL,RMNP,SJER,STEI,TEAK,UKFS,WREF,
       BART,CLBJ,DSNY,HARV,JORN,LAJA,MOAB,OAES,OSBS,SCBI,SOAP,STER,TOOL,UNDE,YELL
@@ -1309,6 +1327,11 @@
     </entry>
   </group>
   <group id="run_component_mosart">
+    <entry id="MOSART_IGNORE_WARNINGS" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>If warnings in namelist setttings from buildnml should be ignored or not</desc>
+    </entry>
     <entry id="MOSART_SIM_YEAR" value="1850">
       <type>char</type>
       <valid_values/>

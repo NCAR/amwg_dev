@@ -2,15 +2,15 @@
 
 set -e
 
-# Created 2022-04-07 13:41:58
+# Created 2022-04-20 10:05:15
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.c6_3_41.FWscHIST.ne30_L58.zm2_fix.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm2_3_b08_mom.FWscHIST.ne30_L58.001"
 
-/glade/work/hannay/cesm_tags/cam6_3_041/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
+/glade/work/hannay/cesm_tags/cesm2_3_beta08_cam6_3_041_MOM/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722 --driver nuopc
 
 cd "${CASEDIR}"
 
-./xmlchange CAM_CONFIG_OPTS=-phys cam_dev  -chem waccm_sc_mam4 -nlev 58
+./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58
 
 ./case.setup
 
@@ -33,20 +33,4 @@ cd "${CASEDIR}"
 ./xmlchange RUN_REFDIR=cesm2_init
 
 ./case.build
-
-./case.build
-
-./case.build
-
-./case.build
-
-./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
-
-./case.build
-
-./case.build --clean-all
-
-./case.build
-
-./case.submit
 

@@ -317,16 +317,16 @@
  micro_mg_autocon_nd_exp		=   -1.1D0    
  micro_mg_berg_eff_factor		=   1.D0    
  micro_mg_dcs		=                                  500.D-6    
- micro_mg_do_graupel		=  .true. 
+ micro_mg_do_graupel		=  .false. 
  micro_mg_do_hail		=  .false. 
  micro_mg_effi_factor		=   1.D0    
  micro_mg_homog_size		=   25.D-6    
  micro_mg_iaccr_factor		=   1.D0    
- micro_mg_max_nicons		=   1.D8    
+ micro_mg_max_nicons		=  1.D8    
  micro_mg_num_steps		=                                  1          
  micro_mg_precip_frac_method		= 'in_cloud'
  micro_mg_sub_version		=                                  0          
- micro_mg_version		=                                  3          
+ micro_mg_version		=                                  2          
  micro_mg_vtrmi_factor		=   1.D0    
 /
 &microp_aero_nl
