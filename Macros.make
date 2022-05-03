@@ -26,6 +26,10 @@ SFC := ifort
 SLIBS := $(SLIBS)  -mkl=cluster
 SUPPORTS_CXX := TRUE
 
+ifeq "$(COMP_NAME)" "mom"
+  CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -Duse_LARGEFILE -DFORTRANUNDERSCORE -DCPRINTEL
+  FFLAGS :=  $(FC_AUTO_R8)  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -qopt-report -xCORE_AVX2 -no-fma
+endif
 ifeq "$(COMP_NAME)" "gptl"
   CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -DFORTRANUNDERSCORE -DCPRINTEL -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY
 endif
