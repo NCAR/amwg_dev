@@ -7,7 +7,7 @@
     this is done automatically by the scripts.
     </header>
   <group id="build_grid">
-    <entry id="GRID" value="a%ne30np4.pg3_l%ne30np4.pg3_oi%tx0.66v1_r%r05_g%gris4_w%null_z%null_m%tx0.66v1">
+    <entry id="GRID" value="a%ne30np4.pg3_l%ne30np4.pg3_oi%ne30np4.pg3_r%r05_g%null_w%null_z%null_m%gx1v7">
       <type>char</type>
       <desc>Model grid - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -35,31 +35,31 @@
       <type>integer</type>
       <desc>number of land cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="OCN_GRID" value="tx0.66v1">
+    <entry id="OCN_GRID" value="ne30np4.pg3">
       <type>char</type>
       <desc>ocn grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="OCN_NX" value="540">
+    <entry id="OCN_NX" value="48600">
       <type>integer</type>
       <desc>number of ocn cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="OCN_NY" value="458">
+    <entry id="OCN_NY" value="1">
       <type>integer</type>
       <desc>number of ocn cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_GRID" value="tx0.66v1">
+    <entry id="ICE_GRID" value="ne30np4.pg3">
       <type>char</type>
       <desc>ice grid (must equal ocn grid) - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_NX" value="540">
+    <entry id="ICE_NX" value="48600">
       <type>integer</type>
       <desc>number of ice cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_NY" value="458">
+    <entry id="ICE_NY" value="1">
       <type>integer</type>
       <desc>number of ice cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ICE_NCAT" value="5">
+    <entry id="ICE_NCAT" value="1">
       <type>integer</type>
       <desc>number of ice thickness categories - DO NOT EDIT (set by CICE configure)</desc>
     </entry>
@@ -75,15 +75,15 @@
       <type>integer</type>
       <desc>number of rof cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="GLC_GRID" value="gris4">
+    <entry id="GLC_GRID" value="null">
       <type>char</type>
       <desc>glacier (glc) grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="GLC_NX" value="416">
+    <entry id="GLC_NX" value="0">
       <type>integer</type>
       <desc>number of glc cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="GLC_NY" value="704">
+    <entry id="GLC_NY" value="0">
       <type>integer</type>
       <desc>number of glc cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -99,7 +99,7 @@
       <type>integer</type>
       <desc>number of wav cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="MASK_GRID" value="tx0.66v1">
+    <entry id="MASK_GRID" value="gx1v7">
       <type>char</type>
       <desc>grid mask - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -281,7 +281,7 @@
     </entry>
   </group>
   <group id="build_status">
-    <entry id="BUILD_COMPLETE" value="FALSE">
+    <entry id="BUILD_COMPLETE" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Status output: if TRUE, models have been built successfully. (DO NOT EDIT)&gt;</desc>
@@ -291,7 +291,7 @@
       <valid_values/>
       <desc>Status: smp status of previous build, coded string. (DO NOT EDIT)</desc>
     </entry>
-    <entry id="SMP_VALUE" value="c0a0l0i0o0r0g0">
+    <entry id="SMP_VALUE" value="c0a0l0i0o0r0">
       <type>char</type>
       <valid_values/>
       <desc>Status: smp status of current case, coded string (DO NOT EDIT)</desc>
@@ -301,7 +301,7 @@
       <valid_values/>
       <desc>Status: ninst status of previous build, coded string. (DO NOT EDIT)&gt;</desc>
     </entry>
-    <entry id="NINST_VALUE" value="c1a1l1i1o1r1g1">
+    <entry id="NINST_VALUE" value="c1a1l1i1o1r1">
       <type>char</type>
       <valid_values/>
       <desc>Status: ninst status of current case, coded string (DO NOT EDIT)</desc>
@@ -341,17 +341,6 @@
       <type>char</type>
       <valid_values>on,off</valid_values>
       <desc>Flag to enable building the LILAC cap and coupling code</desc>
-    </entry>
-  </group>
-  <group id="build_component_mom">
-    <entry id="MOM6_MEMORY_MODE" value="dynamic_nonsymmetric">
-      <type>char</type>
-      <valid_values>dynamic_nonsymmetric,dynamic_symmetric</valid_values>
-      <desc> This variable controls MOM6 memory mode. In non-symmetric mode (default), all arrays are
-           given the same shape. In symmetric mode, declarations are dependent on the variables
-           staggered location on the Arakawa C grid. This allows loops to be symmetric and stencils
-           to be applied more uniformly.
-    </desc>
     </entry>
   </group>
   <group id="build_component_mosart">

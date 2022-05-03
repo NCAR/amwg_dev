@@ -3,7 +3,7 @@
 <config_definition>
 
 <commandline>
-/glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cam/bld/configure -s -fc_type intel -dyn se -hgrid ne30np4.pg3 -cpl nuopc -usr_src /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.003/SourceMods/src.cam -spmd -nosmp -ocn mom -phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58
+/glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cam/bld/configure -s -fc_type intel -dyn se -hgrid ne30np4.pg3 -cpl nuopc -usr_src /glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam041_mom.FWscHIST.ne30_L58.001/SourceMods/src.cam -spmd -nosmp -ocn docn -phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58
 </commandline>
 <entry id="age_of_air_trcs" value="0" list="" valid_values="0,1">
 Switch on (off) age of air tracers: 0=off, 1=on.
@@ -22,7 +22,7 @@ be set to DOCN.
 <entry id="build_chem_proc" value="0,1" list="" valid_values="">
 Switch to force the build of the chemistry preprocessor.
 </entry>
-<entry id="cam_bld" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.003/Buildconf/camconf" list="" valid_values="">
+<entry id="cam_bld" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam041_mom.FWscHIST.ne30_L58.001/Buildconf/camconf" list="" valid_values="">
 CAM build directory; contains .o and .mod files.
 </entry>
 <entry id="cam_dir" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cam" list="" valid_values="">
@@ -203,7 +203,7 @@ Number of unique longitude points in rectangular lat/lon grid.
 <entry id="npg" value="3" list="" valid_values="">
 Number of physics grid cells on each edge of the elements in a cubed sphere grid.
 </entry>
-<entry id="ocn" value="mom" list="" valid_values="docn,dom,som,socn,aquaplanet,pop,mom">
+<entry id="ocn" value="docn" list="" valid_values="docn,dom,som,socn,aquaplanet,pop,mom">
 Use data ocean model (docn or dom), stub ocean (socn), or aqua planet ocean
 (aquaplanet) in cam build.  When built from the CESM scripts the value of
 ocn may be set to pop.  This doesn't impact how CAM is built, only how
@@ -307,7 +307,7 @@ Switch to turn on UNICON package: 0 => off, 1 => on
 <entry id="usr_mech_infile" value="" list="" valid_values="">
 Path and file name of the user supplied chemistry mechanism file.
 </entry>
-<entry id="usr_src" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.003/SourceMods/src.cam" list="1" valid_values="">
+<entry id="usr_src" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam041_mom.FWscHIST.ne30_L58.001/SourceMods/src.cam" list="1" valid_values="">
 User source directories to prepend to the filepath.  Multiple directories
 are specified as a comma separated list with no embedded white space.
 </entry>
