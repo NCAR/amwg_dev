@@ -1,26 +1,14 @@
-2022-05-03 17:12:38: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-05-04 10:25:32: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-05-03 17:12:38: xmlchange success <command> ./xmlchange ATM_GRID=ne30np4.pg3  </command>
+2022-05-04 10:25:32: xmlchange success <command> ./xmlchange ATM_GRID=ne30np4.pg3  </command>
  ---------------------------------------------------
-2022-05-03 17:13:39: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-05-04 10:25:39: case.setup starting 
  ---------------------------------------------------
-2022-05-03 17:13:39: xmlchange success <command> ./xmlchange ATM_GRID=ne30np4.pg3  </command>
+2022-05-04 10:25:40: case.setup success 
  ---------------------------------------------------
-2022-05-03 17:13:40: case.setup starting 
+2022-05-04 10:26:33: case.build starting 
  ---------------------------------------------------
-2022-05-03 17:13:41: case.setup success 
- ---------------------------------------------------
-2022-05-03 17:15:04: case.build starting 
- ---------------------------------------------------
-2022-05-03 17:30:03: case.setup starting 
- ---------------------------------------------------
-2022-05-03 17:30:04: case.setup success 
- ---------------------------------------------------
-2022-05-03 17:30:12: build.clean starting 
- ---------------------------------------------------
-2022-05-03 17:30:27: build.clean success 
- ---------------------------------------------------
-2022-05-03 17:30:43: case.build starting 
+2022-05-04 10:28:49: case.build starting 
  ---------------------------------------------------
 CESM version is cesm2_3_beta08-11-g5a56ad39
 Processing externals description file : Externals.cfg
@@ -119,13 +107,31 @@ s o ./libraries/FMS
         clean sandbox, on pio2_5_6
     ./share
         clean sandbox, on share1.0.10
-2022-05-03 17:43:20: case.build success 
+2022-05-04 10:48:26: case.build success 
  ---------------------------------------------------
-2022-05-03 17:43:36: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2022-05-04 13:16:31: case.submit starting 
  ---------------------------------------------------
-2022-05-03 17:51:08: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2022-05-04 13:16:31: case.submit error 
+ERROR: Command: 'qsub -q regular -l walltime=12:00:00 -A 93300722 -v ARGS_FOR_SCRIPT='--resubmit' .case.run' failed with error 'qsub: Invalid account, available accounts:
+Project, Status, Active
+P03010039, Normal, True
+P19010000, Normal, True
+CESM0002, Normal, True
+UCUB0090, Normal, True
+P93300606, Normal, True
+P93300042, Normal, True
+P93300065, Normal, True
+P93300642, Normal, True
+CESM0019, Normal, True
+P93300324, Normal, True' from dir '/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005'
  ---------------------------------------------------
-2022-05-03 17:51:16: case.submit starting 4066605.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-04 13:16:44: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-05-03 17:51:16: case.submit success 4066605.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-04 13:17:15: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2022-05-04 13:17:16: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2022-05-04 13:18:59: case.submit starting 4074827.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-04 13:18:59: case.submit success 4074827.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------

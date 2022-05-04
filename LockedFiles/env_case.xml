@@ -177,7 +177,7 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="1850_CAM60_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD">
+    <entry id="COMPSET" value="1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
@@ -296,7 +296,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -313,7 +313,7 @@
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005">
+    <entry id="CASE" value="b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -343,7 +343,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="f7f0d9a531037e065e894d6e80a8903f636dc33475bcc779bd2a82a364da86a1">
+    <entry id="CASE_HASH" value="970023111b84fd6ce9b6dd4336a6493f44eb4be546278ef028a0014729a20b63">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>

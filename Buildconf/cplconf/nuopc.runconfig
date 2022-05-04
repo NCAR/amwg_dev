@@ -75,7 +75,7 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005
+     case_name = b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      flds_bgc_oi = .false.
@@ -252,13 +252,13 @@ CLOCK_attributes::
      ice_cpl_dt = 1800
      lnd_cpl_dt = 1800
      ocn_cpl_dt = 3600
-     restart_n = 1
+     restart_n = 3
      restart_option = nyears
      restart_ymd = -999
      rof_cpl_dt = 10800
      start_tod = 0
      start_ymd = 00010101
-     stop_n = 1
+     stop_n = 3
      stop_option = nyears
      stop_tod = 0
      stop_ymd = -999
@@ -306,52 +306,52 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = med.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = med.log.220504-133505
 ::
 
 DRV_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = drv.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = drv.log.220504-133505
 ::
 
 ATM_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = atm.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = atm.log.220504-133505
 ::
 
 LND_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = lnd.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = lnd.log.220504-133505
 ::
 
 ICE_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = ice.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = ice.log.220504-133505
 ::
 
 OCN_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = ocn.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = ocn.log.220504-133505
 ::
 
 ROF_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = rof.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = rof.log.220504-133505
 ::
 
 GLC_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = glc.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = glc.log.220504-133505
 ::
 
 WAV_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = wav.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = wav.log.220504-133505
 ::
 
 ESP_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850MOM.ne30_L58_t061.005/run
-     logfile = esp.log.220503-175114
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+     logfile = esp.log.220504-133505
 ::
 
