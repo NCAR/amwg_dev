@@ -1,14 +1,28 @@
-2022-05-04 10:25:32: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-05-16 13:53:00: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-05-04 10:25:32: xmlchange success <command> ./xmlchange ATM_GRID=ne30np4.pg3  </command>
+2022-05-16 13:53:01: case.setup starting 
  ---------------------------------------------------
-2022-05-04 10:25:39: case.setup starting 
+2022-05-16 13:53:02: case.setup success 
  ---------------------------------------------------
-2022-05-04 10:25:40: case.setup success 
+2022-05-16 13:53:02: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
  ---------------------------------------------------
-2022-05-04 10:26:33: case.build starting 
+2022-05-16 13:53:03: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2022-05-04 10:28:49: case.build starting 
+2022-05-16 13:53:03: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2022-05-16 13:53:04: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+ ---------------------------------------------------
+2022-05-16 13:53:04: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+ ---------------------------------------------------
+2022-05-16 13:53:04: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+ ---------------------------------------------------
+2022-05-16 13:53:05: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+ ---------------------------------------------------
+2022-05-16 13:53:05: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+ ---------------------------------------------------
+2022-05-16 13:53:06: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+ ---------------------------------------------------
+2022-05-16 13:53:13: case.build starting 
  ---------------------------------------------------
 CESM version is cesm2_3_beta08-11-g5a56ad39
 Processing externals description file : Externals.cfg
@@ -107,11 +121,11 @@ s o ./libraries/FMS
         clean sandbox, on pio2_5_6
     ./share
         clean sandbox, on share1.0.10
-2022-05-04 10:48:26: case.build success 
+2022-05-16 14:05:44: case.build success 
  ---------------------------------------------------
-2022-05-04 13:16:31: case.submit starting 
+2022-05-16 15:40:14: case.submit starting 
  ---------------------------------------------------
-2022-05-04 13:16:31: case.submit error 
+2022-05-16 15:40:14: case.submit error 
 ERROR: Command: 'qsub -q regular -l walltime=12:00:00 -A 93300722 -v ARGS_FOR_SCRIPT='--resubmit' .case.run' failed with error 'qsub: Invalid account, available accounts:
 Project, Status, Active
 P03010039, Normal, True
@@ -119,19 +133,91 @@ P19010000, Normal, True
 CESM0002, Normal, True
 UCUB0090, Normal, True
 P93300606, Normal, True
-P93300042, Normal, True
-P93300065, Normal, True
 P93300642, Normal, True
+P93300324, Normal, True
+P93300065, Normal, True
 CESM0019, Normal, True
-P93300324, Normal, True' from dir '/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005'
+P93300042, Overspent, True' from dir '/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001'
  ---------------------------------------------------
-2022-05-04 13:16:44: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2022-05-16 15:40:44: xmlchange success <command> ./xmlchange PROJECT=P93300042,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-05-04 13:17:15: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2022-05-16 15:40:48: case.submit starting 
  ---------------------------------------------------
-2022-05-04 13:17:16: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears  </command>
+2022-05-16 15:40:48: case.submit error 
+ERROR: Command: 'qsub -q regular -l walltime=12:00:00 -A P93300042 -v ARGS_FOR_SCRIPT='--resubmit' .case.run' failed with error 'qsub: Account is Overspent: Standby Queue Disabled. Contact cislhelp@ucar.edu' from dir '/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001'
  ---------------------------------------------------
-2022-05-04 13:18:59: case.submit starting 4074827.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-16 15:41:18: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-05-04 13:18:59: case.submit success 4074827.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-16 15:41:23: case.submit starting 4177522.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 15:41:23: case.submit success 4177522.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 17:01:30: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2022-05-16 17:06:18: case.run starting 4177521.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 17:06:23: model execution starting 4177521.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 19:40:19: model execution success 4177521.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 19:40:19: case.run success 4177521.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 19:40:28: st_archive starting 4177522.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 19:40:35: st_archive success 4177522.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 19:40:35: case.submit starting 4179571.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 19:40:35: case.submit success 4179571.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 19:52:53: case.run starting 4179570.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 19:52:58: model execution starting 4179570.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 22:25:34: model execution success 4179570.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 22:25:34: case.run success 4179570.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 22:25:45: st_archive starting 4179571.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 22:25:54: st_archive success 4179571.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 22:25:55: case.submit starting 4181173.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 22:25:55: case.submit success 4181173.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 22:38:24: case.run starting 4181172.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-16 22:38:30: model execution starting 4181172.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:10:56: model execution success 4181172.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:10:56: case.run success 4181172.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:11:03: st_archive starting 4181173.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:11:12: st_archive success 4181173.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:11:13: case.submit starting 4182009.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:11:13: case.submit success 4182009.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:11:17: case.run starting 4182008.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:11:22: model execution starting 4182008.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 01:11:35: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001/run'
+ ---------------------------------------------------
+2022-05-17 01:11:35: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001/run/cesm.log.4182008.chadmin1.ib0.cheyenne.ucar.edu.220517-011117
+ ---------------------------------------------------
+2022-05-17 09:11:22: case.submit starting 4185205.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 09:11:22: case.submit success 4185205.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 09:11:28: case.run starting 4185204.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-05-17 09:11:33: model execution starting 4185204.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
