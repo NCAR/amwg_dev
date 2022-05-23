@@ -2,49 +2,63 @@
 
 set -e
 
-# Created 2022-05-16 13:51:31
+# Created 2022-05-17 17:13:50
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005"
 
-/glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722 --driver nuopc
+/glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/cime/scripts/create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD --res ne30pg3_t061 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
 ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58
 
+./xmlchange ATM_GRID=ne30np4.pg3
+
 ./case.setup
 
-./xmlchange RUN_STARTDATE=1979-01-01
+./case.build
 
-./xmlchange STOP_N=2
+./xmlchange CAM_CONFIG_OPTS=-phys cam6 -microphys mg2 -chem waccm_sc_mam4 -nlev 58
 
-./xmlchange STOP_OPTION=nyears
+./case.build --clean-all
 
-./xmlchange RESUBMIT=5
+./case.build
 
-./xmlchange RUN_TYPE=hybrid
+./case.build
 
-./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001
+./case.build
 
-./xmlchange RUN_REFDATE=1989-01-01
+./case.build
 
-./xmlchange GET_REFCASE=TRUE
+./case.build
 
-./xmlchange RUN_REFDIR=cesm2_init
+./case.build
+
+./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
+
+./case.submit
+
+./preview_namelists
+
+./case.submit
+
+./xmlchange JOB_QUEUE=premium
+
+./case.submit
+
+./preview_namelists
 
 ./case.build
 
 ./case.submit
 
-./xmlchange PROJECT=P93300042,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
-
 ./case.submit
 
-./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
+./preview_namelists
 
-./case.submit
+./preview_namelists
 
-./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
+./preview_namelists
 
 ./case.submit
 

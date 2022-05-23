@@ -1,28 +1,30 @@
-2022-05-16 13:53:00: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-05-17 17:13:51: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-05-16 13:53:01: case.setup starting 
+2022-05-17 17:13:52: xmlchange success <command> ./xmlchange ATM_GRID=ne30np4.pg3  </command>
  ---------------------------------------------------
-2022-05-16 13:53:02: case.setup success 
+2022-05-17 17:14:32: case.setup starting 
  ---------------------------------------------------
-2022-05-16 13:53:02: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+2022-05-17 17:14:34: case.setup success 
  ---------------------------------------------------
-2022-05-16 13:53:03: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2022-05-17 17:15:41: case.build starting 
  ---------------------------------------------------
-2022-05-16 13:53:03: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2022-05-17 17:19:34: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam6 -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-05-16 13:53:04: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2022-05-17 17:20:00: build.clean starting 
  ---------------------------------------------------
-2022-05-16 13:53:04: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2022-05-17 17:20:05: build.clean success 
  ---------------------------------------------------
-2022-05-16 13:53:04: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+2022-05-17 17:20:25: case.build starting 
  ---------------------------------------------------
-2022-05-16 13:53:05: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+2022-05-17 17:21:00: case.build starting 
  ---------------------------------------------------
-2022-05-16 13:53:05: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2022-05-17 17:33:04: case.build starting 
  ---------------------------------------------------
-2022-05-16 13:53:06: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2022-05-17 17:39:58: case.build starting 
  ---------------------------------------------------
-2022-05-16 13:53:13: case.build starting 
+2022-05-17 17:40:58: case.build starting 
+ ---------------------------------------------------
+2022-05-17 17:43:41: case.build starting 
  ---------------------------------------------------
 CESM version is cesm2_3_beta08-11-g5a56ad39
 Processing externals description file : Externals.cfg
@@ -121,103 +123,190 @@ s o ./libraries/FMS
         clean sandbox, on pio2_5_6
     ./share
         clean sandbox, on share1.0.10
-2022-05-16 14:05:44: case.build success 
+2022-05-17 17:50:55: case.build success 
  ---------------------------------------------------
-2022-05-16 15:40:14: case.submit starting 
+2022-05-17 17:51:11: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths  </command>
  ---------------------------------------------------
-2022-05-16 15:40:14: case.submit error 
-ERROR: Command: 'qsub -q regular -l walltime=12:00:00 -A 93300722 -v ARGS_FOR_SCRIPT='--resubmit' .case.run' failed with error 'qsub: Invalid account, available accounts:
-Project, Status, Active
-P03010039, Normal, True
-P19010000, Normal, True
-CESM0002, Normal, True
-UCUB0090, Normal, True
-P93300606, Normal, True
-P93300642, Normal, True
-P93300324, Normal, True
-P93300065, Normal, True
-CESM0019, Normal, True
-P93300042, Overspent, True' from dir '/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001'
+2022-05-17 17:51:17: case.submit starting 4192468.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 15:40:44: xmlchange success <command> ./xmlchange PROJECT=P93300042,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2022-05-17 17:51:17: case.submit success 4192468.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 15:40:48: case.submit starting 
+2022-05-17 19:04:25: case.run starting 4192467.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 15:40:48: case.submit error 
-ERROR: Command: 'qsub -q regular -l walltime=12:00:00 -A P93300042 -v ARGS_FOR_SCRIPT='--resubmit' .case.run' failed with error 'qsub: Account is Overspent: Standby Queue Disabled. Contact cislhelp@ucar.edu' from dir '/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001'
+2022-05-17 19:04:31: model execution starting 4192467.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 15:41:18: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2022-05-17 19:13:02: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run'
  ---------------------------------------------------
-2022-05-16 15:41:23: case.submit starting 4177522.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-17 19:13:02: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run/cesm.log.4192467.chadmin1.ib0.cheyenne.ucar.edu.220517-190425
  ---------------------------------------------------
-2022-05-16 15:41:23: case.submit success 4177522.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-17 20:11:56: case.submit starting 4194390.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 17:01:30: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears  </command>
+2022-05-17 20:11:56: case.submit success 4194390.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 17:06:18: case.run starting 4177521.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-17 20:13:07: xmlchange success <command> ./xmlchange JOB_QUEUE=premium  </command>
  ---------------------------------------------------
-2022-05-16 17:06:23: model execution starting 4177521.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-17 20:13:15: case.submit starting 4194398.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 19:40:19: model execution success 4177521.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-17 20:13:15: case.submit success 4194398.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 19:40:19: case.run success 4177521.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-17 23:57:48: case.run starting 4194397.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 19:40:28: st_archive starting 4177522.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-17 23:57:54: model execution starting 4194397.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 19:40:35: st_archive success 4177522.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 00:06:16: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run'
  ---------------------------------------------------
-2022-05-16 19:40:35: case.submit starting 4179571.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 00:06:16: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run/cesm.log.4194397.chadmin1.ib0.cheyenne.ucar.edu.220517-235748
  ---------------------------------------------------
-2022-05-16 19:40:35: case.submit success 4179571.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 09:15:49: case.build starting 
  ---------------------------------------------------
-2022-05-16 19:52:53: case.run starting 4179570.chadmin1.ib0.cheyenne.ucar.edu
+CESM version is cesm2_3_beta08-11-g5a56ad39
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CAM.cfg
+Processing externals description file : Externals.cfg
+Processing externals description file : .gitmodules
+Processing submodules description file : .gitmodules
+Processing externals description file : Externals_CDEPS.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_FMS.cfg
+Processing externals description file : Externals.cfg
+Processing externals description file : ../Externals_MOM.cfg
+Processing submodules description file : /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/mom/MOM6/.gitmodules
+Processing externals description file : Externals_POP.cfg
+Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, silhs, pumas, atmos_phys, atmos_cubed_sphere, mpas, cice5, cice6, cice, icepack, cmeps, cdeps, fox, genf90, cpl7, share, mct, parallelio, cime, cism, source_cism, clm, fates, fms, fms, mom, mom, pkg/cvmix-src, pkg/gsw-fortran, mosart, pop, cvmix, marbl, rtm, ww3, ww3dev, 
+ M  ./ccs_config
+        modified sandbox, on ccs_config_cesm0.0.24
+ M  ./cime
+        modified sandbox, on cime6.0.16
+    ./components/cam
+        clean sandbox, on cam6_3_041
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_04
+    ./components/cam/src/atmos_phys
+        clean sandbox, on atmos_phys0_00_011
+    ./components/cam/src/dynamics/fv3/atmos_cubed_sphere
+        clean sandbox, on fv3_cesm.04
+    ./components/cam/src/dynamics/mpas/dycore
+        clean sandbox, on ba25bd071de6100c7263e283194bcc076bce72d7
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma3_49
+    ./components/cam/src/physics/clubb
+        clean sandbox, on clubb_release_b76a124_20200220_c20200320
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cam/src/physics/pumas
+        clean sandbox, on pumas_cam-release_v1.17
+    ./components/cam/src/physics/silhs
+        clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
+    ./components/cdeps
+        clean sandbox, on cdeps0.12.41
+    ./components/cdeps/fox
+        clean sandbox, on 4.1.2.1
+    ./components/cdeps/share/genf90
+        clean sandbox, on genf90_200608
+    ./components/cice
+        clean sandbox, on cesm_cice6_2_0_16
+    ./components/cice/src
+        clean sandbox, on cice6_20211214c
+    ./components/cice/src/icepack
+        clean sandbox, on 152bd701e0cf3ec4385e5ce81918ba94e7a791cb
+    ./components/cice5
+        clean sandbox, on cice5_20220128
+    ./components/cism
+        clean sandbox, on cismwrap_2_1_95
+    ./components/cism/source_cism
+        clean sandbox, on cism_main_2.01.011
+ M  ./components/clm
+        modified sandbox, on ctsm5.1.dev082
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.54.0_api.22.0.0
+    ./components/cmeps
+        clean sandbox, on cmeps0.13.54
+    ./components/cpl7
+        clean sandbox, on cpl7.0.12
+  o ./components/mom
+        clean sandbox, on mi_220422
+    ./components/mom/MOM6
+        clean sandbox, on dev/ncar_220422
+    ./components/mom/MOM6/pkg/CVMix-src
+        clean sandbox, on v0.98-beta
+    ./components/mom/MOM6/pkg/GSW-Fortran
+        clean sandbox, on 29e64d652786e1d076a05128c920f394202bfe10
+    ./components/mosart
+        clean sandbox, on mosart1_0_45
+    ./components/pop
+        clean sandbox, on cesm_pop_2_1_20220113
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.98-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on marbl0.40.3
+    ./components/rtm
+        clean sandbox, on rtm1_0_78
+    ./components/ww3
+        clean sandbox, on ww3_210803
+  o ./components/ww3dev
+        clean sandbox, on dev/unified_220202
+s o ./libraries/FMS
+        clean sandbox, 1a4ae42ee0f4beb7a516c08c71d89f91c1fc681d --> origin/update_src
+    ./libraries/FMS/src
+        clean sandbox, on 2020.04.03
+    ./libraries/mct
+        clean sandbox, on MCT_2.11.0
+    ./libraries/parallelio
+        clean sandbox, on pio2_5_6
+    ./share
+        clean sandbox, on share1.0.10
+2022-05-18 09:20:42: case.build success 
  ---------------------------------------------------
-2022-05-16 19:52:58: model execution starting 4179570.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 10:23:20: case.submit starting 4202632.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 22:25:34: model execution success 4179570.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 10:23:20: case.submit success 4202632.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 22:25:34: case.run success 4179570.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 10:33:29: case.run starting 4202631.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 22:25:45: st_archive starting 4179571.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 10:33:36: model execution starting 4202631.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 22:25:54: st_archive success 4179571.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 10:42:11: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run'
  ---------------------------------------------------
-2022-05-16 22:25:55: case.submit starting 4181173.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 10:42:11: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run/cesm.log.4202631.chadmin1.ib0.cheyenne.ucar.edu.220518-103329
  ---------------------------------------------------
-2022-05-16 22:25:55: case.submit success 4181173.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 11:09:12: case.submit starting 4203288.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 22:38:24: case.run starting 4181172.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 11:09:12: case.submit success 4203288.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-16 22:38:30: model execution starting 4181172.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 11:32:40: case.run starting 4203287.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 01:10:56: model execution success 4181172.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 11:32:47: model execution starting 4203287.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 01:10:56: case.run success 4181172.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 11:41:14: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run'
  ---------------------------------------------------
-2022-05-17 01:11:03: st_archive starting 4181173.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 11:41:14: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run/cesm.log.4203287.chadmin1.ib0.cheyenne.ucar.edu.220518-113240
  ---------------------------------------------------
-2022-05-17 01:11:12: st_archive success 4181173.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 12:07:58: case.submit starting 4204016.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 01:11:13: case.submit starting 4182009.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 12:07:58: case.submit success 4204016.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 01:11:13: case.submit success 4182009.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 14:44:44: case.run starting 4204015.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 01:11:17: case.run starting 4182008.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 14:44:50: model execution starting 4204015.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 01:11:22: model execution starting 4182008.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 15:12:26: model execution success 4204015.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 01:11:35: model execution error 
-ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001/run'
+2022-05-18 15:12:26: case.run success 4204015.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 01:11:35: case.run error 
-ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
-See log file for details: /glade/scratch/hannay/f.cesm3_cam041_mom.FWscHIST.ne30_L58.smooth_topo.001/run/cesm.log.4182008.chadmin1.ib0.cheyenne.ucar.edu.220517-011117
+2022-05-18 15:12:35: st_archive starting 4204016.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-17 09:11:22: case.submit starting 4185205.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-17 09:11:22: case.submit success 4185205.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-17 09:11:28: case.run starting 4185204.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-17 09:11:33: model execution starting 4185204.chadmin1.ib0.cheyenne.ucar.edu
+2022-05-18 15:12:44: st_archive success 4204016.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
