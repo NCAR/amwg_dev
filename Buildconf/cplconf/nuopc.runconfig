@@ -60,7 +60,7 @@ component_list: MED ATM LND ICE OCN ROF GLC
 ALLCOMP_attributes::
      ATM_model = cam
      GLC_model = cism
-     ICE_model = cice
+     ICE_model = cice5
      LND_model = clm
      MED_model = cesm
      OCN_model = mom
@@ -75,7 +75,7 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005
+     case_name = b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      flds_bgc_oi = .false.
@@ -306,52 +306,52 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = med.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = med.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 DRV_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = drv.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = drv.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 ATM_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = atm.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = atm.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 LND_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = lnd.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = lnd.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 ICE_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = ice.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = ice.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 OCN_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = ocn.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = ocn.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 ROF_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = rof.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = rof.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 GLC_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = glc.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = glc.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 WAV_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = wav.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = wav.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
 ESP_modelio::
-     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005/run
-     logfile = esp.log.4204015.chadmin1.ib0.cheyenne.ucar.edu.220518-144444
+     diro = /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run
+     logfile = esp.log.4210639.chadmin1.ib0.cheyenne.ucar.edu.220518-161801
 ::
 
