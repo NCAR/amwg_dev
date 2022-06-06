@@ -1,36 +1,36 @@
-2022-05-18 14:00:27: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-06-06 13:41:20: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-05-18 14:00:28: xmlchange success <command> ./xmlchange ATM_GRID=ne30np4.pg3  </command>
+2022-06-06 13:41:20: case.setup starting 
  ---------------------------------------------------
-2022-05-18 14:00:28: case.setup starting 
+2022-06-06 13:41:22: case.setup success 
  ---------------------------------------------------
-2022-05-18 14:00:30: case.setup success 
+2022-06-06 13:43:26: case.build starting 
  ---------------------------------------------------
-2022-05-18 14:01:22: case.build starting 
+2022-06-06 13:52:09: case.build starting 
  ---------------------------------------------------
-2022-05-18 14:13:42: case.build starting 
- ---------------------------------------------------
-CESM version is cesm2_3_beta08-11-g5a56ad39
+CESM version is cesm2_3_beta08-12-g73d5bb3
 Processing externals description file : Externals.cfg
 Processing externals description file : Externals_CAM.cfg
 Processing externals description file : Externals.cfg
 Processing externals description file : .gitmodules
 Processing submodules description file : .gitmodules
 Processing externals description file : Externals_CDEPS.cfg
+Processing externals description file : .gitmodules
+Processing submodules description file : .gitmodules
 Processing externals description file : Externals_CISM.cfg
 Processing externals description file : Externals_CLM.cfg
 Processing externals description file : Externals_FMS.cfg
 Processing externals description file : Externals.cfg
 Processing externals description file : ../Externals_MOM.cfg
-Processing submodules description file : /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/mom/MOM6/.gitmodules
+Processing submodules description file : /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM/components/mom/MOM6/.gitmodules
 Processing externals description file : Externals_POP.cfg
-Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, silhs, pumas, atmos_phys, atmos_cubed_sphere, mpas, cice5, cice6, cice, icepack, cmeps, cdeps, fox, genf90, cpl7, share, mct, parallelio, cime, cism, source_cism, clm, fates, fms, fms, mom, mom, pkg/cvmix-src, pkg/gsw-fortran, mosart, pop, cvmix, marbl, rtm, ww3, ww3dev, 
- M  ./ccs_config
-        modified sandbox, on ccs_config_cesm0.0.24
- M  ./cime
-        modified sandbox, on cime6.0.16
+Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, silhs, pumas, pumas-frozen, atmos_phys, atmos_cubed_sphere, mpas, cice5, cice6, cice, icepack, cmeps, cdeps, fox, genf90, cpl7, share, mct, parallelio, cime, cism, source_cism, clm, fates, fms, fms, mom, mom, pkg/cvmix-src, pkg/gsw-fortran, mosart, pop, cvmix, marbl, rtm, ww3, ww3dev, 
+    ./ccs_config
+        clean sandbox, on ccs_config_cesm0.0.28
+    ./cime
+        clean sandbox, on cime6.0.20
     ./components/cam
-        clean sandbox, on cam6_3_041
+        clean sandbox, on 978aa2492abdb65662bb897f72bb2fe7fcc9c07e
     ./components/cam/chem_proc
         clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_04
     ./components/cam/src/atmos_phys
@@ -38,7 +38,7 @@ Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, s
     ./components/cam/src/dynamics/fv3/atmos_cubed_sphere
         clean sandbox, on fv3_cesm.04
     ./components/cam/src/dynamics/mpas/dycore
-        clean sandbox, on ba25bd071de6100c7263e283194bcc076bce72d7
+        clean sandbox, on ff76a231ddf6bfd3bdb878afb02821c70ba1a856
     ./components/cam/src/physics/carma/base
         clean sandbox, on carma3_49
     ./components/cam/src/physics/clubb
@@ -46,19 +46,21 @@ Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, s
     ./components/cam/src/physics/cosp2/src
         clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
     ./components/cam/src/physics/pumas
-        clean sandbox, on pumas_cam-release_v1.17
+        clean sandbox, on pumas_cam-release_v1.22
+    ./components/cam/src/physics/pumas-frozen
+        clean sandbox, on pumas_cam-release_v1.17_rename
     ./components/cam/src/physics/silhs
         clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
     ./components/cdeps
-        clean sandbox, on cdeps0.12.41
+        clean sandbox, on cdeps0.12.46
     ./components/cdeps/fox
         clean sandbox, on 4.1.2.1
     ./components/cdeps/share/genf90
         clean sandbox, on genf90_200608
     ./components/cice
-        clean sandbox, on cesm_cice6_2_0_16
+        clean sandbox, on cesm_cice6_2_0_21
     ./components/cice/src
-        clean sandbox, on cice6_20211214c
+        clean sandbox, on cice6_20211214h
     ./components/cice/src/icepack
         clean sandbox, on 152bd701e0cf3ec4385e5ce81918ba94e7a791cb
     ./components/cice5
@@ -67,12 +69,12 @@ Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, s
         clean sandbox, on cismwrap_2_1_95
     ./components/cism/source_cism
         clean sandbox, on cism_main_2.01.011
- M  ./components/clm
-        modified sandbox, on ctsm5.1.dev082
+    ./components/clm
+        clean sandbox, on ctsm5.1.dev082
     ./components/clm/src/fates
         clean sandbox, on sci.1.54.0_api.22.0.0
     ./components/cmeps
-        clean sandbox, on cmeps0.13.54
+        clean sandbox, on cmeps0.13.62
     ./components/cpl7
         clean sandbox, on cpl7.0.12
   o ./components/mom
@@ -97,48 +99,29 @@ Checking status of externals: ccs_config, cam, chem_proc, carma, cosp2, clubb, s
         clean sandbox, on ww3_210803
   o ./components/ww3dev
         clean sandbox, on dev/unified_220202
-s o ./libraries/FMS
-        clean sandbox, 1a4ae42ee0f4beb7a516c08c71d89f91c1fc681d --> origin/update_src
+  o ./libraries/FMS
+        clean sandbox, on fi_20220425
     ./libraries/FMS/src
         clean sandbox, on 2020.04.03
     ./libraries/mct
         clean sandbox, on MCT_2.11.0
     ./libraries/parallelio
-        clean sandbox, on pio2_5_6
+        clean sandbox, on pio2_5_7
     ./share
-        clean sandbox, on share1.0.10
-2022-05-18 14:24:10: case.build success 
+        clean sandbox, on share1.0.11
+2022-06-06 14:06:28: case.build success 
  ---------------------------------------------------
-2022-05-18 14:29:19: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths  </command>
+2022-06-06 14:36:58: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=1,STOP_N=10,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-05-18 14:29:29: case.submit starting 4210020.chadmin1.ib0.cheyenne.ucar.edu
+2022-06-06 14:37:20: xmlchange success <command> ./xmlchange JOB_QUEUE=premium  </command>
  ---------------------------------------------------
-2022-05-18 14:29:29: case.submit success 4210020.chadmin1.ib0.cheyenne.ucar.edu
+2022-06-06 14:37:55: case.submit starting 4545801.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-18 15:12:41: case.run starting 4210019.chadmin1.ib0.cheyenne.ucar.edu
+2022-06-06 14:37:55: case.submit success 4545801.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-18 15:12:46: model execution starting 4210019.chadmin1.ib0.cheyenne.ucar.edu
+2022-06-06 14:51:51: case.run starting 4545800.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-18 15:20:57: model execution error 
-ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run'
+2022-06-06 14:51:57: model execution starting 4545800.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-05-18 15:20:57: case.run error 
-ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
-See log file for details: /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.005/run/cesm.log.4210019.chadmin1.ib0.cheyenne.ucar.edu.220518-151241
- ---------------------------------------------------
-2022-05-18 15:29:33: case.submit starting 4210640.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-18 15:29:33: case.submit success 4210640.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-18 16:18:01: case.run starting 4210639.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-18 16:18:08: model execution starting 4210639.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-18 16:44:17: model execution success 4210639.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-18 16:44:17: case.run success 4210639.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-18 16:44:30: st_archive starting 4210640.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-05-18 16:44:38: st_archive success 4210640.chadmin1.ib0.cheyenne.ucar.edu
+2022-06-06 17:10:16: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
  ---------------------------------------------------

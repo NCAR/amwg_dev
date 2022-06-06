@@ -1601,9 +1601,12 @@
       !-----------------------------------------------------------------
 
       if (update_ocn_f) then
+         ! GMM, the following change is needed to avoid salinity conservation
+         ! issues in MOM
          !if (ktherm <= 1) then
             dfresh = -rhoi*vi0new/dt
-            dfsalt = ice_ref_salinity*p001*dfresh
+            !dfsalt = ice_ref_salinity*p001*dfresh
+            dfsalt = MIN(ice_ref_salinity,sss)*p001*dfresh
             fresh  = fresh + dfresh
             fsalt  = fsalt + dfsalt
          ! elseif (ktherm == 2) the fluxes are added elsewhere
