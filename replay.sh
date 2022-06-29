@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2022-06-10 11:55:17
+# Created 2022-06-10 12:07:54
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom.FWscHIST.ne30_L58.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom.FWscHIST.ne30_L58.noclubbtop-plus.001"
 
 /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722 --driver nuopc
 
@@ -31,8 +31,6 @@ cd "${CASEDIR}"
 ./xmlchange GET_REFCASE=TRUE
 
 ./xmlchange RUN_REFDIR=cesm2_init
-
-./case.build
 
 ./case.build
 
