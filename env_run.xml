@@ -251,7 +251,7 @@
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="1">
+    <entry id="STOP_N" value="3">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -264,14 +264,14 @@
       negative value implies off
     </desc>
     </entry>
-    <entry id="REST_OPTION" value="$STOP_OPTION">
+    <entry id="REST_OPTION" value="nyears">
       <type>char</type>
       <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
     </entry>
-    <entry id="REST_N" value="$STOP_N">
+    <entry id="REST_N" value="1">
       <type>integer</type>
       <desc>
       sets model restart writes with REST_OPTION and REST_DATE
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:4507340.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4507341.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:4602817.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4602818.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -753,11 +753,6 @@
     </entry>
   </group>
   <group id="run_pio">
-    <entry id="PIO_ASYNC_INTERFACE" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>TRUE implies perform asynchronous i/o</desc>
-    </entry>
     <entry id="PIO_REARR_COMM_TYPE" value="p2p">
       <type>char</type>
       <valid_values>p2p,coll,default</valid_values>
@@ -813,6 +808,22 @@
     <entry id="PIO_BUFFER_SIZE_LIMIT" value="-1">
       <type>integer</type>
       <desc>pio buffer size limit for pnetcdf output</desc>
+    </entry>
+    <entry id="PIO_ASYNC_INTERFACE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies perform asynchronous i/o</desc>
+      <values>
+        <value compclass="ATM">FALSE</value>
+        <value compclass="CPL">FALSE</value>
+        <value compclass="OCN">FALSE</value>
+        <value compclass="WAV">FALSE</value>
+        <value compclass="GLC">FALSE</value>
+        <value compclass="ICE">FALSE</value>
+        <value compclass="ROF">FALSE</value>
+        <value compclass="LND">FALSE</value>
+        <value compclass="ESP">FALSE</value>
+      </values>
     </entry>
     <entry id="PIO_TYPENAME">
       <type>char</type>

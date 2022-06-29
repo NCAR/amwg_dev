@@ -1,46 +1,46 @@
-2022-05-23 14:16:34: ./create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE5_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD --res ne30pg3_t061 --case /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.cam6.006 --run-unsupported --project 93300722
+2022-06-06 13:41:14: ./create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD --res ne30pg3_t061 --case /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom.B1850WscMOM.ne30_L58_t061.007 --run-unsupported --project 93300722
  ---------------------------------------------------
-2022-05-23 14:16:34: Compset longname is 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE5_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD
+2022-06-06 13:41:14: Compset longname is 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD
  ---------------------------------------------------
-2022-05-23 14:16:34: Compset specification file is /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/cime_config/config_compsets.xml
+2022-06-06 13:41:14: Compset specification file is /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM/cime_config/config_compsets.xml
  ---------------------------------------------------
-2022-05-23 14:16:34: Pes     specification file is /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/cime_config/config_pes.xml
+2022-06-06 13:41:14: Pes     specification file is /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM/cime_config/config_pes.xml
  ---------------------------------------------------
-2022-05-23 14:16:34: Forcing is 1850
+2022-06-06 13:41:14: Forcing is 1850
  ---------------------------------------------------
-2022-05-23 14:16:34: Component CPL is Biogeochemistry intercomponent  with diagnostic CO2
+2022-06-06 13:41:14: Component CPL is Biogeochemistry intercomponent  with diagnostic CO2
  ---------------------------------------------------
-2022-05-23 14:16:34: Using 1 coupler instances
+2022-06-06 13:41:14: Using 1 coupler instances
  ---------------------------------------------------
-2022-05-23 14:16:34: Component ATM is CAM cam6 physics:WACCM specified chemistry:
+2022-06-06 13:41:14: Component ATM is CAM cam6 physics:WACCM specified chemistry:
  ---------------------------------------------------
-2022-05-23 14:16:34: ATM_GRID is ne30np4.pg3
+2022-06-06 13:41:14: ATM_GRID is ne30np4.pg3
  ---------------------------------------------------
-2022-05-23 14:16:34: Component LND is clm5.0:BGC (vert. resol. CN and methane) with prognostic crop:
+2022-06-06 13:41:14: Component LND is clm5.0:BGC (vert. resol. CN and methane) with prognostic crop:
  ---------------------------------------------------
-2022-05-23 14:16:34: LND_GRID is ne30np4.pg3
+2022-06-06 13:41:14: LND_GRID is ne30np4.pg3
  ---------------------------------------------------
-2022-05-23 14:16:34: Component ICE is Sea ICE (cice) model version 5
+2022-06-06 13:41:14: Component ICE is Sea ICE (cice) model version 6
  ---------------------------------------------------
-2022-05-23 14:16:34: ICE_GRID is tx0.66v1
+2022-06-06 13:41:14: ICE_GRID is tx0.66v1
  ---------------------------------------------------
-2022-05-23 14:16:34: Component OCN is MOM6 OCEAN 
+2022-06-06 13:41:14: Component OCN is MOM6 OCEAN 
  ---------------------------------------------------
-2022-05-23 14:16:34: OCN_GRID is tx0.66v1
+2022-06-06 13:41:14: OCN_GRID is tx0.66v1
  ---------------------------------------------------
-2022-05-23 14:16:34: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+2022-06-06 13:41:14: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
  ---------------------------------------------------
-2022-05-23 14:16:34: ROF_GRID is r05
+2022-06-06 13:41:14: ROF_GRID is r05
  ---------------------------------------------------
-2022-05-23 14:16:34: Component GLC is cism2:include non-evolving Greenland Ice Sheet:
+2022-06-06 13:41:14: Component GLC is cism2:include non-evolving Greenland Ice Sheet:
  ---------------------------------------------------
-2022-05-23 14:16:34: GLC_GRID is gris4
+2022-06-06 13:41:14: GLC_GRID is gris4
  ---------------------------------------------------
-2022-05-23 14:16:34: Component WAV is Stub wave component
+2022-06-06 13:41:14: Component WAV is Stub wave component
  ---------------------------------------------------
-2022-05-23 14:16:34: WAV_GRID is null
+2022-06-06 13:41:14: WAV_GRID is null
  ---------------------------------------------------
-2022-05-23 14:16:34: Component ESP is Stub external system processing (ESP) component
+2022-06-06 13:41:14: Component ESP is Stub external system processing (ESP) component
  ---------------------------------------------------
-2022-05-23 14:16:34: ESP_GRID is None
+2022-06-06 13:41:14: ESP_GRID is None
  ---------------------------------------------------
