@@ -1,5 +1,6 @@
 &comp_inparm 
 
+ ncdata = 'f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001.cam.i.1989-01-01-00000.nc'
  dtime = 1800
 ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
 
@@ -67,7 +68,11 @@ co2_flag=.false.
 
 
 
-bnd_topo               =  '/glade/scratch/juliob/ne30pg3_gmted2010_bedmachine_nc3000_Laplace0100_20220606.nc'
+bnd_topo               = '/glade/p/cgd/amp/pel/topo/cesm3/ne30pg3_gmted2010_bedmachine_nc3000_Co060_20220427.nc'
+
+
+
+history_aerosol = .true.
 
 
 

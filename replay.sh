@@ -2,11 +2,11 @@
 
 set -e
 
-# Created 2022-06-06 17:24:06
+# Created 2022-06-10 11:55:17
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom.B1850WscMOM.ne30_L58_t061.008"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom.FWscHIST.ne30_L58.001"
 
-/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM/cime/scripts/create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD --res ne30pg3_t061 --case "${CASEDIR}" --run-unsupported --project 93300722
+/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722 --driver nuopc
 
 cd "${CASEDIR}"
 
@@ -14,29 +14,33 @@ cd "${CASEDIR}"
 
 ./case.setup
 
+./xmlchange RUN_STARTDATE=1979-01-01
+
+./xmlchange STOP_N=2
+
+./xmlchange STOP_OPTION=nyears
+
+./xmlchange RESUBMIT=5
+
+./xmlchange RUN_TYPE=hybrid
+
+./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001
+
+./xmlchange RUN_REFDATE=1989-01-01
+
+./xmlchange GET_REFCASE=TRUE
+
+./xmlchange RUN_REFDIR=cesm2_init
+
 ./case.build
 
-./preview_namelists
-
 ./case.build
 
-./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=1,STOP_N=10,STOP_OPTION=nyears
+./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears
 
-./case.submit
+./xmlchange REST_OPTION=nyears,REST_N=1
 
-./xmlchange STOP_N=1
-
-./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
-
-./case.build
-
-./case.build
-
-./case.submit
-
-./xmlchange STOP_N=3
-
-./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears
+./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears
 
 ./xmlchange REST_OPTION=nyears,REST_N=1
 

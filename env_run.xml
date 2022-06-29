@@ -23,7 +23,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>add aoflux calculation to runseq</desc>
     </entry>
-    <entry id="CCSM_BGC" value="CO2C">
+    <entry id="CCSM_BGC" value="CO2A">
       <type>char</type>
       <valid_values>none,CO2A,CO2B,CO2C</valid_values>
       <desc>Activates additional CO2-related fields to be exchanged between components. Possible values are:
@@ -71,13 +71,13 @@
     This is used to set the driver namelist ice_cpl_dt, equal to basedt/ICE_NCPL
     where basedt is equal to NCPL_BASE_PERIOD in seconds.</desc>
     </entry>
-    <entry id="OCN_NCPL" value="24">
+    <entry id="OCN_NCPL" value="$ATM_NCPL">
       <type>integer</type>
       <desc>Number of ocn coupling intervals per NCPL_BASE_PERIOD.
     Thisn is used to set the driver namelist ocn_cpl_dt, equal to basedt/OCN_NCPL
     where basedt is equal to NCPL_BASE_PERIOD in seconds.</desc>
     </entry>
-    <entry id="GLC_NCPL" value="1">
+    <entry id="GLC_NCPL" value="$ATM_NCPL">
       <type>integer</type>
       <desc>Number of glc coupling intervals per NCPL_BASE_PERIOD.</desc>
     </entry>
@@ -110,7 +110,7 @@
     This is used to set the driver namelist wav_cpl_dt, equal to basedt/WAV_NCPL
     where basedt is equal to NCPL_BASE_PERIOD in seconds.</desc>
     </entry>
-    <entry id="CPL_SEQ_OPTION" value="OPTION1">
+    <entry id="CPL_SEQ_OPTION" value="TIGHT">
       <type>char</type>
       <valid_values>TIGHT,OPTION1,OPTION2</valid_values>
       <desc>
@@ -144,7 +144,7 @@
     </entry>
   </group>
   <group id="run_begin_stop_restart">
-    <entry id="RUN_TYPE" value="startup">
+    <entry id="RUN_TYPE" value="hybrid">
       <type>char</type>
       <valid_values>startup,hybrid,branch</valid_values>
       <desc>
@@ -200,19 +200,19 @@
       a restart file.
     </desc>
     </entry>
-    <entry id="RUN_REFDIR" value="ccsm4_init">
+    <entry id="RUN_REFDIR" value="cesm2_init">
       <type>char</type>
       <desc>
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="case.std">
+    <entry id="RUN_REFCASE" value="f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="0001-01-01">
+    <entry id="RUN_REFDATE" value="1989-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -224,7 +224,7 @@
       Reference time of day (seconds) for hybrid or branch runs (sssss)
     </desc>
     </entry>
-    <entry id="GET_REFCASE" value="FALSE">
+    <entry id="GET_REFCASE" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -232,7 +232,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="0001-01-01">
+    <entry id="RUN_STARTDATE" value="1979-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:4592227.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4592228.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:4604830.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4604831.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -555,31 +555,31 @@
       <type>char</type>
       <desc>wav mesh file (full pathname)</desc>
     </entry>
-    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/tx0.66v1_190314_ESMFmesh.nc">
+    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>ice mesh file (full pahtname)</desc>
     </entry>
-    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/tx0.66v1_190314_ESMFmesh.nc">
+    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>ocn mesh file (full pathname)</desc>
     </entry>
-    <entry id="GLC_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/greenland_4km_epsg3413_c170414_ESMFmesh_c20190729.nc">
+    <entry id="GLC_DOMAIN_MESH" value="UNSET">
       <type>char</type>
       <desc>glc mesh file (full pathname)</desc>
     </entry>
-    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/tx0.66v1_190314_ESMFmesh.nc">
+    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/gx1v7_151008_ESMFmesh.nc">
       <type>char</type>
       <desc>mask mesh file (full pathname)</desc>
     </entry>
-    <entry id="ATM2OCN_FMAPNAME" value="unset">
+    <entry id="ATM2OCN_FMAPNAME" value="idmap">
       <type>char</type>
       <desc>atm2ocn flux mapping file</desc>
     </entry>
-    <entry id="ATM2OCN_SMAPNAME" value="unset">
+    <entry id="ATM2OCN_SMAPNAME" value="idmap">
       <type>char</type>
       <desc>atm2ocn state mapping file</desc>
     </entry>
-    <entry id="ATM2OCN_VMAPNAME" value="unset">
+    <entry id="ATM2OCN_VMAPNAME" value="idmap">
       <type>char</type>
       <desc>atm2ocn vector mapping file</desc>
     </entry>
@@ -595,11 +595,11 @@
       <type>char</type>
       <desc>atm2wav state mapping file</desc>
     </entry>
-    <entry id="OCN2ATM_FMAPNAME" value="unset">
+    <entry id="OCN2ATM_FMAPNAME" value="idmap">
       <type>char</type>
       <desc>ocn2atm flux mapping file</desc>
     </entry>
-    <entry id="OCN2ATM_SMAPNAME" value="unset">
+    <entry id="OCN2ATM_SMAPNAME" value="idmap">
       <type>char</type>
       <desc>ocn2atm state mapping file</desc>
     </entry>
@@ -623,11 +623,11 @@
       <type>char</type>
       <desc>rof2ocn flux mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx0.66v1_e1000r300_190314.nc">
+    <entry id="ROF2OCN_LIQ_RMAPNAME" value="unset">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_ICE_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx0.66v1_e1000r300_190314.nc">
+    <entry id="ROF2OCN_ICE_RMAPNAME" value="unset">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
@@ -635,11 +635,11 @@
       <type>char</type>
       <desc>glc2ice runoff mapping file</desc>
     </entry>
-    <entry id="GLC2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx0.66v1_nnsm_e1000r300_190314.nc">
+    <entry id="GLC2OCN_LIQ_RMAPNAME" value="idmap">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for liquid runoff</desc>
     </entry>
-    <entry id="GLC2OCN_ICE_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx0.66v1_nnsm_e1000r300_190314.nc">
+    <entry id="GLC2OCN_ICE_RMAPNAME" value="idmap">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for ice runoff</desc>
     </entry>
@@ -1047,7 +1047,7 @@
     </entry>
   </group>
   <group id="run_budgets">
-    <entry id="BUDGETS" value="TRUE">
+    <entry id="BUDGETS" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>logical that turns on diagnostic budgets for driver</desc>
@@ -1071,7 +1071,7 @@
       <desc>Number of glacier elevation classes used in CLM.
     Used by both CLM and the coupler (even if CISM is not running, and only SGLC is used).</desc>
     </entry>
-    <entry id="GLC_TWO_WAY_COUPLING" value="TRUE">
+    <entry id="GLC_TWO_WAY_COUPLING" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Whether the glacier component feeds back to the rest of the system
@@ -1084,14 +1084,14 @@
     </entry>
   </group>
   <group id="run_physics">
-    <entry id="TFREEZE_SALTWATER_OPTION" value="linear_salt">
+    <entry id="TFREEZE_SALTWATER_OPTION" value="mushy">
       <type>char</type>
       <valid_values>minus1p8,linear_salt,mushy</valid_values>
       <desc>Freezing point calculation for salt water.</desc>
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="waccm_sc_1850_cam6">
+    <entry id="CAM_NML_USE_CASE" value="waccm_sc_hist_cam6">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1106,7 +1106,7 @@
       modify this value for your experiment, use your own user-defined
       component sets.</desc>
     </entry>
-    <entry id="CAM_NAMELIST_OPTS" value=" co2_cycle_rad_passive=.true. ">
+    <entry id="CAM_NAMELIST_OPTS">
       <type>char</type>
       <valid_values/>
       <desc>CAM specific namelist settings for -namelist option Provides
@@ -1148,14 +1148,14 @@
     subgrid heterogeneity, shallower soil, etc.
     </desc>
     </entry>
-    <entry id="CLM_NML_USE_CASE" value="1850_control">
+    <entry id="CLM_NML_USE_CASE" value="20thC_transient">
       <type>char</type>
       <desc>CLM namelist use_case.
       Determines the use-case that will be sent to the CLM build-namelist utility.
       This is normally set by the component set. This is an advanced flag and should only be
       used by expert users.</desc>
     </entry>
-    <entry id="CLM_BLDNML_OPTS" value="-bgc bgc -crop">
+    <entry id="CLM_BLDNML_OPTS" value="-bgc sp">
       <type>char</type>
       <desc>CLM build-namelist options</desc>
     </entry>
@@ -1222,7 +1222,7 @@
     </entry>
   </group>
   <group id="build_component_cice">
-    <entry id="CICE_MODE" value="prognostic">
+    <entry id="CICE_MODE" value="prescribed">
       <type>char</type>
       <valid_values>prognostic,prescribed,thermo_only</valid_values>
       <desc>Option to the CICE configure utility for the -mode argument (default is prognostic)</desc>
@@ -1243,22 +1243,114 @@
       <desc>CICE specific namelist settings for -namelist option</desc>
     </entry>
   </group>
-  <group id="case_comp">
-    <entry id="OCN_DIAG_MODE" value="production">
+  <group id="run_component_docn">
+    <entry id="DOCN_MODE" value="prescribed">
       <type>char</type>
-      <valid_values>spinup,production,development,none</valid_values>
-      <desc> This variable is used to choose from a set of predefined ocean diagnostics configurations.
-           Each configuration corresponds to a different combination of frequency, precision, and field lists.
-           Configuration ordered in increasing scope/frequency: "spinup", "production", "development".
-           Further customization of diagnostics may be done by copying an edited version of
-           diag_table file in SourceMods/src.mom/
+      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,null</valid_values>
+      <desc> DOCN mode. The data ocean component (DOCN) always returns SSTs to the
+    driver. The atmosphere/ocean fluxes are computed in the
+    coupler. Therefore, the data ocean model does not compute fluxes like
+    the data ice model. DOCN has two distinct modes of operation. It can
+    run as a pure data model, reading in ocean SSTs (normally
+    climatological) from input datasets, performing time/spatial
+    interpolations, and passing these to the coupler. Alternatively,
+    DOCN can compute updated SSTs by running as a slab ocean model where
+    bottom ocean heat flux convergence and boundary layer depths are read
+    in and used with the atmosphere/ocean and ice/ocean fluxes obtained
+    from the driver.
+    --- A setting of prescribed assumes the only field in the input stream is SST.
+    It also assumes the SST is in Celsius and must be converted to Kelvin.
+    All other fields are set to zero except for ocean salinity, which is set to a
+    constant reference salinity value. Normally the ice fraction data is found in
+    the same data files that provide SST data to the data ocean model. They are
+    normally found in the same file because the SST and ice fraction data are derived
+    from the same observational data sets and are consistent with each other.
+    --- Settings of som (slab ocean model) or  som_aquap (aquaplanet slab ocean) are
+    prognostic modes which compute a prognostic sea surface temperature and a
+    freeze/melt potential (surface Q-flux) used by the sea ice model.  This
+    calculation requires an external SOM forcing data file that includes
+    ocean mixed layer depths and bottom-of-the-slab Q-fluxes.
+    Scientifically appropriate bottom-of-the-slab Q-fluxes are normally
+    ocean resolution dependent and are derived from the ocean model output
+    of a fully coupled CCSM run.  Note that while this mode runs out of
+    the box, the default SOM forcing file is not scientifically
+    appropriate and is provided for testing and development purposes only.
+    Users must create scientifically appropriate data for their particular
+    application.  A tool is available to derive valid SOM forcing.
+    --- A setting of sst_aquapN (where "N" is an integer index value) is a
+    type of prescribed SST mode used specifically for an aquaplanet setup in
+    which global SSTs correspond to an analytic form set by the index value.
+    Currently, indices for 10 SST profiles are supported [e.g., index 3 corresponds
+    to the "QOBS" profile of Neale and Hoskins (2001, Atmos. Sci. Lett.)].
+    With source code modifications, it is possible for users to create their own
+    analytic SST distributions and match them to indices 11 or greater.
     </desc>
     </entry>
-    <entry id="OCN_DIAG_SECTIONS" value="TRUE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc> Flag to turn on/off the MOM6 sections diagnostics.
-    </desc>
+    <entry id="DOCN_AQPCONST_VALUE" value="-1">
+      <type>real</type>
+      <valid_values/>
+      <desc>Sets globally constant SST value</desc>
+    </entry>
+    <entry id="DOCN_SOMAQP_DATAFILE" value="unset">
+      <type>char</type>
+      <valid_values/>
+      <desc>Sets SOM aquaplanet file</desc>
+    </entry>
+    <entry id="SSTICE_STREAM" value="CAMDATA">
+      <type>char</type>
+      <valid_values/>
+      <desc>Prescribed SST and ice coverage stream name.
+    Sets SST and ice coverage stream name.
+    This is only used when DOCN_MODE=prescribed.</desc>
+    </entry>
+    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2017_c180507.nc">
+      <type>char</type>
+      <valid_values/>
+      <desc>Prescribed SST and ice coverage data file name.
+    Sets SST and ice coverage data file name.
+    This is only used when DOCN_MODE=prescribed.</desc>
+    </entry>
+  </group>
+  <group id="run_component_cam_sstice">
+    <entry id="SSTICE_GRID_FILENAME" value="$DIN_LOC_ROOT/ocn/docn7/domain.ocn.1x1.111007.nc">
+      <type>char</type>
+      <valid_values/>
+      <desc>Prescribed SST and ice coverage grid file name.
+    Sets SST and ice coverage grid file name for prescribed runs.
+    This is only used when DOCN_MODE=prescribed.</desc>
+    </entry>
+    <entry id="SSTICE_YEAR_ALIGN" value="1850">
+      <type>integer</type>
+      <valid_values/>
+      <desc>The model year that corresponds to SSTICE_YEAR_START on the data file.
+    Prescribed SST and ice coverage data will be aligned so that the first year of
+    data corresponds to SSTICE_YEAR_ALIGN in the model. For instance, if the first
+    year of prescribed data is the same as the first year of the model run, this
+    should be set to the year given in RUN_STARTDATE.
+    If SSTICE_YEAR_ALIGN is later than the model's starting year, or if the model is
+    run after the prescribed data ends (as determined by SSTICE_YEAR_END), the
+    default behavior is to assume that the data from SSTICE_YEAR_START to
+    SSTICE_YEAR_END cyclically repeats. This behavior is controlled by the
+    "taxmode" stream option; see the data model documentation for more details.
+    This is only used when DOCN_MODE=prescribed.</desc>
+    </entry>
+    <entry id="SSTICE_YEAR_START" value="1850">
+      <type>integer</type>
+      <valid_values/>
+      <desc>The first year of data to use from SSTICE_DATA_FILENAME.
+    This is the first year of prescribed SST and ice coverage data to use. For
+    example, if a data file has data for years 0-99, and SSTICE_YEAR_START is 10,
+    years 0-9 in the file will not be used.
+    This is only used when DOCN_MODE=prescribed.</desc>
+    </entry>
+    <entry id="SSTICE_YEAR_END" value="2016">
+      <type>integer</type>
+      <valid_values/>
+      <desc>The last year of data to use from SSTICE_DATA_FILENAME.
+    This is the last year of prescribed SST and ice coverage data to use. For
+    example, if a data file has data for years 0-99, and value is 49,
+    years 50-99 in the file will not be used.
+    This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
   </group>
   <group id="run_component_mosart">
@@ -1271,75 +1363,6 @@
       <type>char</type>
       <valid_values/>
       <desc>Simulation year to start from -- build-namelist options (currently not used)</desc>
-    </entry>
-  </group>
-  <group id="run_component_cism">
-    <entry id="CISM_USE_GREENLAND" value="TRUE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether to include the Greenland Ice Sheet in this CISM simulation
-
-    This should generally be set at create_newcase time (via the compset). In principle it
-    can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_GREENLAND, and possibly
-    others).
-    </desc>
-    </entry>
-    <entry id="CISM_USE_ANTARCTICA" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether to include the Antarctica Ice Sheet in this CISM simulation
-
-    This should generally be set at create_newcase time (via the compset). In principle it
-    can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_ANTARCTICA, and possibly
-    others).
-    </desc>
-    </entry>
-    <entry id="CISM_PHYS" value="cism2">
-      <type>char</type>
-      <valid_values>cism2</valid_values>
-      <desc>Version of CISM physics/dynamics to use</desc>
-    </entry>
-    <entry id="CISM_EVOLVE_GREENLAND" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether CISM ice evolution is on or off for Greenland.</desc>
-    </entry>
-    <entry id="CISM_EVOLVE_ANTARCTICA" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether CISM ice evolution is on or off for Antarctica.</desc>
-    </entry>
-    <entry id="CISM_EVOLVE" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether CISM ice evolution is on or off for CISM as a whole.
-     This must be TRUE if CISM_EVOLVE_ICESHEET is TRUE for any ICESHEET,
-     and FALSE if CISM_EVOLVE_ICESHEET is FALSE for all ICESHEETs that
-     are present in this run.
-
-     Setting CISM_EVOLVE to FALSE in a hybrid case also forces the use
-     of observed initial conditions, as if you had also set
-     CISM_OBSERVED_IC=TRUE.
-     </desc>
-    </entry>
-    <entry id="CISM_OBSERVED_IC" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>For hybrid runs, whether CISM should use observed initial
-    conditions instead of restart file.
-
-    For hybrid runs, a value of FALSE (default) implies that CISM should
-    use the restart file from the reference case; a value of TRUE
-    implies that CISM should instead use the observed initial conditions
-    that are generally used for startup runs. This variable is ignored
-    for startup runs; for branch runs, it must be FALSE.
-
-    Note that setting CISM_EVOLVE to FALSE in a hybrid case also forces
-    the use of observed initial conditions, as if you had also set
-    CISM_OBSERVED_IC=TRUE.
-    </desc>
     </entry>
   </group>
 </file>
