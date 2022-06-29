@@ -1,0 +1,87 @@
+---------------- TIMING PROFILE ---------------------
+  Case        : b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005
+  LID         : 4088390.chadmin1.ib0.cheyenne.ucar.edu.220505-174329
+  Machine     : cheyenne
+  Caseroot    : /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005
+  Timeroot    : /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/Tools
+  User        : hannay
+  Curr Date   : Fri May  6 00:29:49 2022
+  grid        : a%ne30np4.pg3_l%ne30np4.pg3_oi%tx0.66v1_r%r05_g%gris4_w%null_z%null_m%tx0.66v1
+  compset     : 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD
+  run type    : startup, continue_run = TRUE (inittype = FALSE)
+  stop option : nyears, stop_n = 3
+  run length  : 1095 days (1095.0 for ocean)
+
+  component       comp_pes    root_pe   tasks  x threads instances (stride) 
+  ---------        ------     -------   ------   ------  ---------  ------  
+  cpl = cpl        3600        0        3600   x 1       1      (1     ) 
+  atm = cam        3600        0        3600   x 1       1      (1     ) 
+  lnd = clm        1440        0        1440   x 1       1      (1     ) 
+  ice = cice       2160        1440     2160   x 1       1      (1     ) 
+  ocn = mom        828         3600     828    x 1       1      (1     ) 
+  rof = mosart     1440        0        1440   x 1       1      (1     ) 
+  glc = cism       36          0        36     x 1       1      (1     ) 
+  wav = swav       36          1        36     x 1       1      (1     ) 
+  esp = sesp       1           0        1      x 1       1      (1     ) 
+
+  total pes active           : 4428 
+  mpi tasks per node         : 36 
+  pe count for cost estimate : 4428 
+
+  Overall Metrics: 
+    Model Cost:            9632.25   pe-hrs/simulated_year 
+    Model Throughput:        11.03   simulated_years/day 
+
+    Init Time   :     845.115 seconds 
+    Run Time    :   23493.299 seconds       21.455 seconds/day 
+    Final Time  :      29.976 seconds 
+
+
+Runs Time in total seconds, seconds/model-day, and model-years/wall-day 
+CPL Run Time represents time in CPL pes alone, not including time associated with data exchange with other components 
+
+    TOT Run Time:   23493.299 seconds       21.455 seconds/mday        11.03 myears/wday 
+    CPL Run Time:    2522.388 seconds        2.304 seconds/mday       102.76 myears/wday 
+    ATM Run Time:   18520.867 seconds       16.914 seconds/mday        14.00 myears/wday 
+    LND Run Time:    1424.744 seconds        1.301 seconds/mday       181.93 myears/wday 
+    ICE Run Time:    1390.685 seconds        1.270 seconds/mday       186.38 myears/wday 
+    OCN Run Time:   13623.774 seconds       12.442 seconds/mday        19.03 myears/wday 
+    ROF Run Time:      31.926 seconds        0.029 seconds/mday      8118.77 myears/wday 
+    GLC Run Time:       0.000 seconds        0.000 seconds/mday         0.00 myears/wday 
+    WAV Run Time:       0.000 seconds        0.000 seconds/mday         0.00 myears/wday 
+    ESP Run Time:       0.000 seconds        0.000 seconds/mday         0.00 myears/wday 
+    CPL COMM Time:   3076.551 seconds        2.810 seconds/mday        84.25 myears/wday 
+   NOTE: min:max driver timers (seconds/day):   
+                            CPL (pes 0 to 3599) 
+                                                ATM (pes 0 to 3599) 
+                                                LND (pes 0 to 1439) 
+                                                               ICE (pes 1440 to 3599) 
+                                                                                       OCN (pes 3600 to 4427) 
+                                                ROF (pes 0 to 1439) 
+                                                GLC (pes 0 to 35) 
+                                                WAV (pes 1 to 36) 
+                                                ESP (pes 0 to 0) 
+
+
+
+More info on coupler timing:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+Generating namelists for /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005
+  2022-05-16 19:11:22 atm 
+Create namelist for component cam
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cam//cime_config/buildnml
+CAM namelist copy: file1 /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/Buildconf/camconf/atm_in file2 /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run/atm_in 
+  2022-05-16 19:11:23 lnd 
+Create namelist for component clm
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/clm//cime_config/buildnml
+  2022-05-16 19:11:24 ice 
+Create namelist for component cice
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cice//cime_config/buildnml
+RUN: /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cice/bld/generate_cice_decomp.pl -ccsmroot /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3 -res tx0.66v1 -nx 540 -ny 458 -nproc 2160 -thrds 1 -output all 
+FROM: /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005
+  output: 540 458 9 2 7 sectrobin square-ice
+
+  2022-05-16 19:11:24 ocn 
+Create namelist for component mom
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/mom//cime_config/buildnml
+  2022-05-16 19:11:25 rof 
+Create namelist for component mosart
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/mosart//cime_config/buildnml
+  2022-05-16 19:11:25 glc 
+Create namelist for component cism
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cism//cime_config/buildnml
+  2022-05-16 19:11:25 wav 
+Create namelist for component swav
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/cime/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+  2022-05-16 19:11:25 esp 
+Create namelist for component sesp
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/cime/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+  2022-05-16 19:11:25 cpl 
+Create namelist for component drv
+   Calling /glade/work/hannay/cesm_tags/cesm3_cam6_3_041_MOM3/components/cmeps/cime_config/buildnml
+Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+-------------------------------------------------------------------------
+ - Prestage required restarts into /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/run
+ - Case input data directory (DIN_LOC_ROOT) is /glade/p/cesmdata/cseg/inputdata 
+ - Checking for required input datasets in DIN_LOC_ROOT
+-------------------------------------------------------------------------
+run command is mpiexec_mpt -p "%g:"  -np 4428  omplace -tm open64 -vv /glade/scratch/hannay/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.005/bld/cesm.exe   >> cesm.log.$LID 2>&1  
+Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+check for resubmit
+dout_s True 
+mach cheyenne 
+resubmit_num 18

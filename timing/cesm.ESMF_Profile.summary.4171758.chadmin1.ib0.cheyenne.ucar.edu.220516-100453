@@ -1,0 +1,909 @@
+********
+IMPORTANT: Large deviations between Connector times on different PETs
+are typically indicators of load imbalance in the system. The following
+Connectors in this profile may indicate a load imbalance:
+	 - [MED-TO-OCN] RunPhase1
+	 - [OCN-TO-MED] RunPhase1
+********
+
+Region                                                                     PETs   Count    Mean (s)    Min (s)     Min PET Max (s)     Max PET
+  [ensemble] RunPhase1                                                     4428   1        26799.2613  26777.3340  3637    26804.2949  1696   
+    [ESM0001] RunPhase1                                                    4428   1        26799.2610  26777.3340  3637    26804.2949  1693   
+      [ATM] RunPhase1                                                      3600   52560    21516.1408  21409.8203  2486    21740.8398  527    
+        CAM_run3                                                           3600   52560    10341.5883  7113.9883   1397    13402.2119  2400   
+          stepon_run3                                                      3600   52560    10341.4068  7113.7349   1397    13402.0400  2400   
+            dyn_run                                                        3600   52560    10313.5459  7064.6416   1397    13387.0967  2400   
+              prim_advance_exp                                             3600   315360   5904.2507   1607.9855   1384    9806.4053   2402   
+              prim_advec_tracers_fvm                                       3600   105120   2692.5295   1353.4730   2402    4304.1479   633    
+              prim_advec_tracers_remap                                     3600   315360   802.2327    380.0720    2378    3877.2007   1937   
+              vertical_remap                                               3600   105120   232.8940    146.7927    2342    369.9667    509    
+            comp_adv_tends1                                                3600   52560    16.5001     7.0375      2983    41.3159     1047   
+            comp_adv_tends2                                                3600   52560    10.8187     4.1298      2265    25.3932     1266   
+        CAM_run2                                                           3600   52560    7149.5702   4066.4875   1961    10570.0361  524    
+          phys_run2                                                        3600   52560    5972.3615   3641.8142   2277    10149.2910  1386   
+            ac_physics                                                     3600   52560    5970.5889   3640.1550   2277    10147.5811  1386   
+              macrop_tend                                                  3600   MULTIPLE 1366.4407   864.0401    1947    2139.8750   558    
+              radiation                                                    3600   MULTIPLE 1064.3939   641.2672    2966    2028.2600   528    
+              microp_aero_run                                              3600   MULTIPLE 969.3498    477.4046    1962    1588.2235   1067   
+              microp_tend                                                  3600   MULTIPLE 932.8207    523.1801    2966    2040.1737   1403   
+              gw_tend                                                      3600   MULTIPLE 484.2826    292.5638    1971    781.7530    558    
+              adv_tracer_src_snk                                           3600   MULTIPLE 414.1385    266.8125    1951    715.2583    1388   
+              bc_aerosols                                                  3600   MULTIPLE 402.7555    226.6605    2464    823.4704    645    
+              aero_drydep                                                  3600   MULTIPLE 201.2262    136.1620    1965    287.0526    1077   
+              vertical_diffusion_tend                                      3600   MULTIPLE 50.2048     31.4496     2474    104.3647    1077   
+              bc_history_write                                             3600   MULTIPLE 14.4444     7.8116      2285    31.0234     627    
+              tropopause                                                   3600   MULTIPLE 12.6412     7.3794      2506    19.5209     1472   
+              bc_cld_diag_history_write                                    3600   MULTIPLE 10.4877     5.1604      2480    29.7415     1472   
+              tphysac_init                                                 3600   MULTIPLE 6.3060      3.6375      2496    11.2740     72     
+              diag_surf                                                    3600   MULTIPLE 2.6271      1.4358      2264    5.2786      1452   
+              carma_timestep_tend                                          3600   MULTIPLE 2.5528      2.1661      393     3.8999      1925   
+              iondrag                                                      3600   MULTIPLE 2.3010      1.8530      3134    3.2726      504    
+              rayleigh_friction                                            3600   MULTIPLE 1.7827      1.1694      3567    2.7701      416    
+              qneg3                                                        3600   MULTIPLE 0.3515      0.2259      2185    0.5836      1482   
+            physpkg_st2                                                    3600   52560    1.2771      1.1120      2480    2.4031      45     
+            lightning_no_prod                                              3600   52560    0.0376      0.0260      2210    0.0811      3355   
+            carma_accumulate_stats                                         3600   52560    0.0143      0.0103      946     0.0319      1470   
+          stepon_run2                                                      3600   52560    1176.8837   192.0159    3403    6549.3213   2397   
+            p_d_coupling                                                   3600   52560    1176.4326   191.5450    3403    6548.8135   2397   
+              phys2dyn                                                     3600   52560    680.0393    134.2933    1943    6299.2383   2396   
+              p_d_coupling:bndry_exchange                                  3600   52560    453.3254    17.5987     3400    6090.6221   2398   
+              pd_copy                                                      3600   52560    16.4569     9.6765      2482    29.2960     1061   
+          ionosphere_run2                                                  3600   52560    0.0208      0.0148      491     0.0382      1935   
+        CAM_run4                                                           3600   52560    3134.9244   3084.1416   619     3328.8694   1962   
+          wshist                                                           3600   52560    3121.3433   3070.6636   619     3315.1709   1962   
+            dump_field                                                     3600   9894     2931.3649   2930.3684   0       2938.1929   101    
+              get_decomp                                                   3600   17643    0.2080      0.1563      2043    0.2341      1025   
+              fill_halo_and_extend_panel initbuffer                        3600   15717    0.1196      0.0905      2048    1.7718      37     
+            h_normalize                                                    3600   34476    0.0860      0.0602      2746    0.1250      1049   
+            h_zero                                                         3600   34599    0.0381      0.0185      2794    0.1094      52     
+          cam_run4_wrapup                                                  3600   52560    9.2092      9.1869      2185    10.9321     73     
+          cam_write_restart                                                3600   1        3.8472      3.8470      629     3.8748      3567   
+            get_decomp                                                     3600   122      0.0381      0.0282      1845    0.0518      2053   
+              newdecomp                                                    3600   7        0.0372      0.0274      1845    0.0510      2053   
+              get_filemap                                                  3600   7        0.0003      0.0002      3131    0.0005      779    
+        CAM_run1                                                           3600   52560    818.9664    510.4871    2418    1739.2593   1927   
+          phys_run1                                                        3600   52560    696.3428    418.2067    2410    1639.6560   1943   
+            physpkg_st1                                                    3600   52560    456.6557    224.5184    675     1471.4119   1955   
+              chk_en_gmean                                                 3600   52560    295.6326    49.6715     616     1323.2010   1955   
+              advance_trcdata                                              3600   1681920  88.5942     79.7639     2474    101.2227    52     
+              gmean_arr                                                    3600   262800   50.8584     36.1080     0       51.3532     2319   
+            bc_physics                                                     3600   52560    239.3346    146.5685    2486    447.2140    527    
+              moist_convection                                             3600   MULTIPLE 197.5446    120.1929    2492    377.6190    527    
+              bc_init                                                      3600   MULTIPLE 15.7409     7.6682      2466    38.4307     47     
+              dry_adjustment                                               3600   MULTIPLE 11.9932     7.4472      2121    28.2003     1071   
+              energy_fixer                                                 3600   MULTIPLE 9.6374      5.5995      2942    20.9363     1049   
+              cam_export                                                   3600   MULTIPLE 2.0932      1.1044      2482    4.0372      1044   
+              diag_export                                                  3600   MULTIPLE 0.7955      0.4273      3056    1.5536      504    
+              diag_physvar_ic                                              3600   MULTIPLE 0.3039      0.1017      2595    0.7992      41     
+          stepon_run1                                                      3600   52560    122.3900    53.3407     2930    755.6720    2600   
+            d_p_coupling                                                   3600   52560    121.3793    52.5003     2930    754.8177    2600   
+              dyn2phys                                                     3600   52560    21.1050     12.6908     2762    42.8914     105    
+              dpcopy                                                       3600   52560    18.3905     10.5398     2698    29.3193     1489   
+              derived_phys                                                 3600   52560    10.7332     7.3122      3537    16.1216     1509   
+        CAM_import                                                         3600   52560    39.6752     37.7215     2842    46.9796     198    
+        CAM_export                                                         3600   52560    4.9772      4.2855      1967    8.4478      504    
+        CAM_adv_timestep                                                   3600   52560    0.1265      0.0941      3367    0.2953      1510   
+      [MED-TO-OCN] RunPhase1                                               4428   26280    2569.4771   3.9472      2871    13837.5947  3742   
+      [OCN] RunPhase1                                                      828    26280    12952.0925  12834.1211  4158    13895.2158  3667   
+      [ICE] RunPhase1                                                      2160   52560    1795.1937   1700.0525   2335    1885.6802   3052   
+        cice_run_total                                                     2160   52560    1771.4326   1677.2638   2335    1861.7173   3052   
+          cice_run_import                                                  2160   52560    43.9436     36.7028     1818    54.4558     3488   
+            cice_imp_halo                                                  2160   105120   17.5075     12.9911     1674    34.8739     1446   
+            cice_imp_t2u                                                   2160   52560    17.2477     9.2273      3598    30.1851     1546   
+            cice_imp_ocn                                                   2160   52560    0.3938      0.3572      2012    0.4882      1847   
+            cice_imp_atm                                                   2160   52560    0.3737      0.3324      1462    0.5586      2722   
+          cice_run_export                                                  2160   52560    41.6164     39.7435     1611    48.0179     2315   
+      [MED] med_phases_prep_ocn_accum                                      3600   52560    793.8673    131.4071    3524    1922.1741   2248   
+        MED:(med_phases_prep_ocn_accum)                                    3600   52560    788.8566    126.4542    3524    1917.1226   2248   
+          MED:(med_phases_prep_ocn_custom_cesm)                            3600   52560    19.6550     18.9962     3170    22.1717     270    
+          MED: (module_med_merge_mod: med_merge_auto)                      3600   52560    12.3677     11.8500     2794    14.4183     414    
+      [MED] med_phases_post_rof                                            3600   8760     604.9471    4.5714      3094    814.0300    168    
+        MED:(med_phases_post_rof)                                          3600   8760     603.8858    3.6002      3094    812.7672    168    
+          MED:(med_phases_post_rof) map_rof2ocn                            3600   8760     593.7872    1.0520      3074    806.4847    169    
+            MED: (module_MED_map:med_map_field_packed)                     3600   8760     593.7757    1.0418      3074    806.4643    169    
+              MED: (module_MED_map:med_map_field_packed) map               3600   26280    593.5405    0.8472      3074    806.1801    169    
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   26280    0.0663      0.0472      3129    0.1157      126    
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   26280    0.0591      0.0510      3182    0.0909      566    
+          MED:(med_phases_post_rof) map_rof2lnd                            3600   8760     9.4565      0.8510      1839    85.5515     3406   
+            MED: (module_MED_map:med_map_field_packed)                     3600   8760     9.4438      0.8404      1839    85.5375     3406   
+              MED: (module_MED_map:med_map_field_packed) map               3600   8760     9.2519      0.6607      1839    85.3375     3406   
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   8760     0.0574      0.0502      1647    0.0831      1386   
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   8760     0.0344      0.0302      2794    0.0503      1399   
+          MED:(med_phases_history_write_inst_comp)                         3600   8760     0.3163      0.2660      3104    0.5915      3510   
+          MED:(med_phases_history_write_comp_avg)                          3600   8760     0.1444      0.1380      2559    0.1728      414    
+          MED:(med_phases_post_rof) map_rof2ice                            3600   8760     0.0638      0.0491      3179    0.1568      3524   
+            MED: (module_MED_map:med_map_field_packed)                     3600   8760     0.0540      0.0408      3179    0.1458      3524   
+          MED:(med_phases_history_write_comp_aux)                          3600   8760     0.0056      0.0039      3170    0.0111      589    
+      [OCN-TO-MED] RunPhase1                                               4428   26280    457.3496    6.0467      3873    1348.5972   198    
+      [LND] RunPhase1                                                      1440   52560    1092.2402   757.8348    777     1442.0638   103    
+        ctsm_run                                                           1440   52560    995.7298    652.2634    777     1357.2716   103    
+          ecosysdyn                                                        1440   52560    326.0086    175.0628    777     454.4366    104    
+            CNDecompAlloc                                                  1440   52560    66.5581     37.5132     777     98.9401     107    
+              soilbiogeochemcompetition                                    1440   52560    55.0613     30.5038     777     83.1243     107    
+              CNPhenology_phase1                                           1440   52560    4.6704      3.3470      777     6.8079      51     
+              calc_plant_nutrient_competition                              1440   52560    3.5157      1.8203      777     6.4633      78     
+              calc_plant_nutrient_demand                                   1440   52560    2.2742      1.1303      777     3.4444      92     
+              CNFUNInit                                                    1440   52560    0.4763      0.3843      777     0.5889      1170   
+            CNZero                                                         1440   52560    56.7328     20.9761     777     102.6524    474    
+            SoilBiogeochem                                                 1440   52560    48.2589     17.7480     777     73.6499     479    
+              SoilBiogeochemPotential                                      1440   52560    14.9182     4.3563      777     24.9353     89     
+              DecompRate                                                   1440   52560    8.0712      2.9973      777     13.5217     476    
+            SoilBiogeochemLittVertTransp                                   1440   52560    43.7045     26.5605     777     64.2802     215    
+            CNGapMortality                                                 1440   52560    33.3458     23.2769     907     44.5340     103    
+            CNFire                                                         1440   52560    26.1158     16.8626     914     36.3851     103    
+            CNPhenology                                                    1440   52560    11.2213     7.5338      777     14.1712     481    
+            SoilBiogeochemDecomp                                           1440   52560    10.4669     4.4148      777     18.7141     87     
+            CNUpdate1                                                      1440   52560    6.3036      3.3975      777     10.3143     87     
+            CNPrecisionControl                                             1440   210240   5.0274      3.6991      1118    6.6612      107    
+            CNUpdate2                                                      1440   52560    4.2264      2.3081      914     5.9656      94     
+            SoilBiogeochemStateUpdate1                                     1440   52560    3.4801      1.9884      777     5.4716      221    
+            CNMResp                                                        1440   52560    2.8230      1.4991      777     4.3061      88     
+            CNUpdate3                                                      1440   52560    1.5925      1.0973      915     2.2466      161    
+            CNFLivFixation                                                 1440   52560    0.9598      0.5250      777     1.3874      18     
+            CNWoodProducts                                                 1440   52560    0.6364      0.4939      781     1.0685      75     
+            CNGResp                                                        1440   52560    0.6147      0.3781      686     1.1748      56     
+            CNUpdate0                                                      1440   52560    0.1651      0.1196      1120    0.2557      90     
+            CNDeposition                                                   1440   52560    0.0867      0.0405      844     0.1584      6      
+          bgp_fluxes                                                       1440   52560    205.1076    129.4239    908     295.6401    103    
+            canflux                                                        1440   52560    198.6705    123.2733    908     285.7000    103    
+              can_iter                                                     1440   52560    185.8383    114.3231    908     267.7068    103    
+              LUNA                                                         1440   1095     0.0576      0.0317      908     0.0926      566    
+            bgflux                                                         1440   52560    2.5942      1.5020      764     4.2637      91     
+            uflux                                                          1440   52560    2.4681      0.4803      844     5.0330      153    
+            bgplake                                                        1440   52560    1.0533      0.2667      794     2.1398      246    
+          hbuf                                                             1440   52560    68.2581     48.5425     777     87.3189     153    
+          clm_drv_io                                                       1440   52560    65.8415     65.5706     103     67.2100     75     
+            clm_drv_io_htapes                                              1440   52560    58.2427     57.9826     103     59.5933     75     
+              hist_htapes_wrapup_define                                    1440   36       7.0593      6.5475      161     10.0409     431    
+              hist_htapes_wrapup_tconst                                    1440   36       3.4998      0.6475      508     3.7863      65     
+              hist_htapes_wrapup_write                                     1440   36       2.7639      2.7393      0       2.7641      555    
+            clm_drv_io_wrest                                               1440   1        7.5312      7.5278      721     7.5531      0      
+          ch4                                                              1440   52560    61.8657     38.9813     777     86.9580     215    
+          hydro_without_drainage                                           1440   52560    53.3224     25.3279     774     116.6983    3      
+          soiltemperature                                                  1440   52560    36.2366     17.1866     777     58.8025     161    
+            SoilTempBandDiag                                               1440   52560    13.8440     6.5337      777     26.0813     247    
+            SoilThermProp                                                  1440   52560    6.9308      3.6035      777     10.6994     161    
+            PhaseChangebeta                                                1440   52560    3.4844      1.6071      842     6.5185      103    
+            PhaseChangeH2osfc                                              1440   52560    0.3172      0.1849      844     0.5929      103    
+          EcosysDynPostDrainage                                            1440   52560    26.8390     16.8499     777     37.9478     317    
+            CNsum                                                          1440   105120   20.5047     12.3801     777     29.8178     317    
+              CNvegCflux_summary                                           1440   52560    5.2236      3.7891      914     6.9345      107    
+            NUpdate3                                                       1440   52560    1.9523      1.3104      904     2.8138      317    
+            SoilBiogeochemPrecisionControl                                 1440   52560    1.5604      0.8360      1118    2.3884      215    
+            CNPrecisionControl                                             1440   52560    1.1219      0.7657      777     1.5640      827    
+            SoilBiogeochemNLeaching                                        1440   52560    0.9575      0.6620      904     1.3182      161    
+          dyn_subgrid                                                      1440   52560    17.3210     12.2981     789     23.3233     198    
+            dyn_cnbal_patch                                                1440   52560    5.5490      3.8336      777     7.7988      103    
+            dyn_cnbal_col                                                  1440   52560    2.0842      1.5457      789     2.8077      198    
+            SoilBiogeochemPrecisionControl                                 1440   52560    1.0710      0.6185      1068    1.7251      215    
+            CNUpdateDynPatch                                               1440   52560    1.0400      0.7148      1068    1.4746      215    
+          interpMonthlyVeg                                                 1440   52560    16.1101     16.0781     887     16.3506     378    
+            readMonthlyVeg                                                 1440   37       15.8911     15.8779     0       15.8918     73     
+          bgc_interp                                                       1440   52560    15.9770     12.6783     80      20.8474     392    
+            lnfmdyn_strd_adv_total                                         1440   52560    12.2486     8.6971      198     17.0074     392    
+              lnfmdyn_strd_adv_readLBUB                                    1440   52560    11.2018     7.5440      198     15.9540     392    
+                lnfmdyn_readLBUB_UB_readpio                                1440   8760     10.8522     7.1792      198     15.6151     392    
+                lnfmdyn_readLBUB_fbound                                    1440   8760     0.0439      0.0391      1436    0.0636      1148   
+                lnfmdyn_readLBUB_setup                                     1440   52560    0.0304      0.0255      1012    0.0438      630    
+                lnfmdyn_readLBUB_filemgt                                   1440   52560    0.0158      0.0111      1380    0.2261      0      
+              lnfmdyn_strd_adv_tint                                        1440   52560    0.8972      0.8284      1054    1.0860      630    
+            ndepdyn_strd_adv_total                                         1440   52560    1.9177      1.7440      742     2.4473      18     
+              ndepdyn_strd_adv_tint                                        1440   52560    1.3132      1.2337      549     1.5725      198    
+              ndepdyn_strd_adv_readLBUB                                    1440   52560    0.3955      0.3011      1197    0.7480      389    
+                ndepdyn_readLBUB_UB_readpio                                1440   36       0.1723      0.0919      103     0.5010      525    
+                ndepdyn_readLBUB_setup                                     1440   52560    0.0651      0.0562      1068    0.0883      234    
+                ndepdyn_readLBUB_filemgt                                   1440   52560    0.0159      0.0119      1014    0.0307      1246   
+                ndepdyn_readLBUB_fbound                                    1440   36       0.0001      0.0001      1167    0.0002      595    
+            hdmdyn_strd_adv_total                                          1440   52560    1.1692      1.1093      1030    1.4388      630    
+              hdmdyn_strd_adv_tint                                         1440   52560    0.8737      0.8288      1413    1.0404      630    
+              hdmdyn_strd_adv_readLBUB                                     1440   52560    0.1581      0.1336      1287    0.2053      630    
+                hdmdyn_readLBUB_setup                                      1440   52560    0.0350      0.0287      814     0.0480      630    
+                hdmdyn_readLBUB_filemgt                                    1440   52560    0.0144      0.0103      1396    0.0201      54     
+          begcnbal_grc                                                     1440   52560    10.7974     5.9921      777     16.0816     86     
+            CNsum                                                          1440   52560    8.4217      3.8479      777     13.2636     86     
+          cnbalchk                                                         1440   52560    8.5438      8.0775      675     9.6379      198    
+          depvel                                                           1440   52560    7.1423      4.2454      777     10.5479     103    
+          surfrad                                                          1440   52560    7.0726      3.7402      777     11.0960     3      
+          surfalb                                                          1440   26280    6.5772      3.6996      844     11.1769     329    
+          decomp_vert                                                      1440   52560    6.1706      4.1489      1278    8.2286      80     
+          begcnbal_col                                                     1440   52560    5.5810      2.5570      777     9.0528      231    
+            CNsum                                                          1440   52560    5.0129      2.2775      777     8.0988      231    
+          lnd2atm                                                          1440   52560    4.5088      2.6129      777     6.0819      198    
+          cninit                                                           1440   52560    4.2020      1.3833      842     8.3580      89     
+          hydro2_drainage                                                  1440   52560    4.1498      2.5846      844     5.9342      317    
+          accum                                                            1440   52560    4.0740      3.1707      777     5.1018      198    
+          lakeTemp                                                         1440   52560    4.0015      0.6773      78      6.4537      396    
+          bgp2                                                             1440   52560    3.1852      1.9624      777     5.8143      103    
+            bgp2_loop_3                                                    1440   52560    1.2902      0.6686      777     2.2289      103    
+            bgp2_loop_2                                                    1440   52560    0.7737      0.4581      777     1.4798      103    
+            bgp2_loop_4                                                    1440   52560    0.4252      0.2952      777     0.6960      103    
+            bgp2_loop_1                                                    1440   52560    0.1858      0.1011      777     0.4188      103    
+          bgc                                                              1440   52560    3.0488      1.9003      777     4.3989      103    
+          balchk                                                           1440   52560    2.9965      2.2623      844     3.8778      198    
+          bgp1                                                             1440   52560    2.9158      1.5792      777     4.6200      474    
+          hylake                                                           1440   52560    2.7492      1.4475      907     5.5989      3      
+          hydro1                                                           1440   52560    2.5777      1.9143      1036    3.7148      198    
+          begwbal                                                          1440   105120   2.5554      1.9055      844     3.3192      514    
+          hdmdyn_strd_adv_total                                            1440   52560    1.8792      1.6489      244     2.2417      1050   
+            hdmdyn_strd_adv_tint                                           1440   52560    1.5726      1.4032      244     1.8927      1350   
+            hdmdyn_strd_adv_readLBUB                                       1440   52560    0.1625      0.1190      6       0.2144      630    
+              hdmdyn_readLBUB_setup                                        1440   52560    0.0394      0.0272      237     0.0596      1242   
+              hdmdyn_readLBUB_filemgt                                      1440   52560    0.0187      0.0119      6       0.0288      694    
+          drvinit                                                          1440   52560    1.7795      1.3457      845     2.3942      484    
+          snow_init                                                        1440   52560    0.7996      0.1855      979     2.2341      329    
+          urbalb                                                           1413   26280    0.4897      0.2242      826     1.0103      93     
+          patch2col                                                        1440   52560    0.4625      0.2756      777     0.7476      161    
+          lnd2glc                                                          1440   52560    0.2732      0.1729      837     0.4179      431    
+          endTSdynveg                                                      1440   52560    0.0386      0.0225      418     0.0694      167    
+        lc_lnd_export                                                      1440   52560    8.7016      7.6800      1336    11.0408     75     
+        lc_lnd_import                                                      1440   52560    5.0541      4.8490      718     5.8623      18     
+        shr_orb_decl                                                       1440   52560    0.4280      0.3949      894     0.5522      1278   
+        lc_ctsm2_adv_timestep                                              1440   52560    0.1498      0.1174      974     0.2827      1403   
+      [MED] med_phases_post_ocn                                            3600   26280    306.7479    6.7237      2978    1001.9614   3448   
+        MED:(med_phases_post_ocn)                                          3600   26280    303.7432    3.7413      2978    998.8682    3448   
+          MED:(med_phases_post_ocn) map_ocn2ice                            3600   26280    302.2621    2.2091      2178    997.3040    3448   
+            MED: (module_MED_map:med_map_field_packed)                     3600   26280    302.2277    2.1762      2178    997.2723    3448   
+              MED: (module_MED_map:med_map_field_packed) map               3600   26280    301.3099    1.1988      3006    996.3685    3448   
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   26280    0.3043      0.2780      441     0.4243      535    
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   26280    0.2522      0.2205      596     0.3762      1074   
+          MED:(med_phases_history_write_inst_comp)                         3600   26280    0.8135      0.7821      88      0.9529      3474   
+          MED:(med_phases_history_write_comp_avg)                          3600   26280    0.4399      0.4255      2445    0.5109      3546   
+          MED:(med_phases_history_write_comp_aux)                          3600   26280    0.0151      0.0113      1785    0.0216      3402   
+      [ATM-TO-MED] RunPhase1                                               3600   52560    230.8736    14.7165     0       366.1288    3591   
+      [ICE-TO-MED] RunPhase1                                               3600   52560    202.4812    22.5549     1026    653.8814    1142   
+      [LND-TO-MED] RunPhase1                                               3600   52560    167.8234    18.4593     0       661.7371    777    
+      [MED] med_phases_post_lnd                                            3600   52560    138.0555    18.4708     259     643.6079    33     
+        MED:(med_phases_post_lnd)                                          3600   52560    130.1845    10.8160     259     635.9289    33     
+          MED: (module_MED_map:med_map_field_packed)                       3600   52560    124.1098    5.0436      259     630.7095    33     
+            MED: (module_MED_map:med_map_field_packed) map                 3600   52560    120.0584    1.3087      3497    627.0035    33     
+            MED: (module_MED_map:med_map_field_packed) copy from src       3600   52560    1.3455      1.1534      1590    1.8378      431    
+            MED: (module_MED_map:med_map_field_packed) copy to dest        3600   52560    1.2760      0.9798      813     2.1237      325    
+          MED:(med_phases_history_write_inst_comp)                         3600   52560    2.5363      1.9539      716     4.3671      351    
+          MED:(med_phases_prep_rof_mod: med_phases_prep_rof_accum)         3600   52560    1.9118      1.1608      215     2.5476      774    
+          MED:(med_phases_history_write_comp_avg)                          3600   52560    0.9592      0.8863      98      1.1022      190    
+          MED:(med_phases_history_write_comp_aux)                          3600   52560    0.0404      0.0266      763     0.0625      3009   
+      [MED] med_phases_post_atm                                            3600   52560    104.5344    59.5246     3589    234.1877    0      
+        MED:(med_phases_post_atm)                                          3600   52560    96.9517     52.0264     3589    225.9991    0      
+          MED:(med_phases_post_atm) map_atm2ice                            3600   52560    43.1728     9.3551      12      200.8302    0      
+            MED: (module_MED_map:med_map_field_packed)                     3600   52560    43.0972     9.2800      12      200.7453    0      
+              MED: (module_MED_map:med_map_field_packed) map               3600   105120   29.3350     3.0422      12      187.8011    0      
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   105120   1.2613      1.1158      2120    2.1730      1066   
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   105120   0.8249      0.7410      393     1.1665      1061   
+          MED:(med_phases_post_atm) map_atm2ocn                            3600   52560    41.0834     6.8539      2984    150.6859    35     
+            MED: (module_MED_map:med_map_field_packed)                     3600   52560    40.9701     6.7730      2984    150.5316    35     
+              MED: (module_MED_map:med_map_field_packed) map               3600   105120   25.8077     0.7607      2981    124.6089    35     
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   105120   1.2702      1.1526      248     1.7453      103    
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   105120   1.1263      0.9847      39      1.6833      90     
+          MED:(med_phases_post_atm) map_atm2lnd                            3600   52560    8.9267      3.9453      3538    181.9084    12     
+            MED: (module_MED_map:med_map_field_packed)                     3600   52560    8.8666      3.8860      3538    181.8404    12     
+              MED: (module_MED_map:med_map_field_packed) map               3600   52560    6.0111      1.1182      786     179.0039    12     
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   52560    1.2233      1.0712      2655    1.8319      103    
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   52560    0.7908      0.7035      466     0.9653      106    
+          MED:(med_phases_history_write_inst_comp)                         3600   52560    2.1343      1.9768      1904    2.8656      984    
+          MED:(med_phases_history_write_comp_avg)                          3600   52560    0.8877      0.8579      238     1.0157      3546   
+          MED:(med_phases_history_write_comp_aux)                          3600   52560    0.0342      0.0249      723     0.0606      664    
+      [MED] med_phases_prep_rof                                            3600   8760     87.3631     81.9778     726     89.6155     2821   
+        MED:(med_phases_prep_rof_mod: med_phases_prep_rof)                 3600   8760     86.2943     80.9398     726     88.6089     2821   
+          MED:(med_phases_prep_rof_mod: med_phases_prep_rof_irrig)         3600   8760     56.8533     55.5995     1154    58.1444     798    
+          MED: (module_MED_map:med_map_field_packed)                       3600   8760     28.4754     22.2902     726     31.1967     2373   
+            MED: (module_MED_map:med_map_field_packed) map                 3600   8760     28.2680     22.0912     726     31.0116     2373   
+            MED: (module_MED_map:med_map_field_packed) copy to dest        3600   8760     0.0541      0.0461      2001    0.0807      573    
+            MED: (module_MED_map:med_map_field_packed) copy from src       3600   8760     0.0495      0.0397      32      0.0743      3258   
+          MED: (module_med_merge_mod: med_merge_auto)                      3600   8760     0.5858      0.4273      1213    0.7850      630    
+      [MED] med_phases_post_ice                                            3600   52560    72.7196     46.8500     207     88.8319     3555   
+        MED:(med_phases_post_ice)                                          3600   52560    65.9713     40.4173     207     82.3259     3555   
+          MED: (med_fraction_set)                                          3600   52560    52.9965     16.5398     1117    71.9628     3465   
+            MED: (med_fraction_set) fbfrac(compocn)                        3600   52560    33.8112     12.5789     1417    57.6608     2135   
+            MED: (med_fraction_set) fbfrac(compatm)                        3600   52560    18.3906     0.7619      83      43.2577     3599   
+          MED:(med_phases_post_ice) map_ice2ocn                            3600   52560    9.8088      3.6510      2828    41.9598     1117   
+            MED: (module_MED_map:med_map_field_packed)                     3600   52560    9.7332      3.5787      2828    41.8809     1117   
+              MED: (module_MED_map:med_map_field_packed) map               3600   52560    7.1686      1.1267      2828    39.2848     1117   
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   52560    0.7212      0.6441      718     1.0183      55     
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   52560    0.6518      0.5786      1652    0.8365      1067   
+          MED:(med_phases_history_write_inst_comp)                         3600   52560    1.6926      1.6126      88      1.8645      3546   
+          MED:(med_phases_history_write_comp_avg)                          3600   52560    0.8886      0.8582      3431    1.0296      3546   
+          MED:(med_phases_history_write_comp_aux)                          3600   52560    0.0305      0.0222      148     0.0404      3294   
+      [MED] med_phases_prep_atm                                            3600   52560    57.6430     33.2131     209     68.7352     2276   
+        MED:(med_phases_prep_atm)                                          3600   52560    51.4805     27.2731     209     62.7405     2276   
+          MED: (module_MED_map:med_map_field_packed)                       3600   210240   34.2523     9.7875      207     45.8915     2276   
+            MED: (module_MED_map:med_map_field_packed) map                 3600   210240   27.1192     3.0147      209     39.0669     2276   
+            MED: (module_MED_map:med_map_field_packed) copy from src       3600   210240   2.3876      2.0180      2552    3.3094      414    
+            MED: (module_MED_map:med_map_field_packed) copy to dest        3600   210240   1.7516      1.5703      2218    2.7623      419    
+          MED: (module_med_merge_mod: med_merge_auto)                      3600   52560    14.6679     14.1565     1431    16.2381     54     
+      [MED] med_phases_prep_ocn_avg                                        3600   26280    45.8509     44.3301     3105    51.0587     630    
+        MED:(med_phases_prep_ocn_avg)                                      3600   26280    43.1927     41.7719     2662    48.0554     630    
+      [GLC-TO-MED] RunPhase1                                               3600   1095     37.8278     0.1473      2452    290.7632    2446   
+      [MED-TO-ICE] RunPhase1                                               3600   52560    30.2449     8.4270      317     100.6356    3596   
+      [MED-TO-ATM] RunPhase1                                               3600   52560    28.5963     11.8324     3599    63.9033     207    
+      [ROF-TO-MED] RunPhase1                                               3600   8760     24.0064     1.1011      0       45.1968     1455   
+      [MED] med_phases_prep_ice                                            3600   52560    19.3894     17.4795     1602    23.1021     54     
+        MED:(med_phases_prep_ice)                                          3600   52560    12.9104     10.2863     3150    16.1815     1399   
+          MED: (module_med_merge_mod: med_merge_auto)                      3600   52560    12.7649     10.1448     3150    16.0042     1399   
+      [MED-TO-LND] RunPhase1                                               3600   52560    16.8282     8.9380      2482    85.7097     0      
+      [MED] med_phases_prep_lnd                                            3600   52560    16.2475     15.5082     316     18.8354     630    
+        MED:(med_phases_prep_lnd)                                          3600   52560    10.7026     10.1846     2924    12.5497     630    
+          MED:(med_phases_prep_lnd) merge                                  3600   52560    10.1154     9.6463      2691    11.7402     630    
+            MED: (module_med_merge_mod: med_merge_auto)                    3600   52560    10.0217     9.5522      2691    11.6242     630    
+      [ROF] RunPhase1                                                      1440   8760     30.1138     18.4202     21      36.1408     231    
+        mosartr_tot                                                        1440   8760     27.8339     16.2131     21      33.8221     231    
+          mosartr_subcycling                                               1440   8760     14.8906     5.2567      742     20.9085     944    
+            mosartr_euler                                                  1440   26280    14.7189     5.0886      742     20.7405     944    
+              mosartr_SMeroutUp                                            1440   131400   8.4940      3.9496      742     12.4060     929    
+              mosartr_chanroute                                            1440   131400   3.5874      0.4660      742     7.4337      1123   
+              mosartr_subnetwork                                           1440   131400   2.0362      0.1768      23      4.4920      1122   
+              mosartr_hillslope                                            1440   26280    0.1131      0.0308      744     0.2021      1121   
+            mosartr_budget                                                 1440   8760     0.0125      0.0119      584     0.0157      207    
+          mosartr_htapes                                                   1440   8760     9.2201      8.9735      0       9.3365      73     
+          mosartr_SMdirect                                                 1440   8760     2.9911      0.9540      34      6.4058      903    
+          mosartr_rest                                                     1440   1        0.2097      0.2080      74      0.2151      0      
+          mosartr_hbuf                                                     1440   8760     0.1226      0.1017      746     0.1908      43     
+          mosartr_budget                                                   1440   18636    0.0993      0.0656      978     6.5118      0      
+          mosartr_flood                                                    1440   8760     0.0157      0.0076      743     0.0277      1372   
+          mosartr_irrig                                                    1440   8760     0.0067      0.0057      405     0.0131      523    
+        lc_rof_export                                                      1440   8760     0.2681      0.2406      22      0.3192      918    
+        lc_mosart_import                                                   1440   8760     0.1977      0.1751      710     0.3154      1350   
+      [MED] med_phases_ocnalb_run                                          3600   52560    11.3865     8.0916      6       15.6819     1783   
+        MED:(med_phases_ocnalb_run)                                        3600   52560    5.7244      2.4154      6       9.9510      1783   
+      [MED] med_phases_aofluxes_run                                        3600   52560    7.6662      5.5474      76      9.4386      1998   
+        MED: (med_phases_aofluxes_run)                                     3600   52560    2.2350      0.3539      1757    3.6751      436    
+          MED:(med_aofluxes_update)                                        3600   52560    2.1210      0.2550      3303    3.5532      436    
+        MED:(med_aofluxes_init)                                            3600   1        0.0011      0.0010      1862    0.0449      0      
+      [MED] med_phases_diag_lnd                                            3600   52560    6.8909      6.4780      945     7.8426      2970   
+        MED:(med_phases_diag_lnd)                                          3600   52560    1.6902      1.5591      945     2.1219      414    
+      [MED] med_phases_diag_ocn                                            3600   52560    6.8166      6.5249      2338    8.0519      3546   
+        MED:(med_phases_diag_ocn)                                          3600   52560    2.1449      2.0514      2418    2.6718      3546   
+      [MED] med_phases_diag_ice_ice2med                                    3600   52560    6.6952      6.2960      76      7.8052      558    
+        MED:(med_phases_diag_ice_ice2med)                                  3600   52560    1.9528      1.7817      728     2.5066      558    
+      [MED] med_phases_diag_accum                                          3600   52560    6.6710      5.5193      3116    7.5948      234    
+        MED:(med_diag_accum)                                               3600   52560    0.4912      0.2886      2178    0.6601      3041   
+      [MED] med_phases_diag_atm                                            3600   52560    6.5379      6.2315      316     7.4889      414    
+        MED:(med_phases_diag_atm)                                          3600   52560    1.5214      1.4367      3159    1.9053      414    
+      [MED] med_phases_diag_rof                                            3600   52560    5.8883      5.5142      76      6.7963      1710   
+        MED:(med_phases_diag_rof)                                          3600   52560    1.1033      1.0030      727     1.4343      558    
+      [MED] med_phases_diag_ice_med2ice                                    3600   52560    5.6124      5.3335      316     6.7297      2754   
+        MED:(med_phases_diag_ice_med2ice)                                  3600   52560    0.9581      0.8877      2438    1.2527      54     
+      [MED] med_phases_diag_glc                                            3600   52560    5.1935      4.8508      76      6.1275      3546   
+        MED:(med_phases_diag_glc)                                          3600   52560    0.5362      0.4778      1084    0.7693      558    
+      [MED] med_phases_diag_print                                          3600   52560    4.8868      4.5876      780     5.6835      1696   
+        MED:(med_diag_sum_master)                                          3600   36       0.0033      0.0010      2869    0.0209      0      
+        MED:(med_diag_print_summary)                                       1      42       0.3571      0.3571      0       0.3571      0      
+      [MED] med_phases_restart_write                                       3600   8760     2.7364      2.5777      2338    3.1317      54     
+        MED:(med_phases_restart_write)                                     3600   8760     1.9359      1.8312      3111    2.2218      65     
+      [MED-TO-ROF] RunPhase1                                               3600   8760     1.4873      0.7293      1768    7.6243      1353   
+      [MED] med_phases_profile                                             3600   8760     1.0243      0.9462      3105    2.1823      0      
+        MED:(med_phases_profile)                                           3600   8760     0.2316      0.2109      3105    1.3807      0      
+      [MED] med_phases_history_write                                       3600   8760     0.9314      0.8577      2446    1.1674      3572   
+        MED:(med_phases_history_write)                                     3600   8760     0.0122      0.0105      2044    0.0163      2645   
+      [ESM0001-TO-MED] RunPhase1                                           4428   1        0.0000      0.0000      4400    0.0001      1134   
+      [MED-TO-ESM0001] RunPhase1                                           4428   1        0.0000      0.0000      3714    0.0000      403    
+      [ESM0001-TO-ATM] RunPhase1                                           4428   1        0.0000      0.0000      4419    0.0000      1188   
+      [ATM-TO-ESM0001] RunPhase1                                           4428   1        0.0000      0.0000      1091    0.0001      1417   
+      [ESM0001-TO-LND] RunPhase1                                           4428   1        0.0000      0.0000      4178    0.0000      2609   
+      [ESM0001-TO-ICE] RunPhase1                                           4428   1        0.0000      0.0000      3891    0.0002      1092   
+      [LND-TO-ESM0001] RunPhase1                                           4428   1        0.0000      0.0000      3303    0.0000      1932   
+      [ESM0001-TO-OCN] RunPhase1                                           4428   1        0.0000      0.0000      4330    0.0000      2970   
+      [ICE-TO-ESM0001] RunPhase1                                           4428   1        0.0000      0.0000      387     0.0000      412    
+      [ESM0001-TO-ROF] RunPhase1                                           4428   1        0.0000      0.0000      4401    0.0000      1094   
+      [OCN-TO-ESM0001] RunPhase1                                           4428   1        0.0000      0.0000      492     0.0000      412    
+      [ROF-TO-ESM0001] RunPhase1                                           4428   1        0.0000      0.0000      1069    0.0000      1114   
+      [GLC-TO-ESM0001] RunPhase1                                           4428   1        0.0000      0.0000      622     0.0001      1268   
+      [ESM0001-TO-GLC] RunPhase1                                           4428   1        0.0000      0.0000      4059    0.0000      3869   
+  [ensemble] Init 1                                                        4428   1        768.0707    768.0527    4331    768.0935    12     
+    [ESM0001] IPDv02p1                                                     4428   1        280.5751    280.3260    3902    280.7689    2154   
+      [MED-TO-ESM0001] IPDv05p2b                                           4428   1        30.6862     30.5610     4118    30.8164     1972   
+      [GLC-TO-MED] IPDv05p2a                                               3600   1        27.6029     27.5537     1816    27.6480     3161   
+      [ATM-TO-ESM0001] IPDv05p2b                                           4428   1        19.9714     19.0711     3301    23.4969     3669   
+      [ESM0001-TO-MED] IPDv05p2a                                           4428   1        7.7918      2.1979      3240    30.5532     4391   
+      [MED-TO-OCN] IPDv05p2b                                               4428   1        7.3333      4.4601      3406    18.2698     4426   
+      [ICE] IPDv01p1                                                       2160   1        13.2794     13.2775     1477    13.2866     3546   
+        cice_init_total                                                    2160   1        13.2518     13.2500     3349    13.2590     3546   
+          cice_init2                                                       2160   1        2.3496      2.3442      3032    2.3554      1752   
+          cice_init1                                                       2160   1        0.8100      0.8002      1440    0.8172      1610   
+      [MED-TO-ATM] IPDv05p2b                                               3600   1        5.9487      5.7410      1450    6.1480      3326   
+      [ESM0001-TO-ROF] IPDv05p3                                            4428   1        4.5804      4.4458      3905    4.6754      1317   
+      [ROF-TO-ESM0001] IPDv05p2b                                           4428   1        4.5003      4.3947      515     4.6665      1013   
+      [ROF-TO-ESM0001] IPDv05p3                                            4428   1        4.3877      4.1480      3201    4.6018      1212   
+      [ESM0001-TO-GLC] IPDv05p3                                            4428   1        4.1100      4.0831      575     4.1393      1012   
+      [ESM0001-TO-ATM] IPDv05p3                                            4428   1        4.0682      4.0317      24      4.0972      2220   
+      [MED-TO-OCN] IPDv05p3                                                4428   1        3.7468      3.0566      1105    6.7476      3665   
+      [ESM0001-TO-ROF] IPDv05p2b                                           4428   1        3.6476      3.6207      3832    3.6738      1375   
+      [MED-TO-ROF] IPDv05p2b                                               3600   1        4.1291      3.8484      1448    4.5046      3504   
+      [MED-TO-ICE] IPDv05p2b                                               3600   1        3.8552      3.8329      184     3.8878      3570   
+      [ATM-TO-ESM0001] IPDv05p3                                            4428   1        2.9934      2.6655      2541    4.3598      4390   
+      [GLC-TO-ESM0001] IPDv05p1                                            4428   1        2.9871      2.3526      3531    5.1882      4326   
+      [OCN-TO-MED] IPDv05p2b                                               4428   1        2.9632      2.8202      3566    3.1484      1885   
+      [OCN-TO-MED] IPDv05p3                                                4428   1        2.9490      2.6754      167     3.1460      2657   
+      [OCN-TO-ESM0001] IPDv05p2b                                           4428   1        2.9419      2.3484      2644    4.4644      4409   
+      [MED-TO-LND] IPDv05p2b                                               3600   1        3.4714      3.4183      668     3.4962      184    
+      [OCN-TO-ESM0001] IPDv05p3                                            4428   1        2.7156      2.0719      2657    4.9812      4405   
+      [GLC-TO-ESM0001] IPDv05p3                                            4428   1        2.6689      1.9961      3578    4.7321      4143   
+      [ICE-TO-ESM0001] IPDv05p2b                                           4428   1        2.6509      1.9999      3427    4.0129      4072   
+      [ESM0001-TO-OCN] IPDv05p3                                            4428   1        2.6434      2.5470      1661    2.7759      3905   
+      [ESM0001-TO-MED] IPDv05p3                                            4428   1        2.6409      2.0422      3591    4.4590      3616   
+      [ICE-TO-ESM0001] IPDv05p3                                            4428   1        2.5722      1.9774      1364    4.4106      3659   
+      [ESM0001-TO-MED] IPDv05p2b                                           4428   1        2.5103      2.1073      3265    3.2482      4392   
+      [ESM0001-TO-ATM] IPDv05p2a                                           4428   1        2.5035      2.4436      849     2.5312      186    
+      [ESM0001-TO-OCN] IPDv05p2b                                           4428   1        2.4442      2.3572      3275    2.4984      1678   
+      [ESM0001-TO-ICE] IPDv05p2b                                           4428   1        2.4354      2.1656      2932    2.5921      4380   
+      [LND-TO-ESM0001] IPDv05p3                                            4428   1        2.3963      2.0451      3239    3.0535      4003   
+      [GLC-TO-ESM0001] IPDv05p2b                                           4428   1        2.3744      1.9721      48      4.0397      3618   
+      [LND-TO-ESM0001] IPDv05p2b                                           4428   1        2.3656      1.9818      3454    2.8068      3993   
+      [ESM0001-TO-LND] IPDv05p3                                            4428   1        2.2796      2.1913      4088    2.3083      4220   
+      [ROF-TO-MED] IPDv05p1                                                3600   1        2.6814      2.6423      2027    2.7136      3531   
+      [MED-TO-OCN] IPDv05p2a                                               4428   1        2.0991      1.6025      1016    4.1496      3652   
+      [ICE-TO-MED] IPDv05p3                                                3600   1        2.5683      2.2614      3551    2.7856      1364   
+      [ROF-TO-MED] IPDv05p3                                                3600   1        2.5435      2.3405      1212    2.7942      3201   
+      [ESM0001-TO-ICE] IPDv05p3                                            4428   1        1.9337      1.9005      2225    2.0378      4080   
+      [ESM0001-TO-ICE] IPDv05p2a                                           4428   1        1.9016      1.5838      2       2.3367      3263   
+      [ATM-TO-ESM0001] IPDv05p2a                                           4428   1        1.8924      1.6738      3334    2.4989      4383   
+      [ESM0001-TO-MED] IPDv05p1                                            4428   1        1.8257      1.1273      662     3.2365      3696   
+      [MED-TO-OCN] IPDv05p1                                                4428   1        1.8076      1.1234      681     3.8025      3607   
+      [ESM0001-TO-LND] IPDv05p2b                                           4428   1        1.8066      1.6913      1532    2.0501      2846   
+      [GLC-TO-MED] IPDv05p3                                                3600   1        2.2078      2.1243      270     2.4128      3578   
+      [MED-TO-ESM0001] IPDv05p3                                            4428   1        1.7558      1.5604      538     2.0165      3213   
+      [ESM0001-TO-GLC] IPDv05p2b                                           4428   1        1.7419      1.7135      103     1.7687      469    
+      [LND-TO-ESM0001] IPDv05p2a                                           4428   1        1.7089      1.5270      3291    2.3715      3690   
+      [ESM0001-TO-LND] IPDv05p2a                                           4428   1        1.6508      1.5787      3492    1.6835      3232   
+      [ESM0001-TO-ATM] IPDv05p2b                                           4428   1        1.6341      1.6003      1140    1.6735      1532   
+      [ROF-TO-ESM0001] IPDv05p1                                            4428   1        1.6304      1.3749      1503    1.9366      895    
+      [ATM-TO-ESM0001] IPDv05p1                                            4428   1        1.6168      1.2623      1592    2.7701      4169   
+      [OCN-TO-MED] IPDv05p1                                                4428   1        1.5582      1.2616      883     1.8186      1503   
+      [LND-TO-MED] IPDv05p3                                                3600   1        1.8119      1.5892      542     2.0271      3212   
+      [ESM0001-TO-ATM] IPDv05p1                                            4428   1        1.4583      1.2000      1454    1.7510      663    
+      [ROF-TO-MED] IPDv05p2b                                               3600   1        1.7565      1.5084      1204    2.0568      3407   
+      [GLC-TO-MED] IPDv05p1                                                3600   1        1.6917      1.5116      1543    1.9577      3510   
+      [MED-TO-ATM] IPDv05p3                                                3600   1        1.6807      1.6488      2682    1.6861      2277   
+      [MED-TO-ROF] IPDv05p3                                                3600   1        1.6379      1.6374      1328    1.6383      3217   
+      [LND-TO-MED] IPDv05p2b                                               3600   1        1.6358      1.3770      1102    1.9813      3427   
+      [ICE-TO-MED] IPDv05p2b                                               3600   1        1.6123      1.3765      1202    1.8981      3399   
+      [ESM0001-TO-ROF] IPDv05p1                                            4428   1        1.2632      1.2337      3977    1.3117      3799   
+      [OCN-TO-ESM0001] IPDv05p1                                            4428   1        1.2581      1.0474      386     1.9880      4159   
+      [MED-TO-ESM0001] IPDv05p1                                            4428   1        1.2177      1.2010      4267    1.2555      4050   
+      [ICE-TO-ESM0001] IPDv05p1                                            4428   1        1.2009      0.9230      1449    1.9180      4395   
+      [OCN-TO-MED] IPDv05p2a                                               4428   1        1.1947      1.1508      28      1.2416      3264   
+      [ESM0001-TO-OCN] IPDv05p1                                            4428   1        1.1748      1.1419      268     1.2100      2932   
+      [LND-TO-ESM0001] IPDv05p1                                            4428   1        1.1646      0.8618      1455    1.9450      4366   
+      [GLC-TO-ESM0001] IPDv05p2a                                           4428   1        1.1094      0.8881      3291    1.8945      3880   
+      [ESM0001-TO-LND] IPDv05p1                                            4428   1        1.1036      1.0586      1480    1.1408      814    
+      [ICE-TO-ESM0001] IPDv05p2a                                           4428   1        1.0902      0.8443      2327    1.7371      4422   
+      [MED-TO-ROF] IPDv05p1                                                3600   1        1.3277      1.1361      1359    1.4578      636    
+      [MED-TO-ESM0001] IPDv05p2a                                           4428   1        1.0455      0.9984      284     1.0882      1014   
+      [OCN-TO-ESM0001] IPDv05p2a                                           4428   1        0.9647      0.7817      3059    1.6142      3788   
+      [ESM0001-TO-ROF] IPDv05p2a                                           4428   1        0.9497      0.9186      4360    0.9772      888    
+      [ESM0001-TO-GLC] IPDv05p1                                            4428   1        0.9386      0.8854      3799    0.9944      284    
+      [ESM0001-TO-GLC] IPDv05p2a                                           4428   1        0.9323      0.9059      1208    0.9740      1577   
+      [ROF-TO-ESM0001] IPDv05p2a                                           4428   1        0.8889      0.7503      2167    1.0345      19     
+      [MED-TO-ICE] IPDv05p3                                                3600   1        1.0307      1.0278      3563    1.0315      1105   
+      [ROF-TO-MED] IPDv05p2a                                               3600   1        1.0009      0.8449      19      1.1096      2355   
+      [MED-TO-LND] IPDv05p3                                                3600   1        0.9742      0.9723      2646    0.9761      175    
+      [MED-TO-LND] IPDv05p1                                                3600   1        0.9673      0.8842      1537    1.0220      1056   
+      [MED-TO-LND] IPDv05p2a                                               3600   1        0.9397      0.9041      1488    0.9624      83     
+      [ESM0001-TO-OCN] IPDv05p2a                                           4428   1        0.7592      0.7177      16      0.7879      3768   
+      [MED-TO-ATM] IPDv05p2a                                               3600   1        0.9130      0.8722      1596    0.9568      3566   
+      [ATM-TO-MED] IPDv05p1                                                3600   1        0.9089      0.8190      1269    1.0150      1455   
+      [ESM0001-TO-ICE] IPDv05p1                                            4428   1        0.7122      0.6832      813     0.7419      621    
+      [MED-TO-ATM] IPDv05p1                                                3600   1        0.8637      0.8044      3360    0.9418      1871   
+      [ICE-TO-MED] IPDv05p1                                                3600   1        0.8629      0.8096      2859    0.9186      386    
+      [LND-TO-MED] IPDv05p1                                                3600   1        0.8357      0.7355      1029    0.9574      1449   
+      [ICE-TO-MED] IPDv05p2a                                               3600   1        0.8247      0.6761      35      0.9266      2210   
+      [GLC-TO-MED] IPDv05p2b                                               3600   1        0.7964      0.7415      2661    0.8506      560    
+      [ROF] IPDv01p1                                                       1440   1        1.8672      1.8669      1369    1.8680      981    
+        mosarti_restart                                                    1440   1        0.7123      0.7121      0       0.7125      19     
+        mosarti_vars                                                       1440   1        0.4284      0.4283      155     0.4284      0      
+        mosarti_mosart_init                                                1440   1        0.3859      0.3858      21      0.3861      0      
+        mosarti_grid                                                       1440   1        0.1409      0.1406      1367    0.1415      992    
+        mosarti_decomp                                                     1440   1        0.0134      0.0125      435     0.0139      991    
+          mosarti_dec_basins                                               1440   1        0.0069      0.0068      1011    0.0078      991    
+          mosarti_dec_distr                                                1440   1        0.0036      0.0033      992     0.0041      991    
+        mosarti_print                                                      1440   1        0.0071      0.0063      991     0.0081      435    
+        mosarti_histinit                                                   1440   1        0.0001      0.0001      209     0.0002      0      
+      [ATM-TO-MED] IPDv05p3                                                3600   1        0.7124      0.6664      954     0.7422      2541   
+      [ATM-TO-MED] IPDv05p2a                                               3600   1        0.6904      0.5803      50      0.8004      3461   
+      [LND-TO-MED] IPDv05p2a                                               3600   1        0.6408      0.5928      2093    0.6986      3360   
+      [OCN] IPDv03p1                                                       828    1        2.7119      2.7078      3840    2.7328      4266   
+      [MED-TO-ICE] IPDv05p1                                                3600   1        0.6215      0.5984      2650    0.6718      681    
+      [MED-TO-ICE] IPDv05p2a                                               3600   1        0.6201      0.5960      323     0.6431      902    
+      [MED-TO-ROF] IPDv05p2a                                               3600   1        0.6169      0.5679      1531    0.6519      1025   
+      [ATM-TO-MED] IPDv05p2b                                               3600   1        0.5785      0.5093      69      0.6190      2291   
+      [MED] IPDv03p1                                                       3600   1        0.1841      0.1807      2336    0.2510      2394   
+      [ATM] IPDv03p1                                                       3600   1        0.1076      0.0501      2395    0.1099      2034   
+      [LND] IPDv01p1                                                       1440   1        0.1109      0.1096      1345    0.1128      235    
+      [ESM0001] IPDv05p3                                                   4428   1        0.0019      0.0010      4190    0.0028      3546   
+      [ESM0001] IPDv03p2                                                   4428   1        0.0016      0.0007      3804    0.0076      128    
+      [ROF] Init 0                                                         1440   1        0.0027      0.0002      0       0.0090      1195   
+      [MED] Init 0                                                         3600   1        0.0008      0.0003      1174    0.0063      0      
+      [ESM0001-TO-MED] Init 0                                              4428   1        0.0005      0.0002      483     0.0008      1206   
+      [OCN] Init 0                                                         828    1        0.0026      0.0005      3627    0.0042      3822   
+      [LND] Init 0                                                         1440   1        0.0014      0.0002      33      0.0055      802    
+      [ATM] Init 0                                                         3600   1        0.0003      0.0002      33      0.0006      2322   
+      [ESM0001-TO-ATM] Init 0                                              4428   1        0.0002      0.0002      2277    0.0003      2400   
+      [OCN-TO-MED] Init 0                                                  4428   1        0.0002      0.0002      3434    0.0004      3961   
+      [ICE] Init 0                                                         2160   1        0.0004      0.0002      1903    0.0017      3234   
+      [MED-TO-OCN] Init 0                                                  4428   1        0.0002      0.0002      2760    0.0003      3546   
+      [ESM0001-TO-LND] Init 0                                              4428   1        0.0002      0.0002      2567    0.0003      3546   
+      [ESM0001-TO-ICE] Init 0                                              4428   1        0.0002      0.0002      645     0.0003      3546   
+      [ESM0001-TO-OCN] Init 0                                              4428   1        0.0002      0.0002      2289    0.0003      3546   
+      [ESM0001-TO-ROF] Init 0                                              4428   1        0.0002      0.0002      2295    0.0003      4377   
+      [ESM0001-TO-GLC] Init 0                                              4428   1        0.0002      0.0002      3431    0.0003      3546   
+      [MED-TO-ESM0001] Init 0                                              4428   1        0.0002      0.0002      2837    0.0003      3546   
+      [ATM-TO-ESM0001] Init 0                                              4428   1        0.0002      0.0002      507     0.0003      3546   
+      [ICE-TO-ESM0001] Init 0                                              4428   1        0.0002      0.0002      1179    0.0004      3552   
+      [LND-TO-ESM0001] Init 0                                              4428   1        0.0002      0.0002      2841    0.0003      3546   
+      [OCN-TO-ESM0001] Init 0                                              4428   1        0.0002      0.0002      1557    0.0003      563    
+      [ROF-TO-ESM0001] Init 0                                              4428   1        0.0002      0.0002      153     0.0003      3546   
+      [GLC-TO-ESM0001] Init 0                                              4428   1        0.0002      0.0002      531     0.0003      478    
+      [GLC-TO-MED] Init 0                                                  3600   1        0.0002      0.0002      2834    0.0004      3183   
+      [LND-TO-MED] Init 0                                                  3600   1        0.0002      0.0002      2770    0.0003      2300   
+      [ICE-TO-MED] Init 0                                                  3600   1        0.0002      0.0002      2293    0.0003      1692   
+      [MED-TO-ATM] Init 0                                                  3600   1        0.0002      0.0002      2301    0.0004      1800   
+      [ROF-TO-MED] Init 0                                                  3600   1        0.0002      0.0002      2891    0.0003      3528   
+      [MED-TO-ICE] Init 0                                                  3600   1        0.0002      0.0002      2288    0.0003      3546   
+      [MED-TO-ROF] Init 0                                                  3600   1        0.0002      0.0002      2822    0.0003      3546   
+      [ATM-TO-MED] Init 0                                                  3600   1        0.0002      0.0002      620     0.0003      2901   
+      [MED-TO-LND] Init 0                                                  3600   1        0.0002      0.0002      1408    0.0003      3546   
+      [ESM0001] IPDv05p2                                                   4428   1        0.0001      0.0000      1304    0.0002      3551   
+      [GLC] IPDv01p1                                                       36     1        0.0061      0.0059      1       0.0079      0      
+      [ESM0001] IPDv05p1                                                   4428   1        0.0000      0.0000      3938    0.0000      217    
+      [GLC] Init 0                                                         36     1        0.0002      0.0002      2       0.0003      24     
+    [ESM0001] IPDv02p5                                                     4428   1        268.6291    268.6266    134     268.6296    2651   
+      [MED] IPDv03p7                                                       3600   3        264.3259    264.3037    2474    264.5963    3053   
+        MED: (module_med_map: RouteHandles_init)                           3600   1        260.2245    260.1812    1005    260.4951    3053   
+        MED:(med_phases_restart_read)                                      3600   1        2.0459      2.0445      3348    2.0461      3097   
+        MED: (med_fraction_init)                                           3600   2        1.6108      1.6087      1350    1.6136      72     
+          MED: (module_MED_map:med_map_routehandles_initfrom_fieldbundle)  3600   2        1.6046      1.6014      3423    1.6062      36     
+        MED:(med_phases_post_ocn)                                          3600   1        0.1653      0.0001      76      0.2885      1543   
+          MED:(med_phases_post_ocn) map_ocn2ice                            3600   1        0.1653      0.0001      76      0.2885      1543   
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.1653      0.0001      76      0.2885      1543   
+              MED: (module_MED_map:med_map_field_packed) map               3600   1        0.1652      0.0000      76      0.2884      1543   
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   1        0.0000      0.0000      1305    0.0000      260    
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   1        0.0000      0.0000      2472    0.0000      536    
+        MED:(med_phases_post_rof)                                          3600   1        0.0763      0.0004      1239    0.2944      269    
+          MED:(med_phases_post_rof) map_rof2lnd                            3600   1        0.0713      0.0001      1761    0.2877      3036   
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.0712      0.0001      1761    0.2877      3036   
+              MED: (module_MED_map:med_map_field_packed) map               3600   1        0.0712      0.0001      1761    0.2877      3036   
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   1        0.0000      0.0000      1929    0.0000      1576   
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   1        0.0000      0.0000      3195    0.0000      3375   
+          MED:(med_phases_post_rof) map_rof2ocn                            3600   1        0.0050      0.0001      3074    0.0082      169    
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.0050      0.0001      3074    0.0082      169    
+              MED: (module_MED_map:med_map_field_packed) map               3600   3        0.0050      0.0001      3074    0.0081      169    
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   3        0.0000      0.0000      3184    0.0000      3469   
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   3        0.0000      0.0000      3129    0.0000      366    
+          MED:(med_phases_post_rof) map_rof2ice                            3600   1        0.0000      0.0000      3134    0.0001      3524   
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.0000      0.0000      3386    0.0001      3524   
+        MED:(med_phases_post_lnd)                                          3600   2        0.0413      0.0002      3146    0.2895      1310   
+          MED: (module_MED_map:med_map_field_packed)                       3600   2        0.0413      0.0002      3146    0.2895      1310   
+            MED: (module_MED_map:med_map_field_packed) map                 3600   2        0.0411      0.0001      2340    0.2893      1310   
+            MED: (module_MED_map:med_map_field_packed) copy from src       3600   2        0.0000      0.0000      1724    0.0001      1388   
+            MED: (module_MED_map:med_map_field_packed) copy to dest        3600   2        0.0000      0.0000      2662    0.0001      234    
+        MED:(med_phases_post_glc)                                          3600   1        0.0126      0.0011      1438    0.2898      3347   
+          MED:map_glc2lnd                                                  3600   1        0.0077      0.0001      3563    0.2882      3398   
+            MED:map_glc2lnd glc2lnd                                        3600   1        0.0025      0.0000      8       0.2826      3278   
+              MED: (module_MED_map:med_map_field_packed)                   3600   1        0.0025      0.0000      8       0.2826      3278   
+          MED:(med_phases_post_glc) glc2lnd                                3600   1        0.0022      0.0000      1106    0.2834      790    
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.0021      0.0000      1106    0.2834      790    
+              MED: (module_MED_map:med_map_field_packed) map               3600   1        0.0021      0.0000      1106    0.2833      790    
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   1        0.0000      0.0000      1573    0.0000      485    
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   1        0.0000      0.0000      465     0.0000      3464   
+          MED: (module_MED_map:med_map_field_packed)                       3600   1        0.0018      0.0000      1325    0.2834      2952   
+            MED: (module_MED_map:med_map_field_packed) map                 3600   2        0.0018      0.0000      1325    0.2833      2952   
+            MED: (module_MED_map:med_map_field_packed) copy from src       3600   2        0.0000      0.0000      1641    0.0000      2288   
+            MED: (module_MED_map:med_map_field_packed) copy to dest        3600   2        0.0000      0.0000      1748    0.0000      2951   
+        MED:(med_phases_post_atm)                                          3600   1        0.0014      0.0012      3538    0.0017      3204   
+          MED:(med_phases_post_atm) map_atm2ice                            3600   1        0.0006      0.0002      12      0.0010      1235   
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.0006      0.0002      12      0.0010      1235   
+              MED: (module_MED_map:med_map_field_packed) map               3600   2        0.0003      0.0000      1924    0.0007      2864   
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   2        0.0000      0.0000      848     0.0000      1071   
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   2        0.0000      0.0000      753     0.0000      1799   
+          MED:(med_phases_post_atm) map_atm2ocn                            3600   1        0.0006      0.0003      2474    0.0010      1924   
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.0006      0.0003      2474    0.0009      1924   
+              MED: (module_MED_map:med_map_field_packed) map               3600   2        0.0001      0.0000      2472    0.0003      1894   
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   2        0.0000      0.0000      1664    0.0000      1788   
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   2        0.0000      0.0000      3191    0.0000      1791   
+          MED:(med_phases_post_atm) map_atm2lnd                            3600   1        0.0002      0.0001      2012    0.0007      12     
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.0002      0.0001      2012    0.0007      12     
+              MED: (module_MED_map:med_map_field_packed) map               3600   1        0.0001      0.0000      324     0.0007      12     
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   1        0.0000      0.0000      3561    0.0003      3204   
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   1        0.0000      0.0000      2841    0.0000      1078   
+        MED:(med_phases_prep_atm)                                          3600   1        0.0013      0.0005      81      0.0018      738    
+          MED: (module_MED_map:med_map_field_packed)                       3600   4        0.0009      0.0001      83      0.0013      699    
+            MED: (module_MED_map:med_map_field_packed) map                 3600   3        0.0008      0.0001      83      0.0012      121    
+            MED: (module_MED_map:med_map_field_packed) copy from src       3600   3        0.0000      0.0000      1685    0.0001      219    
+            MED: (module_MED_map:med_map_field_packed) copy to dest        3600   3        0.0000      0.0000      3224    0.0000      1133   
+          MED: (module_med_merge_mod: med_merge_auto)                      3600   1        0.0003      0.0003      706     0.0004      402    
+        MED: (med_fraction_set)                                            3600   2        0.0010      0.0002      2063    0.0027      786    
+          MED: (med_fraction_set) fbfrac(compocn)                          3600   2        0.0007      0.0001      2756    0.0024      1353   
+          MED: (med_fraction_set) fbfrac(compatm)                          3600   2        0.0003      0.0000      83      0.0007      2528   
+        MED:(med_phases_post_ice)                                          3600   1        0.0005      0.0002      2062    0.0011      711    
+          MED: (med_fraction_set)                                          3600   1        0.0004      0.0001      2978    0.0006      2373   
+            MED: (med_fraction_set) fbfrac(compocn)                        3600   1        0.0002      0.0000      3131    0.0005      3530   
+            MED: (med_fraction_set) fbfrac(compatm)                        3600   1        0.0001      0.0000      83      0.0003      2369   
+          MED:(med_phases_post_ice) map_ice2ocn                            3600   1        0.0001      0.0001      2373    0.0006      707    
+            MED: (module_MED_map:med_map_field_packed)                     3600   1        0.0001      0.0001      2373    0.0006      707    
+              MED: (module_MED_map:med_map_field_packed) map               3600   1        0.0001      0.0000      2373    0.0006      707    
+              MED: (module_MED_map:med_map_field_packed) copy from src     3600   1        0.0000      0.0000      3156    0.0000      585    
+              MED: (module_MED_map:med_map_field_packed) copy to dest      3600   1        0.0000      0.0000      3197    0.0000      55     
+        MED:(med_phases_ocnalb_run)                                        3600   2        0.0005      0.0002      3086    0.0010      1415   
+          MED:(med_phases_ocnalb_init)                                     3600   1        0.0001      0.0001      2294    0.0002      235    
+        MED:(med_phases_profile)                                           3600   1        0.0001      0.0001      3489    0.0004      404    
+      [ATM] IPDv03p7                                                       3600   2        4.0017      3.9993      2137    4.0071      96     
+        phys_run1                                                          3600   1        3.6298      3.5026      434     3.8216      561    
+          physpkg_st1                                                      3600   1        3.6238      3.4962      446     3.8129      3446   
+            advance_trcdata                                                3600   32       3.4936      3.4932      85      3.4938      1386   
+              read_next_trcdata                                            3600   32       3.4922      3.4914      54      3.4927      3318   
+              interpolate_trcdata                                          3600   32       0.0011      0.0007      2055    0.0018      93     
+            chk_en_gmean                                                   3600   1        0.1279      0.0002      457     0.3171      2371   
+              gmean_arr                                                    3600   1        0.1279      0.0002      457     0.3171      2371   
+            gmean_arr                                                      3600   5        0.0013      0.0011      2511    0.0016      2704   
+              gmean_fixed_repro                                            3600   5        0.0013      0.0011      2511    0.0016      2704   
+          bc_physics                                                       3600   1        0.0060      0.0038      2139    0.0114      96     
+            moist_convection                                               3600   MULTIPLE 0.0047      0.0024      2364    0.0098      3278   
+              convect_deep_tend                                            3600   MULTIPLE 0.0046      0.0023      2364    0.0097      3278   
+            bc_init                                                        3600   MULTIPLE 0.0005      0.0002      2474    0.0015      647    
+              qneg3                                                        3600   MULTIPLE 0.0001      0.0001      2821    0.0004      1475   
+            energy_fixer                                                   3600   MULTIPLE 0.0004      0.0002      3226    0.0008      515    
+            dry_adjustment                                                 3600   MULTIPLE 0.0003      0.0001      3012    0.0069      2117   
+              qneg3                                                        3600   MULTIPLE 0.0000      0.0000      2867    0.0000      632    
+            cam_export                                                     3600   MULTIPLE 0.0000      0.0000      2204    0.0001      1371   
+            diag_physvar_ic                                                3600   MULTIPLE 0.0000      0.0000      2077    0.0001      3274   
+            diag_export                                                    3600   MULTIPLE 0.0000      0.0000      2455    0.0001      126    
+        stepon_run1                                                        3600   1        0.1955      0.0062      3446    0.3231      449    
+          d_p_coupling                                                     3600   1        0.1953      0.0061      3446    0.3229      457    
+            derived_phys                                                   3600   1        0.1934      0.0044      923     0.3205      457    
+              qneg3                                                        3600   MULTIPLE 0.0001      0.0001      2354    0.0002      116    
+            dyn2phys                                                       3600   1        0.0008      0.0004      2853    0.0014      1072   
+            dpcopy                                                         3600   1        0.0004      0.0002      1816    0.0006      743    
+      [GLC-TO-MED] RunPhase1                                               3600   2        0.0063      0.0034      36      0.0070      846    
+      [ATM-TO-MED] RunPhase1                                               3600   2        0.0018      0.0006      0       0.0027      3570   
+      [ICE-TO-MED] RunPhase1                                               3600   2        0.0012      0.0007      1897    0.0028      0      
+      [LND-TO-MED] RunPhase1                                               3600   2        0.0008      0.0004      3022    0.0021      1954   
+      [ROF-TO-MED] RunPhase1                                               3600   2        0.0006      0.0002      2270    0.0008      2582   
+      [OCN-TO-MED] RunPhase1                                               4428   2        0.0004      0.0002      171     0.0008      1746   
+      [ESM0001-TO-MED] RunPhase1                                           4428   2        0.0003      0.0001      4159    0.0014      1120   
+      [MED-TO-ATM] RunPhase1                                               3600   1        0.0004      0.0002      3599    0.0004      59     
+      [OCN] IPDv03p7                                                       828    1        0.0010      0.0008      4197    0.0014      3930   
+      [ICE] IPDv01p5                                                       2160   1        0.0002      0.0001      2341    0.0006      2650   
+      [LND] IPDv01p5                                                       1440   1        0.0002      0.0001      135     0.0005      893    
+      [ESM0001-TO-ATM] RunPhase1                                           4428   1        0.0000      0.0000      4223    0.0001      1968   
+      [ESM0001] IPDv05p8                                                   4428   1        0.0000      0.0000      4018    0.0002      406    
+      [ROF] IPDv01p5                                                       1440   1        0.0001      0.0001      326     0.0001      134    
+      [GLC] IPDv01p5                                                       36     1        0.0001      0.0001      25      0.0001      18     
+    [ESM0001] IPDv02p3                                                     4428   1        217.7173    217.6495    2155    217.9604    0      
+      [ATM] IPDv03p3                                                       3600   1        29.5805     29.5694     287     29.5877     0      
+        get_decomp                                                         3600   167      0.0847      0.0731      1872    0.1026      1      
+          newdecomp                                                        3600   12       0.0833      0.0588      0       0.1006      3205   
+          get_filemap                                                      3600   12       0.0005      0.0002      3102    0.0009      1637   
+        fvm:fill_halo_phys                                                 3600   1        0.0184      0.0001      3591    0.0363      1440   
+        shr_reprosum_int                                                   3600   5        0.0150      0.0015      397     0.0284      3554   
+          repro_sum_allr_minmax                                            3600   5        0.0141      0.0005      397     0.0275      3554   
+          repro_sum_allr_i8                                                3600   5        0.0008      0.0005      3478    0.0010      2277   
+          repro_sum_loopb                                                  3600   5        0.0000      0.0000      3586    0.0003      793    
+          repro_sum_loopa                                                  3600   5        0.0000      0.0000      2324    0.0000      2300   
+        parallelMin                                                        3600   1        0.0009      0.0000      1       0.0012      1973   
+        gmean_arr                                                          3600   5        0.0006      0.0004      927     0.0007      3586   
+          gmean_fixed_repro                                                3600   5        0.0005      0.0004      927     0.0007      3586   
+            shr_reprosum_int                                               3600   5        0.0005      0.0004      927     0.0006      3586   
+              repro_sum_allr_minmax                                        3600   5        0.0003      0.0002      927     0.0005      3272   
+              repro_sum_allr_i8                                            3600   5        0.0002      0.0001      1728    0.0002      3522   
+              repro_sum_loopb                                              3600   5        0.0000      0.0000      2009    0.0000      2415   
+              repro_sum_loopa                                              3600   5        0.0000      0.0000      1948    0.0000      164    
+            shr_reprosum_INF_NaN_Chk                                       3600   5        0.0000      0.0000      2342    0.0000      1592   
+        h_zero                                                             3600   161      0.0005      0.0003      1704    0.0008      1463   
+        phys_grid_init                                                     3600   1        0.0001      0.0000      188     0.0003      2465   
+        shr_reprosum_INF_NaN_Chk                                           3600   5        0.0000      0.0000      2506    0.0001      554    
+      [ATM-TO-ESM0001] IPDv05p6a                                           4428   1        17.1835     16.7192     2841    18.0064     4405   
+      [MED-TO-ESM0001] IPDv05p5                                            4428   1        11.9526     11.6513     2836    12.2847     590    
+      [ATM-TO-ESM0001] IPDv05p4                                            4428   1        10.3777     9.9046      1325    12.1004     3624   
+      [MED-TO-OCN] IPDv05p5                                                4428   1        6.7980      6.3124      386     8.8516      3633   
+      [MED-TO-OCN] IPDv05p6a                                               4428   1        6.4305      5.9579      1503    8.4196      3804   
+      [OCN-TO-MED] IPDv05p5                                                4428   1        5.5805      5.2475      587     5.8853      2829   
+      [MED-TO-OCN] IPDv05p4                                                4428   1        5.0464      4.1213      1734    8.9082      3962   
+      [OCN-TO-MED] IPDv05p6a                                               4428   1        4.6502      4.6232      2802    4.7168      3691   
+      [ESM0001-TO-MED] IPDv05p5                                            4428   1        4.1796      3.9035      1559    5.3932      3989   
+      [MED-TO-ESM0001] IPDv05p6a                                           4428   1        3.8742      3.7075      1099    3.9251      2961   
+      [OCN-TO-ESM0001] IPDv05p5                                            4428   1        3.6368      3.1971      2816    4.3842      4402   
+      [ATM-TO-ESM0001] IPDv05p5                                            4428   1        3.6220      3.2256      110     4.3373      3618   
+      [OCN-TO-MED] IPDv05p4                                                4428   1        3.3873      3.1080      598     3.6481      2829   
+      [ROF-TO-ESM0001] IPDv05p5                                            4428   1        3.3173      3.1020      2812    3.4351      758    
+      [ESM0001-TO-MED] IPDv05p4                                            4428   1        3.2924      3.0309      1579    4.5219      3657   
+      [ESM0001-TO-LND] IPDv05p4                                            4428   1        3.1452      3.0912      497     3.1724      3722   
+      [ESM0001-TO-MED] IPDv05p6a                                           4428   1        3.0632      2.8336      2525    3.9868      3847   
+      [ESM0001-TO-ROF] IPDv05p4                                            4428   1        2.9918      2.9638      3034    3.0477      1002   
+      [ESM0001-TO-ATM] IPDv05p4                                            4428   1        2.8929      2.8599      3755    2.9448      3884   
+      [ESM0001-TO-ATM] IPDv05p5                                            4428   1        2.8306      2.7966      3773    2.8590      222    
+      [MED-TO-ESM0001] IPDv05p4                                            4428   1        2.7748      2.7007      3952    2.8367      1      
+      [ROF-TO-ESM0001] IPDv05p4                                            4428   1        2.7581      2.7359      832     2.8815      4105   
+      [ESM0001-TO-ICE] IPDv05p5                                            4428   1        2.7013      2.6737      349     2.7278      1516   
+      [ROF-TO-ESM0001] IPDv05p6a                                           4428   1        2.7003      2.6338      3691    2.7537      598    
+      [ESM0001-TO-OCN] IPDv05p5                                            4428   1        2.6778      2.6515      779     2.7054      4394   
+      [LND] IPDv01p3                                                       1440   1        8.1982      8.0588      1261    8.3642      0      
+        clm_init2                                                          1440   1        7.4450      7.4375      198     7.4501      508    
+          hdmdyn_strd_adv_total                                            1440   2        0.4311      0.4300      0       0.4411      687    
+            hdmdyn_strd_adv_readLBUB                                       1440   2        0.4307      0.4288      0       0.4400      685    
+              hdmdyn_readLBUB_fbound                                       1440   2        0.3700      0.3686      0       0.3704      1306   
+              hdmdyn_readLBUB_LB_readpio                                   1440   2        0.0329      0.0317      505     0.0335      144    
+              hdmdyn_readLBUB_UB_readpio                                   1440   2        0.0025      0.0022      0       0.0035      506    
+              hdmdyn_readLBUB_filemgt                                      1440   2        0.0001      0.0000      866     0.0003      738    
+              hdmdyn_readLBUB_setup                                        1440   2        0.0000      0.0000      1022    0.0000      911    
+            hdmdyn_strd_adv_tint                                           1440   2        0.0003      0.0001      75      0.0012      486    
+          init_ndep                                                        1440   1        0.3011      0.3004      744     0.3014      1363   
+            ndepdyn_strd_adv_total                                         1440   1        0.0582      0.0575      743     0.0585      1333   
+              ndepdyn_strd_adv_readLBUB                                    1440   1        0.0581      0.0575      744     0.0585      1333   
+                ndepdyn_readLBUB_LB_readpio                                1440   1        0.0276      0.0267      937     0.0277      1093   
+                ndepdyn_readLBUB_fbound                                    1440   1        0.0223      0.0222      0       0.0224      1405   
+                ndepdyn_readLBUB_UB_readpio                                1440   1        0.0054      0.0050      971     0.0063      914    
+                ndepdyn_readLBUB_setup                                     1440   1        0.0000      0.0000      978     0.0000      417    
+                ndepdyn_readLBUB_filemgt                                   1440   1        0.0000      0.0000      1374    0.0000      0      
+              ndepdyn_strd_adv_tint                                        1440   1        0.0000      0.0000      890     0.0000      1024   
+          lnfmdyn_strd_adv_total                                           1440   1        0.1200      0.1117      588     0.1274      14     
+            lnfmdyn_strd_adv_readLBUB                                      1440   1        0.1199      0.1117      579     0.1274      14     
+              lnfmdyn_readLBUB_fbound                                      1440   1        0.0781      0.0780      0       0.0783      470    
+              lnfmdyn_readLBUB_UB_readpio                                  1440   1        0.0215      0.0131      579     0.0291      12     
+              lnfmdyn_readLBUB_LB_readpio                                  1440   1        0.0176      0.0174      109     0.0178      621    
+              lnfmdyn_readLBUB_setup                                       1440   1        0.0000      0.0000      317     0.0000      1329   
+              lnfmdyn_readLBUB_filemgt                                     1440   1        0.0000      0.0000      556     0.0000      0      
+            lnfmdyn_strd_adv_tint                                          1440   1        0.0000      0.0000      464     0.0000      217    
+          ch4_strd_adv_total                                               1440   1        0.1050      0.1047      0       0.1051      1081   
+            ch4_strd_adv_readLBUB                                          1440   1        0.1049      0.1046      0       0.1050      1081   
+              ch4_readLBUB_LB_readpio                                      1440   1        0.0961      0.0936      1045    0.0963      722    
+              ch4_readLBUB_fbound                                          1440   1        0.0048      0.0045      0       0.0048      1      
+              ch4_readLBUB_UB_readpio                                      1440   1        0.0008      0.0006      1297    0.0033      1077   
+              ch4_readLBUB_setup                                           1440   1        0.0000      0.0000      495     0.0000      410    
+              ch4_readLBUB_filemgt                                         1440   1        0.0000      0.0000      114     0.0000      0      
+            ch4_strd_adv_tint                                              1440   1        0.0000      0.0000      436     0.0001      1098   
+          init_accflds                                                     1440   1        0.0210      0.0012      704     0.0234      1018   
+          init_dyn_subgrid                                                 1440   1        0.0004      0.0003      1060    0.0004      928    
+          init_orbd                                                        1440   1        0.0001      0.0000      1293    0.0004      502    
+          fates_globals                                                    1440   1        0.0000      0.0000      459     0.0002      749    
+          init_lnd2glc                                                     1440   1        0.0000      0.0000      826     0.0000      91     
+          init_wlog                                                        1440   1        0.0000      0.0000      1345    0.0001      0      
+        clm_init1                                                          1440   1        0.1712      0.0332      1261    0.3383      4      
+      [ESM0001-TO-ROF] IPDv05p5                                            4428   1        2.6069      2.5798      4394    2.7383      1098   
+      [ESM0001-TO-ROF] IPDv05p6a                                           4428   1        2.5916      2.5649      4424    2.6166      2943   
+      [GLC-TO-ESM0001] IPDv05p4                                            4428   1        2.1116      1.6992      2841    2.9350      4403   
+      [MED-TO-ATM] IPDv05p4                                                3600   1        2.1927      2.1374      1       2.2282      2410   
+      [ESM0001-TO-LND] IPDv05p5                                            4428   1        1.7449      1.7164      2706    1.7720      349    
+      [LND-TO-ESM0001] IPDv05p4                                            4428   1        1.7070      1.3072      2815    2.5428      4423   
+      [GLC-TO-ESM0001] IPDv05p5                                            4428   1        1.6749      1.4979      2989    2.4968      3615   
+      [MED-TO-ROF] IPDv05p4                                                3600   1        2.0388      2.0208      810     2.0405      619    
+      [LND-TO-ESM0001] IPDv05p5                                            4428   1        1.5779      1.0996      2815    2.5872      4417   
+      [GLC-TO-ESM0001] IPDv05p6a                                           4428   1        1.5482      1.3753      223     2.2180      3603   
+      [ESM0001-TO-OCN] IPDv05p4                                            4428   1        1.5450      1.5195      2344    1.5715      3034   
+      [OCN-TO-ESM0001] IPDv05p4                                            4428   1        1.4396      1.0208      2882    2.2584      4422   
+      [ESM0001-TO-GLC] IPDv05p4                                            4428   1        1.4015      1.3458      1002    1.4588      2267   
+      [MED-TO-LND] IPDv05p4                                                3600   1        1.5338      1.5176      2297    1.5625      824    
+      [GLC-TO-MED] IPDv05p5                                                3600   1        1.4503      1.3966      1078    1.4542      244    
+      [GLC-TO-MED] IPDv05p4                                                3600   1        1.3988      1.1171      587     1.6497      2829   
+      [ICE-TO-ESM0001] IPDv05p5                                            4428   1        1.0962      0.8682      2977    2.0911      3611   
+      [ICE-TO-ESM0001] IPDv05p4                                            4428   1        1.0186      0.8030      1574    1.9139      3660   
+      [ESM0001-TO-ICE] IPDv05p4                                            4428   1        0.9073      0.8803      336     0.9359      2344   
+      [LND-TO-ESM0001] IPDv05p6a                                           4428   1        0.9022      0.6046      1718    1.7962      3603   
+      [GLC-TO-MED] IPDv05p6a                                               3600   1        1.0950      1.0669      2640    1.1215      2065   
+      [OCN-TO-ESM0001] IPDv05p6a                                           4428   1        0.8867      0.7412      3549    1.4179      3819   
+      [LND-TO-MED] IPDv05p5                                                3600   1        1.0864      0.7491      592     1.4008      2778   
+      [ROF-TO-MED] IPDv05p5                                                3600   1        0.9923      0.8613      758     1.1944      2820   
+      [LND-TO-MED] IPDv05p4                                                3600   1        0.9729      0.6967      609     1.2544      2824   
+      [ATM-TO-MED] IPDv05p6a                                               3600   1        0.9650      0.6063      252     1.2723      2822   
+      [MED-TO-ATM] IPDv05p5                                                3600   1        0.9409      0.6033      590     1.2364      2836   
+      [MED-TO-ICE] IPDv05p4                                                3600   1        0.9302      0.9014      824     0.9788      1734   
+      [MED-TO-ROF] IPDv05p5                                                3600   1        0.8851      0.8457      1901    0.8868      632    
+      [ICE-TO-ESM0001] IPDv05p6a                                           4428   1        0.7007      0.5640      3201    1.2135      3933   
+      [MED-TO-LND] IPDv05p6a                                               3600   1        0.8580      0.7458      1098    0.9064      1542   
+      [ICE-TO-MED] IPDv05p4                                                3600   1        0.8467      0.7945      3478    0.8872      204    
+      [ROF-TO-MED] IPDv05p4                                                3600   1        0.8407      0.7935      2067    0.8619      222    
+      [MED-TO-ATM] IPDv05p6a                                               3600   1        0.8371      0.7523      1225    0.8760      2471   
+      [MED-TO-ROF] IPDv05p6a                                               3600   1        0.8228      0.7752      2506    0.8456      1164   
+      [ATM-TO-MED] IPDv05p5                                                3600   1        0.8037      0.6317      1854    1.0588      125    
+      [ROF-TO-MED] IPDv05p6a                                               3600   1        0.7931      0.7397      1465    0.8182      2794   
+      [ESM0001-TO-GLC] IPDv05p6a                                           4428   1        0.6405      0.6134      2943    0.6666      796    
+      [ESM0001-TO-GLC] IPDv05p5                                            4428   1        0.6196      0.5423      3932    0.6747      984    
+      [MED-TO-ICE] IPDv05p5                                                3600   1        0.7595      0.7264      3242    0.7984      386    
+      [ICE-TO-MED] IPDv05p5                                                3600   1        0.7255      0.6981      2557    0.7512      1175   
+      [MED-TO-LND] IPDv05p5                                                3600   1        0.7178      0.6996      723     0.7505      3242   
+      [MED-TO-ICE] IPDv05p6a                                               3600   1        0.7178      0.6211      984     0.7417      1503   
+      [ESM0001-TO-LND] IPDv05p6a                                           4428   1        0.5762      0.5131      3957    0.6024      4063   
+      [ATM-TO-MED] IPDv05p4                                                3600   1        0.6979      0.6230      3202    0.8010      1325   
+      [ESM0001-TO-ATM] IPDv05p6a                                           4428   1        0.5659      0.5328      3847    0.6283      3957   
+      [ESM0001-TO-ICE] IPDv05p6a                                           4428   1        0.5542      0.5274      4063    0.5815      2836   
+      [ESM0001-TO-OCN] IPDv05p6a                                           4428   1        0.5154      0.4885      1551    0.5429      4424   
+      [ICE-TO-MED] IPDv05p6a                                               3600   1        0.6209      0.5924      2947    0.6507      3549   
+      [LND-TO-MED] IPDv05p6a                                               3600   1        0.5975      0.5654      374     0.6225      2201   
+      [MED] IPDv03p4                                                       3600   1        0.4588      0.4035      2267    0.4627      610    
+      [GLC-TO-MED] IPDv05p6b                                               3600   1        0.4400      0.4400      1397    0.4400      1760   
+      [MED-TO-OCN] IPDv05p6b                                               4428   1        0.2320      0.1550      3529    0.5668      4150   
+      [LND-TO-MED] IPDv05p6b                                               3600   1        0.1669      0.1669      2196    0.1669      3426   
+      [MED-TO-LND] IPDv05p6b                                               3600   1        0.1481      0.1480      1944    0.1481      2768   
+      [ICE-TO-MED] IPDv05p6b                                               3600   1        0.1459      0.1459      3546    0.1462      1430   
+      [MED-TO-ATM] IPDv05p6b                                               3600   1        0.1391      0.1383      441     0.1393      3452   
+      [OCN-TO-MED] IPDv05p6b                                               4428   1        0.1074      0.1073      4279    0.1074      1876   
+      [MED-TO-ICE] IPDv05p6b                                               3600   1        0.1243      0.1243      895     0.1243      318    
+      [ESM0001-TO-MED] IPDv05p6b                                           4428   1        0.0837      0.0014      134     0.4415      3879   
+      [ROF] IPDv01p3                                                       1440   1        0.2489      0.2485      22      0.2503      286    
+      [MED-TO-ROF] IPDv05p6b                                               3600   1        0.0847      0.0847      87      0.0847      248    
+      [ROF-TO-MED] IPDv05p6b                                               3600   1        0.0843      0.0842      3402    0.0843      1256   
+      [ATM-TO-MED] IPDv05p6b                                               3600   1        0.0820      0.0820      3019    0.0820      1868   
+      [OCN] IPDv03p3                                                       828    1        0.2489      0.2451      3971    0.2702      4338   
+      [MED] IPDv03p5                                                       3600   1        0.0564      0.0548      2842    0.1077      1098   
+      [GLC] IPDv01p3                                                       36     1        4.2799      4.2796      7       4.2803      0      
+        glissade_velo_driver                                               36     1        3.7909      3.7735      3       3.8007      31     
+          glissade_velo_higher_solver                                      36     1        3.7907      3.7734      3       3.8005      31     
+            glissade_vhs_nonlinear_loop                                    36     1        3.6586      3.6583      24      3.6588      31     
+              glissade_pcg_slv_struct                                      36     23       1.7914      1.7908      8       1.7921      29     
+              glissade_assemble_2d                                         36     57       1.2049      1.0264      2       1.2851      27     
+              glissade_halo_Aijm                                           36     57       0.1211      0.0284      24      0.3148      3      
+              glissade_accel_picard                                        36     57       0.0791      0.0721      24      0.0861      2      
+              glissade_resid_vec                                           36     57       0.0566      0.0566      17      0.0567      13     
+              glissade_dirichlet_2d                                        36     57       0.0246      0.0183      3       0.0343      26     
+              glissade_chk_symmetry                                        36     57       0.0210      0.0037      4       0.0413      22     
+              glissade_resid_vec2                                          36     23       0.0024      0.0020      4       0.0027      3      
+              glissade_halo_bxxs                                           36     57       0.0012      0.0011      7       0.0014      17     
+              glissade_halo_xvel                                           36     23       0.0008      0.0006      28      0.0013      8      
+            glissade_vhs_init                                              36     1        0.0187      0.0183      35      0.0190      14     
+              glissade_halo_nodeID                                         36     1        0.0003      0.0001      35      0.0009      0      
+              glissade_load_vector_gravity                                 36     1        0.0001      0.0000      3       0.0003      5      
+              glissade_load_vector_lateral_bc                              36     1        0.0001      0.0000      4       0.0002      24     
+            glissade_vhs_cleanup                                           36     1        0.0034      0.0022      33      0.0056      23     
+      [ICE-TO-ESM0001] IPDv05p6b                                           4428   1        0.0317      0.0005      36      0.1674      3608   
+      [OCN-TO-ESM0001] IPDv05p6b                                           4428   1        0.0277      0.0002      1361    0.1465      4036   
+      [MED-TO-ESM0001] IPDv05p6b                                           4428   1        0.0267      0.0010      3449    0.0301      607    
+      [ICE] IPDv01p3                                                       2160   1        0.0529      0.0464      3429    0.0703      3546   
+      [ATM-TO-ESM0001] IPDv05p6b                                           4428   1        0.0164      0.0005      684     0.0853      4125   
+      [GLC-TO-ESM0001] IPDv05p6b                                           4428   1        0.0161      0.0003      3528    0.0846      3632   
+      [LND-TO-ESM0001] IPDv05p6b                                           4428   1        0.0158      0.0004      1844    0.0825      4318   
+      [MED] IPDv03p3                                                       3600   1        0.0147      0.0141      232     0.0255      287    
+      [ESM0001] IPDv05p4                                                   4428   1        0.0008      0.0006      3610    0.0015      435    
+      [MED] IPDv03p6                                                       3600   1        0.0010      0.0009      688     0.0017      134    
+      [ESM0001-TO-ICE] IPDv05p6b                                           4428   1        0.0006      0.0005      1769    0.0006      974    
+      [ESM0001-TO-ATM] IPDv05p6b                                           4428   1        0.0005      0.0005      136     0.0005      4228   
+      [ESM0001-TO-LND] IPDv05p6b                                           4428   1        0.0005      0.0005      135     0.0005      466    
+      [ESM0001-TO-OCN] IPDv05p6b                                           4428   1        0.0005      0.0004      135     0.0005      1544   
+      [ROF-TO-ESM0001] IPDv05p6b                                           4428   1        0.0004      0.0003      4028    0.0004      311    
+      [ESM0001-TO-ROF] IPDv05p6b                                           4428   1        0.0003      0.0002      3222    0.0003      1041   
+      [ATM] IPDv03p6                                                       3600   1        0.0003      0.0003      2446    0.0005      134    
+      [ESM0001-TO-GLC] IPDv05p6b                                           4428   1        0.0002      0.0002      134     0.0003      4281   
+      [ICE] IPDv01p4                                                       2160   1        0.0004      0.0003      2077    0.0011      2617   
+      [LND] IPDv01p4                                                       1440   1        0.0005      0.0003      526     0.0010      430    
+      [ESM0001] IPDv05p6                                                   4428   1        0.0001      0.0000      1753    0.0007      1123   
+      [OCN] IPDv03p6                                                       828    1        0.0004      0.0003      4173    0.0005      3752   
+      [ROF] IPDv01p4                                                       1440   1        0.0001      0.0001      483     0.0002      134    
+      [GLC] IPDv01p4                                                       36     1        0.0001      0.0000      28      0.0001      18     
+    [ESM0001] Init 0                                                       4428   1        0.0003      0.0001      511     0.0005      3026   
+    [ensemble] IPDv05p3                                                    4428   1        0.0000      0.0000      2048    0.0000      2988   
+    [ensemble] IPDv05p4                                                    4428   1        0.0000      0.0000      3975    0.0001      428    
+    [ensemble] IPDv05p8                                                    4428   1        0.0000      0.0000      4190    0.0000      1617   
+    [ensemble] IPDv05p1                                                    4428   1        0.0000      0.0000      2140    0.0000      3528   
+    [ensemble] IPDv05p2                                                    4428   1        0.0000      0.0000      3039    0.0000      2988   
+    [ensemble] IPDv05p6                                                    4428   1        0.0000      0.0000      4076    0.0001      418    
+  [ensemble] FinalizePhase1                                                4428   1        5.5881      0.0184      1768    29.8390     3637   
+    [ESM0001] FinalizePhase1                                               4428   1        5.5869      0.0177      1732    29.8382     3637   
+      [OCN] FinalizePhase1                                                 828    1        29.7687     29.0730     3600    29.8184     3638   
+      [MED-TO-ATM] FinalizePhase1                                          3600   1        0.0006      0.0002      978     0.0226      87     
+      [ESM0001-TO-MED] FinalizePhase1                                      4428   1        0.0003      0.0001      1964    0.0215      3611   
+      [MED-TO-OCN] FinalizePhase1                                          4428   1        0.0001      0.0001      20      0.0003      3600   
+      [OCN-TO-MED] FinalizePhase1                                          4428   1        0.0001      0.0001      609     0.0003      4193   
+      [MED-TO-LND] FinalizePhase1                                          3600   1        0.0001      0.0001      1343    0.0002      589    
+      [MED-TO-ICE] FinalizePhase1                                          3600   1        0.0001      0.0001      860     0.0002      589    
+      [ICE-TO-MED] FinalizePhase1                                          3600   1        0.0001      0.0001      4       0.0002      3452   
+      [LND-TO-MED] FinalizePhase1                                          3600   1        0.0001      0.0001      33      0.0002      3427   
+      [ATM-TO-MED] FinalizePhase1                                          3600   1        0.0001      0.0001      14      0.0002      3427   
+      [MED-TO-ROF] FinalizePhase1                                          3600   1        0.0001      0.0001      27      0.0002      584    
+      [ROF-TO-MED] FinalizePhase1                                          3600   1        0.0001      0.0001      21      0.0001      3445   
+      [GLC-TO-MED] FinalizePhase1                                          3600   1        0.0001      0.0001      2337    0.0001      3445   
+      [ESM0001-TO-ATM] FinalizePhase1                                      4428   1        0.0001      0.0001      2202    0.0001      3618   
+      [ESM0001-TO-LND] FinalizePhase1                                      4428   1        0.0001      0.0001      2176    0.0001      3617   
+      [ESM0001-TO-ICE] FinalizePhase1                                      4428   1        0.0001      0.0001      32      0.0001      4023   
+      [ESM0001-TO-ROF] FinalizePhase1                                      4428   1        0.0001      0.0001      26      0.0001      4193   
+      [ESM0001-TO-OCN] FinalizePhase1                                      4428   1        0.0001      0.0001      14      0.0001      3846   
+      [ATM-TO-ESM0001] FinalizePhase1                                      4428   1        0.0001      0.0001      2657    0.0001      3690   
+      [ESM0001-TO-GLC] FinalizePhase1                                      4428   1        0.0001      0.0001      26      0.0002      3347   
+      [MED-TO-ESM0001] FinalizePhase1                                      4428   1        0.0001      0.0001      29      0.0001      4193   
+      [LND-TO-ESM0001] FinalizePhase1                                      4428   1        0.0001      0.0001      15      0.0001      3663   
+      [ICE-TO-ESM0001] FinalizePhase1                                      4428   1        0.0001      0.0001      1773    0.0001      3760   
+      [OCN-TO-ESM0001] FinalizePhase1                                      4428   1        0.0001      0.0001      34      0.0002      4203   
+      [ROF-TO-ESM0001] FinalizePhase1                                      4428   1        0.0001      0.0001      34      0.0002      3690   
+      [GLC-TO-ESM0001] FinalizePhase1                                      4428   1        0.0001      0.0001      2698    0.0002      4374   
+      [MED] FinalizePhase1                                                 3600   1        0.0000      0.0000      2691    0.0002      0      
+      [ATM] FinalizePhase1                                                 3600   1        0.0000      0.0000      2221    0.0001      0      
+      [ICE] FinalizePhase1                                                 2160   1        0.0000      0.0000      1570    0.0001      1440   
+      [LND] FinalizePhase1                                                 1440   1        0.0000      0.0000      694     0.0001      0      
+      [ROF] FinalizePhase1                                                 1440   1        0.0000      0.0000      596     0.0001      0      
+      [GLC] FinalizePhase1                                                 36     1        0.0004      0.0000      8       0.0147      0      
