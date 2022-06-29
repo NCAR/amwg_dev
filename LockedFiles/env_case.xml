@@ -177,7 +177,7 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD">
+    <entry id="COMPSET" value="1850_CAM60%WCSC_CLM50%BGC-CROP_CICE5_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
@@ -208,7 +208,7 @@
       <desc>Root directory of the case land ice component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_ICE" value="$SRCROOT/components/cice/">
+    <entry id="COMP_ROOT_DIR_ICE" value="$SRCROOT/components/cice5/">
       <type>char</type>
       <desc>Root directory of the case sea ice component  </desc>
       <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
@@ -259,10 +259,17 @@
       <valid_values>clm,ctsm</valid_values>
       <desc>Name of land component</desc>
     </entry>
-    <entry id="COMP_ICE" value="cice">
+    <entry id="COMP_ICE" value="cice5">
       <type>char</type>
-      <valid_values>cice</valid_values>
+      <valid_values>cice5</valid_values>
       <desc>Name of sea-ice component</desc>
+    </entry>
+    <entry id="ICE_PE_CHANGE_REQUIRES_REBUILD" value="true">
+      <type>logical</type>
+      <valid_values>true,false</valid_values>
+      <desc>This component requires a clean build if the pelayout changes, if this variable is
+          not defined for a component it is assumed false
+    </desc>
     </entry>
     <entry id="COMP_OCN" value="mom">
       <type>char</type>
@@ -296,7 +303,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.cam6.005">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -313,7 +320,7 @@
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cam6.005">
+    <entry id="CASE" value="b.cesm3_cam041_mom.B1850WcMOM.ne30_L58_t061.cice5.cam6.005">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -343,7 +350,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="e524e9e0d2c5d69d5d8cd598c8b3e02735ce420f8c1ca4408585fe87321ac920">
+    <entry id="CASE_HASH" value="f3bba1cc064cbda88248ab9f7cd555f1bf386e1e4471c6eacb9e9d1ac04d415b">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
