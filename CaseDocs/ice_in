@@ -181,6 +181,7 @@
   nfreq = 25
   restart_coszen = .true.
   rotate_wind = .true.
+  saltflux_option = 'prognostic'
   tfrz_option = "mushy"
   update_ocn_f = .true.
   ustar_min = 0.005

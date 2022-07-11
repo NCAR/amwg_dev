@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cesm2_3_beta08-12-g73d5bb3">
+    <entry id="MODEL_VERSION" value="cesm2_3_beta08-16-g228563a">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -296,7 +296,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom.B1850WscMOM.ne30_L58_t061.008">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_c.B1850WscMOM.ne30_L58_t061.009">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +305,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_c/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_c">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="b.cesm3_cam058_mom.B1850WscMOM.ne30_L58_t061.008">
+    <entry id="CASE" value="b.cesm3_cam058_mom_c.B1850WscMOM.ne30_L58_t061.009">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +325,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_c/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +343,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="299b1c8f674534e38a8a00e19a30f6f46261ca92279371f298a140b635251046">
+    <entry id="CASE_HASH" value="833291baa53f9cbc0715b37fbc4ab9cb2f5a992f9cb3557cb850a1c8846a3bb5">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
