@@ -11,7 +11,7 @@
   history_file = "unknown"
   history_format = "default"
   history_precision = 4
-  ice_ic = '/glade/scratch/gmarques/archive/gmom.e23.GJRAv3.TL319_t061_zstar_N75.nuopc.cice6salt.001/rest/0060-01-01-00000/gmom.e23.GJRAv3.TL319_t061_zstar_N75.nuopc.cice6salt.001.cice.r.0060-01-01-00000.nc'
+  ice_ic = "default"
   latpnt = 90.0, -65.0
   lcdf64 = .true.
   lonpnt = 0.0, -45.0
@@ -26,7 +26,7 @@
   restart_format = "default"
   use_leap_years = .false.
   version_name = "undefined_version_name"
-  write_ic = .true.
+  write_ic = .false.
   year_init = 1
 /
 &grid_nml

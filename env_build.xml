@@ -7,31 +7,31 @@
     this is done automatically by the scripts.
     </header>
   <group id="build_grid">
-    <entry id="GRID" value="a%ne30np4.pg3_l%ne30np4.pg3_oi%tx0.66v1_r%r05_g%gris4_w%null_z%null_m%tx0.66v1">
+    <entry id="GRID" value="a%0.9x1.25_l%0.9x1.25_oi%tx0.66v1_r%r05_g%gris4_w%null_z%null_m%tx0.66v1">
       <type>char</type>
       <desc>Model grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ATM_GRID" value="ne30np4.pg3">
+    <entry id="ATM_GRID" value="0.9x1.25">
       <type>char</type>
       <desc>atmosphere grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ATM_NX" value="48600">
+    <entry id="ATM_NX" value="288">
       <type>integer</type>
       <desc>number of atmosphere cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ATM_NY" value="1">
+    <entry id="ATM_NY" value="192">
       <type>integer</type>
       <desc>number of atmosphere cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="LND_GRID" value="ne30np4.pg3">
+    <entry id="LND_GRID" value="0.9x1.25">
       <type>char</type>
       <desc>land grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="LND_NX" value="48600">
+    <entry id="LND_NX" value="288">
       <type>integer</type>
       <desc>number of land cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="LND_NY" value="1">
+    <entry id="LND_NY" value="192">
       <type>integer</type>
       <desc>number of land cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -131,7 +131,7 @@
     </entry>
   </group>
   <group id="build_def">
-    <entry id="CIME_OUTPUT_ROOT" value="/glade/scratch/gmarques">
+    <entry id="CIME_OUTPUT_ROOT" value="/glade/scratch/hannay">
       <type>char</type>
       <valid_values/>
       <desc>Output root directory for each machine.
@@ -313,12 +313,12 @@
     </entry>
   </group>
   <group id="build_component_cam">
-    <entry id="CAM_CPPDEFS" value="    -DPLON=1 -DPLAT=1 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DCAM  -D_WK_GRAD -DNP=4 -DHAVE_F2003_PTR_BND_REMAP -DFVM_TRACERS -D_MPI -DPLEV=58 -DPCNST=37 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
+    <entry id="CAM_CPPDEFS" value="    -DPLON=288 -DPLAT=192 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DPLEV=58 -DPCNST=37 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
       <type>char</type>
       <valid_values/>
       <desc>CAM cpp definitions (setup automatically - DO NOT EDIT)</desc>
     </entry>
-    <entry id="CAM_DYCORE" value="se">
+    <entry id="CAM_DYCORE" value="fv">
       <type>char</type>
       <valid_values>eul,fv,fv3,se,mpas</valid_values>
       <desc>CAM dynamical core</desc>

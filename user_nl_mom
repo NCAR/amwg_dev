@@ -1,15 +1,2 @@
 ENTHALPY_FROM_COUPLER = True
 MEKE_GEOMETRIC_ALPHA = 0.10
-! initialize from a previous run
-INPUTDIR = "INPUT"
-INIT_LAYERS_FROM_Z_FILE = False
-THICKNESS_CONFIG = "thickness_file"
-THICKNESS_FILE = "gmom.cice6salt.001.mom6.r.0060-01-01-00000.nc"
-TS_CONFIG = "file"
-TS_FILE = "gmom.cice6salt.001.mom6.r.0060-01-01-00000.nc"
-TEMP_IC_VAR = "Temp"
-SALT_IC_VAR = "Salt"
-VELOCITY_CONFIG = "file"
-VELOCITY_FILE = "gmom.cice6salt.001.mom6.r.0060-01-01-00000.nc"
-
-
