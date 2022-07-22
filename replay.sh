@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2022-07-09 21:52:42
+# Created 2022-07-12 13:16:48
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_c.B1850WscMOM.f09_L58_t061.011"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_c.B1850WscMOM.f09_L58_t061.012"
 
 /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_c/cime/scripts/create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD --res f09_t061 --case "${CASEDIR}" --run-unsupported --project 93300722
 
@@ -16,9 +16,7 @@ cd "${CASEDIR}"
 
 ./case.build
 
-./case.build
-
-./case.build
+./preview_namelists
 
 ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears
 
@@ -26,5 +24,5 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./xmlchange RESUBMIT=4
+./xmlchange RESUBMIT=5
 
