@@ -1,8 +1,4 @@
-
-ncdata = '/glade/p/cesm/amwg_dev/juliob/cam_ic_files/fv_dycore/cami_test_FV_1_0.9x1.25_32L_CAM_32L_Top_42km.nc'
-
-clubb_gamma_coef   =  0.298
-
+ncdata = '/glade/p/cesm/amwg_dev/juliob/cam_ic_files/fv_dycore/cami_test_FV_1_0.9x1.25_58L_GRID_48_taperstart10km_lowtop_BL10_v3p1_beta1p75_Top_43km.nc'
 
 mfilt           = 0,5,20,40,120,240,365,73,365
 nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
@@ -11,7 +7,7 @@ fexcl1 = ' '
 empty_htapes = .true.
 
 fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 
-'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC',  'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLOUD', 'CMFMC_DP', 
+'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLOUD', 'CMFMC_DP', 
 'CT_H2O', 'DCQ', 'DQCORE', 'DTCOND', 'DTCORE', 'DTV', 'EVAPPREC', 'EVAPSNOW', 'FCTI', 'FCTL', 'FICE', 'FLDS', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC', 'FLUT', 
 'FREQZM', 'FSDS', 'FSDSC', 'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA', 'ICEFRAC', 'LANDFRAC', 'LHFLX', 'LWCF', 'MPDICE', 'MPDLIQ', 'MPDQ', 'MPDT', 
 'OCNFRAC', 'OMEGA', 'OMEGA500', 'PBLH', 'PHIS', 'PINT', 'PMID', 'PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL', 'PTEQ', 'PTTEND', 'Q', 
@@ -23,7 +19,9 @@ fincl2 = 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U',
 
 fincl4 =  'PRECC','PRECL'
 
-tracer_cnst_specifier          = 'O3','OH','NO3','HO2'
+tracer_cnst_specifier          = 'O3','OH','NO3','HO2','HALONS'
 
 co2_flag=.false.
+
+bnd_topo =  '/glade/work/juliob/bndtopo/fv_0.9x1.25_gmted2010_modis_bedmachine_nc3000_Laplace0100_20220708.nc'
 
