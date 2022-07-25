@@ -1,5 +1,5 @@
 ---
-name: Run description (Simulation with cesm3_cam6_3_058_MOM_c)
+name: Run description (Simulation with cesm3_cam6_3_058_MOM_e)
 about: Documenting information about a CAM/CESM simulation. This contains information about the location of the run directory, sandbox, etc 
 title: Casename (enter the name of the run here)
 labels: ''
@@ -17,11 +17,10 @@ https://github.com/NCAR/amwg_dev/tree/$CASE
 
 **Sandbox:**
 Locally (if still available):
-/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_c
+/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e
 
 On github:
-https://github.com/ESCOMP/CESM/tree/cesm3_cam6_3_058_MOM
-hash: 228563a
+N/A
 
 **Diagnostics:**
 AMWG diags (if available)
