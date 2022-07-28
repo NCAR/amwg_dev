@@ -3,16 +3,6 @@
  dtime = 1800
 
 
-ncdata = '/glade/p/cesm/amwg_dev/juliob/cam_ic_files/fv_dycore/cami_test_FV_1_0.9x1.25_32L_CAM_32L_Top_42km.nc'
-
-
-
-clubb_gamma_coef   =  0.298
-
-
-
-
-
 mfilt           = 0,5,20,40,120,240,365,73,365
 
 nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
@@ -59,9 +49,37 @@ co2_flag=.false.
 
 
 
+clubb_gamma_coef   =  0.298
+
+clubb_c14 = 2.2D0
+
 clubb_l_trapezoidal_rule_zm          =  .true.  
 
 clubb_l_trapezoidal_rule_zt          =  .true.
+
+
+
+ncdata = '/glade/p/cesm/amwg_dev/juliob/cam_ic_files/se_dycore/FWsc_ne30pg3_32L_CAM_32L_grid_Top_42km.nc'
+
+
+
+interpolate_output = .true.,.true.
+
+interpolate_nlat = 192,192
+
+interpolate_nlon = 288,288
+
+
+
+se_rsplit            = 3
+
+se_nsplit           = 2
+
+se_hypervis_subcycle =  4
+
+
+
+bnd_topo  = '/glade/p/cgd/amp/pel/topo/cesm3/ne30pg3_gmted2010_bedmachine_nc3000_Co060_20220427.nc'
 
 
 

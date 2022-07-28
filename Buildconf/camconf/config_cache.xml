@@ -3,7 +3,7 @@
 <config_definition>
 
 <commandline>
-/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/components/cam/bld/configure -s -fc_type intel -dyn fv -hgrid 0.9x1.25 -cpl nuopc -usr_src /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016/SourceMods/src.cam -spmd -nosmp -ocn mom -phys cam6
+/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/components/cam/bld/configure -s -fc_type intel -dyn se -hgrid ne30np4.pg3 -cpl nuopc -usr_src /glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850MOM.ne30_L32_t061.cam6_cice5.017/SourceMods/src.cam -spmd -nosmp -ocn mom -phys cam6
 </commandline>
 <entry id="age_of_air_trcs" value="0" list="" valid_values="0,1">
 Switch on (off) age of air tracers: 0=off, 1=on.
@@ -22,7 +22,7 @@ be set to DOCN.
 <entry id="build_chem_proc" value="0,1" list="" valid_values="">
 Switch to force the build of the chemistry preprocessor.
 </entry>
-<entry id="cam_bld" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016/Buildconf/camconf" list="" valid_values="">
+<entry id="cam_bld" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850MOM.ne30_L32_t061.cam6_cice5.017/Buildconf/camconf" list="" valid_values="">
 CAM build directory; contains .o and .mod files.
 </entry>
 <entry id="cam_dir" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/components/cam" list="" valid_values="">
@@ -91,16 +91,16 @@ Coupling framework: mct or nuopc.  Default: mct.
 <entry id="cppdefs" value=" " list="" valid_values="">
 User specified CPP defines to append to Makefile defaults.
 </entry>
-<entry id="csne" value="1" list="" valid_values="">
+<entry id="csne" value="30" list="" valid_values="">
 Number of elements along one edge of a cubed sphere grid.
 </entry>
-<entry id="csnp" value="1" list="" valid_values="">
+<entry id="csnp" value="4" list="" valid_values="">
 Number of points on each edge of the elements in a cubed sphere grid.
 </entry>
 <entry id="debug" value="0" list="" valid_values="0,1">
 Switch to enable debugging options for Fortran compiler: 0=off, 1=on.
 </entry>
-<entry id="dyn" value="fv" list="" valid_values="eul,fv,fv3,se,mpas">
+<entry id="dyn" value="se" list="" valid_values="eul,fv,fv3,se,mpas">
 Dynamics package: eul, fv, fv3, se, or mpas.
 </entry>
 <entry id="edit_chem_mech" value="0" list="" valid_values="0,1">
@@ -128,7 +128,7 @@ User specified Fortran optimization flags to override Makefile defaults.
 <entry id="fv3core_libdir" value="" list="" valid_values="">
 Directory containing FV3CORE library.
 </entry>
-<entry id="hgrid" value="0.9x1.25" list="" valid_values="">
+<entry id="hgrid" value="ne30np4" list="" valid_values="">
 Horizontal grid specifier.  The recognized values depend on
 the dynamics type and are contained in the horiz_grid.xml file.
 </entry>
@@ -191,16 +191,16 @@ Directory containing NetCDF library.
 <entry id="nc_mod" value="" list="" valid_values="">
 Directory containing NetCDF module files.
 </entry>
-<entry id="nlat" value="192" list="" valid_values="">
+<entry id="nlat" value="1" list="" valid_values="">
 Number of unique latitude points in rectangular lat/lon grid.
 </entry>
 <entry id="nlev" value="32" list="" valid_values="">
 Number of vertical levels.
 </entry>
-<entry id="nlon" value="288" list="" valid_values="">
+<entry id="nlon" value="1" list="" valid_values="">
 Number of unique longitude points in rectangular lat/lon grid.
 </entry>
-<entry id="npg" value="0" list="" valid_values="">
+<entry id="npg" value="3" list="" valid_values="">
 Number of physics grid cells on each edge of the elements in a cubed sphere grid.
 </entry>
 <entry id="ocn" value="mom" list="" valid_values="docn,dom,som,socn,aquaplanet,pop,mom">
@@ -307,7 +307,7 @@ Switch to turn on UNICON package: 0 => off, 1 => on
 <entry id="usr_mech_infile" value="" list="" valid_values="">
 Path and file name of the user supplied chemistry mechanism file.
 </entry>
-<entry id="usr_src" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016/SourceMods/src.cam" list="1" valid_values="">
+<entry id="usr_src" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850MOM.ne30_L32_t061.cam6_cice5.017/SourceMods/src.cam" list="1" valid_values="">
 User source directories to prepend to the filepath.  Multiple directories
 are specified as a comma separated list with no embedded white space.
 </entry>

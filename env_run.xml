@@ -251,7 +251,7 @@
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="5">
+    <entry id="STOP_N" value="1">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -328,7 +328,7 @@
       ignored.  default: false
     </desc>
     </entry>
-    <entry id="CONTINUE_RUN" value="TRUE">
+    <entry id="CONTINUE_RUN" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="0">
+    <entry id="RESUBMIT" value="10">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:5209274.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:5209275.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:5209165.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:5209166.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -523,7 +523,7 @@
       <desc>Longitude of grid location, in single column mode interpolate datasets to this location
           in single point mode assume all datasets are at this location</desc>
     </entry>
-    <entry id="PTS_DOMAINFILE" value="$DIN_LOC_ROOT/share/domains/domain.lnd.fv0.9x1.25_gx1v7.151020.nc">
+    <entry id="PTS_DOMAINFILE" value="UNSET">
       <type>char</type>
       <desc>used only if if PTS_LAT and PTS_LON are greater than or
           equal to 0.  If this is the case then if PTS_DOMAINFILE is not
@@ -539,11 +539,11 @@
       <type>char</type>
       <desc>path of lnd domain file</desc>
     </entry>
-    <entry id="ATM_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc">
+    <entry id="ATM_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>atm mesh file (full pathname)</desc>
     </entry>
-    <entry id="LND_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc">
+    <entry id="LND_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>lnd mesh file (full pathname)</desc>
     </entry>

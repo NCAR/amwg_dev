@@ -7,31 +7,31 @@
     this is done automatically by the scripts.
     </header>
   <group id="build_grid">
-    <entry id="GRID" value="a%0.9x1.25_l%0.9x1.25_oi%tx0.66v1_r%r05_g%gris4_w%null_z%null_m%tx0.66v1">
+    <entry id="GRID" value="a%ne30np4.pg3_l%ne30np4.pg3_oi%tx0.66v1_r%r05_g%gris4_w%null_z%null_m%tx0.66v1">
       <type>char</type>
       <desc>Model grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ATM_GRID" value="0.9x1.25">
+    <entry id="ATM_GRID" value="ne30np4.pg3">
       <type>char</type>
       <desc>atmosphere grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ATM_NX" value="288">
+    <entry id="ATM_NX" value="48600">
       <type>integer</type>
       <desc>number of atmosphere cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="ATM_NY" value="192">
+    <entry id="ATM_NY" value="1">
       <type>integer</type>
       <desc>number of atmosphere cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="LND_GRID" value="0.9x1.25">
+    <entry id="LND_GRID" value="ne30np4.pg3">
       <type>char</type>
       <desc>land grid - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="LND_NX" value="288">
+    <entry id="LND_NX" value="48600">
       <type>integer</type>
       <desc>number of land cells in i direction - DO NOT EDIT (for experts only)</desc>
     </entry>
-    <entry id="LND_NY" value="192">
+    <entry id="LND_NY" value="1">
       <type>integer</type>
       <desc>number of land cells in j direction - DO NOT EDIT (for experts only)</desc>
     </entry>
@@ -313,12 +313,12 @@
     </entry>
   </group>
   <group id="build_component_cam">
-    <entry id="CAM_CPPDEFS" value="    -DPLON=288 -DPLAT=192 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DPLEV=32 -DPCNST=33 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
+    <entry id="CAM_CPPDEFS" value="    -DPLON=1 -DPLAT=1 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DCAM  -D_WK_GRAD -DNP=4 -DHAVE_F2003_PTR_BND_REMAP -DFVM_TRACERS -D_MPI -DPLEV=32 -DPCNST=33 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
       <type>char</type>
       <valid_values/>
       <desc>CAM cpp definitions (setup automatically - DO NOT EDIT)</desc>
     </entry>
-    <entry id="CAM_DYCORE" value="fv">
+    <entry id="CAM_DYCORE" value="se">
       <type>char</type>
       <valid_values>eul,fv,fv3,se,mpas</valid_values>
       <desc>CAM dynamical core</desc>
@@ -368,7 +368,7 @@
       can manually set the values of CICE_BLCKX, CICE_BLCKY, CICE_MXBLCKS,
       CICE_DECOMPTYPE, and CICE_DECOMPSETTING".</desc>
     </entry>
-    <entry id="CICE_BLCKX" value="15">
+    <entry id="CICE_BLCKX" value="10">
       <type>integer</type>
       <valid_values/>
       <desc>Size of cice block in first horiz dimension
@@ -384,7 +384,7 @@
       This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
       to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
     </entry>
-    <entry id="CICE_MXBLCKS" value="20">
+    <entry id="CICE_MXBLCKS" value="12">
       <type>integer</type>
       <valid_values/>
       <desc>Max number of cice blocks per processor (do not edit if CICE_AUTO_DECOMP is true)
@@ -405,7 +405,7 @@
       This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
       to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
     </entry>
-    <entry id="CICE_CPPDEFS" value=" -Dncdf -DNUMIN=11 -DNUMAX=99  -DNICECAT=5 -DNXGLOB=540 -DNYGLOB=458 -DNTRAERO=3 -DNTRISO=0 -DNBGCLYR=3 -DNICELYR=8 -DNSNWLYR=3 -DTRAGE=1 -DTRFY=1 -DTRLVL=1 -DTRPND=1 -DTRBRI=0 -DTRBGCS=0 -DBLCKX=15 -DBLCKY=2 -DMXBLCKS=20">
+    <entry id="CICE_CPPDEFS" value=" -Dncdf -DNUMIN=11 -DNUMAX=99  -DNICECAT=5 -DNXGLOB=540 -DNYGLOB=458 -DNTRAERO=3 -DNTRISO=0 -DNBGCLYR=3 -DNICELYR=8 -DNSNWLYR=3 -DTRAGE=1 -DTRFY=1 -DTRLVL=1 -DTRPND=1 -DTRBRI=0 -DTRBGCS=0 -DBLCKX=10 -DBLCKY=2 -DMXBLCKS=12">
       <type>char</type>
       <valid_values/>
       <desc>CICE cpp definitions (setup automatically - DO NOT EDIT)</desc>
