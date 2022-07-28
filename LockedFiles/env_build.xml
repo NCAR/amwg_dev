@@ -313,7 +313,7 @@
     </entry>
   </group>
   <group id="build_component_cam">
-    <entry id="CAM_CPPDEFS" value="    -DPLON=288 -DPLAT=192 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DPLEV=58 -DPCNST=37 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
+    <entry id="CAM_CPPDEFS" value="    -DPLON=288 -DPLAT=192 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DPLEV=32 -DPCNST=33 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
       <type>char</type>
       <valid_values/>
       <desc>CAM cpp definitions (setup automatically - DO NOT EDIT)</desc>
@@ -323,7 +323,7 @@
       <valid_values>eul,fv,fv3,se,mpas</valid_values>
       <desc>CAM dynamical core</desc>
     </entry>
-    <entry id="CAM_CONFIG_OPTS" value="-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58">
+    <entry id="CAM_CONFIG_OPTS" value="-phys cam6">
       <type>char</type>
       <valid_values/>
       <desc>
@@ -341,6 +341,74 @@
       <type>char</type>
       <valid_values>on,off</valid_values>
       <desc>Flag to enable building the LILAC cap and coupling code</desc>
+    </entry>
+  </group>
+  <group id="build_component_cice">
+    <entry id="CICE_MODE" value="prognostic">
+      <type>char</type>
+      <valid_values>prognostic,prescribed,thermo_only</valid_values>
+      <desc>Option to the CICE configure utility for the -mode argument (default is prognostic)</desc>
+    </entry>
+    <entry id="CICE_CONFIG_OPTS" value=" -phys cice5 ">
+      <type>char</type>
+      <desc>CICE configure options, see CICE configure utility for details.
+      Provides option(s) for the CLM configure utility.
+      CICE_CONFIG_OPTS are normally set as compset variables (e.g., -ntr_aero 3)
+      and in general should not be modified for supported compsets.
+      It is recommended that if you want to modify this value for your experiment,
+      you should use your own user-defined component sets via using create_newcase
+      with a compset_file argument.
+      This is an advanced flag and should only be used by expert users.
+    </desc>
+    </entry>
+    <entry id="CICE_AUTO_DECOMP" value="true">
+      <type>logical</type>
+      <valid_values>true,false</valid_values>
+      <desc>This is for experts only - if CICE_AUTO_DECOMP is set to false, then
+      can manually set the values of CICE_BLCKX, CICE_BLCKY, CICE_MXBLCKS,
+      CICE_DECOMPTYPE, and CICE_DECOMPSETTING".</desc>
+    </entry>
+    <entry id="CICE_BLCKX" value="15">
+      <type>integer</type>
+      <valid_values/>
+      <desc>Size of cice block in first horiz dimension
+      (DO NOT EDIT if CICE_AUTO_DECOMP is true).
+      This is for experts only - automatically set if CICE_AUTO_DECOMP
+      is true to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
+    </entry>
+    <entry id="CICE_BLCKY" value="2">
+      <type>integer</type>
+      <valid_values/>
+      <desc>Size of cice block in second horiz dimension
+      (DO NOT EDIT if CICE_AUTO_DECOMP is true).
+      This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
+      to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
+    </entry>
+    <entry id="CICE_MXBLCKS" value="20">
+      <type>integer</type>
+      <valid_values/>
+      <desc>Max number of cice blocks per processor (do not edit if CICE_AUTO_DECOMP is true)
+      This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
+      to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
+    </entry>
+    <entry id="CICE_DECOMPTYPE" value="sectrobin">
+      <type>char</type>
+      <valid_values>cartesian,rake,sectrobin,spacecurve,roundrobin,sectrobin,sectcart,null</valid_values>
+      <desc>cice block distribution type (do not edit if CICE_AUTO_DECOMP is true)
+      This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
+      to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
+    </entry>
+    <entry id="CICE_DECOMPSETTING" value="square-ice">
+      <type>char</type>
+      <valid_values>slenderX1,slenderX2,square-ice,square-pop,blocks,null</valid_values>
+      <desc>cice decomp setting for decomp type (do not edit if CICE_AUTO_DECOMP is true)
+      This is for experts only - automatically set if CICE_AUTO_DECOMP is true,
+      to set this value, must first set CICE_AUTO_DECOMP to false.</desc>
+    </entry>
+    <entry id="CICE_CPPDEFS" value=" -Dncdf -DNUMIN=11 -DNUMAX=99  -DNICECAT=5 -DNXGLOB=540 -DNYGLOB=458 -DNTRAERO=3 -DNTRISO=0 -DNBGCLYR=3 -DNICELYR=8 -DNSNWLYR=3 -DTRAGE=1 -DTRFY=1 -DTRLVL=1 -DTRPND=1 -DTRBRI=0 -DTRBGCS=0 -DBLCKX=15 -DBLCKY=2 -DMXBLCKS=20">
+      <type>char</type>
+      <valid_values/>
+      <desc>CICE cpp definitions (setup automatically - DO NOT EDIT)</desc>
     </entry>
   </group>
   <group id="build_component_mom">

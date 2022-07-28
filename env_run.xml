@@ -251,7 +251,7 @@
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="2">
+    <entry id="STOP_N" value="5">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -328,7 +328,7 @@
       ignored.  default: false
     </desc>
     </entry>
-    <entry id="CONTINUE_RUN" value="FALSE">
+    <entry id="CONTINUE_RUN" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="1">
+    <entry id="RESUBMIT" value="0">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:5156998.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:5156999.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:5209274.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:5209275.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1091,7 +1091,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="waccm_sc_1850_cam6">
+    <entry id="CAM_NML_USE_CASE" value="1850_cam6">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1219,22 +1219,6 @@
       BART,CLBJ,DSNY,HARV,JORN,LAJA,MOAB,OAES,OSBS,SCBI,SOAP,STER,TOOL,UNDE,YELL
     </valid_values>
       <desc>Name of site for NEON tower data</desc>
-    </entry>
-  </group>
-  <group id="build_component_cice">
-    <entry id="CICE_MODE" value="prognostic">
-      <type>char</type>
-      <valid_values>prognostic,prescribed,thermo_only</valid_values>
-      <desc>Option to the CICE configure utility for the -mode argument (default is prognostic)</desc>
-    </entry>
-    <entry id="CICE_CONFIG_OPTS" value=" -phys cice5 ">
-      <type>char</type>
-      <desc>CICE configure options, see CICE configure utility for details.
-      It is recommended that if you want to modify this value for your experiment,
-      you should use your own user-defined component sets via using create_newcase
-      with a compset_file argument.
-      This is an advanced flag and should only be used by expert users.
-    </desc>
     </entry>
   </group>
   <group id="run_component_cice">

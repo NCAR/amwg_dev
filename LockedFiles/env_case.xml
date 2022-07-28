@@ -177,7 +177,7 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="1850_CAM60%WCSC_CLM50%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD">
+    <entry id="COMPSET" value="1850_CAM60_CLM50%BGC-CROP_CICE5_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
@@ -208,7 +208,7 @@
       <desc>Root directory of the case land ice component  </desc>
       <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_ICE" value="$SRCROOT/components/cice/">
+    <entry id="COMP_ROOT_DIR_ICE" value="$SRCROOT/components/cice5/">
       <type>char</type>
       <desc>Root directory of the case sea ice component  </desc>
       <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_compsets.xsd</schema>
@@ -259,10 +259,17 @@
       <valid_values>clm,ctsm</valid_values>
       <desc>Name of land component</desc>
     </entry>
-    <entry id="COMP_ICE" value="cice">
+    <entry id="COMP_ICE" value="cice5">
       <type>char</type>
-      <valid_values>cice</valid_values>
+      <valid_values>cice5</valid_values>
       <desc>Name of sea-ice component</desc>
+    </entry>
+    <entry id="ICE_PE_CHANGE_REQUIRES_REBUILD" value="true">
+      <type>logical</type>
+      <valid_values>true,false</valid_values>
+      <desc>This component requires a clean build if the pelayout changes, if this variable is
+          not defined for a component it is assumed false
+    </desc>
     </entry>
     <entry id="COMP_OCN" value="mom">
       <type>char</type>
@@ -296,7 +303,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_c.B1850WscMOM.f09_L58_t061.015">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +312,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_c/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_c">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="b.cesm3_cam058_mom_c.B1850WscMOM.f09_L58_t061.015">
+    <entry id="CASE" value="b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +332,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_c/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +350,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="18c8eb3c4ea0549b8ff49eee58ebe141136b1ab39a8bb8b3606989a9938b41d7">
+    <entry id="CASE_HASH" value="788f57c9ce5158be9f05fec550fffa7589f66b611b2b3620aceaf3b95380df6e">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
