@@ -161,7 +161,7 @@
  clubb_c6thlc		=  1.0     
  clubb_c7		=  0.5     
  clubb_c7b		=  0.5     
- clubb_c8		= 4.6
+ clubb_c8		=  4.2     
  clubb_c8b		=  0.0     
  clubb_c_k10		=  0.5     
  clubb_c_k10h		=  0.3     
@@ -171,7 +171,7 @@
  clubb_detliq_rad		=  8.0D-6  
  clubb_detphase_lowtemp		=  238.15D0 
  clubb_do_liqsupersat		=  .false. 
- clubb_gamma_coef		= 0.298
+ clubb_gamma_coef		= 0.28
  clubb_gamma_coefb		=  0.32    
  clubb_l_brunt_vaisala_freq_moist		=  .false. 
  clubb_l_call_pdf_closure_twice		=  .true.  
@@ -337,7 +337,7 @@
 /
 &phys_ctl_nl
  cam_chempkg		= 'trop_mam4'
- cam_physpkg		= 'cam6'
+ cam_physpkg		= 'cam_dev'
  cam_snapshot_after_num		=    -1 
  cam_snapshot_before_num		=   -1 
  cld_macmic_num_steps		=  3 
@@ -456,7 +456,7 @@
  zmconv_momcu		=  0.7000D0 
  zmconv_num_cin		=  1       
  zmconv_org		=  .false. 
- zmconv_parcel_pbl		= .false.
+ zmconv_parcel_pbl		= .true.
  zmconv_tau		=  3600.0    
  zmconv_tiedke_add		=  0.5     
 /
