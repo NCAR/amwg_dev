@@ -29,7 +29,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 
 
 'T', 'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT', 'UTGWORO', 'UTGW_TOTAL', 
 
-'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT'
+'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'CH4', 'N2O'
 
 
 
@@ -41,7 +41,7 @@ fincl4 =  'PRECC','PRECL'
 
 
 
-tracer_cnst_specifier          = 'O3','OH','NO3','HO2'
+tracer_cnst_specifier          = 'O3','OH','NO3','HO2','HALONS'
 
 
 
@@ -59,7 +59,7 @@ clubb_l_trapezoidal_rule_zt          =  .true.
 
 
 
-ncdata = '/glade/p/cesm/amwg_dev/juliob/cam_ic_files/se_dycore/FWsc_ne30pg3_32L_CAM_32L_grid_Top_42km.nc'
+ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
 
 
 

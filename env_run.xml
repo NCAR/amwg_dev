@@ -328,7 +328,7 @@
       ignored.  default: false
     </desc>
     </entry>
-    <entry id="CONTINUE_RUN" value="FALSE">
+    <entry id="CONTINUE_RUN" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="10">
+    <entry id="RESUBMIT" value="8">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:5337761.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:5337762.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:5564921.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:5564923.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1091,7 +1091,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="1850_cam6">
+    <entry id="CAM_NML_USE_CASE" value="waccm_sc_1850_cam6">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
