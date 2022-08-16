@@ -1,28 +1,28 @@
-2022-08-16 12:53:30: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-08-16 13:03:57: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-08-16 12:53:31: case.setup starting 
+2022-08-16 13:03:58: case.setup starting 
  ---------------------------------------------------
-2022-08-16 12:53:58: case.setup success 
+2022-08-16 13:03:59: case.setup success 
  ---------------------------------------------------
-2022-08-16 12:53:59: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+2022-08-16 13:04:00: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
  ---------------------------------------------------
-2022-08-16 12:53:59: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2022-08-16 13:04:00: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2022-08-16 12:53:59: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2022-08-16 13:04:00: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-08-16 12:54:00: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2022-08-16 13:04:01: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2022-08-16 12:54:00: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2022-08-16 13:04:01: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2022-08-16 12:54:01: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+2022-08-16 13:04:01: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
  ---------------------------------------------------
-2022-08-16 12:54:01: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+2022-08-16 13:04:02: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
  ---------------------------------------------------
-2022-08-16 12:54:01: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2022-08-16 13:04:02: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2022-08-16 12:54:02: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2022-08-16 13:04:02: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
  ---------------------------------------------------
-2022-08-16 12:54:49: case.build starting 
+2022-08-16 13:04:12: case.build starting 
  ---------------------------------------------------
 CESM version is cesm2_3_beta08-16-g228563a
 Processing externals description file : Externals.cfg
@@ -125,17 +125,17 @@ Checking status of externals: cam, silhs, clubb, pumas, atmos_phys, cosp2, chem_
         clean sandbox, on pio2_5_7
     ./share
         clean sandbox, on share1.0.11
-2022-08-16 13:07:34: case.build success 
+2022-08-16 13:17:04: case.build success 
  ---------------------------------------------------
-2022-08-16 13:07:51: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears  </command>
+2022-08-16 13:17:20: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-08-16 13:07:51: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2022-08-16 13:17:20: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2022-08-16 13:12:05: case.submit starting 5668780.chadmin1.ib0.cheyenne.ucar.edu
+2022-08-16 13:34:18: case.submit starting 5669030.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-08-16 13:12:05: case.submit success 5668780.chadmin1.ib0.cheyenne.ucar.edu
+2022-08-16 13:34:18: case.submit success 5669030.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-08-16 13:12:38: case.run starting 5668778.chadmin1.ib0.cheyenne.ucar.edu
+2022-08-16 13:39:46: case.run starting 5669029.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-08-16 13:12:44: model execution starting 5668778.chadmin1.ib0.cheyenne.ucar.edu
+2022-08-16 13:39:52: model execution starting 5669029.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
