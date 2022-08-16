@@ -1,5 +1,5 @@
 ---
-name: Run description (Simulation with cesm3_cam6_3_058_MOM_e)
+name: BWsc1850MOM Simulation with cesm3_cam6_3_058_MOM_e
 about: Documenting information about a CAM/CESM simulation. This contains information about the location of the run directory, sandbox, etc 
 title: Casename (enter the name of the run here)
 labels: ''
