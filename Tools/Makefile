@@ -1,1 +1,1 @@
-/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_b/cime/CIME/Tools/Makefile
+/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/cime/CIME/Tools/Makefile
