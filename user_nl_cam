@@ -24,10 +24,10 @@ co2_flag=.false.
 
 clubb_gamma_coef   =  0.28
 clubb_c14 = 2.2D0
-clubb_l_trapezoidal_rule_zm          =  .true.  
-clubb_l_trapezoidal_rule_zt          =  .true.
+clubb_l_trapezoidal_rule_zm          =  .false.  
+clubb_l_trapezoidal_rule_zt          =  .false.
 
-ncdata = '/glade/p/cesm/amwg_dev/juliob/cam_ic_files/se_dycore/FWsc_ne30pg3_32L_CAM_32L_grid_Top_42km.nc'
+ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
 
 interpolate_output = .true.,.true.
 interpolate_nlat = 192,192
