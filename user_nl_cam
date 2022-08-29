@@ -18,16 +18,16 @@ fincl2 = 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U',
 
 fincl4 =  'PRECC','PRECL'
 
-tracer_cnst_specifier          = 'O3','OH','NO3','HO2','HALONS'
+tracer_cnst_specifier          = 'O3','OH','NO3','HO2', 'HALONS'
 
 co2_flag=.false.
 
 clubb_gamma_coef   =  0.28
 clubb_c14 = 2.2D0
-clubb_l_trapezoidal_rule_zm          =  .false.  
-clubb_l_trapezoidal_rule_zt          =  .false.
+clubb_l_trapezoidal_rule_zm          =  .true.  
+clubb_l_trapezoidal_rule_zt          =  .true.
 
-ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
+ncdata = '/glade/p/cesm/amwg_dev/juliob/cam_ic_files/se_dycore/FWsc_ne30pg3_32L_CAM_32L_grid_Top_42km.nc'
 
 interpolate_output = .true.,.true.
 interpolate_nlat = 192,192
@@ -38,4 +38,6 @@ se_nsplit           = 2
 se_hypervis_subcycle =  4
 
 bnd_topo  = '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20220622.nc'
+
+pertlim  = 1.d-14
 
