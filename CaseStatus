@@ -1,28 +1,28 @@
-2022-08-16 13:03:57: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-08-29 14:23:53: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-08-16 13:03:58: case.setup starting 
+2022-08-29 14:23:53: case.setup starting 
  ---------------------------------------------------
-2022-08-16 13:03:59: case.setup success 
+2022-08-29 14:23:55: case.setup success 
  ---------------------------------------------------
-2022-08-16 13:04:00: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
+2022-08-29 14:23:56: xmlchange success <command> ./xmlchange RUN_STARTDATE=1979-01-01  </command>
  ---------------------------------------------------
-2022-08-16 13:04:00: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2022-08-29 14:23:56: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2022-08-16 13:04:00: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2022-08-29 14:23:56: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-08-16 13:04:01: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2022-08-29 14:23:57: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2022-08-16 13:04:01: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2022-08-29 14:23:57: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2022-08-16 13:04:01: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
+2022-08-29 14:23:58: xmlchange success <command> ./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001  </command>
  ---------------------------------------------------
-2022-08-16 13:04:02: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
+2022-08-29 14:23:58: xmlchange success <command> ./xmlchange RUN_REFDATE=1989-01-01  </command>
  ---------------------------------------------------
-2022-08-16 13:04:02: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2022-08-29 14:23:59: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2022-08-16 13:04:02: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2022-08-29 14:23:59: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
  ---------------------------------------------------
-2022-08-16 13:04:12: case.build starting 
+2022-08-29 14:24:46: case.build starting 
  ---------------------------------------------------
 CESM version is cesm2_3_beta08-16-g228563a
 Processing externals description file : Externals.cfg
@@ -125,17 +125,126 @@ Checking status of externals: cam, silhs, clubb, pumas, atmos_phys, cosp2, chem_
         clean sandbox, on pio2_5_7
     ./share
         clean sandbox, on share1.0.11
-2022-08-16 13:17:04: case.build success 
+2022-08-29 14:37:18: case.build success 
  ---------------------------------------------------
-2022-08-16 13:17:20: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears  </command>
+2022-08-29 14:37:33: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-08-16 13:17:20: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2022-08-29 14:37:34: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2022-08-16 13:34:18: case.submit starting 5669030.chadmin1.ib0.cheyenne.ucar.edu
+2022-08-29 14:38:05: case.build starting 
  ---------------------------------------------------
-2022-08-16 13:34:18: case.submit success 5669030.chadmin1.ib0.cheyenne.ucar.edu
+CESM version is cesm2_3_beta08-16-g228563a
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals.cfg
+Processing externals description file : ../Externals_MOM.cfg
+Processing submodules description file : /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/components/mom/MOM6/.gitmodules
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : .gitmodules
+Processing submodules description file : .gitmodules
+Processing externals description file : Externals.cfg
+Processing externals description file : .gitmodules
+Processing submodules description file : .gitmodules
+Processing externals description file : Externals_FMS.cfg
+Processing externals description file : Externals_POP.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CDEPS.cfg
+Processing externals description file : Externals_CAM.cfg
+Checking status of externals: cam, silhs, clubb, pumas, atmos_phys, cosp2, chem_proc, mpas, atmos_cubed_sphere, carma, pumas-frozen, clm, fates, cice5, mosart, ww3, cpl7, parallelio, ccs_config, cmeps, share, fms, fms, pop, cvmix, marbl, cism, source_cism, rtm, cdeps, genf90, fox, mom, mom, pkg/gsw-fortran, pkg/cvmix-src, cice6, cice, icepack, cime, mct, ww3dev, 
+    ./ccs_config
+        clean sandbox, on ccs_config_cesm0.0.28
+    ./cime
+        clean sandbox, on cime6.0.20
+    ./components/cam
+        clean sandbox, on 7e6a845779cf72fc01399d8f602fcbf4ef262b1c
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_04
+    ./components/cam/src/atmos_phys
+        clean sandbox, on atmos_phys0_00_011
+    ./components/cam/src/dynamics/fv3/atmos_cubed_sphere
+        clean sandbox, on fv3_cesm.04
+    ./components/cam/src/dynamics/mpas/dycore
+        clean sandbox, on ff76a231ddf6bfd3bdb878afb02821c70ba1a856
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma3_49
+    ./components/cam/src/physics/clubb
+        clean sandbox, on clubb_release_b76a124_20200220_c20200320
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cam/src/physics/pumas
+        clean sandbox, on pumas_cam-release_v1.22
+    ./components/cam/src/physics/pumas-frozen
+        clean sandbox, on pumas_cam-release_v1.17_rename
+    ./components/cam/src/physics/silhs
+        clean sandbox, on silhs_clubb_release_b76a124_20200220_c20200320
+    ./components/cdeps
+        clean sandbox, on cdeps0.12.46
+    ./components/cdeps/fox
+        clean sandbox, on 4.1.2.1
+    ./components/cdeps/share/genf90
+        clean sandbox, on genf90_200608
+    ./components/cice
+        clean sandbox, on cesm_cice6_2_0_26
+    ./components/cice/src
+        clean sandbox, on cice6_20211214m
+    ./components/cice/src/icepack
+        clean sandbox, on 7c33d8ebeaa42d3d76767b7825730a9c2a555ec2
+    ./components/cice5
+        clean sandbox, on 57afa2451515cf317d00c3c715754d643ed49171
+    ./components/cism
+        clean sandbox, on cismwrap_2_1_95
+    ./components/cism/source_cism
+        clean sandbox, on cism_main_2.01.011
+    ./components/clm
+        clean sandbox, on ctsm5.1.dev082
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.54.0_api.22.0.0
+    ./components/cmeps
+        clean sandbox, on cmeps0.13.62
+    ./components/cpl7
+        clean sandbox, on cpl7.0.12
+  o ./components/mom
+        clean sandbox, on mi_220624
+    ./components/mom/MOM6
+        clean sandbox, on dev/ncar_220624
+    ./components/mom/MOM6/pkg/CVMix-src
+        clean sandbox, on v0.98-beta
+    ./components/mom/MOM6/pkg/GSW-Fortran
+        clean sandbox, on 29e64d652786e1d076a05128c920f394202bfe10
+    ./components/mosart
+        clean sandbox, on mosart1_0_45
+    ./components/pop
+        clean sandbox, on cesm_pop_2_1_20220113
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.98-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on marbl0.40.3
+    ./components/rtm
+        clean sandbox, on rtm1_0_78
+    ./components/ww3
+        clean sandbox, on ww3_210803
+  o ./components/ww3dev
+        clean sandbox, on dev/unified_220202
+  o ./libraries/FMS
+        clean sandbox, on fi_20220425
+    ./libraries/FMS/src
+        clean sandbox, on 2020.04.03
+    ./libraries/mct
+        clean sandbox, on MCT_2.11.0
+    ./libraries/parallelio
+        clean sandbox, on pio2_5_7
+    ./share
+        clean sandbox, on share1.0.11
+2022-08-29 14:39:10: case.build success 
  ---------------------------------------------------
-2022-08-16 13:39:46: case.run starting 5669029.chadmin1.ib0.cheyenne.ucar.edu
+2022-08-29 14:39:25: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-08-16 13:39:52: model execution starting 5669029.chadmin1.ib0.cheyenne.ucar.edu
+2022-08-29 14:39:26: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+ ---------------------------------------------------
+2022-08-29 14:40:19: case.submit starting 6020380.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-08-29 14:40:19: case.submit success 6020380.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-08-29 15:26:21: case.run starting 6020379.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2022-08-29 15:26:26: model execution starting 6020379.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
