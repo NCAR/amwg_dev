@@ -1,4 +1,4 @@
 
 # case: 
-https://github.com/NCAR/amwg_dev/issues/168
+https://github.com/NCAR/amwg_dev/issues/167
 
