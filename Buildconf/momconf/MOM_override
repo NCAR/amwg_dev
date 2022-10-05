@@ -4,13 +4,3 @@
         within CASEROOT.*/
 ENTHALPY_FROM_COUPLER = True
 #override MEKE_GEOMETRIC_ALPHA = 0.10
-#override INPUTDIR = "INPUT"
-#override INIT_LAYERS_FROM_Z_FILE = False
-THICKNESS_CONFIG = "thickness_file"
-THICKNESS_FILE = "b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016.mom6.r.0058-01-01-00000.nc"
-TS_CONFIG = "file"
-TS_FILE = "b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016.mom6.r.0058-01-01-00000.nc"
-TEMP_IC_VAR = "Temp"
-SALT_IC_VAR = "Salt"
-VELOCITY_CONFIG = "file"
-VELOCITY_FILE = "b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016.mom6.r.0058-01-01-00000.nc"
