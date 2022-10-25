@@ -47,6 +47,7 @@
 &cam_initfiles_nl
  bnd_topo		= '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20220622.nc'
  ncdata		= '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
+ pertlim		= 1.d-14
  scale_dry_air_mass		=   98288.0D0 
  use_topo_file		=  .true.  
 /

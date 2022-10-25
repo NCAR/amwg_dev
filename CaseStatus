@@ -1,10 +1,15 @@
-2022-10-03 13:08:29: case.setup starting 
+2022-10-25 15:31:16: case.setup starting 
  ---------------------------------------------------
-2022-10-03 13:08:31: case.setup success 
+2022-10-25 15:31:17: case.setup success 
  ---------------------------------------------------
-2022-10-03 13:08:46: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
+2022-10-25 15:31:23: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58  </command>
  ---------------------------------------------------
-2022-10-03 13:09:21: case.build starting 
+2022-10-25 15:35:16: case.build starting 
+ ---------------------------------------------------
+2022-10-25 15:35:16: case.build starting 
+ ---------------------------------------------------
+2022-10-25 15:35:20: case.build error 
+[Errno 2] No such file or directory: '/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850WscMOM.ne30_L58_t061.camdev_cice5.026f/Buildconf/mosart.input_data_list'
  ---------------------------------------------------
 CESM version is cesm2_3_beta08-16-g228563a
 Processing externals description file : Externals.cfg
@@ -107,79 +112,19 @@ Checking status of externals: cam, silhs, clubb, pumas, atmos_phys, cosp2, chem_
         clean sandbox, on pio2_5_7
     ./share
         clean sandbox, on share1.0.11
-2022-10-03 13:31:24: case.build success 
+2022-10-25 15:56:50: case.build success 
  ---------------------------------------------------
-2022-10-03 14:30:32: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=3,STOP_OPTION=nyears  </command>
+2022-10-25 16:10:01: xmlchange success <command> ./xmlchange PROJECT=CESM0019,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=3,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2022-10-03 14:30:32: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2022-10-25 16:10:01: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2022-10-03 14:30:38: case.submit starting 6710777.chadmin1.ib0.cheyenne.ucar.edu
+2022-10-25 16:10:08: case.submit starting 6972887.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-10-03 14:30:38: case.submit success 6710777.chadmin1.ib0.cheyenne.ucar.edu
+2022-10-25 16:10:08: case.submit success 6972887.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-10-03 14:51:30: case.run starting 6710776.chadmin1.ib0.cheyenne.ucar.edu
+2022-10-25 16:21:04: xmlchange success <command> ./xmlchange JOB_QUEUE=premium  </command>
  ---------------------------------------------------
-2022-10-03 14:51:35: model execution starting 6710776.chadmin1.ib0.cheyenne.ucar.edu
+2022-10-25 16:21:12: case.submit starting 6973029.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2022-10-03 23:06:44: model execution success 6710776.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-03 23:06:44: case.run success 6710776.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-03 23:07:10: st_archive starting 6710777.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-03 23:07:23: st_archive success 6710777.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-03 23:07:23: case.submit starting 6726077.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-03 23:07:23: case.submit success 6726077.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 00:51:52: case.run starting 6726075.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 00:51:58: model execution starting 6726075.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 09:49:30: model execution success 6726075.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 09:49:30: case.run success 6726075.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 09:49:48: st_archive starting 6726077.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 09:50:02: st_archive success 6726077.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 09:50:02: case.submit starting 6741563.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 09:50:02: case.submit success 6741563.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 10:16:42: case.run starting 6741562.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 10:16:48: model execution starting 6741562.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 18:43:46: model execution success 6741562.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 18:43:46: case.run success 6741562.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 18:43:59: st_archive starting 6741563.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 18:44:13: st_archive success 6741563.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 18:44:16: case.submit starting 6750462.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-04 18:44:16: case.submit success 6750462.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 04:06:11: case.run starting 6750461.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 04:06:17: model execution starting 6750461.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 12:59:04: model execution success 6750461.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 12:59:04: case.run success 6750461.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 13:01:33: st_archive starting 6750462.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 13:01:46: st_archive success 6750462.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 13:01:47: case.submit starting 6759469.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 13:01:47: case.submit success 6759469.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2022-10-05 16:30:08: xmlchange success <command> ./xmlchange RESUBMIT=16  </command>
+2022-10-25 16:21:12: case.submit success 6973029.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
