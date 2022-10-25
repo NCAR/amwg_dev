@@ -90,9 +90,9 @@ bnd_topo  = '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedm
 
 
 
-use_gw_convect_dp = .false.
+use_gw_convect_dp = .true.
 
-use_gw_front = .false.
+use_gw_front = .true.
 
 tau_0_ubc = .false.
 
