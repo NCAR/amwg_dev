@@ -58,9 +58,11 @@ clubb_gamma_coef   =  0.28
 
 clubb_c14 = 2.2D0
 
-clubb_l_trapezoidal_rule_zm          =  .false.
+clubb_c8 = 4.8
 
-clubb_l_trapezoidal_rule_zt          =  .false.
+clubb_l_trapezoidal_rule_zm          =  .true.
+
+clubb_l_trapezoidal_rule_zt          =  .true.
 
 
 
@@ -88,7 +90,11 @@ bnd_topo  = '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedm
 
 
 
-clubb_l_call_pdf_closure_twice = .false.
+use_gw_convect_dp = .false.
+
+use_gw_front = .false.
+
+tau_0_ubc = .false.
 
 
 

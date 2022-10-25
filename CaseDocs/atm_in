@@ -163,7 +163,7 @@
  clubb_c6thlc		=  1.0     
  clubb_c7		=  0.5     
  clubb_c7b		=  0.5     
- clubb_c8		=  4.2     
+ clubb_c8		= 4.8
  clubb_c8b		=  0.0     
  clubb_c_k10		=  0.5     
  clubb_c_k10h		=  0.3     
@@ -176,7 +176,7 @@
  clubb_gamma_coef		= 0.28
  clubb_gamma_coefb		=  0.32    
  clubb_l_brunt_vaisala_freq_moist		=  .false. 
- clubb_l_call_pdf_closure_twice		= .false.
+ clubb_l_call_pdf_closure_twice		=  .true.  
  clubb_l_damp_wp2_using_em		=  .false. 
  clubb_l_damp_wp3_skw_squared		=  .false. 
  clubb_l_diag_lscale_from_tau		=  .false. 
@@ -186,8 +186,8 @@
  clubb_l_predict_upwp_vpwp		=  .false. 
  clubb_l_rcm_supersat_adj		=  .false. 
  clubb_l_stability_correct_tau_zm		=  .true.  
- clubb_l_trapezoidal_rule_zm		= .false.
- clubb_l_trapezoidal_rule_zt		= .false.
+ clubb_l_trapezoidal_rule_zm		= .true.
+ clubb_l_trapezoidal_rule_zt		= .true.
  clubb_l_upwind_xpyp_ta		=  .true.  
  clubb_l_use_c11_richardson		=  .false. 
  clubb_l_use_c7_richardson		=  .false. 
@@ -261,29 +261,23 @@
  se_vert_remap_uvtq_alg		= 'FV3_CS'
 /
 &gw_drag_nl
- effgw_beres_dp		= 0.7D0
- effgw_cm		= 1.D0
  effgw_rdg_beta		= 1.0D0
  effgw_rdg_beta_max		= 1.0D0
  fcrit2		= 1.0
- frontgfc		= 3.00D-15
  gw_apply_tndmax		= .false.
- gw_dc		= 2.5D0
+ gw_dc		= 0.D0
  gw_dc_long		= 0.D0
- gw_drag_file		= '/glade/p/cesmdata/cseg/inputdata/atm/waccm/gw/newmfspectra40_dc25.nc'
  gw_limit_tau_without_eff		= .true. 
  gw_lndscl_sgh		= .false.
  gw_oro_south_fac		= 2.d0   
- gw_polar_taper		= .false.
  gw_prndl		= 0.5D0
  gw_qbo_hdepth_scaling		= 0.25D0
  gw_top_taper		= .false.
  n_rdg_beta		= 10
- pgwv		= 32
+ pgwv		= 0
  pgwv_long		= 0
  rdg_beta_cd_llb		= 1.0D0
  tau_0_ubc		= .false.
- taubgnd		= 1.25D-3
  trpd_leewv_rdg_beta		= .false.
  use_gw_rdg_beta		= .true.
  use_gw_rdg_gamma		= .false.
@@ -372,9 +366,9 @@
  radiation_scheme		= 'rrtmg'
  shallow_scheme		= 'CLUBB_SGS'
  srf_flux_avg		= 0
- use_gw_convect_dp		= .true.
+ use_gw_convect_dp		= .false.
  use_gw_convect_sh		= .false.
- use_gw_front		= .true.
+ use_gw_front		= .false.
  use_gw_front_igw		= .false.
  use_gw_oro		= .false.
  use_hetfrz_classnuc		= .true.
