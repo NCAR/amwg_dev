@@ -1,15 +1,13 @@
 &drydep_inparm
 /
 &megan_emis_nl
+ megan_factors_file = '/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/trop_mozart/emis/megan21_emis_factors_c20120313.nc'
+ megan_specifier = 'ISOP = isoprene', 'C10H16 = pinene_a + carene_3 + thujene_a', 'CH3OH = methanol', 'C2H5OH = ethanol',
+         'CH2O = formaldehyde', 'CH3CHO = acetaldehyde', 'CH3COOH = acetic_acid', 'CH3COCH3 = acetone'
 /
-&fire_emis_nl
-/
-&carma_inparm
-/
-!#--------------------------------------------------------------------------------------------------------------------------
-!# drv_flds_in:: Comment:
-!# This namelist was created using the following command-line:
-!#     /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/cime -infile /glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_non-orogw_on.001/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_non-orogw_on.001/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=19790101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type startup -envxml_dir /glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_non-orogw_on.001 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_non-orogw_on.001/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm5_0_cam6.0 -mask gx1v7
-!# 
-!# For help on options use: /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/components/clm/bld/CLM build-namelist -help
-!#--------------------------------------------------------------------------------------------------------------------------
+#!--------------------------------------------------------------------------------------------------------------------------
+#! drv_flds_in:: Comment:
+#! This namelist was created using the following command-line:
+#!     /glade/u/home/nusbaume/CESM/cesm1_2_2/models/lnd/clm/bld/CLM build-namelist -infile /glade/p/cesmdata/cseg/runs/cesm2_0/e11.f09_g17_L32.1xco2.qfluxes_cesm1.001/Buildconf/clmconf/cesm_namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/e11.f09_g17_L32.1xco2.qfluxes_cesm1.001/Buildconf/clm.input_data_list -ignore_ic_year -namelist &clm_inparm start_ymd = 00010101  / -use_case 1850_control -res 0.9x1.25 -clm_start_type startup -l_ncpl 48 -lnd_frac /glade/p/cesmdata/cseg/inputdata/share/domains/domain.lnd.fv0.9x1.25_gx1v6.090309.nc -glc_nec 0 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/p/cesmdata/cseg/runs/cesm2_0/e11.f09_g17_L32.1xco2.qfluxes_cesm1.001/Buildconf/clmconf/config_cache.xml
+#! For help on options use: /glade/u/home/nusbaume/CESM/cesm1_2_2/models/lnd/clm/bld/CLM build-namelist -help
+#!--------------------------------------------------------------------------------------------------------------------------

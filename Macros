@@ -1,0 +1,56 @@
+#
+# Makefile Macros generated from /glade/u/home/nusbaume/CESM/cesm1_2_2/scripts/ccsm_utils/Machines/config_compilers.xml using
+# COMPILER=intel
+# OS=LINUX
+# MACH=cheyenne
+#
+CPPDEFS+= -DFORTRANUNDERSCORE -DNO_R16 -DLINUX -DCPRINTEL 
+
+CFLAGS:= -O2 -fp-model precise 
+
+CXX_LDFLAGS:= -cxxlib 
+
+CXX_LINKER:=FORTRAN
+
+FC_AUTO_R8:= -r8 
+
+FFLAGS:= -no-opt-dynamic-align  -fp-model source -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs 
+
+FFLAGS_NOOPT:= -O0 
+
+FIXEDFLAGS:= -fixed -132 
+
+FREEFLAGS:= -free 
+
+MPICC:= mpicc  
+
+MPICXX:= mpicxx 
+
+MPIFC:= mpif90 
+
+SCC:= icc 
+
+SCXX:= icpc 
+
+SFC:= ifort 
+
+SUPPORTS_CXX:=TRUE
+
+ifeq ($(DEBUG), FALSE) 
+   FFLAGS += -O2 
+endif
+
+ifeq ($(DEBUG), TRUE) 
+   FFLAGS += -O0 -g -check uninit -check bounds -check pointers -fpe0 
+endif
+
+ifeq ($(compile_threaded), true) 
+   LDFLAGS += -openmp 
+   FFLAGS += -openmp 
+   CFLAGS += -openmp 
+endif
+
+ifeq ($(MODEL), pop2) 
+   CPPDEFS += -D_USE_FLOW_CONTROL 
+endif
+

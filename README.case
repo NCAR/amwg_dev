@@ -1,44 +1,48 @@
-2022-10-24 17:45:18: ./create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case /glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_non-orogw_on.001 --run-unsupported --pecount 2160 --project 93300722
- ---------------------------------------------------
-2022-10-24 17:45:18: Compset longname is HIST_CAM60%WCSC_CLM50%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP
- ---------------------------------------------------
-2022-10-24 17:45:18: Compset specification file is /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/components/cam//cime_config/config_compsets.xml
- ---------------------------------------------------
-2022-10-24 17:45:18: Pes     specification file is /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/components/cam//cime_config/config_pes.xml
- ---------------------------------------------------
-2022-10-24 17:45:18: Forcing is Historic transient 
- ---------------------------------------------------
-2022-10-24 17:45:18: Using 1 coupler instances
- ---------------------------------------------------
-2022-10-24 17:45:18: Component ATM is CAM cam6 physics:WACCM specified chemistry:
- ---------------------------------------------------
-2022-10-24 17:45:18: ATM_GRID is ne30np4.pg3
- ---------------------------------------------------
-2022-10-24 17:45:18: Component LND is clm5.0:Satellite phenology:
- ---------------------------------------------------
-2022-10-24 17:45:18: LND_GRID is ne30np4.pg3
- ---------------------------------------------------
-2022-10-24 17:45:18: Component ICE is Sea ICE (cice) model version 6 :prescribed cice
- ---------------------------------------------------
-2022-10-24 17:45:18: ICE_GRID is ne30np4.pg3
- ---------------------------------------------------
-2022-10-24 17:45:18: Component OCN is DOCN   prescribed ocean mode
- ---------------------------------------------------
-2022-10-24 17:45:18: OCN_GRID is ne30np4.pg3
- ---------------------------------------------------
-2022-10-24 17:45:18: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
- ---------------------------------------------------
-2022-10-24 17:45:18: ROF_GRID is r05
- ---------------------------------------------------
-2022-10-24 17:45:18: Component GLC is Stub glacier (land ice) component
- ---------------------------------------------------
-2022-10-24 17:45:18: GLC_GRID is null
- ---------------------------------------------------
-2022-10-24 17:45:18: Component WAV is Stub wave component
- ---------------------------------------------------
-2022-10-24 17:45:18: WAV_GRID is null
- ---------------------------------------------------
-2022-10-24 17:45:18: Component ESP is Stub external system processing (ESP) component
- ---------------------------------------------------
-2022-10-24 17:45:18: ESP_GRID is None
- ---------------------------------------------------
+create_newcase --case /glade/p/cesmdata/cseg/runs/cesm2_0/e11.f09_g17_L32.1xco2.qfluxes_cesm1.001 --compset E1850C5 --res f09_g16 --mach cheyenne
+
+
+Component set: longname (shortname) (alias) 
+  1850_CAM5_CLM40%SP_CICE_DOCN%SOM_RTM_SGLC_SWAV (E_1850_CAM5) (E1850C5) 
+Component set Description: 
+  CAM: CLM: RTM: CICE: DOCN: SGLC: SWAV: pre-industrial: cam5 physics: clm4.0 physics: clm4.0 Satellite phenology: prognostic cice: docn slab ocean mode: 
+Grid: 
+  a%0.9x1.25_l%0.9x1.25_oi%gx1v6_r%r05_m%gx1v6_g%null_w%null (0.9x1.25_gx1v6) 
+  ATM_GRID = 0.9x1.25  NX_ATM=288 NY_ATM=192 
+  LND_GRID = 0.9x1.25  NX_LND=288 NX_LND=192 
+  ICE_GRID = gx1v6  NX_ICE=320 NX_ICE=384 
+  OCN_GRID = gx1v6  NX_OCN=320 NX_OCN=384 
+  ROF_GRID = r05  NX_ROF=720 NX_ROF=360 
+  GLC_GRID = 0.9x1.25  NX_GLC=288 NX_GLC=192 
+  WAV_GRID = null  NX_WAV=0 NX_WAV=0 
+Grid Description: 
+  null is no grid: 0.9x1.25 is FV 1-deg grid: gx1v6 is Greenland pole v6 1-deg grid: r05 is 1/2 degree river routing grid: 
+Non-Default Options: 
+  ATM_NCPL: 48 
+  BUDGETS: TRUE 
+  CAM_CONFIG_OPTS: -phys cam5 
+  CAM_DYCORE: fv 
+  CAM_NML_USE_CASE: 1850_cam5 
+  CCSM_BGC: CO2A 
+  CCSM_CCOST: 1 
+  CCSM_CO2_PPMV: 284.7 
+  CICE_MODE: prognostic 
+  CICE_NAMELIST_OPTS: cam5=.true. 
+  CLM_CO2_TYPE: diagnostic 
+  CLM_CONFIG_OPTS: -phys clm4_0 
+  CLM_NML_USE_CASE: 1850_control 
+  COMP_ATM: cam 
+  COMP_GLC: sglc 
+  COMP_ICE: cice 
+  COMP_LND: clm 
+  COMP_OCN: docn 
+  COMP_ROF: rtm 
+  COMP_WAV: swav 
+  CPL_ALBAV: false 
+  CPL_EPBAL: off 
+  DOCN_MODE: som 
+  OCN_NCPL: $ATM_NCPL 
+  OCN_TIGHT_COUPLING: TRUE 
+  ROF_NCPL: 8 
+  RTM_BLDNML_OPTS: -simyr 1850 
+  RTM_MODE: ACTIVE 
+  SCIENCE_SUPPORT: NO 
