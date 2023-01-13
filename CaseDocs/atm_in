@@ -36,17 +36,20 @@
          'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT',
          'UTGWORO', 'UTGW_TOTAL', 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT',
          'N2O'
- fincl2		= 'OMEGA','PMID','PS','Q','QRL','QRS','T','TROP_P','TROP_T','U','V','Z3'
- fincl4		= 'PRECC','PRECL'
- interpolate_nlat		= 192,192
- interpolate_nlon		= 288,288
- interpolate_output		= .true.,.true.
+ fincl2		= 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U', 'V', 'Z3', 'FLUT', 'PRECT',
+         'TS', 'U850', 'V850', 'U200', 'V200', 'OMEGA500', 'PSL'
+ fincl3		= 'U:I','V:I','T:I','OMEGA:I','PS:I'
+ fincl4		= 'PRECC','PRECL','PRECT'
+ fincl5		= 'PRECC','PRECL'
+ interpolate_nlat		= 192,192,192,192
+ interpolate_nlon		= 288,288,288,288
+ interpolate_output		= .true.,.true.,.true.,.true.
  mfilt		= 0,5,20,40,120,240,365,73,365
- nhtfrq		= 0,-24,-6,-3,-1,1,-24,-24
+ nhtfrq		= 0,-24,-6,-3,-3,1,-24,-24
 /
 &cam_initfiles_nl
- bnd_topo		= '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20230105.nc'
- ncdata		= '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
+ bnd_topo		= '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20220622.nc'
+ ncdata		= '/glade/p/cgd/amp/pel/inic/L93_ne30pg3_ne30pg3_mg17_450_short.cam.i.1979-01-07-00000.nc'
  scale_dry_air_mass		=   98288.0D0 
  use_topo_file		=  .true.  
 /
@@ -229,7 +232,7 @@
  se_fvm_supercycling		= -1
  se_fvm_supercycling_jet		= -1
  se_horz_num_threads		=  0 
- se_hypervis_subcycle		= 4
+ se_hypervis_subcycle		= 3
  se_hypervis_subcycle_q		= 1                 
  se_hypervis_subcycle_sponge		=  1  
  se_kmax_jet		= -1
@@ -239,15 +242,15 @@
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
  se_ne		= 30
- se_nsplit		= 2
+ se_nsplit		= 3
  se_nu		= -1
  se_nu_div		=  -1 
  se_nu_p		= -1 
- se_nu_top		=  1.25e5 
+ se_nu_top		= 1E6
  se_phys_dyn_cp		= 1
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
- se_rsplit		= 3
+ se_rsplit		= 6
  se_sponge_del4_lev		=  -1 
  se_sponge_del4_nu_div_fac		=  -1 
  se_sponge_del4_nu_fac		=  -1 
@@ -261,23 +264,29 @@
  se_vert_remap_uvtq_alg		= 'FV3_CS'
 /
 &gw_drag_nl
+ effgw_beres_dp		= 0.7D0
+ effgw_cm		= 1.D0
  effgw_rdg_beta		= 1.0D0
  effgw_rdg_beta_max		= 1.0D0
  fcrit2		= 1.0
+ frontgfc		= 3.00D-15
  gw_apply_tndmax		= .false.
- gw_dc		= 0.D0
+ gw_dc		= 2.5D0
  gw_dc_long		= 0.D0
+ gw_drag_file		= '/glade/p/cesmdata/cseg/inputdata/atm/waccm/gw/newmfspectra40_dc25.nc'
  gw_limit_tau_without_eff		= .true. 
  gw_lndscl_sgh		= .false.
  gw_oro_south_fac		= 2.d0   
+ gw_polar_taper		= .false.
  gw_prndl		= 0.5D0
  gw_qbo_hdepth_scaling		= 0.25D0
  gw_top_taper		= .false.
  n_rdg_beta		= 10
- pgwv		= 0
+ pgwv		= 32
  pgwv_long		= 0
  rdg_beta_cd_llb		= 1.0D0
- tau_0_ubc		= .false.
+ tau_0_ubc		= .true.
+ taubgnd		= 1.25D-3
  trpd_leewv_rdg_beta		= .false.
  use_gw_rdg_beta		= .true.
  use_gw_rdg_gamma		= .false.
@@ -366,9 +375,9 @@
  radiation_scheme		= 'rrtmg'
  shallow_scheme		= 'CLUBB_SGS'
  srf_flux_avg		= 0
- use_gw_convect_dp		= .false.
+ use_gw_convect_dp		= .true.
  use_gw_convect_sh		= .false.
- use_gw_front		= .false.
+ use_gw_front		= .true.
  use_gw_front_igw		= .false.
  use_gw_oro		= .false.
  use_hetfrz_classnuc		= .true.

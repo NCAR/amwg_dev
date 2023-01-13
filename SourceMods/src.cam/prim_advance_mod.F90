@@ -528,10 +528,13 @@ contains
             !DIR_VECTOR_ALIGNED
             do j=1,np
               do i=1,np
-                elem(ie)%derived%dpdiss_ave(i,j,k)=elem(ie)%derived%dpdiss_ave(i,j,k)+&                          !bugfix
-                     rhypervis_subcycle*eta_ave_w*(elem(ie)%state%dp3d(i,j,k,nt)-elem(ie)%derived%dp_ref(i,j,k)) !bugfix
-!bug                elem(ie)%derived%dpdiss_ave(i,j,k)=elem(ie)%derived%dpdiss_ave(i,j,k)+&
-!bug                     rhypervis_subcycle*eta_ave_w*elem(ie)%state%dp3d(i,j,k,nt)
+!                elem(ie)%derived%dpdiss_ave(i,j,k)=elem(ie)%derived%dpdiss_ave(i,j,k)+&
+!                     rhypervis_subcycle*eta_ave_w*elem(ie)%state%dp3d(i,j,k,nt)
+                !
+                ! pel@ucar.edu: CESM2.2 bug fix that has already been committed to the release branch
+                !
+                elem(ie)%derived%dpdiss_ave(i,j,k)=elem(ie)%derived%dpdiss_ave(i,j,k)+&
+                     rhypervis_subcycle*eta_ave_w*(elem(ie)%state%dp3d(i,j,k,nt)-elem(ie)%derived%dp_ref(i,j,k))
                 elem(ie)%derived%dpdiss_biharmonic(i,j,k)=elem(ie)%derived%dpdiss_biharmonic(i,j,k)+&
                      rhypervis_subcycle*eta_ave_w*dptens(i,j,k,ie)
               enddo
@@ -1519,7 +1522,6 @@ contains
         call strlist_get_ind(cnst_name_gll, 'CLDLIQ' , ixcldliq, abort=.false.)
         call strlist_get_ind(cnst_name_gll, 'CLDICE' , ixcldice, abort=.false.)
       end if
-
       call cnst_get_ind('TT_LW' , ixtt    , abort=.false.)
       !
       ! Compute frozen static energy in 3 parts:  KE, SE, and energy associated with vapor and liquid
