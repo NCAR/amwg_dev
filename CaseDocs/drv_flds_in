@@ -1,8 +1,6 @@
 &drydep_inparm
- drydep_list		= 'H2O2','H2SO4','SO2'
- drydep_method		= 'xactive_atm'
+  drydep_list = 'DMS', 'H2O2', 'H2SO4', 'SO2'
 /
-&megan_emis_nl
-/
-&carma_inparm
+&ozone_coupling_nl
+  atm_ozone_frequency = 'multiday_average'
 /

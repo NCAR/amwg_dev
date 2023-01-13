@@ -1,224 +1,358 @@
 <?xml version="1.0"?>
-
-<config_definition>
-
-<!-- ========================================================================== -->
-<!--                                                                            -->
-<!--       These variables SHOULD NOT be changed once the model has been built. -->
-<!--       Currently, these variables are not cached.                           -->
-<!--                                                                            -->
-<!--       Note1: users SHOULD NOT modify BUILD_COMPETE below                   -->
-<!--              this is done automatically by the scripts                     -->
-<!--                                                                            -->
-<!-- ========================================================================== -->
-
-
-<!--"operating system - DO NOT EDIT UNLESS for userdefined machine - ignored once Macros has been created   (char) " -->
-<entry id="OS"   value="LINUX"  />    
-
-<!--"machine compiler (must match one the supported compilers) - ignored once Macros has been created (char) " -->
-<entry id="COMPILERS"   value="intel,gnu"  />    
-
-<!--"Machine compiler (must match one the supported compilers) (char) " -->
-<entry id="COMPILER"   value="intel"  />    
-
-<!--"supported mpi libraries for target machine - set in config_machines.xml - (DO NOT EDIT) (char) " -->
-<entry id="MPILIBS"   value="mpt,mpi-serial"  />    
-
-<!--"mpi library (must match one of the supported libraries) - ignored once Macros has been created (char) " -->
-<entry id="MPILIB"   value="mpt"  />    
-
-<!--"PIO configure options, see PIO configure utility for details (char) " -->
-<entry id="PIO_CONFIG_OPTS"   value=" "  />    
-
-<!-- ====================================== -->
-
-<!--"scratch root directory for each machine.  For now, primarily used for shared library builds (char) " -->
-<entry id="CESMSCRATCHROOT"   value="UNSET"  />    
-
-<!--"case executable root directory (executable is $EXEROOT/cesm.exe, component libraries are in $EXEROOT/bld) (char) " -->
-<entry id="EXEROOT"   value="/glade/scratch/$CCSMUSER/$CASE/bld"  />    
-
-<!--"email address of person (or group) that supports the build and port for this machine (do not edit) (char) " -->
-<entry id="SUPPORTED_BY"   value="cseg"  />    
-
-<!--"calendar type, valid values: NO_LEAP,GREGORIAN (char) " -->
-<entry id="CALENDAR"   value="NO_LEAP"  />    
-
-<!--"use MCT or ESMF component interfaces, valid values: MCT,ESMF (char) " -->
-<entry id="COMP_INTERFACE"   value="MCT"  />    
-
-<!--"TRUE implies using the ESMF library specified by ESMF_LIBDIR or ESMFMKFILE, valid values: TRUE,FALSE (char) " -->
-<entry id="USE_ESMF_LIB"   value="FALSE"  />    
-
-<!--"TRUE implies turning on run and compile time debugging, valid values: TRUE,FALSE (logical) " -->
-<entry id="DEBUG"   value="FALSE"  />    
-
-<!--"TRUE implies always build model for openmp capability, valid values: TRUE,FALSE (logical) " -->
-<entry id="BUILD_THREADED"   value="FALSE"  />    
-
-<!--"TRUE implies linking to the trilinos library - set automatically by XXX_USE_TRILINOS options (do not edit), valid values: TRUE,FALSE (logical) " -->
-<entry id="USE_TRILINOS"   value="FALSE"  />    
-
-<!--"GNU make command (char) " -->
-<entry id="GMAKE"   value="gmake"  />    
-
-<!--"Number of processors for gmake (integer) " -->
-<entry id="GMAKE_J"   value="8"  />    
-
-<!-- ====================================== -->
-
-<!--"CAM configure options, see CAM configure utility for details (char) " -->
-<entry id="CAM_CONFIG_OPTS"   value="-phys cam5"  />    
-
-<!--"CAM dynamical core, valid values: eul,fv,se (char) " -->
-<entry id="CAM_DYCORE"   value="fv"  />    
-
-
-<!--"CLM configure options (char) " -->
-<entry id="CLM_CONFIG_OPTS"   value="-phys clm4_0"  />    
-
-
-
-<!--"Option to the CICE configure utility for the -mode argument (default is prognostic), valid values: prognostic,prescribed,thermo_only (char) " -->
-<entry id="CICE_MODE"   value="prognostic"  />    
-
-<!--"CICE configure options, see CICE configure utility for details (char) " -->
-<entry id="CICE_CONFIG_OPTS"   value=" "  />    
-
-<!--"if false, user must set the CICE decomp, otherwise cesm_setup script sets it, valid values: true,false (logical) " -->
-<entry id="CICE_AUTO_DECOMP"   value="true"  />    
-
-<!--"Size of cice block in first horiz dimension (do not edit if CICE_AUTO_DECOMP is true) (integer) " -->
-<entry id="CICE_BLCKX"   value="5"  />    
-
-<!--"Size of cice block in second horiz dimension (do not edit if CICE_AUTO_DECOMP is true) (integer) " -->
-<entry id="CICE_BLCKY"   value="4"  />    
-
-<!--"Max number of cice blocks per processor (do not edit if CICE_AUTO_DECOMP is true) (integer) " -->
-<entry id="CICE_MXBLCKS"   value="4"  />    
-
-<!--"cice block distribution type (do not edit if CICE_AUTO_DECOMP is true) (char) " -->
-<entry id="CICE_DECOMPTYPE"   value="spacecurve"  />    
-
-<!--"cice decomp setting for decomp type (do not edit if CICE_AUTO_DECOMP is true) (char) " -->
-<entry id="CICE_DECOMPSETTING"   value="null"  />    
-
-
-
-<!--"mode for rtm model, NULL means rtm is turned off, valid values: ACTIVE,NULL (char) " -->
-<entry id="RTM_MODE"   value="ACTIVE"  />    
-
-<!--"mode for rtm flood feature, NULL means rtm flood is turned off, valid values: ACTIVE,NULL (char) " -->
-<entry id="RTM_FLOOD_MODE"   value="NULL"  />    
-
-
-
-<!--"Status output: if TRUE, models have been built successfully. (DO NOT EDIT), valid values: TRUE,FALSE (logical) " -->
-<entry id="BUILD_COMPLETE"   value="TRUE"  />    
-
-<!--"Status: smp status of previous build, coded string. (DO NOT EDIT) (char) " -->
-<entry id="SMP_BUILD"   value="a0l0r0i0o0g0w0c0"  />    
-
-<!--"Status: smp status of current case, coded string (DO NOT EDIT) (char) " -->
-<entry id="SMP_VALUE"   value="a0l0r0i0o0g0w0c0"  />    
-
-<!--"Status: ninst status of previous build, coded string. (DO NOT EDIT) (char) " -->
-<entry id="NINST_BUILD"   value="a1l1r1i1o1g1w1"  />    
-
-<!--"Status: ninst status of current case, coded string (DO NOT EDIT) (char) " -->
-<entry id="NINST_VALUE"   value="a1l1r1i1o1g1w1"  />    
-
-<!--"Status: of prior build. (DO NOT EDIT) (integer) " -->
-<entry id="BUILD_STATUS"   value="0"  />    
-
-<!-- ====================================== -->
-
-<!--"CESM grid - DO NOT EDIT (for experts only) (char) " -->
-<entry id="GRID"   value="a%0.9x1.25_l%0.9x1.25_oi%gx1v6_r%r05_m%gx1v6_g%null_w%null"  />    
-
-<!--"atmosphere grid - DO NOT EDIT (for experts only) (char) " -->
-<entry id="ATM_GRID"   value="0.9x1.25"  />    
-
-<!--"number of atmosphere cells in i direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="ATM_NX"   value="288"  />    
-
-<!--"number of atmosphere cells in j direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="ATM_NY"   value="192"  />    
-
-<!--"land grid - DO NOT EDIT (for experts only) (char) " -->
-<entry id="LND_GRID"   value="0.9x1.25"  />    
-
-<!--"number of land cells in i direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="LND_NX"   value="288"  />    
-
-<!--"number of land cells in j direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="LND_NY"   value="192"  />    
-
-<!--"ocn grid - DO NOT EDIT (for experts only) (char) " -->
-<entry id="OCN_GRID"   value="gx1v6"  />    
-
-<!--"number of ocn cells in i direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="OCN_NX"   value="320"  />    
-
-<!--"number of ocn cells in j direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="OCN_NY"   value="384"  />    
-
-<!--"ice grid (must equal ocn grid) - DO NOT EDIT (for experts only) (char) " -->
-<entry id="ICE_GRID"   value="gx1v6"  />    
-
-<!--"number of ice cells in i direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="ICE_NX"   value="320"  />    
-
-<!--"number of ice cells in j direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="ICE_NY"   value="384"  />    
-
-<!--"river runoff (rof) grid (char) " -->
-<entry id="ROF_GRID"   value="r05"  />    
-
-<!--"number of rof cells in i direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="ROF_NX"   value="720"  />    
-
-<!--"number of rof cells in j direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="ROF_NY"   value="360"  />    
-
-<!--"river runoff (glc) grid (char) " -->
-<entry id="GLC_GRID"   value="0.9x1.25"  />    
-
-<!--"number of glc cells in i direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="GLC_NX"   value="288"  />    
-
-<!--"number of glc cells in j direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="GLC_NY"   value="192"  />    
-
-<!--"wave model (wav) grid (char) " -->
-<entry id="WAV_GRID"   value="null"  />    
-
-<!--"number of wav cells in i direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="WAV_NX"   value="0"  />    
-
-<!--"number of wav cells in j direction - DO NOT EDIT (for experts only) (integer) " -->
-<entry id="WAV_NY"   value="0"  />    
-
-<!--"grid mask - DO NOT EDIT (for experts only) (char) " -->
-<entry id="MASK_GRID"   value="gx1v6"  />    
-
-<!-- ====================================== -->
-
-<!--"case build directory (set automatically to $EXEROOT, - DO NOT EDIT) (char) " -->
-<entry id="OBJROOT"   value="$EXEROOT"  />    
-
-<!--"case lib directory (set automatically to $EXEROOT/lib - DO NOT EDIT) (char) " -->
-<entry id="LIBROOT"   value="$EXEROOT/lib"  />    
-
-<!--"case lib include directory (set automatically to $EXEROOT/lib/include - DO NOT EDIT) (char) " -->
-<entry id="INCROOT"   value="$EXEROOT/lib/include"  />    
-
-<!--"Shared library root, (set automatically to $EXEROOT - DO NOT EDIT) (char) " -->
-<entry id="SHAREDLIBROOT"   value="$EXEROOT"  />    
-
-<!--"Shared library root directory, neeed for cleaning shared builds (set automatically to $EXEROOT - DO NOT EDIT) (char) " -->
-<entry id="SHAREDLIBROOTDIR"   value="$EXEROOT"  />    
-
-<!-- ====================================== -->
-</config_definition>
+<file id="env_build.xml" version="2.0">
+  <header>
+    These variables SHOULD NOT be changed once the model has been built.
+    urrently, these variables are not cached.
+    Note1: users SHOULD NOT modify BUILD_COMPETE below
+    this is done automatically by the scripts.
+    </header>
+  <group id="build_grid">
+    <entry id="GRID" value="a%ne30np4.pg3_l%ne30np4.pg3_oi%ne30np4.pg3_r%r05_g%null_w%null_z%null_m%gx1v7">
+      <type>char</type>
+      <desc>Model grid - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="ATM_GRID" value="ne30np4.pg3">
+      <type>char</type>
+      <desc>atmosphere grid - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="ATM_NX" value="48600">
+      <type>integer</type>
+      <desc>number of atmosphere cells in i direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="ATM_NY" value="1">
+      <type>integer</type>
+      <desc>number of atmosphere cells in j direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="LND_GRID" value="ne30np4.pg3">
+      <type>char</type>
+      <desc>land grid - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="LND_NX" value="48600">
+      <type>integer</type>
+      <desc>number of land cells in i direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="LND_NY" value="1">
+      <type>integer</type>
+      <desc>number of land cells in j direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="OCN_GRID" value="ne30np4.pg3">
+      <type>char</type>
+      <desc>ocn grid - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="OCN_NX" value="48600">
+      <type>integer</type>
+      <desc>number of ocn cells in i direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="OCN_NY" value="1">
+      <type>integer</type>
+      <desc>number of ocn cells in j direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="ICE_GRID" value="ne30np4.pg3">
+      <type>char</type>
+      <desc>ice grid (must equal ocn grid) - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="ICE_NX" value="48600">
+      <type>integer</type>
+      <desc>number of ice cells in i direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="ICE_NY" value="1">
+      <type>integer</type>
+      <desc>number of ice cells in j direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="ICE_NCAT" value="1">
+      <type>integer</type>
+      <desc>number of ice thickness categories - DO NOT EDIT (set by CICE configure)</desc>
+    </entry>
+    <entry id="ROF_GRID" value="r05">
+      <type>char</type>
+      <desc>river runoff (rof) grid</desc>
+    </entry>
+    <entry id="ROF_NX" value="720">
+      <type>integer</type>
+      <desc>number of rof cells in i direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="ROF_NY" value="360">
+      <type>integer</type>
+      <desc>number of rof cells in j direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="GLC_GRID" value="null">
+      <type>char</type>
+      <desc>glacier (glc) grid - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="GLC_NX" value="0">
+      <type>integer</type>
+      <desc>number of glc cells in i direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="GLC_NY" value="0">
+      <type>integer</type>
+      <desc>number of glc cells in j direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="WAV_GRID" value="null">
+      <type>char</type>
+      <desc>wave model (wav) grid</desc>
+    </entry>
+    <entry id="WAV_NX" value="0">
+      <type>integer</type>
+      <desc>number of wav cells in i direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="WAV_NY" value="0">
+      <type>integer</type>
+      <desc>number of wav cells in j direction - DO NOT EDIT (for experts only)</desc>
+    </entry>
+    <entry id="MASK_GRID" value="gx1v7">
+      <type>char</type>
+      <desc>grid mask - DO NOT EDIT (for experts only)</desc>
+    </entry>
+  </group>
+  <group id="build_derived">
+    <entry id="PERL5LIB">
+      <type>char</type>
+      <desc>Perl 5 library directory</desc>
+    </entry>
+    <entry id="OBJROOT" value="$EXEROOT">
+      <type>char</type>
+      <valid_values/>
+      <desc>case build directory (set automatically to $EXEROOT, - DO NOT EDIT)</desc>
+    </entry>
+    <entry id="LIBROOT" value="$EXEROOT/lib">
+      <type>char</type>
+      <valid_values/>
+      <desc>case lib directory (set automatically to $EXEROOT/lib - DO NOT EDIT)</desc>
+    </entry>
+    <entry id="INCROOT" value="$EXEROOT/lib/include">
+      <type>char</type>
+      <valid_values/>
+      <desc>case lib include directory (set automatically to $EXEROOT/lib/include - DO NOT EDIT)</desc>
+    </entry>
+    <entry id="SHAREDLIBROOT" value="$EXEROOT">
+      <type>char</type>
+      <valid_values/>
+      <desc>Shared library root, (set automatically to $EXEROOT - DO NOT EDIT)</desc>
+    </entry>
+  </group>
+  <group id="build_def">
+    <entry id="CIME_OUTPUT_ROOT" value="/glade/scratch/hannay">
+      <type>char</type>
+      <valid_values/>
+      <desc>Output root directory for each machine.
+                Base directory for build and run directories.
+    </desc>
+    </entry>
+    <entry id="EXEROOT" value="$CIME_OUTPUT_ROOT/$CASE/bld">
+      <type>char</type>
+      <valid_values/>
+      <desc>Case executable root directory.
+    (executable is $EXEROOT/$MODEL.exe, component libraries are in $EXEROOT/lib)
+    This is where the model builds its executable and by default runs the executable.
+    Note that EXEROOT needs to have enough disk space for the experimental configuration
+    requirements. As an example, a model run can produce more than a terabyte of
+    data during a 100-year run, so you should set EXEROOT to scratch or
+    tmp space and frequently back up the data to a long term archiving storage device
+    For a supported machine, EXEROOT is set in $CIMEROOT/machines/config_machines.xml.
+    For a userdefined machine, EXEROOT must explicitly be set it in env_build.xml.</desc>
+    </entry>
+    <entry id="SUPPORTED_BY">
+      <type>char</type>
+      <valid_values/>
+      <desc>email address of person (or group) that supports the build and port for this machine (do not edit)&gt;</desc>
+    </entry>
+    <entry id="CALENDAR" value="NO_LEAP">
+      <type>char</type>
+      <valid_values>NO_LEAP,GREGORIAN</valid_values>
+      <desc>calendar type</desc>
+    </entry>
+    <entry id="COMP_INTERFACE" value="nuopc">
+      <type>char</type>
+      <valid_values>nuopc</valid_values>
+      <desc>use NUOPC component interface</desc>
+    </entry>
+    <entry id="USE_ESMF_LIB" value="TRUE">
+      <type>logical</type>
+      <valid_values>TRUE</valid_values>
+      <desc>TRUE implies using the ESMF library specified by ESMF_LIBDIR or ESMFMKFILE</desc>
+    </entry>
+    <entry id="DEBUG" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies turning on run and compile time debugging
+      Flag to turn on debugging for run time and compile time.
+      If TRUE, compile-time debugging flags are activated that you can use to verify
+      software robustness, such as bounds checking.
+      Important:: On IBM machines, floating point trapping is not activated for production
+      runs (i.e., non-DEBUG), due to performance penalties associated with turning on these flags.</desc>
+    </entry>
+    <entry id="BUILD_THREADED" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies always build model for openmp capability
+      If FALSE, component libraries are built with OpenMP capability only if
+      the NTHREADS_ setting for that component is greater than 1 in env_mach_pes.xml.
+      If TRUE, the component libraries are always built with OpenMP capability.</desc>
+    </entry>
+    <entry id="FORCE_BUILD_SMP" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies always build model for openmp capability
+      If FALSE, component libraries are built with OpenMP capability only if
+      the NTHREADS_ setting for that component is greater than 1 in env_mach_pes.xml.
+      If TRUE, the component libraries are always built with OpenMP capability.</desc>
+    </entry>
+    <entry id="SMP_PRESENT" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies that at least one of the components is built threaded (DO NOT EDIT)</desc>
+    </entry>
+    <entry id="USE_PETSC" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies linking to the PETSc library - set
+    automatically by XXX_USE_PETSC options (do not edit). Flag to turn
+    on linking to the PETSc library. Currently this is used by
+    CLM. This is currently only supported for certain machines.</desc>
+    </entry>
+    <entry id="USE_ALBANY" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies linking to the Albany library - set
+    automatically by XXX_USE_ALBANY options (do not edit). Flag to
+    turn on linking to the Albany library. Currently this is used by
+    MPASLI. Note that Albany is a C++ library, so setting this
+    variable to TRUE will involve the inclusion of C++ code in the
+    MPASLI executable. This is currently only supported for certain
+    machines.</desc>
+    </entry>
+    <entry id="USE_MOAB" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies linking to the MOAB library</desc>
+    </entry>
+    <entry id="USE_TRILINOS" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies linking to the trilinos library - set automatically by XXX_USE_TRILINOS options (do not edit)
+      Flag to turn on linking to the trilinos library. Currently this is
+      used by CISM. Note that trilinos is a C++ library, so setting this
+      variable to TRUE will involve the inclusion of C++ code in the model
+      executable. This is currently only supported for certain machines.</desc>
+    </entry>
+  </group>
+  <group id="build_macros">
+    <entry id="OS" value="LINUX">
+      <type>char</type>
+      <valid_values/>
+      <desc>Operating system - DO NOT EDIT UNLESS for userdefined machine - ignored once Macros has been created.</desc>
+    </entry>
+    <entry id="COMPILER" value="intel">
+      <type>char</type>
+      <valid_values/>
+      <desc>Machine compiler (must match one the supported compilers)
+    Set in $CIMEROOT/machines/config_machines.xml for each supported machine.
+    Must be explicitly set in env_build.xml for userdefined machine.</desc>
+    </entry>
+    <entry id="MPILIB" value="mpt">
+      <type>char</type>
+      <valid_values/>
+      <desc>mpi library (must match one of the supported libraries) -
+    ignored once Macros has been created
+    Set in $CIMEROOT/machines/config_machines.xml for each supported machine.
+    Must be explicitly set in env_build.xml for userdefined machine.</desc>
+    </entry>
+    <entry id="PIO_VERSION" value="2">
+      <type>integer</type>
+      <valid_values>1,2</valid_values>
+      <desc>PIO library version</desc>
+    </entry>
+    <entry id="PIO_CONFIG_OPTS">
+      <type>char</type>
+      <desc>PIO configure options, see PIO configure utility for details</desc>
+    </entry>
+  </group>
+  <group id="build_component_clm">
+    <entry id="CLM_USE_PETSC" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE implies CLM is built with support for the PETSc
+      library. The Variably Saturated Flow Model (VSFM) solver in CLM
+      uses the PETSc library. In order to use the VSFM solver, CLM
+      must be built with PETSc support and linking to PETSc must occur
+      when building the ACME executable. This occurs if this variable
+      is set to TRUE. Note that is only available on a limited set of
+      machines/compilers.</desc>
+    </entry>
+  </group>
+  <group id="build_status">
+    <entry id="BUILD_COMPLETE" value="TRUE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Status output: if TRUE, models have been built successfully. (DO NOT EDIT)&gt;</desc>
+    </entry>
+    <entry id="SMP_BUILD" value="0">
+      <type>char</type>
+      <valid_values/>
+      <desc>Status: smp status of previous build, coded string. (DO NOT EDIT)</desc>
+    </entry>
+    <entry id="SMP_VALUE" value="c0a0l0i0o0r0">
+      <type>char</type>
+      <valid_values/>
+      <desc>Status: smp status of current case, coded string (DO NOT EDIT)</desc>
+    </entry>
+    <entry id="NINST_BUILD" value="0">
+      <type>char</type>
+      <valid_values/>
+      <desc>Status: ninst status of previous build, coded string. (DO NOT EDIT)&gt;</desc>
+    </entry>
+    <entry id="NINST_VALUE" value="c1a1l1i1o1r1">
+      <type>char</type>
+      <valid_values/>
+      <desc>Status: ninst status of current case, coded string (DO NOT EDIT)</desc>
+    </entry>
+    <entry id="BUILD_STATUS" value="0">
+      <type>integer</type>
+      <valid_values>0,1,2</valid_values>
+      <desc>Status: of prior build. (DO NOT EDIT)</desc>
+    </entry>
+  </group>
+  <group id="build_component_cam">
+    <entry id="CAM_CPPDEFS" value="    -DPLON=1 -DPLAT=1 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DCAM  -D_WK_GRAD -DNP=4 -DHAVE_F2003_PTR_BND_REMAP -DFVM_TRACERS -D_MPI -DPLEV=58 -DPCNST=37 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
+      <type>char</type>
+      <valid_values/>
+      <desc>CAM cpp definitions (setup automatically - DO NOT EDIT)</desc>
+    </entry>
+    <entry id="CAM_DYCORE" value="se">
+      <type>char</type>
+      <valid_values>eul,fv,fv3,se,mpas</valid_values>
+      <desc>CAM dynamical core</desc>
+    </entry>
+    <entry id="CAM_CONFIG_OPTS" value="-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58">
+      <type>char</type>
+      <valid_values/>
+      <desc>
+      CAM configure options, see CAM configure utility for details
+      Provides option(s) for the CAM configure utility.
+      CAM_CONFIG_OPTS are normally set as compset variables (e.g., -phys  cam4 -chem waccm_ma)
+      and in general should not be modified for supported compsets.  It is recommended that if you want
+      to modify this value for your experiment, you should use your own user-defined
+      component sets via using create_newcase with a compset_file argument
+    </desc>
+    </entry>
+  </group>
+  <group id="build_component_ctsm">
+    <entry id="LILAC_MODE" value="off">
+      <type>char</type>
+      <valid_values>on,off</valid_values>
+      <desc>Flag to enable building the LILAC cap and coupling code</desc>
+    </entry>
+  </group>
+  <group id="build_component_mosart">
+    <entry id="MOSART_MODE" value="ACTIVE">
+      <type>char</type>
+      <valid_values>ACTIVE,NULL</valid_values>
+      <desc>mode for mosart model, NULL means mosart is turned off</desc>
+    </entry>
+    <entry id="MOSART_FLOOD_MODE" value="NULL">
+      <type>char</type>
+      <valid_values>ACTIVE,NULL</valid_values>
+      <desc>mode for mosart flood feature, NULL means mosart flood is turned off</desc>
+    </entry>
+  </group>
+</file>

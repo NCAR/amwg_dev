@@ -86,13 +86,13 @@ se_hypervis_subcycle =  4
 
 
 
-bnd_topo  = '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20220622.nc'
+bnd_topo  = '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20230105.nc'
 
 
 
-use_gw_convect_dp = .true.
+use_gw_convect_dp = .false.
 
-use_gw_front = .true.
+use_gw_front = .false.
 
 tau_0_ubc = .false.
 

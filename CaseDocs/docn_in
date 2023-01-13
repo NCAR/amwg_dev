@@ -1,4 +1,9 @@
 &docn_nml
- decomp = '1d'
- ocn_in = 'docn_ocn_in'
+  datamode = "sstdata"
+  model_maskfile = "/glade/p/cesmdata/cseg/inputdata/share/meshes/gx1v7_151008_ESMFmesh.nc"
+  model_meshfile = "/glade/p/cesmdata/cseg/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc"
+  nx_global = 48600
+  ny_global = 1
+  restfilm = "null"
+  sst_constant_value = -1.0
 /
