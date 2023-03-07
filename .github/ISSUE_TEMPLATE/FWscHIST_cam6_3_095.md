@@ -20,7 +20,7 @@ Locally (if still available):
 /glade/work/hannay/cesm_tags/f.cam6_3_095
 
 On github:
-hash: 8f70c08
+hash: 9130ff5
 
 **Diagnostics:**
 AMWG diags (if available)
