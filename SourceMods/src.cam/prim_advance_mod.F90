@@ -683,7 +683,8 @@ contains
       call calc_tot_energy_dynamics(elem,fvm,nets,nete,nt,qn0,'dCH')
       do ie=nets,nete
         !$omp parallel do num_threads(vert_num_threads), private(k,i,j,v1,v2,heating)
-        do k=kbeg,kend
+!xxx        do k=kbeg,kend
+        do k=ksponge_end,nlev!xxx no frictional heating in sponge
           !OMP_COLLAPSE_SIMD
           !DIR_VECTOR_ALIGNED
           do j=1,np
@@ -945,17 +946,18 @@ contains
                    vtens(i,j,:,k,ie)
               elem(ie)%state%T(i,j,k,nt)=elem(ie)%state%T(i,j,k,nt) &
                    +ttens(i,j,k,ie)
-
-              v1new=elem(ie)%state%v(i,j,1,k,nt)
-              v2new=elem(ie)%state%v(i,j,2,k,nt)
-              v1   =elem(ie)%state%v(i,j,1,k,nt)- vtens(i,j,1,k,ie)
-              v2   =elem(ie)%state%v(i,j,2,k,nt)- vtens(i,j,2,k,ie)
+!xxx
+!xxx no frictional heating in sponge
+!xxx              v1new=elem(ie)%state%v(i,j,1,k,nt)
+!xxx              v2new=elem(ie)%state%v(i,j,2,k,nt)
+!xxx              v1   =elem(ie)%state%v(i,j,1,k,nt)- vtens(i,j,1,k,ie)
+!xxx              v2   =elem(ie)%state%v(i,j,2,k,nt)- vtens(i,j,2,k,ie)
               !
               ! frictional heating
               !
-              heating = 0.5_r8*(v1new*v1new+v2new*v2new-(v1*v1+v2*v2))
-              elem(ie)%state%T(i,j,k,nt)=elem(ie)%state%T(i,j,k,nt) &
-                   -heating*inv_cp_full(i,j,k,ie)
+!xxx              heating = 0.5_r8*(v1new*v1new+v2new*v2new-(v1*v1+v2*v2))
+!xxx              elem(ie)%state%T(i,j,k,nt)=elem(ie)%state%T(i,j,k,nt) &
+!xxx                   -heating*inv_cp_full(i,j,k,ie)
             enddo
           enddo
         enddo
