@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2022-11-11 13:40:11
+# Created 2023-01-06 16:59:29
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom_e.FWscHIST.ne30_L93.26c_non-orogw_on.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom_e.FWscHIST.ne30_L93.26c_topofix.001"
 
 /glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
@@ -34,7 +34,7 @@ cd "${CASEDIR}"
 
 ./case.build
 
-./case.build
+./preview_namelists
 
 ./case.build
 
@@ -44,51 +44,7 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./case.build
-
-./case.build
-
 ./case.submit
-
-./xmlchange CAM_CONFIG_OPTS=-phys cam6 -microphys mg2 -chem waccm_sc_mam4 -nlev 93
-
-./case.build --clean-all
-
-./case.build
-
-./case.submit
-
-./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 93
-
-./case.build --clean-all
-
-./case.build
-
-./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=12,STOP_OPTION=nmonths
-
-./xmlchange REST_OPTION=nmonths,REST_N=3
-
-./case.submit
-
-./case.build
-
-./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=0,STOP_N=5,STOP_OPTION=ndays
-
-./case.build
-
-./xmlchange JOB_QUEUE=premium
-
-./case.submit
-
-./case.build
-
-./case.submit
-
-./case.build
-
-./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=10,STOP_N=12,STOP_OPTION=nmonths
-
-./xmlchange REST_OPTION=nmonths,REST_N=3
 
 ./case.submit
 
