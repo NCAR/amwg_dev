@@ -4,15 +4,11 @@
  dtime = 1800
 
 
-mfilt           = 0,5,20,40,120,240,365,73,365
+mfilt           =  0,   5,   20,  40, 1,  240,  365, 73
 
-nhtfrq         =                  0, -24,  -6,  -3,  -6,   1, -24,-24
+nhtfrq         =  0, -24,  -6,  -3,  0,   1,    -24, -24
 
 fexcl1 = ' '  
-
-
-
-empty_htapes = .true.
 
 
 
@@ -51,6 +47,12 @@ fincl4 =  'PRECC','PRECL'
 
 
 history_aerosol = .true.
+
+thermo_budget_history = .true.
+
+thermo_budget_histfile_num = 5
+
+avgflag_pertape                = 'A', 'A', 'A', 'A', 'N', 'A', 'A', 'A', 'I'
 
 
 

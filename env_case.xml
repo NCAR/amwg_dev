@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cam6_3_100">
+    <entry id="MODEL_VERSION" value="ebudget_refactor_b4pelmerge_01-116-g80b076d6b">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -296,7 +296,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_100.FWscHIST.ne30_L58.001">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_100.FWscHIST.ne30_L58.ebudget.001">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +305,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_100/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_100_ebudget_dev_update/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_100">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_100_ebudget_dev_update">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.cam6_3_100.FWscHIST.ne30_L58.001">
+    <entry id="CASE" value="f.cam6_3_100.FWscHIST.ne30_L58.ebudget.001">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +325,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_100/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_100_ebudget_dev_update/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +343,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="8f9177c0c8682c4a176918ef6e47f2227d2361363591bd5c873c56133305157a">
+    <entry id="CASE_HASH" value="b25fe741b6cda72ec45e0fb7923a578218afa968ae7c269f7fc53a242d4616cb">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>

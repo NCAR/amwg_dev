@@ -16,14 +16,13 @@
 /
 &air_composition_nl
  dry_air_species		= ''
- water_species_in_air		= 'Q','CLDLIQ','CLDICE','RAINQM','SNOWQM'
+ water_species_in_air		= 'Q','CLDLIQ','CLDICE','RAINQM','SNOWQM','GRAUQM'
 /
 &blj_nl
  do_beljaars		=  .true.  
 /
 &cam_history_nl
- avgflag_pertape		= 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'I'
- empty_htapes		= .true.
+ avgflag_pertape		= 'A','A','A','A','N','A','A','A','I'
  fexcl1		= ' '
  fincl1		= 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 'BURDENSO4',
          'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT',
@@ -42,8 +41,8 @@
  interpolate_nlat		= 192,192
  interpolate_nlon		= 288,288
  interpolate_output		= .true.,.true.
- mfilt		= 0,5,20,40,120,240,365,73,365
- nhtfrq		= 0,-24,-6,-3,-6,1,-24,-24
+ mfilt		= 0,5,20,40,1,240,365,73
+ nhtfrq		= 0,-24,-6,-3,0,1,-24,-24
 /
 &cam_initfiles_nl
  bnd_topo		= '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20230105.nc'
@@ -501,6 +500,10 @@
  solar_htng_spctrl_scl		= .true.
  solar_irrad_data_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/solar/SolarForcingCMIP6_18491230-23000102_c20200615.nc'
  solar_parms_data_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/solar/SolarForcingCMIP6_18491230-23000102_c20200615.nc'
+/
+&thermo_budget_nl
+ thermo_budget_histfile_num		= 5
+ thermo_budget_history		= .true.
 /
 &tms_nl
  do_tms		=  .false. 
