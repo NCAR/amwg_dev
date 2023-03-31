@@ -1,6 +1,6 @@
 
 mfilt           = 0,5,20,40,120,240,365,73,365
-nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
+nhtfrq         =                  0, -24,  -6,  -3,  -6,   1, -24,-24
 fexcl1 = ' '  
 
 empty_htapes = .true.
@@ -16,22 +16,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 
 'WV_phBF:A','WL_phBF:A','WI_phBF:A','SE_phBF:A','KE_phBF:A',
 'WV_phBP:A','WL_phBP:A','WI_phBP:A','SE_phBP:A','KE_phBP:A',
 'WV_phAP:A','WL_phAP:A','WI_phAP:A','SE_phAP:A','KE_phAP:A',
-'WV_phAM:A','WL_phAM:A','WI_phAM:A','SE_phAM:A','KE_phAM:A',
-'WV_dyBF:A','WL_dyBF:A','WI_dyBF:A','SE_dyBF:A','KE_dyBF:A',
-'WV_dyBP:A','WL_dyBP:A','WI_dyBP:A','SE_dyBP:A','KE_dyBP:A',
-'WV_dyAP:A','WL_dyAP:A','WI_dyAP:A','SE_dyAP:A','KE_dyAP:A',
-'WV_dyAM:A','WL_dyAM:A','WI_dyAM:A','SE_dyAM:A','KE_dyAM:A',
-'WV_dBF:A','WL_dBF:A','WI_dBF:A','SE_dBF:A','KE_dBF:A',
-'WV_dED:A','WL_dED:A','WI_dED:A','SE_dED:A','KE_dED:A',
-'WV_dAD:A','WL_dAD:A','WI_dAD:A','SE_dAD:A','KE_dAD:A',
-'WV_dAF:A','WL_dAF:A','WI_dAF:A','SE_dAF:A','KE_dAF:A',
-'WV_dBD:A','WL_dBD:A','WI_dBD:A','SE_dBD:A','KE_dBD:A',
-'WV_dAR:A','WL_dAR:A','WI_dAR:A','SE_dAR:A','KE_dAR:A',
-'WV_dAH:A','WL_dAH:A','WI_dAH:A','SE_dAH:A','KE_dAH:A',
-'WV_dBH:A','WL_dBH:A','WI_dBH:A','SE_dBH:A','KE_dBH:A',
-'WV_dCH:A','WL_dCH:A','WI_dCH:A','SE_dCH:A','KE_dCH:A',
-'WV_dAS:A','WL_dAS:A','WI_dAS:A','SE_dAS:A','KE_dAS:A',
-'WV_dBS:A','WL_dBS:A','WI_dBS:A','SE_dBS:A','KE_dBS:A'
+'WV_phAM:A','WL_phAM:A','WI_phAM:A','SE_phAM:A','KE_phAM:A'
 
 fincl2 = 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U', 'V', 'Z3'
 
@@ -60,10 +45,9 @@ ubc_file_input_type = 'SERIAL'
 
 co2_flag = .false.
 
-clubb_l_predict_upwp_vpwp=.true. ! turns on prognostic momentum fluxes
-clubb_l_mono_flux_lim_um = .true. ! necessary if using l_predict_upwp_vpwp=T
-clubb_l_mono_flux_lim_vm = .true. ! ditto
-
-clubb_c7=0.4
+clubb_l_predict_upwp_vpwp=.true. 
+clubb_l_mono_flux_lim_um   = .true.  
+clubb_l_mono_flux_lim_vm   = .true.  
 clubb_c_uu_shr = 0.1
+clubb_c7=0.1
 

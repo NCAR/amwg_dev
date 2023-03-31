@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:8845643.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8845644.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:9052995.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9052996.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1114,6 +1114,26 @@
       utility.  This should be reserved for component set
       specification. Users should modify CAM namelists only via the
       $CASEROOT/user_nl_cam file.</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_YEAR_FIRST" value="1850">
+      <type>char</type>
+      <desc>Nitrogen deposition data year first</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="2015">
+      <type>char</type>
+      <desc>Nitrogen deposition data year last</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1850">
+      <type>char</type>
+      <desc>Nitrogen deposition align CAM_STREAM_NDEP_YEAR_FIRST with this model year</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_DATA_FILENAME" value="$DIN_LOC_ROOT/lnd/clm2/ndepdata/fndep_clm_hist_b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensmean_1849-2015_monthly_0.9x1.25_c180926.nc">
+      <type>char</type>
+      <desc>Nitrogen deposition data filename</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_MESH_FILENAME" value="$DIN_LOC_ROOT/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc">
+      <type>char</type>
+      <desc>Nitrogen deposition mesh filename (corresponding to the CAM_STREAM_NDEP_DATA_FILENAME)</desc>
     </entry>
   </group>
   <group id="run_component_ctsm">

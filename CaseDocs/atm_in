@@ -25,34 +25,25 @@
  avgflag_pertape		= 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'I'
  empty_htapes		= .true.
  fexcl1		= ' '
- fincl1		= 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT',
-         'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW',
-         'CLDMED', 'CLDTOT', 'CLOUD', 'CMFMC_DP', 'CT_H2O', 'DCQ', 'DQCORE', 'DTCOND', 'DTCORE', 'DTV',
-         'EVAPPREC', 'EVAPSNOW', 'FCTI', 'FCTL', 'FICE', 'FLDS', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC',
-         'FLUT', 'FREQZM', 'FSDS', 'FSDSC', 'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA', 'ICEFRAC',
-         'LANDFRAC', 'LHFLX', 'LWCF', 'MPDICE', 'MPDLIQ', 'MPDQ', 'MPDT', 'OCNFRAC', 'OMEGA', 'OMEGA500',
-         'PBLH', 'PHIS', 'PINT', 'PMID', 'PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS',
-         'PSL', 'PTEQ', 'PTTEND', 'Q', 'QFLX', 'QRL', 'QRS', 'QTGW', 'RCMTEND_CLUBB', 'RELHUM',
-         'RVMTEND_CLUBB', 'SHFLX', 'SOLIN', 'SST', 'STEND_CLUBB', 'SWCF', 'T', 'TAUX', 'TAUY', 'TFIX',
-         'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT', 'UTGWORO',
-         'UTGW_TOTAL', 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT',
-         'N2O', 'WV_phBF:A', 'WL_phBF:A', 'WI_phBF:A', 'SE_phBF:A', 'KE_phBF:A', 'WV_phBP:A', 'WL_phBP:A', 'WI_phBP:A', 'SE_phBP:A',
-         'KE_phBP:A', 'WV_phAP:A', 'WL_phAP:A', 'WI_phAP:A', 'SE_phAP:A', 'KE_phAP:A', 'WV_phAM:A', 'WL_phAM:A', 'WI_phAM:A', 'SE_phAM:A',
-         'KE_phAM:A', 'WV_dyBF:A', 'WL_dyBF:A', 'WI_dyBF:A', 'SE_dyBF:A', 'KE_dyBF:A', 'WV_dyBP:A', 'WL_dyBP:A', 'WI_dyBP:A', 'SE_dyBP:A',
-         'KE_dyBP:A', 'WV_dyAP:A', 'WL_dyAP:A', 'WI_dyAP:A', 'SE_dyAP:A', 'KE_dyAP:A', 'WV_dyAM:A', 'WL_dyAM:A', 'WI_dyAM:A', 'SE_dyAM:A',
-         'KE_dyAM:A', 'WV_dBF:A', 'WL_dBF:A', 'WI_dBF:A', 'SE_dBF:A', 'KE_dBF:A', 'WV_dED:A', 'WL_dED:A', 'WI_dED:A', 'SE_dED:A',
-         'KE_dED:A', 'WV_dAD:A', 'WL_dAD:A', 'WI_dAD:A', 'SE_dAD:A', 'KE_dAD:A', 'WV_dAF:A', 'WL_dAF:A', 'WI_dAF:A', 'SE_dAF:A',
-         'KE_dAF:A', 'WV_dBD:A', 'WL_dBD:A', 'WI_dBD:A', 'SE_dBD:A', 'KE_dBD:A', 'WV_dAR:A', 'WL_dAR:A', 'WI_dAR:A', 'SE_dAR:A',
-         'KE_dAR:A', 'WV_dAH:A', 'WL_dAH:A', 'WI_dAH:A', 'SE_dAH:A', 'KE_dAH:A', 'WV_dBH:A', 'WL_dBH:A', 'WI_dBH:A', 'SE_dBH:A',
-         'KE_dBH:A', 'WV_dCH:A', 'WL_dCH:A', 'WI_dCH:A', 'SE_dCH:A', 'KE_dCH:A', 'WV_dAS:A', 'WL_dAS:A', 'WI_dAS:A', 'SE_dAS:A',
-         'KE_dAS:A', 'WV_dBS:A', 'WL_dBS:A', 'WI_dBS:A', 'SE_dBS:A', 'KE_dBS:A'
+ fincl1		= 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 'BURDENSO4',
+         'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT',
+         'CLOUD', 'CMFMC_DP', 'CT_H2O', 'DCQ', 'DQCORE', 'DTCOND', 'DTCORE', 'DTV', 'EVAPPREC', 'EVAPSNOW', 'FCTI',
+         'FCTL', 'FICE', 'FLDS', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC', 'FLUT', 'FREQZM', 'FSDS', 'FSDSC',
+         'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA', 'ICEFRAC', 'LANDFRAC', 'LHFLX', 'LWCF', 'MPDICE', 'MPDLIQ',
+         'MPDQ', 'MPDT', 'OCNFRAC', 'OMEGA', 'OMEGA500', 'PBLH', 'PHIS', 'PINT', 'PMID', 'PRECC', 'PRECL',
+         'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL', 'PTEQ', 'PTTEND', 'Q', 'QFLX', 'QRL', 'QRS',
+         'QTGW', 'RCMTEND_CLUBB', 'RELHUM', 'RVMTEND_CLUBB', 'SHFLX', 'SOLIN', 'SST', 'STEND_CLUBB', 'SWCF', 'T', 'TAUX',
+         'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT',
+         'UTGWORO', 'UTGW_TOTAL', 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT',
+         'N2O', 'WV_phBF:A', 'WL_phBF:A', 'WI_phBF:A', 'SE_phBF:A', 'KE_phBF:A', 'WV_phBP:A', 'WL_phBP:A', 'WI_phBP:A', 'SE_phBP:A', 'KE_phBP:A',
+         'WV_phAP:A', 'WL_phAP:A', 'WI_phAP:A', 'SE_phAP:A', 'KE_phAP:A', 'WV_phAM:A', 'WL_phAM:A', 'WI_phAM:A', 'SE_phAM:A', 'KE_phAM:A'
  fincl2		= 'OMEGA','PMID','PS','Q','QRL','QRS','T','TROP_P','TROP_T','U','V','Z3'
  fincl4		= 'PRECC','PRECL'
  interpolate_nlat		= 192,192
  interpolate_nlon		= 288,288
  interpolate_output		= .true.,.true.
  mfilt		= 0,5,20,40,120,240,365,73,365
- nhtfrq		= 0,-24,-6,-3,-1,1,-24,-24
+ nhtfrq		= 0,-24,-6,-3,-6,1,-24,-24
 /
 &cam_initfiles_nl
  bnd_topo		= '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20230105.nc'
@@ -179,7 +170,7 @@
  clubb_c6thl		=  4.0     
  clubb_c6thlb		=  6.0     
  clubb_c6thlc		=  1.0     
- clubb_c7		= 0.4
+ clubb_c7		= 0.1
  clubb_c7b		=  0.5     
  clubb_c8		=  4.2     
  clubb_c8b		=  0.0     
@@ -352,6 +343,10 @@
  gw_rdg_orostratmin		=  0.002d0
  gw_rdg_orovmin		=  1.0d-3 
 /
+&hetfrz_classnuc_nl
+ hetfrz_bc_scalfac		= 0.01D0
+ hetfrz_dust_scalfac		= 0.05D0
+/
 &micro_mg_nl
  micro_do_massless_droplet_destroyer		=   .false. 
  micro_do_sb_physics		= .false.
@@ -386,6 +381,13 @@
 /
 &modal_aer_opt_nl
  water_refindex_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/physprops/water_refindex_rrtmg_c080910.nc'
+/
+&ndep_stream_nl
+ stream_ndep_data_filename		= '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/ndepdata/fndep_clm_hist_b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensmean_1849-2015_monthly_0.9x1.25_c180926.nc'
+ stream_ndep_mesh_filename		= '/glade/p/cesmdata/cseg/inputdata/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc'
+ stream_ndep_year_align		= 1850
+ stream_ndep_year_first		= 1850
+ stream_ndep_year_last		= 2015
 /
 &nucleate_ice_nl
  nucleate_ice_incloud		= .false.
