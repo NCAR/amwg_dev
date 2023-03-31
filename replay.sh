@@ -2,15 +2,15 @@
 
 set -e
 
-# Created 2023-01-26 17:25:04
+# Created 2023-02-23 16:28:00
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_095.FWscHIST.ne30_L58.001"
 
-/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
+/glade/work/hannay/cesm_tags/cam6_3_095/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
 cd "${CASEDIR}"
 
-./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58
+./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -chem waccm_sc_mam4 -nlev 58
 
 ./case.setup
 
@@ -32,15 +32,57 @@ cd "${CASEDIR}"
 
 ./xmlchange RUN_REFDIR=cesm2_init
 
+./case.build
+
+./preview_namelists
+
+./preview_namelists
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
+
+./case.build
+
+./preview_namelists
+
+./preview_namelists
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
+
+./case.build
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
+
 ./preview_namelists
 
 ./case.build
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
+
+./case.submit
 
 ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears
 
 ./xmlchange REST_OPTION=nyears,REST_N=1
 
-./case.build
+./case.submit
+
+./preview_namelists
 
 ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=3,STOP_N=3,STOP_OPTION=nyears
 

@@ -12,23 +12,32 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 
 'OCNFRAC', 'OMEGA', 'OMEGA500', 'PBLH', 'PHIS', 'PINT', 'PMID', 'PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL', 'PTEQ', 'PTTEND', 'Q', 
 'QFLX', 'QRL', 'QRS', 'QTGW', 'RCMTEND_CLUBB', 'RELHUM', 'RVMTEND_CLUBB', 'SHFLX', 'SOLIN', 'SST', 'STEND_CLUBB', 'SWCF', 
 'T', 'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT', 'UTGWORO', 'UTGW_TOTAL', 
-'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O'
+'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O',
+'WV_phBF:A','WL_phBF:A','WI_phBF:A','SE_phBF:A','KE_phBF:A',
+'WV_phBP:A','WL_phBP:A','WI_phBP:A','SE_phBP:A','KE_phBP:A',
+'WV_phAP:A','WL_phAP:A','WI_phAP:A','SE_phAP:A','KE_phAP:A',
+'WV_phAM:A','WL_phAM:A','WI_phAM:A','SE_phAM:A','KE_phAM:A',
+'WV_dyBF:A','WL_dyBF:A','WI_dyBF:A','SE_dyBF:A','KE_dyBF:A',
+'WV_dyBP:A','WL_dyBP:A','WI_dyBP:A','SE_dyBP:A','KE_dyBP:A',
+'WV_dyAP:A','WL_dyAP:A','WI_dyAP:A','SE_dyAP:A','KE_dyAP:A',
+'WV_dyAM:A','WL_dyAM:A','WI_dyAM:A','SE_dyAM:A','KE_dyAM:A',
+'WV_dBF:A','WL_dBF:A','WI_dBF:A','SE_dBF:A','KE_dBF:A',
+'WV_dED:A','WL_dED:A','WI_dED:A','SE_dED:A','KE_dED:A',
+'WV_dAD:A','WL_dAD:A','WI_dAD:A','SE_dAD:A','KE_dAD:A',
+'WV_dAF:A','WL_dAF:A','WI_dAF:A','SE_dAF:A','KE_dAF:A',
+'WV_dBD:A','WL_dBD:A','WI_dBD:A','SE_dBD:A','KE_dBD:A',
+'WV_dAR:A','WL_dAR:A','WI_dAR:A','SE_dAR:A','KE_dAR:A',
+'WV_dAH:A','WL_dAH:A','WI_dAH:A','SE_dAH:A','KE_dAH:A',
+'WV_dBH:A','WL_dBH:A','WI_dBH:A','SE_dBH:A','KE_dBH:A',
+'WV_dCH:A','WL_dCH:A','WI_dCH:A','SE_dCH:A','KE_dCH:A',
+'WV_dAS:A','WL_dAS:A','WI_dAS:A','SE_dAS:A','KE_dAS:A',
+'WV_dBS:A','WL_dBS:A','WI_dBS:A','SE_dBS:A','KE_dBS:A'
 
 fincl2 = 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U', 'V', 'Z3'
 
 fincl4 =  'PRECC','PRECL'
 
-tracer_cnst_specifier          = 'O3','OH','NO3','HO2','HALONS'
-
-co2_flag=.false.
-
 history_aerosol = .true.
-
-clubb_gamma_coef   =  0.28
-clubb_c14 = 2.2D0
-clubb_c8 = 4.8
-clubb_l_trapezoidal_rule_zm          =  .true.
-clubb_l_trapezoidal_rule_zt          =  .true.
 
 ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
 
@@ -44,7 +53,11 @@ bnd_topo  = '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedm
 
 use_gw_convect_dp = .false.
 use_gw_front = .false.
-tau_0_ubc = .false.
 
- zmconv_parcel_pbl              = .false.
+ubc_specifier = 'Q:H2O->UBC_FILE'
+ubc_file_path = '/glade/p/cesmdata/inputdata/atm/cam/chem/ubc/f.e21.FWHISTBgcCrop.f09_f09_mg17.CMIP6-AMIP-WACCM.ensAvg123.cam.h0zm.UBC.195001-201412_c220322.nc'
+ubc_file_input_type = 'SERIAL'
+
+co2_flag = .false.
+
 

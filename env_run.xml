@@ -114,11 +114,11 @@
       <type>char</type>
       <valid_values>TIGHT,OPTION1,OPTION2</valid_values>
       <desc>
-      OPTION1 (like RASM_OPTION1 in CPL7) runs prep_ocn_avg, 
+      OPTION1 (like RASM_OPTION1 in CPL7) runs prep_ocn_avg,
       BEFORE the aoflux and ocnalb calculations, thereby reducing
       most of the lags and field inconsistency but still allowing the
       ocean to run concurrently with the ice and atmosphere.
-      OPTION2 (like CESM1_MOD in CPL7) runs prep_ocn_avg, 
+      OPTION2 (like CESM1_MOD in CPL7) runs prep_ocn_avg,
       AFTER the aoflux and ocnalb calculations, thereby permitting maximum
       concurrency
       TIGHT (like CESM1_MOD_TIGHT), is a tight coupling run sequence
@@ -246,7 +246,7 @@
     </entry>
     <entry id="STOP_OPTION" value="nyears">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,end</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
@@ -266,7 +266,7 @@
     </entry>
     <entry id="REST_OPTION" value="nyears">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,end</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
@@ -286,7 +286,7 @@
     </entry>
     <entry id="PAUSE_OPTION" value="never">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears</valid_values>
       <desc>
       Sets the pause frequency along with PAUSE_N
     </desc>
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:8227621.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8227622.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:8766949.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:8766950.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -394,7 +394,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to archive all interim restart files, not just those at eor
     If TRUE, perform short term archiving on all interim restart files,
-    not just those at the end of the run. By default, this value is TRUE.
+    not just those at the end of the run. By default, this value is FALSE.
     The restart files are saved under the specific component directory
     ($DOUT_S_ROOT/$CASE/$COMPONENT/rest rather than the top-level $DOUT_S_ROOT/$CASE/rest directory).
     Interim restart files are created using the REST_N and REST_OPTION variables.
@@ -1017,7 +1017,7 @@
   <group id="med_history">
     <entry id="HIST_OPTION" value="never">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,ifdays0,end</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>Sets driver snapshot history file frequency (like REST_OPTION)</desc>
     </entry>
     <entry id="HIST_N" value="-999">
@@ -1032,7 +1032,7 @@
     </entry>
     <entry id="AVGHIST_OPTION" value="never">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,ifdays0,end</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>Sets mediator average history file frequency (like REST_OPTION)</desc>
     </entry>
     <entry id="AVGHIST_N" value="-999">
@@ -1216,9 +1216,14 @@
       <valid_values>
       ABBY,BLAN,CPER,DEJU,GRSM,HEAL,KONA,LENO,NIWO,ONAQ,PUUM,SERC,SRER,TALL,TREE,WOOD,
       BARR,BONA,DCFS,DELA,GUAN,JERC,KONZ,MLBS,NOGP,ORNL,RMNP,SJER,STEI,TEAK,UKFS,WREF,
-      BART,CLBJ,DSNY,HARV,JORN,LAJA,MOAB,OAES,OSBS,SCBI,SOAP,STER,TOOL,UNDE,YELL
+      BART,CLBJ,DSNY,HARV,JORN,LAJA,MOAB,OAES,OSBS,SCBI,SOAP,STER,TOOL,UNDE,YELL,
     </valid_values>
       <desc>Name of site for NEON tower data</desc>
+    </entry>
+    <entry id="NEONVERSION" value="latest">
+      <type>char</type>
+      <valid_values>v1,v2,latest</valid_values>
+      <desc>Version id of Neon data</desc>
     </entry>
   </group>
   <group id="build_component_cice">
@@ -1303,19 +1308,25 @@
     Sets SST and ice coverage stream name.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2017_c180507.nc">
+    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2012_c130411.nc">
       <type>char</type>
       <valid_values/>
       <desc>Prescribed SST and ice coverage data file name.
     Sets SST and ice coverage data file name.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
+    <entry id="DOCN_SKIP_RESTART_READ" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc> If set to true, than docn restarts will not be read on a continuation run.
+    </desc>
+    </entry>
   </group>
   <group id="run_component_cam_sstice">
-    <entry id="SSTICE_GRID_FILENAME" value="$DIN_LOC_ROOT/ocn/docn7/domain.ocn.1x1.111007.nc">
+    <entry id="SSTICE_MESH_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_clim_c101029_ESMFmesh_120520.nc">
       <type>char</type>
       <valid_values/>
-      <desc>Prescribed SST and ice coverage grid file name.
+      <desc>Prescribed SST and ice coverage mesh file name.
     Sets SST and ice coverage grid file name for prescribed runs.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
@@ -1343,7 +1354,7 @@
     years 0-9 in the file will not be used.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_YEAR_END" value="2016">
+    <entry id="SSTICE_YEAR_END" value="2012">
       <type>integer</type>
       <valid_values/>
       <desc>The last year of data to use from SSTICE_DATA_FILENAME.

@@ -86,9 +86,17 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001
+     case_name = f.cam6_3_095.FWscHIST.ne30_L58.001
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
+     data_assimilation_atm = .false.
+     data_assimilation_cpl = .false.
+     data_assimilation_glc = .false.
+     data_assimilation_ice = .false.
+     data_assimilation_lnd = .false.
+     data_assimilation_ocn = .false.
+     data_assimilation_rof = .false.
+     data_assimilation_wav = .false.
      flds_bgc_oi = .false.
      flds_co2a = .true.
      flds_co2b = .false.
@@ -247,6 +255,7 @@ MED_attributes::
      ocn2wav_smapname = unset
      ocn_nx = 48600
      ocn_ny = 1
+     ocn_surface_flux_scheme = 0
      rof2lnd_map = unset
      rof2ocn_fmapname = unset
      rof2ocn_ice_rmapname = unset
@@ -318,8 +327,8 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = med.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = med.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -330,8 +339,8 @@ MED_modelio::
 ::
 
 ATM_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = atm.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = atm.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -342,8 +351,8 @@ ATM_modelio::
 ::
 
 LND_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = lnd.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = lnd.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -354,8 +363,8 @@ LND_modelio::
 ::
 
 ICE_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = ice.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = ice.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -366,8 +375,8 @@ ICE_modelio::
 ::
 
 OCN_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = ocn.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = ocn.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -378,8 +387,8 @@ OCN_modelio::
 ::
 
 ROF_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = rof.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = rof.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -390,8 +399,8 @@ ROF_modelio::
 ::
 
 GLC_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = glc.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = glc.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -402,8 +411,8 @@ GLC_modelio::
 ::
 
 WAV_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = wav.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = wav.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -414,8 +423,8 @@ WAV_modelio::
 ::
 
 ESP_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = esp.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = esp.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -426,7 +435,7 @@ ESP_modelio::
 ::
 
 DRV_modelio::
-     diro = /glade/scratch/hannay/f.cesm3_cam058_mom_e.FWscHIST.ne30_L58.26c_zm1.001/run
-     logfile = drv.log.8227621.chadmin1.ib0.cheyenne.ucar.edu.230127-155927
+     diro = /glade/scratch/hannay/f.cam6_3_095.FWscHIST.ne30_L58.001/run
+     logfile = drv.log.8766949.chadmin1.ib0.cheyenne.ucar.edu.230301-072752
 ::
 
