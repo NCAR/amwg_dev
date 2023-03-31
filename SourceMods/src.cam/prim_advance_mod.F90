@@ -528,13 +528,10 @@ contains
             !DIR_VECTOR_ALIGNED
             do j=1,np
               do i=1,np
-!                elem(ie)%derived%dpdiss_ave(i,j,k)=elem(ie)%derived%dpdiss_ave(i,j,k)+&
-!                     rhypervis_subcycle*eta_ave_w*elem(ie)%state%dp3d(i,j,k,nt)
-                !
-                ! pel@ucar.edu: CESM2.2 bug fix that has already been committed to the release branch
-                !
-                elem(ie)%derived%dpdiss_ave(i,j,k)=elem(ie)%derived%dpdiss_ave(i,j,k)+&
-                     rhypervis_subcycle*eta_ave_w*(elem(ie)%state%dp3d(i,j,k,nt)-elem(ie)%derived%dp_ref(i,j,k))
+                elem(ie)%derived%dpdiss_ave(i,j,k)=elem(ie)%derived%dpdiss_ave(i,j,k)+&                          !bugfix
+                     rhypervis_subcycle*eta_ave_w*(elem(ie)%state%dp3d(i,j,k,nt)-elem(ie)%derived%dp_ref(i,j,k)) !bugfix
+!bug                elem(ie)%derived%dpdiss_ave(i,j,k)=elem(ie)%derived%dpdiss_ave(i,j,k)+&
+!bug                     rhypervis_subcycle*eta_ave_w*elem(ie)%state%dp3d(i,j,k,nt)
                 elem(ie)%derived%dpdiss_biharmonic(i,j,k)=elem(ie)%derived%dpdiss_biharmonic(i,j,k)+&
                      rhypervis_subcycle*eta_ave_w*dptens(i,j,k,ie)
               enddo
@@ -683,8 +680,7 @@ contains
       call calc_tot_energy_dynamics(elem,fvm,nets,nete,nt,qn0,'dCH')
       do ie=nets,nete
         !$omp parallel do num_threads(vert_num_threads), private(k,i,j,v1,v2,heating)
-!xxx        do k=kbeg,kend
-        do k=ksponge_end,nlev!xxx no frictional heating in sponge
+        do k=kbeg,kend
           !OMP_COLLAPSE_SIMD
           !DIR_VECTOR_ALIGNED
           do j=1,np
@@ -946,18 +942,17 @@ contains
                    vtens(i,j,:,k,ie)
               elem(ie)%state%T(i,j,k,nt)=elem(ie)%state%T(i,j,k,nt) &
                    +ttens(i,j,k,ie)
-!xxx
-!xxx no frictional heating in sponge
-!xxx              v1new=elem(ie)%state%v(i,j,1,k,nt)
-!xxx              v2new=elem(ie)%state%v(i,j,2,k,nt)
-!xxx              v1   =elem(ie)%state%v(i,j,1,k,nt)- vtens(i,j,1,k,ie)
-!xxx              v2   =elem(ie)%state%v(i,j,2,k,nt)- vtens(i,j,2,k,ie)
+
+              v1new=elem(ie)%state%v(i,j,1,k,nt)
+              v2new=elem(ie)%state%v(i,j,2,k,nt)
+              v1   =elem(ie)%state%v(i,j,1,k,nt)- vtens(i,j,1,k,ie)
+              v2   =elem(ie)%state%v(i,j,2,k,nt)- vtens(i,j,2,k,ie)
               !
               ! frictional heating
               !
-!xxx              heating = 0.5_r8*(v1new*v1new+v2new*v2new-(v1*v1+v2*v2))
-!xxx              elem(ie)%state%T(i,j,k,nt)=elem(ie)%state%T(i,j,k,nt) &
-!xxx                   -heating*inv_cp_full(i,j,k,ie)
+              heating = 0.5_r8*(v1new*v1new+v2new*v2new-(v1*v1+v2*v2))
+              elem(ie)%state%T(i,j,k,nt)=elem(ie)%state%T(i,j,k,nt) &
+                   -heating*inv_cp_full(i,j,k,ie)
             enddo
           enddo
         enddo
@@ -1524,6 +1519,7 @@ contains
         call strlist_get_ind(cnst_name_gll, 'CLDLIQ' , ixcldliq, abort=.false.)
         call strlist_get_ind(cnst_name_gll, 'CLDICE' , ixcldice, abort=.false.)
       end if
+
       call cnst_get_ind('TT_LW' , ixtt    , abort=.false.)
       !
       ! Compute frozen static energy in 3 parts:  KE, SE, and energy associated with vapor and liquid

@@ -6,7 +6,7 @@
 
 mfilt           = 0,5,20,40,120,240,365,73,365
 
-nhtfrq         =                  0, -24,  -6,  -3,  -3,   1, -24,-24
+nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
 
 fexcl1 = ' '  
 
@@ -34,21 +34,11 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 
 
 
 
-fincl2 = 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U', 'V', 'Z3',
-
-             'FLUT', 'PRECT', 'TS', 'U850', 'V850', 'U200', 'V200', 'OMEGA500', 'PSL'
+fincl2 = 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U', 'V', 'Z3'
 
 
 
-fincl3 = 'U:I', 'V:I', 'T:I', 'OMEGA:I', 'PS:I'
-
-
-
-fincl4 =  'PRECC','PRECL','PRECT'
-
-
-
-fincl5 =  'PRECC','PRECL'
+fincl4 =  'PRECC','PRECL'
 
 
 
@@ -76,21 +66,23 @@ clubb_l_trapezoidal_rule_zt          =  .true.
 
 
 
-interpolate_output = .true.,.true.,.true.,.true.
-
-interpolate_nlat = 192,192,192,192
-
-interpolate_nlon = 288,288,288,288
+ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
 
 
 
-se_rsplit           = 6
+interpolate_output = .true.,.true.
 
-se_nsplit           = 3
+interpolate_nlat = 192,192
 
-se_hypervis_subcycle =  3
+interpolate_nlon = 288,288
 
-se_nu_top = 1E6
+
+
+se_rsplit            = 3
+
+se_nsplit           = 2
+
+se_hypervis_subcycle =  4
 
 
 
@@ -98,13 +90,15 @@ bnd_topo  = '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedm
 
 
 
-use_gw_convect_dp = .true.
+use_gw_convect_dp = .false.
 
-use_gw_front = .true.
+use_gw_front = .false.
 
-tau_0_ubc = .true.
+tau_0_ubc = .false.
 
-ncdata = '/glade/p/cgd/amp/pel/inic/L93_ne30pg3_ne30pg3_mg17_450_short.cam.i.1979-01-07-00000.nc'
+
+
+ zmconv_parcel_pbl              = .false.
 
 
 
