@@ -179,7 +179,7 @@
  clubb_c6thl		=  4.0     
  clubb_c6thlb		=  6.0     
  clubb_c6thlc		=  1.0     
- clubb_c7		=  0.5     
+ clubb_c7		= 0.4
  clubb_c7b		=  0.5     
  clubb_c8		=  4.2     
  clubb_c8b		=  0.0     
@@ -198,7 +198,7 @@
  clubb_c_k8		=  1.25    
  clubb_c_k9		=  0.25    
  clubb_c_uu_buoy		=  0.3     
- clubb_c_uu_shr		=  0.3     
+ clubb_c_uu_shr		= 0.1
  clubb_c_wp2_splat		=  0.0     
  clubb_c_wp3_pr_turb		=  0.4     
  clubb_detice_rad		=  61.0D-6             
@@ -227,10 +227,10 @@
  clubb_l_mono_flux_lim_rtm		=  .true.  
  clubb_l_mono_flux_lim_spikefix		=  .true.  
  clubb_l_mono_flux_lim_thlm		=  .true.  
- clubb_l_mono_flux_lim_um		=  .false. 
- clubb_l_mono_flux_lim_vm		=  .false. 
+ clubb_l_mono_flux_lim_um		= .true.
+ clubb_l_mono_flux_lim_vm		= .true.
  clubb_l_partial_upwind_wp3		=  .false. 
- clubb_l_predict_upwp_vpwp		=  .false. 
+ clubb_l_predict_upwp_vpwp		= .true.
  clubb_l_rcm_supersat_adj		=  .false. 
  clubb_l_smooth_heaviside_tau_wpxp		=  .false. 
  clubb_l_stability_correct_tau_zm		=  .true.  

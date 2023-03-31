@@ -60,4 +60,10 @@ ubc_file_input_type = 'SERIAL'
 
 co2_flag = .false.
 
+clubb_l_predict_upwp_vpwp=.true. ! turns on prognostic momentum fluxes
+clubb_l_mono_flux_lim_um = .true. ! necessary if using l_predict_upwp_vpwp=T
+clubb_l_mono_flux_lim_vm = .true. ! ditto
+
+clubb_c7=0.4
+clubb_c_uu_shr = 0.1
 
