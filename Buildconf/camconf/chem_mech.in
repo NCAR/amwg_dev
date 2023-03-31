@@ -6,6 +6,7 @@
 * Tag created on : 2022-12-14 15:17:17.723566-07
 * Comments for this tag follow:
 *     lke : 2022-12-14 : Specified chemistry (SC) WACCM mechanism, with updated simple SOA.
+* fvitt : 2023-03-17 : Copied from waccm_sc_mam4 to ghg_mam4 and add CO2 for CAM7 prognostic GHGs
 
       SPECIES
 
@@ -15,6 +16,7 @@
  CFC11 -> CFCl3,
  CFC12 -> CF2Cl2,
  CH4,
+ CO2,
  DMS -> CH3SCH3,
  dst_a1 -> AlSiO5,
  dst_a2 -> AlSiO5,
@@ -40,7 +42,6 @@
  SOAE -> C,
  SOAG -> C,
  H2O
-
       End Solution
 
 
@@ -62,7 +63,7 @@
 
    Solution classes
       Explicit
-
+ CO2
       End Explicit
 
       Implicit

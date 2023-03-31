@@ -2,17 +2,13 @@
 
 set -e
 
-# Created 2023-03-30 13:06:56
+# Created 2023-03-30 11:55:26
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_100.FWscHIST.ne30_L58.ebudget.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_101.FLTHIST_v0a.ne30.001"
 
-/glade/work/hannay/cesm_tags/cam6_3_100_ebudget_dev_update/cime/scripts/create_newcase --compset FWscHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
+/glade/work/hannay/cesm_tags/cam6_3_100_FLTHIST_v0a/cime/scripts/create_newcase --compset FLTHIST_v0a --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
 cd "${CASEDIR}"
-
-./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -chem waccm_sc_mam4 -nlev 58
-
-./case.setup
 
 ./xmlchange RUN_STARTDATE=1979-01-01
 
@@ -32,39 +28,15 @@ cd "${CASEDIR}"
 
 ./xmlchange RUN_REFDIR=cesm2_init
 
-./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001
+./preview_namelists
 
-./xmlchange RUN_REFDATE=1989-01-01
-
-./xmlchange GET_REFCASE=TRUE
-
-./xmlchange RUN_REFDIR=cesm2_init
-
-./case.build
-
-./case.build
+./case.setup
 
 ./preview_namelists
 
-./case.build
-
 ./preview_namelists
 
-./case.build
-
 ./preview_namelists
-
-./case.build
-
-./preview_namelists
-
-./case.build
-
-./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
-
-./xmlchange REST_OPTION=nyears,REST_N=1
-
-./case.submit
 
 ./case.build
 

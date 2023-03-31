@@ -6,31 +6,32 @@
       (  3)  CFC11              (CFCl3)
       (  4)  CFC12              (CF2Cl2)
       (  5)  CH4             
-      (  6)  DMS                (CH3SCH3)
-      (  7)  dst_a1             (AlSiO5)
-      (  8)  dst_a2             (AlSiO5)
-      (  9)  dst_a3             (AlSiO5)
-      ( 10)  H2O2            
-      ( 11)  H2SO4           
-      ( 12)  N2O             
-      ( 13)  ncl_a1             (NaCl)
-      ( 14)  ncl_a2             (NaCl)
-      ( 15)  ncl_a3             (NaCl)
-      ( 16)  num_a1             (H)
-      ( 17)  num_a2             (H)
-      ( 18)  num_a3             (H)
-      ( 19)  num_a4             (H)
-      ( 20)  pom_a1             (C)
-      ( 21)  pom_a4             (C)
-      ( 22)  SO2             
-      ( 23)  so4_a1             (NH4HSO4)
-      ( 24)  so4_a2             (NH4HSO4)
-      ( 25)  so4_a3             (NH4HSO4)
-      ( 26)  soa_a1             (C)
-      ( 27)  soa_a2             (C)
-      ( 28)  SOAE               (C)
-      ( 29)  SOAG               (C)
-      ( 30)  H2O             
+      (  6)  CO2             
+      (  7)  DMS                (CH3SCH3)
+      (  8)  dst_a1             (AlSiO5)
+      (  9)  dst_a2             (AlSiO5)
+      ( 10)  dst_a3             (AlSiO5)
+      ( 11)  H2O2            
+      ( 12)  H2SO4           
+      ( 13)  N2O             
+      ( 14)  ncl_a1             (NaCl)
+      ( 15)  ncl_a2             (NaCl)
+      ( 16)  ncl_a3             (NaCl)
+      ( 17)  num_a1             (H)
+      ( 18)  num_a2             (H)
+      ( 19)  num_a3             (H)
+      ( 20)  num_a4             (H)
+      ( 21)  pom_a1             (C)
+      ( 22)  pom_a4             (C)
+      ( 23)  SO2             
+      ( 24)  so4_a1             (NH4HSO4)
+      ( 25)  so4_a2             (NH4HSO4)
+      ( 26)  so4_a3             (NH4HSO4)
+      ( 27)  soa_a1             (C)
+      ( 28)  soa_a2             (C)
+      ( 29)  SOAE               (C)
+      ( 30)  SOAG               (C)
+      ( 31)  H2O             
   
   
      Invariant species
@@ -50,6 +51,9 @@
   
 Class List
 ==========
+ Explicit  
+ --------
+      (  1)  CO2             
   
  Implicit  
  --------
@@ -126,6 +130,7 @@ Extraneous prod/loss species
     d(CFC11)/dt =  - r5*CFC11                                                                                           
     d(CFC12)/dt =  - r6*CFC12                                                                                           
     d(CH4)/dt =  - r7*CH4                                                                                               
+    d(CO2)/dt = 0                                                                                                       
     d(DMS)/dt =  - r8*NO3*DMS  - r9*OH*DMS  - r11*OH*DMS                                                                
     d(dst_a1)/dt = 0                                                                                                    
     d(dst_a2)/dt = 0                                                                                                    
