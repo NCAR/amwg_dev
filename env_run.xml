@@ -244,14 +244,14 @@
       Run start time-of-day
     </desc>
     </entry>
-    <entry id="STOP_OPTION" value="nyears">
+    <entry id="STOP_OPTION" value="nmonths">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="3">
+    <entry id="STOP_N" value="1">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -328,7 +328,7 @@
       ignored.  default: false
     </desc>
     </entry>
-    <entry id="CONTINUE_RUN" value="TRUE">
+    <entry id="CONTINUE_RUN" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:9087934.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9087935.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:9092660.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9092661.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
