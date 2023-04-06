@@ -1,3 +1,3 @@
 # amwg_cases
 
-Issue https://github.com/NCAR/amwg_dev/issues/229
+Issue https://github.com/NCAR/amwg_dev/issues/231

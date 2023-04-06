@@ -30,15 +30,9 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'T', 'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT', 'UTGWORO', 'UTGW_TOTAL', 
 
-'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O',
+'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O', 'CO2',
 
-'WV_phBF:A','WL_phBF:A','WI_phBF:A','SE_phBF:A','KE_phBF:A',
-
-'WV_phBP:A','WL_phBP:A','WI_phBP:A','SE_phBP:A','KE_phBP:A',
-
-'WV_phAP:A','WL_phAP:A','WI_phAP:A','SE_phAP:A','KE_phAP:A',
-
-'WV_phAM:A','WL_phAM:A','WI_phAM:A','SE_phAM:A','KE_phAM:A',
+'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL',
 
 'AODVISdn', 'AQSO4_H2O2','AQSO4_O3',
 
@@ -91,10 +85,6 @@ fincl2 = 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U',
 
 
 fincl4 =  'PRECC','PRECL'
-
-
-
-history_aerosol = .true.
 
 
 

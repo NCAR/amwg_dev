@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cam_fix_init_cam_dev_01-319-g11e91e1c">
+    <entry id="MODEL_VERSION" value="cam6_3_101">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -177,7 +177,7 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="HIST_CAM%DEV%LT_CLM50%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
+    <entry id="COMPSET" value="HIST_CAM%DEV%LT%GHGMAM4_CLM50%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
@@ -296,7 +296,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_101.FLTHIST_v0a.ne30.001">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_101.FLTHIST_v0a.ne30.002">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +305,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_100_FLTHIST_v0a/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_101/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_100_FLTHIST_v0a">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_101">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.cam6_3_101.FLTHIST_v0a.ne30.001">
+    <entry id="CASE" value="f.cam6_3_101.FLTHIST_v0a.ne30.002">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +325,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_100_FLTHIST_v0a/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_101/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +343,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="79e9650a13342d1a359244f6731bbadc7bb9dfca5e88dc535788b1184d70e004">
+    <entry id="CASE_HASH" value="4b3eb7c9f51d87e1e76dc7ec8e7bfc9778f733a3d92d71c3434772ca77683f08">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
