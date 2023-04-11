@@ -1,5 +1,5 @@
 ---
-name: FWscHIST simulation with cam6_3_095
+name: FLTHIST simulation with cam6_3_106
 about: Documenting information about a CAM/CESM simulation. This contains information about the location of the run directory, sandbox, etc 
 title: Casename (enter the name of the run here)
 labels: ''
@@ -17,14 +17,14 @@ https://github.com/NCAR/amwg_dev/tree/$CASE
 
 **Sandbox:**
 Locally (if still available):
-/glade/work/hannay/cesm_tags/f.cam6_3_095
+/glade/work/hannay/cesm_tags/cam6_3_106
 
 On github:
-hash: 9130ff5
+hash: 0470324 (https://github.com/ESCOMP/CAM/tree/cam6_3_106)
 
 **Diagnostics:**
-AMWG diags (if available)
-[https://webext.cgd.ucar.edu/FWscHIST/$CASE/atm/](https://webext.cgd.ucar.edu/FWscHIST/$CASE/atm/)
+ADF diags (if available)
+[https://webext.cgd.ucar.edu/FLTHIST/$CASE/atm/](https://webext.cgd.ucar.edu/FLTHIST/$CASE/atm/)
 
 **Contacts:**
 
