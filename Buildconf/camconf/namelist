@@ -170,13 +170,15 @@ dust_emis_fact         = 0.80D0
 
 micro_mg_dcs            =           250.D-6
 
-use_gw_convect_dp        = .false.
 
-use_gw_front        = .false.
 
-effgw_rdg_beta        = 2.0D0
+use_gw_convect_dp        = .true.  
 
-effgw_rdg_beta_max        = 2.0D0
+use_gw_front        = .true.
+
+effgw_rdg_beta        = 1.0D0  
+
+effgw_rdg_beta_max        = 1.0D0
 
 
 
