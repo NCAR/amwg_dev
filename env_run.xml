@@ -251,7 +251,7 @@
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="1">
+    <entry id="STOP_N" value="3">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:9137157.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9137158.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:9255862.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9255863.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1030,21 +1030,6 @@
       <valid_values/>
       <desc>yyyymmdd format, sets coupler snapshot history date (like REST_DATE)</desc>
     </entry>
-    <entry id="AVGHIST_OPTION" value="never">
-      <type>char</type>
-      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
-      <desc>Sets mediator average history file frequency (like REST_OPTION)</desc>
-    </entry>
-    <entry id="AVGHIST_N" value="-999">
-      <type>char</type>
-      <valid_values/>
-      <desc>Sets mediator average history file frequency (like REST_N)</desc>
-    </entry>
-    <entry id="AVGHIST_DATE" value="-999">
-      <type>integer</type>
-      <valid_values/>
-      <desc>yyyymmdd format, sets mediator average history date (like REST_DATE)</desc>
-    </entry>
   </group>
   <group id="run_budgets">
     <entry id="BUDGETS" value="FALSE">
@@ -1271,7 +1256,7 @@
   <group id="run_component_docn">
     <entry id="DOCN_MODE" value="prescribed">
       <type>char</type>
-      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,null</valid_values>
+      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,cplhist</valid_values>
       <desc> DOCN mode. The data ocean component (DOCN) always returns SSTs to the
     driver. The atmosphere/ocean fluxes are computed in the
     coupler. Therefore, the data ocean model does not compute fluxes like
@@ -1335,11 +1320,42 @@
     Sets SST and ice coverage data file name.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
+    <entry id="DOCN_CPLHIST_YR_ALIGN" value="1">
+      <type>integer</type>
+      <valid_values/>
+      <desc>
+      Simulation year corresponding to DOCN_CPLHIST_YR_START. A common usage
+      is to set this to RUN_STARTDATE. With this setting, the forcing
+      in the first year of the run will be the forcing of year
+      DOCN_CPLHIST_YR_START. Another use case is to align the calendar
+      of transient forcing with the model calendar. For example,
+      setting DOCN_CPLHIST_YR_ALIGN=DOCN_CPLHIST_YR_START will lead to
+      the forcing calendar being the same as the model calendar. The
+      forcing for a given model year would be the forcing of the same
+      year. This would be appropriate in transient runs where the
+      model calendar is setup to span the same year range as the
+      forcing data.
+    </desc>
+    </entry>
+    <entry id="DOCN_CPLHIST_YR_START" value="1">
+      <type>integer</type>
+      <valid_values/>
+      <desc>starting year to loop data over</desc>
+    </entry>
+    <entry id="DOCN_CPLHIST_YR_END" value="1">
+      <type>integer</type>
+      <valid_values/>
+      <desc>ending year to loop data over</desc>
+    </entry>
     <entry id="DOCN_SKIP_RESTART_READ" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc> If set to true, than docn restarts will not be read on a continuation run.
     </desc>
+    </entry>
+    <entry id="DOCN_IMPORT_FIELDS" value="none">
+      <type>char</type>
+      <desc>none or colon deliminted string of import fields that DOCN will advertise</desc>
     </entry>
   </group>
   <group id="run_component_cam_sstice">

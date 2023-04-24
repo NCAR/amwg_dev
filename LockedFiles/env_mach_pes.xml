@@ -155,4 +155,18 @@
       <desc>pes or cores per node for accounting purposes </desc>
     </entry>
   </group>
+  <group id="run_pio">
+    <entry id="PIO_ASYNCIO_NTASKS" value="0">
+      <type>integer</type>
+      <desc>Task count for asyncronous IO, only valid if PIO_ASYNC_INTERFACE is True</desc>
+    </entry>
+    <entry id="PIO_ASYNCIO_STRIDE" value="0">
+      <type>integer</type>
+      <desc>Stride of tasks for asyncronous IO, only valid if PIO_ASYNC_INTERFACE is True</desc>
+    </entry>
+    <entry id="PIO_ASYNCIO_ROOTPE" value="1">
+      <type>integer</type>
+      <desc>RootPE of tasks for asyncronous IO, only valid if PIO_ASYNC_INTERFACE is True</desc>
+    </entry>
+  </group>
 </file>

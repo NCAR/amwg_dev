@@ -35,9 +35,12 @@
   close_boundaries = .false.
   dxrect = 30.0e5
   dyrect = 30.0e5
+  grid_atm = "A"
   grid_file = "UNSET"
-  grid_format = "nc"
-  grid_type = "setmask"
+  grid_format = "meshnc"
+  grid_ice = "B"
+  grid_ocn = "A"
+  grid_type = "rectangular"
   gridcpl_file = "unknown_gridcpl_file"
   kcatbound = 0
   kmt_file = "UNSET"
@@ -65,7 +68,6 @@
   restart_fy = .false.
   restart_iso = .false.
   restart_lvl = .false.
-  restart_pond_cesm = .false.
   restart_pond_lvl = .false.
   restart_pond_topo = .false.
   restart_snow = .false.
@@ -75,7 +77,6 @@
   tr_iage = .false.
   tr_iso = .false.
   tr_lvl = .true.
-  tr_pond_cesm = .false.
   tr_pond_lvl = .true.
   tr_pond_topo = .false.
   tr_snow = .false.
@@ -181,7 +182,7 @@
   nfreq = 25
   restart_coszen = .true.
   rotate_wind = .true.
-  saltflux_option = "4psu"
+  saltflux_option = "constant"
   tfrz_option = "mushy"
   update_ocn_f = .false.
   ustar_min = 0.005
@@ -193,7 +194,7 @@
   block_size_x = 20
   block_size_y = 1
   distribution_type = "roundrobin"
-  distribution_wght = "latitude"
+  distribution_wght = "blockall"
   ew_boundary_type = "cyclic"
   maskhalo_bound = .true.
   maskhalo_dyn = .true.
