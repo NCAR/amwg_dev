@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cam6_3_106">
+    <entry id="MODEL_VERSION" value="ebudget_refactor_b4pelmerge_01-175-gd1a8ff3e3">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -296,7 +296,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw_ebudget.001">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +305,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_106/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_106_ebudget_dev_update/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_106">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_106_ebudget_dev_update">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw.001">
+    <entry id="CASE" value="f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw_ebudget.001">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +325,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_106/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_106_ebudget_dev_update/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +343,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="e24bd8d29e6be9e8f1ad22ea33f873e9ae58f2d15b8b817e44692e754574621d">
+    <entry id="CASE_HASH" value="b519f02675500c0f0a0761985ce3797c79bf4b5188cc875b71e0a7991a12234b">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
