@@ -21,3 +21,6 @@
 &ozone_coupling_nl
  atm_ozone_frequency		= 'multiday_average'
 /
+&lightning_coupling_nl
+ atm_provides_lightning		= .true.
+/
