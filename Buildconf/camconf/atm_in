@@ -16,12 +16,13 @@
 /
 &air_composition_nl
  dry_air_species		= ''
- water_species_in_air		= 'Q','CLDLIQ','CLDICE','RAINQM','SNOWQM','GRAUQM'
+ water_species_in_air		= 'Q','CLDLIQ','CLDICE','RAINQM','SNOWQM'
 /
 &blj_nl
  do_beljaars		=  .true.  
 /
 &cam_history_nl
+ empty_htapes		= .true.
  fexcl1		= ' '
  fincl1		= 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn', 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT',
          'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED',
@@ -300,6 +301,7 @@
  se_kmax_jet		= -1
  se_kmin_jet		= -1
  se_large_courant_incr		=  .true.  
+ se_lcp_moist		=  .true.  
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
  se_ne		= 30
@@ -308,6 +310,7 @@
  se_nu_div		=  -1 
  se_nu_p		= -1 
  se_nu_top		=  1.25e5 
+ se_phys_dyn_cp		= 1
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
  se_rsplit		=             3 
@@ -343,7 +346,7 @@
  pgwv		= 32
  pgwv_long		= 0
  rdg_beta_cd_llb		= 1.0D0
- tau_0_ubc		= .true.
+ tau_0_ubc		= .false.
  taubgnd		= 1.25D-3
  trpd_leewv_rdg_beta		= .false.
  use_gw_rdg_beta		= .true.
@@ -520,11 +523,6 @@
 &solar_data_opts
  solar_htng_spctrl_scl		= .true.
  solar_irrad_data_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/solar/SolarForcingCMIP6_18491230-23000102_c20200615.nc'
-/
-&thermo_budget_nl
- thermo_budget_debug		= .true.
- thermo_budget_histfile_num		= 8
- thermo_budget_history		= .true.
 /
 &tms_nl
  do_tms		=  .false. 
