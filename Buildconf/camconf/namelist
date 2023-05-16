@@ -62,10 +62,6 @@ phys_grid_ctem_za_nlat=90
 
 
 
-fincl6 =  'LGHTNG_CLD2GRND:A', 'FLASHFRQ:A'
-
-
-
 fincl7= 'AQSO4_H2O2','AQSO4_O3', 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3', 'ncl_a1',
 
 'ncl_a1', 'ncl_a2', 'ncl_a3', 'pom_a1', 'pom_a4', 'so4_a1', 'so4_a2', 'so4_a3',
@@ -117,6 +113,10 @@ micro_mg_vtrmi_factor=0.5
 microp_aero_wsubi_scale=2.5
 
 seasalt_emis_scale=1.5
+
+
+
+ncdata = '/glade/p/cgd/amp/pel/inic/L93_ne30pg3_ne30pg3_mg17_450_short.cam.i.1979-01-07-00000.nc'
 
 
 
