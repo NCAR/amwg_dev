@@ -301,7 +301,7 @@
  se_kmax_jet		= -1
  se_kmin_jet		= -1
  se_large_courant_incr		=  .true.  
- se_lcp_moist		=  .true.  
+ se_lcp_moist		= .false.
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
  se_ne		= 30
@@ -346,7 +346,7 @@
  pgwv		= 32
  pgwv_long		= 0
  rdg_beta_cd_llb		= 1.0D0
- tau_0_ubc		= .false.
+ tau_0_ubc		= .true.
  taubgnd		= 1.25D-3
  trpd_leewv_rdg_beta		= .false.
  use_gw_rdg_beta		= .true.
