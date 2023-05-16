@@ -1,14 +1,10 @@
 
-mfilt    =       0,       5,     20,      40,      12,       1,      1
-nhtfrq              =       0,     -24,    -24,      -3,       0,       0,      0
-ndens               =       2,       2,      2,       2,       2,       1,      2
+mfilt    =       0,       5,     20,      40,      12,       1,      1,   1
+nhtfrq              =       0,     -24,    -24,      -3,       0,       0,      0,  -8760
+ndens               =       2,       2,      2,       2,       2,       1,      2,   1
 interpolate_output  =  .true.,  .true., .true., .false., .false., .false.,  .true.
 interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
 interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
-
-
-
-empty_htapes = .true.
 
 fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 
 'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLOUD', 'CMFMC_DP', 
@@ -44,6 +40,9 @@ fincl7= 'AQSO4_H2O2','AQSO4_O3', 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3',
 phys_grid_ctem_nfreq=-6
 phys_grid_ctem_zm_nbas=120
 phys_grid_ctem_za_nlat=90
+
+thermo_budget_history = .true.
+thermo_budget_histfile_num = 8
 
 ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
 

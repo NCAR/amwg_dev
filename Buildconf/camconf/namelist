@@ -4,25 +4,17 @@
  dtime = 1800
 
 
-mfilt    =       0,       5,     20,      40,      12,       1,      1
+mfilt    =       0,       5,     20,      40,      12,       1,      1,   1
 
-nhtfrq              =       0,     -24,    -24,      -3,       0,       0,      0
+nhtfrq              =       0,     -24,    -24,      -3,       0,       0,      0,  -8760
 
-ndens               =       2,       2,      2,       2,       2,       1,      2
+ndens               =       2,       2,      2,       2,       2,       1,      2,   1
 
 interpolate_output  =  .true.,  .true., .true., .false., .false., .false.,  .true.
 
 interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
 
 interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
-
-
-
-
-
-
-
-empty_htapes = .true.
 
 
 
@@ -93,6 +85,12 @@ phys_grid_ctem_nfreq=-6
 phys_grid_ctem_zm_nbas=120
 
 phys_grid_ctem_za_nlat=90
+
+
+
+thermo_budget_history = .true.
+
+thermo_budget_histfile_num = 8
 
 
 
