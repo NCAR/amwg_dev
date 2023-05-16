@@ -116,7 +116,11 @@ seasalt_emis_scale=1.5
 
 
 
-ncdata = '/glade/p/cgd/amp/pel/inic/L93_ne30pg3_ne30pg3_mg17_450_short.cam.i.1979-01-07-00000.nc'
+use_gw_convect_dp = .true.
+
+use_gw_front = .true.
+
+tau_0_ubc = .true.
 
 
 
