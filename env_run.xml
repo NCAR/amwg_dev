@@ -206,13 +206,13 @@
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001">
+    <entry id="RUN_REFCASE" value="f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="1989-01-01">
+    <entry id="RUN_REFDATE" value="1986-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -232,7 +232,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="1979-01-01">
+    <entry id="RUN_STARTDATE" value="1995-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:9809614.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9809615.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:9849567.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9849568.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
