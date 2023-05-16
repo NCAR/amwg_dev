@@ -2,11 +2,11 @@
 
 set -e
 
-# Created 2023-04-13 11:51:38
+# Created 2023-04-20 11:20:59
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw_lcp-moistF.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001"
 
-/glade/work/hannay/cesm_tags/cam6_3_106/cime/scripts/create_newcase --compset FLTHIST_v0a --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
+/glade/work/hannay/cesm_tags/cam6_3_107/cime/scripts/create_newcase --compset HIST_CAM%DEV%LT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
 cd "${CASEDIR}"
 
@@ -14,7 +14,7 @@ cd "${CASEDIR}"
 
 ./case.setup
 
-./xmlchange RUN_STARTDATE=1995-01-01
+./xmlchange RUN_STARTDATE=1979-01-01
 
 ./xmlchange STOP_N=2
 
@@ -24,9 +24,9 @@ cd "${CASEDIR}"
 
 ./xmlchange RUN_TYPE=hybrid
 
-./xmlchange RUN_REFCASE=f.cam6_3_100.FWscHIST.ne30_L58.001
+./xmlchange RUN_REFCASE=f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001
 
-./xmlchange RUN_REFDATE=1991-01-01
+./xmlchange RUN_REFDATE=1989-01-01
 
 ./xmlchange GET_REFCASE=TRUE
 
@@ -34,13 +34,37 @@ cd "${CASEDIR}"
 
 ./case.build
 
-./preview_namelists
+./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
 
 ./case.build
 
-./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=1,STOP_N=1,STOP_OPTION=nyears
+./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
 
 ./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
+
+./preview_namelists
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
+
+./preview_namelists
+
+./preview_namelists
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=15,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
 
 ./case.submit
 

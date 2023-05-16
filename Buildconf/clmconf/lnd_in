@@ -5,14 +5,14 @@
  compname = 'clm2'
  create_crop_landunit = .true.
  crop_fsat_equals_zero = .false.
- finidat = 'f.cam6_3_100.FWscHIST.ne30_L58.001.clm2.r.1991-01-01-00000.nc'
+ finidat = 'f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001.clm2.r.1989-01-01-00000.nc'
  for_testing_no_crop_seed_replenishment = .false.
  for_testing_run_ncdiopio_tests = .false.
  for_testing_use_repr_structure_pool = .false.
  for_testing_use_second_grain_pool = .false.
  fsnowaging = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc'
  fsnowoptics = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_c090915.nc'
- fsurdat = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/surfdata_map/release-clm5.0.30/surfdata_ne30np4.pg3_hist_78pfts_CMIP6_simyr1850_c200426.nc'
+ fsurdat = '/glade/work/slevis/git/mksurfdata_toolchain/tools/mksurfdata_esmf/surfdata_ne30np4.pg3_SSP5-8.5_78pfts_CMIP6_1850-2100_c230227.nc'
  glc_do_dynglacier = .false.
  glc_snow_persistence_max_days = 0
  h2osno_max = 10000.0
@@ -24,7 +24,7 @@
  nlevsno = 12
  nsegspc = 35
  o3_veg_stress_method = 'unset'
- paramfile = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/paramdata/clm50_params.c211112.nc'
+ paramfile = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/paramdata/ctsm51_params.c211112.nc'
  run_zero_weight_urban = .false.
  snow_cover_fraction_method = 'SwensonLawrence2012'
  soil_layerstruct_predefined = '20SL_8.5m'
@@ -97,7 +97,7 @@
  do_transient_lakes = .false.
  do_transient_pfts = .true.
  do_transient_urban = .false.
- flanduse_timeseries = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/surfdata_map/release-clm5.0.30/landuse.timeseries_ne30np4.pg3_SSP5-8.5_78pfts_CMIP6_simyr1850-2100_c200426.nc'
+ flanduse_timeseries = '/glade/work/slevis/git/mksurfdata_toolchain/tools/mksurfdata_esmf/landuse.timeseries_ne30np4.pg3_SSP5-8.5_78_CMIP6_1850-2100_c230227.nc'
  reset_dynbal_baselines = .false.
 /
 &cnvegcarbonstate
@@ -119,7 +119,7 @@
  jmaxb1 = 0.17
 /
 &friction_velocity
- zetamaxstable = 0.5d00
+ zetamaxstable = 2.0d00
 /
 &mineral_nitrogen_dynamics
 /
@@ -146,7 +146,7 @@
 /
 &canopyfluxes_inparm
  itmax_canopy_fluxes = 40
- use_biomass_heat_storage = .false.
+ use_biomass_heat_storage = .true.
  use_undercanopy_stability = .false.
 /
 &aerosol
@@ -242,7 +242,7 @@
 !#--------------------------------------------------------------------------------------------------------------------------
 !# lnd_in:: Comment:
 !# This namelist was created using the following command-line:
-!#     /glade/work/hannay/cesm_tags/cam6_3_106/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cam6_3_106/cime -infile /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw_lcp-moistF.001/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw_lcp-moistF.001/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=19950101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type startup -envxml_dir /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw_lcp-moistF.001 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_106.FLTHIST_v0a.ne30.dcs_non-ogw_lcp-moistF.001/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm5_0_cam6.0 -mask gx1v7
+!#     /glade/work/hannay/cesm_tags/cam6_3_107/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cam6_3_107/cime -infile /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=19790101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type startup -envxml_dir /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm5_1_GSWP3v1 -mask gx1v7
 !# 
-!# For help on options use: /glade/work/hannay/cesm_tags/cam6_3_106/components/clm/bld/CLM build-namelist -help
+!# For help on options use: /glade/work/hannay/cesm_tags/cam6_3_107/components/clm/bld/CLM build-namelist -help
 !#--------------------------------------------------------------------------------------------------------------------------

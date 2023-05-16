@@ -206,13 +206,13 @@
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="f.cam6_3_100.FWscHIST.ne30_L58.001">
+    <entry id="RUN_REFCASE" value="f.e21.FWscHIST_BGC.ne30_ne30_mg17_L48_revert-J.001">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="1991-01-01">
+    <entry id="RUN_REFDATE" value="1989-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -232,7 +232,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="1995-01-01">
+    <entry id="RUN_STARTDATE" value="1979-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -251,7 +251,7 @@
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="1">
+    <entry id="STOP_N" value="2">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:9277558.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9277559.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:9881899.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:9881900.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1122,13 +1122,13 @@
     </entry>
   </group>
   <group id="run_component_ctsm">
-    <entry id="LND_TUNING_MODE" value="clm5_0_cam6.0">
+    <entry id="LND_TUNING_MODE" value="clm5_1_GSWP3v1">
       <type>char</type>
       <desc>Tuning parameters and initial conditions should be optimized for what CLM model version and what meteorlogical forcing combination?
     </desc>
       <valid_values>clm5_0_cam6.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_cam6.0,clm5_1_GSWP3v1</valid_values>
     </entry>
-    <entry id="CLM_PHYSICS_VERSION" value="clm5_0">
+    <entry id="CLM_PHYSICS_VERSION" value="clm5_1">
       <type>char</type>
       <valid_values>clm4_5,clm5_0,clm5_1</valid_values>
       <desc>Overall physics version to use.
