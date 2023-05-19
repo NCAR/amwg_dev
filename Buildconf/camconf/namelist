@@ -40,7 +40,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL','CLMODIS', 'AODVISdn',
 
-'CCN3', 'CDNUMC','OMEGA500'
+'CCN3', 'CDNUMC'
 
 
 
@@ -113,6 +113,14 @@ micro_mg_vtrmi_factor=0.5
 microp_aero_wsubi_scale=2.5
 
 seasalt_emis_scale=1.5
+
+
+
+use_gw_convect_dp = .true.
+
+use_gw_front = .true.
+
+tau_0_ubc = .false.
 
 
 
