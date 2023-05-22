@@ -17,10 +17,10 @@ https://github.com/NCAR/amwg_dev/tree/$CASE
 
 **Sandbox:**
 Locally (if still available):
-/glade/work/hannay/cesm_tags/cam6_3_106
+/glade/work/hannay/cesm_tags/cam6_3_111
 
 On github:
-hash: 0470324 (https://github.com/ESCOMP/CAM/tree/cam6_3_106)
+(https://github.com/ESCOMP/CAM/tree/cam6_3_111)
 
 **Diagnostics:**
 ADF diags (if available)
