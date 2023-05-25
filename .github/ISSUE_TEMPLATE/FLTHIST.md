@@ -1,5 +1,5 @@
 ---
-name: FLTHIST simulation with cam6_3_106
+name: FLTHIST simulation with cam6_3_112
 about: Documenting information about a CAM/CESM simulation. This contains information about the location of the run directory, sandbox, etc 
 title: Casename (enter the name of the run here)
 labels: ''
@@ -17,10 +17,10 @@ https://github.com/NCAR/amwg_dev/tree/$CASE
 
 **Sandbox:**
 Locally (if still available):
-/glade/work/hannay/cesm_tags/cam6_3_111
+/glade/work/hannay/cesm_tags/cam6_3_112
 
 On github:
-(https://github.com/ESCOMP/CAM/tree/cam6_3_111)
+(https://github.com/ESCOMP/CAM/tree/cam6_3_112)
 
 **Diagnostics:**
 ADF diags (if available)
