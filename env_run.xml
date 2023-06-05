@@ -23,7 +23,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>add aoflux calculation to runseq</desc>
     </entry>
-    <entry id="CCSM_BGC" value="CO2C">
+    <entry id="CCSM_BGC" value="CO2A">
       <type>char</type>
       <valid_values>none,CO2A,CO2B,CO2C</valid_values>
       <desc>Activates additional CO2-related fields to be exchanged between components. Possible values are:
@@ -114,11 +114,11 @@
       <type>char</type>
       <valid_values>TIGHT,OPTION1,OPTION2</valid_values>
       <desc>
-      OPTION1 (like RASM_OPTION1 in CPL7) runs prep_ocn_avg, 
+      OPTION1 (like RASM_OPTION1 in CPL7) runs prep_ocn_avg,
       BEFORE the aoflux and ocnalb calculations, thereby reducing
       most of the lags and field inconsistency but still allowing the
       ocean to run concurrently with the ice and atmosphere.
-      OPTION2 (like CESM1_MOD in CPL7) runs prep_ocn_avg, 
+      OPTION2 (like CESM1_MOD in CPL7) runs prep_ocn_avg,
       AFTER the aoflux and ocnalb calculations, thereby permitting maximum
       concurrency
       TIGHT (like CESM1_MOD_TIGHT), is a tight coupling run sequence
@@ -246,12 +246,12 @@
     </entry>
     <entry id="STOP_OPTION" value="nyears">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,end</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       Sets the run length along with STOP_N and STOP_DATE
     </desc>
     </entry>
-    <entry id="STOP_N" value="3">
+    <entry id="STOP_N" value="1">
       <type>integer</type>
       <desc>
       Provides a numerical count for $STOP_OPTION.
@@ -266,7 +266,7 @@
     </entry>
     <entry id="REST_OPTION" value="nyears">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,end</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
@@ -286,7 +286,7 @@
     </entry>
     <entry id="PAUSE_OPTION" value="never">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears</valid_values>
       <desc>
       Sets the pause frequency along with PAUSE_N
     </desc>
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="4">
+    <entry id="RESUBMIT" value="1">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:7875716.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:7875717.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:686104.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:686105.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -394,7 +394,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to archive all interim restart files, not just those at eor
     If TRUE, perform short term archiving on all interim restart files,
-    not just those at the end of the run. By default, this value is TRUE.
+    not just those at the end of the run. By default, this value is FALSE.
     The restart files are saved under the specific component directory
     ($DOUT_S_ROOT/$CASE/$COMPONENT/rest rather than the top-level $DOUT_S_ROOT/$CASE/rest directory).
     Interim restart files are created using the REST_N and REST_OPTION variables.
@@ -551,15 +551,15 @@
       <type>char</type>
       <desc>rof mesh file (full pathname)</desc>
     </entry>
-    <entry id="WAV_DOMAIN_MESH" value="UNSET">
+    <entry id="WAV_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ww3a_120222_ESMFmesh.nc">
       <type>char</type>
       <desc>wav mesh file (full pathname)</desc>
     </entry>
-    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/tx0.66v1_190314_ESMFmesh.nc">
+    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/tx2_3v2_230415_ESMFmesh.nc">
       <type>char</type>
       <desc>ice mesh file (full pahtname)</desc>
     </entry>
-    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/tx0.66v1_190314_ESMFmesh.nc">
+    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/tx2_3v2_230415_ESMFmesh.nc">
       <type>char</type>
       <desc>ocn mesh file (full pathname)</desc>
     </entry>
@@ -567,49 +567,9 @@
       <type>char</type>
       <desc>glc mesh file (full pathname)</desc>
     </entry>
-    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/tx0.66v1_190314_ESMFmesh.nc">
+    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/tx2_3v2_230415_ESMFmesh.nc">
       <type>char</type>
       <desc>mask mesh file (full pathname)</desc>
-    </entry>
-    <entry id="ATM2OCN_FMAPNAME" value="unset">
-      <type>char</type>
-      <desc>atm2ocn flux mapping file</desc>
-    </entry>
-    <entry id="ATM2OCN_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>atm2ocn state mapping file</desc>
-    </entry>
-    <entry id="ATM2OCN_VMAPNAME" value="unset">
-      <type>char</type>
-      <desc>atm2ocn vector mapping file</desc>
-    </entry>
-    <entry id="ATM2LND_FMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>atm2lnd flux mapping file</desc>
-    </entry>
-    <entry id="ATM2LND_SMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>atm2lnd state mapping file</desc>
-    </entry>
-    <entry id="ATM2WAV_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>atm2wav state mapping file</desc>
-    </entry>
-    <entry id="OCN2ATM_FMAPNAME" value="unset">
-      <type>char</type>
-      <desc>ocn2atm flux mapping file</desc>
-    </entry>
-    <entry id="OCN2ATM_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>ocn2atm state mapping file</desc>
-    </entry>
-    <entry id="LND2ATM_FMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>lnd2atm flux mapping file</desc>
-    </entry>
-    <entry id="LND2ATM_SMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>lnd2atm state mapping file</desc>
     </entry>
     <entry id="LND2ROF_FMAPNAME" value="unset">
       <type>char</type>
@@ -623,11 +583,11 @@
       <type>char</type>
       <desc>rof2ocn flux mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx0.66v1_e1000r300_190314.nc">
+    <entry id="ROF2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e1000r1000_230415.nc">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_ICE_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx0.66v1_e1000r300_190314.nc">
+    <entry id="ROF2OCN_ICE_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e1000r1000_230415.nc">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
@@ -635,11 +595,11 @@
       <type>char</type>
       <desc>glc2ice runoff mapping file</desc>
     </entry>
-    <entry id="GLC2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx0.66v1_nnsm_e1000r300_190314.nc">
+    <entry id="GLC2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e1000r300_230415.nc">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for liquid runoff</desc>
     </entry>
-    <entry id="GLC2OCN_ICE_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx0.66v1_nnsm_e1000r300_190314.nc">
+    <entry id="GLC2OCN_ICE_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e1000r300_230415.nc">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for ice runoff</desc>
     </entry>
@@ -1017,7 +977,7 @@
   <group id="med_history">
     <entry id="HIST_OPTION" value="never">
       <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,ifdays0,end</valid_values>
+      <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>Sets driver snapshot history file frequency (like REST_OPTION)</desc>
     </entry>
     <entry id="HIST_N" value="-999">
@@ -1029,21 +989,6 @@
       <type>integer</type>
       <valid_values/>
       <desc>yyyymmdd format, sets coupler snapshot history date (like REST_DATE)</desc>
-    </entry>
-    <entry id="AVGHIST_OPTION" value="never">
-      <type>char</type>
-      <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,ifdays0,end</valid_values>
-      <desc>Sets mediator average history file frequency (like REST_OPTION)</desc>
-    </entry>
-    <entry id="AVGHIST_N" value="-999">
-      <type>char</type>
-      <valid_values/>
-      <desc>Sets mediator average history file frequency (like REST_N)</desc>
-    </entry>
-    <entry id="AVGHIST_DATE" value="-999">
-      <type>integer</type>
-      <valid_values/>
-      <desc>yyyymmdd format, sets mediator average history date (like REST_DATE)</desc>
     </entry>
   </group>
   <group id="run_budgets">
@@ -1091,7 +1036,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="waccm_sc_1850_cam6">
+    <entry id="CAM_NML_USE_CASE" value="1850_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1106,7 +1051,7 @@
       modify this value for your experiment, use your own user-defined
       component sets.</desc>
     </entry>
-    <entry id="CAM_NAMELIST_OPTS" value=" co2_cycle_rad_passive=.true. ">
+    <entry id="CAM_NAMELIST_OPTS">
       <type>char</type>
       <valid_values/>
       <desc>CAM specific namelist settings for -namelist option Provides
@@ -1115,15 +1060,35 @@
       specification. Users should modify CAM namelists only via the
       $CASEROOT/user_nl_cam file.</desc>
     </entry>
+    <entry id="CAM_STREAM_NDEP_YEAR_FIRST" value="1850">
+      <type>char</type>
+      <desc>Nitrogen deposition data year first</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="1850">
+      <type>char</type>
+      <desc>Nitrogen deposition data year last</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1">
+      <type>char</type>
+      <desc>Nitrogen deposition align CAM_STREAM_NDEP_YEAR_FIRST with this model year</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_DATA_FILENAME" value="$DIN_LOC_ROOT/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc">
+      <type>char</type>
+      <desc>Nitrogen deposition data filename</desc>
+    </entry>
+    <entry id="CAM_STREAM_NDEP_MESH_FILENAME" value="$DIN_LOC_ROOT/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc">
+      <type>char</type>
+      <desc>Nitrogen deposition mesh filename (corresponding to the CAM_STREAM_NDEP_DATA_FILENAME)</desc>
+    </entry>
   </group>
   <group id="run_component_ctsm">
-    <entry id="LND_TUNING_MODE" value="clm5_0_cam6.0">
+    <entry id="LND_TUNING_MODE" value="clm5_1_GSWP3v1">
       <type>char</type>
       <desc>Tuning parameters and initial conditions should be optimized for what CLM model version and what meteorlogical forcing combination?
     </desc>
       <valid_values>clm5_0_cam6.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_cam6.0,clm5_1_GSWP3v1</valid_values>
     </entry>
-    <entry id="CLM_PHYSICS_VERSION" value="clm5_0">
+    <entry id="CLM_PHYSICS_VERSION" value="clm5_1">
       <type>char</type>
       <valid_values>clm4_5,clm5_0,clm5_1</valid_values>
       <desc>Overall physics version to use.
@@ -1216,9 +1181,30 @@
       <valid_values>
       ABBY,BLAN,CPER,DEJU,GRSM,HEAL,KONA,LENO,NIWO,ONAQ,PUUM,SERC,SRER,TALL,TREE,WOOD,
       BARR,BONA,DCFS,DELA,GUAN,JERC,KONZ,MLBS,NOGP,ORNL,RMNP,SJER,STEI,TEAK,UKFS,WREF,
-      BART,CLBJ,DSNY,HARV,JORN,LAJA,MOAB,OAES,OSBS,SCBI,SOAP,STER,TOOL,UNDE,YELL
+      BART,CLBJ,DSNY,HARV,JORN,LAJA,MOAB,OAES,OSBS,SCBI,SOAP,STER,TOOL,UNDE,YELL,
     </valid_values>
       <desc>Name of site for NEON tower data</desc>
+    </entry>
+    <entry id="NEONVERSION" value="latest">
+      <type>char</type>
+      <valid_values>v1,v2,latest</valid_values>
+      <desc>Version id of Neon data</desc>
+    </entry>
+  </group>
+  <group id="build_component_cice">
+    <entry id="CICE_MODE" value="prognostic">
+      <type>char</type>
+      <valid_values>prognostic,prescribed,thermo_only</valid_values>
+      <desc>Option to the CICE configure utility for the -mode argument (default is prognostic)</desc>
+    </entry>
+    <entry id="CICE_CONFIG_OPTS" value=" -phys cice5 ">
+      <type>char</type>
+      <desc>CICE configure options, see CICE configure utility for details.
+      It is recommended that if you want to modify this value for your experiment,
+      you should use your own user-defined component sets via using create_newcase
+      with a compset_file argument.
+      This is an advanced flag and should only be used by expert users.
+    </desc>
     </entry>
   </group>
   <group id="run_component_cice">

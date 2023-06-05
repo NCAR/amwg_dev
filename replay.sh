@@ -2,79 +2,73 @@
 
 set -e
 
-# Created 2022-10-25 19:49:02
+# Created 2023-05-26 13:09:11
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.cesm3_cam058_mom_e.B1850WscMOM.ne30_L58_t061.camdev_cice5.026g"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha14a.BLT1850.ne30_t232.032"
 
-/glade/work/hannay/cesm_tags/cesm3_cam6_3_058_MOM_e/cime/scripts/create_newcase --compset 1850_CAM60%WCSC_CLM50%BGC-CROP_CICE5_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_SWAV_SESP_BGC%BDRD --res ne30pg3_t061 --case b.cesm3_cam058_mom_e.B1850WscMOM.ne30_L58_t061.camdev_cice5.026g --run-unsupported --project CESM0002
+/glade/work/hannay/cesm_tags/cesm2_3_alpha14a/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
-./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58
+./xmlchange NTASKS=1800
 
-./xmlchange REST_OPTION=nyears,REST_N=1
+./xmlchange NTASKS_OCN=324
 
-./xmlchange JOB_QUEUE=premium
+./xmlchange NTASKS_WAV=36
 
-./case.build
+./xmlchange NTASKS_GLC=36
+
+./xmlchange NTASKS_ICE=1080
+
+./xmlchange NTASKS_ROF=724
+
+./xmlchange NTASKS_LND=724
+
+./xmlchange NTASKS_ESP=1
+
+./xmlchange ROOTPE_OCN=1800
+
+./xmlchange ROOTPE_WAV=1
+
+./xmlchange ROOTPE_ICE=724
+
+./xmlchange NTASKS_LND=720,NTASKS_ROF=720,ROOTPE_ICE=720
 
 ./case.setup
 
-./case.build
+./preview_namelists
 
-./case.setup --reset
-
-./case.build
-
-./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -microphys mg2 -chem waccm_sc_mam4 -nlev 58
+./xmlchange --append CAM_CONFIG_OPTS=-cosp
 
 ./case.build
 
-./case.setup --reset
+./preview_namelists
 
 ./case.build
 
-./case.build --clean-all
+./xmlchange PROJECT=CESM0023,JOB_QUEUE=premium,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
 
-./case.build
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./case.submit
+
+./xmlchange PROJECT=CESM0023,JOB_QUEUE=premium,RESUBMIT=10,STOP_N=1,STOP_OPTION=nyears
+
+./xmlchange PROJECT=CESM0023,JOB_QUEUE=regular,RESUBMIT=15,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange REST_OPTION=nyears,REST_N=1
 
 ./case.submit
 
 ./case.submit
 
-./xmlchange JOB_QUEUE=premium,RESUBMIT=10,STOP_N=3,STOP_OPTION=nyears
+./xmlchange STOP_N=1
 
 ./case.submit
 
 ./case.submit
 
-./xmlchange RESUBMIT=11
-
 ./case.submit
-
-./xmlchange JOB_QUEUE=regular
-
-./xmlchange RESUBMIT=9
-
-./case.submit
-
-./case.submit
-
-./xmlchange PROJECT=cesm0023
-
-./xmlchange RESUBMIT=12
-
-./case.submit
-
-./xmlchange RESUBMIT=10
-
-./case.submit
-
-./xmlchange RESUBMIT=12
-
-./case.submit
-
-./xmlchange RESUBMIT=9
 
 ./case.submit
 

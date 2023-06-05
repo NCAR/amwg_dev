@@ -1,13 +1,17 @@
 &comp_inparm 
 
  dtime = 1800
+mfilt    =       0,       5,     20,      40,      12,       120,      1,   1
 
+nhtfrq              =       0,     -24,    -24,      -3,       0,       -2,      0,  -8760
 
-mfilt           = 0,5,20,40,120,240,365,73,365
+ndens               =       2,       2,      2,       2,       2,       1,      2,   1
 
-nhtfrq         =                  0, -24,  -6,  -3,  -1,   1, -24,-24
+interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
 
-fexcl1 = ' '
+interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
+
+interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
 
 
 
@@ -15,25 +19,29 @@ empty_htapes = .true.
 
 
 
-fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT',
+fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 
 
-'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC',  'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLOUD', 'CMFMC_DP',
+'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLOUD', 'CMFMC_DP', 
 
-'CT_H2O', 'DCQ', 'DQCORE', 'DTCOND', 'DTCORE', 'DTV', 'EVAPPREC', 'EVAPSNOW', 'FCTI', 'FCTL', 'FICE', 'FLDS', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC', 'FLUT',
+'CT_H2O', 'DCQ', 'DQCORE', 'DTCOND', 'DTCORE', 'DTV', 'EVAPPREC', 'EVAPSNOW', 'FCTI', 'FCTL', 'FICE', 'FLDS', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC', 'FLUT', 
 
-'FREQZM', 'FSDS', 'FSDSC', 'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA', 'ICEFRAC', 'LANDFRAC', 'LHFLX', 'LWCF', 'MPDICE', 'MPDLIQ', 'MPDQ', 'MPDT',
+'FREQZM', 'FSDS', 'FSDSC', 'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA', 'ICEFRAC', 'LANDFRAC', 'LHFLX', 'LWCF', 'MPDICE', 'MPDLIQ', 'MPDQ', 'MPDT', 
 
-'OCNFRAC', 'OMEGA', 'OMEGA500', 'PBLH', 'PHIS', 'PINT', 'PMID', 'PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL', 'PTEQ', 'PTTEND', 'Q',
+'OCNFRAC', 'OMEGA', 'OMEGA500', 'PBLH', 'PHIS', 'PINT', 'PMID', 'PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL', 'PTEQ', 'PTTEND', 'Q', 
 
-'QFLX', 'QRL', 'QRS', 'QTGW', 'RCMTEND_CLUBB', 'RELHUM', 'RVMTEND_CLUBB', 'SHFLX', 'SOLIN', 'SST', 'STEND_CLUBB', 'SWCF',
+'QFLX', 'QRL', 'QRS', 'QTGW', 'RCMTEND_CLUBB', 'RELHUM', 'RVMTEND_CLUBB', 'SHFLX', 'SOLIN', 'SST', 'STEND_CLUBB', 'SWCF', 
 
-'T', 'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT', 'UTGWORO', 'UTGW_TOTAL',
+'T', 'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT', 'UTGWORO', 'UTGW_TOTAL', 
 
-'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'CH4', 'N2O'
+'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O', 'CO2','CFC11','CFC12', 
+
+'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL','CLMODIS', 'AODVISdn',
+
+'CCN3', 'CDNUMC','OMEGA500'
 
 
 
-fincl2 = 'OMEGA', 'PMID', 'PS', 'Q', 'QRL', 'QRS', 'T', 'TROP_P', 'TROP_T', 'U', 'V', 'Z3'
+fincl3 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA', 'PSL'
 
 
 
@@ -41,51 +49,75 @@ fincl4 =  'PRECC','PRECL'
 
 
 
-tracer_cnst_specifier          = 'O3','OH','NO3','HO2','HALONS'
+fincl5 = 'Uzm','Vzm','Wzm','THzm', 'VTHzm','WTHzm','UVzm','UWzm'
+
+phys_grid_ctem_nfreq=-6
+
+phys_grid_ctem_zm_nbas=120
+
+phys_grid_ctem_za_nlat=90
 
 
 
-co2_flag=.false.
+fincl7= 'AQSO4_H2O2','AQSO4_O3', 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3', 'ncl_a1',
+
+'ncl_a1', 'ncl_a2', 'ncl_a3', 'pom_a1', 'pom_a4', 'so4_a1', 'so4_a2', 'so4_a3',
+
+'soa_a1', 'num_a1', 'num_a2', 'num_a3', 'num_a4',
+
+'bc_a1SFWET', 'bc_a4SFWET', 'dst_a1SFWET', 'dst_a2SFWET', 'dst_a3SFWET', 'ncl_a1SFWET',
+
+'ncl_a2SFWET', 'ncl_a3SFWET', 'pom_a1SFWET', 'pom_a4SFWET', 'so4_a1SFWET', 'so4_a2SFWET', 'so4_a3SFWET', 'soa_a1SFWET',
+
+'soa_a2SFWET', 'bc_c1SFWET', 'bc_c4SFWET', 'dst_c1SFWET', 'dst_c2SFWET', 'dst_c3SFWET', 'ncl_c1SFWET', 'ncl_c2SFWET',
+
+'ncl_c3SFWET', 'pom_c1SFWET', 'pom_c4SFWET', 'so4_c1SFWET', 'so4_c2SFWET', 'so4_c3SFWET', 'soa_c1SFWET', 'soa_c2SFWET',
+
+'bc_a1DDF', 'bc_a4DDF', 'dst_a1DDF', 'dst_a2DDF', 'dst_a3DDF', 'ncl_a1DDF', 'ncl_a2DDF', 'ncl_a3DDF',
+
+'pom_a1DDF', 'pom_a4DDF', 'so4_a1DDF', 'so4_a2DDF', 'so4_a3DDF', 'soa_a1DDF', 'soa_a2DDF',
+
+'so4_a1_CLXF', 'so4_a2_CLXF', 'SFbc_a4', 'SFpom_a4', 'SFso4_a1', 'SFso4_a2',
+
+'so4_a1_sfgaex1', 'so4_a2_sfgaex1', 'so4_a3_sfgaex1', 'soa_a1_sfgaex1', 'soa_a2_sfgaex1',
+
+'SFdst_a1','SFdst_a2', 'SFdst_a3', 'SFncl_a1', 'SFncl_a2', 'SFncl_a3',
+
+'num_a2_sfnnuc1', 'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO'
 
 
 
-clubb_gamma_coef   =  0.28
+clubb_l_predict_upwp_vpwp=.true. 
 
-clubb_c14 = 2.2D0
+clubb_l_mono_flux_lim_um   = .true.  
 
-clubb_c8 = 4.8
+clubb_l_mono_flux_lim_vm   = .true.  
 
-clubb_l_trapezoidal_rule_zm          =  .true.
+clubb_c_uu_shr = 0.1
 
-clubb_l_trapezoidal_rule_zt          =  .true.
-
-
-
-ncdata = '/glade/p/cesm/amwg_dev/juliob/FWsc_ne30pg3_58L_GRID_48_taperstart10km_lowtop_BL10_v3_beta1p75_Top_43km.nc'
+clubb_c7=0.1
 
 
 
-interpolate_output = .true.,.true.
+dust_emis_fact         = 0.80D0
 
-interpolate_nlat = 192,192
-
-interpolate_nlon = 288,288
+seasalt_emis_scale=1.5
 
 
 
-se_rsplit            = 3
+micro_mg_dcs=0.00025
 
-se_nsplit           = 2
+micro_mg_vtrmi_factor=0.5
 
-se_hypervis_subcycle =  4
-
-
-
-bnd_topo  = '/glade/p/cgd/amp/juliob/bndtopo/latest/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20220622.nc'
+microp_aero_wsubi_scale=2.5
 
 
 
-pertlim  = 2.d-14
+use_gw_convect_dp = .true.
+
+use_gw_front = .true.
+
+tau_0_ubc = .true.
 
 
 

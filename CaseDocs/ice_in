@@ -1,67 +1,85 @@
 &setup_nml
-  atm2ice_fmap_is_pos_def = .true.
-  atm2ice_smap_is_pos_def = .true.
-  bfbflag = .false.
+  bfbflag = "off"
+  conserv_check = .false.
   days_per_year = 365
-  dbug = .false.
-  diag_file = "ice_diag.d"
-  diag_type = "stdout"
   diagfreq = 24
-  dump_last = .false.
   dumpfreq = "x"
   dumpfreq_n = 1
   hist_avg = .true.
   histfreq = "m", "x", "x", "x", "x"
   histfreq_n = 1, 0, 0, 0, 0
-  history_dir = "./"
   history_file = "unknown"
+  history_format = "default"
   history_precision = 4
-  ice_ic = '/glade/p/cesmdata/cseg/inputdata/cesm2_init/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016/0058-01-01/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016.cice.r.0058-01-01-00000.nc'
-  incond_dir = "./"
-  incond_file = "iceh_ic"
-  istep0 = 0
+  ice_ic = '/glade/p/cesmdata/cseg/inputdata/cesm2_init/gmom.e23.GJRAv4.TL319_t061_zstar_N65.tx2_3v2.001/0061-01-01/gmom.e23.GJRAv4.TL319_t061_zstar_N65.tx2_3v2.001.cice.r.0061-01-01-00000.nc'
   latpnt = 90.0, -65.0
   lcdf64 = .true.
   lonpnt = 0.0, -45.0
   ndtd = 1
+  numax = 99
+  numin = 11
   pointer_file = "./rpointer.ice"
   print_global = .true.
   print_points = .false.
-  restart = .false.
-  restart_dir = "./"
   restart_ext = .false.
   restart_file = ""
-  restart_format = "pio"
+  restart_format = "default"
   use_leap_years = .false.
-  use_restart_time = .true.
+  version_name = "undefined_version_name"
   write_ic = .false.
   year_init = 1
 /
 &grid_nml
-  grid_file = "/glade/p/cesmdata/cseg/inputdata/ocn/mom/tx0.66v1/grid/horiz_grid_20190315.ieeer8"
+  bathymetry_file = "unknown_bathymetry_file"
+  bathymetry_format = "default"
+  close_boundaries = .false.
+  dxrect = 30.0e5
+  dyrect = 30.0e5
+  grid_atm = "A"
+  grid_file = "/glade/work/gmarques/cesm/tx2_3/seaice_files/horiz_grid_20230416.ieeer8"
   grid_format = "bin"
+  grid_ice = "B"
+  grid_ocn = "A"
   grid_type = "tripole"
   gridcpl_file = "unknown_gridcpl_file"
   kcatbound = 0
-  kmt_file = "/glade/p/cesmdata/cseg/inputdata/ocn/mom/tx0.66v1/grid/topography_20190315.ieeei4"
+  kmt_file = "/glade/work/gmarques/cesm/tx2_3/seaice_files/topography_20230416.ieeei4"
+  nblyr = 3
+  ncat = 5
+  nfsd = 1
+  nilyr = 8
+  nslyr = 3
+  orca_halogrid = .false.
+  use_bathymetry = .false.
 /
 &tracer_nml
+  n_aero = 3
+  n_algae = 0
+  n_dic = 0
+  n_doc = 0
+  n_don = 0
+  n_fed = 0
+  n_fep = 0
+  n_iso = 3
+  n_zaero = 0
   restart_aero = .false.
   restart_age = .false.
+  restart_fsd = .false.
   restart_fy = .false.
   restart_iso = .false.
   restart_lvl = .false.
-  restart_pond_cesm = .false.
   restart_pond_lvl = .false.
   restart_pond_topo = .false.
+  restart_snow = .false.
   tr_aero = .true.
+  tr_fsd = .false.
   tr_fy = .true.
   tr_iage = .true.
   tr_iso = .false.
   tr_lvl = .true.
-  tr_pond_cesm = .false.
   tr_pond_lvl = .true.
   tr_pond_topo = .false.
+  tr_snow = .false.
 /
 &thermo_nml
   a_rapid_mode = 0.5e-03
@@ -72,18 +90,35 @@
   ktherm = 2
   phi_c_slow_mode = 0.05
   phi_i_mushy = 0.85
-  rac_rapid_mode = 10.0
+  rac_rapid_mode = 10
 /
 &dynamics_nml
   advection = "remap"
+  alphab = 20.0d0
+  arlx = 300.
+  brlx = 300.
   cf = 17.0
+  coriolis = "latitude"
+  cstar = 20.0d0
+  e_plasticpot = 2.0
+  e_yieldcurve = 2.0
+  k1 = 8.0d0
+  k2 = 15.0d0
   kdyn = 1
   krdg_partic = 1
   krdg_redist = 1
+  kridge = 1
   kstrength = 1
+  ktens = 0.0
+  ktransport = 1
   mu_rdg = 4.0
   ndte = 120
+  pstar = 2.75d4
   revised_evp = .false.
+  seabed_stress = .false.
+  seabed_stress_method = "LKD"
+  ssh_stress = "coupled"
+  threshold_hw = 30.0d0
 /
 &shortwave_nml
   ahmax = 0.3
@@ -99,108 +134,142 @@
   r_snw = 1.25
   rsnw_mlt = 1500.
   shortwave = "dEdd"
+  sw_dtemp = 0.01d0
+  sw_frac = 1.0d0
+  sw_redist = .true.
 /
 &ponds_nml
   dpscale = 1.0e-3
   frzpnd = "cesm"
   hp1 = 0.01
-  hs0 = 0.03
+  hs0 = 0.0
   hs1 = 0.03
   pndaspect = 0.8
   rfracmax = 0.85
   rfracmin = 0.15
 /
+&snow_nml
+  drhosdwind = 27.3
+  rhosmax = 450.0
+  rhosmin = 100.0
+  rhosnew = 100.0
+  rsnw_fall = 100.0
+  rsnw_tmax = 1500.0
+  snw_T_fname = "unknown"
+  snw_Tgrd_fname = "unknown"
+  snw_aging_table = "test"
+  snw_drdt0_fname = "unknown"
+  snw_filename = "unknown"
+  snw_kappa_fname = "unknown"
+  snw_rhos_fname = "unknown"
+  snw_tau_fname = "unknown"
+  snwgrain = .false.
+  snwlvlfac = 0.3
+  snwredist = "none"
+  use_smliq_pnd = .false.
+  windmin = 10.0
+/
 &forcing_nml
+  atmbndy = "default"
+  calc_strair = .true.
+  calc_tsfc = .true.
+  emissivity = 0.95d0
   fbot_xfer_type = "constant"
   formdrag = .false.
   highfreq = .true.
+  ice_ref_salinity = 4.0d0
   l_mpond_fresh = .false.
   natmiter = 5
+  nfreq = 25
+  restart_coszen = .true.
+  rotate_wind = .true.
+  saltflux_option = "prognostic"
   tfrz_option = "mushy"
   update_ocn_f = .true.
   ustar_min = 0.005
+  wave_spec_file = "unknown_wave_spec_file"
+  wave_spec_type = "none"
 /
 &domain_nml
+  add_mpi_barriers = .false.
+  block_size_x = 6
+  block_size_y = 8
   distribution_type = "sectrobin"
-  distribution_wght = "latitude"
+  distribution_wght = "blockall"
   ew_boundary_type = "cyclic"
   maskhalo_bound = .true.
   maskhalo_dyn = .true.
   maskhalo_remap = .true.
+  max_blocks = 5
   ns_boundary_type = "tripole"
+  nx_global = 540
+  ny_global = 480
   processor_shape = "square-ice"
 /
+&ice_prescribed_nml
+  prescribed_ice_mode = .false.
+  stream_datafiles = ""
+  stream_mapalgo = "na"
+  stream_meshfile = ""
+  stream_varname = "ice_cov"
+  stream_yearalign = -999
+  stream_yearfirst = -999
+  stream_yearlast = -999
+/
 &zbgc_nml
-  bgc_data_dir = "unknown_bgc_data_dir"
   bgc_flux_type = "Jin2006"
-  nit_data_type = "unknown"
-  phi_snow = 0.5
+  dEdd_algae = .false.
+  modal_aero = .false.
   restart_bgc = .false.
   restart_hbrine = .false.
+  restart_zsal = .false.
   restore_bgc = .false.
-  sil_data_type = "unknown"
+  scale_bgc = .false.
   skl_bgc = .false.
-  tr_bgc_am_sk = .false.
-  tr_bgc_c_sk = .false.
-  tr_bgc_chl_sk = .false.
-  tr_bgc_dms_sk = .false.
-  tr_bgc_dmspd_sk = .false.
-  tr_bgc_dmspp_sk = .false.
-  tr_bgc_sil_sk = .false.
+  solve_zbgc = .false.
+  solve_zsal = .false.
+  tr_bgc_Am = .false.
+  tr_bgc_C = .false.
+  tr_bgc_DMS = .false.
+  tr_bgc_DON = .false.
+  tr_bgc_Fe = .false.
+  tr_bgc_Nit = .false.
+  tr_bgc_PON = .false.
+  tr_bgc_Sil = .false.
+  tr_bgc_chl = .false.
+  tr_bgc_hum = .false.
   tr_brine = .false.
+  tr_zaero = .false.
+  z_tracers = .false.
 /
 &icefields_bgc_nml
   f_aero = "xxxxx"
-  f_aeron = "xxxxx"
-  f_bgc_am_ml = "xxxxx"
-  f_bgc_am_sk = "xxxxx"
   f_bgc_c = "xxxxx"
-  f_bgc_c_sk = "xxxxx"
   f_bgc_chl = "xxxxx"
-  f_bgc_chl_sk = "xxxxx"
   f_bgc_dms = "xxxxx"
-  f_bgc_dms_ml = "xxxxx"
-  f_bgc_dms_sk = "xxxxx"
-  f_bgc_dmsp_ml = "xxxxx"
   f_bgc_dmspd = "xxxxx"
-  f_bgc_dmspd_sk = "xxxxx"
   f_bgc_dmspp = "xxxxx"
-  f_bgc_dmspp_sk = "xxxxx"
   f_bgc_n = "xxxxx"
-  f_bgc_n_sk = "xxxxx"
-  f_bgc_nh = "xxxxx"
-  f_bgc_nit_ml = "xxxxx"
-  f_bgc_nit_sk = "xxxxx"
-  f_bgc_no = "xxxxx"
   f_bgc_s = "xxxxx"
   f_bgc_sil = "xxxxx"
-  f_bgc_sil_ml = "xxxxx"
-  f_bgc_sil_sk = "xxxxx"
   f_bphi = "xxxxx"
-  f_btin = "xxxxx"
   f_faero_atm = "xxxxx"
   f_faero_ocn = "xxxxx"
-  f_fbri = "xxxxx"
-  f_fiso_atm = "xxxxx"
-  f_fiso_ocn = "xxxxx"
-  f_fn = "xxxxx"
-  f_fn_ai = "xxxxx"
-  f_fnh = "xxxxx"
-  f_fnh_ai = "xxxxx"
-  f_fno = "xxxxx"
-  f_fno_ai = "xxxxx"
-  f_fsil = "xxxxx"
-  f_fsil_ai = "xxxxx"
   f_grownet = "xxxxx"
-  f_hbri = "xxxxx"
-  f_iso = "xxxxx"
-  f_ison = "xxxxx"
   f_ppnet = "xxxxx"
 /
 &icefields_drag_nml
   f_cdn_atm = "xxxxx"
   f_cdn_ocn = "xxxxx"
   f_drag = "xxxxx"
+/
+&icefields_fsd_nml
+  f_afsd = "xxxxx"
+  f_dafsd_latg = "xxxxx"
+  f_dafsd_latm = "xxxxx"
+  f_dafsd_newi = "xxxxx"
+  f_dafsd_wave = "xxxxx"
+  f_dafsd_weld = "xxxxx"
 /
 &icefields_mechred_nml
   f_alvl = "xxxxx"
@@ -236,9 +305,21 @@
   f_ipond = "xxxxx"
   f_ipond_ai = "xxxxx"
 /
+&icefields_snow_nml
+  f_fsloss = "mxxxx"
+  f_meltsliq = "mxxxx"
+  f_rhos_cmp = "mxxxx"
+  f_rhos_cmpn = "xxxxx"
+  f_rhos_cnt = "mxxxx"
+  f_rhos_cntn = "xxxxx"
+  f_rsnw = "mxxxx"
+  f_rsnwn = "xxxxx"
+  f_smassice = "mxxxx"
+  f_smassicen = "xxxxx"
+  f_smassliq = "mxxxx"
+  f_smassliqn = "xxxxx"
+/
 &icefields_nml
-  f_a11 = "xxxxx"
-  f_a12 = "xxxxx"
   f_aice = "mdhxx"
   f_aicen = "mdhxx"
   f_aisnap = "xxxxx"
@@ -271,9 +352,6 @@
   f_dxu = .true.
   f_dyt = .true.
   f_dyu = .true.
-  f_e11 = "xxxxx"
-  f_e12 = "xxxxx"
-  f_e22 = "xxxxx"
   f_evap = "mxxxx"
   f_evap_ai = "xxxxx"
   f_fcondtop_ai = "xxxxx"
@@ -305,11 +383,8 @@
   f_fswdn = "mdhxx"
   f_fswfac = "xxxxx"
   f_fswint_ai = "xxxxx"
-  f_fswintn = "mxxxx"
-  f_fswsfcn = "mxxxx"
   f_fswthru = "mdhxx"
   f_fswthru_ai = "xxxxx"
-  f_fswthrun = "mxxxx"
   f_fswup = "mxxxx"
   f_fy = "xxxxx"
   f_hi = "mdhxx"
@@ -329,9 +404,6 @@
   f_qref = "xxxxx"
   f_rain = "mxxxx"
   f_rain_ai = "xxxxx"
-  f_s11 = "xxxxx"
-  f_s12 = "xxxxx"
-  f_s22 = "xxxxx"
   f_shear = "mxxxx"
   f_sice = "xxxxx"
   f_sig1 = "mxxxx"
@@ -375,17 +447,4 @@
   f_vocn = "xxxxx"
   f_vsnon = "mdhxx"
   f_vvel = "mxxxx"
-  f_yieldstress11 = "xxxxx"
-  f_yieldstress12 = "xxxxx"
-  f_yieldstress22 = "xxxxx"
-/
-&ice_prescribed_nuopc_nml
-  prescribed_ice_mode = .false.
-  stream_datafiles = ""
-  stream_mapalgo = "na"
-  stream_meshfile = ""
-  stream_varname = "ice_cov"
-  stream_yearalign = -999
-  stream_yearfirst = -999
-  stream_yearlast = -999
 /
