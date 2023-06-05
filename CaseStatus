@@ -1,170 +1,132 @@
-2023-05-24 15:35:46: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-05-25 15:41:11: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-05-24 15:36:42: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-phys cam_dev -chem ghg_mam4 -nlev 58 -cosp  </command>
+2023-05-25 15:41:11: case.setup starting 
  ---------------------------------------------------
-2023-05-24 15:36:43: case.setup starting 
+2023-05-25 15:41:13: case.setup success 
  ---------------------------------------------------
-2023-05-24 15:36:44: case.setup success 
+2023-05-25 15:41:13: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
  ---------------------------------------------------
-2023-05-24 15:36:45: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
+2023-05-25 15:41:14: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2023-05-24 15:36:45: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2023-05-25 15:41:14: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-05-24 15:36:45: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2023-05-25 15:41:15: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2023-05-24 15:36:46: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2023-05-25 15:41:15: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2023-05-24 15:36:46: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2023-05-25 15:41:15: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001  </command>
  ---------------------------------------------------
-2023-05-24 15:36:46: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001  </command>
+2023-05-25 15:41:16: xmlchange success <command> ./xmlchange RUN_REFDATE=1994-01-01  </command>
  ---------------------------------------------------
-2023-05-24 15:36:47: xmlchange success <command> ./xmlchange RUN_REFDATE=1994-01-01  </command>
+2023-05-25 15:41:16: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2023-05-24 15:36:47: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2023-05-25 15:41:17: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
  ---------------------------------------------------
-2023-05-24 15:36:47: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2023-05-25 15:41:24: case.build starting 
  ---------------------------------------------------
-2023-05-24 15:36:53: case.build starting 
+2023-05-25 15:42:23: case.build starting 
  ---------------------------------------------------
-2023-05-24 15:50:40: case.build success 
+2023-05-25 15:45:52: case.build starting 
  ---------------------------------------------------
-2023-05-25 09:41:00: case.build starting 
+2023-05-25 15:57:19: case.build success 
  ---------------------------------------------------
-2023-05-25 09:41:55: case.build success 
+2023-05-25 15:57:34: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-05-25 09:42:12: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-05-25 15:57:34: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-05-25 09:42:12: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-05-25 15:57:39: case.submit starting 475516.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 09:42:19: case.submit starting 472008.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-25 15:57:39: case.submit success 475516.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 09:42:19: case.submit success 472008.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-25 15:59:59: case.run starting 475515.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 09:49:27: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-05-25 16:00:03: model execution starting 475515.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 09:49:28: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-05-25 22:45:07: model execution success 475515.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 09:49:32: case.submit starting 472083.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-25 22:45:07: case.run success 475515.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 09:49:32: case.submit success 472083.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-25 22:45:31: st_archive starting 475516.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:05:54: case.run starting 472082.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-25 22:45:39: st_archive success 475516.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:05:58: model execution starting 472082.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-25 22:45:40: case.submit starting 476990.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:06:46: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam_dev -chem ghg_mam4 -nlev 32 -cosp  </command>
+2023-05-25 22:45:40: case.submit success 476990.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:07:03: case.setup starting 
+2023-05-25 23:33:27: case.run starting 476989.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:07:04: case.setup success 
+2023-05-25 23:33:30: model execution starting 476989.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:07:07: build.clean starting 
+2023-05-26 06:18:28: model execution success 476989.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:07:15: build.clean success 
+2023-05-26 06:18:28: case.run success 476989.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:07:37: case.build starting 
+2023-05-26 06:18:58: st_archive starting 476990.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:21:16: case.build success 
+2023-05-26 06:19:08: st_archive success 476990.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:21:32: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=premium,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-05-26 06:19:08: case.submit starting 477974.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:21:32: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-05-26 06:19:08: case.submit success 477974.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:21:38: case.submit starting 472338.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 06:23:43: case.run starting 477973.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:21:38: case.submit success 472338.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 06:23:46: model execution starting 477973.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:42:19: case.run starting 472337.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 13:05:26: model execution success 477973.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 10:42:23: model execution starting 472337.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 13:05:26: case.run success 477973.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 14:51:36: model execution success 472337.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 13:05:49: st_archive starting 477974.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 14:51:36: case.run success 472337.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 13:06:03: st_archive success 477974.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 14:51:54: st_archive starting 472338.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 13:06:14: case.submit starting 481008.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 14:52:01: st_archive success 472338.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 13:06:14: case.submit success 481008.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 14:52:02: case.submit starting 474050.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 15:43:25: case.run starting 481007.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 14:52:02: case.submit success 474050.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 15:43:29: model execution starting 481007.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 15:25:11: case.run starting 474049.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 22:29:58: model execution success 481007.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 15:25:15: model execution starting 474049.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 22:29:59: case.run success 481007.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 15:47:15: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
+2023-05-26 22:30:30: st_archive starting 481008.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 19:34:59: model execution success 474049.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 22:30:39: st_archive success 481008.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 19:34:59: case.run success 474049.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 22:30:40: case.submit starting 484154.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 19:35:23: st_archive starting 474050.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 22:30:40: case.submit success 484154.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 19:35:30: st_archive success 474050.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 23:10:54: case.run starting 484153.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 19:35:31: case.submit starting 476417.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-26 23:10:57: model execution starting 484153.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 19:35:31: case.submit success 476417.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 05:59:02: model execution success 484153.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 20:12:55: case.run starting 476416.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 05:59:02: case.run success 484153.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-25 20:12:58: model execution starting 476416.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 05:59:19: st_archive starting 484154.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 00:21:36: model execution success 476416.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 05:59:28: st_archive success 484154.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 00:21:36: case.run success 476416.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 05:59:46: case.submit starting 486604.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 00:21:50: st_archive starting 476417.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 05:59:46: case.submit success 486604.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 00:21:58: st_archive success 476417.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 05:59:57: case.run starting 486603.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 00:21:58: case.submit starting 477185.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 06:00:01: model execution starting 486603.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 00:21:58: case.submit success 477185.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 12:41:31: model execution success 486603.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 00:31:58: case.run starting 477184.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 12:41:31: case.run success 486603.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 00:32:01: model execution starting 477184.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 12:41:45: st_archive starting 486604.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-05-26 04:39:05: model execution success 477184.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 04:39:05: case.run success 477184.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 04:39:30: st_archive starting 477185.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 04:39:38: st_archive success 477185.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 04:39:38: case.submit starting 477659.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 04:39:38: case.submit success 477659.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 04:45:38: case.run starting 477658.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 04:45:42: model execution starting 477658.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 08:54:43: model execution success 477658.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 08:54:43: case.run success 477658.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 08:54:53: st_archive starting 477659.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 08:55:00: st_archive success 477659.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 08:55:01: case.submit starting 479018.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 08:55:01: case.submit success 479018.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 08:55:25: case.run starting 479017.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 08:55:28: model execution starting 479017.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 13:03:02: model execution success 479017.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 13:03:02: case.run success 479017.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 13:03:29: st_archive starting 479018.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-05-26 13:03:36: st_archive success 479018.chadmin1.ib0.cheyenne.ucar.edu
+2023-05-27 12:41:54: st_archive success 486604.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
