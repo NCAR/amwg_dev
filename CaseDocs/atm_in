@@ -536,7 +536,7 @@
  zmconv_c0_ocn		=  0.0300D0 
  zmconv_capelmt		=  70.0    
  zmconv_dmpdz		=  -1.0E-3 
- zmconv_ke		=  5.0E-6 
+ zmconv_ke		= 1.0E-6
  zmconv_ke_lnd		=  1.0E-5 
  zmconv_microp		=  .false. 
  zmconv_momcd		=  0.7000D0 
@@ -544,6 +544,6 @@
  zmconv_num_cin		=  1       
  zmconv_org		=  .false. 
  zmconv_parcel_pbl		= .true.
- zmconv_tau		= 1800.0
+ zmconv_tau		=  3600.0    
  zmconv_tiedke_add		=  0.5     
 /
