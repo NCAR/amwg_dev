@@ -72,8 +72,7 @@
  depvel_lnd_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/trop_mozart/dvel/regrid_vegetation.nc'
  drydep_srf_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/trop_mam/atmsrf_ne30pg3_180522.nc'
  exo_coldens_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/trop_mozart/phot/exo_coldens.nc'
- ext_frc_specifier		= 'H2O -> /glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/elev/H2OemissionCH4oxidationx2_3D_L70_1849-2015_CMIP6ensAvg_c180927.nc',
-         'num_a1 -> /glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a1_anthro-ene_vertical_mol_175001-201412_ne30pg3_c20200103.nc',
+ ext_frc_specifier		= 'num_a1 -> /glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a1_anthro-ene_vertical_mol_175001-201412_ne30pg3_c20200103.nc',
          'num_a1 -> /glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_a1_so4_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
          'num_a2 -> /glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_a2_so4_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
          'SO2 -> /glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SO2_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
@@ -293,14 +292,14 @@
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
  se_ne		= 30
- se_nsplit		=             2 
+ se_nsplit		=                    2 
  se_nu		= -1
  se_nu_div		=  -1 
  se_nu_p		= -1 
  se_nu_top		=  1.25e5 
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
- se_rsplit		=             3 
+ se_rsplit		=  3 
  se_sponge_del4_lev		=  -1 
  se_sponge_del4_nu_div_fac		=  -1 
  se_sponge_del4_nu_fac		=  -1 
@@ -320,7 +319,7 @@
  effgw_rdg_beta_max		= 1.0D0
  fcrit2		= 1.0
  frontgfc		= 3.00D-15
- gw_apply_tndmax		=    .false. 
+ gw_apply_tndmax		= .false.
  gw_dc		= 2.5D0
  gw_dc_long		= 0.D0
  gw_drag_file		= '/glade/p/cesmdata/cseg/inputdata/atm/waccm/gw/newmfspectra40_dc25.nc'
@@ -333,7 +332,7 @@
  pgwv		= 32
  pgwv_long		= 0
  rdg_beta_cd_llb		= 1.0D0
- tau_0_ubc		= .false.
+ tau_0_ubc		= .true.
  taubgnd		= 1.25D-3
  trpd_leewv_rdg_beta		= .false.
  use_gw_rdg_beta		= .true.
