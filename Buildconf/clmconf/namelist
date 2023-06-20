@@ -1,12 +1,27 @@
 &comp_inparm 
 
-finidat = 'f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001.clm2.r.1994-01-01-00000.nc'
-use_init_interp = .true.
 
-check_finidat_year_consistency = .false.
+
+
+
+hist_fincl1 = 'FSDSND','FSDSVD','FSDSNI','FSDSVI','RAIN_FROM_ATM','SNOW_FROM_ATM','FLDS_NOT_DOWNSCALED','ZBOT','Tair_from_atm','Thair_from_atm','QBOT_NOT_DOWNSCALED','PBOT_NOT_DOWNSCALED','Rho_from_atm','PCO2','UWIND','VWIND','BCPHIDRY','BCPHODRY','BCPHIWET','OCPHIDRY','OCPHODRY','OCPHIWET','DSTWET1','DSTDRY1','DSTWET2','DSTDRY2','DSTWET3','DSTDRY3','DSTWET4','DSTDRY4','ATM_TOPO'
+
+
 
 fsurdat = '/glade/work/slevis/git/mksurfdata_toolchain/tools/mksurfdata_esmf/surfdata_ne30np4.pg3_SSP5-8.5_78pfts_CMIP6_1850-2100_c230227.nc'
 
-flanduse_timeseries = '/glade/work/slevis/git/mksurfdata_toolchain/tools/mksurfdata_esmf/landuse.timeseries_ne30np4.pg3_SSP5-8.5_78_CMIP6_1850-2100_c230227.nc'
+
+
+reset_snow = .true.
+
+reset_snow_glc = .true.
+
+
+
+use_init_interp = .true.
+
+finidat = '/glade/p/cesmdata/cseg/inputdata/cesm2_init/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016/0058-01-01/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016.clm2.r.0058-01-01-00000.nc'
+
+
 
 / 

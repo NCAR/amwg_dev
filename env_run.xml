@@ -144,7 +144,7 @@
     </entry>
   </group>
   <group id="run_begin_stop_restart">
-    <entry id="RUN_TYPE" value="hybrid">
+    <entry id="RUN_TYPE" value="startup">
       <type>char</type>
       <valid_values>startup,hybrid,branch</valid_values>
       <desc>
@@ -200,19 +200,19 @@
       a restart file.
     </desc>
     </entry>
-    <entry id="RUN_REFDIR" value="cesm2_init">
+    <entry id="RUN_REFDIR" value="ccsm4_init">
       <type>char</type>
       <desc>
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001">
+    <entry id="RUN_REFCASE" value="case.std">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="1994-01-01">
+    <entry id="RUN_REFDATE" value="0001-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -224,7 +224,7 @@
       Reference time of day (seconds) for hybrid or branch runs (sssss)
     </desc>
     </entry>
-    <entry id="GET_REFCASE" value="TRUE">
+    <entry id="GET_REFCASE" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -232,7 +232,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="1995-01-01">
+    <entry id="RUN_STARTDATE" value="0001-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:1136229.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1136230.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:1369967.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1369968.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1076,7 +1076,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
+    <entry id="CAM_NML_USE_CASE" value="1850_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1104,15 +1104,15 @@
       <type>char</type>
       <desc>Nitrogen deposition data year first</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="2015">
+    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="1850">
       <type>char</type>
       <desc>Nitrogen deposition data year last</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1850">
+    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1">
       <type>char</type>
       <desc>Nitrogen deposition align CAM_STREAM_NDEP_YEAR_FIRST with this model year</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_DATA_FILENAME" value="$DIN_LOC_ROOT/lnd/clm2/ndepdata/fndep_clm_hist_b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensmean_1849-2015_monthly_0.9x1.25_c180926.nc">
+    <entry id="CAM_STREAM_NDEP_DATA_FILENAME" value="$DIN_LOC_ROOT/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc">
       <type>char</type>
       <desc>Nitrogen deposition data filename</desc>
     </entry>
@@ -1153,14 +1153,14 @@
     subgrid heterogeneity, shallower soil, etc.
     </desc>
     </entry>
-    <entry id="CLM_NML_USE_CASE" value="20thC_transient">
+    <entry id="CLM_NML_USE_CASE" value="1850_control">
       <type>char</type>
       <desc>CLM namelist use_case.
       Determines the use-case that will be sent to the CLM build-namelist utility.
       This is normally set by the component set. This is an advanced flag and should only be
       used by expert users.</desc>
     </entry>
-    <entry id="CLM_BLDNML_OPTS" value="-bgc sp">
+    <entry id="CLM_BLDNML_OPTS" value="-bgc bgc -crop">
       <type>char</type>
       <desc>CLM build-namelist options</desc>
     </entry>
@@ -1313,7 +1313,7 @@
     Sets SST and ice coverage stream name.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2012_c130411.nc">
+    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_clim_pi_c101029.nc">
       <type>char</type>
       <valid_values/>
       <desc>Prescribed SST and ice coverage data file name.
@@ -1366,7 +1366,7 @@
     Sets SST and ice coverage grid file name for prescribed runs.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_YEAR_ALIGN" value="1850">
+    <entry id="SSTICE_YEAR_ALIGN" value="1">
       <type>integer</type>
       <valid_values/>
       <desc>The model year that corresponds to SSTICE_YEAR_START on the data file.
@@ -1381,7 +1381,7 @@
     "taxmode" stream option; see the data model documentation for more details.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_YEAR_START" value="1850">
+    <entry id="SSTICE_YEAR_START" value="0">
       <type>integer</type>
       <valid_values/>
       <desc>The first year of data to use from SSTICE_DATA_FILENAME.
@@ -1390,7 +1390,7 @@
     years 0-9 in the file will not be used.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_YEAR_END" value="2012">
+    <entry id="SSTICE_YEAR_END" value="0">
       <type>integer</type>
       <valid_values/>
       <desc>The last year of data to use from SSTICE_DATA_FILENAME.

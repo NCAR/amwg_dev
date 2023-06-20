@@ -1,5 +1,5 @@
 # amwg_cases
 
-Issue https://github.com/NCAR/amwg_dev/issues/298
+Issue https://github.com/NCAR/amwg_dev/issues/301
 
 

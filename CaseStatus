@@ -1,128 +1,466 @@
-2023-06-08 16:01:13: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-06-09 17:30:47: case.setup starting 
  ---------------------------------------------------
-2023-06-08 16:01:13: case.setup starting 
+2023-06-09 17:30:48: case.setup success 
  ---------------------------------------------------
-2023-06-08 16:01:15: case.setup success 
+2023-06-09 17:30:49: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run'
  ---------------------------------------------------
-2023-06-08 16:01:15: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
+2023-06-09 17:30:49: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run/cesm.log.1125829.chadmin1.ib0.cheyenne.ucar.edu.230609-172941
  ---------------------------------------------------
-2023-06-08 16:01:16: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2023-06-09 17:31:40: case.build starting 
  ---------------------------------------------------
-2023-06-08 16:01:16: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2023-06-09 17:33:35: case.build starting 
  ---------------------------------------------------
-2023-06-08 16:01:17: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2023-06-09 17:36:45: case.build starting 
  ---------------------------------------------------
-2023-06-08 16:01:17: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2023-06-09 17:36:51: case.build starting 
  ---------------------------------------------------
-2023-06-08 16:01:18: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001  </command>
+2023-06-09 17:37:05: case.build starting 
  ---------------------------------------------------
-2023-06-08 16:01:18: xmlchange success <command> ./xmlchange RUN_REFDATE=1994-01-01  </command>
+2023-06-09 17:38:59: case.build starting 
  ---------------------------------------------------
-2023-06-08 16:01:18: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2023-06-09 17:39:03: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-06-08 16:01:19: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2023-06-09 17:39:04: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-06-08 16:01:38: case.build starting 
+2023-06-09 17:39:08: case.submit starting 
  ---------------------------------------------------
-2023-06-08 16:15:14: case.build success 
+2023-06-09 17:39:08: case.submit error 
+ERROR: Build complete is not True please rebuild the model by calling case.build
  ---------------------------------------------------
-2023-06-08 16:15:37: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-06-09 17:39:40: case.build starting 
  ---------------------------------------------------
-2023-06-08 16:15:38: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-06-09 17:42:05: case.build error 
+ERROR: /glade/work/hannay/cesm_tags/cam6_3_112/components/cdeps/cime_config/buildlib FAILED, cat /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/CDEPS.bldlog.230609-173645
  ---------------------------------------------------
-2023-06-08 16:15:44: case.submit starting 991213.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 17:42:24: case.build error 
+ERROR: /glade/work/hannay/cesm_tags/cam6_3_112/components/cdeps/cime_config/buildlib FAILED, cat /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/CDEPS.bldlog.230609-173705
  ---------------------------------------------------
-2023-06-08 16:15:44: case.submit success 991213.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 17:44:55: case.build error 
+ERROR: /glade/work/hannay/cesm_tags/cam6_3_112/components/cdeps/cime_config/buildlib FAILED, cat /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/CDEPS.bldlog.230609-173940
  ---------------------------------------------------
-2023-06-08 18:01:23: case.run starting 991212.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 17:45:15: case.submit starting 
  ---------------------------------------------------
-2023-06-08 18:01:26: model execution starting 991212.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 17:45:15: case.submit error 
+ERROR: Build complete is not True please rebuild the model by calling case.build
  ---------------------------------------------------
-2023-06-09 00:48:52: model execution success 991212.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 20:39:47: case.build starting 
  ---------------------------------------------------
-2023-06-09 00:48:52: case.run success 991212.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 20:44:50: case.build starting 
  ---------------------------------------------------
-2023-06-09 00:49:14: st_archive starting 991213.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 20:50:06: case.build error 
+ERROR: /glade/work/hannay/cesm_tags/cam6_3_112/components/cdeps/cime_config/buildlib FAILED, cat /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/CDEPS.bldlog.230609-204450
  ---------------------------------------------------
-2023-06-09 00:49:23: st_archive success 991213.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:00:40: build.clean starting 
  ---------------------------------------------------
-2023-06-09 00:49:37: case.submit starting 1032131.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:00:44: build.clean success 
  ---------------------------------------------------
-2023-06-09 00:49:37: case.submit success 1032131.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:01:24: case.build starting 
  ---------------------------------------------------
-2023-06-09 00:49:44: case.run starting 1032130.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:15:00: case.build success 
  ---------------------------------------------------
-2023-06-09 00:49:48: model execution starting 1032130.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:15:22: case.submit starting 1133263.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 07:32:54: model execution success 1032130.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:15:22: case.submit success 1133263.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 07:32:54: case.run success 1032130.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:15:31: case.run starting 1133262.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 07:33:04: st_archive starting 1032131.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:15:35: model execution starting 1133262.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 07:33:14: st_archive success 1032131.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:17:26: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run'
  ---------------------------------------------------
-2023-06-09 07:33:14: case.submit starting 1081230.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:17:26: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run/cesm.log.1133262.chadmin1.ib0.cheyenne.ucar.edu.230609-211531
  ---------------------------------------------------
-2023-06-09 07:33:14: case.submit success 1081230.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:49:13: case.build starting 
  ---------------------------------------------------
-2023-06-09 07:33:21: case.run starting 1081229.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:51:08: case.build success 
  ---------------------------------------------------
-2023-06-09 07:33:24: model execution starting 1081229.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:51:28: case.submit starting 1133960.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 14:12:03: model execution success 1081229.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:51:28: case.submit success 1133960.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 14:12:03: case.run success 1081229.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:52:11: case.run starting 1133959.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 14:12:25: st_archive starting 1081230.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:52:14: model execution starting 1133959.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 14:12:35: st_archive success 1081230.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:53:50: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run'
  ---------------------------------------------------
-2023-06-09 14:12:35: case.submit starting 1112547.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 21:53:50: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run/cesm.log.1133959.chadmin1.ib0.cheyenne.ucar.edu.230609-215211
  ---------------------------------------------------
-2023-06-09 14:12:35: case.submit success 1112547.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 22:21:04: case.submit starting 1134296.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 14:13:22: case.run starting 1112546.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 22:21:04: case.submit success 1134296.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 14:13:26: model execution starting 1112546.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 22:21:12: case.run starting 1134295.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 21:22:12: model execution success 1112546.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-09 22:21:17: model execution starting 1134295.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 21:22:12: case.run success 1112546.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 03:47:05: model execution success 1134295.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 21:22:35: st_archive starting 1112547.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 03:47:05: case.run success 1134295.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 21:22:45: st_archive success 1112547.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 03:47:27: st_archive starting 1134296.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 21:23:06: case.submit starting 1133381.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 03:47:41: st_archive success 1134296.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 21:23:06: case.submit success 1133381.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 03:47:42: case.submit starting 1136128.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 21:23:12: case.run starting 1133380.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 03:47:42: case.submit success 1136128.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-09 21:23:15: model execution starting 1133380.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 03:47:49: case.run starting 1136127.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 03:54:04: model execution success 1133380.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 03:47:52: model execution starting 1136127.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 03:54:04: case.run success 1133380.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:13:44: model execution success 1136127.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 03:54:15: st_archive starting 1133381.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:13:44: case.run success 1136127.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 03:54:25: st_archive success 1133381.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:14:01: st_archive starting 1136128.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 03:54:25: case.submit starting 1136230.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:14:17: st_archive success 1136128.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 03:54:25: case.submit success 1136230.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:14:28: case.submit starting 1138068.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 03:54:33: case.run starting 1136229.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:14:28: case.submit success 1138068.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 03:54:36: model execution starting 1136229.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:14:42: case.run starting 1138067.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 10:37:20: model execution success 1136229.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:14:45: model execution starting 1138067.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-06-10 10:37:20: case.run success 1136229.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:14:45: model execution error 
+ERROR: Command: 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '/bin/sh: line 1: 14309 Killed                  mpiexec_mpt -p "%g:" -np 2160 omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe >> cesm.log.$LID 2>&1' from dir '/glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run'
  ---------------------------------------------------
-2023-06-10 10:37:31: st_archive starting 1136230.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-10 09:14:45: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec_mpt -p "%g:"  -np 2160  omplace -tm open64 -vv /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run/cesm.log.1138067.chadmin1.ib0.cheyenne.ucar.edu.230610-091442
  ---------------------------------------------------
-2023-06-10 10:37:41: st_archive success 1136230.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-12 10:58:50: case.submit starting 1191136.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 10:58:50: case.submit success 1191136.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 10:59:01: case.run starting 1191135.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 10:59:05: model execution starting 1191135.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 16:21:00: model execution success 1191135.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 16:21:00: case.run success 1191135.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 16:21:11: st_archive starting 1191136.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 16:21:28: st_archive success 1191136.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 16:21:29: case.submit starting 1196443.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 16:21:29: case.submit success 1196443.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 16:21:39: case.run starting 1196442.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 16:21:43: model execution starting 1196442.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 21:50:26: model execution success 1196442.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 21:50:26: case.run success 1196442.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 21:50:38: st_archive starting 1196443.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 21:50:56: st_archive success 1196443.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 21:50:57: case.submit starting 1198000.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 21:50:57: case.submit success 1198000.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 21:51:02: case.run starting 1197999.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-12 21:51:06: model execution starting 1197999.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 03:17:39: model execution success 1197999.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 03:17:39: case.run success 1197999.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 03:17:51: st_archive starting 1198000.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 03:18:09: st_archive success 1198000.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 03:18:09: case.submit starting 1210809.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 03:18:09: case.submit success 1210809.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 03:18:15: case.run starting 1210808.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 03:18:18: model execution starting 1210808.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 08:42:48: model execution success 1210808.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 08:42:48: case.run success 1210808.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 08:43:03: st_archive starting 1210809.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 08:43:19: st_archive success 1210809.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 11:25:16: case.submit starting 1218774.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 11:25:16: case.submit success 1218774.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 11:25:17: xmlchange success <command> ./xmlchange RESUBMIT=15  </command>
+ ---------------------------------------------------
+2023-06-13 11:35:17: case.run starting 1218773.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 11:35:20: model execution starting 1218773.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 16:59:10: model execution success 1218773.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 16:59:10: case.run success 1218773.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 16:59:33: st_archive starting 1218774.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 16:59:51: st_archive success 1218774.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 16:59:51: case.submit starting 1224193.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 16:59:51: case.submit success 1224193.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 17:00:02: case.run starting 1224192.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 17:00:07: model execution starting 1224192.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 22:23:58: model execution success 1224192.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 22:23:58: case.run success 1224192.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 22:24:11: st_archive starting 1224193.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 22:24:27: st_archive success 1224193.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 22:24:28: case.submit starting 1251812.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 22:24:28: case.submit success 1251812.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 22:24:33: case.run starting 1251811.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-13 22:24:37: model execution starting 1251811.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 03:40:00: model execution success 1251811.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 03:40:00: case.run success 1251811.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 03:40:20: st_archive starting 1251812.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 03:40:35: st_archive success 1251812.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 03:40:35: case.submit starting 1275448.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 03:40:35: case.submit success 1275448.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 03:40:45: case.run starting 1275447.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 03:40:48: model execution starting 1275447.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 08:58:21: model execution success 1275447.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 08:58:21: case.run success 1275447.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 08:58:34: st_archive starting 1275448.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 08:58:51: st_archive success 1275448.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 08:58:52: case.submit starting 1277386.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 08:58:52: case.submit success 1277386.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 08:59:00: case.run starting 1277385.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 08:59:03: model execution starting 1277385.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 14:25:44: model execution success 1277385.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 14:25:44: case.run success 1277385.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 14:26:00: st_archive starting 1277386.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 14:26:18: st_archive success 1277386.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 14:26:18: case.submit starting 1288240.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 14:26:18: case.submit success 1288240.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 14:27:24: case.run starting 1288239.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 14:27:27: model execution starting 1288239.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 19:59:10: model execution success 1288239.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 19:59:10: case.run success 1288239.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 19:59:20: st_archive starting 1288240.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 19:59:36: st_archive success 1288240.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 19:59:51: case.submit starting 1303061.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 19:59:51: case.submit success 1303061.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 20:00:02: case.run starting 1303060.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-14 20:00:06: model execution starting 1303060.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 01:40:22: model execution success 1303060.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 01:40:22: case.run success 1303060.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 01:40:34: st_archive starting 1303061.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 01:40:49: st_archive success 1303061.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 01:40:50: case.submit starting 1323308.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 01:40:50: case.submit success 1323308.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 01:41:02: case.run starting 1323307.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 01:41:05: model execution starting 1323307.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 07:07:30: model execution success 1323307.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 07:07:30: case.run success 1323307.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 07:07:49: st_archive starting 1323308.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 07:08:06: st_archive success 1323308.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 07:08:07: case.submit starting 1335334.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 07:08:07: case.submit success 1335334.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 07:08:12: case.run starting 1335333.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 07:08:16: model execution starting 1335333.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 12:34:31: model execution success 1335333.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 12:34:31: case.run success 1335333.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 12:34:44: st_archive starting 1335334.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 12:35:04: st_archive success 1335334.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 12:35:30: case.submit starting 1338767.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 12:35:30: case.submit success 1338767.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 12:48:47: case.run starting 1338766.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 12:48:51: model execution starting 1338766.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 18:17:41: model execution success 1338766.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 18:17:41: case.run success 1338766.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 18:17:55: st_archive starting 1338767.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 18:18:11: st_archive success 1338767.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 18:18:16: case.submit starting 1340512.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 18:18:16: case.submit success 1340512.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 18:18:24: case.run starting 1340511.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 18:18:27: model execution starting 1340511.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 23:43:04: model execution success 1340511.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 23:43:04: case.run success 1340511.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 23:43:23: st_archive starting 1340512.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 23:43:40: st_archive success 1340512.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 23:43:47: case.submit starting 1341656.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 23:43:47: case.submit success 1341656.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 23:44:12: case.run starting 1341655.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-15 23:44:15: model execution starting 1341655.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 05:09:51: model execution success 1341655.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 05:09:51: case.run success 1341655.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 05:10:07: st_archive starting 1341656.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 05:10:24: st_archive success 1341656.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 05:10:24: case.submit starting 1346657.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 05:10:24: case.submit success 1346657.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 05:10:32: case.run starting 1346656.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 05:10:35: model execution starting 1346656.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 10:35:40: model execution success 1346656.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 10:35:40: case.run success 1346656.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 10:36:00: st_archive starting 1346657.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 10:36:15: st_archive success 1346657.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 10:36:16: case.submit starting 1347803.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 10:36:16: case.submit success 1347803.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 10:36:23: case.run starting 1347802.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 10:36:26: model execution starting 1347802.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 16:04:51: model execution success 1347802.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 16:04:51: case.run success 1347802.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 16:05:04: st_archive starting 1347803.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 16:05:20: st_archive success 1347803.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 16:05:20: case.submit starting 1358247.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 16:05:20: case.submit success 1358247.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 16:05:43: case.run starting 1358246.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 16:05:47: model execution starting 1358246.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 21:33:43: model execution success 1358246.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 21:33:43: case.run success 1358246.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 21:34:52: st_archive starting 1358247.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 21:35:09: st_archive success 1358247.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 21:35:11: case.submit starting 1369968.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 21:35:11: case.submit success 1369968.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 21:35:47: case.run starting 1369967.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-16 21:35:50: model execution starting 1369967.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-17 03:00:36: model execution success 1369967.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-17 03:00:36: case.run success 1369967.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-17 03:01:10: st_archive starting 1369968.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-06-17 03:01:26: st_archive success 1369968.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------

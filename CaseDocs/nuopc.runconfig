@@ -1,3 +1,139 @@
+MED_attributes::
+     Verbosity = off
+     aoflux_grid = ogrid
+     atm2ice_map = idmap
+     atm2lnd_map = idmap
+     atm2ocn_map = idmap
+     atm2wav_map = unset
+     atm_nx = 48600
+     atm_ny = 1
+     budget_ann = 1
+     budget_daily = 0
+     budget_inst = 0
+     budget_ltann = 1
+     budget_ltend = 0
+     budget_month = 1
+     budget_table_version = v0
+     coupling_mode = cesm
+     do_budgets = .false.
+     flux_albav = .false.
+     glc2ice_rmapname = idmap
+     glc2ocn_ice_rmapname = idmap
+     glc2ocn_liq_rmapname = idmap
+     glc_renormalize_smb = on_if_glc_coupled_fluxes
+     gust_fac = 0.0D0
+     histaux_atm2med_file1_auxname = atm.1h.inst
+     histaux_atm2med_file1_doavg = .false.
+     histaux_atm2med_file1_enabled = .true.
+     histaux_atm2med_file1_flds = Faxa_swndr:Faxa_swvdr:Faxa_swndf:Faxa_swvdf
+     histaux_atm2med_file1_history_n = 1
+     histaux_atm2med_file1_history_option = nhours
+     histaux_atm2med_file1_ntperfile = 24
+     histaux_atm2med_file2_auxname = atm.1h.avrg
+     histaux_atm2med_file2_doavg = .true.
+     histaux_atm2med_file2_enabled = .true.
+     histaux_atm2med_file2_flds = Sa_u:Sa_v
+     histaux_atm2med_file2_history_n = 1
+     histaux_atm2med_file2_history_option = nhours
+     histaux_atm2med_file2_ntperfile = 24
+     histaux_atm2med_file3_auxname = atm.3hprec.avrg
+     histaux_atm2med_file3_doavg = .true.
+     histaux_atm2med_file3_enabled = .true.
+     histaux_atm2med_file3_flds = Faxa_rainc:Faxa_rainl:Faxa_snowc:Faxa_snowl
+     histaux_atm2med_file3_history_n = 3
+     histaux_atm2med_file3_history_option = nhours
+     histaux_atm2med_file3_ntperfile = 8
+     histaux_atm2med_file4_auxname = atm.3h.avrg
+     histaux_atm2med_file4_doavg = .true.
+     histaux_atm2med_file4_enabled = .true.
+     histaux_atm2med_file4_flds = Sa_z:Sa_topo:Sa_u:Sa_v:Sa_tbot:Sa_ptem:Sa_shum:Sa_dens:Sa_pbot:Sa_pslv:Faxa_lwdn:Faxa_rainc:Faxa_rainl:Faxa_snowc:Faxa_snowl:Faxa_swndr:Faxa_swvdr:Faxa_swndf:Faxa_swvdf:Sa_co2diag:Sa_co2prog
+     histaux_atm2med_file4_history_n = 3
+     histaux_atm2med_file4_history_option = nhours
+     histaux_atm2med_file4_ntperfile = 8
+     histaux_atm2med_file5_auxname = atm.24h.avrg
+     histaux_atm2med_file5_doavg = .true.
+     histaux_atm2med_file5_enabled = .true.
+     histaux_atm2med_file5_flds = Faxa_bcph:Faxa_ocph:Faxa_dstwet:Faxa_dstdry:Sa_co2prog:Sa_co2diag
+     histaux_atm2med_file5_history_n = 1
+     histaux_atm2med_file5_history_option = ndays
+     histaux_atm2med_file5_ntperfile = 1
+     histaux_lnd2med_file1_auxname = lnd.ncpl.inst
+     histaux_lnd2med_file1_doavg = .false.
+     histaux_lnd2med_file1_enabled = .false.
+     histaux_lnd2med_file1_flds = all
+     histaux_lnd2med_file1_history_n = 1
+     histaux_lnd2med_file1_history_option = nsteps
+     histaux_lnd2med_file1_ntperfile = 1
+     histaux_ocn2med_file1_auxname = ocn.24h.avg
+     histaux_ocn2med_file1_doavg = .true.
+     histaux_ocn2med_file1_enabled = .false.
+     histaux_ocn2med_file1_flds = So_bldepth:So_t:So_u:So_v
+     histaux_ocn2med_file1_history_n = 1
+     histaux_ocn2med_file1_history_option = ndays
+     histaux_ocn2med_file1_ntperfile = 30
+     histaux_rof2med_file1_auxname = rof.24h.avrg
+     histaux_rof2med_file1_doavg = .true.
+     histaux_rof2med_file1_enabled = .false.
+     histaux_rof2med_file1_flds = all
+     histaux_rof2med_file1_history_n = 1
+     histaux_rof2med_file1_history_option = ndays
+     histaux_rof2med_file1_ntperfile = 1
+     history_n_atm_avg = -999
+     history_n_atm_inst = -999
+     history_n_glc_avg = -999
+     history_n_glc_inst = -999
+     history_n_ice_avg = -999
+     history_n_ice_inst = -999
+     history_n_lnd_avg = -999
+     history_n_lnd_inst = -999
+     history_n_med_inst = -999
+     history_n_ocn_avg = -999
+     history_n_ocn_inst = -999
+     history_n_rof_avg = -999
+     history_n_rof_inst = -999
+     history_n_wav_avg = -999
+     history_n_wav_inst = -999
+     history_option_atm_avg = never
+     history_option_atm_inst = never
+     history_option_glc_avg = never
+     history_option_glc_inst = never
+     history_option_ice_avg = never
+     history_option_ice_inst = never
+     history_option_lnd_avg = never
+     history_option_lnd_inst = never
+     history_option_med_inst = never
+     history_option_ocn_avg = never
+     history_option_ocn_inst = never
+     history_option_rof_avg = never
+     history_option_rof_inst = never
+     history_option_wav_avg = never
+     history_option_wav_inst = never
+     ice2atm_map = idmap
+     ice2wav_smapname = unset
+     ice_nx = 48600
+     ice_ny = 1
+     info_debug = 1
+     lnd2atm_map = idmap
+     lnd2rof_map = unset
+     lnd_nx = 48600
+     lnd_ny = 1
+     mapuv_with_cart3d = .false.
+     ocn2atm_map = idmap
+     ocn2wav_smapname = unset
+     ocn_nx = 48600
+     ocn_ny = 1
+     ocn_surface_flux_scheme = 0
+     rof2lnd_map = unset
+     rof2ocn_fmapname = unset
+     rof2ocn_ice_rmapname = unset
+     rof2ocn_liq_rmapname = unset
+     rof_nx = 720
+     rof_ny = 360
+     wav2ocn_smapname = unset
+     wav_nx = 0
+     wav_ny = 0
+::
+
 DRIVER_attributes::
      Verbosity = off
      cime_model = cesm
@@ -89,7 +225,7 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001
+     case_name = f.cam6_3_112.FLT1850.ne30.landspinup.001
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      data_assimilation_atm = .false.
@@ -128,7 +264,7 @@ ALLCOMP_attributes::
      orb_eccen = 1.e36
      orb_iyear = 1850
      orb_iyear_align = 1850
-     orb_mode = variable_year
+     orb_mode = fixed_year
      orb_mvelp = 1.e36
      orb_obliq = 1.e36
      scol_lat = -999.99
@@ -139,142 +275,6 @@ ALLCOMP_attributes::
      username = hannay
      wavice_coupling = .false.
      write_restart_at_endofrun = .false.
-::
-
-MED_attributes::
-     Verbosity = off
-     aoflux_grid = ogrid
-     atm2ice_map = idmap
-     atm2lnd_map = idmap
-     atm2ocn_map = idmap
-     atm2wav_map = unset
-     atm_nx = 48600
-     atm_ny = 1
-     budget_ann = 1
-     budget_daily = 0
-     budget_inst = 0
-     budget_ltann = 1
-     budget_ltend = 0
-     budget_month = 1
-     budget_table_version = v0
-     coupling_mode = cesm
-     do_budgets = .false.
-     flux_albav = .false.
-     glc2ice_rmapname = idmap
-     glc2ocn_ice_rmapname = idmap
-     glc2ocn_liq_rmapname = idmap
-     glc_renormalize_smb = on_if_glc_coupled_fluxes
-     gust_fac = 0.0D0
-     histaux_atm2med_file1_auxname = atm.1h.inst
-     histaux_atm2med_file1_doavg = .false.
-     histaux_atm2med_file1_enabled = .false.
-     histaux_atm2med_file1_flds = Faxa_swndr:Faxa_swvdr:Faxa_swndf:Faxa_swvdf
-     histaux_atm2med_file1_history_n = 1
-     histaux_atm2med_file1_history_option = nhours
-     histaux_atm2med_file1_ntperfile = 24
-     histaux_atm2med_file2_auxname = atm.1h.avrg
-     histaux_atm2med_file2_doavg = .true.
-     histaux_atm2med_file2_enabled = .false.
-     histaux_atm2med_file2_flds = Sa_u:Sa_v
-     histaux_atm2med_file2_history_n = 1
-     histaux_atm2med_file2_history_option = nhours
-     histaux_atm2med_file2_ntperfile = 24
-     histaux_atm2med_file3_auxname = atm.3hprec.avrg
-     histaux_atm2med_file3_doavg = .true.
-     histaux_atm2med_file3_enabled = .false.
-     histaux_atm2med_file3_flds = Faxa_rainc:Faxa_rainl:Faxa_snowc:Faxa_snowl
-     histaux_atm2med_file3_history_n = 3
-     histaux_atm2med_file3_history_option = nhours
-     histaux_atm2med_file3_ntperfile = 8
-     histaux_atm2med_file4_auxname = atm.3h.avrg
-     histaux_atm2med_file4_doavg = .true.
-     histaux_atm2med_file4_enabled = .false.
-     histaux_atm2med_file4_flds = Sa_z:Sa_topo:Sa_u:Sa_v:Sa_tbot:Sa_ptem:Sa_shum:Sa_dens:Sa_pbot:Sa_pslv:Faxa_lwdn:Faxa_rainc:Faxa_rainl:Faxa_snowc:Faxa_snowl:Faxa_swndr:Faxa_swvdr:Faxa_swndf:Faxa_swvdf:Sa_co2diag:Sa_co2prog
-     histaux_atm2med_file4_history_n = 3
-     histaux_atm2med_file4_history_option = nhours
-     histaux_atm2med_file4_ntperfile = 8
-     histaux_atm2med_file5_auxname = atm.24h.avrg
-     histaux_atm2med_file5_doavg = .true.
-     histaux_atm2med_file5_enabled = .false.
-     histaux_atm2med_file5_flds = Faxa_bcph:Faxa_ocph:Faxa_dstwet:Faxa_dstdry:Sa_co2prog:Sa_co2diag
-     histaux_atm2med_file5_history_n = 1
-     histaux_atm2med_file5_history_option = ndays
-     histaux_atm2med_file5_ntperfile = 1
-     histaux_lnd2med_file1_auxname = lnd.ncpl.inst
-     histaux_lnd2med_file1_doavg = .false.
-     histaux_lnd2med_file1_enabled = .false.
-     histaux_lnd2med_file1_flds = all
-     histaux_lnd2med_file1_history_n = 1
-     histaux_lnd2med_file1_history_option = nsteps
-     histaux_lnd2med_file1_ntperfile = 1
-     histaux_ocn2med_file1_auxname = ocn.24h.avg
-     histaux_ocn2med_file1_doavg = .true.
-     histaux_ocn2med_file1_enabled = .false.
-     histaux_ocn2med_file1_flds = So_bldepth:So_t:So_u:So_v
-     histaux_ocn2med_file1_history_n = 1
-     histaux_ocn2med_file1_history_option = ndays
-     histaux_ocn2med_file1_ntperfile = 30
-     histaux_rof2med_file1_auxname = rof.24h.avrg
-     histaux_rof2med_file1_doavg = .true.
-     histaux_rof2med_file1_enabled = .false.
-     histaux_rof2med_file1_flds = all
-     histaux_rof2med_file1_history_n = 1
-     histaux_rof2med_file1_history_option = ndays
-     histaux_rof2med_file1_ntperfile = 1
-     history_n_atm_avg = -999
-     history_n_atm_inst = -999
-     history_n_glc_avg = -999
-     history_n_glc_inst = -999
-     history_n_ice_avg = -999
-     history_n_ice_inst = -999
-     history_n_lnd_avg = -999
-     history_n_lnd_inst = -999
-     history_n_med_inst = -999
-     history_n_ocn_avg = -999
-     history_n_ocn_inst = -999
-     history_n_rof_avg = -999
-     history_n_rof_inst = -999
-     history_n_wav_avg = -999
-     history_n_wav_inst = -999
-     history_option_atm_avg = never
-     history_option_atm_inst = never
-     history_option_glc_avg = never
-     history_option_glc_inst = never
-     history_option_ice_avg = never
-     history_option_ice_inst = never
-     history_option_lnd_avg = never
-     history_option_lnd_inst = never
-     history_option_med_inst = never
-     history_option_ocn_avg = never
-     history_option_ocn_inst = never
-     history_option_rof_avg = never
-     history_option_rof_inst = never
-     history_option_wav_avg = never
-     history_option_wav_inst = never
-     ice2atm_map = idmap
-     ice2wav_smapname = unset
-     ice_nx = 48600
-     ice_ny = 1
-     info_debug = 1
-     lnd2atm_map = idmap
-     lnd2rof_map = unset
-     lnd_nx = 48600
-     lnd_ny = 1
-     mapuv_with_cart3d = .false.
-     ocn2atm_map = idmap
-     ocn2wav_smapname = unset
-     ocn_nx = 48600
-     ocn_ny = 1
-     ocn_surface_flux_scheme = 0
-     rof2lnd_map = unset
-     rof2ocn_fmapname = unset
-     rof2ocn_ice_rmapname = unset
-     rof2ocn_liq_rmapname = unset
-     rof_nx = 720
-     rof_ny = 360
-     wav2ocn_smapname = unset
-     wav_nx = 0
-     wav_ny = 0
 ::
 
 CLOCK_attributes::
@@ -292,7 +292,7 @@ CLOCK_attributes::
      restart_ymd = -999
      rof_cpl_dt = 10800
      start_tod = 0
-     start_ymd = 19950101
+     start_ymd = 00010101
      stop_n = 2
      stop_option = nyears
      stop_tod = 0
@@ -337,8 +337,8 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = med.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = med.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -349,8 +349,8 @@ MED_modelio::
 ::
 
 ATM_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = atm.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = atm.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -361,8 +361,8 @@ ATM_modelio::
 ::
 
 LND_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = lnd.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = lnd.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -373,8 +373,8 @@ LND_modelio::
 ::
 
 ICE_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = ice.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = ice.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -385,8 +385,8 @@ ICE_modelio::
 ::
 
 OCN_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = ocn.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = ocn.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -397,8 +397,8 @@ OCN_modelio::
 ::
 
 ROF_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = rof.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = rof.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -409,8 +409,8 @@ ROF_modelio::
 ::
 
 GLC_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = glc.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = glc.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -421,8 +421,8 @@ GLC_modelio::
 ::
 
 WAV_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = wav.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = wav.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -433,8 +433,8 @@ WAV_modelio::
 ::
 
 ESP_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = esp.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = esp.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -445,7 +445,7 @@ ESP_modelio::
 ::
 
 DRV_modelio::
-     diro = /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-c8_4.0.001/run
-     logfile = drv.log.1136229.chadmin1.ib0.cheyenne.ucar.edu.230610-035433
+     diro = /glade/scratch/hannay/f.cam6_3_112.FLT1850.ne30.landspinup.001/run
+     logfile = drv.log.1369967.chadmin1.ib0.cheyenne.ucar.edu.230616-213547
 ::
 
