@@ -177,7 +177,7 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="1850_CAM%DEV%LT%GHGMAM4_CLM51%BGC-CROP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
+    <entry id="COMPSET" value="HIST_CAM%DEV%LT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
@@ -296,7 +296,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_112.FLT1850.ne30.landspinup.001">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-vtrmi1.0.001">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -313,7 +313,7 @@
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.cam6_3_112.FLT1850.ne30.landspinup.001">
+    <entry id="CASE" value="f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-vtrmi1.0.001">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -343,7 +343,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="38d222d73017979caa27c70b4f00d3686eaa9aba88309bb5e2fdc4db94ce253d">
+    <entry id="CASE_HASH" value="9b82e38fa6610f98f5dc21f5c2a0e24b77a72d7b2243202948edf904bf628872">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
