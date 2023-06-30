@@ -17,7 +17,7 @@ module clubb_intr
   !                                                                                                      ! 
   !----------------------------------------------------------------------------------------------------- !
 
-  use shr_kind_mod,        only: r8=>shr_kind_r8
+  use shr_kind_mod,        only: r8=>shr_kind_r8                                                                  
   use ppgrid,              only: pver, pverp, pcols, begchunk, endchunk
   use phys_control,        only: phys_getopts
   use physconst,           only: cpair, gravit, rga, latvap, latice, zvir, rh2o
@@ -30,11 +30,11 @@ module clubb_intr
   use ref_pres,         only: top_lev => trop_cloud_top_lev
   use zm_conv_intr,     only: zmconv_microp
 #ifdef CLUBB_SGS
-  use clubb_api_module,    only: pdf_parameter, implicit_coefs_terms
-  use clubb_api_module,    only: clubb_config_flags_type, grid, stats, nu_vertical_res_dep
-  use clubb_api_module,    only: nparams
-  use clubb_mf,            only: do_clubb_mf, do_clubb_mf_diag
-  use cloud_fraction,      only: dp1, dp2
+  use clubb_api_module, only: pdf_parameter, implicit_coefs_terms
+  use clubb_api_module, only: clubb_config_flags_type, grid, stats, nu_vertical_res_dep
+  use clubb_api_module, only: nparams
+  use clubb_mf,         only: do_clubb_mf, do_clubb_mf_diag
+  use cloud_fraction,   only: dp1, dp2
 #endif
 
   implicit none
@@ -77,8 +77,7 @@ module clubb_intr
 
   logical, public :: do_cldcool
   logical         :: clubb_do_icesuper
-!xxx  logical, public :: clubb_do_hb_above = .false.
-  logical, public :: clubb_do_hb_above = .true.!xxx
+
 #ifdef CLUBB_SGS
   type(clubb_config_flags_type), public :: clubb_config_flags
   real(r8), dimension(nparams), public :: clubb_params    ! Adjustable CLUBB parameters (C1, C2 ...)
@@ -307,7 +306,7 @@ module clubb_intr
     clubb_l_mono_flux_lim_vm,           & ! Flag to turn on monotonic flux limiter for vm
     clubb_l_mono_flux_lim_spikefix,     & ! Flag to implement monotonic flux limiter code that
                                           ! eliminates spurious drying tendencies at model top  
-    clubb_l_intr_sfc_flux_smooth = .false.! Add a locally calculated roughness to upwp and vpwp sfc fluxes
+    clubb_l_intr_sfc_flux_smooth = .false.  ! Add a locally calculated roughness to upwp and vpwp sfc fluxes
 
 !  Constant parameters
   logical, parameter, private :: &
@@ -502,9 +501,8 @@ module clubb_intr
        call cnst_add(trim(cnst_names(8)),0._r8,0._r8,0._r8,ixup2,longname='CLUBB 2nd moment u wind',cam_outfld=.false.)
        call cnst_add(trim(cnst_names(9)),0._r8,0._r8,0._r8,ixvp2,longname='CLUBB 2nd moment v wind',cam_outfld=.false.)
     end if
-    if (clubb_do_hb_above) then
-      call pbuf_add_field('clubbtop', 'physpkg', dtype_i4, (/pcols/), clubbtop_idx)
-    endif
+
+    call pbuf_add_field('clubbtop', 'physpkg', dtype_i4, (/pcols/), clubbtop_idx)
 
     !  put pbuf_add calls here (see macrop_driver.F90 for sample) use indicies defined at top
     call pbuf_add_field('pblh',       'global', dtype_r8, (/pcols/),                    pblh_idx)
@@ -815,9 +813,8 @@ end subroutine clubb_init_cnst
          clubb_skw_max_mag, &
          clubb_tridiag_solve_method, &
          clubb_up2_sfc_coef, &
-         clubb_wpxp_L_thresh!xxx, &
-!xxx         clubb_do_hb_above
-
+         clubb_wpxp_L_thresh
+                               
     !----- Begin Code -----
 
     !  Determine if we want clubb_history to be output  
@@ -1132,8 +1129,6 @@ end subroutine clubb_init_cnst
     if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_standard_term_ta")
     call mpi_bcast(clubb_l_partial_upwind_wp3,    1, mpi_logical, mstrid, mpicom, ierr)
     if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_partial_upwind_wp3")
-!xxx    call mpi_bcast(clubb_do_hb_above,                1, mpi_logical, mstrid, mpicom, ierr)
-!xxx    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_do_hb_above")
 
     !  Overwrite defaults if they are true
     if (clubb_history) l_stats = .true.
@@ -1965,6 +1960,7 @@ end subroutine clubb_init_cnst
     use cam_logfile,    only: iulog
     use tropopause,     only: tropopause_findChemTrop
     use time_manager,   only: get_nstep, is_first_restart_step
+    use phys_control,   only: cam_physpkg_is
 #ifdef CLUBB_SGS
     use hb_diff,                   only: pblintd
     use scamMOD,                   only: single_column,scm_clubb_iop_name
@@ -3641,9 +3637,9 @@ end subroutine clubb_init_cnst
       end do    
     end do
     !
-    ! set pbuf field so that HB scheme is only applied above CLUBB top
+    ! set pbuf field so that HB scheme only is applied above CLUBB top
     !
-    if (clubb_do_hb_above) then
+    if (cam_physpkg_is("cam_dev")) then
       call pbuf_set_field(pbuf, clubbtop_idx, clubbtop)
     endif
 

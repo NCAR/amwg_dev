@@ -1,55 +1,40 @@
-2023-06-29 08:54:35: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-06-29 19:57:20: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-06-29 08:54:36: case.setup starting 
+2023-06-29 19:57:21: case.setup starting 
  ---------------------------------------------------
-2023-06-29 08:54:38: case.setup success 
+2023-06-29 19:57:23: case.setup success 
  ---------------------------------------------------
-2023-06-29 08:54:39: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
+2023-06-29 19:57:23: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
  ---------------------------------------------------
-2023-06-29 08:54:39: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2023-06-29 19:57:24: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2023-06-29 08:54:40: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2023-06-29 19:57:25: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-06-29 08:54:41: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2023-06-29 19:57:26: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2023-06-29 08:54:42: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2023-06-29 19:57:27: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2023-06-29 08:54:43: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001  </command>
+2023-06-29 19:57:27: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001  </command>
  ---------------------------------------------------
-2023-06-29 08:54:43: xmlchange success <command> ./xmlchange RUN_REFDATE=1994-01-01  </command>
+2023-06-29 19:57:28: xmlchange success <command> ./xmlchange RUN_REFDATE=1994-01-01  </command>
  ---------------------------------------------------
-2023-06-29 08:54:44: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2023-06-29 19:57:29: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2023-06-29 08:54:45: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2023-06-29 19:57:30: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
  ---------------------------------------------------
-2023-06-29 08:57:15: case.build starting 
+2023-06-29 20:00:10: case.build starting 
  ---------------------------------------------------
-2023-06-29 09:09:28: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-vtrmi1.5-hb-tt.001/bld/atm.bldlog.230629-085715
+2023-06-29 20:00:34: case.build starting 
  ---------------------------------------------------
-2023-06-29 09:29:57: case.build starting 
+2023-06-29 20:12:31: case.build error 
+ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-vtrmi2.0-wsubi5.0.001/bld/atm.bldlog.230629-200034
  ---------------------------------------------------
-2023-06-29 09:30:40: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-vtrmi1.5-hb-tt.001/bld/atm.bldlog.230629-092957
+2023-06-29 20:12:48: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-06-29 09:33:44: case.build starting 
+2023-06-29 20:12:48: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-06-29 09:37:36: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/scratch/hannay/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-vtrmi1.5-hb-tt.001/bld/atm.bldlog.230629-093344
+2023-06-29 20:12:53: case.submit starting 
  ---------------------------------------------------
-2023-06-29 10:11:06: case.build starting 
- ---------------------------------------------------
-2023-06-29 10:13:36: case.build success 
- ---------------------------------------------------
-2023-06-29 10:14:08: xmlchange success <command> ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2023-06-29 10:14:09: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
- ---------------------------------------------------
-2023-06-29 10:14:17: case.submit starting 1633669.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-06-29 10:14:17: case.submit success 1633669.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-06-29 15:45:05: case.run starting 1633668.chadmin1.ib0.cheyenne.ucar.edu
- ---------------------------------------------------
-2023-06-29 15:45:09: model execution starting 1633668.chadmin1.ib0.cheyenne.ucar.edu
+2023-06-29 20:12:53: case.submit error 
+ERROR: Build complete is not True please rebuild the model by calling case.build
  ---------------------------------------------------
