@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2023-06-20 13:44:14
+# Created 2023-06-20 14:01:48
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-vtrmi1.0.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5-wsubi1.0.001"
 
 /glade/work/hannay/cesm_tags/cam6_3_112/cime/scripts/create_newcase --compset FLTHIST_v0c --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
