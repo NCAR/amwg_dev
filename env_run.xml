@@ -206,13 +206,13 @@
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="f.cam6_3_110.FMTHIST_v0c.ne30.tuningF.001">
+    <entry id="RUN_REFCASE" value="f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="1996-01-01">
+    <entry id="RUN_REFDATE" value="1994-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="0">
+    <entry id="RESUBMIT" value="5">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:1581893.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1581894.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:1627870.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:1627871.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1076,7 +1076,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="hist_cam_mt">
+    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
