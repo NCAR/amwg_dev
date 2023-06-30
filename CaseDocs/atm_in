@@ -368,7 +368,7 @@
  micro_mg_autocon_lwp_exp		=   2.47D0    
  micro_mg_autocon_nd_exp		=   -1.1D0    
  micro_mg_berg_eff_factor		=   1.D0    
- micro_mg_dcs		= 0.00025
+ micro_mg_dcs		= 0.00050
  micro_mg_do_graupel		=  .true. 
  micro_mg_do_hail		=  .false. 
  micro_mg_effi_factor		=   1.D0    
@@ -388,7 +388,7 @@
  microp_aero_wsub_min		=   0.2D0    
  microp_aero_wsub_scale		=   1.D0    
  microp_aero_wsubi_min		=   0.001D0    
- microp_aero_wsubi_scale		= 1.0
+ microp_aero_wsubi_scale		= 2.5
 /
 &modal_aer_opt_nl
  water_refindex_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/physprops/water_refindex_rrtmg_c080910.nc'
