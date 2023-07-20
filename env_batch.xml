@@ -29,7 +29,7 @@
       <argument> -q $JOB_QUEUE</argument>
       <argument> -l walltime=$JOB_WALLCLOCK_TIME</argument>
       <argument> -A $PROJECT</argument>
-      <argument> -l place=group=rack </argument>
+      <argument> -l place=group=rack</argument>
     </submit_args>
     <directives>
       <directive>-N {{ job_id }}</directive>
@@ -57,10 +57,10 @@
     </directives>
     <unknown_queue_directives>regular</unknown_queue_directives>
     <queues>
-      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">regular</queue>
-      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">premium</queue>
-      <queue default="true" jobmax="18" jobmin="1" walltimemax="06:00:00">share</queue>
-      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">economy</queue>
+      <queue walltimemax="12:00:00" nodemin="1" nodemax="4032">regular</queue>
+      <queue walltimemax="12:00:00" nodemin="1" nodemax="4032">premium</queue>
+      <queue default="true" walltimemax="06:00:00" jobmin="1" jobmax="18">share</queue>
+      <queue walltimemax="12:00:00" nodemin="1" nodemax="4032">economy</queue>
     </queues>
   </batch_system>
 </file>
