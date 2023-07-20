@@ -29,7 +29,7 @@
       <argument> -q $JOB_QUEUE</argument>
       <argument> -l walltime=$JOB_WALLCLOCK_TIME</argument>
       <argument> -A $PROJECT</argument>
-      <argument> -l place=group=rack</argument>
+      <argument> -l place=group=rack </argument> 
     </submit_args>
     <directives>
       <directive>-N {{ job_id }}</directive>

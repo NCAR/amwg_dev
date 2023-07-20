@@ -1,5 +1,5 @@
 
-mfilt               =       0,       5,     20,      40,      12,       120,      1,   1
+mfilt    =       0,       5,     20,      40,      12,       120,      1,   1
 nhtfrq              =       0,     -24,    -24,      -3,       0,       -2,      0,  -8760
 ndens               =       2,       2,      2,       2,       2,       1,      2,   1
 interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
@@ -42,10 +42,10 @@ fincl7= 'AQSO4_H2O2','AQSO4_O3', 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3',
 'SFdst_a1','SFdst_a2', 'SFdst_a3', 'SFncl_a1', 'SFncl_a2', 'SFncl_a3',
 'num_a2_sfnnuc1', 'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO'
 
-clubb_gamma_coef = 0.27
+clubb_gamma_coef = 0.30
 clubb_gamma_coefb = 0.32
 
-micro_mg_dcs=250.D-6
+micro_mg_dcs=500.D-6
 micro_mg_vtrmi_factor = 1.0
 microp_aero_wsubi_scale  = 1.0
 
