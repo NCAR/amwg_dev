@@ -5,8 +5,7 @@
       control arguments to the batch submit command.
     </header>
   <group id="config_batch">
-    <entry id="BATCH_SYSTEM" value="pbs">
-      <type>char</type>
+    <entry id="BATCH_SYSTEM" value="pbs"      <type>char</type>
       <valid_values>nersc_slurm,lc_slurm,moab,pbs,lsf,slurm,cobalt,cobalt_theta,none</valid_values>
       <desc>The batch system type to use for this machine.</desc>
     </entry>
@@ -29,7 +28,6 @@
       <argument> -q $JOB_QUEUE</argument>
       <argument> -l walltime=$JOB_WALLCLOCK_TIME</argument>
       <argument> -A $PROJECT</argument>
-      <argument> -l place=group=rack </argument>
     </submit_args>
     <directives>
       <directive>-N {{ job_id }}</directive>

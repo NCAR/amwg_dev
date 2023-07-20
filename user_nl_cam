@@ -42,26 +42,10 @@ fincl7= 'AQSO4_H2O2','AQSO4_O3', 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3',
 'SFdst_a1','SFdst_a2', 'SFdst_a3', 'SFncl_a1', 'SFncl_a2', 'SFncl_a3',
 'num_a2_sfnnuc1', 'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO'
 
-clubb_l_predict_upwp_vpwp=.true. 
-clubb_l_mono_flux_lim_um   = .true.  
-clubb_l_mono_flux_lim_vm   = .true.  
-clubb_c_uu_shr = 0.1
-clubb_c7=0.1
+clubb_gamma_coef = 0.27
+clubb_gamma_coefb = 0.32
 
-dust_emis_fact         = 0.80D0
+micro_mg_dcs=500.D-6
+micro_mg_vtrmi_factor = 1.0
+microp_aero_wsubi_scale  = 1.0
 
-micro_mg_dcs=0.00025
-micro_mg_vtrmi_factor=0.5
-microp_aero_wsubi_scale=2.5
-seasalt_emis_scale=1.5
-
-use_gw_convect_dp = .true.
-use_gw_front = .true.
-tau_0_ubc = .true.
-
-effgw_beres_dp  = 0.30D0
-effgw_rdg_beta = 0.5D0
-effgw_rdg_beta_max = 0.5D0
-
-conv_water_in_rad              =  2
- 

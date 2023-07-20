@@ -2,11 +2,11 @@
 
 set -e
 
-# Created 2023-06-30 12:24:15
+# Created 2023-07-07 12:05:38
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_112.FLTHIST_v0c.ne30.non-ogw-ubcT-effgw0.3-rdg_beta0.5_zm_water.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_117.FLTHIST_ne30.r250.001"
 
-/glade/work/hannay/cesm_tags/cam6_3_112/cime/scripts/create_newcase --compset FLTHIST_v0c --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
+/glade/work/hannay/cesm_tags/cam6_3_117/cime/scripts/create_newcase --compset FLTHIST_v0d --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
 cd "${CASEDIR}"
 
@@ -32,17 +32,79 @@ cd "${CASEDIR}"
 
 ./xmlchange RUN_REFDIR=cesm2_init
 
+./preview_namelists
+
+./preview_namelists
+
 ./case.build
 
-./preview_namelists
+./case.build
 
-./preview_namelists
+./case.build
+
+./case.build
+
+./case.build --clean-all
+
+./case.build
 
 ./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears
 
 ./xmlchange REST_OPTION=nyears,REST_N=1
 
 ./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./xmlchange STOP_N=3
+
+./xmlchange STOP_OPTIONS=nmonths
+
+./xmlchange STOP_OPTION=nmonths
+
+./xmlchange RESUBMIT=20
+
+./xmlchange RESUBMIT=25
+
+./case.build
+
+./case.build
+
+./xmlchange PROJECT=P93300642,JOB_QUEUE=regular,RESUBMIT=25,STOP_N=3,STOP_OPTION=nmonthss
+
+./xmlchange REST_OPTION=nmonths,REST_N=3
+
+./case.submit
+
+./xmlchange RESUBMIT=10
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./xmlchange RESUBMIT=10
 
 ./case.submit
 

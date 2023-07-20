@@ -9,7 +9,7 @@
  aer_wetdep_list		= 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3', 'ncl_a1', 'ncl_a2', 'ncl_a3', 'num_a1', 'num_a2', 'num_a3',
          'num_a4', 'pom_a1', 'pom_a4', 'so4_a1', 'so4_a2', 'so4_a3', 'soa_a1', 'soa_a2'
  modal_accum_coarse_exch		= .true.
- seasalt_emis_scale		= 1.5
+ seasalt_emis_scale		= 1.5D0
  sol_factb_interstitial		= 0.1D0
  sol_facti_cloud_borne		= 1.0D0
  sol_factic_interstitial		= 0.4D0
@@ -179,7 +179,7 @@
  clubb_c6thl		=  4.0     
  clubb_c6thlb		=  6.0     
  clubb_c6thlc		=  1.0     
- clubb_c7		= 0.1
+ clubb_c7		=  0.1     
  clubb_c7b		=  0.5     
  clubb_c8		=  4.2     
  clubb_c8b		=  0.0     
@@ -198,7 +198,7 @@
  clubb_c_k8		=  1.25    
  clubb_c_k9		=  0.25    
  clubb_c_uu_buoy		=  0.3     
- clubb_c_uu_shr		= 0.1
+ clubb_c_uu_shr		=  0.1     
  clubb_c_wp2_splat		=  0.0     
  clubb_c_wp3_pr_turb		=  0.4     
  clubb_detice_rad		=  61.0D-6             
@@ -206,8 +206,8 @@
  clubb_detphase_lowtemp		=  238.15D0            
  clubb_do_energyfix		=  .true.  
  clubb_do_liqsupersat		=  .false. 
- clubb_gamma_coef		=  0.270   
- clubb_gamma_coefb		=  0.32    
+ clubb_gamma_coef		= 0.27
+ clubb_gamma_coefb		= 0.32
  clubb_ipdf_call_placement		=  2       
  clubb_l_brunt_vaisala_freq_moist		=  .false. 
  clubb_l_call_pdf_closure_twice		=  .true.  
@@ -227,10 +227,10 @@
  clubb_l_mono_flux_lim_rtm		=  .true.  
  clubb_l_mono_flux_lim_spikefix		=  .true.  
  clubb_l_mono_flux_lim_thlm		=  .true.  
- clubb_l_mono_flux_lim_um		= .true.
- clubb_l_mono_flux_lim_vm		= .true.
+ clubb_l_mono_flux_lim_um		=  .true.  
+ clubb_l_mono_flux_lim_vm		=  .true.  
  clubb_l_partial_upwind_wp3		=  .false. 
- clubb_l_predict_upwp_vpwp		= .true.
+ clubb_l_predict_upwp_vpwp		=  .true.  
  clubb_l_rcm_supersat_adj		=  .false. 
  clubb_l_smooth_heaviside_tau_wpxp		=  .false. 
  clubb_l_stability_correct_tau_zm		=  .true.  
@@ -268,7 +268,7 @@
 /
 &conv_water_nl
  conv_water_frac_limit		=  0.01d0  
- conv_water_in_rad		= 2
+ conv_water_in_rad		=  1 
 /
 &cospsimulator_nl
  docosp		= .true.
@@ -328,6 +328,7 @@
  gw_oro_south_fac		= 1.d0   
  gw_polar_taper		= .false.
  gw_prndl		= 0.5D0
+ gw_qbo_hdepth_scaling		= 1.0D0
  n_rdg_beta		= 10
  pgwv		= 32
  pgwv_long		= 0
@@ -368,7 +369,7 @@
  micro_mg_autocon_lwp_exp		=   2.47D0    
  micro_mg_autocon_nd_exp		=   -1.1D0    
  micro_mg_berg_eff_factor		=   1.D0    
- micro_mg_dcs		= 0.00025
+ micro_mg_dcs		= 500.D-6
  micro_mg_do_graupel		=  .true. 
  micro_mg_do_hail		=  .false. 
  micro_mg_effi_factor		=   1.D0    
@@ -376,11 +377,11 @@
  micro_mg_iaccr_factor		=   1.D0    
  micro_mg_implicit_fall		=  .true. 
  micro_mg_max_nicons		=   1.D8    
- micro_mg_num_steps		=                                  1          
+ micro_mg_num_steps		=     1          
  micro_mg_precip_frac_method		= 'in_cloud'
- micro_mg_sub_version		=                                  0          
- micro_mg_version		=                                  3          
- micro_mg_vtrmi_factor		= 0.5
+ micro_mg_sub_version		=     0          
+ micro_mg_version		=     3          
+ micro_mg_vtrmi_factor		= 1.0
 /
 &microp_aero_nl
  microp_aero_bulk_scale		=   2.D0    
@@ -388,7 +389,7 @@
  microp_aero_wsub_min		=   0.2D0    
  microp_aero_wsub_scale		=   1.D0    
  microp_aero_wsubi_min		=   0.001D0    
- microp_aero_wsubi_scale		= 2.5
+ microp_aero_wsubi_scale		= 1.0
 /
 &modal_aer_opt_nl
  water_refindex_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/physprops/water_refindex_rrtmg_c080910.nc'
