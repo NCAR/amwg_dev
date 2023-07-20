@@ -268,7 +268,7 @@
 /
 &conv_water_nl
  conv_water_frac_limit		=  0.01d0  
- conv_water_in_rad		= 2
+ conv_water_in_rad		=  1 
 /
 &cospsimulator_nl
  docosp		= .true.
@@ -380,7 +380,7 @@
  micro_mg_precip_frac_method		= 'in_cloud'
  micro_mg_sub_version		=                                  0          
  micro_mg_version		=                                  3          
- micro_mg_vtrmi_factor		= 0.5
+ micro_mg_vtrmi_factor		= 2.0
 /
 &microp_aero_nl
  microp_aero_bulk_scale		=   2.D0    
@@ -388,7 +388,7 @@
  microp_aero_wsub_min		=   0.2D0    
  microp_aero_wsub_scale		=   1.D0    
  microp_aero_wsubi_min		=   0.001D0    
- microp_aero_wsubi_scale		= 2.5
+ microp_aero_wsubi_scale		= 3.5
 /
 &modal_aer_opt_nl
  water_refindex_file		= '/glade/p/cesmdata/cseg/inputdata/atm/cam/physprops/water_refindex_rrtmg_c080910.nc'

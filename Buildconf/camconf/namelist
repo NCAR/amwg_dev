@@ -106,12 +106,6 @@ dust_emis_fact         = 0.80D0
 
 
 
-micro_mg_dcs=0.00025
-
-micro_mg_vtrmi_factor=0.5
-
-microp_aero_wsubi_scale=2.5
-
 seasalt_emis_scale=1.5
 
 
@@ -132,8 +126,14 @@ effgw_rdg_beta_max = 0.5D0
 
 
 
-conv_water_in_rad              =  2
+micro_mg_dcs             = 0.00025
 
- 
+
+
+micro_mg_vtrmi_factor = 2.0
+
+microp_aero_wsubi_scale=3.5
+
+
 
 / 
