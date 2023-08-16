@@ -16,7 +16,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 'QFLX', 'QRL', 'QRS', 'QTGW', 'RCMTEND_CLUBB', 'RELHUM', 'RVMTEND_CLUBB', 'SHFLX', 'SOLIN', 'SST', 'STEND_CLUBB', 'SWCF', 
 'T', 'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT', 'UTGWORO', 'UTGW_TOTAL', 
 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O', 'CO2','CFC11','CFC12', 
-'AODVISdn',
+'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL','CLMODIS', 'AODVISdn',
 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ'
 
 fincl3 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA', 'PSL'
@@ -49,4 +49,15 @@ micro_mg_dcs=500.D-6
 micro_mg_vtrmi_factor = 1.0
 microp_aero_wsubi_scale  = 1.0
 
-ncdata ='/glade/p/cesmdata/inputdata/atm/cam/inic/se/cam7_FMT_ne30pg3_mg17_L93_c221118.nc'
+se_nsplit = 1
+se_rsplit = 6
+se_sponge_del4_nu_div_fac  = 1
+se_hypervis_subcycle = 1
+
+se_nu_div = 1.0E15
+se_nu     = 1.0E15
+
+se_hypervis_subcycle_sponge = 4
+se_nu_top = 1E6
+
+ncdata ='/glade/p/cesmdata/inputdata/atm/cam/inic/se/FLT_L58_ne30pg3_IC_c220623.nc'
