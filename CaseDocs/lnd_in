@@ -4,13 +4,13 @@
  collapse_urban = .false.
  compname = 'clm2'
  create_crop_landunit = .true.
- finidat = '/glade/p/cesmdata/cseg/inputdata/cesm2_init/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016/0058-01-01/b.cesm3_cam058_mom_e.B1850MOM.f09_L32_t061.cam6_cice5.016.clm2.r.0058-01-01-00000.nc'
+ finidat = '/glade/p/cgd/tss/people/oleson/CLM5_restarts/ctsm51_cesm23a14a_ne30pg3ne30pg3mg17_CPLHIST_1850pAD.clm2.r.0561-01-01-00000.nc'
  for_testing_no_crop_seed_replenishment = .false.
  for_testing_run_ncdiopio_tests = .false.
  for_testing_use_repr_structure_pool = .false.
  for_testing_use_second_grain_pool = .false.
- fsnowaging = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc'
- fsnowoptics = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_c090915.nc'
+ fsnowaging = '/glade/p/cesmdata/inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc'
+ fsnowoptics = '/glade/p/cesmdata/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_c090915.nc'
  fsurdat = '/glade/work/slevis/git/mksurfdata_toolchain/tools/mksurfdata_esmf/surfdata_ne30np4.pg3_SSP5-8.5_78pfts_CMIP6_1850-2100_c230227.nc'
  glc_do_dynglacier = .true.
  glc_snow_persistence_max_days = 0
@@ -23,7 +23,7 @@
  nlevsno = 12
  nsegspc = 35
  o3_veg_stress_method = 'unset'
- paramfile = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/paramdata/ctsm51_params.c211112.nc'
+ paramfile = '/glade/p/cesmdata/inputdata/lnd/clm2/paramdata/ctsm51_params.c211112.nc'
  run_zero_weight_urban = .false.
  snow_cover_fraction_method = 'SwensonLawrence2012'
  soil_layerstruct_predefined = '20SL_8.5m'
@@ -58,29 +58,29 @@
  ndep_taxmode = 'cycle'
  ndep_varlist = 'NDEP_month'
  ndepmapalgo = 'bilinear'
- stream_fldfilename_ndep = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc'
- stream_meshfile_ndep = '/glade/p/cesmdata/cseg/inputdata/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc'
+ stream_fldfilename_ndep = '/glade/p/cesmdata/inputdata/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc'
+ stream_meshfile_ndep = '/glade/p/cesmdata/inputdata/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc'
  stream_year_first_ndep = 1850
  stream_year_last_ndep = 1850
 /
 &popd_streams
  popdensmapalgo = 'bilinear'
- stream_fldfilename_popdens = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2017_HYDEv3.2_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2016_c180202.nc'
- stream_meshfile_popdens = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2017_HYDEv3.2_CMIP6_hdm_0.5x0_ESMFmesh_cdf5_100621.nc'
+ stream_fldfilename_popdens = '/glade/p/cesmdata/inputdata/lnd/clm2/firedata/clmforc.Li_2017_HYDEv3.2_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2016_c180202.nc'
+ stream_meshfile_popdens = '/glade/p/cesmdata/inputdata/lnd/clm2/firedata/clmforc.Li_2017_HYDEv3.2_CMIP6_hdm_0.5x0_ESMFmesh_cdf5_100621.nc'
  stream_year_first_popdens = 1850
  stream_year_last_popdens = 1850
 /
 &urbantv_streams
- stream_fldfilename_urbantv = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/urbandata/CLM50_tbuildmax_Oleson_2016_0.9x1.25_simyr1849-2106_c160923.nc'
- stream_meshfile_urbantv = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/urbandata/CLM50_tbuildmax_Oleson_2016_0.9x1_ESMFmesh_cdf5_100621.nc'
+ stream_fldfilename_urbantv = '/glade/p/cesmdata/inputdata/lnd/clm2/urbandata/CLM50_tbuildmax_Oleson_2016_0.9x1.25_simyr1849-2106_c160923.nc'
+ stream_meshfile_urbantv = '/glade/p/cesmdata/inputdata/lnd/clm2/urbandata/CLM50_tbuildmax_Oleson_2016_0.9x1_ESMFmesh_cdf5_100621.nc'
  stream_year_first_urbantv = 1850
  stream_year_last_urbantv = 1850
  urbantvmapalgo = 'nn'
 /
 &light_streams
  lightngmapalgo = 'bilinear'
- stream_fldfilename_lightng = '/glade/p/cesmdata/cseg/inputdata/atm/datm7/NASA_LIS/clmforc.Li_2016_climo1995-2013.360x720.lnfm_Total_c160825.nc'
- stream_meshfile_lightng = '/glade/p/cesmdata/cseg/inputdata/atm/datm7/NASA_LIS/clmforc.Li_2016_climo1995-2013.360x720_ESMFmesh_cdf5_150621.nc'
+ stream_fldfilename_lightng = '/glade/p/cesmdata/inputdata/atm/datm7/NASA_LIS/clmforc.Li_2016_climo1995-2013.360x720.lnfm_Total_c160825.nc'
+ stream_meshfile_lightng = '/glade/p/cesmdata/inputdata/atm/datm7/NASA_LIS/clmforc.Li_2016_climo1995-2013.360x720_ESMFmesh_cdf5_150621.nc'
  stream_year_first_lightng = 0001
  stream_year_last_lightng = 0001
 /
@@ -281,8 +281,8 @@
  ufuel = 1050.d00
 /
 &ch4finundated
- stream_fldfilename_ch4finundated = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/paramdata/finundated_inversiondata_0.9x1.25_c170706.nc'
- stream_meshfile_ch4finundated = '/glade/p/cesmdata/cseg/inputdata/lnd/clm2/paramdata/finundated_inversiondata_0.9x1_ESMFmesh_cdf5_130621.nc'
+ stream_fldfilename_ch4finundated = '/glade/p/cesmdata/inputdata/lnd/clm2/paramdata/finundated_inversiondata_0.9x1.25_c170706.nc'
+ stream_meshfile_ch4finundated = '/glade/p/cesmdata/inputdata/lnd/clm2/paramdata/finundated_inversiondata_0.9x1_ESMFmesh_cdf5_130621.nc'
 /
 &soilbgc_decomp
  soil_decomp_method = 'CENTURYKoven2013'
@@ -297,7 +297,7 @@
 !#--------------------------------------------------------------------------------------------------------------------------
 !# lnd_in:: Comment:
 !# This namelist was created using the following command-line:
-!#     /glade/work/hannay/cesm_tags/cesm2_3_alpha14a/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cesm2_3_alpha14a/cime -infile /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha14a.BLT1850.ne30_t232.032/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/cseg/inputdata -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha14a.BLT1850.ne30_t232.032/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=00010101 /  -no-megan -use_case 1850_control -res ne30np4.pg3 -clm_start_type default -envxml_dir /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha14a.BLT1850.ne30_t232.032 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha14a.BLT1850.ne30_t232.032/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc bgc -crop -clm_accelerated_spinup off -lnd_tuning_mode clm5_1_GSWP3v1 -mask tx2_3v2
+!#     /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime -infile /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.033/Buildconf/clmconf/namelist -csmdata /glade/p/cesmdata/inputdata -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.033/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=00010101 /  -no-megan -use_case 1850_control -res ne30np4.pg3 -clm_start_type default -envxml_dir /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.033 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.033/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc bgc -crop -clm_accelerated_spinup off -lnd_tuning_mode clm5_1_GSWP3v1 -mask tx2_3v2
 !# 
-!# For help on options use: /glade/work/hannay/cesm_tags/cesm2_3_alpha14a/components/clm/bld/CLM build-namelist -help
+!# For help on options use: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/components/clm/bld/CLM build-namelist -help
 !#--------------------------------------------------------------------------------------------------------------------------

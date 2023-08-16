@@ -131,7 +131,7 @@
     </entry>
   </group>
   <group id="build_def">
-    <entry id="CIME_OUTPUT_ROOT" value="/glade/scratch/hannay">
+    <entry id="CIME_OUTPUT_ROOT" value="/glade/derecho/scratch/hannay">
       <type>char</type>
       <valid_values/>
       <desc>Output root directory for each machine.
@@ -237,7 +237,7 @@
     </entry>
   </group>
   <group id="build_macros">
-    <entry id="OS" value="LINUX">
+    <entry id="OS" value="CNL">
       <type>char</type>
       <valid_values/>
       <desc>Operating system - DO NOT EDIT UNLESS for userdefined machine - ignored once Macros has been created.</desc>
@@ -249,7 +249,7 @@
     Set in $CIMEROOT/machines/config_machines.xml for each supported machine.
     Must be explicitly set in env_build.xml for userdefined machine.</desc>
     </entry>
-    <entry id="MPILIB" value="mpt">
+    <entry id="MPILIB" value="mpich">
       <type>char</type>
       <valid_values/>
       <desc>mpi library (must match one of the supported libraries) -
@@ -313,7 +313,7 @@
     </entry>
   </group>
   <group id="build_component_cam">
-    <entry id="CAM_CPPDEFS" value="    -DPLON=1 -DPLAT=1 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DCAM  -D_WK_GRAD -DNP=4 -DHAVE_F2003_PTR_BND_REMAP -DFVM_TRACERS -D_MPI -DPLEV=58 -DPCNST=41 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DUSE_COSP -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp">
+    <entry id="CAM_CPPDEFS" value="    -DPLON=1 -DPLAT=1 -DNUM_COMP_INST_ATM=1 -DNUM_COMP_INST_LND=1 -DNUM_COMP_INST_OCN=1 -DNUM_COMP_INST_ICE=1 -DNUM_COMP_INST_GLC=1 -DNUM_COMP_INST_ROF=1 -DNUM_COMP_INST_WAV=1 -DNUM_COMP_INST_IAC=1 -DNUM_COMP_INST_ESP=1 -DCAM  -D_WK_GRAD -DNP=4 -DHAVE_F2003_PTR_BND_REMAP -DFVM_TRACERS -D_MPI -DPLEV=58 -DPCNST=41 -DPCOLS=16 -DPSUBCOLS=1 -DN_RAD_CNST=30 -DPTRM=1 -DPTRN=1 -DPTRK=1 -DSPMD -DMODAL_AERO -DMODAL_AERO_4MODE  -DUSE_COSP -DCLUBB_SGS -DCLUBB_CAM -DNO_LAPACK_ISNAN -DCLUBB_REAL_TYPE=dp -DMODEL_ -DMODEL_CESM -DHEMCO_CESM -DUSE_REAL8">
       <type>char</type>
       <valid_values/>
       <desc>CAM cpp definitions (setup automatically - DO NOT EDIT)</desc>
@@ -323,7 +323,7 @@
       <valid_values>eul,fv,fv3,se,mpas</valid_values>
       <desc>CAM dynamical core</desc>
     </entry>
-    <entry id="CAM_CONFIG_OPTS" value="-phys cam_dev -chem ghg_mam4 -nlev 58 -cosp">
+    <entry id="CAM_CONFIG_OPTS" value="-phys cam_dev -chem ghg_mam4 -nlev 58 -model_top lt -cosp">
       <type>char</type>
       <valid_values/>
       <desc>
@@ -351,6 +351,12 @@
            given the same shape. In symmetric mode, declarations are dependent on the variables
            staggered location on the Arakawa C grid. This allows loops to be symmetric and stencils
            to be applied more uniformly.
+    </desc>
+    </entry>
+    <entry id="MOM6_INFRA_API" value="FMS2">
+      <type>char</type>
+      <valid_values>FMS1,FMS2</valid_values>
+      <desc> This variable controls the MOM6 infrastructure API.
     </desc>
     </entry>
   </group>

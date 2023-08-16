@@ -37,29 +37,14 @@
       <directive> -V </directive>
     </directives>
   </batch_system>
-  <batch_system MACH="cheyenne" type="pbs">
-    <directives queue="regular">
+  <batch_system MACH="derecho" type="pbs">
+    <batch_submit>qsub</batch_submit>
+    <directives>
       <directive default="/bin/bash"> -S {{ shell }}  </directive>
       <directive> -l select={{ num_nodes }}:ncpus={{ max_tasks_per_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}</directive>
     </directives>
-    <directives queue="premium">
-      <directive default="/bin/bash"> -S {{ shell }}  </directive>
-      <directive> -l select={{ num_nodes }}:ncpus={{ max_tasks_per_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}</directive>
-    </directives>
-    <directives queue="economy">
-      <directive default="/bin/bash"> -S {{ shell }}  </directive>
-      <directive> -l select={{ num_nodes }}:ncpus={{ max_tasks_per_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}</directive>
-    </directives>
-    <directives queue="share">
-      <directive default="/bin/bash"> -S {{ shell }}  </directive>
-      <directive> -l select=1:mpiprocs={{ total_tasks }}:ompthreads={{ thread_count }}</directive>
-    </directives>
-    <unknown_queue_directives>regular</unknown_queue_directives>
     <queues>
-      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">regular</queue>
-      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">premium</queue>
-      <queue default="true" jobmax="18" jobmin="1" walltimemax="06:00:00">share</queue>
-      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">economy</queue>
+      <queue walltimemax="4:00:00" nodemin="1" nodemax="2488">main</queue>
     </queues>
   </batch_system>
 </file>
