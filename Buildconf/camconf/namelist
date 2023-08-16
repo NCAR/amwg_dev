@@ -1,6 +1,6 @@
 &comp_inparm 
 
- ncdata = 'f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001.cam.i.1994-01-01-00000.nc'
+ ncdata = 'f.cam6_3_110.FMTHIST_v0c.ne30.tuningF.001.cam.i.1996-01-01-00000.nc'
  dtime = 1800
 
 
@@ -38,7 +38,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O', 'CO2','CFC11','CFC12', 
 
-'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL','CLMODIS', 'AODVISdn',
+'AODVISdn',
 
 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ'
 
@@ -100,8 +100,10 @@ micro_mg_dcs=500.D-6
 
 micro_mg_vtrmi_factor = 1.0
 
-microp_aero_wsubi_scale  = 0.5
+microp_aero_wsubi_scale  = 1.0
 
 
+
+ncdata ='/glade/p/cesmdata/inputdata/atm/cam/inic/se/cam7_FMT_ne30pg3_mg17_L93_c221118.nc'
 
 / 
