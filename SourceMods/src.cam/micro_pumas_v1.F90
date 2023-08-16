@@ -3048,7 +3048,7 @@ subroutine micro_pumas_tend ( &
                 1.2_r8*rhof(i,k))
 !+++ARH vtrmi cloud ice
            !proc_rates%vtrmi(i,k)=proc_rates%vtrmi(i,k)*micro_mg_vtrmi_factor
-           proc_rates%vtrmi(i,k)=proc_rates%vtrmi(i,k)*0.5_r8
+           proc_rates%vtrmi(i,k)=proc_rates%vtrmi(i,k)*micro_mg_vtrmi_factor
 !---ARH
 
            fi(i,k) = g*rho(i,k)*proc_rates%vtrmi(i,k)
@@ -3067,7 +3067,7 @@ subroutine micro_pumas_tend ( &
                  1.2_r8*rhof(i,k))
 !+++ARH vtrmi small cloud ice
               !proc_rates%vtrmi(i,k)=proc_rates%vtrmi(i,k)*micro_mg_vtrmi_factor
-              proc_rates%vtrmi(i,k)=proc_rates%vtrmi(i,k)*micro_mg_vtrmi_factor
+              proc_rates%vtrmi(i,k)=proc_rates%vtrmi(i,k)*0.5_r8
 !---ARH
               fi(i,k)  = g*rho(i,k)*proc_rates%vtrmi(i,k)
               fni(i,k) = ifrac * fni(i,k) + &
