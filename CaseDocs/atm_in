@@ -34,7 +34,7 @@
          'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10',
          'UBOT', 'UTGWORO', 'UTGW_TOTAL', 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ',
          'ZMDT', 'N2O', 'CO2', 'CFC11', 'CFC12', 'CLD_MISR', 'FISCCP1_COSP', 'CLD_CAL', 'CLD_MISR', 'CLDTOT_CAL', 'CLDHGH_CAL',
-         'CLDMED_CAL', 'CLDLOW_CAL', 'CLMODIS', 'AODVISdn', 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ'
+         'CLDMED_CAL', 'CLDLOW_CAL', 'CLMODIS', 'AODVISdn', 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ', 'WSUB', 'WSUB_DIAG'
  fincl3		= 'PRECT','PRECC','FLUT','U850','U200','V850','V200','OMEGA','PSL'
  fincl4		= 'PRECC','PRECL'
  fincl5		= 'Uzm','Vzm','Wzm','THzm','VTHzm','WTHzm','UVzm','UWzm'
@@ -103,18 +103,18 @@
          'so4_a1 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a1_anthro-ag-ship_surface_mol_175001-201412_ne30pg3_c20200103.nc',
          'so4_a1 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a1_bb_surface_175001-201512_ne30pg3_c20191118.nc',
          'so4_a2 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a2_anthro-res_surface_mol_175001-201412_ne30pg3_c20200103.nc',
-         'SOAE -> 2.5592*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_BENZENE_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
-         'SOAE -> 2.5592*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_BENZENE_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
-         'SOAE -> 0.5954*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_ISOP_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
-         'SOAE -> 5.1004*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_MTERP_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
-         'SOAE -> 8.2367*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_TOLUENE_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
-         'SOAE -> 8.2367*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_TOLUENE_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
-         'SOAE -> 6.5013*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_XYLENES_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
-         'SOAE -> 6.5013*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_XYLENES_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
-         'SOAE -> 8.5371*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_IVOC_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
-         'SOAE -> 8.5371*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_IVOC_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
-         'SOAE -> 16.6500*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SVOC_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
-         'SOAE -> 16.6500*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SVOC_bb_surface_1750-2015_0.9x1.25_c20170322.nc'
+         'SOAE -> 3.4192D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_BENZENE_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
+         'SOAE -> 3.4192D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_BENZENE_bb_surface_175001-201512_ne30pg3_c20191118.nc',
+         'SOAE -> 0.9058D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_ISOP_bb_surface_175001-201512_ne30pg3_c20191118.nc',
+         'SOAE -> 8.6158D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_IVOC_anthro_surface_175001-201412_ne30pg3_c20200103.nc',
+         'SOAE -> 8.6158D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_IVOC_bb_surface_175001-201512_ne30pg3_c20191119.nc',
+         'SOAE -> 5.8638D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_MTERP_bb_surface_175001-201512_ne30pg3_c20191118.nc',
+         'SOAE -> 16.7388D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SVOC_anthro_surface_175001-201412_ne30pg3_c20200103.nc',
+         'SOAE -> 16.7388D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SVOC_bb_surface_175001-201512_ne30pg3_c20191119.nc',
+         'SOAE -> 9.4429D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_TOLUENE_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
+         'SOAE -> 9.4429D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_TOLUENE_bb_surface_175001-201512_ne30pg3_c20191118.nc',
+         'SOAE -> 7.3804D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_XYLENES_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
+         'SOAE -> 7.3804D0*/glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_XYLENES_bb_surface_175001-201512_ne30pg3_c20191118.nc'
  srf_emis_type		= 'INTERP_MISSING_MONTHS'
  tracer_cnst_datapath		= '/glade/p/cesmdata/inputdata/atm/cam/tracer_cnst'
  tracer_cnst_file		= 'tracer_cnst_halons_3D_L70_1849-2015_CMIP6ensAvg_c180927.nc'
@@ -206,8 +206,8 @@
  clubb_detphase_lowtemp		=  238.15D0            
  clubb_do_energyfix		=  .true.  
  clubb_do_liqsupersat		=  .false. 
- clubb_gamma_coef		= 0.33
- clubb_gamma_coefb		= 0.33
+ clubb_gamma_coef		= 0.30
+ clubb_gamma_coefb		= 0.30
  clubb_ipdf_call_placement		=  2       
  clubb_l_brunt_vaisala_freq_moist		=  .false. 
  clubb_l_call_pdf_closure_twice		=  .true.  
@@ -387,7 +387,7 @@
  microp_aero_bulk_scale		=   2.D0    
  microp_aero_npccn_scale		=   1.D0    
  microp_aero_wsub_min		=   0.2D0    
- microp_aero_wsub_scale		=   1.D0    
+ microp_aero_wsub_scale		= 0.5
  microp_aero_wsubi_min		=   0.001D0    
  microp_aero_wsubi_scale		= 1.0
 /

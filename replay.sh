@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2023-07-27 14:31:26
+# Created 2023-07-26 16:12:44
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FLTHIST_ne30.r328-wsub_scale0.5.002"
 
 /glade/work/hannay/cesm_tags/cam6_3_119/cime/scripts/create_newcase --compset FLTHIST_v0d --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
@@ -36,7 +36,9 @@ cd "${CASEDIR}"
 
 ./case.build
 
-./preview_namelists
+./case.build
+
+./case.build
 
 ./case.build
 
@@ -45,42 +47,6 @@ cd "${CASEDIR}"
 ./xmlchange REST_OPTION=nyears,REST_N=1
 
 ./xmlchange JOB_WALLCLOCK_TIME=12:00:00
-
-./case.submit
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
-
-./xmlchange REST_OPTION=nmonths,REST_N=1
-
-./case.submit
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
-
-./xmlchange REST_OPTION=nmonths,REST_N=1
-
-./xmlchange JOB_WALLCLOCK_TIME=12:00:00
-
-./case.submit
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange REST_OPTION=nyears,REST_N=1
-
-./xmlchange JOB_WALLCLOCK_TIME=12:00:00
-
-./case.submit
-
-./case.build
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange REST_OPTION=nyears,REST_N=1
-
-./xmlchange JOB_WALLCLOCK_TIME=12:00:00
-
-./case.submit
-
-./xmlchange RESUBMIT=2
 
 ./case.submit
 
