@@ -225,7 +225,7 @@ subroutine dropmixnuc( aero_props, aero_state, &
    real(r8), parameter :: zkmin = 0.01_r8, zkmax = 100._r8
 !+++ARH
    !real(r8), parameter :: wmixmin = 0.1_r8        ! minimum turbulence vertical velocity (m/s)
-   real(r8), parameter :: wmixmin = 0.05_r8
+   real(r8), parameter :: wmixmin = 0.025_r8
 !---ARH
    integer  :: i, k, l, m, mm, n
    integer  :: km1, kp1
