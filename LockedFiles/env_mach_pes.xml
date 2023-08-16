@@ -130,7 +130,7 @@
     </entry>
   </group>
   <group id="mach_pes_last">
-    <entry id="COST_PES" value="2160">
+    <entry id="COST_PES" value="2176">
       <type>integer</type>
       <desc>pes or cores used relative to MAX_MPITASKS_PER_NODE for accounting (0 means TOTALPES is valid)</desc>
     </entry>
@@ -138,11 +138,11 @@
       <type>integer</type>
       <desc>total number of MPI tasks (setup automatically - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MAX_TASKS_PER_NODE" value="36">
+    <entry id="MAX_TASKS_PER_NODE" value="128">
       <type>integer</type>
       <desc>maximum number of tasks/ threads allowed per node </desc>
     </entry>
-    <entry id="MAX_MPITASKS_PER_NODE" value="36">
+    <entry id="MAX_MPITASKS_PER_NODE" value="128">
       <type>integer</type>
       <desc>pes or cores per node for accounting purposes </desc>
     </entry>

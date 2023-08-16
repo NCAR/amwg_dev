@@ -40,7 +40,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL','CLMODIS', 'AODVISdn',
 
-'CCN3', 'CDNUMC'
+'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ'
 
 
 
@@ -106,7 +106,7 @@ microp_aero_wsubi_scale  = 1.0
 
 microp_aero_wsub_min = 0.002D0
 
-microp_aero_wsub_scale =  0.01D0
+microp_aero_wsub_scale =  1.0D0
 
 
 
