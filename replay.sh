@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2023-07-26 16:12:44
+# Created 2023-07-26 16:20:51
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FLTHIST_ne30.r328-wsub_scale0.5.002"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FLTHIST_ne30.r328-wsub_scale0.1.001"
 
 /glade/work/hannay/cesm_tags/cam6_3_119/cime/scripts/create_newcase --compset FLTHIST_v0d --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
@@ -34,11 +34,17 @@ cd "${CASEDIR}"
 
 ./case.build
 
-./case.build
+./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears
 
-./case.build
+./xmlchange REST_OPTION=nyears,REST_N=1
 
-./case.build
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00
 
 ./case.build
 
