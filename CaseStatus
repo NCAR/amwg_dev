@@ -1,423 +1,327 @@
-2023-08-08 21:09:55: case.setup starting 
+2023-08-08 21:36:10: case.setup starting 
  ---------------------------------------------------
-2023-08-08 21:09:57: case.setup success 
+2023-08-08 21:36:12: case.setup success 
  ---------------------------------------------------
-2023-08-08 21:10:03: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-08-08 21:36:17: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-08-08 21:11:52: case.build starting 
+2023-08-08 21:37:21: case.build starting 
  ---------------------------------------------------
-2023-08-08 21:13:31: case.build starting 
+2023-08-08 21:38:38: case.build starting 
  ---------------------------------------------------
-2023-08-08 21:13:59: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/libraries/FMS/buildlib FAILED, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/bld/FMS.bldlog.230808-211331
+2023-08-08 21:43:26: case.build error 
+ERROR: File /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.035/env_run.xml appears to have changed without a corresponding invalidation.
  ---------------------------------------------------
-2023-08-08 21:16:25: case.build starting 
+2023-08-08 21:48:42: case.build success 
  ---------------------------------------------------
-2023-08-08 21:17:05: case.build error 
-ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/bld/lnd.bldlog.230808-211152
+2023-08-08 21:49:26: case.build starting 
  ---------------------------------------------------
-2023-08-08 21:22:51: case.build starting 
+2023-08-08 21:50:01: case.build success 
  ---------------------------------------------------
-2023-08-08 21:23:10: case.build error 
-ERROR: BUILD FAIL: cism.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/bld/glc.bldlog.230808-212251
+2023-08-08 21:52:19: case.build starting 
  ---------------------------------------------------
-2023-08-08 21:25:15: case.build success 
+2023-08-08 21:52:54: case.build success 
  ---------------------------------------------------
-2023-08-08 21:33:56: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-08-08 21:57:50: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-08-08 21:33:57: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-08-08 21:57:51: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-08-08 21:33:58: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-08-08 21:57:51: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-08-08 21:34:04: case.submit starting 1253612.desched1
+2023-08-08 21:57:58: case.submit starting 1253638.desched1
  ---------------------------------------------------
-2023-08-08 21:34:04: case.submit success 1253612.desched1
+2023-08-08 21:57:58: case.submit success 1253638.desched1
  ---------------------------------------------------
-2023-08-08 21:34:13: case.run starting 1253611.desched1
+2023-08-08 21:58:05: case.run starting 1253637.desched1
  ---------------------------------------------------
-2023-08-08 21:34:18: model execution starting 1253611.desched1
+2023-08-08 21:58:08: model execution starting 1253637.desched1
  ---------------------------------------------------
-2023-08-08 21:34:29: model execution error 
-ERROR: Command: 'mpiexec  --label  --line-buffer  -n 2176 /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/run'
+2023-08-09 05:38:29: model execution success 1253637.desched1
  ---------------------------------------------------
-2023-08-08 21:34:29: case.run error 
-ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 2176 /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
-See log file for details: /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/run/cesm.log.1253611.desched1.230808-213413
+2023-08-09 05:38:29: case.run success 1253637.desched1
  ---------------------------------------------------
-2023-08-08 21:43:28: case.build starting 
+2023-08-09 05:38:41: st_archive starting 1253638.desched1
  ---------------------------------------------------
-2023-08-08 21:44:10: case.build success 
+2023-08-09 05:39:00: st_archive success 1253638.desched1
  ---------------------------------------------------
-2023-08-08 21:44:41: case.submit starting 1253622.desched1
+2023-08-09 05:39:01: case.submit starting 1253975.desched1
  ---------------------------------------------------
-2023-08-08 21:44:41: case.submit success 1253622.desched1
+2023-08-09 05:39:01: case.submit success 1253975.desched1
  ---------------------------------------------------
-2023-08-08 21:44:49: case.run starting 1253621.desched1
+2023-08-09 05:39:09: case.run starting 1253974.desched1
  ---------------------------------------------------
-2023-08-08 21:44:52: model execution starting 1253621.desched1
+2023-08-09 05:39:12: model execution starting 1253974.desched1
  ---------------------------------------------------
-2023-08-08 21:45:03: model execution error 
-ERROR: Command: 'mpiexec  --label  --line-buffer  -n 2176 /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/run'
+2023-08-09 13:24:37: model execution success 1253974.desched1
  ---------------------------------------------------
-2023-08-08 21:45:03: case.run error 
-ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 2176 /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
-See log file for details: /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.034/run/cesm.log.1253621.desched1.230808-214449
+2023-08-09 13:24:37: case.run success 1253974.desched1
  ---------------------------------------------------
-2023-08-08 22:14:23: case.build starting 
+2023-08-09 13:24:50: st_archive starting 1253975.desched1
  ---------------------------------------------------
-2023-08-08 22:14:58: case.build success 
+2023-08-09 13:25:07: st_archive success 1253975.desched1
  ---------------------------------------------------
-2023-08-08 22:15:00: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-08-09 13:25:08: case.submit starting 1254393.desched1
  ---------------------------------------------------
-2023-08-08 22:15:00: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-08-09 13:25:08: case.submit success 1254393.desched1
  ---------------------------------------------------
-2023-08-08 22:15:01: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-08-09 13:25:17: case.run starting 1254392.desched1
  ---------------------------------------------------
-2023-08-08 22:15:28: case.submit starting 1253649.desched1
+2023-08-09 13:25:20: model execution starting 1254392.desched1
  ---------------------------------------------------
-2023-08-08 22:15:28: case.submit success 1253649.desched1
+2023-08-09 21:05:52: model execution success 1254392.desched1
  ---------------------------------------------------
-2023-08-08 22:15:38: case.run starting 1253648.desched1
+2023-08-09 21:05:52: case.run success 1254392.desched1
  ---------------------------------------------------
-2023-08-08 22:15:43: model execution starting 1253648.desched1
+2023-08-09 21:06:03: st_archive starting 1254393.desched1
  ---------------------------------------------------
-2023-08-09 05:55:09: model execution success 1253648.desched1
+2023-08-09 21:06:22: st_archive success 1254393.desched1
  ---------------------------------------------------
-2023-08-09 05:55:09: case.run success 1253648.desched1
+2023-08-09 21:06:23: case.submit starting 1255019.desched1
  ---------------------------------------------------
-2023-08-09 05:55:21: st_archive starting 1253649.desched1
+2023-08-09 21:06:23: case.submit success 1255019.desched1
  ---------------------------------------------------
-2023-08-09 05:55:38: st_archive success 1253649.desched1
+2023-08-09 21:06:31: case.run starting 1255018.desched1
  ---------------------------------------------------
-2023-08-09 05:55:38: case.submit starting 1253977.desched1
+2023-08-09 21:06:34: model execution starting 1255018.desched1
  ---------------------------------------------------
-2023-08-09 05:55:38: case.submit success 1253977.desched1
+2023-08-10 04:53:26: model execution success 1255018.desched1
  ---------------------------------------------------
-2023-08-09 05:55:47: case.run starting 1253976.desched1
+2023-08-10 04:53:26: case.run success 1255018.desched1
  ---------------------------------------------------
-2023-08-09 05:55:50: model execution starting 1253976.desched1
+2023-08-10 04:53:37: st_archive starting 1255019.desched1
  ---------------------------------------------------
-2023-08-09 13:41:56: model execution success 1253976.desched1
+2023-08-10 04:53:55: st_archive success 1255019.desched1
  ---------------------------------------------------
-2023-08-09 13:41:56: case.run success 1253976.desched1
+2023-08-10 04:53:55: case.submit starting 1255192.desched1
  ---------------------------------------------------
-2023-08-09 13:42:09: st_archive starting 1253977.desched1
+2023-08-10 04:53:55: case.submit success 1255192.desched1
  ---------------------------------------------------
-2023-08-09 13:42:28: st_archive success 1253977.desched1
+2023-08-10 04:54:04: case.run starting 1255191.desched1
  ---------------------------------------------------
-2023-08-09 13:42:29: case.submit starting 1254399.desched1
+2023-08-10 04:54:07: model execution starting 1255191.desched1
  ---------------------------------------------------
-2023-08-09 13:42:29: case.submit success 1254399.desched1
+2023-08-10 12:36:54: model execution success 1255191.desched1
  ---------------------------------------------------
-2023-08-09 13:42:38: case.run starting 1254398.desched1
+2023-08-10 12:36:54: case.run success 1255191.desched1
  ---------------------------------------------------
-2023-08-09 13:42:41: model execution starting 1254398.desched1
+2023-08-10 12:37:05: st_archive starting 1255192.desched1
  ---------------------------------------------------
-2023-08-09 21:26:42: model execution success 1254398.desched1
+2023-08-10 12:37:24: st_archive success 1255192.desched1
  ---------------------------------------------------
-2023-08-09 21:26:42: case.run success 1254398.desched1
+2023-08-10 12:37:25: case.submit starting 1255495.desched1
  ---------------------------------------------------
-2023-08-09 21:26:54: st_archive starting 1254399.desched1
+2023-08-10 12:37:25: case.submit success 1255495.desched1
  ---------------------------------------------------
-2023-08-09 21:27:13: st_archive success 1254399.desched1
+2023-08-10 12:37:34: case.run starting 1255494.desched1
  ---------------------------------------------------
-2023-08-09 21:27:14: case.submit starting 1255040.desched1
+2023-08-10 12:37:37: model execution starting 1255494.desched1
  ---------------------------------------------------
-2023-08-09 21:27:14: case.submit success 1255040.desched1
+2023-08-10 20:22:19: model execution success 1255494.desched1
  ---------------------------------------------------
-2023-08-09 21:27:23: case.run starting 1255039.desched1
+2023-08-10 20:22:19: case.run success 1255494.desched1
  ---------------------------------------------------
-2023-08-09 21:27:26: model execution starting 1255039.desched1
+2023-08-10 20:22:29: st_archive starting 1255495.desched1
  ---------------------------------------------------
-2023-08-10 05:16:07: model execution success 1255039.desched1
+2023-08-10 20:22:49: st_archive success 1255495.desched1
  ---------------------------------------------------
-2023-08-10 05:16:07: case.run success 1255039.desched1
+2023-08-10 20:22:50: case.submit starting 1255668.desched1
  ---------------------------------------------------
-2023-08-10 05:16:18: st_archive starting 1255040.desched1
+2023-08-10 20:22:50: case.submit success 1255668.desched1
  ---------------------------------------------------
-2023-08-10 05:16:36: st_archive success 1255040.desched1
+2023-08-10 20:22:58: case.run starting 1255667.desched1
  ---------------------------------------------------
-2023-08-10 05:16:36: case.submit starting 1255197.desched1
+2023-08-10 20:23:01: model execution starting 1255667.desched1
  ---------------------------------------------------
-2023-08-10 05:16:36: case.submit success 1255197.desched1
+2023-08-11 04:07:28: model execution success 1255667.desched1
  ---------------------------------------------------
-2023-08-10 05:16:46: case.run starting 1255196.desched1
+2023-08-11 04:07:28: case.run success 1255667.desched1
  ---------------------------------------------------
-2023-08-10 05:16:50: model execution starting 1255196.desched1
+2023-08-11 04:07:39: st_archive starting 1255668.desched1
  ---------------------------------------------------
-2023-08-10 13:04:19: model execution success 1255196.desched1
+2023-08-11 04:08:00: st_archive success 1255668.desched1
  ---------------------------------------------------
-2023-08-10 13:04:19: case.run success 1255196.desched1
+2023-08-11 04:08:00: case.submit starting 1255840.desched1
  ---------------------------------------------------
-2023-08-10 13:04:30: st_archive starting 1255197.desched1
+2023-08-11 04:08:00: case.submit success 1255840.desched1
  ---------------------------------------------------
-2023-08-10 13:04:50: st_archive success 1255197.desched1
+2023-08-11 04:08:09: case.run starting 1255839.desched1
  ---------------------------------------------------
-2023-08-10 13:04:50: case.submit starting 1255527.desched1
+2023-08-11 04:08:12: model execution starting 1255839.desched1
  ---------------------------------------------------
-2023-08-10 13:04:50: case.submit success 1255527.desched1
+2023-08-11 11:53:02: model execution success 1255839.desched1
  ---------------------------------------------------
-2023-08-10 13:05:13: case.run starting 1255526.desched1
+2023-08-11 11:53:02: case.run success 1255839.desched1
  ---------------------------------------------------
-2023-08-10 13:05:17: model execution starting 1255526.desched1
+2023-08-11 11:53:14: st_archive starting 1255840.desched1
  ---------------------------------------------------
-2023-08-10 20:48:04: model execution success 1255526.desched1
+2023-08-11 11:53:36: st_archive success 1255840.desched1
  ---------------------------------------------------
-2023-08-10 20:48:04: case.run success 1255526.desched1
+2023-08-11 11:53:36: case.submit starting 1256198.desched1
  ---------------------------------------------------
-2023-08-10 20:48:15: st_archive starting 1255527.desched1
+2023-08-11 11:53:36: case.submit success 1256198.desched1
  ---------------------------------------------------
-2023-08-10 20:48:34: st_archive success 1255527.desched1
+2023-08-11 11:53:45: case.run starting 1256197.desched1
  ---------------------------------------------------
-2023-08-10 20:48:34: case.submit starting 1255677.desched1
+2023-08-11 11:53:49: model execution starting 1256197.desched1
  ---------------------------------------------------
-2023-08-10 20:48:34: case.submit success 1255677.desched1
+2023-08-11 19:37:49: model execution success 1256197.desched1
  ---------------------------------------------------
-2023-08-10 20:48:43: case.run starting 1255676.desched1
+2023-08-11 19:37:49: case.run success 1256197.desched1
  ---------------------------------------------------
-2023-08-10 20:48:46: model execution starting 1255676.desched1
+2023-08-11 19:38:01: st_archive starting 1256198.desched1
  ---------------------------------------------------
-2023-08-11 04:37:06: model execution success 1255676.desched1
+2023-08-11 19:38:21: st_archive success 1256198.desched1
  ---------------------------------------------------
-2023-08-11 04:37:06: case.run success 1255676.desched1
+2023-08-11 19:38:22: case.submit starting 1256440.desched1
  ---------------------------------------------------
-2023-08-11 04:37:25: st_archive starting 1255677.desched1
+2023-08-11 19:38:22: case.submit success 1256440.desched1
  ---------------------------------------------------
-2023-08-11 04:37:44: st_archive success 1255677.desched1
+2023-08-11 19:38:31: case.run starting 1256439.desched1
  ---------------------------------------------------
-2023-08-11 04:37:45: case.submit starting 1255843.desched1
+2023-08-11 19:38:34: model execution starting 1256439.desched1
  ---------------------------------------------------
-2023-08-11 04:37:45: case.submit success 1255843.desched1
+2023-08-12 03:29:58: model execution success 1256439.desched1
  ---------------------------------------------------
-2023-08-11 04:37:53: case.run starting 1255842.desched1
+2023-08-12 03:29:58: case.run success 1256439.desched1
  ---------------------------------------------------
-2023-08-11 04:37:57: model execution starting 1255842.desched1
+2023-08-12 03:30:09: st_archive starting 1256440.desched1
  ---------------------------------------------------
-2023-08-11 12:24:36: model execution success 1255842.desched1
+2023-08-12 03:30:29: st_archive success 1256440.desched1
  ---------------------------------------------------
-2023-08-11 12:24:36: case.run success 1255842.desched1
+2023-08-12 03:30:29: case.submit starting 1256780.desched1
  ---------------------------------------------------
-2023-08-11 12:24:46: st_archive starting 1255843.desched1
+2023-08-12 03:30:29: case.submit success 1256780.desched1
  ---------------------------------------------------
-2023-08-11 12:25:06: st_archive success 1255843.desched1
+2023-08-12 03:30:38: case.run starting 1256779.desched1
  ---------------------------------------------------
-2023-08-11 12:25:06: case.submit starting 1256210.desched1
+2023-08-12 03:30:41: model execution starting 1256779.desched1
  ---------------------------------------------------
-2023-08-11 12:25:06: case.submit success 1256210.desched1
+2023-08-12 11:23:33: model execution success 1256779.desched1
  ---------------------------------------------------
-2023-08-11 12:25:15: case.run starting 1256209.desched1
+2023-08-12 11:23:33: case.run success 1256779.desched1
  ---------------------------------------------------
-2023-08-11 12:25:19: model execution starting 1256209.desched1
+2023-08-12 11:23:50: st_archive starting 1256780.desched1
  ---------------------------------------------------
-2023-08-11 20:16:19: model execution success 1256209.desched1
+2023-08-12 11:24:12: st_archive success 1256780.desched1
  ---------------------------------------------------
-2023-08-11 20:16:19: case.run success 1256209.desched1
+2023-08-13 07:45:20: case.submit starting 1257250.desched1
  ---------------------------------------------------
-2023-08-11 20:16:36: st_archive starting 1256210.desched1
+2023-08-13 07:45:20: case.submit success 1257250.desched1
  ---------------------------------------------------
-2023-08-11 20:16:56: st_archive success 1256210.desched1
+2023-08-13 07:45:31: case.run starting 1257249.desched1
  ---------------------------------------------------
-2023-08-11 20:16:56: case.submit starting 1256454.desched1
+2023-08-13 07:45:36: model execution starting 1257249.desched1
  ---------------------------------------------------
-2023-08-11 20:16:56: case.submit success 1256454.desched1
+2023-08-13 15:34:11: model execution success 1257249.desched1
  ---------------------------------------------------
-2023-08-11 20:17:05: case.run starting 1256453.desched1
+2023-08-13 15:34:11: case.run success 1257249.desched1
  ---------------------------------------------------
-2023-08-11 20:17:09: model execution starting 1256453.desched1
+2023-08-13 15:34:22: st_archive starting 1257250.desched1
  ---------------------------------------------------
-2023-08-12 04:05:49: model execution success 1256453.desched1
+2023-08-13 15:34:44: st_archive success 1257250.desched1
  ---------------------------------------------------
-2023-08-12 04:05:49: case.run success 1256453.desched1
+2023-08-14 15:31:00: xmlchange success <command> ./xmlchange RESUBMIT=10  </command>
  ---------------------------------------------------
-2023-08-12 04:06:01: st_archive starting 1256454.desched1
+2023-08-14 15:31:11: case.submit starting 1258251.desched1
  ---------------------------------------------------
-2023-08-12 04:06:20: st_archive success 1256454.desched1
+2023-08-14 15:31:11: case.submit success 1258251.desched1
  ---------------------------------------------------
-2023-08-12 04:06:20: case.submit starting 1256783.desched1
+2023-08-14 15:31:22: case.run starting 1258250.desched1
  ---------------------------------------------------
-2023-08-12 04:06:20: case.submit success 1256783.desched1
+2023-08-14 15:31:27: model execution starting 1258250.desched1
  ---------------------------------------------------
-2023-08-12 04:06:29: case.run starting 1256782.desched1
+2023-08-14 23:21:14: model execution success 1258250.desched1
  ---------------------------------------------------
-2023-08-12 04:06:32: model execution starting 1256782.desched1
+2023-08-14 23:21:14: case.run success 1258250.desched1
  ---------------------------------------------------
-2023-08-12 11:59:11: model execution success 1256782.desched1
+2023-08-14 23:21:27: st_archive starting 1258251.desched1
  ---------------------------------------------------
-2023-08-12 11:59:11: case.run success 1256782.desched1
+2023-08-14 23:21:50: st_archive success 1258251.desched1
  ---------------------------------------------------
-2023-08-12 11:59:24: st_archive starting 1256783.desched1
+2023-08-14 23:21:50: case.submit starting 1258569.desched1
  ---------------------------------------------------
-2023-08-12 11:59:44: st_archive success 1256783.desched1
+2023-08-14 23:21:50: case.submit success 1258569.desched1
  ---------------------------------------------------
-2023-08-13 07:43:54: case.submit starting 1257247.desched1
+2023-08-14 23:22:02: case.run starting 1258568.desched1
  ---------------------------------------------------
-2023-08-13 07:43:54: case.submit success 1257247.desched1
+2023-08-14 23:22:06: model execution starting 1258568.desched1
  ---------------------------------------------------
-2023-08-13 07:44:09: case.run starting 1257246.desched1
+2023-08-15 07:09:30: model execution success 1258568.desched1
  ---------------------------------------------------
-2023-08-13 07:44:13: model execution starting 1257246.desched1
+2023-08-15 07:09:30: case.run success 1258568.desched1
  ---------------------------------------------------
-2023-08-13 07:45:56: xmlchange success <command> ./xmlchange RESUBMIT=4  </command>
+2023-08-15 07:09:41: st_archive starting 1258569.desched1
  ---------------------------------------------------
-2023-08-13 15:36:06: model execution success 1257246.desched1
+2023-08-15 07:10:03: st_archive success 1258569.desched1
  ---------------------------------------------------
-2023-08-13 15:36:06: case.run success 1257246.desched1
+2023-08-15 07:10:04: case.submit starting 1258654.desched1
  ---------------------------------------------------
-2023-08-13 15:36:21: st_archive starting 1257247.desched1
+2023-08-15 07:10:04: case.submit success 1258654.desched1
  ---------------------------------------------------
-2023-08-13 15:36:40: st_archive success 1257247.desched1
+2023-08-15 07:10:13: case.run starting 1258653.desched1
  ---------------------------------------------------
-2023-08-13 15:36:41: case.submit starting 1257442.desched1
+2023-08-15 07:10:16: model execution starting 1258653.desched1
  ---------------------------------------------------
-2023-08-13 15:36:41: case.submit success 1257442.desched1
+2023-08-15 15:04:44: model execution success 1258653.desched1
  ---------------------------------------------------
-2023-08-13 15:36:50: case.run starting 1257441.desched1
+2023-08-15 15:04:44: case.run success 1258653.desched1
  ---------------------------------------------------
-2023-08-13 15:36:54: model execution starting 1257441.desched1
+2023-08-15 15:04:56: st_archive starting 1258654.desched1
  ---------------------------------------------------
-2023-08-13 23:28:49: model execution success 1257441.desched1
+2023-08-15 15:05:20: st_archive success 1258654.desched1
  ---------------------------------------------------
-2023-08-13 23:28:49: case.run success 1257441.desched1
+2023-08-15 15:05:20: case.submit starting 1259126.desched1
  ---------------------------------------------------
-2023-08-13 23:29:05: st_archive starting 1257442.desched1
+2023-08-15 15:05:20: case.submit success 1259126.desched1
  ---------------------------------------------------
-2023-08-13 23:29:26: st_archive success 1257442.desched1
+2023-08-15 15:05:29: case.run starting 1259125.desched1
  ---------------------------------------------------
-2023-08-13 23:29:26: case.submit starting 1257655.desched1
+2023-08-15 15:05:33: model execution starting 1259125.desched1
  ---------------------------------------------------
-2023-08-13 23:29:26: case.submit success 1257655.desched1
+2023-08-15 23:01:43: model execution success 1259125.desched1
  ---------------------------------------------------
-2023-08-13 23:29:35: case.run starting 1257654.desched1
+2023-08-15 23:01:43: case.run success 1259125.desched1
  ---------------------------------------------------
-2023-08-13 23:29:38: model execution starting 1257654.desched1
+2023-08-15 23:01:55: st_archive starting 1259126.desched1
  ---------------------------------------------------
-2023-08-14 07:21:33: model execution success 1257654.desched1
+2023-08-15 23:02:20: st_archive success 1259126.desched1
  ---------------------------------------------------
-2023-08-14 07:21:33: case.run success 1257654.desched1
+2023-08-15 23:02:20: case.submit starting 1259447.desched1
  ---------------------------------------------------
-2023-08-14 07:21:44: st_archive starting 1257655.desched1
+2023-08-15 23:02:20: case.submit success 1259447.desched1
  ---------------------------------------------------
-2023-08-14 07:22:03: st_archive success 1257655.desched1
+2023-08-15 23:02:30: case.run starting 1259446.desched1
  ---------------------------------------------------
-2023-08-14 07:22:03: case.submit starting 1257729.desched1
+2023-08-15 23:02:33: model execution starting 1259446.desched1
  ---------------------------------------------------
-2023-08-14 07:22:03: case.submit success 1257729.desched1
+2023-08-16 06:51:30: model execution success 1259446.desched1
  ---------------------------------------------------
-2023-08-14 07:22:12: case.run starting 1257728.desched1
+2023-08-16 06:51:30: case.run success 1259446.desched1
  ---------------------------------------------------
-2023-08-14 07:22:15: model execution starting 1257728.desched1
+2023-08-16 06:51:42: st_archive starting 1259447.desched1
  ---------------------------------------------------
-2023-08-14 15:14:20: model execution success 1257728.desched1
+2023-08-16 06:52:09: st_archive success 1259447.desched1
  ---------------------------------------------------
-2023-08-14 15:14:20: case.run success 1257728.desched1
+2023-08-16 06:52:10: case.submit starting 1259564.desched1
  ---------------------------------------------------
-2023-08-14 15:14:31: st_archive starting 1257729.desched1
+2023-08-16 06:52:10: case.submit success 1259564.desched1
  ---------------------------------------------------
-2023-08-14 15:14:53: st_archive success 1257729.desched1
+2023-08-16 06:52:20: case.run starting 1259563.desched1
  ---------------------------------------------------
-2023-08-14 15:14:54: case.submit starting 1258237.desched1
+2023-08-16 06:52:24: model execution starting 1259563.desched1
  ---------------------------------------------------
-2023-08-14 15:14:54: case.submit success 1258237.desched1
+2023-08-16 14:45:39: model execution success 1259563.desched1
  ---------------------------------------------------
-2023-08-14 15:15:11: case.run starting 1258236.desched1
+2023-08-16 14:45:39: case.run success 1259563.desched1
  ---------------------------------------------------
-2023-08-14 15:15:15: model execution starting 1258236.desched1
+2023-08-16 14:45:51: st_archive starting 1259564.desched1
  ---------------------------------------------------
-2023-08-14 15:31:30: xmlchange success <command> ./xmlchange RESUBMIT=10  </command>
+2023-08-16 14:46:19: st_archive success 1259564.desched1
  ---------------------------------------------------
-2023-08-14 23:14:33: model execution success 1258236.desched1
+2023-08-16 14:46:20: case.submit starting 1260072.desched1
  ---------------------------------------------------
-2023-08-14 23:14:34: case.run success 1258236.desched1
+2023-08-16 14:46:20: case.submit success 1260072.desched1
  ---------------------------------------------------
-2023-08-14 23:14:54: st_archive starting 1258237.desched1
+2023-08-16 14:46:29: case.run starting 1260071.desched1
  ---------------------------------------------------
-2023-08-14 23:15:16: st_archive success 1258237.desched1
- ---------------------------------------------------
-2023-08-14 23:15:16: case.submit starting 1258565.desched1
- ---------------------------------------------------
-2023-08-14 23:15:16: case.submit success 1258565.desched1
- ---------------------------------------------------
-2023-08-14 23:15:25: case.run starting 1258564.desched1
- ---------------------------------------------------
-2023-08-14 23:15:29: model execution starting 1258564.desched1
- ---------------------------------------------------
-2023-08-15 07:09:31: model execution success 1258564.desched1
- ---------------------------------------------------
-2023-08-15 07:09:31: case.run success 1258564.desched1
- ---------------------------------------------------
-2023-08-15 07:09:43: st_archive starting 1258565.desched1
- ---------------------------------------------------
-2023-08-15 07:10:07: st_archive success 1258565.desched1
- ---------------------------------------------------
-2023-08-15 07:10:07: case.submit starting 1258656.desched1
- ---------------------------------------------------
-2023-08-15 07:10:07: case.submit success 1258656.desched1
- ---------------------------------------------------
-2023-08-15 07:10:16: case.run starting 1258655.desched1
- ---------------------------------------------------
-2023-08-15 07:10:20: model execution starting 1258655.desched1
- ---------------------------------------------------
-2023-08-15 15:06:11: model execution success 1258655.desched1
- ---------------------------------------------------
-2023-08-15 15:06:11: case.run success 1258655.desched1
- ---------------------------------------------------
-2023-08-15 15:06:25: st_archive starting 1258656.desched1
- ---------------------------------------------------
-2023-08-15 15:06:47: st_archive success 1258656.desched1
- ---------------------------------------------------
-2023-08-15 15:06:47: case.submit starting 1259128.desched1
- ---------------------------------------------------
-2023-08-15 15:06:47: case.submit success 1259128.desched1
- ---------------------------------------------------
-2023-08-15 15:06:56: case.run starting 1259127.desched1
- ---------------------------------------------------
-2023-08-15 15:06:59: model execution starting 1259127.desched1
- ---------------------------------------------------
-2023-08-15 23:01:23: model execution success 1259127.desched1
- ---------------------------------------------------
-2023-08-15 23:01:23: case.run success 1259127.desched1
- ---------------------------------------------------
-2023-08-15 23:01:42: st_archive starting 1259128.desched1
- ---------------------------------------------------
-2023-08-15 23:02:07: st_archive success 1259128.desched1
- ---------------------------------------------------
-2023-08-15 23:02:08: case.submit starting 1259445.desched1
- ---------------------------------------------------
-2023-08-15 23:02:08: case.submit success 1259445.desched1
- ---------------------------------------------------
-2023-08-15 23:02:18: case.run starting 1259444.desched1
- ---------------------------------------------------
-2023-08-15 23:02:21: model execution starting 1259444.desched1
- ---------------------------------------------------
-2023-08-16 07:01:27: model execution success 1259444.desched1
- ---------------------------------------------------
-2023-08-16 07:01:27: case.run success 1259444.desched1
- ---------------------------------------------------
-2023-08-16 07:01:41: st_archive starting 1259445.desched1
- ---------------------------------------------------
-2023-08-16 07:02:03: st_archive success 1259445.desched1
- ---------------------------------------------------
-2023-08-16 07:02:04: case.submit starting 1259566.desched1
- ---------------------------------------------------
-2023-08-16 07:02:04: case.submit success 1259566.desched1
- ---------------------------------------------------
-2023-08-16 07:02:13: case.run starting 1259565.desched1
- ---------------------------------------------------
-2023-08-16 07:02:16: model execution starting 1259565.desched1
- ---------------------------------------------------
-2023-08-16 15:03:14: model execution success 1259565.desched1
- ---------------------------------------------------
-2023-08-16 15:03:14: case.run success 1259565.desched1
- ---------------------------------------------------
-2023-08-16 15:03:26: st_archive starting 1259566.desched1
- ---------------------------------------------------
-2023-08-16 15:03:53: st_archive success 1259566.desched1
- ---------------------------------------------------
-2023-08-16 15:03:54: case.submit starting 1260081.desched1
- ---------------------------------------------------
-2023-08-16 15:03:54: case.submit success 1260081.desched1
- ---------------------------------------------------
-2023-08-16 15:04:03: case.run starting 1260080.desched1
- ---------------------------------------------------
-2023-08-16 15:04:07: model execution starting 1260080.desched1
+2023-08-16 14:46:33: model execution starting 1260071.desched1
  ---------------------------------------------------
