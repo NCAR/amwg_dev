@@ -59,7 +59,7 @@
 /
 &cam_initfiles_nl
  bnd_topo		= '/glade/p/cesmdata/inputdata/atm/cam/topo/se/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20230105.nc'
- ncdata		= 'f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001.cam.i.1994-01-01-00000.nc'
+ ncdata		= '/glade/p/cesmdata/inputdata/atm/cam/inic/se/FLT_L58_ne30pg3_IC_c220623.nc'
  scale_dry_air_mass		=   98288.0D0 
  use_topo_file		=  .true.  
 /
@@ -283,25 +283,25 @@
  se_fvm_supercycling		= -1
  se_fvm_supercycling_jet		= -1
  se_horz_num_threads		=  0 
- se_hypervis_subcycle		=  4 
+ se_hypervis_subcycle		= 1
  se_hypervis_subcycle_q		= 1                 
- se_hypervis_subcycle_sponge		=  1  
+ se_hypervis_subcycle_sponge		= 2
  se_kmax_jet		= -1
  se_kmin_jet		= -1
  se_large_courant_incr		=  .true.  
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
  se_ne		= 30
- se_nsplit		=                    2 
- se_nu		= -1
- se_nu_div		=  -1 
+ se_nsplit		= 1
+ se_nu		= 1.0E15
+ se_nu_div		= 1.0E15
  se_nu_p		= -1 
- se_nu_top		=  1.25e5 
+ se_nu_top		= 5E5
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
- se_rsplit		=  3 
+ se_rsplit		= 6
  se_sponge_del4_lev		=  -1 
- se_sponge_del4_nu_div_fac		=  -1 
+ se_sponge_del4_nu_div_fac		= 1
  se_sponge_del4_nu_fac		=  -1 
  se_statediag_numtrac		= 3
  se_statefreq		=  0 
