@@ -33,8 +33,7 @@
          'QRS', 'QTGW', 'RCMTEND_CLUBB', 'RELHUM', 'RVMTEND_CLUBB', 'SHFLX', 'SOLIN', 'SST', 'STEND_CLUBB', 'SWCF', 'T',
          'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10',
          'UBOT', 'UTGWORO', 'UTGW_TOTAL', 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ',
-         'ZMDT', 'N2O', 'CO2', 'CFC11', 'CFC12', 'CLD_MISR', 'FISCCP1_COSP', 'CLD_CAL', 'CLD_MISR', 'CLDTOT_CAL', 'CLDHGH_CAL',
-         'CLDMED_CAL', 'CLDLOW_CAL', 'CLMODIS', 'AODVISdn', 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ', 'WSUB', 'WSUB_DIAG'
+         'ZMDT', 'N2O', 'CO2', 'CFC11', 'CFC12', 'AODVISdn', 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ'
  fincl3		= 'PRECT','PRECC','FLUT','U850','U200','V850','V200','OMEGA','PSL'
  fincl4		= 'PRECC','PRECL'
  fincl5		= 'Uzm','Vzm','Wzm','THzm','VTHzm','WTHzm','UVzm','UWzm'
@@ -59,7 +58,7 @@
 /
 &cam_initfiles_nl
  bnd_topo		= '/glade/p/cesmdata/inputdata/atm/cam/topo/se/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20230105.nc'
- ncdata		= 'f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001.cam.i.1994-01-01-00000.nc'
+ ncdata		= '/glade/p/cesmdata/inputdata/atm/cam/inic/se/cam7_FMT_ne30pg3_mg17_L93_c221118.nc'
  scale_dry_air_mass		=   98288.0D0 
  use_topo_file		=  .true.  
 /
@@ -270,9 +269,6 @@
  conv_water_frac_limit		=  0.01d0  
  conv_water_in_rad		=  1 
 /
-&cospsimulator_nl
- docosp		= .true.
-/
 &dust_nl
  dust_emis_fact		= 0.80D0
  soil_erod_file		= '/glade/p/cesmdata/inputdata/atm/cam/dst/dst_source2x2tunedcam6-2x2-04062017.nc'
@@ -283,7 +279,7 @@
  se_fvm_supercycling		= -1
  se_fvm_supercycling_jet		= -1
  se_horz_num_threads		=  0 
- se_hypervis_subcycle		=  4 
+ se_hypervis_subcycle		=  3 
  se_hypervis_subcycle_q		= 1                 
  se_hypervis_subcycle_sponge		=  1  
  se_kmax_jet		= -1
@@ -292,14 +288,14 @@
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
  se_ne		= 30
- se_nsplit		=                    2 
+ se_nsplit		=   3  
  se_nu		= -1
  se_nu_div		=  -1 
  se_nu_p		= -1 
- se_nu_top		=  1.25e5 
+ se_nu_top		=  1.0e6 
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
- se_rsplit		=  3 
+ se_rsplit		=  6 
  se_sponge_del4_lev		=  -1 
  se_sponge_del4_nu_div_fac		=  -1 
  se_sponge_del4_nu_fac		=  -1 
@@ -313,7 +309,7 @@
  se_vert_remap_uvtq_alg		= 'FV3_CS'
 /
 &gw_drag_nl
- effgw_beres_dp		= 0.30D0
+ effgw_beres_dp		= 0.70D0
  effgw_cm		= 1.D0
  effgw_rdg_beta		= 0.5D0
  effgw_rdg_beta_max		= 0.5D0
@@ -328,7 +324,8 @@
  gw_oro_south_fac		= 1.d0   
  gw_polar_taper		= .false.
  gw_prndl		= 0.5D0
- gw_qbo_hdepth_scaling		= 1.0D0
+ gw_qbo_hdepth_scaling		= 0.25D0
+ gw_top_taper		= .false.
  n_rdg_beta		= 10
  pgwv		= 32
  pgwv_long		= 0
@@ -387,7 +384,7 @@
  microp_aero_bulk_scale		=   2.D0    
  microp_aero_npccn_scale		=   1.D0    
  microp_aero_wsub_min		=   0.2D0    
- microp_aero_wsub_scale		= 0.1
+ microp_aero_wsub_scale		=   1.D0    
  microp_aero_wsubi_min		=   0.001D0    
  microp_aero_wsubi_scale		= 1.0
 /
@@ -470,6 +467,9 @@
  prescribed_strataero_type		= 'SERIAL'
  prescribed_strataero_use_chemtrop		=    .true.                                                                       
 /
+&qbo_nl
+ qbo_use_forcing		= .false.
+/
 &qneg_nl
  print_qneg_warn		= 'summary'
 /
@@ -517,13 +517,6 @@
 /
 &tropopause_nl
  tropopause_climo_file		= '/glade/p/cesmdata/inputdata/atm/cam/chem/trop_mozart/ub/clim_p_trop.nc'
-/
-&upper_bc_file_opts
- ubc_file_input_type		= 'SERIAL'
- ubc_file_path		= '/glade/p/cesmdata/inputdata/atm/cam/chem/ubc/f.e21.FWHISTBgcCrop.f09_f09_mg17.CMIP6-AMIP-WACCM.ensAvg123.cam.h0zm.UBC.195001-201412_c220322.nc'
-/
-&upper_bc_opts
- ubc_specifier		= 'Q:H2O->UBC_FILE'
 /
 &vert_diff_nl
  diff_cnsrv_mass_check		=  .false. 

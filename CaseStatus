@@ -1,141 +1,158 @@
-2023-07-26 16:20:52: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-07-22 16:20:44: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-07-26 16:20:53: case.setup starting 
+2023-07-22 16:20:45: case.setup starting 
  ---------------------------------------------------
-2023-07-26 16:20:56: case.setup success 
+2023-07-22 16:20:46: case.setup success 
  ---------------------------------------------------
-2023-07-26 16:20:57: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
+2023-07-22 16:20:47: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
  ---------------------------------------------------
-2023-07-26 16:20:57: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2023-07-22 16:20:47: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2023-07-26 16:20:58: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2023-07-22 16:20:48: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-07-26 16:20:59: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2023-07-22 16:20:48: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2023-07-26 16:20:59: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2023-07-22 16:20:49: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2023-07-26 16:21:00: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001  </command>
+2023-07-22 16:20:49: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_110.FMTHIST_v0c.ne30.tuningF.001  </command>
  ---------------------------------------------------
-2023-07-26 16:21:01: xmlchange success <command> ./xmlchange RUN_REFDATE=1994-01-01  </command>
+2023-07-22 16:20:50: xmlchange success <command> ./xmlchange RUN_REFDATE=1996-01-01  </command>
  ---------------------------------------------------
-2023-07-26 16:21:02: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2023-07-22 16:20:50: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2023-07-26 16:21:02: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2023-07-22 16:20:51: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
  ---------------------------------------------------
-2023-07-26 16:21:05: case.build starting 
+2023-07-22 16:21:11: case.build starting 
  ---------------------------------------------------
-2023-07-26 16:22:07: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-07-22 16:27:40: case.build success 
  ---------------------------------------------------
-2023-07-26 16:22:08: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-07-22 16:27:41: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-07-26 16:22:10: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-07-22 16:27:42: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-07-26 16:23:07: case.build starting 
+2023-07-22 16:27:42: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-07-26 16:25:10: case.build error 
-ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/derecho/scratch/hannay/f.cam6_3_119.FLTHIST_ne30.r328-wsub_scale0.1.001/bld/lnd.bldlog.230726-162105
+2023-07-22 16:27:47: case.submit starting 1243950.desched1
  ---------------------------------------------------
-2023-07-26 16:27:41: case.build success 
+2023-07-22 16:27:47: case.submit success 1243950.desched1
  ---------------------------------------------------
-2023-07-26 16:28:41: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-07-22 16:27:50: case.run starting 1243949.desched1
  ---------------------------------------------------
-2023-07-26 16:28:41: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-07-22 16:27:52: model execution starting 1243949.desched1
  ---------------------------------------------------
-2023-07-26 16:28:42: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-07-22 16:29:42: model execution error 
+ERROR: Command: 'mpiexec  --label  --line-buffer  -n 2160 /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/run'
  ---------------------------------------------------
-2023-07-26 16:28:49: case.submit starting 1245263.desched1
+2023-07-22 16:29:42: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 2160 /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/run/cesm.log.1243949.desched1.230722-162750
  ---------------------------------------------------
-2023-07-26 16:28:49: case.submit success 1245263.desched1
+2023-07-22 16:46:54: case.build starting 
  ---------------------------------------------------
-2023-07-26 16:28:52: case.run starting 1245262.desched1
+2023-07-22 16:46:56: case.build error 
+ERROR: 
+ERROR env_build HAS CHANGED
+  A manual clean of your obj directories is required
+  You should execute the following:
+    ./case.build --clean-all
+
  ---------------------------------------------------
-2023-07-26 16:28:54: model execution starting 1245262.desched1
+2023-07-22 16:47:16: build.clean starting 
  ---------------------------------------------------
-2023-07-26 22:50:27: model execution success 1245262.desched1
+2023-07-22 16:47:19: build.clean success 
  ---------------------------------------------------
-2023-07-26 22:50:27: case.run success 1245262.desched1
+2023-07-22 16:47:24: case.build starting 
  ---------------------------------------------------
-2023-07-26 22:50:36: st_archive starting 1245263.desched1
+2023-07-22 16:53:54: case.build success 
  ---------------------------------------------------
-2023-07-26 22:50:50: st_archive success 1245263.desched1
+2023-07-22 16:53:55: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-07-26 22:50:50: case.submit starting 1245334.desched1
+2023-07-22 16:53:55: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-07-26 22:50:50: case.submit success 1245334.desched1
+2023-07-22 16:53:56: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-07-26 22:50:54: case.run starting 1245333.desched1
+2023-07-22 16:54:01: case.submit starting 1243955.desched1
  ---------------------------------------------------
-2023-07-26 22:50:56: model execution starting 1245333.desched1
+2023-07-22 16:54:01: case.submit success 1243955.desched1
  ---------------------------------------------------
-2023-07-27 05:12:12: model execution success 1245333.desched1
+2023-07-22 16:54:04: case.run starting 1243954.desched1
  ---------------------------------------------------
-2023-07-27 05:12:12: case.run success 1245333.desched1
+2023-07-22 16:54:06: model execution starting 1243954.desched1
  ---------------------------------------------------
-2023-07-27 05:12:21: st_archive starting 1245334.desched1
+2023-07-22 16:55:11: model execution error 
+ERROR: Command: 'mpiexec  --label  --line-buffer  -n 2160 /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/run'
  ---------------------------------------------------
-2023-07-27 05:12:33: st_archive success 1245334.desched1
+2023-07-22 16:55:11: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 2160 /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/run/cesm.log.1243954.desched1.230722-165404
  ---------------------------------------------------
-2023-07-27 05:12:34: case.submit starting 1245545.desched1
+2023-07-23 13:14:15: case.submit starting 1244113.desched1
  ---------------------------------------------------
-2023-07-27 05:12:34: case.submit success 1245545.desched1
+2023-07-23 13:14:15: case.submit success 1244113.desched1
  ---------------------------------------------------
-2023-07-27 05:12:37: case.run starting 1245544.desched1
+2023-07-23 13:14:26: case.run starting 1244112.desched1
  ---------------------------------------------------
-2023-07-27 05:12:40: model execution starting 1245544.desched1
+2023-07-23 13:14:29: model execution starting 1244112.desched1
  ---------------------------------------------------
-2023-07-27 11:35:34: model execution success 1245544.desched1
+2023-07-23 13:15:30: model execution error 
+ERROR: Command: 'mpiexec  --label  --line-buffer  -n 2160 /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/run'
  ---------------------------------------------------
-2023-07-27 11:35:34: case.run success 1245544.desched1
+2023-07-23 13:15:30: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 2160 /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/run/cesm.log.1244112.desched1.230723-131426
  ---------------------------------------------------
-2023-07-27 11:35:43: st_archive starting 1245545.desched1
+2023-07-25 20:38:21: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-07-27 11:35:55: st_archive success 1245545.desched1
+2023-07-25 20:38:22: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-07-27 11:35:56: case.submit starting 1245670.desched1
+2023-07-25 20:38:22: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-07-27 11:35:56: case.submit success 1245670.desched1
+2023-07-25 20:38:27: case.submit starting 1244913.desched1
  ---------------------------------------------------
-2023-07-27 11:36:01: case.run starting 1245669.desched1
+2023-07-25 20:38:27: case.submit success 1244913.desched1
  ---------------------------------------------------
-2023-07-27 11:36:05: model execution starting 1245669.desched1
+2023-07-25 20:38:33: case.run starting 1244912.desched1
  ---------------------------------------------------
-2023-07-27 17:58:09: model execution success 1245669.desched1
+2023-07-25 20:38:36: model execution starting 1244912.desched1
  ---------------------------------------------------
-2023-07-27 17:58:09: case.run success 1245669.desched1
+2023-07-25 20:39:36: model execution error 
+ERROR: Command: 'mpiexec  --label  --line-buffer  -n 2160 /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/run'
  ---------------------------------------------------
-2023-07-27 17:58:19: st_archive starting 1245670.desched1
+2023-07-25 20:39:36: case.run error 
+ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 2160 /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
+See log file for details: /glade/derecho/scratch/hannay/f.cam6_3_119.FMTHIST_ne30.r328.001/run/cesm.log.1244912.desched1.230725-203833
  ---------------------------------------------------
-2023-07-27 17:58:32: st_archive success 1245670.desched1
+2023-07-25 20:48:46: case.submit starting 1244916.desched1
  ---------------------------------------------------
-2023-07-27 17:58:32: case.submit starting 1245891.desched1
+2023-07-25 20:48:46: case.submit success 1244916.desched1
  ---------------------------------------------------
-2023-07-27 17:58:32: case.submit success 1245891.desched1
+2023-07-25 20:48:49: case.run starting 1244915.desched1
  ---------------------------------------------------
-2023-07-27 17:58:36: case.run starting 1245890.desched1
+2023-07-25 20:48:51: model execution starting 1244915.desched1
  ---------------------------------------------------
-2023-07-27 17:58:39: model execution starting 1245890.desched1
+2023-07-26 05:39:36: model execution success 1244915.desched1
  ---------------------------------------------------
-2023-07-28 00:22:33: model execution success 1245890.desched1
+2023-07-26 05:39:36: case.run success 1244915.desched1
  ---------------------------------------------------
-2023-07-28 00:22:33: case.run success 1245890.desched1
+2023-07-26 05:39:47: st_archive starting 1244916.desched1
  ---------------------------------------------------
-2023-07-28 00:22:42: st_archive starting 1245891.desched1
+2023-07-26 05:40:05: st_archive success 1244916.desched1
  ---------------------------------------------------
-2023-07-28 00:22:55: st_archive success 1245891.desched1
+2023-07-26 05:40:05: case.submit starting 1245013.desched1
  ---------------------------------------------------
-2023-07-28 00:22:55: case.submit starting 1246024.desched1
+2023-07-26 05:40:05: case.submit success 1245013.desched1
  ---------------------------------------------------
-2023-07-28 00:22:55: case.submit success 1246024.desched1
+2023-07-26 05:40:08: case.run starting 1245012.desched1
  ---------------------------------------------------
-2023-07-28 00:22:58: case.run starting 1246023.desched1
+2023-07-26 05:40:11: model execution starting 1245012.desched1
  ---------------------------------------------------
-2023-07-28 00:23:01: model execution starting 1246023.desched1
+2023-07-26 14:17:30: xmlchange success <command> ./xmlchange RESUBMIT=0  </command>
  ---------------------------------------------------
-2023-07-28 06:44:27: model execution success 1246023.desched1
+2023-07-26 14:32:48: model execution success 1245012.desched1
  ---------------------------------------------------
-2023-07-28 06:44:27: case.run success 1246023.desched1
+2023-07-26 14:32:49: case.run success 1245012.desched1
  ---------------------------------------------------
-2023-07-28 06:44:36: st_archive starting 1246024.desched1
+2023-07-26 14:32:58: st_archive starting 1245013.desched1
  ---------------------------------------------------
-2023-07-28 06:44:49: st_archive success 1246024.desched1
+2023-07-26 14:33:14: st_archive success 1245013.desched1
  ---------------------------------------------------
