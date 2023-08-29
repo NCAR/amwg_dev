@@ -1,108 +1,166 @@
-2023-08-29 09:42:45: case.setup starting 
+2023-08-25 16:26:12: case.setup starting 
  ---------------------------------------------------
-2023-08-29 09:42:47: case.setup success 
+2023-08-25 16:26:15: case.setup success 
  ---------------------------------------------------
-2023-08-29 09:42:53: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-08-25 16:26:20: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-08-29 09:44:57: case.build starting 
+2023-08-25 16:28:08: case.build starting 
  ---------------------------------------------------
-2023-08-29 09:48:36: case.build success 
+2023-08-25 16:40:41: case.build success 
  ---------------------------------------------------
-2023-08-29 09:48:48: case.setup starting 
+2023-08-25 16:49:36: case.build starting 
  ---------------------------------------------------
-2023-08-29 09:48:49: case.setup success 
+2023-08-25 16:50:12: case.build success 
  ---------------------------------------------------
-2023-08-29 09:48:54: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-08-25 16:54:09: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-08-29 09:49:30: case.build starting 
+2023-08-25 16:54:09: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-08-29 09:49:30: case.build error 
-ERROR: 
-ERROR env_build HAS CHANGED
-  A manual clean of your obj directories is required
-  You should execute the following:
-    ./case.build --clean-all
-
+2023-08-25 16:54:09: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-08-29 09:51:12: build.clean starting 
+2023-08-25 16:54:15: case.submit starting 1303293.desched1
  ---------------------------------------------------
-2023-08-29 09:51:15: build.clean success 
+2023-08-25 16:54:15: case.submit success 1303293.desched1
  ---------------------------------------------------
-2023-08-29 09:51:24: case.build starting 
+2023-08-25 16:54:29: case.run starting 1303292.desched1
  ---------------------------------------------------
-2023-08-29 09:54:15: case.build starting 
+2023-08-25 16:54:33: model execution starting 1303292.desched1
  ---------------------------------------------------
-2023-08-29 09:55:41: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e23_alpha16b.BLT1850.ne30_t232.040  </command>
+2023-08-26 00:46:55: model execution success 1303292.desched1
  ---------------------------------------------------
-2023-08-29 09:55:41: xmlchange success <command> ./xmlchange RUN_REFDATE=0021-01-01  </command>
+2023-08-26 00:46:55: case.run success 1303292.desched1
  ---------------------------------------------------
-2023-08-29 09:55:42: xmlchange success <command> ./xmlchange RUN_STARTDATE=0021-01-01  </command>
+2023-08-26 00:47:06: st_archive starting 1303293.desched1
  ---------------------------------------------------
-2023-08-29 09:56:09: case.build error 
-ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.040/bld/lnd.bldlog.230829-095124
+2023-08-26 00:47:23: st_archive success 1303293.desched1
  ---------------------------------------------------
-2023-08-29 09:56:42: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2023-08-26 00:47:23: case.submit starting 1303482.desched1
  ---------------------------------------------------
-2023-08-29 09:57:23: case.build starting 
+2023-08-26 00:47:23: case.submit success 1303482.desched1
  ---------------------------------------------------
-2023-08-29 09:58:14: case.build error 
-ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.040/bld/lnd.bldlog.230829-095723
+2023-08-26 00:47:35: case.run starting 1303481.desched1
  ---------------------------------------------------
-2023-08-29 10:03:38: case.build success 
+2023-08-26 00:47:39: model execution starting 1303481.desched1
  ---------------------------------------------------
-2023-08-29 11:16:33: case.build starting 
+2023-08-26 08:47:06: model execution success 1303481.desched1
  ---------------------------------------------------
-2023-08-29 11:17:10: case.build success 
+2023-08-26 08:47:06: case.run success 1303481.desched1
  ---------------------------------------------------
-2023-08-29 11:24:40: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths  </command>
+2023-08-26 08:47:17: st_archive starting 1303482.desched1
  ---------------------------------------------------
-2023-08-29 11:24:41: xmlchange success <command> ./xmlchange REST_OPTION=nmonths,REST_N=1  </command>
+2023-08-26 08:47:34: st_archive success 1303482.desched1
  ---------------------------------------------------
-2023-08-29 11:24:41: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-08-26 08:47:34: case.submit starting 1303605.desched1
  ---------------------------------------------------
-2023-08-29 11:25:09: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-08-26 08:47:34: case.submit success 1303605.desched1
  ---------------------------------------------------
-2023-08-29 11:25:10: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-08-26 08:47:45: case.run starting 1303604.desched1
  ---------------------------------------------------
-2023-08-29 11:25:11: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-08-26 08:47:48: model execution starting 1303604.desched1
  ---------------------------------------------------
-2023-08-29 11:25:35: case.build starting 
+2023-08-26 16:41:54: model execution success 1303604.desched1
  ---------------------------------------------------
-2023-08-29 11:26:13: case.build success 
+2023-08-26 16:41:54: case.run success 1303604.desched1
  ---------------------------------------------------
-2023-08-29 11:27:21: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-08-26 16:42:08: st_archive starting 1303605.desched1
  ---------------------------------------------------
-2023-08-29 11:27:21: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-08-26 16:42:25: st_archive success 1303605.desched1
  ---------------------------------------------------
-2023-08-29 11:27:22: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-08-26 16:42:25: case.submit starting 1303756.desched1
  ---------------------------------------------------
-2023-08-29 11:27:28: case.submit starting 1308608.desched1
+2023-08-26 16:42:25: case.submit success 1303756.desched1
  ---------------------------------------------------
-2023-08-29 11:27:28: case.submit success 1308608.desched1
+2023-08-26 16:42:36: case.run starting 1303755.desched1
  ---------------------------------------------------
-2023-08-29 11:27:41: case.run starting 1308607.desched1
+2023-08-26 16:42:40: model execution starting 1303755.desched1
  ---------------------------------------------------
-2023-08-29 11:27:46: model execution starting 1308607.desched1
+2023-08-27 00:42:29: model execution success 1303755.desched1
  ---------------------------------------------------
-2023-08-29 13:25:07: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e23_alpha16b.BLT1850.ne30_t232.040  </command>
+2023-08-27 00:42:29: case.run success 1303755.desched1
  ---------------------------------------------------
-2023-08-29 13:25:07: xmlchange success <command> ./xmlchange RUN_REFDATE=0021-01-01  </command>
+2023-08-27 00:42:45: st_archive starting 1303756.desched1
  ---------------------------------------------------
-2023-08-29 13:25:08: xmlchange success <command> ./xmlchange RUN_STARTDATE=0021-01-01  </command>
+2023-08-27 00:43:01: st_archive success 1303756.desched1
  ---------------------------------------------------
-2023-08-29 13:25:17: xmlchange success <command> ./xmlchange RUN_TYPE=branch  </command>
+2023-08-27 00:43:02: case.submit starting 1303949.desched1
  ---------------------------------------------------
-2023-08-29 13:25:24: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-08-27 00:43:02: case.submit success 1303949.desched1
  ---------------------------------------------------
-2023-08-29 13:25:25: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-08-27 00:43:14: case.run starting 1303948.desched1
  ---------------------------------------------------
-2023-08-29 13:25:25: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-08-27 00:43:18: model execution starting 1303948.desched1
  ---------------------------------------------------
-2023-08-29 13:25:31: case.submit starting 1310873.desched1
+2023-08-27 08:43:11: model execution success 1303948.desched1
  ---------------------------------------------------
-2023-08-29 13:25:31: case.submit success 1310873.desched1
+2023-08-27 08:43:11: case.run success 1303948.desched1
  ---------------------------------------------------
-2023-08-29 13:25:44: case.run starting 1310872.desched1
+2023-08-27 08:43:23: st_archive starting 1303949.desched1
  ---------------------------------------------------
-2023-08-29 13:25:48: model execution starting 1310872.desched1
+2023-08-27 08:43:41: st_archive success 1303949.desched1
+ ---------------------------------------------------
+2023-08-27 08:43:42: case.submit starting 1304056.desched1
+ ---------------------------------------------------
+2023-08-27 08:43:42: case.submit success 1304056.desched1
+ ---------------------------------------------------
+2023-08-27 08:43:53: case.run starting 1304055.desched1
+ ---------------------------------------------------
+2023-08-27 08:43:57: model execution starting 1304055.desched1
+ ---------------------------------------------------
+2023-08-27 16:37:36: model execution success 1304055.desched1
+ ---------------------------------------------------
+2023-08-27 16:37:36: case.run success 1304055.desched1
+ ---------------------------------------------------
+2023-08-27 16:37:57: st_archive starting 1304056.desched1
+ ---------------------------------------------------
+2023-08-27 16:38:14: st_archive success 1304056.desched1
+ ---------------------------------------------------
+2023-08-27 16:38:14: case.submit starting 1304283.desched1
+ ---------------------------------------------------
+2023-08-27 16:38:14: case.submit success 1304283.desched1
+ ---------------------------------------------------
+2023-08-27 16:38:26: case.run starting 1304282.desched1
+ ---------------------------------------------------
+2023-08-27 16:38:29: model execution starting 1304282.desched1
+ ---------------------------------------------------
+2023-08-28 00:33:51: model execution success 1304282.desched1
+ ---------------------------------------------------
+2023-08-28 00:33:51: case.run success 1304282.desched1
+ ---------------------------------------------------
+2023-08-28 00:34:04: st_archive starting 1304283.desched1
+ ---------------------------------------------------
+2023-08-28 00:34:26: st_archive success 1304283.desched1
+ ---------------------------------------------------
+2023-08-28 00:34:26: case.submit starting 1305472.desched1
+ ---------------------------------------------------
+2023-08-28 00:34:26: case.submit success 1305472.desched1
+ ---------------------------------------------------
+2023-08-28 00:34:37: case.run starting 1305471.desched1
+ ---------------------------------------------------
+2023-08-28 00:34:41: model execution starting 1305471.desched1
+ ---------------------------------------------------
+2023-08-28 08:28:35: model execution success 1305471.desched1
+ ---------------------------------------------------
+2023-08-28 08:28:35: case.run success 1305471.desched1
+ ---------------------------------------------------
+2023-08-28 08:28:46: st_archive starting 1305472.desched1
+ ---------------------------------------------------
+2023-08-28 08:29:03: st_archive success 1305472.desched1
+ ---------------------------------------------------
+2023-08-28 08:29:03: case.submit starting 1305650.desched1
+ ---------------------------------------------------
+2023-08-28 08:29:03: case.submit success 1305650.desched1
+ ---------------------------------------------------
+2023-08-28 08:29:15: case.run starting 1305649.desched1
+ ---------------------------------------------------
+2023-08-28 08:29:19: model execution starting 1305649.desched1
+ ---------------------------------------------------
+2023-08-28 14:01:13: xmlchange success <command> ./xmlchange RESUBMIT=0  </command>
+ ---------------------------------------------------
+2023-08-28 16:27:28: model execution success 1305649.desched1
+ ---------------------------------------------------
+2023-08-28 16:27:28: case.run success 1305649.desched1
+ ---------------------------------------------------
+2023-08-28 16:27:42: st_archive starting 1305650.desched1
+ ---------------------------------------------------
+2023-08-28 16:28:00: st_archive success 1305650.desched1
  ---------------------------------------------------

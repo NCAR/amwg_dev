@@ -1,6 +1,5 @@
 &comp_inparm 
 
- cam_branch_file = 'b.e23_alpha16b.BLT1850.ne30_t232.040.cam.r.0021-01-01-00000.nc'
  dtime = 1800
 
 
@@ -102,7 +101,7 @@ micro_mg_vtrmi_factor = 1.0
 
 microp_aero_wsubi_scale  = 1.0
 
-microp_aero_wsub_scale  = 0.25
+microp_aero_wsub_scale  = 0.5
 
 
 
@@ -193,19 +192,5 @@ srf_emis_specifier= 'bc_a4 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/hist
       ' longifolene + longipinene + muurolene_a + muurolene_g + selinene_b + selinene_d +',
 
       ' nerolidol_c + nerolidol_t)'
-
-
-
-
-
-thermo_budget_history = .true.
-
-thermo_budget_histfile_num = 8
-
-avgflag_pertape(8) = 'N'
-
-nhtfrq(8) = -8760
-
-
 
 / 
