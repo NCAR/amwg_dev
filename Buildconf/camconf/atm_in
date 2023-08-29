@@ -210,8 +210,8 @@
  clubb_detphase_lowtemp		=  238.15D0            
  clubb_do_energyfix		=  .true.  
  clubb_do_liqsupersat		=  .false. 
- clubb_gamma_coef		= 0.3
- clubb_gamma_coefb		= 0.3
+ clubb_gamma_coef		= 0.33
+ clubb_gamma_coefb		= 0.33
  clubb_ipdf_call_placement		=  2       
  clubb_l_brunt_vaisala_freq_moist		=  .false. 
  clubb_l_call_pdf_closure_twice		=  .true.  
@@ -390,7 +390,7 @@
 &microp_aero_nl
  microp_aero_bulk_scale		=   2.D0    
  microp_aero_npccn_scale		=   1.D0    
- microp_aero_wsub_min		= 0.
+ microp_aero_wsub_min		=   0.2D0    
  microp_aero_wsub_scale		= 0.5
  microp_aero_wsubi_min		=   0.001D0    
  microp_aero_wsubi_scale		= 1.0
