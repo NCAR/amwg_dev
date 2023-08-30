@@ -2,11 +2,11 @@
 
 set -e
 
-# Created 2023-08-18 13:37:35
+# Created 2023-08-23 14:51:55
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FMTHIST_ne30.r328_gamma0.33_soae.001"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e23_alpha16b.FLT1850.ne30.033"
 
-/glade/work/hannay/cesm_tags/cam6_3_119/cime/scripts/create_newcase --compset FMTHIST_v0d --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
+/glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/scripts/create_newcase --compset 1850_CAM%DEV%LT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --pecount 2160 --project 93300722
 
 cd "${CASEDIR}"
 
@@ -22,9 +22,11 @@ cd "${CASEDIR}"
 
 ./xmlchange RESUBMIT=5
 
-./xmlchange RUN_REFCASE=f.cam6_3_110.FMTHIST_v0c.ne30.tuningF.001
+./xmlchange RUN_TYPE=hybrid
 
-./xmlchange RUN_REFDATE=1996-01-01
+./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001
+
+./xmlchange RUN_REFDATE=1994-01-01
 
 ./xmlchange GET_REFCASE=TRUE
 
@@ -38,15 +40,25 @@ cd "${CASEDIR}"
 
 ./case.build
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears
+./case.build
 
-./xmlchange REST_OPTION=nyears,REST_N=1
+./case.build
 
-./xmlchange JOB_WALLCLOCK_TIME=12:00:00
+./preview_namelists
 
-./case.submit
+./preview_namelists
 
-./case.build --clean-all
+./preview_namelists
+
+./case.build
+
+./case.build
+
+./case.build
+
+./case.build
+
+./case.build
 
 ./case.build
 

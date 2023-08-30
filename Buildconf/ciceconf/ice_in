@@ -5,13 +5,13 @@
   diagfreq = 24
   dumpfreq = "x"
   dumpfreq_n = 1
-  hist_avg = .true.
+  hist_avg = .true., .true., .true., .true., .true.
   histfreq = "m", "x", "x", "x", "x"
   histfreq_n = 1, 0, 0, 0, 0
   history_file = "unknown"
   history_format = "default"
   history_precision = 4
-  ice_ic = "default"
+  ice_ic = "f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001.cice.r.1994-01-01-00000.nc"
   latpnt = 90.0, -65.0
   lcdf64 = .true.
   lonpnt = 0.0, -45.0
@@ -208,13 +208,13 @@
 /
 &ice_prescribed_nml
   prescribed_ice_mode = .true.
-  stream_datafiles = "/glade/p/cesmdata/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2012_c130411.nc"
+  stream_datafiles = "/glade/p/cesmdata/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_clim_pi_c101029.nc"
   stream_mapalgo = "bilinear"
   stream_meshfile = "/glade/p/cesmdata/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_clim_c101029_ESMFmesh_120520.nc"
   stream_varname = "ice_cov"
-  stream_yearalign = 1850
-  stream_yearfirst = 1850
-  stream_yearlast = 2012
+  stream_yearalign = 1
+  stream_yearfirst = 0
+  stream_yearlast = 0
 /
 &zbgc_nml
   bgc_flux_type = "Jin2006"
