@@ -1,44 +1,44 @@
-2023-08-29 15:32:24: ./create_newcase --compset FLTHIST_v0d --res ne30pg3_ne30pg3_mg17 --case /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae_sfcflx.001 --run-unsupported --pecount 2160 --project 93300722
+2023-08-31 09:42:09: ./create_newcase --compset 2000_CAM%DEV%LT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP --res ne30pg3_ne30pg3_mg17 --case /glade/p/cesmdata/cseg/runs/cesm2_0/f.e23_alpha16b.FLT2000.ne30.033 --run-unsupported --pecount 2160 --project 93300722
  ---------------------------------------------------
-2023-08-29 15:32:24: Compset longname is HIST_CAM%DEV%LT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP
+2023-08-31 09:42:09: Compset longname is 2000_CAM%DEV%LT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP
  ---------------------------------------------------
-2023-08-29 15:32:24: Compset specification file is /glade/work/hannay/cesm_tags/cam6_3_119/cime_config/config_compsets.xml
+2023-08-31 09:42:09: Compset specification file is /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/components/cam//cime_config/config_compsets.xml
  ---------------------------------------------------
-2023-08-29 15:32:24: Pes     specification file is /glade/work/hannay/cesm_tags/cam6_3_119/cime_config/config_pes.xml
+2023-08-31 09:42:09: Pes     specification file is /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/components/cam//cime_config/config_pes.xml
  ---------------------------------------------------
-2023-08-29 15:32:24: Forcing is Historic transient 
+2023-08-31 09:42:09: Forcing is 1972-2004
  ---------------------------------------------------
-2023-08-29 15:32:24: Using 1 coupler instances
+2023-08-31 09:42:09: Using 1 coupler instances
  ---------------------------------------------------
-2023-08-29 15:32:24: Component ATM is CAM7 development physics:CAM low top model Prognostic GHG chemistry mechanism for CAM7:
+2023-08-31 09:42:09: Component ATM is CAM7 development physics:CAM low top model Prognostic GHG chemistry mechanism for CAM7:
  ---------------------------------------------------
-2023-08-29 15:32:24: ATM_GRID is ne30np4.pg3
+2023-08-31 09:42:09: ATM_GRID is ne30np4.pg3
  ---------------------------------------------------
-2023-08-29 15:32:24: Component LND is clm5.1:Satellite phenology:
+2023-08-31 09:42:09: Component LND is clm5.1:Satellite phenology:
  ---------------------------------------------------
-2023-08-29 15:32:24: LND_GRID is ne30np4.pg3
+2023-08-31 09:42:09: LND_GRID is ne30np4.pg3
  ---------------------------------------------------
-2023-08-29 15:32:24: Component ICE is Sea ICE (cice) model version 6 :prescribed cice
+2023-08-31 09:42:09: Component ICE is Sea ICE (cice) model version 6 :prescribed cice
  ---------------------------------------------------
-2023-08-29 15:32:24: ICE_GRID is ne30np4.pg3
+2023-08-31 09:42:09: ICE_GRID is ne30np4.pg3
  ---------------------------------------------------
-2023-08-29 15:32:24: Component OCN is DOCN   prescribed ocean mode
+2023-08-31 09:42:09: Component OCN is DOCN   prescribed ocean mode
  ---------------------------------------------------
-2023-08-29 15:32:24: OCN_GRID is ne30np4.pg3
+2023-08-31 09:42:09: OCN_GRID is ne30np4.pg3
  ---------------------------------------------------
-2023-08-29 15:32:24: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+2023-08-31 09:42:09: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
  ---------------------------------------------------
-2023-08-29 15:32:24: ROF_GRID is r05
+2023-08-31 09:42:09: ROF_GRID is r05
  ---------------------------------------------------
-2023-08-29 15:32:24: Component GLC is Stub glacier (land ice) component
+2023-08-31 09:42:09: Component GLC is Stub glacier (land ice) component
  ---------------------------------------------------
-2023-08-29 15:32:24: GLC_GRID is null
+2023-08-31 09:42:09: GLC_GRID is null
  ---------------------------------------------------
-2023-08-29 15:32:24: Component WAV is Stub wave component
+2023-08-31 09:42:09: Component WAV is Stub wave component
  ---------------------------------------------------
-2023-08-29 15:32:24: WAV_GRID is null
+2023-08-31 09:42:09: WAV_GRID is null
  ---------------------------------------------------
-2023-08-29 15:32:24: Component ESP is Stub external system processing (ESP) component
+2023-08-31 09:42:09: Component ESP is Stub external system processing (ESP) component
  ---------------------------------------------------
-2023-08-29 15:32:24: ESP_GRID is None
+2023-08-31 09:42:09: ESP_GRID is None
  ---------------------------------------------------

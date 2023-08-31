@@ -40,7 +40,21 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL','CLMODIS', 'AODVISdn',
 
-'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ'
+'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ', 'OMEGA500' ,
+
+'FSNT', 'FSNTC', 'FSNS', 'FSNSC',
+
+'FSNT_d1', 'FSNTC_d1', 'FSNS_d1', 'FSNSC_d1'
+
+
+
+ rad_diag_1= 'A:Q:H2O', 'N:O2:O2',
+
+         'A:CO2:CO2', 'N:ozone:O3',
+
+         'A:N2O:N2O', 'A:CH4:CH4',
+
+         'N:CFC11STAR:CFC11', 'A:CFC12:CFC12',
 
 
 
@@ -104,6 +118,30 @@ microp_aero_wsubi_scale  = 1.0
 
 
 
+  megan_specifier = 'SOAE = 0.5954*isoprene + 5.1004*(carene_3 + pinene_a + thujene_a + bornene +',
+
+      ' terpineol_4 + terpineol_a + terpinyl_ACT_a + myrtenal + sabinene + pinene_b + camphene +',
+
+      ' fenchene_a + limonene + phellandrene_a + terpinene_a + terpinene_g + terpinolene +',
+
+      ' phellandrene_b + linalool + ionone_b + geranyl_acetone + neryl_acetone + jasmone +',
+
+      ' verbenene + ipsenol + myrcene + ocimene_t_b + ocimene_al + ocimene_c_b + 2met_nonatriene) + ',
+
+      ' 12.3942*(farnescene_a + caryophyllene_b + acoradiene + aromadendrene + bergamotene_a +',
+
+      ' bergamotene_b + bisabolene_a + bisabolene_b + bourbonene_b + cadinene_d + cadinene_g +',
+
+      ' cedrene_a + copaene_a + cubebene_a + cubebene_b + elemene_b + farnescene_b +',
+
+      ' germacrene_B + germacrene_D + gurjunene_b + humulene_a + humulene_g + isolongifolene +',
+
+      ' longifolene + longipinene + muurolene_a + muurolene_g + selinene_b + selinene_d +',
+
+      ' nerolidol_c + nerolidol_t)'
+
+srf_emis_cycle_yr              = 2000
+
 srf_emis_specifier= 'bc_a4 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_bc_a4_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
 
          'bc_a4 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_bc_a4_bb_surface_175001-201512_ne30pg3_c20191118.nc',
@@ -164,32 +202,40 @@ srf_emis_specifier= 'bc_a4 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/hist
 
          'SOAE -> 16.6500*/glade/p/cesmdata/cseg/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SVOC_bb_surface_1750-2015_0.9x1.25_c20170322.nc'
 
+  ext_frc_cycle_yr             =   2000      
+
+ ext_frc_specifier            = 'num_a1 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a1_anthro-ene_vertical_mol_175001-201412_ne30pg3_c20200103.nc',
+
+          'num_a1 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_a1_so4_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
+
+          'num_a2 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_a2_so4_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
+
+          'SO2 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SO2_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
+
+          'so4_a1 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a1_anthro-ene_vertical_mol_175001-201412_ne30pg3_c20200103.nc',
+
+          'so4_a1 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a1_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
+
+          'so4_a2 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a2_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc'
 
 
 
+flbc_cycle_yr                = 2000                                                                                                                                                                         
+
+flbc_file            = '/glade/p/cesmdata/inputdata/atm/waccm/lb/LBC_17500116-20150116_CMIP6_0p5degLat_c180905.nc'                                                                                           
+
+flbc_list            = 'CO2','CH4','N2O','CFC11','CFC12','CFC11eq'                                                                                                                                           
+
+                                                                     
+
+ubc_file_cycle_yr            = 2000
+
+ubc_file_input_type          = 'CYCLICAL'
+
+ubc_file_path                = '/glade/p/cesmdata/inputdata/atm/cam/chem/ubc/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensAvg123.cam.h0zm.H2O.185001-201412_c230509cdf5.nc'
+
+ubc_specifier                = 'Q:H2O->UBC_FILE'
 
 
-
-  megan_specifier = 'SOAE = 0.5954*isoprene + 5.1004*(carene_3 + pinene_a + thujene_a + bornene +',
-
-      ' terpineol_4 + terpineol_a + terpinyl_ACT_a + myrtenal + sabinene + pinene_b + camphene +',
-
-      ' fenchene_a + limonene + phellandrene_a + terpinene_a + terpinene_g + terpinolene +',
-
-      ' phellandrene_b + linalool + ionone_b + geranyl_acetone + neryl_acetone + jasmone +',
-
-      ' verbenene + ipsenol + myrcene + ocimene_t_b + ocimene_al + ocimene_c_b + 2met_nonatriene) + ',
-
-      ' 12.3942*(farnescene_a + caryophyllene_b + acoradiene + aromadendrene + bergamotene_a +',
-
-      ' bergamotene_b + bisabolene_a + bisabolene_b + bourbonene_b + cadinene_d + cadinene_g +',
-
-      ' cedrene_a + copaene_a + cubebene_a + cubebene_b + elemene_b + farnescene_b +',
-
-      ' germacrene_B + germacrene_D + gurjunene_b + humulene_a + humulene_g + isolongifolene +',
-
-      ' longifolene + longipinene + muurolene_a + muurolene_g + selinene_b + selinene_d +',
-
-      ' nerolidol_c + nerolidol_t)'
 
 / 
