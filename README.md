@@ -1,6 +1,6 @@
 # amwg_cases
 
-Issue https://github.com/NCAR/amwg_dev/issues/388
+Issue https://github.com/NCAR/amwg_dev/issues/389
 
 
 
