@@ -1,93 +1,67 @@
-2023-08-30 11:28:24: case.setup starting 
+2023-08-30 11:59:12: case.setup starting 
  ---------------------------------------------------
-2023-08-30 11:28:26: case.setup success 
+2023-08-30 11:59:13: case.setup success 
  ---------------------------------------------------
-2023-08-30 11:28:32: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-08-30 11:59:19: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-08-30 11:29:17: case.build starting 
+2023-08-30 11:59:49: case.build starting 
  ---------------------------------------------------
-2023-08-30 11:29:19: case.build error 
-ERROR: Command /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/components/cam/bld/build-namelist -ntasks 1920 -csmdata /glade/p/cesmdata/inputdata -infile /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.037_thermo/Buildconf/camconf/namelist -start_ymd 00010101 -ignore_ic_year -use_case 1850_cam_lt -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.037_thermo/Buildconf/cam.input_data_list -namelist " &atmexp  stream_ndep_year_first=1850 stream_ndep_year_last=1850 stream_ndep_year_align=1 stream_ndep_data_filename='/glade/p/cesmdata/inputdata/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc' stream_ndep_mesh_filename='/glade/p/cesmdata/inputdata/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc'/"  -cmeps failed rc=255
-out=
-err=Smartmatch is experimental at /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/components/cam/bld/perl5lib/Build/ChemNamelist.pm line 274.
-Smartmatch is experimental at /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/components/cam/bld/build-namelist line 2205.
-CAM build-namelist - ERROR: Invalid namelist variable in '-infile' /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.037_thermo/Buildconf/camconf/namelist.
- ERROR: in validate_variable_value (package Build::Namelist): Variable name avgflag_pertape has a string element that is too long: '   A'
+2023-08-30 11:59:56: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e23_alpha16b.BLT1850.ne30_t232.040  </command>
  ---------------------------------------------------
-2023-08-30 11:29:50: case.setup starting 
+2023-08-30 11:59:57: xmlchange success <command> ./xmlchange RUN_REFDATE=0015-01-01  </command>
  ---------------------------------------------------
-2023-08-30 11:29:51: case.setup success 
+2023-08-30 11:59:57: xmlchange success <command> ./xmlchange RUN_STARTDATE=0015-01-01  </command>
  ---------------------------------------------------
-2023-08-30 11:29:53: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-08-30 11:59:58: xmlchange success <command> ./xmlchange RUN_TYPE=branch  </command>
  ---------------------------------------------------
-2023-08-30 11:30:11: case.build starting 
+2023-08-30 12:00:20: case.build starting 
  ---------------------------------------------------
-2023-08-30 11:43:33: case.build success 
+2023-08-30 12:00:48: case.build error 
+ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.040_thermo/bld/mct.bldlog.230830-120020
  ---------------------------------------------------
-2023-08-30 11:46:30: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e23_alpha16b.BLT1850.ne30_t232.037  </command>
+2023-08-30 12:01:21: case.build starting 
  ---------------------------------------------------
-2023-08-30 11:46:31: xmlchange success <command> ./xmlchange RUN_REFDATE=0015-01-01  </command>
+2023-08-30 12:02:15: case.build error 
+ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/libraries/FMS/buildlib FAILED, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.040_thermo/bld/FMS.bldlog.230830-120121
  ---------------------------------------------------
-2023-08-30 11:46:31: xmlchange success <command> ./xmlchange RUN_STARTDATE=0015-01-01  </command>
+2023-08-30 12:03:53: case.build starting 
  ---------------------------------------------------
-2023-08-30 11:46:32: xmlchange success <command> ./xmlchange RUN_TYPE=branch  </command>
+2023-08-30 12:07:52: case.build error 
+ERROR: File /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.040_thermo/env_run.xml appears to have changed without a corresponding invalidation.
  ---------------------------------------------------
-2023-08-30 11:46:54: case.build starting 
+2023-08-30 12:13:17: case.build success 
  ---------------------------------------------------
-2023-08-30 11:47:44: case.build success 
+2023-08-30 12:13:23: case.build starting 
  ---------------------------------------------------
-2023-08-30 11:49:18: case.build starting 
+2023-08-30 12:14:06: case.build success 
  ---------------------------------------------------
-2023-08-30 11:49:38: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.037_thermo/bld/atm.bldlog.230830-114918
+2023-08-30 12:14:07: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e23_alpha16b.BLT1850.ne30_t232.040  </command>
  ---------------------------------------------------
-2023-08-30 11:54:19: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=0,STOP_N=1,STOP_OPTION=nyears  </command>
+2023-08-30 12:14:08: xmlchange success <command> ./xmlchange RUN_REFDATE=0015-01-01  </command>
  ---------------------------------------------------
-2023-08-30 11:54:20: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-08-30 12:14:08: xmlchange success <command> ./xmlchange RUN_STARTDATE=0015-01-01  </command>
  ---------------------------------------------------
-2023-08-30 11:54:20: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-08-30 12:14:09: xmlchange success <command> ./xmlchange RUN_TYPE=branch  </command>
  ---------------------------------------------------
-2023-08-30 11:54:26: case.submit starting 
+2023-08-30 12:14:24: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=0,STOP_N=1,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-08-30 11:54:26: case.submit error 
-ERROR: Build complete is not True please rebuild the model by calling case.build
+2023-08-30 12:14:24: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-08-30 11:54:41: case.build starting 
+2023-08-30 12:14:25: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-08-30 11:55:00: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.037_thermo/bld/atm.bldlog.230830-115441
+2023-08-30 12:14:31: case.submit starting 1312390.desched1
  ---------------------------------------------------
-2023-08-30 11:55:01: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e23_alpha16b.BLT1850.ne30_t232.037  </command>
+2023-08-30 12:14:31: case.submit success 1312390.desched1
  ---------------------------------------------------
-2023-08-30 11:55:01: xmlchange success <command> ./xmlchange RUN_REFDATE=0015-01-01  </command>
+2023-08-30 12:14:46: case.run starting 1312389.desched1
  ---------------------------------------------------
-2023-08-30 11:55:02: xmlchange success <command> ./xmlchange RUN_STARTDATE=0015-01-01  </command>
+2023-08-30 12:14:52: model execution starting 1312389.desched1
  ---------------------------------------------------
-2023-08-30 11:55:02: xmlchange success <command> ./xmlchange RUN_TYPE=branch  </command>
+2023-08-30 16:24:35: model execution success 1312389.desched1
  ---------------------------------------------------
-2023-08-30 11:55:50: case.build starting 
+2023-08-30 16:24:35: case.run success 1312389.desched1
  ---------------------------------------------------
-2023-08-30 11:58:25: case.build success 
+2023-08-30 16:24:47: st_archive starting 1312390.desched1
  ---------------------------------------------------
-2023-08-30 11:58:38: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=0,STOP_N=1,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2023-08-30 11:58:38: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
- ---------------------------------------------------
-2023-08-30 11:58:39: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
- ---------------------------------------------------
-2023-08-30 11:58:45: case.submit starting 1312371.desched1
- ---------------------------------------------------
-2023-08-30 11:58:45: case.submit success 1312371.desched1
- ---------------------------------------------------
-2023-08-30 11:59:12: case.run starting 1312370.desched1
- ---------------------------------------------------
-2023-08-30 11:59:15: model execution starting 1312370.desched1
- ---------------------------------------------------
-2023-08-30 16:03:15: model execution success 1312370.desched1
- ---------------------------------------------------
-2023-08-30 16:03:15: case.run success 1312370.desched1
- ---------------------------------------------------
-2023-08-30 16:03:44: st_archive starting 1312371.desched1
- ---------------------------------------------------
-2023-08-30 16:04:04: st_archive success 1312371.desched1
+2023-08-30 16:25:06: st_archive success 1312390.desched1
  ---------------------------------------------------
