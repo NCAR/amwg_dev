@@ -1,16 +1,13 @@
 &comp_inparm 
 
- cam_branch_file = 'b.e23_alpha16b.BLT1850.ne30_t232.040.cam.r.0015-01-01-00000.nc'
  dtime = 1800
 
 
 mfilt    =       0,       5,     20,      40,      12,       120,      1,   1
 
-nhtfrq                  =       0,     -24,    -24,      -3,       0,       -2,         0,  -8760
+nhtfrq              =       0,     -24,    -24,      -3,       0,       -2,      0,  -8760
 
-avgflag_pertape =      'A',    'A',      'A',       'A',     'A',     'A',      'A',   'N'
-
-ndens                  =       2,       2,      2,       2,       2,       1,      2,   1
+ndens               =       2,       2,      2,       2,       2,       1,      2,   1
 
 interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
 
@@ -20,9 +17,7 @@ interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288
 
 
 
-thermo_budget_history = .true.
-
-thermo_budget_histfile_num = 8
+empty_htapes = .true.
 
 
 
@@ -106,7 +101,9 @@ micro_mg_vtrmi_factor = 1.0
 
 microp_aero_wsubi_scale  = 1.0
 
-microp_aero_wsub_scale  = 0.25
+microp_aero_wsub_scale  = 0.5
+
+microp_aero_wsub_min   =   0.
 
 
 
@@ -197,9 +194,5 @@ srf_emis_specifier= 'bc_a4 -> /glade/p/cesmdata/inputdata/atm/cam/chem/emis/hist
       ' longifolene + longipinene + muurolene_a + muurolene_g + selinene_b + selinene_d +',
 
       ' nerolidol_c + nerolidol_t)'
-
-
-
-
 
 / 

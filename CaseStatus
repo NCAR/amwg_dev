@@ -1,67 +1,39 @@
-2023-08-30 11:59:12: case.setup starting 
+2023-08-31 15:45:07: case.setup starting 
  ---------------------------------------------------
-2023-08-30 11:59:13: case.setup success 
+2023-08-31 15:45:08: case.setup success 
  ---------------------------------------------------
-2023-08-30 11:59:19: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-08-31 15:45:13: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-08-30 11:59:49: case.build starting 
+2023-08-31 15:47:35: case.build starting 
  ---------------------------------------------------
-2023-08-30 11:59:56: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e23_alpha16b.BLT1850.ne30_t232.040  </command>
+2023-08-31 15:55:31: case.build starting 
  ---------------------------------------------------
-2023-08-30 11:59:57: xmlchange success <command> ./xmlchange RUN_REFDATE=0015-01-01  </command>
+2023-08-31 15:56:55: case.build error 
+ERROR: BUILD FAIL: cism.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.042/bld/glc.bldlog.230831-155531
+BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.042/bld/atm.bldlog.230831-155531
  ---------------------------------------------------
-2023-08-30 11:59:57: xmlchange success <command> ./xmlchange RUN_STARTDATE=0015-01-01  </command>
+2023-08-31 15:58:20: case.build starting 
  ---------------------------------------------------
-2023-08-30 11:59:58: xmlchange success <command> ./xmlchange RUN_TYPE=branch  </command>
+2023-08-31 15:59:33: case.build error 
+ERROR: BUILD FAIL: buildexe failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.042/bld/cesm.bldlog.230831-154735
  ---------------------------------------------------
-2023-08-30 12:00:20: case.build starting 
+2023-08-31 15:59:55: case.build success 
  ---------------------------------------------------
-2023-08-30 12:00:48: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.040_thermo/bld/mct.bldlog.230830-120020
+2023-08-31 16:01:39: case.build starting 
  ---------------------------------------------------
-2023-08-30 12:01:21: case.build starting 
+2023-08-31 16:02:19: case.build success 
  ---------------------------------------------------
-2023-08-30 12:02:15: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/libraries/FMS/buildlib FAILED, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.040_thermo/bld/FMS.bldlog.230830-120121
+2023-08-31 16:02:20: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-08-30 12:03:53: case.build starting 
+2023-08-31 16:02:20: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-08-30 12:07:52: case.build error 
-ERROR: File /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.040_thermo/env_run.xml appears to have changed without a corresponding invalidation.
+2023-08-31 16:02:20: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-08-30 12:13:17: case.build success 
+2023-08-31 16:02:26: case.submit starting 1318502.desched1
  ---------------------------------------------------
-2023-08-30 12:13:23: case.build starting 
+2023-08-31 16:02:26: case.submit success 1318502.desched1
  ---------------------------------------------------
-2023-08-30 12:14:06: case.build success 
+2023-08-31 16:02:58: case.run starting 1318501.desched1
  ---------------------------------------------------
-2023-08-30 12:14:07: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e23_alpha16b.BLT1850.ne30_t232.040  </command>
- ---------------------------------------------------
-2023-08-30 12:14:08: xmlchange success <command> ./xmlchange RUN_REFDATE=0015-01-01  </command>
- ---------------------------------------------------
-2023-08-30 12:14:08: xmlchange success <command> ./xmlchange RUN_STARTDATE=0015-01-01  </command>
- ---------------------------------------------------
-2023-08-30 12:14:09: xmlchange success <command> ./xmlchange RUN_TYPE=branch  </command>
- ---------------------------------------------------
-2023-08-30 12:14:24: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=0,STOP_N=1,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2023-08-30 12:14:24: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
- ---------------------------------------------------
-2023-08-30 12:14:25: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
- ---------------------------------------------------
-2023-08-30 12:14:31: case.submit starting 1312390.desched1
- ---------------------------------------------------
-2023-08-30 12:14:31: case.submit success 1312390.desched1
- ---------------------------------------------------
-2023-08-30 12:14:46: case.run starting 1312389.desched1
- ---------------------------------------------------
-2023-08-30 12:14:52: model execution starting 1312389.desched1
- ---------------------------------------------------
-2023-08-30 16:24:35: model execution success 1312389.desched1
- ---------------------------------------------------
-2023-08-30 16:24:35: case.run success 1312389.desched1
- ---------------------------------------------------
-2023-08-30 16:24:47: st_archive starting 1312390.desched1
- ---------------------------------------------------
-2023-08-30 16:25:06: st_archive success 1312390.desched1
+2023-08-31 16:03:03: model execution starting 1318501.desched1
  ---------------------------------------------------
