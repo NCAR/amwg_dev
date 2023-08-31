@@ -1,175 +1,144 @@
-2023-08-23 14:53:40: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-08-25 17:02:52: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-08-23 14:53:40: case.setup starting 
+2023-08-25 17:02:53: case.setup starting 
  ---------------------------------------------------
-2023-08-23 14:53:42: case.setup success 
+2023-08-25 17:02:54: case.setup success 
  ---------------------------------------------------
-2023-08-23 14:53:42: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
+2023-08-25 17:02:55: xmlchange success <command> ./xmlchange RUN_STARTDATE=1995-01-01  </command>
  ---------------------------------------------------
-2023-08-23 14:53:43: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+2023-08-25 17:02:55: xmlchange success <command> ./xmlchange STOP_N=2  </command>
  ---------------------------------------------------
-2023-08-23 14:53:43: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+2023-08-25 17:02:56: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-08-23 14:53:44: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
+2023-08-25 17:02:56: xmlchange success <command> ./xmlchange RESUBMIT=5  </command>
  ---------------------------------------------------
-2023-08-23 14:53:44: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
+2023-08-25 17:02:56: xmlchange success <command> ./xmlchange RUN_TYPE=hybrid  </command>
  ---------------------------------------------------
-2023-08-23 14:53:44: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001  </command>
+2023-08-25 17:02:57: xmlchange success <command> ./xmlchange RUN_REFCASE=f.cam6_3_107.FLTHIST_v0a.ne30.clm5_1.001  </command>
  ---------------------------------------------------
-2023-08-23 14:53:45: xmlchange success <command> ./xmlchange RUN_REFDATE=1994-01-01  </command>
+2023-08-25 17:02:57: xmlchange success <command> ./xmlchange RUN_REFDATE=1994-01-01  </command>
  ---------------------------------------------------
-2023-08-23 14:53:45: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
+2023-08-25 17:02:58: xmlchange success <command> ./xmlchange GET_REFCASE=TRUE  </command>
  ---------------------------------------------------
-2023-08-23 14:53:47: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
+2023-08-25 17:02:58: xmlchange success <command> ./xmlchange RUN_REFDIR=cesm2_init  </command>
  ---------------------------------------------------
-2023-08-23 14:55:28: case.build starting 
+2023-08-25 17:03:25: case.build starting 
  ---------------------------------------------------
-2023-08-23 14:59:49: case.build starting 
+2023-08-25 17:03:27: case.build error 
+ERROR: Command /glade/work/hannay/cesm_tags/cam6_3_119/components/clm/bld/build-namelist failed rc=255
+out=
+err=ERROR : CLM build-namelist::CLMBuildNamelist::process_namelist_commandline_infile() : Invalid namelist variable in '-infile' /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae_dst.001/Buildconf/clmconf/namelist.
+ ERROR: in _validate_pair (package Build::NamelistDefinition): Variable name dust_emis_fact not found in /glade/work/hannay/cesm_tags/cam6_3_119/components/clm/bld/namelist_files/namelist_definition_drv.xml, /glade/work/hannay/cesm_tags/cam6_3_119/components/clm/bld/namelist_files/namelist_definition_drv_flds.xml, /glade/work/hannay/cesm_tags/cam6_3_119/components/clm/bld/namelist_files/namelist_definition_ctsm.xml
  ---------------------------------------------------
-2023-08-23 15:07:31: case.build starting 
+2023-08-25 17:03:35: case.build starting 
  ---------------------------------------------------
-2023-08-23 15:11:24: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-145528
+2023-08-25 17:03:38: case.build error 
+ERROR: Command /glade/work/hannay/cesm_tags/cam6_3_119/components/clm/bld/build-namelist failed rc=255
+out=
+err=ERROR : CLM build-namelist::CLMBuildNamelist::process_namelist_commandline_infile() : Invalid namelist variable in '-infile' /glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae_dst.001/Buildconf/clmconf/namelist.
+ ERROR: in _validate_pair (package Build::NamelistDefinition): Variable name dust_emis_fact not found in /glade/work/hannay/cesm_tags/cam6_3_119/components/clm/bld/namelist_files/namelist_definition_drv.xml, /glade/work/hannay/cesm_tags/cam6_3_119/components/clm/bld/namelist_files/namelist_definition_drv_flds.xml, /glade/work/hannay/cesm_tags/cam6_3_119/components/clm/bld/namelist_files/namelist_definition_ctsm.xml
  ---------------------------------------------------
-2023-08-23 15:11:37: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-145949
+2023-08-25 17:04:34: case.build starting 
  ---------------------------------------------------
-2023-08-23 15:11:38: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-150731
+2023-08-25 17:11:42: case.build success 
  ---------------------------------------------------
-2023-08-23 15:13:31: case.build starting 
+2023-08-25 17:11:55: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-08-23 15:13:39: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-151331
+2023-08-25 17:11:55: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-08-23 15:34:03: case.build starting 
+2023-08-25 17:11:56: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-08-23 15:34:10: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-153404
+2023-08-25 17:12:02: case.submit starting 1303311.desched1
  ---------------------------------------------------
-2023-08-23 15:43:20: case.build starting 
+2023-08-25 17:12:02: case.submit success 1303311.desched1
  ---------------------------------------------------
-2023-08-23 15:51:36: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-154320
+2023-08-25 17:12:14: case.run starting 1303310.desched1
  ---------------------------------------------------
-2023-08-23 16:37:04: case.build starting 
+2023-08-25 17:12:17: model execution starting 1303310.desched1
  ---------------------------------------------------
-2023-08-23 16:37:12: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-163704
+2023-08-25 23:49:10: model execution success 1303310.desched1
  ---------------------------------------------------
-2023-08-23 20:32:58: case.build starting 
+2023-08-25 23:49:11: case.run success 1303310.desched1
  ---------------------------------------------------
-2023-08-23 20:33:04: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-203258
+2023-08-25 23:49:22: st_archive starting 1303311.desched1
  ---------------------------------------------------
-2023-08-23 20:33:35: case.build starting 
+2023-08-25 23:49:34: st_archive success 1303311.desched1
  ---------------------------------------------------
-2023-08-23 20:33:41: case.build error 
-ERROR: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/CIME/build_scripts/buildlib.mct FAILED, cat /glade/derecho/scratch/hannay/f.e23_alpha16b.FLT1850.ne30.033/bld/mct.bldlog.230823-203335
+2023-08-25 23:49:34: case.submit starting 1303469.desched1
  ---------------------------------------------------
-2023-08-23 20:34:07: case.build starting 
+2023-08-25 23:49:34: case.submit success 1303469.desched1
  ---------------------------------------------------
-2023-08-23 20:41:01: case.build success 
+2023-08-25 23:49:45: case.run starting 1303468.desched1
  ---------------------------------------------------
-2023-08-23 20:41:12: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-08-25 23:49:49: model execution starting 1303468.desched1
  ---------------------------------------------------
-2023-08-23 20:41:13: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-08-26 06:32:14: model execution success 1303468.desched1
  ---------------------------------------------------
-2023-08-23 20:41:13: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-08-26 06:32:14: case.run success 1303468.desched1
  ---------------------------------------------------
-2023-08-23 20:41:20: case.submit starting 1293713.desched1
+2023-08-26 06:32:31: st_archive starting 1303469.desched1
  ---------------------------------------------------
-2023-08-23 20:41:20: case.submit success 1293713.desched1
+2023-08-26 06:32:44: st_archive success 1303469.desched1
  ---------------------------------------------------
-2023-08-23 20:41:30: case.run starting 1293712.desched1
+2023-08-26 06:32:44: case.submit starting 1303556.desched1
  ---------------------------------------------------
-2023-08-23 20:41:32: model execution starting 1293712.desched1
+2023-08-26 06:32:44: case.submit success 1303556.desched1
  ---------------------------------------------------
-2023-08-24 03:14:03: model execution success 1293712.desched1
+2023-08-26 06:32:54: case.run starting 1303555.desched1
  ---------------------------------------------------
-2023-08-24 03:14:03: case.run success 1293712.desched1
+2023-08-26 06:32:57: model execution starting 1303555.desched1
  ---------------------------------------------------
-2023-08-24 03:14:14: st_archive starting 1293713.desched1
+2023-08-26 21:58:04: case.submit starting 1303848.desched1
  ---------------------------------------------------
-2023-08-24 03:14:25: st_archive success 1293713.desched1
+2023-08-26 21:58:04: case.submit success 1303848.desched1
  ---------------------------------------------------
-2023-08-24 03:14:26: case.submit starting 1294050.desched1
+2023-08-26 21:58:16: case.run starting 1303847.desched1
  ---------------------------------------------------
-2023-08-24 03:14:26: case.submit success 1294050.desched1
+2023-08-26 21:58:20: model execution starting 1303847.desched1
  ---------------------------------------------------
-2023-08-24 03:14:40: case.run starting 1294049.desched1
+2023-08-29 17:09:22: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=5,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-08-24 03:14:44: model execution starting 1294049.desched1
+2023-08-29 17:09:22: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-08-24 09:46:28: model execution success 1294049.desched1
+2023-08-29 17:09:23: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-08-24 09:46:28: case.run success 1294049.desched1
+2023-08-29 17:09:28: case.submit starting 1311337.desched1
  ---------------------------------------------------
-2023-08-24 09:46:42: st_archive starting 1294050.desched1
+2023-08-29 17:09:28: case.submit success 1311337.desched1
  ---------------------------------------------------
-2023-08-24 09:46:54: st_archive success 1294050.desched1
+2023-08-29 17:09:56: case.run starting 1311336.desched1
  ---------------------------------------------------
-2023-08-24 09:46:55: case.submit starting 1294242.desched1
+2023-08-29 17:09:58: model execution starting 1311336.desched1
  ---------------------------------------------------
-2023-08-24 09:46:55: case.submit success 1294242.desched1
+2023-08-29 23:41:31: model execution success 1311336.desched1
  ---------------------------------------------------
-2023-08-24 09:47:05: case.run starting 1294241.desched1
+2023-08-29 23:41:31: case.run success 1311336.desched1
  ---------------------------------------------------
-2023-08-24 09:47:07: model execution starting 1294241.desched1
+2023-08-29 23:41:47: st_archive starting 1311337.desched1
  ---------------------------------------------------
-2023-08-24 16:16:44: model execution success 1294241.desched1
+2023-08-29 23:42:01: st_archive success 1311337.desched1
  ---------------------------------------------------
-2023-08-24 16:16:44: case.run success 1294241.desched1
+2023-08-29 23:42:02: case.submit starting 1311888.desched1
  ---------------------------------------------------
-2023-08-24 16:16:55: st_archive starting 1294242.desched1
+2023-08-29 23:42:02: case.submit success 1311888.desched1
  ---------------------------------------------------
-2023-08-24 16:17:08: st_archive success 1294242.desched1
+2023-08-29 23:42:29: case.run starting 1311887.desched1
  ---------------------------------------------------
-2023-08-24 16:17:09: case.submit starting 1294632.desched1
+2023-08-29 23:42:32: model execution starting 1311887.desched1
  ---------------------------------------------------
-2023-08-24 16:17:09: case.submit success 1294632.desched1
+2023-08-30 06:13:49: model execution success 1311887.desched1
  ---------------------------------------------------
-2023-08-24 16:17:28: case.run starting 1294631.desched1
+2023-08-30 06:13:49: case.run success 1311887.desched1
  ---------------------------------------------------
-2023-08-24 16:17:32: model execution starting 1294631.desched1
+2023-08-30 06:14:05: st_archive starting 1311888.desched1
  ---------------------------------------------------
-2023-08-24 22:46:22: model execution success 1294631.desched1
+2023-08-30 06:14:18: st_archive success 1311888.desched1
  ---------------------------------------------------
-2023-08-24 22:46:22: case.run success 1294631.desched1
+2023-08-30 06:14:18: case.submit starting 1311970.desched1
  ---------------------------------------------------
-2023-08-24 22:46:34: st_archive starting 1294632.desched1
+2023-08-30 06:14:18: case.submit success 1311970.desched1
  ---------------------------------------------------
-2023-08-24 22:46:46: st_archive success 1294632.desched1
+2023-08-30 06:14:38: case.run starting 1311969.desched1
  ---------------------------------------------------
-2023-08-24 22:46:47: case.submit starting 1294797.desched1
- ---------------------------------------------------
-2023-08-24 22:46:47: case.submit success 1294797.desched1
- ---------------------------------------------------
-2023-08-24 22:46:57: case.run starting 1294796.desched1
- ---------------------------------------------------
-2023-08-24 22:47:00: model execution starting 1294796.desched1
- ---------------------------------------------------
-2023-08-25 05:18:10: model execution success 1294796.desched1
- ---------------------------------------------------
-2023-08-25 05:18:10: case.run success 1294796.desched1
- ---------------------------------------------------
-2023-08-25 05:18:23: st_archive starting 1294797.desched1
- ---------------------------------------------------
-2023-08-25 05:18:35: st_archive success 1294797.desched1
- ---------------------------------------------------
-2023-08-25 05:18:35: case.submit starting 1297498.desched1
- ---------------------------------------------------
-2023-08-25 05:18:35: case.submit success 1297498.desched1
- ---------------------------------------------------
-2023-08-25 05:18:45: case.run starting 1297497.desched1
- ---------------------------------------------------
-2023-08-25 05:18:48: model execution starting 1297497.desched1
- ---------------------------------------------------
-2023-08-25 11:53:30: model execution success 1297497.desched1
- ---------------------------------------------------
-2023-08-25 11:53:30: case.run success 1297497.desched1
- ---------------------------------------------------
-2023-08-25 11:53:57: st_archive starting 1297498.desched1
- ---------------------------------------------------
-2023-08-25 11:54:18: st_archive success 1297498.desched1
+2023-08-30 06:14:41: model execution starting 1311969.desched1
  ---------------------------------------------------
