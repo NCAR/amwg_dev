@@ -1,15 +1,18 @@
 # amwg_dev repo
-Repo for AMWG development simulations. 
+The amwg_dev repository is dedicated to AMWG development simulations, which encompass:
 - Development simulations (including cases directories and model sandboxes). 
 - Relevant discussions to model development 
 
 ## Development simulations
 - The list of development simulations can be found under ["Issues"](https://github.com/NCAR/amwg_dev/issues). 
-  - Each simulation is a github issue. 
-  - Simulations can be sorted with labels (for instance, vertical grid: L58, compset: FWscHIST, tag: cam6_3_48). 
+  - Each simulation is represented as a github issue. 
+  - Simulations can be sorted with labels (for instance, compset: FLHIST, B1850). 
   
-- Simulation requests should be entered as ["Run request"](https://github.com/NCAR/amwg_dev/issues/new/choose). 
+- To request a new simulation run, please use the ["Run request"](https://github.com/NCAR/amwg_dev/issues/new/choose) template. 
   - Please provide as much details as possible. 
 
 ## Discussions 
 - Discussions relevant to CAM7 development could be posted under ["Discussions"](https://github.com/NCAR/amwg_dev/discussions)
+
+## Code of Conduct
+- We are committed to fostering a respectful and inclusive community for all participants. Our [Code of Conduct] (https://github.com/NCAR/amwg_dev/blob/main/CODE_OF_CONDUCT.md) outlines our expectations for behavior and principles.
