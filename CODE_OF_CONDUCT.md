@@ -6,7 +6,7 @@ The **amwg_dev Github space** is committed to fostering a respectful and inclusi
 
 We do not tolerate harassment or bullying of any community member in any form. This applies equally to all community members, regardless of their title, seniority, background, gender, etc., across all our communication channels, including GitHub project space, emails, and in-person events.
 
-Code of conduct violations diminish the value of our community, and we take them seriously. Use the form belwo to report violations. 
+Code of conduct violations diminish the value of our community, and we take them seriously. Use the form below to report violations. 
 
 ## General Code of Conduct
 
@@ -18,7 +18,7 @@ Our code of conduct policy for community members emphasizes the following key pr
 
 ## Reporting Violations
 
-If you believe someone is violating the code of conduct, please **report** it promptly using our [reporting form](link-to-form). The online form offers the option to keep your report anonymous or request follow-up.
+If you believe someone is violating the code of conduct, please **report** it promptly using our [reporting form](https://forms.gle/LUN27DkBciReS78x9). The online form offers the option to keep your report anonymous or request follow-up.
 
 ## Enforcement and Consequences
 
