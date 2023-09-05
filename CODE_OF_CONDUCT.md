@@ -1,4 +1,4 @@
-## Code of Conduct
+## Code of Conduct (IN CONSTRUCTION)
 
 The **amwg_dev github space** is dedicated to providing a respectful and inclusive community for everyone. 
 We provide this code of conduct as part of this commitment, following similar standards for other community development projects, as cited in the references. 
