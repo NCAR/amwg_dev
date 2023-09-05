@@ -1,118 +1,41 @@
 ## Code of Conduct (IN CONSTRUCTION)
 
-The **amwg_dev github space** is dedicated to providing a respectful and inclusive community for everyone. 
-We provide this code of conduct as part of this commitment, following similar standards for other community development projects, as cited in the references. 
-We do not tolerate harassment or bullying of any community member in any form. This applies equally to all community members regardless of their title, seniority, background, gender, etc., 
-in all the posts at our GitHub project space, e-mails and in-person events. 
+## Introduction
 
-We reserve the rights to edit or delete posts that violates our code. As part of the code of conduct policy, 
-we will provide below ground rules for all forums (e.g meetings) created by the project team, supporting project initiatives. 
+The **amwg_dev Github space** is committed to fostering a respectful and inclusive community for all participants. This Code of Conduct outlines our expectations for behavior and principles that help create a positive and respectful atmosphere.
 
-## General code of conduct 
+We do not tolerate harassment or bullying of any community member in any form. This applies equally to all community members, regardless of their title, seniority, background, gender, etc., across all our communication channels, including GitHub project space, emails, and in-person events.
 
-Our code of conduct policy for the project community members emphasizes on the following key ground rules:
+Code of conduct violations diminish the value of our community, and we take them seriously. Use the form belwo to report violations. 
 
-1.  Respect everyone's opinion and privacy.
-2.  Every opinion has value.
-3.  Listen attentively to everyone's point of view.
+## General Code of Conduct
 
-Furthermore, our community members are expected to adhere to the following:
+Our code of conduct policy for community members emphasizes the following key principles:
 
-* **1. Be friendly, patient, and welcoming**.    
-   We strive to be a community that welcomes and supports
-   people of all backgrounds and identities. This includes, but is not limited
-   to, members of any race, ethnicity, culture, national origin, color,
-   immigration status, social and economic class, educational level, sex, sexual
-   orientation, gender identity and expression, age, physical appearance, family
-   status, technological or professional choices, academic
-   discipline, religion, mental ability, and physical ability.
+- Be considerate of fellow community members by respecting their time and ensuring that your posts are clear, concise, and thoughtfully crafted.
+- Every opinion has value. Respect everyone's opinion and listen attentively to every point of view.
+- Not all of us will agree all the time, but disagreement is not an excuse for poor behavior or poor manners. Do not insult or belittle other community members. A comfortable and safe environment is essential for productivity.
 
-* **2. Be considerate and respectful**.    
-   Your work will be used by other people, and you in turn
-   will depend on the work of others. Any decision you make will affect users
-   and colleagues, and you should take those consequences into account when
-   making decisions.    
-   Remember that we're a large community with diverse members, and that you may be
-   communicating with someone with a different primary language or cultural
-   background. Not all of us will agree all the time, but disagreement is
-   no excuse for poor behavior or poor manners.
-   Do not insult or put down other community members. A community where people
-   feel uncomfortable or threatened is not a productive one.    
-   
-* **3. Consider Impact vs. Intent**.    
-   Disagreements, both social and
-   technical, happen all the time and this project forum is no exception. 
-   People perceive their own behaviors very differently than others perceive them. 
-   What motivates one person may cause stress for another. 
-   A few steps worth remembering include the following:
+## Reporting Violations
 
-   * Other people do not see things the same way you do, 
-   do not feel the same as you, or interpret the world the way you do. 
-   Consider different people’s perspectives on things like change, 
-   drive, structure, process, big picture, and small details.
-   * Ask for and listen to feedback. 
-   * Blaming each other doesn’t get us anywhere, while we can learn from mistakes to find better solutions. 
+If you believe someone is violating the code of conduct, please **report** it promptly using our [reporting form](link-to-form). The online form offers the option to keep your report anonymous or request follow-up.
 
-* **4. Moderate your expectations**.    
-   Please respect that community members choose
-   how they spend their time in the project. A thoughtful question about your
-   expectations is preferable to demands for another person's time.
+## Enforcement and Consequences
 
-* **5. A simple apology can go a long way**.    
-   It can often de-escalate a situation,
-   and telling someone that you are sorry is an act of empathy that doesn’t
-   automatically imply an admission of guilt.
+As part of the code of conduct policy, we reserve the right to **edit or delete posts** that violate our code. Code of conduct violations may result in warnings, temporary suspensions, or permanent bans, depending on the severity and recurrence of the offense.
 
-* **6. Give due credit and avoid miscredit**.   
+## Review
 
-Motivate yourself and your community by acknowledging and giving credit to the original source, be it an individual-or-group, 
-data-or-code, an inception of an idea, and so on, in different project forums. Discourage miscredit to foster a welcoming, inclusive environment.
-We strive for the highest standards of scientific integrity. This includes sharing ideas and information, keeping accurate and complete records, 
-and giving due credit to the contributions of others. Undisclosed conflicts of interest and scientific misconduct, including fabrication, falsification, 
-and plagiarism, are incompatible with this code.
+This code of conduct document will be reviewed periodically by our core team to ensure its continued relevance.
+
+## References
+
+This Code of Conduct borrowed some materials provided by [MDTF](https://github.com/NOAA-GFDL/MDTF-diagnostics/blob/main/CODE_OF_CONDUCT.md). 
 
 
-## Forms of harassment
+amwg_dev GitHub Date: Sep 5, 2023.
 
-We do not tolerate harassment or bullying of any community member in any form. 
-Forms of harassment include, but is not limited to:
 
-   * Violent threats or violent language directed against another person
-   * Discriminatory jokes and language
-   * Posting sexually explicit or violent material
-   * Posting (or threatening to post) other people's personally identifying
-     information ("doxing")
-   * Personal insults, especially those related to gender, 
-   gender identity and expression, sexual orientation, ability, 
-   physical appearance, body size, race, ethnicity, 
-   religion, socioeconomic status, caste or creed
-   * Unwelcome sexual attention or stalking
-   * Advocating for, or encouraging, any of the above behavior
-   * Repeated harassment of others. In general, if someone asks you to stop,
-     then stop
-          
 
-## How to Report Harassment and Discrimination
 
- If you believe someone is violating the code of conduct, please report this in a timely manner. Code of conduct violations reduce the value of the community for everyone and we take them seriously.
-You can file a report by filling out [this form](). 
-The online form gives you the option to keep your report anonymous or request that we follow up with you directly. 
-While we cannot follow up on an anonymous report, we will take appropriate action.
-Some forms of harassment and discrimination may rise to the level where they cannot be addressed within the MDTF team, 
-and must be reported to the relevant home institution(s). Home institution regulations supersede these guidelines where there are differences. 
-Harassment procedures at some institutions require reporting to Title IX officers under certain circumstances.
 
-##  Review
-
-This code of conduct document will be reviewed periodically by our core team. 
-
-## Your contributions 
-   
-Our community values every contribution to this open-source repository. Please follow the contributorship guidelines [in the works] to see how you can contribute.
-We encourage you to pitch in and join our growing community! 
-
-### References
-
-This Code of Conduct has been adapted from:
-https://github.com/NOAA-GFDL/MDTF-diagnostics/blob/main/CODE_OF_CONDUCT.md
-We are grateful to the MDTF for contributing these materials for us to easily reuse.
