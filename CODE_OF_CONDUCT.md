@@ -36,7 +36,9 @@ This code of conduct document will be reviewed periodically by our core team to 
 
 ____
 
-amwg_dev GitHub Date: Sep 5, 2023.
+amwg_dev GitHub 
+
+Date: Sep 5, 2023.
 
 
 
