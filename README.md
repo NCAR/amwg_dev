@@ -15,4 +15,5 @@ The amwg_dev repository is dedicated to AMWG development simulations, which enco
 - Discussions relevant to CAM7 development could be posted under [Discussions](https://github.com/NCAR/amwg_dev/discussions)
 
 ## Code of Conduct
-- We are committed to fostering a respectful and inclusive community for all participants. Our [Code of Conduct](https://github.com/NCAR/amwg_dev/blob/main/CODE_OF_CONDUCT.md) outlines our expectations for behavior and principles.
+- We are committed to fostering a respectful and inclusive community for all participants.
+- Our [Code of Conduct](https://github.com/NCAR/amwg_dev/blob/main/CODE_OF_CONDUCT.md) outlines our expectations for behavior and principles.
