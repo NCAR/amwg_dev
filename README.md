@@ -13,6 +13,7 @@ The amwg_dev repository is dedicated to AMWG development simulations, which enco
 
 ## Discussions 
 - Discussions relevant to CAM7 development could be posted under [Discussions](https://github.com/NCAR/amwg_dev/discussions):
+  
   - Discussions provide you with the ability to directly engage with other developers while staying on GitHub.
   - To ensure that the conversation remains productive and helpful, please keep your discussions organized by using relevant titles, applying labels, and refraining from mixing topics.
 
