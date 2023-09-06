@@ -30,9 +30,9 @@ This code of conduct document will be reviewed periodically by our core team to 
 
 ## References
 
-The current Code of Conduct borrowed some materials provided by [MDTF](https://github.com/NOAA-GFDL/MDTF-diagnostics/blob/main/CODE_OF_CONDUCT.md). 
+- The current Code of Conduct borrowed some materials provided by [MDTF Code of Conduct](https://github.com/NOAA-GFDL/MDTF-diagnostics/blob/main/CODE_OF_CONDUCT.md). 
 
-More generally, the CGD code of conduct can be find [here](https://www.cgd.ucar.edu/about/diversity).
+- More generally, the CGD code of conduct can be find [here](https://www.cgd.ucar.edu/about/diversity).
 
 
 amwg_dev GitHub Date: Sep 5, 2023.
