@@ -3,7 +3,7 @@
 <config_definition>
 
 <commandline>
-/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/configure -s -fc_type intel -dyn se -hgrid ne30np4.pg3 -cpl nuopc -usr_src /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/SourceMods/src.cam -spmd -nosmp -ocn mom -phys cam_dev -chem ghg_mam4 -nlev 58 -model_top lt -cosp -cosp_libdir /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm/obj/cosp
+/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/configure -s -fc_type intel -dyn se -hgrid ne30np4.pg3 -cpl nuopc -usr_src /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.044/SourceMods/src.cam -spmd -nosmp -ocn mom -phys cam_dev -chem ghg_mam4 -nlev 58 -model_top lt -cosp -cosp_libdir /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/bld/atm/obj/cosp
 </commandline>
 <entry id="age_of_air_trcs" value="0" list="" valid_values="0,1">
 Switch on (off) age of air tracers: 0=off, 1=on.
@@ -22,7 +22,7 @@ be set to DOCN.
 <entry id="build_chem_proc" value="0,1" list="" valid_values="">
 Switch to force the build of the chemistry preprocessor.
 </entry>
-<entry id="cam_bld" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/camconf" list="" valid_values="">
+<entry id="cam_bld" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.044/Buildconf/camconf" list="" valid_values="">
 CAM build directory; contains .o and .mod files.
 </entry>
 <entry id="cam_dir" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam" list="" valid_values="">
@@ -82,7 +82,7 @@ Turn on CO2 cycle in biogeochemistry model: 0 => no, 1 => yes.
 <entry id="cosp" value="1" list="" valid_values="0,1">
 Switch to enable building COSP simulator package.  1 => build COSP.
 </entry>
-<entry id="cosp_libdir" value="/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm/obj/cosp" list="" valid_values="">
+<entry id="cosp_libdir" value="/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/bld/atm/obj/cosp" list="" valid_values="">
 Directory containing COSP library.
 </entry>
 <entry id="cpl" value="nuopc" list="" valid_values="mct,nuopc">
@@ -141,7 +141,7 @@ Ionosphere model used in WACCMX.
 <entry id="lapack_libdir" value="" list="" valid_values="">
 Directory containing LAPACK library.
 </entry>
-<entry id="ldflags" value=" -L/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm/obj/cosp -lcosp " list="1" valid_values="">
+<entry id="ldflags" value=" -L/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/bld/atm/obj/cosp -lcosp " list="1" valid_values="">
 User specified load options to append to Makefile defaults.
 </entry>
 <entry id="linker" value="" list="" valid_values="">
@@ -315,7 +315,7 @@ Switch to turn on UNICON package: 0 => off, 1 => on
 <entry id="usr_mech_infile" value="" list="" valid_values="">
 Path and file name of the user supplied chemistry mechanism file.
 </entry>
-<entry id="usr_src" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/SourceMods/src.cam" list="1" valid_values="">
+<entry id="usr_src" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.044/SourceMods/src.cam" list="1" valid_values="">
 User source directories to prepend to the filepath.  Multiple directories
 are specified as a comma separated list with no embedded white space.
 </entry>

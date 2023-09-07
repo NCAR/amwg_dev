@@ -142,7 +142,7 @@
 /
 &cldfrc_nl
  cldfrc_dp1		=  0.10D0 
- cldfrc_dp2		= 750
+ cldfrc_dp2		= 500.0D0
  cldfrc_freeze_dry		= .true.
  cldfrc_ice		= .true.
  cldfrc_icecrit		=  0.93D0 
@@ -234,8 +234,8 @@
  clubb_detphase_lowtemp		=  238.15D0            
  clubb_do_energyfix		=  .true.  
  clubb_do_liqsupersat		=  .false. 
- clubb_gamma_coef		= 0.250000000000000
- clubb_gamma_coefb		= 0.320000000000000
+ clubb_gamma_coef		= 0.3
+ clubb_gamma_coefb		= 0.3
  clubb_gamma_coefc		= 1.20000000000000
  clubb_ipdf_call_placement		=  2       
  clubb_k_hm_min_coef		= 0.100000000000000
@@ -436,7 +436,7 @@
  micro_mg_autocon_lwp_exp		=   2.47D0    
  micro_mg_autocon_nd_exp		=   -1.1D0    
  micro_mg_berg_eff_factor		=   1.D0    
- micro_mg_dcs		= 0.00065
+ micro_mg_dcs		= 500.D-6
  micro_mg_do_graupel		=  .true. 
  micro_mg_do_hail		=  .false. 
  micro_mg_effi_factor		=   1.D0    
@@ -448,13 +448,13 @@
  micro_mg_precip_frac_method		= 'in_cloud'
  micro_mg_sub_version		=     0          
  micro_mg_version		=     3          
- micro_mg_vtrmi_factor		= 1.25
+ micro_mg_vtrmi_factor		= 1.0
 /
 &microp_aero_nl
  microp_aero_bulk_scale		=   2.D0    
  microp_aero_npccn_scale		=   1.D0    
  microp_aero_wsub_min		=   0.2D0    
- microp_aero_wsub_scale		= 0.01
+ microp_aero_wsub_scale		= 0.25
  microp_aero_wsubi_min		=   0.001D0    
  microp_aero_wsubi_scale		= 1.0
 /
@@ -610,7 +610,7 @@
  zmconv_c0_lnd		=  0.0075D0 
  zmconv_c0_ocn		=  0.0300D0 
  zmconv_capelmt		=  70.0    
- zmconv_dmpdz		= -0.0005
+ zmconv_dmpdz		= -1.0E-3
  zmconv_ke		=  5.0E-6 
  zmconv_ke_lnd		=  1.0E-5 
  zmconv_microp		=  .false. 

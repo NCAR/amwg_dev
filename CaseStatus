@@ -1,221 +1,73 @@
-2023-09-06 09:30:13: case.setup starting 
+2023-09-06 13:34:49: case.setup starting 
  ---------------------------------------------------
-2023-09-06 09:30:14: case.setup success 
+2023-09-06 13:34:50: case.setup success 
  ---------------------------------------------------
-2023-09-06 09:30:19: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-09-06 13:34:55: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2023-09-06 09:31:21: case.build starting 
+2023-09-06 13:55:39: case.build starting 
  ---------------------------------------------------
-2023-09-06 09:31:23: case.build error 
-ERROR: Command /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/build-namelist -ntasks 1920 -csmdata /glade/p/cesmdata/inputdata -infile /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/camconf/namelist -start_ymd 00010101 -ignore_ic_year -use_case 1850_cam_lt -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/cam.input_data_list -namelist " &atmexp  stream_ndep_year_first=1850 stream_ndep_year_last=1850 stream_ndep_year_align=1 stream_ndep_data_filename='/glade/p/cesmdata/inputdata/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc' stream_ndep_mesh_filename='/glade/p/cesmdata/inputdata/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc'/"  -cmeps failed rc=255
-out=
-err=Smartmatch is experimental at /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/perl5lib/Build/ChemNamelist.pm line 274.
-Smartmatch is experimental at /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/build-namelist line 2205.
-CAM build-namelist - ERROR: Invalid namelist variable in '-infile' /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/camconf/namelist.
- ERROR: in _validate_pair (package Build::NamelistDefinition): Variable name clubb_pdf_component_stdev_factor_w not found in /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/namelist_files/namelist_definition.xml
+2023-09-06 13:55:43: case.build starting 
  ---------------------------------------------------
-2023-09-06 09:48:51: case.build starting 
+2023-09-06 13:55:51: case.build error 
+[Errno 2] No such file or directory: 'a.out'
  ---------------------------------------------------
-2023-09-06 09:51:00: case.build starting 
+2023-09-06 13:55:51: case.build error 
+ERROR: Command: 'cmake -DCONVERT_TO_MAKE=ON -DCOMP_NAME=csm_share_cpl7 -DCIME_MODEL=cesm -DSRC_ROOT=/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus  -Dcompile_threaded=FALSE  -DUSE_FMS=TRUE  -DINSTALL_SHAREDPATH=/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/bld/DO_NOT_USE -DCASEROOT="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.044" -DCASETOOLS="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.044/Tools" -DCIMEROOT="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/cime" -DSRCROOT="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus" -DCOMP_INTERFACE="nuopc" -DCOMPILER="intel" -DDEBUG="FALSE" -DEXEROOT="/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/bld" -DRUNDIR="/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/run" -DINCROOT="/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/bld/lib/include" -DLIBROOT="/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/bld/lib" -DMACH="derecho" -DMPILIB="mpich" -DNINST_VALUE="c1a1l1i1o1r1g1w1" -DOS="CNL" -DPIO_VERSION="2" -DSHAREDLIBROOT="/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.044/bld" -DSMP_PRESENT="FALSE" -DUSE_ESMF_LIB="TRUE" -DUSE_MOAB="FALSE" -DCAM_CONFIG_OPTS="-phys cam_dev -chem ghg_mam4 -nlev 58 -model_top lt -cosp" -DCOMP_ATM="cam" -DCOMP_ICE="cice" -DCOMP_GLC="cism" -DCOMP_LND="clm" -DCOMP_OCN="mom" -DCOMP_ROF="mosart" -DCOMP_WAV="ww" -DUSE_TRILINOS="FALSE" -DUSE_ALBANY="FALSE" -DUSE_PETSC="FALSE"  -DCMAKE_C_COMPILER_WORKS=1 -DCMAKE_CXX_COMPILER_WORKS=1 -DCMAKE_Fortran_COMPILER_WORKS=1 .' failed with error 'CMake Error: The source directory "/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.044/cmaketmp" does not appear to contain CMakeLists.txt.
+Specify --help for usage, or press the help button on the CMake GUI.' from dir '/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.044/cmaketmp'
  ---------------------------------------------------
-2023-09-06 09:53:10: case.build error 
-ERROR: BUILD FAIL: clm.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/lnd.bldlog.230906-094851
+2023-09-06 13:55:52: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-09-06 09:54:43: case.build starting 
+2023-09-06 13:55:53: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-09-06 09:54:45: case.build error 
-ERROR: Command /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/build-namelist -ntasks 1920 -csmdata /glade/p/cesmdata/inputdata -infile /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/camconf/namelist -start_ymd 00010101 -ignore_ic_year -use_case 1850_cam_lt -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/cam.input_data_list -namelist " &atmexp  stream_ndep_year_first=1850 stream_ndep_year_last=1850 stream_ndep_year_align=1 stream_ndep_data_filename='/glade/p/cesmdata/inputdata/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc' stream_ndep_mesh_filename='/glade/p/cesmdata/inputdata/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc'/"  -cmeps failed rc=127
-out=
-err=/bin/sh: /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/build-namelist: No such file or directory
+2023-09-06 13:55:53: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-09-06 09:55:13: case.build error 
-ERROR: File /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/env_run.xml appears to have changed without a corresponding invalidation.
+2023-09-06 13:57:49: case.build starting 
  ---------------------------------------------------
-2023-09-06 09:56:17: case.build starting 
+2023-09-06 14:10:17: case.build success 
  ---------------------------------------------------
-2023-09-06 09:56:18: case.build error 
-ERROR: Command /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/build-namelist -ntasks 1920 -csmdata /glade/p/cesmdata/inputdata -infile /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/camconf/namelist -start_ymd 00010101 -ignore_ic_year -use_case 1850_cam_lt -inputdata /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/cam.input_data_list -namelist " &atmexp  stream_ndep_year_first=1850 stream_ndep_year_last=1850 stream_ndep_year_align=1 stream_ndep_data_filename='/glade/p/cesmdata/inputdata/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc' stream_ndep_mesh_filename='/glade/p/cesmdata/inputdata/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc'/"  -cmeps failed rc=255
-out=
-err=Smartmatch is experimental at /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/perl5lib/Build/ChemNamelist.pm line 274.
-Smartmatch is experimental at /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/build-namelist line 2205.
-CAM build-namelist - ERROR: Invalid namelist variable in '-infile' /glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043/Buildconf/camconf/namelist.
- ERROR: in _validate_pair (package Build::NamelistDefinition): Variable name clubb_c_invrs_tau_wpxp_n2_thresh not found in /glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/components/cam/bld/namelist_files/namelist_definition.xml
+2023-09-06 14:49:45: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-09-06 09:57:53: case.build starting 
+2023-09-06 14:49:46: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-09-06 10:02:47: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-095753
+2023-09-06 14:49:47: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-09-06 10:11:29: case.build starting 
+2023-09-07 09:43:45: case.build starting 
  ---------------------------------------------------
-2023-09-06 10:11:44: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-101129
+2023-09-07 09:44:27: case.build success 
  ---------------------------------------------------
-2023-09-06 10:12:16: case.build starting 
+2023-09-07 10:18:56: case.build starting 
  ---------------------------------------------------
-2023-09-06 10:13:47: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-101216
+2023-09-07 10:19:30: case.build success 
  ---------------------------------------------------
-2023-09-06 10:20:17: case.build starting 
+2023-09-07 10:22:04: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-09-06 10:20:39: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-102018
+2023-09-07 10:22:04: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-09-06 10:24:56: case.build starting 
+2023-09-07 10:22:04: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-09-06 10:25:13: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-102456
+2023-09-07 10:22:12: case.submit starting 1331295.desched1
  ---------------------------------------------------
-2023-09-06 10:25:29: case.build starting 
+2023-09-07 10:22:12: case.submit success 1331295.desched1
  ---------------------------------------------------
-2023-09-06 10:25:37: case.build starting 
+2023-09-07 10:22:25: case.run starting 1331294.desched1
  ---------------------------------------------------
-2023-09-06 10:25:51: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-102529
+2023-09-07 10:22:29: model execution starting 1331294.desched1
  ---------------------------------------------------
-2023-09-06 10:25:58: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-102538
+2023-09-07 11:48:12: case.build starting 
  ---------------------------------------------------
-2023-09-06 10:43:59: case.build starting 
+2023-09-07 12:01:01: case.build success 
  ---------------------------------------------------
-2023-09-06 10:44:15: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-104359
+2023-09-07 12:01:24: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-09-06 11:10:18: case.build starting 
+2023-09-07 12:01:24: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-09-06 11:10:40: case.build error 
-ERROR: BUILD FAIL: cam.buildlib failed, cat /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/atm.bldlog.230906-111018
+2023-09-07 12:01:24: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-09-06 11:12:32: case.build starting 
+2023-09-07 12:01:32: case.submit starting 1331435.desched1
  ---------------------------------------------------
-2023-09-06 11:14:22: case.build success 
+2023-09-07 12:01:32: case.submit success 1331435.desched1
  ---------------------------------------------------
-2023-09-06 11:29:45: case.build starting 
+2023-09-07 12:01:44: case.run starting 1331434.desched1
  ---------------------------------------------------
-2023-09-06 11:30:24: case.build success 
- ---------------------------------------------------
-2023-09-06 13:31:15: case.build starting 
- ---------------------------------------------------
-2023-09-06 13:31:55: case.build success 
- ---------------------------------------------------
-2023-09-06 13:31:56: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2023-09-06 13:31:57: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
- ---------------------------------------------------
-2023-09-06 13:31:57: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
- ---------------------------------------------------
-2023-09-06 13:32:03: case.submit starting 1327926.desched1
- ---------------------------------------------------
-2023-09-06 13:32:03: case.submit success 1327926.desched1
- ---------------------------------------------------
-2023-09-06 13:32:14: case.run starting 1327925.desched1
- ---------------------------------------------------
-2023-09-06 13:32:19: model execution starting 1327925.desched1
- ---------------------------------------------------
-2023-09-06 13:32:19: model execution error 
-ERROR: Command: 'mpiexec  --label  --line-buffer  -n 2176 /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/run'
- ---------------------------------------------------
-2023-09-06 13:32:19: case.run error 
-ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 2176 /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
-See log file for details: /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/run/cesm.log.1327925.desched1.230906-133214
- ---------------------------------------------------
-2023-09-06 13:33:48: case.submit starting 1327932.desched1
- ---------------------------------------------------
-2023-09-06 13:33:48: case.submit success 1327932.desched1
- ---------------------------------------------------
-2023-09-06 13:45:51: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2023-09-06 13:45:52: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
- ---------------------------------------------------
-2023-09-06 13:45:53: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
- ---------------------------------------------------
-2023-09-06 13:55:45: case.build starting 
- ---------------------------------------------------
-2023-09-06 13:57:17: case.build success 
- ---------------------------------------------------
-2023-09-06 14:38:58: case.submit starting 1328453.desched1
- ---------------------------------------------------
-2023-09-06 14:38:58: case.submit success 1328453.desched1
- ---------------------------------------------------
-2023-09-06 14:40:24: case.run starting 1328452.desched1
- ---------------------------------------------------
-2023-09-06 14:40:28: model execution starting 1328452.desched1
- ---------------------------------------------------
-2023-09-06 14:40:42: model execution error 
-ERROR: Command: 'mpiexec  --label  --line-buffer  -n 2176 /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed with error '' from dir '/glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/run'
- ---------------------------------------------------
-2023-09-06 14:40:42: case.run error 
-ERROR: RUN FAIL: Command 'mpiexec  --label  --line-buffer  -n 2176 /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/bld/cesm.exe   >> cesm.log.$LID 2>&1 ' failed
-See log file for details: /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/run/cesm.log.1328452.desched1.230906-144024
- ---------------------------------------------------
-2023-09-06 16:07:36: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2023-09-06 16:07:37: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
- ---------------------------------------------------
-2023-09-06 16:07:37: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
- ---------------------------------------------------
-2023-09-06 16:07:45: case.submit starting 1329570.desched1
- ---------------------------------------------------
-2023-09-06 16:07:45: case.submit success 1329570.desched1
- ---------------------------------------------------
-2023-09-06 16:21:32: case.run starting 1329569.desched1
- ---------------------------------------------------
-2023-09-06 16:21:36: model execution starting 1329569.desched1
- ---------------------------------------------------
-2023-09-06 23:53:46: model execution success 1329569.desched1
- ---------------------------------------------------
-2023-09-06 23:53:46: case.run success 1329569.desched1
- ---------------------------------------------------
-2023-09-06 23:54:07: st_archive starting 1329570.desched1
- ---------------------------------------------------
-2023-09-06 23:54:26: st_archive success 1329570.desched1
- ---------------------------------------------------
-2023-09-06 23:54:26: case.submit starting 1330583.desched1
- ---------------------------------------------------
-2023-09-06 23:54:26: case.submit success 1330583.desched1
- ---------------------------------------------------
-2023-09-06 23:54:38: case.run starting 1330582.desched1
- ---------------------------------------------------
-2023-09-06 23:54:41: model execution starting 1330582.desched1
- ---------------------------------------------------
-2023-09-07 07:36:46: model execution success 1330582.desched1
- ---------------------------------------------------
-2023-09-07 07:36:46: case.run success 1330582.desched1
- ---------------------------------------------------
-2023-09-07 07:36:58: st_archive starting 1330583.desched1
- ---------------------------------------------------
-2023-09-07 07:37:16: st_archive success 1330583.desched1
- ---------------------------------------------------
-2023-09-07 07:37:17: case.submit starting 1330782.desched1
- ---------------------------------------------------
-2023-09-07 07:37:17: case.submit success 1330782.desched1
- ---------------------------------------------------
-2023-09-07 07:37:29: case.run starting 1330781.desched1
- ---------------------------------------------------
-2023-09-07 07:37:33: model execution starting 1330781.desched1
- ---------------------------------------------------
-2023-09-07 11:45:57: case.build starting 
- ---------------------------------------------------
-2023-09-07 11:58:27: case.build success 
- ---------------------------------------------------
-2023-09-07 12:01:30: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2023-09-07 12:01:30: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
- ---------------------------------------------------
-2023-09-07 12:01:30: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
- ---------------------------------------------------
-2023-09-07 12:01:31: case.submit starting 
- ---------------------------------------------------
-2023-09-07 12:01:31: case.submit error 
-ERROR: CONTINUE_RUN is true but this case does not appear to have restart files staged in /glade/derecho/scratch/hannay/b.e23_alpha16b.BLT1850.ne30_t232.043/run rpointer.cpl
- ---------------------------------------------------
-2023-09-07 12:01:51: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
- ---------------------------------------------------
-2023-09-07 12:02:01: case.submit starting 1331437.desched1
- ---------------------------------------------------
-2023-09-07 12:02:01: case.submit success 1331437.desched1
- ---------------------------------------------------
-2023-09-07 12:02:13: case.run starting 1331436.desched1
- ---------------------------------------------------
-2023-09-07 12:02:20: model execution starting 1331436.desched1
+2023-09-07 12:01:49: model execution starting 1331434.desched1
  ---------------------------------------------------
