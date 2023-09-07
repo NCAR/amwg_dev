@@ -296,7 +296,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.042">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.043">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +305,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="b.e23_alpha16b.BLT1850.ne30_t232.042">
+    <entry id="CASE" value="b.e23_alpha16b.BLT1850.ne30_t232.043">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +325,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +343,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="a0f1adfc7eb1f26fd0535004b80582746a1f0743302777831bbdb78a4c59b42e">
+    <entry id="CASE_HASH" value="9b0f8870f81beb5a8c8ce95a3ddb250e9a81e77479cce86fc095be98d1131042">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
