@@ -6,7 +6,7 @@ The amwg_dev repository is dedicated to AMWG development simulations, which enco
 ## Development simulations
 The list of development simulations can be found under [Issues](https://github.com/NCAR/amwg_dev/issues). 
   - Each simulation is represented as a github issue. 
-  - Simulations can be sorted with labels (for instance, compset: FLHIST, B1850). 
+  - Simulations can be sorted with labels (for instance, compset: FLTHIST, B1850). 
   
 To request a new simulation run, please use the [Run request](https://github.com/NCAR/amwg_dev/issues/new/choose) template. 
   - Please provide as much details as possible. 
