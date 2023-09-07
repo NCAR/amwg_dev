@@ -24,7 +24,7 @@
       <type>char</type>
       <desc>project for project-sensitive build and run paths, and job scripts</desc>
     </entry>
-    <entry id="BATCH_COMMAND_FLAGS" value="  -q $JOB_QUEUE -l walltime=$JOB_WALLCLOCK_TIME -A $PROJECT">
+    <entry id="BATCH_COMMAND_FLAGS">
       <type>char</type>
       <valid_values/>
       <desc>Override the batch submit command this job. Do not include executable or dependencies</desc>
@@ -80,7 +80,7 @@
       <type>char</type>
       <desc>project for project-sensitive build and run paths, and job scripts</desc>
     </entry>
-    <entry id="BATCH_COMMAND_FLAGS" value="  -q $JOB_QUEUE -l walltime=$JOB_WALLCLOCK_TIME -A $PROJECT">
+    <entry id="BATCH_COMMAND_FLAGS">
       <type>char</type>
       <valid_values/>
       <desc>Override the batch submit command this job. Do not include executable or dependencies</desc>

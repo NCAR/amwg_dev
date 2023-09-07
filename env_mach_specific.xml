@@ -82,7 +82,6 @@
   <environment_variables>
     <env name="OMP_STACKSIZE">64M</env>
     <env name="FI_CXI_RX_MATCH_MODE">hybrid</env>
-    <env name="FI_MR_CACHE_MONITOR">memhooks</env>
   </environment_variables>
   <environment_variables comp_interface="nuopc">
     <env name="ESMF_RUNTIME_PROFILE">ON</env>

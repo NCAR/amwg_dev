@@ -232,7 +232,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="0001-01-01">
+    <entry id="RUN_STARTDATE" value="1995-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -328,7 +328,7 @@
       ignored.  default: false
     </desc>
     </entry>
-    <entry id="CONTINUE_RUN" value="FALSE">
+    <entry id="CONTINUE_RUN" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="5">
+    <entry id="RESUBMIT" value="0">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:1317945.desched1, case.st_archive:1317946.desched1">
+    <entry id="JOB_IDS" value="case.run:1319654.desched1, case.st_archive:1319655.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -999,7 +999,7 @@
     </entry>
   </group>
   <group id="run_co2">
-    <entry id="CCSM_CO2_PPMV" value="367.0">
+    <entry id="CCSM_CO2_PPMV" value="284.7">
       <type>real</type>
       <valid_values/>
       <desc>
@@ -1036,7 +1036,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="2000_cam6">
+    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1060,15 +1060,15 @@
       specification. Users should modify CAM namelists only via the
       $CASEROOT/user_nl_cam file.</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_FIRST" value="2000">
+    <entry id="CAM_STREAM_NDEP_YEAR_FIRST" value="1850">
       <type>char</type>
       <desc>Nitrogen deposition data year first</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="2000">
+    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="2015">
       <type>char</type>
       <desc>Nitrogen deposition data year last</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1">
+    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1850">
       <type>char</type>
       <desc>Nitrogen deposition align CAM_STREAM_NDEP_YEAR_FIRST with this model year</desc>
     </entry>
@@ -1113,7 +1113,7 @@
     subgrid heterogeneity, shallower soil, etc.
     </desc>
     </entry>
-    <entry id="CLM_NML_USE_CASE" value="2000_control">
+    <entry id="CLM_NML_USE_CASE" value="20thC_transient">
       <type>char</type>
       <desc>CLM namelist use_case.
       Determines the use-case that will be sent to the CLM build-namelist utility.
@@ -1296,7 +1296,7 @@
     Sets SST and ice coverage stream name.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_clim_c101029.nc">
+    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2012_c130411.nc">
       <type>char</type>
       <valid_values/>
       <desc>Prescribed SST and ice coverage data file name.
@@ -1349,7 +1349,7 @@
     Sets SST and ice coverage grid file name for prescribed runs.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_YEAR_ALIGN" value="1">
+    <entry id="SSTICE_YEAR_ALIGN" value="1850">
       <type>integer</type>
       <valid_values/>
       <desc>The model year that corresponds to SSTICE_YEAR_START on the data file.
@@ -1364,7 +1364,7 @@
     "taxmode" stream option; see the data model documentation for more details.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_YEAR_START" value="0">
+    <entry id="SSTICE_YEAR_START" value="1850">
       <type>integer</type>
       <valid_values/>
       <desc>The first year of data to use from SSTICE_DATA_FILENAME.
@@ -1373,7 +1373,7 @@
     years 0-9 in the file will not be used.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_YEAR_END" value="0">
+    <entry id="SSTICE_YEAR_END" value="2012">
       <type>integer</type>
       <valid_values/>
       <desc>The last year of data to use from SSTICE_DATA_FILENAME.
@@ -1389,7 +1389,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>If warnings in namelist setttings from buildnml should be ignored or not</desc>
     </entry>
-    <entry id="MOSART_SIM_YEAR" value="2000">
+    <entry id="MOSART_SIM_YEAR" value="1850">
       <type>char</type>
       <valid_values/>
       <desc>Simulation year to start from -- build-namelist options (currently not used)</desc>

@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cesm2_3_alpha16b">
+    <entry id="MODEL_VERSION" value="cam6_3_119">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -177,17 +177,12 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="2000_CAM%DEV%LT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
+    <entry id="COMPSET" value="HIST_CAM%DEV%LT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
   </group>
   <group id="case_comps">
-    <entry id="COMP_ROOT_DIR_ATM" value="$SRCROOT/components/cam/">
-      <type>char</type>
-      <desc>Root directory of the case atmospheric component  </desc>
-      <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_compsets.xsd</schema>
-    </entry>
     <entry id="COMP_ROOT_DIR_CPL" value="$SRCROOT/components/cmeps">
       <type>char</type>
       <desc>Root directory of the case driver/coupler component  </desc>
@@ -232,6 +227,11 @@
       <type>char</type>
       <desc>Root directory of the case external system processing (esp) component  </desc>
       <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_compsets.xsd</schema>
+    </entry>
+    <entry id="COMP_ROOT_DIR_ATM" value="$SRCROOT">
+      <type>char</type>
+      <desc>Root directory of the case atmosphere model component  </desc>
+      <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
   </group>
   <group id="case_comp">
@@ -296,7 +296,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.e23_alpha16b.FLT2000.ne30.033_pia">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae_dst1.3.001">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +305,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_119/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_119">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.e23_alpha16b.FLT2000.ne30.033_pia">
+    <entry id="CASE" value="f.cam6_3_119.FLTHIST_ne30.r328_gamma0.33_soae_dst1.3.001">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +325,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_119/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +343,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="72cfc5a17ac055f2097cf2da7b2f2a4397c94171bd3599c49fe9bca1aa857c5d">
+    <entry id="CASE_HASH" value="2a857cd36ef69dfe24a10a989a6f465671add15bc02d7fa742f746172bcc2f4e">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
