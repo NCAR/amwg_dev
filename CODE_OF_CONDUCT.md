@@ -1,4 +1,4 @@
-## Code of Conduct (IN CONSTRUCTION)
+## Code of Conduct
 
 ## Introduction
 
