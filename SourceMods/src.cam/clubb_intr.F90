@@ -20,7 +20,7 @@ module clubb_intr
   use shr_kind_mod,        only: r8=>shr_kind_r8
   use ppgrid,              only: pver, pverp, pcols, begchunk, endchunk
   use phys_control,        only: phys_getopts
-  use physconst,           only: cpair, gravit, rga, latvap, latice, zvir, rh2o,karman
+  use physconst,           only: cpair, gravit, rga, latvap, latice, zvir, rh2o
   use air_composition,     only: rairv, cpairv
   use cam_history_support, only: max_fieldname_len
 
@@ -180,55 +180,6 @@ module clubb_intr
   real(r8) :: clubb_detliq_rad = unset_r8
   real(r8) :: clubb_detice_rad = unset_r8
   real(r8) :: clubb_detphase_lowtemp = unset_r8
-  real(r8) :: clubb_C1c = unset_r8
-  real(r8) :: clubb_C7c = unset_r8
-  real(r8) :: clubb_C11c = unset_r8
-  real(r8) :: clubb_C12 = unset_r8
-  real(r8) :: clubb_C_wp2_pr_dfsn = unset_r8
-  real(r8) :: clubb_C_wp3_pr_tp = unset_r8
-  real(r8) :: clubb_C_wp3_pr_dfsn = unset_r8
-  real(r8) :: clubb_C6rt_Lscale0 = unset_r8
-  real(r8) :: clubb_C6thl_Lscale0 = unset_r8
-  real(r8) :: clubb_C7_Lscale0 = unset_r8
-  real(r8) :: clubb_c_K = unset_r8
-  real(r8) :: clubb_nu1 = unset_r8
-  real(r8) :: clubb_c_K6 = unset_r8
-  real(r8) :: clubb_nu6 = unset_r8
-  real(r8) :: clubb_nu8 = unset_r8
-  real(r8) :: clubb_nu10 = unset_r8
-  real(r8) :: clubb_c_K_hm = unset_r8
-  real(r8) :: clubb_c_K_hmb = unset_r8
-  real(r8) :: clubb_K_hm_min_coef = unset_r8
-  real(r8) :: clubb_nu_hm = unset_r8
-  real(r8) :: clubb_slope_coef_spread_DG_means_w = unset_r8
-  real(r8) :: clubb_pdf_component_stdev_factor_w = unset_r8
-  real(r8) :: clubb_coef_spread_DG_means_rt = unset_r8
-  real(r8) :: clubb_coef_spread_DG_means_thl = unset_r8
-  real(r8) :: clubb_gamma_coefc = unset_r8
-  real(r8) :: clubb_mu = unset_r8
-  real(r8) :: clubb_omicron = unset_r8
-  real(r8) :: clubb_zeta_vrnce_rat = unset_r8
-  real(r8) :: clubb_upsilon_precip_frac_rat = unset_r8
-  real(r8) :: clubb_taumin = unset_r8
-  real(r8) :: clubb_taumax = unset_r8
-  real(r8) :: clubb_Lscale_mu_coef = unset_r8
-  real(r8) :: clubb_Lscale_pert_coef = unset_r8
-  real(r8) :: clubb_alpha_corr = unset_r8
-  real(r8) :: clubb_thlp2_rad_coef = unset_r8
-  real(r8) :: clubb_thlp2_rad_cloud_frac_thresh = unset_r8
-  real(r8) :: clubb_C_invrs_tau_wpxp_Ri = unset_r8
-  real(r8) :: clubb_C_invrs_tau_wpxp_N2_thresh = unset_r8
-  real(r8) :: clubb_xp3_coef_base = unset_r8
-  real(r8) :: clubb_xp3_coef_slope = unset_r8
-  real(r8) :: clubb_altitude_threshold = unset_r8
-  real(r8) :: clubb_rtp2_clip_coef = unset_r8
-  real(r8) :: clubb_Cx_min = unset_r8
-  real(r8) :: clubb_Cx_max = unset_r8
-  real(r8) :: clubb_Richardson_num_min = unset_r8
-  real(r8) :: clubb_Richardson_num_max = unset_r8
-  real(r8) :: clubb_a3_coef_min = unset_r8
-  real(r8) :: clubb_a_const = unset_r8
-
   
   integer :: &
     clubb_iiPDF_type,          & ! Selected option for the two-component normal
@@ -356,9 +307,7 @@ module clubb_intr
     clubb_l_mono_flux_lim_vm,           & ! Flag to turn on monotonic flux limiter for vm
     clubb_l_mono_flux_lim_spikefix,     & ! Flag to implement monotonic flux limiter code that
                                           ! eliminates spurious drying tendencies at model top  
-    clubb_l_intr_sfc_flux_smooth = .false. , & ! Add a locally calculated roughness to upwp and vpwp sfc fluxes
-    clubb_l_use_wp3_lim_with_smth_Heaviside, &
-    clubb_l_modify_limiters_for_cnvg_test
+    clubb_l_intr_sfc_flux_smooth = .false.! Add a locally calculated roughness to upwp and vpwp sfc fluxes
 
 !  Constant parameters
   logical, parameter, private :: &
@@ -856,8 +805,6 @@ end subroutine clubb_init_cnst
          clubb_l_use_thvm_in_bv_freq, &
          clubb_l_use_tke_in_wp2_wp3_K_dfsn, &
          clubb_l_use_tke_in_wp3_pr_turb_term, &
-         clubb_l_use_wp3_lim_with_smth_Heaviside, &
-         clubb_l_modify_limiters_for_cnvg_test, &
          clubb_l_vary_convect_depth, &
          clubb_l_vert_avg_closure, &
          clubb_mult_coef, &
@@ -868,71 +815,9 @@ end subroutine clubb_init_cnst
          clubb_skw_max_mag, &
          clubb_tridiag_solve_method, &
          clubb_up2_sfc_coef, &
-         clubb_wpxp_L_thresh, &
-         clubb_C1c, &
-         clubb_C7c, &
-         clubb_C11c, &
-         clubb_C12, &
-         clubb_C_wp2_pr_dfsn, &
-         clubb_C_wp3_pr_tp, &
-         clubb_C_wp3_pr_dfsn, &
-         clubb_C6rt_Lscale0, &
-         clubb_C6thl_Lscale0, &
-         clubb_C7_Lscale0, &
-         clubb_c_K, &
-         clubb_nu1, &
-         clubb_c_K6, &
-         clubb_nu6, &
-         clubb_nu8, &
-         clubb_nu10, &
-         clubb_c_K_hm, &
-         clubb_c_K_hmb, &
-         clubb_K_hm_min_coef, &
-         clubb_nu_hm, &
-         clubb_slope_coef_spread_DG_means_w, &
-         clubb_pdf_component_stdev_factor_w, &
-         clubb_coef_spread_DG_means_rt, &
-         clubb_coef_spread_DG_means_thl, &
-         clubb_gamma_coefc, &
-         clubb_mu, &
-         clubb_omicron, &
-         clubb_zeta_vrnce_rat, &
-         clubb_upsilon_precip_frac_rat, &
-         clubb_taumin, &
-         clubb_taumax, &
-         clubb_Lscale_mu_coef, &
-         clubb_Lscale_pert_coef, &
-         clubb_alpha_corr, &
-         clubb_thlp2_rad_coef, &
-         clubb_thlp2_rad_cloud_frac_thresh, &
-         clubb_C_invrs_tau_wpxp_Ri, &
-         clubb_C_invrs_tau_wpxp_N2_thresh, &
-         clubb_xp3_coef_base, &
-         clubb_xp3_coef_slope, &
-         clubb_altitude_threshold, &
-         clubb_rtp2_clip_coef, &
-         clubb_Cx_min, &
-         clubb_Cx_max, &
-         clubb_Richardson_num_min, &
-         clubb_Richardson_num_max, &
-         clubb_a3_coef_min, &
-         clubb_a_const, &
-         clubb_l_use_precip_frac, &
-         clubb_l_C2_cloud_frac, &
-         clubb_l_diffuse_rtm_and_thlm, &
-         clubb_l_stability_correct_Kh_N2_zm, &
-         clubb_l_calc_thlp2_rad, &
-         clubb_l_upwind_xm_ma, &
-         clubb_l_uv_nudge, &
-         clubb_l_rtm_nudge, &
-         clubb_l_tke_aniso, &
-         clubb_l_diagnose_correlations, &
-         clubb_l_calc_w_corr, &
-         clubb_l_const_Nc_in_cloud, &
-         clubb_l_fix_w_chi_eta_correlations, &
-         clubb_l_prescribed_avg_deltaz, &
-         clubb_l_linearize_pbl_winds
-                               
+         clubb_wpxp_L_thresh!xxx, &
+!xxx         clubb_do_hb_above
+
     !----- Begin Code -----
 
     !  Determine if we want clubb_history to be output  
@@ -991,9 +876,7 @@ end subroutine clubb_init_cnst
                                              clubb_l_vary_convect_depth, & ! Out
                                              clubb_l_use_tke_in_wp3_pr_turb_term, & ! Out
                                              clubb_l_use_tke_in_wp2_wp3_K_dfsn, & ! Out
-                                             clubb_l_use_wp3_lim_with_smth_Heaviside, & ! Out
                                              clubb_l_smooth_Heaviside_tau_wpxp, & ! Out
-                                             clubb_l_modify_limiters_for_cnvg_test, & ! Out
                                              clubb_l_enable_relaxed_clipping, & ! Out
                                              clubb_l_linearize_pbl_winds, & ! Out
                                              clubb_l_mono_flux_lim_thlm, & ! Out
@@ -1170,102 +1053,6 @@ end subroutine clubb_init_cnst
     if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_detice_rad")
     call mpi_bcast(clubb_detphase_lowtemp, 1, mpi_real8,   mstrid, mpicom, ierr)
     if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_detphase_lowtemp")
-    call mpi_bcast(clubb_C1c,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C1c")
-    call mpi_bcast(clubb_C7c,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C7c")
-    call mpi_bcast(clubb_C11c,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C11c")
-    call mpi_bcast(clubb_C12,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C12")
-    call mpi_bcast(clubb_C_wp2_pr_dfsn,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C_wp2_pr_dfsn")
-    call mpi_bcast(clubb_C_wp3_pr_tp,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C_wp3_pr_tp")
-    call mpi_bcast(clubb_C_wp3_pr_dfsn,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C_wp3_pr_dfsn")
-    call mpi_bcast(clubb_C6rt_Lscale0,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C6rt_Lscale0")
-    call mpi_bcast(clubb_C6thl_Lscale0,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C6thl_Lscale0")
-    call mpi_bcast(clubb_C7_Lscale0,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C7_Lscale0")
-    call mpi_bcast(clubb_c_K,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_c_K")
-    call mpi_bcast(clubb_nu1,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_nu1")
-    call mpi_bcast(clubb_c_K6,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_c_K6")
-    call mpi_bcast(clubb_nu6,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_nu6")
-    call mpi_bcast(clubb_nu8,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_nu8")
-    call mpi_bcast(clubb_nu10,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_nu10")
-    call mpi_bcast(clubb_c_K_hm,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_c_K_hm")
-    call mpi_bcast(clubb_c_K_hmb,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_c_K_hmb")
-    call mpi_bcast(clubb_K_hm_min_coef,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_K_hm_min_coef")
-    call mpi_bcast(clubb_nu_hm,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_nu_hm")
-    call mpi_bcast(clubb_slope_coef_spread_DG_means_w,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_slope_coef_spread_DG_means_w")
-    call mpi_bcast(clubb_pdf_component_stdev_factor_w,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_pdf_component_stdev_factor_w")
-    call mpi_bcast(clubb_coef_spread_DG_means_rt,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_coef_spread_DG_means_rt")
-    call mpi_bcast(clubb_coef_spread_DG_means_thl,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_coef_spread_DG_means_thl")
-    call mpi_bcast(clubb_gamma_coefc,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_gamma_coefc")
-    call mpi_bcast(clubb_mu,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_mu")
-    call mpi_bcast(clubb_omicron,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_omicron")
-    call mpi_bcast(clubb_zeta_vrnce_rat,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_zeta_vrnce_rat")
-    call mpi_bcast(clubb_upsilon_precip_frac_rat,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_upsilon_precip_frac_rat")
-    call mpi_bcast(clubb_taumin,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_taumin")
-    call mpi_bcast(clubb_taumax,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_taumax")
-    call mpi_bcast(clubb_Lscale_mu_coef,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_Lscale_mu_coef")
-    call mpi_bcast(clubb_Lscale_pert_coef,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_Lscale_pert_coef")
-    call mpi_bcast(clubb_alpha_corr,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_alpha_corr")
-    call mpi_bcast(clubb_thlp2_rad_coef,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_thlp2_rad_coef")
-    call mpi_bcast(clubb_thlp2_rad_cloud_frac_thresh,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_thlp2_rad_cloud_frac_thresh")
-    call mpi_bcast(clubb_C_invrs_tau_wpxp_Ri,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C_invrs_tau_wpxp_Ri")
-    call mpi_bcast(clubb_C_invrs_tau_wpxp_N2_thresh,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_C_invrs_tau_wpxp_N2_thresh")
-    call mpi_bcast(clubb_xp3_coef_base,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_xp3_coef_base")
-    call mpi_bcast(clubb_xp3_coef_slope,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_xp3_coef_slope")
-    call mpi_bcast(clubb_altitude_threshold,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_altitude_threshold")
-    call mpi_bcast(clubb_rtp2_clip_coef,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_rtp2_clip_coef")
-    call mpi_bcast(clubb_Cx_min,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_Cx_min")
-    call mpi_bcast(clubb_Cx_max,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_Cx_max")
-    call mpi_bcast(clubb_Richardson_num_min,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_Richardson_num_min")
-    call mpi_bcast(clubb_Richardson_num_max,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_Richardson_num_max")
-    call mpi_bcast(clubb_a3_coef_min,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_a3_coef_min")
-    call mpi_bcast(clubb_a_const,                   1, mpi_real8,   mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_a_const")
 
     call mpi_bcast(clubb_l_use_C7_Richardson,         1, mpi_logical, mstrid, mpicom, ierr)
     if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_use_C7_Richardson")
@@ -1345,36 +1132,8 @@ end subroutine clubb_init_cnst
     if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_standard_term_ta")
     call mpi_bcast(clubb_l_partial_upwind_wp3,    1, mpi_logical, mstrid, mpicom, ierr)
     if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_partial_upwind_wp3")
-   call mpi_bcast(clubb_l_use_precip_frac,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_use_precip_frac")
-    call mpi_bcast(clubb_l_C2_cloud_frac,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_C2_cloud_frac")
-    call mpi_bcast(clubb_l_diffuse_rtm_and_thlm,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_diffuse_rtm_and_thlm")
-    call mpi_bcast(clubb_l_stability_correct_Kh_N2_zm,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_stability_correct_Kh_N2_zm")
-    call mpi_bcast(clubb_l_calc_thlp2_rad,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_calc_thlp2_rad")
-    call mpi_bcast(clubb_l_upwind_xm_ma,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_upwind_xm_ma")
-    call mpi_bcast(clubb_l_uv_nudge,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_uv_nudge")
-    call mpi_bcast(clubb_l_rtm_nudge,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_rtm_nudge")
-    call mpi_bcast(clubb_l_tke_aniso,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_tke_aniso")
-    call mpi_bcast(clubb_l_diagnose_correlations,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_diagnose_correlations")
-    call mpi_bcast(clubb_l_calc_w_corr,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_calc_w_corr")
-    call mpi_bcast(clubb_l_const_Nc_in_cloud,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_const_Nc_in_cloud")
-    call mpi_bcast(clubb_l_fix_w_chi_eta_correlations,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_fix_w_chi_eta_correlations")
-    call mpi_bcast(clubb_l_prescribed_avg_deltaz,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_prescribed_avg_deltaz")
-    call mpi_bcast(clubb_l_linearize_pbl_winds,    1, mpi_logical, mstrid, mpicom, ierr)
-    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_l_linearize_pbl_winds")
+!xxx    call mpi_bcast(clubb_do_hb_above,                1, mpi_logical, mstrid, mpicom, ierr)
+!xxx    if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: clubb_do_hb_above")
 
     !  Overwrite defaults if they are true
     if (clubb_history) l_stats = .true.
@@ -1441,54 +1200,6 @@ end subroutine clubb_init_cnst
     if(clubb_detphase_lowtemp == unset_r8) call endrun(sub//": FATAL: clubb_detphase_lowtemp not set")
     if(clubb_penta_solve_method == unset_i) call endrun(sub//": FATAL: clubb_penta_solve_method not set")
     if(clubb_tridiag_solve_method == unset_i) call endrun(sub//": FATAL: clubb_tridiag_solve_method not set")
-    if(clubb_C1c == unset_r8) call endrun(sub//": FATAL: clubb_c1c is not set")
-    if(clubb_C7c == unset_r8) call endrun(sub//": FATAL: clubb_c7c is not set")
-    if(clubb_C11c == unset_r8) call endrun(sub//": FATAL: clubb_c11c  is not set")
-    if(clubb_C12 == unset_r8) call endrun(sub//": FATAL: clubb_c12 is not set")
-    if(clubb_C_wp2_pr_dfsn == unset_r8) call endrun(sub//": FATAL: clubb_c_wp2_pr_dfsc is not set")
-    if(clubb_C_wp3_pr_tp == unset_r8) call endrun(sub//": FATAL: clubb_c_wp3_pr_tp is not set")
-    if(clubb_C_wp3_pr_dfsn == unset_r8) call endrun(sub//": FATAL: clubb_c_wp3_pr_dfsn is not set")
-    if(clubb_C6rt_Lscale0 == unset_r8) call endrun(sub//": FATAL: clubb_c6rt_Lscale0 is not set")
-    if(clubb_C6thl_Lscale0 == unset_r8) call endrun(sub//": FATAL: clubb_c6thl_Lscale0 is not set")
-    if(clubb_C7_Lscale0 == unset_r8) call endrun(sub//": FATAL: clubb_c7_Lscale0 is not set")
-    if(clubb_c_K == unset_r8) call endrun(sub//": FATAL: clubb_c_K is not set")
-    if(clubb_nu1 == unset_r8) call endrun(sub//": FATAL: clubb_nu1 is not set")
-    if(clubb_c_K6 == unset_r8) call endrun(sub//": FATAL: clubb_c_K6 is not set")
-    if(clubb_nu6 == unset_r8) call endrun(sub//": FATAL: clubb_nu6 is not set")
-    if(clubb_nu8 == unset_r8) call endrun(sub//": FATAL: clubb_nu8 is not set")
-    if(clubb_nu10 == unset_r8) call endrun(sub//": FATAL: clubb_nu10 is not set")
-    if(clubb_c_K_hm == unset_r8) call endrun(sub//": FATAL: clubb_c_K_hm is not set")
-    if(clubb_c_K_hmb == unset_r8) call endrun(sub//": FATAL: clubb_c_K_hmb is not set")
-    if(clubb_K_hm_min_coef == unset_r8) call endrun(sub//": FATAL: clubb_c_K_hm_min_coef is not set")
-    if(clubb_nu_hm == unset_r8) call endrun(sub//": FATAL: clubb_nu_hm is not set")
-    if(clubb_slope_coef_spread_DG_means_w == unset_r8) call endrun(sub//": FATAL: clubb_slope_coef_spread is not set")
-    if(clubb_pdf_component_stdev_factor_w == unset_r8) call endrun(sub//": FATAL: clubb_pdf_component is not set")
-    if(clubb_coef_spread_DG_means_rt == unset_r8) call endrun(sub//": FATAL: clubb_coef_spread_DG_rt is not set")
-    if(clubb_coef_spread_DG_means_thl == unset_r8) call endrun(sub//": FATAL: clubb_coef_spread_DG_thl is not set")
-    if(clubb_gamma_coefc == unset_r8) call endrun(sub//": FATAL: clubb_gamma_coefc is not set")
-    if(clubb_mu == unset_r8) call endrun(sub//": FATAL: clubb_mu is not set")
-    if(clubb_omicron == unset_r8) call endrun(sub//": FATAL: clubb_omicron is not set")
-    if(clubb_zeta_vrnce_rat == unset_r8) call endrun(sub//": FATAL: clubb_zeta_vrnce is not set")
-    if(clubb_upsilon_precip_frac_rat == unset_r8) call endrun(sub//": FATAL: clubb_upsilon_precip is not set")
-    if(clubb_taumin == unset_r8) call endrun(sub//": FATAL: clubb_taumin is not set")
-    if(clubb_taumax == unset_r8) call endrun(sub//": FATAL: clubb_taumax is not set")
-    if(clubb_Lscale_mu_coef == unset_r8) call endrun(sub//": FATAL: clubb_Lscale_mu is not set")
-    if(clubb_Lscale_pert_coef == unset_r8) call endrun(sub//": FATAL: clubb_Lscale_pert_coef is not set")
-    if(clubb_alpha_corr == unset_r8) call endrun(sub//": FATAL: clubb_alpha_corr is not set")
-    if(clubb_thlp2_rad_coef == unset_r8) call endrun(sub//": FATAL: clubb_thlp2_rad_coef is not set")
-    if(clubb_thlp2_rad_cloud_frac_thresh == unset_r8) call endrun(sub//": FATAL: clubb_thlp2_rad_cloud is not set")
-    if(clubb_C_invrs_tau_wpxp_Ri == unset_r8) call endrun(sub//": FATAL: clubb_c_invrs_tau_wpxp_Ri is not set")
-    if(clubb_C_invrs_tau_wpxp_N2_thresh == unset_r8) call endrun(sub//": FATAL: clubb_c_invrs_tau_wpxp_N2_thresh is not set")
-    if(clubb_xp3_coef_base == unset_r8) call endrun(sub//": FATAL: clubb_xp3_coef_base is not set")
-    if(clubb_xp3_coef_slope == unset_r8) call endrun(sub//": FATAL: clubb_xp3_coef_slope is not set")
-    if(clubb_altitude_threshold == unset_r8) call endrun(sub//": FATAL: clubb_altitude_thresh is not set")
-    if(clubb_rtp2_clip_coef == unset_r8) call endrun(sub//": FATAL: clubb_rtp2_clip_coef is not set")
-    if(clubb_Cx_min == unset_r8) call endrun(sub//": FATAL: clubb_Cx_min is not set")
-    if(clubb_Cx_max == unset_r8) call endrun(sub//": FATAL: clubb_Cx_max is not set")
-    if(clubb_Richardson_num_min == unset_r8) call endrun(sub//": FATAL: clubb_Rich_num_min is not set")
-    if(clubb_Richardson_num_max == unset_r8) call endrun(sub//": FATAL: clubb_Rich_num_max is not set")
-    if(clubb_a3_coef_min == unset_r8) call endrun(sub//": FATAL: clubb_a3_coef_min is not set")
-    if(clubb_a_const == unset_r8) call endrun(sub//": FATAL: clubb_a_const is not set")
     if(clubb_detphase_lowtemp >= meltpt_temp) & 
     call endrun(sub//": ERROR: clubb_detphase_lowtemp must be less than 268.15 K")
 
@@ -1539,10 +1250,8 @@ end subroutine clubb_init_cnst
                                                  clubb_l_e3sm_config, & ! In
                                                  clubb_l_vary_convect_depth, & ! In
                                                  clubb_l_use_tke_in_wp3_pr_turb_term, & ! In
-                                                 clubb_l_use_tke_in_wp2_wp3_K_dfsn, & ! In
-                                                 clubb_l_use_wp3_lim_with_smth_Heaviside, & ! Out 
+                                                 clubb_l_use_tke_in_wp2_wp3_K_dfsn, & ! In 
                                                  clubb_l_smooth_Heaviside_tau_wpxp, & ! In
-                                                 clubb_l_modify_limiters_for_cnvg_test, & ! Out
                                                  clubb_l_enable_relaxed_clipping, & ! In
                                                  clubb_l_linearize_pbl_winds, & ! In
                                                  clubb_l_mono_flux_lim_thlm, & ! In
@@ -1577,8 +1286,6 @@ end subroutine clubb_init_cnst
 
     !  From CAM libraries
     use cam_history,            only: addfld, add_default, horiz_only
-    use ref_pres,               only: pref_mid
-    use hb_diff,                only: init_hb_diff
     use rad_constituents,       only: rad_cnst_get_info, rad_cnst_get_mode_num_idx, rad_cnst_get_mam_mmr_idx
     use cam_abortutils,         only: endrun
 
@@ -1591,55 +1298,7 @@ end subroutine clubb_init_cnst
          iSkw_denom_coef, ibeta, iskw_max_mag, &
          iC_invrs_tau_bkgnd,iC_invrs_tau_sfc,iC_invrs_tau_shear,iC_invrs_tau_N2,iC_invrs_tau_N2_wp2, &
          iC_invrs_tau_N2_xp2,iC_invrs_tau_N2_wpxp,iC_invrs_tau_N2_clear_wp3,iC_uu_shr,iC_uu_buoy, &
-         iC2rt, iC2thl, iC2rtthl, ic_K1, ic_K2, inu2, ic_K8, ic_K9, inu9, iC_wp2_splat, params_list, &
-         iC1c, &
-         iC7c, &
-         iC11c, &
-         iC12, &
-         iC_wp2_pr_dfsn, &
-         iC_wp3_pr_tp, &
-         iC_wp3_pr_dfsn, &
-         iC6rt_Lscale0, &
-         iC6thl_Lscale0, &
-         iC7_Lscale0, &
-         ic_K, &
-         inu1, &
-         ic_K6, &
-         inu6, &
-         inu8, &
-         inu10, &
-         ic_K_hm, &
-         ic_K_hmb, &
-         iK_hm_min_coef, &
-         inu_hm, &
-         islope_coef_spread_DG_means_w, &
-         ipdf_component_stdev_factor_w, &
-         icoef_spread_DG_means_rt, &
-         icoef_spread_DG_means_thl, &
-         igamma_coefc, &
-         imu, &
-         iomicron, &
-         izeta_vrnce_rat, &
-         iupsilon_precip_frac_rat, &
-         itaumin, &
-         itaumax, &
-         iLscale_mu_coef, &
-         iLscale_pert_coef, &
-         ialpha_corr, &
-         ithlp2_rad_coef, &
-         ithlp2_rad_cloud_frac_thresh, &
-         iC_invrs_tau_wpxp_Ri, &
-         iC_invrs_tau_wpxp_N2_thresh, &
-         ixp3_coef_base, &
-         ixp3_coef_slope, &
-         ialtitude_threshold, &
-         irtp2_clip_coef, &
-         iCx_min, &
-         iCx_max, &
-         iRichardson_num_min, &
-         iRichardson_num_max, &
-         ia3_coef_min, &
-         ia_const
+         iC2rt, iC2thl, iC2rtthl, ic_K1, ic_K2, inu2, ic_K8, ic_K9, inu9, iC_wp2_splat, params_list
 
     use clubb_api_module, only: &
          print_clubb_config_flags_api, &
@@ -1690,8 +1349,6 @@ end subroutine clubb_init_cnst
 
     integer :: err_code                   ! Code for when CLUBB fails
     integer :: i, j, k, l                    ! Indices
-    integer :: ntop_eddy                        ! Top    interface level to which eddy vertical diffusion is applied ( = 1 )
-    integer :: nbot_eddy                        ! Bottom interface level to which eddy vertical diffusion is applied ( = pver )
     integer :: nmodes, nspec, m
     integer :: ixq, ixcldice, ixcldliq, ixnumliq, ixnumice
     integer :: lptr
@@ -1722,7 +1379,7 @@ end subroutine clubb_init_cnst
       C_invrs_tau_shear, C_invrs_tau_N2, C_invrs_tau_N2_wp2, &
       C_invrs_tau_N2_xp2, C_invrs_tau_N2_wpxp, C_invrs_tau_N2_clear_wp3, &
       C_invrs_tau_wpxp_Ri, C_invrs_tau_wpxp_N2_thresh, &
-      Cx_min, Cx_max, Richardson_num_min, Richardson_num_max, a3_coef_min, a_const
+      Cx_min, Cx_max, Richardson_num_min, Richardson_num_max, a3_coef_min
 
     !----- Begin Code -----
 
@@ -1877,7 +1534,7 @@ end subroutine clubb_init_cnst
                C_invrs_tau_N2_wpxp, C_invrs_tau_N2_clear_wp3, &
                C_invrs_tau_wpxp_Ri, C_invrs_tau_wpxp_N2_thresh, &
                Cx_min, Cx_max, Richardson_num_min, &
-               Richardson_num_max, a3_coef_min, a_const )
+               Richardson_num_max, a3_coef_min )
 
     call read_parameters_api( -99, "", &
                               C1, C1b, C1c, C2rt, C2thl, C2rtthl, &
@@ -1903,7 +1560,7 @@ end subroutine clubb_init_cnst
                               C_invrs_tau_N2_wpxp, C_invrs_tau_N2_clear_wp3, &
                               C_invrs_tau_wpxp_Ri, C_invrs_tau_wpxp_N2_thresh, &
                               Cx_min, Cx_max, Richardson_num_min, &
-                              Richardson_num_max, a3_coef_min, a_const, &
+                              Richardson_num_max, a3_coef_min, &
                               clubb_params )
 
     clubb_params(iC2rtthl) = clubb_C2rtthl
@@ -1955,54 +1612,6 @@ end subroutine clubb_init_cnst
     clubb_params(iC_invrs_tau_N2_xp2) = clubb_C_invrs_tau_N2_xp2
     clubb_params(iC_invrs_tau_N2_wpxp) = clubb_C_invrs_tau_N2_wpxp
     clubb_params(iC_invrs_tau_N2_clear_wp3) = clubb_C_invrs_tau_N2_clear_wp3
-    clubb_params(iC1c) = clubb_C1c
-    clubb_params(iC7c) = clubb_C7c
-    clubb_params(iC11c) = clubb_C11c
-    clubb_params(iC12) = clubb_C12
-    clubb_params(iC_wp2_pr_dfsn) = clubb_C_wp2_pr_dfsn
-    clubb_params(iC_wp3_pr_tp) = clubb_C_wp3_pr_tp
-    clubb_params(iC_wp3_pr_dfsn) = clubb_C_wp3_pr_dfsn
-    clubb_params(iC6rt_Lscale0) = clubb_C6rt_Lscale0
-    clubb_params(iC6thl_Lscale0) = clubb_C6thl_Lscale0
-    clubb_params(iC7_Lscale0) = clubb_C7_Lscale0
-    clubb_params(ic_K) = clubb_c_K
-    clubb_params(inu1) = clubb_nu1
-    clubb_params(ic_K6) = clubb_c_K6
-    clubb_params(inu6) = clubb_nu6
-    clubb_params(inu8) = clubb_nu8
-    clubb_params(inu10) = clubb_nu10
-    clubb_params(ic_K_hm) = clubb_c_K_hm
-    clubb_params(ic_K_hmb) = clubb_c_K_hmb
-    clubb_params(iK_hm_min_coef) = clubb_K_hm_min_coef
-    clubb_params(inu_hm) = clubb_nu_hm
-    clubb_params(islope_coef_spread_DG_means_w) = clubb_slope_coef_spread_DG_means_w
-    clubb_params(ipdf_component_stdev_factor_w) = clubb_pdf_component_stdev_factor_w
-    clubb_params(icoef_spread_DG_means_rt) = clubb_coef_spread_DG_means_rt
-    clubb_params(icoef_spread_DG_means_thl) = clubb_coef_spread_DG_means_thl
-    clubb_params(igamma_coefc) = clubb_gamma_coefc
-    clubb_params(imu) = clubb_mu
-    clubb_params(iomicron) = clubb_omicron
-    clubb_params(izeta_vrnce_rat) = clubb_zeta_vrnce_rat
-    clubb_params(iupsilon_precip_frac_rat) = clubb_upsilon_precip_frac_rat
-    clubb_params(itaumin) = clubb_taumin
-    clubb_params(itaumax) = clubb_taumax
-    clubb_params(iLscale_mu_coef) = clubb_Lscale_mu_coef
-    clubb_params(iLscale_pert_coef) = clubb_Lscale_pert_coef
-    clubb_params(ialpha_corr) = clubb_alpha_corr
-    clubb_params(ithlp2_rad_coef) = clubb_thlp2_rad_coef
-    clubb_params(ithlp2_rad_cloud_frac_thresh) = clubb_thlp2_rad_cloud_frac_thresh
-    clubb_params(iC_invrs_tau_wpxp_Ri) = clubb_C_invrs_tau_wpxp_Ri
-    clubb_params(iC_invrs_tau_wpxp_N2_thresh) = clubb_C_invrs_tau_wpxp_N2_thresh
-    clubb_params(ixp3_coef_base) = clubb_xp3_coef_base
-    clubb_params(ixp3_coef_slope) = clubb_xp3_coef_slope
-    clubb_params(ialtitude_threshold) = clubb_altitude_threshold
-    clubb_params(irtp2_clip_coef) = clubb_rtp2_clip_coef
-    clubb_params(iCx_min) = clubb_Cx_min
-    clubb_params(iCx_max) = clubb_Cx_max
-    clubb_params(iRichardson_num_min) = clubb_Richardson_num_min
-    clubb_params(iRichardson_num_max) = clubb_Richardson_num_max
-    clubb_params(ia3_coef_min) = clubb_a3_coef_min
-    clubb_params(ia_const) = clubb_a_const
    
     !  Set up CLUBB core.  Note that some of these inputs are overwritten
     !  when clubb_tend_cam is called.  The reason is that heights can change
@@ -2044,17 +1653,6 @@ end subroutine clubb_init_cnst
        write(iulog,'(a,i0,a)') " CLUBB configurable flags "
        call print_clubb_config_flags_api( iulog, clubb_config_flags ) ! Intent(in)
     end if
-
-    ! ----------------------------------------------------------------- !
-    ! Set-up HB diffusion.  Only initialized to diagnose PBL depth      !
-    ! ----------------------------------------------------------------- !
-
-    ! Initialize eddy diffusivity module
-    
-    ntop_eddy = 1    ! if >1, must be <= nbot_molec
-    nbot_eddy = pver ! currently always pver
-    
-    call init_hb_diff( gravit, cpair, ntop_eddy, nbot_eddy, pref_mid, karman, eddy_scheme )
     
     ! ----------------------------------------------------------------- !
     ! Add output fields for the history files
