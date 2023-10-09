@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:1407923.desched1, case.st_archive:1407924.desched1">
+    <entry id="JOB_IDS" value="case.run:3725443.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:3725444.chadmin1.ib0.cheyenne.ucar.edu">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -408,7 +408,7 @@
       <valid_values/>
       <desc>GNU make command</desc>
     </entry>
-    <entry id="GMAKE_J" value="16">
+    <entry id="GMAKE_J" value="8">
       <type>integer</type>
       <valid_values/>
       <desc>Number of processors for gmake</desc>
@@ -645,7 +645,7 @@
     </entry>
   </group>
   <group id="run_din">
-    <entry id="NODENAME_REGEX" value="de.*.hpc.ucar.edu">
+    <entry id="NODENAME_REGEX" value=".*.?cheyenne\d?.ucar.edu">
       <type>char</type>
       <desc>
       A regular expression to match machine node names to ACME machine.
@@ -679,7 +679,7 @@
       $CIMEROOT/machines/config_machines.xml
     </desc>
     </entry>
-    <entry id="DIN_LOC_ROOT_CLMFORC" value="$ENV{CESMDATAROOT}/inputdata/atm/datm7">
+    <entry id="DIN_LOC_ROOT_CLMFORC" value="/glade/p/cgd/tss/CTSM_datm_forcing_data">
       <type>char</type>
       <desc>CLM-specific root directory for CLM type input forcing data
     This directory will only be used for I (CLM/DATM) compsets and only
@@ -787,7 +787,7 @@
     </entry>
     <entry id="PIO_TYPENAME">
       <type>char</type>
-      <valid_values>netcdf,netcdf4p,netcdf4c,pnetcdf,nothing</valid_values>
+      <valid_values>netcdf,pnetcdf,netcdf4p,netcdf4c,nothing</valid_values>
       <desc>pio io type</desc>
       <values>
         <value compclass="ATM">pnetcdf</value>

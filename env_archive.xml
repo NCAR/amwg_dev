@@ -21,7 +21,7 @@
       wild card characters.
     </header>
   <components version="2.0">
-    <comp_archive_spec compname="cam" compclass="atm">
+    <comp_archive_spec compclass="atm" compname="cam">
       <rest_file_extension>r</rest_file_extension>
       <rest_file_extension>rh\d*</rest_file_extension>
       <rest_file_extension>rs</rest_file_extension>
@@ -45,7 +45,7 @@
         <tfile disposition="move">casename.cam.i.1976-01-01-00000.nc</tfile>
       </test_file_names>
     </comp_archive_spec>
-    <comp_archive_spec compname="clm" compclass="lnd">
+    <comp_archive_spec compclass="lnd" compname="clm">
       <rest_file_extension>r</rest_file_extension>
       <rest_file_extension>rh\d?</rest_file_extension>
       <hist_file_extension>h\d*.*\.nc$</hist_file_extension>
@@ -71,7 +71,7 @@
         <tfile disposition="ignore">anothercasename.clm2.i.1976-01-01-00000.nc</tfile>
       </test_file_names>
     </comp_archive_spec>
-    <comp_archive_spec compname="cice" compclass="ice">
+    <comp_archive_spec compclass="ice" compname="cice">
       <rest_file_extension>[ri]</rest_file_extension>
       <hist_file_extension>h\d*.*\.nc$</hist_file_extension>
       <rest_history_varname>unset</rest_history_varname>
@@ -85,7 +85,7 @@
         <tfile disposition="move">casename.cice.h.1976-01-01-00000.nc</tfile>
       </test_file_names>
     </comp_archive_spec>
-    <comp_archive_spec compname="mom" compclass="ocn">
+    <comp_archive_spec compclass="ocn" compname="mom">
       <rest_file_extension>r</rest_file_extension>
       <hist_file_extension>h(\.\w+)?(\._\d*)?\.[-\d+]+\.nc(\.\d*)?$</hist_file_extension>
       <hist_file_extension>h\.static(\._\d*)?\.nc(\.\d*)?$</hist_file_extension>
@@ -94,7 +94,7 @@
         <rpointer_file>rpointer.ocn$NINST_STRING</rpointer_file>
       </rpointer>
     </comp_archive_spec>
-    <comp_archive_spec compname="mosart" compclass="rof">
+    <comp_archive_spec compclass="rof" compname="mosart">
       <rest_file_extension>r</rest_file_extension>
       <rest_file_extension>rh\d*</rest_file_extension>
       <hist_file_extension>h\d*.*\.nc$</hist_file_extension>
@@ -112,7 +112,7 @@
         <tfile disposition="ignore">casename.mosart.h0.1976-01-01-00000.nc.base</tfile>
       </test_file_names>
     </comp_archive_spec>
-    <comp_archive_spec compname="cism" compclass="glc">
+    <comp_archive_spec compclass="glc" compname="cism">
       <rest_file_extension>[a-z]+\.r</rest_file_extension>
       <hist_file_extension>[a-z]+\.h\..*\.nc$</hist_file_extension>
       <hist_file_extension>[a-z]+\.initial_hist\..*\.nc$</hist_file_extension>
@@ -152,7 +152,7 @@
         <tfile disposition="ignore">anothercasename.cism.gris.r.1976-01-01-00000.nc</tfile>
       </test_file_names>
     </comp_archive_spec>
-    <comp_archive_spec compname="ww3" compclass="wav">
+    <comp_archive_spec compclass="wav" compname="ww3">
       <rest_file_extension>r</rest_file_extension>
       <hist_file_extension>hi.*\.nc$</hist_file_extension>
       <rest_history_varname>unset</rest_history_varname>
@@ -161,7 +161,7 @@
         <rpointer_content>unset</rpointer_content>
       </rpointer>
     </comp_archive_spec>
-    <comp_archive_spec compname="drv" compclass="cpl">
+    <comp_archive_spec compclass="cpl" compname="drv">
       <rest_file_extension>r</rest_file_extension>
       <hist_file_extension>hi?\d*.*\.nc$</hist_file_extension>
       <rest_history_varname>unset</rest_history_varname>
