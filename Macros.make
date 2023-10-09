@@ -3,33 +3,37 @@
 # sharedlib flags, you can edit the cmake_macros in this case. You
 # can change flags for specific sharedlibs only by checking COMP_NAME.
 
-CFLAGS :=  -qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal -qopt-report -xCORE_AVX2 -no-fma
-CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -DFORTRANUNDERSCORE -DCPRINTEL
+CFLAGS :=  -qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal -march=core-avx2
+CMAKE_OPTS := -DCMAKE_SYSTEM_NAME=Catamount
+CONFIG_ARGS := --host=cray
+CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -DFORTRANUNDERSCORE -DCPRINTEL -DLINUX -DHAVE_GETTID
 CXX_LDFLAGS :=  -cxxlib
 CXX_LINKER := FORTRAN
 FC_AUTO_R8 := -r8
-FFLAGS :=  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -qopt-report -xCORE_AVX2 -no-fma
+FFLAGS :=  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -march=core-avx2
 FFLAGS_NOOPT := -O0
 FIXEDFLAGS := -fixed
 FREEFLAGS := -free
-HAS_F2008_CONTIGUOUS := TRUE
 MACRO_FILE := 
-MPICC := mpicc
-MPICXX := mpicxx
-MPIFC := mpif90
-NETCDF_PATH := /glade/u/apps/ch/opt/netcdf-mpi/4.8.1/mpt/2.22/intel/19.1.1/
-PIO_FILESYSTEM_HINTS := gpfs
-PNETCDF_PATH := /glade/u/apps/ch/opt/pnetcdf/1.12.2/mpt/2.22/intel/19.1.1/
-SCC := icc
-SCXX := icpc
+MPICC := cc
+MPICXX := CC
+MPIFC := ftn
+NETCDF_PATH := /glade/u/apps/derecho/23.06/spack/opt/spack/netcdf/4.9.2/cray-mpich/8.1.25/oneapi/2023.0.0/wzol
+PIO_FILESYSTEM_HINTS := lustre
+PNETCDF_PATH := /glade/u/apps/derecho/23.06/spack/opt/spack/parallel-netcdf/1.12.3/cray-mpich/8.1.25/oneapi/2023.0.0/blyr
+SCC := icx
+SCXX := CC
 SFC := ifort
-SLIBS := $(SLIBS)  -mkl=cluster
+SLIBS := $(SLIBS)  
 SUPPORTS_CXX := TRUE
 
 ifeq "$(COMP_NAME)" "mom"
-  CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -Duse_LARGEFILE -DFORTRANUNDERSCORE -DCPRINTEL
-  FFLAGS :=  $(FC_AUTO_R8)  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -qopt-report -xCORE_AVX2 -no-fma
+  CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -Duse_LARGEFILE -DFORTRANUNDERSCORE -DCPRINTEL -DLINUX -DHAVE_GETTID
+  FFLAGS :=  $(FC_AUTO_R8)  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -march=core-avx2
 endif
 ifeq "$(COMP_NAME)" "gptl"
-  CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -DFORTRANUNDERSCORE -DCPRINTEL -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY
+  CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -DFORTRANUNDERSCORE -DCPRINTEL -DLINUX -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY -DHAVE_GETTID -DHAVE_SLASHPROC
+endif
+ifeq "$(COMP_NAME)" "mpi-serial"
+  CFLAGS :=  -qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal -march=core-avx2 -std=c89 
 endif

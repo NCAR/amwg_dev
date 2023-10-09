@@ -264,14 +264,14 @@
       negative value implies off
     </desc>
     </entry>
-    <entry id="REST_OPTION" value="nyears">
+    <entry id="REST_OPTION" value="$STOP_OPTION">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
     </entry>
-    <entry id="REST_N" value="1">
+    <entry id="REST_N" value="$STOP_N">
       <type>integer</type>
       <desc>
       sets model restart writes with REST_OPTION and REST_DATE
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="0">
+    <entry id="RESUBMIT" value="1">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:3725443.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:3725444.chadmin1.ib0.cheyenne.ucar.edu">
+    <entry id="JOB_IDS" value="case.run:1434127.desched1, case.st_archive:1434128.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -408,7 +408,7 @@
       <valid_values/>
       <desc>GNU make command</desc>
     </entry>
-    <entry id="GMAKE_J" value="8">
+    <entry id="GMAKE_J" value="16">
       <type>integer</type>
       <valid_values/>
       <desc>Number of processors for gmake</desc>
@@ -583,7 +583,7 @@
       <type>char</type>
       <desc>rof2ocn flux mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e1000r1000_230415.nc">
+    <entry id="ROF2OCN_LIQ_RMAPNAME" value="/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_r05_to_tx2_3_nnsm_e250r250_230914.nc">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
@@ -595,7 +595,7 @@
       <type>char</type>
       <desc>glc2ice runoff mapping file</desc>
     </entry>
-    <entry id="GLC2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e1000r300_230415.nc">
+    <entry id="GLC2OCN_LIQ_RMAPNAME" value="/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_gland4km_to_tx2_3_nnsm_e250r250_230914.nc">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for liquid runoff</desc>
     </entry>
@@ -645,7 +645,7 @@
     </entry>
   </group>
   <group id="run_din">
-    <entry id="NODENAME_REGEX" value=".*.?cheyenne\d?.ucar.edu">
+    <entry id="NODENAME_REGEX" value="de.*.hpc.ucar.edu">
       <type>char</type>
       <desc>
       A regular expression to match machine node names to ACME machine.
@@ -679,7 +679,7 @@
       $CIMEROOT/machines/config_machines.xml
     </desc>
     </entry>
-    <entry id="DIN_LOC_ROOT_CLMFORC" value="/glade/p/cgd/tss/CTSM_datm_forcing_data">
+    <entry id="DIN_LOC_ROOT_CLMFORC" value="$ENV{CESMDATAROOT}/inputdata/atm/datm7">
       <type>char</type>
       <desc>CLM-specific root directory for CLM type input forcing data
     This directory will only be used for I (CLM/DATM) compsets and only
@@ -787,7 +787,7 @@
     </entry>
     <entry id="PIO_TYPENAME">
       <type>char</type>
-      <valid_values>netcdf,pnetcdf,netcdf4p,netcdf4c,nothing</valid_values>
+      <valid_values>netcdf,netcdf4p,netcdf4c,pnetcdf,nothing</valid_values>
       <desc>pio io type</desc>
       <values>
         <value compclass="ATM">pnetcdf</value>

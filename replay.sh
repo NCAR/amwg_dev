@@ -2,41 +2,33 @@
 
 set -e
 
-# Created 2023-09-29 11:16:53
+# Created 2023-10-05 16:16:40
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.049"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.050"
 
-/glade/work/hannay/cesm_tags/cesm2_3_alpha16b_taus/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
+/glade/work/gmarques/cesm.sandboxes/cesm2_3_alpha16b_t025/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case b.e23_alpha16b.BLT1850.ne30_t232.050 --run-unsupported --project CESM0023
 
 cd "${CASEDIR}"
 
-./case.setup
-
-./preview_namelists
-
 ./xmlchange --append CAM_CONFIG_OPTS=-cosp
 
-./case.build
+./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange ROF2OCN_LIQ_RMAPNAME=/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_r05_to_tx2_3_nnsm_e250r250_230914.nc
+
+./xmlchange GLC2OCN_LIQ_RMAPNAME=/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_gland4km_to_tx2_3_nnsm_e250r250_230914.nc
+
+./case.setup
 
 ./case.build
 
-./case.build
+./check_case
 
-./case.build
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=0,STOP_N=1,STOP_OPTION=nmonths
-
-./xmlchange JOB_WALLCLOCK_TIME=12:00:00
-
-./xmlchange JOB_QUEUE=regular
-
-./xmlchange JOB_QUEUE=premium
+./pelayout
 
 ./case.submit
 
-./xmlchange NTASKS_LND=720,NTASKS_ROF-720,ROOTPE_ICE=720
-
-./xmlchange NTASKS_LND=720,NTASKS_ROF=720,ROOTPE_ICE=720
+./case.submit
 
 ./case.setup --reset
 
@@ -46,21 +38,19 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange REST_OPTION=nyears,REST_N=1
-
 ./xmlchange JOB_WALLCLOCK_TIME=12:00:00
 
-./xmlchange JOB_QUEUE=regular
+./case.build
+
+./case.submit
+
+./case.submit
+
+./case.build
 
 ./case.submit
 
 ./case.submit
 
 ./case.submit
-
-./case.submit
-
-./xmlchange RESUBMIT=10
 
