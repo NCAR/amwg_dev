@@ -22,7 +22,6 @@
  do_beljaars		=  .true.  
 /
 &cam_history_nl
- avgflag_pertape(8)		= 'N'
  empty_htapes		= .true.
  fincl1		= 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn', 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT',
          'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED',
@@ -57,7 +56,6 @@
  mfilt		= 0,5,20,40,12,120,1,1
  ndens		= 2,2,2,2,2,1,2,1
  nhtfrq		= 0,-24,-24,-3,0,-2,0,-8760
- nhtfrq(8)		= -8760
 /
 &cam_initfiles_nl
  bnd_topo		= '/glade/p/cesmdata/inputdata/atm/cam/topo/se/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_20230105.nc'
@@ -392,7 +390,7 @@
 &microp_aero_nl
  microp_aero_bulk_scale		=   2.D0    
  microp_aero_npccn_scale		=   1.D0    
- microp_aero_wsub_min		=   0.2D0    
+ microp_aero_wsub_min		= 0.
  microp_aero_wsub_scale		= 0.25
  microp_aero_wsubi_min		=   0.001D0    
  microp_aero_wsubi_scale		= 1.0
@@ -522,10 +520,6 @@
  solar_data_ymd		=    18500101           
  solar_htng_spctrl_scl		= .true.
  solar_irrad_data_file		= '/glade/p/cesmdata/inputdata/atm/cam/solar/SolarForcingCMIP6piControl_c160921.nc'
-/
-&thermo_budget_nl
- thermo_budget_histfile_num		= 8
- thermo_budget_history		= .true.
 /
 &tms_nl
  do_tms		=  .false. 

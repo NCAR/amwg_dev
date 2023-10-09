@@ -296,7 +296,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.050">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.051">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +305,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/gmarques/cesm.sandboxes/cesm2_3_alpha16b_t025/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/gmarques/cesm.sandboxes/cesm2_3_alpha16b_t025">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="b.e23_alpha16b.BLT1850.ne30_t232.050">
+    <entry id="CASE" value="b.e23_alpha16b.BLT1850.ne30_t232.051">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +325,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/gmarques/cesm.sandboxes/cesm2_3_alpha16b_t025/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16b/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -339,11 +339,11 @@
       <type>char</type>
       <desc>case user name</desc>
     </entry>
-    <entry id="REALUSER" value="gmarques">
+    <entry id="REALUSER" value="hannay">
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="97ac6578136b0f92b8a1a6341f1fe5b14410e461046ff120ae143b0be995f05e">
+    <entry id="CASE_HASH" value="5eb50e3841ae37375eef0210aba6125cd3980a7d58bb2c059160ed377819f93e">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>

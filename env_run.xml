@@ -264,14 +264,14 @@
       negative value implies off
     </desc>
     </entry>
-    <entry id="REST_OPTION" value="$STOP_OPTION">
+    <entry id="REST_OPTION" value="nyears">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
     </entry>
-    <entry id="REST_N" value="$STOP_N">
+    <entry id="REST_N" value="1">
       <type>integer</type>
       <desc>
       sets model restart writes with REST_OPTION and REST_DATE
@@ -348,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="1">
+    <entry id="RESUBMIT" value="3">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:1434127.desched1, case.st_archive:1434128.desched1">
+    <entry id="JOB_IDS" value="case.run:1434046.desched1, case.st_archive:1434047.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
