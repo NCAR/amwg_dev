@@ -1,12 +1,12 @@
 &drydep_inparm
-  dep_data_file = '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/trop_mozart/dvel/dep_data_c20221208.nc'
+  dep_data_file = '/glade/p/cesmdata/inputdata/atm/cam/chem/trop_mozart/dvel/dep_data_c20221208.nc'
   drydep_list = 'DMS', 'H2O2', 'H2SO4', 'SO2', 'SOAG'
 /
 &lightning_coupling_nl
   atm_provides_lightning = .true.
 /
 &megan_emis_nl
-  megan_factors_file = '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/trop_mozart/emis/megan21_emis_factors_78pft_c20161108.nc'
+  megan_factors_file = '/glade/p/cesmdata/inputdata/atm/cam/chem/trop_mozart/emis/megan21_emis_factors_78pft_c20161108.nc'
   megan_mapped_emisfctrs = .false.
   megan_specifier = 'SOAE = 0.5954*isoprene + 5.1004*(carene_3 + pinene_a + thujene_a + bornene +',
       ' terpineol_4 + terpineol_a + terpinyl_ACT_a + myrtenal + sabinene + pinene_b + camphene +',
