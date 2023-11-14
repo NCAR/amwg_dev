@@ -1,29 +1,25 @@
 &cism_params
- cism_debug = .false.
- ice_flux_routing = 'ocn'
- paramfile = 'cism.config'
- test_coupling = .false.
- zero_gcm_fluxes = .true.
-/
-&cism_history
- cesm_history_vars = 'smb artm thk usurf topg'
- history_frequency = 1
- history_option = 'nyears'
+  cism_debug = .false.
+  enable_frac_overrides = .false.
+  ice_flux_routing = "ocn"
+  icesheet_names = "gris"
+  num_icesheets = 1
+  paramfile_base = "cism"
+  test_coupling = .false.
 /
 &time_manager_nml
- allow_leapyear = .false.
- date_separator = '-'
- dt_count = 1
- dt_option = 'steps_per_day'
- iday0 = 1
- ihour0 = 0
- iminute0 = 0
- imonth0 = 1
- isecond0 = 0
- iyear0 = 1
- runid = 'e21.f09_g16_L32.1xco2.c1_qflux_global.c1_tfrz.001'
- stop_option = 'never'
+  allow_leapyear = .false.
+  date_separator = "-"
+  dt_count = 1
+  dt_option = "steps_per_day"
+  iday0 = 1
+  ihour0 = 0
+  iminute0 = 0
+  imonth0 = 1
+  isecond0 = 0
+  iyear0 = 1
+  runid = "b.e23_alpha16b.BLT1850.ne30_t232.052"
+  stop_option = "never"
 /
 &glc_override_nml
- enable_frac_overrides = .false.
 /

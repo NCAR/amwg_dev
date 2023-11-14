@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2023-10-06 14:05:28
+# Created 2023-10-10 13:24:34
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.051"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.052"
 
 /glade/work/hannay/cesm_tags/cesm2_3_alpha16b/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
 
@@ -16,15 +16,15 @@ cd "${CASEDIR}"
 
 ./xmlchange --append CAM_CONFIG_OPTS=-cosp
 
-./case.build
-
 ./xmlchange ROF2OCN_LIQ_RMAPNAME=/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_r05_to_tx2_3_nnsm_e250r250_230914.nc
 
 ./xmlchange GLC2OCN_LIQ_RMAPNAME=/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_gland4km_to_tx2_3_nnsm_e250r250_230914.nc
 
 ./case.build
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
+./case.build
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=12,STOP_N=2,STOP_OPTION=nyears
 
 ./xmlchange REST_OPTION=nyears,REST_N=1
 
@@ -32,5 +32,15 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=12,STOP_N=2,STOP_OPTION=nyears
+./xmlchange RESUBMIT=1-
+
+./xmlchange RESUBMIT=10
+
+./case.submit
+
+./xmlchange RESBMIT=20
+
+./xmlchange RESUBMIT=20
+
+./case.submit
 

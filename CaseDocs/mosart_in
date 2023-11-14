@@ -1,14 +1,13 @@
 &mosart_inparm
-  bypass_routing_option = "direct_in_place"
+  bypass_routing_option = "direct_to_outlet"
   coupling_period = 10800
   decomp_option = "roundrobin"
   delt_mosart = 3600
-  do_rtm = .true.
   do_rtmflood = .false.
   finidat_rtm = " "
   frivinp_rtm = "/glade/campaign/cesm/cesmdata/inputdata/rof/mosart/MOSART_routing_Global_0.5x0.5_c170601.nc"
   ice_runoff = .true.
-  qgwl_runoff_option = "threshold"
+  qgwl_runoff_option = "negative"
   rtmhist_fexcl1 = ""
   rtmhist_fexcl2 = ""
   rtmhist_fexcl3 = ""

@@ -23,30 +23,13 @@
     The following values should not be set by the user since they'll be
     overwritten by scripts: TOTALPES, NTASKS_PER_INST
     </header>
-  <comment>about 15ypd expected</comment>
-  <group id="mach_pes_last">
-    <entry id="COST_PES" value="1764">
-      <type>integer</type>
-      <desc>pes or cores used relative to MAX_MPITASKS_PER_NODE for accounting (0 means TOTALPES is valid)</desc>
-    </entry>
-    <entry id="TOTALPES" value="1764">
-      <type>integer</type>
-      <desc>total number of physical cores used (setup automatically - DO NOT EDIT)</desc>
-    </entry>
-    <entry id="MAX_TASKS_PER_NODE" value="36">
-      <type>integer</type>
-      <desc>maximum number of tasks/ threads allowed per node </desc>
-    </entry>
-    <entry id="MAX_MPITASKS_PER_NODE" value="36">
-      <type>integer</type>
-      <desc>pes or cores per node for mpitasks </desc>
-    </entry>
-    <entry id="COSTPES_PER_NODE" value="$MAX_MPITASKS_PER_NODE">
-      <type>integer</type>
-      <desc>pes or cores per node for accounting purposes </desc>
-    </entry>
-  </group>
+  <comment>10 ypd/ 5100 pe-hrs/simyr expected</comment>
   <group id="mach_pes">
+    <entry id="ESMF_AWARE_THREADING" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE indicates that the ESMF Aware threading method is used</desc>
+    </entry>
     <entry id="ALLOCATE_SPARE_NODES" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
@@ -59,14 +42,14 @@
     <entry id="NTASKS">
       <type>integer</type>
       <values>
-        <value compclass="ATM">1728</value>
-        <value compclass="CPL">1728</value>
-        <value compclass="OCN">36</value>
-        <value compclass="WAV">36</value>
-        <value compclass="GLC">36</value>
-        <value compclass="ICE">252</value>
-        <value compclass="ROF">1440</value>
-        <value compclass="LND">1440</value>
+        <value compclass="ATM">1920</value>
+        <value compclass="CPL">1920</value>
+        <value compclass="OCN">256</value>
+        <value compclass="WAV">64</value>
+        <value compclass="GLC">64</value>
+        <value compclass="ICE">1216</value>
+        <value compclass="ROF">64</value>
+        <value compclass="LND">640</value>
         <value compclass="ESP">1</value>
       </values>
       <desc>number of tasks for each component</desc>
@@ -74,13 +57,13 @@
     <entry id="NTASKS_PER_INST">
       <type>integer</type>
       <values>
-        <value compclass="ATM">1728</value>
-        <value compclass="OCN">36</value>
-        <value compclass="WAV">36</value>
-        <value compclass="GLC">36</value>
-        <value compclass="ICE">252</value>
-        <value compclass="ROF">1440</value>
-        <value compclass="LND">1440</value>
+        <value compclass="ATM">1920</value>
+        <value compclass="OCN">256</value>
+        <value compclass="WAV">64</value>
+        <value compclass="GLC">64</value>
+        <value compclass="ICE">1216</value>
+        <value compclass="ROF">64</value>
+        <value compclass="LND">640</value>
         <value compclass="ESP">1</value>
       </values>
       <desc>Number of tasks per instance for each component. DO NOT EDIT: Set automatically by case.setup based on NTASKS, NINST and MULTI_DRIVER</desc>
@@ -105,54 +88,27 @@
       <values>
         <value compclass="ATM">0</value>
         <value compclass="CPL">0</value>
-        <value compclass="OCN">1728</value>
-        <value compclass="WAV">1692</value>
-        <value compclass="GLC">0</value>
-        <value compclass="ICE">1440</value>
-        <value compclass="ROF">0</value>
+        <value compclass="OCN">1920</value>
+        <value compclass="WAV">640</value>
+        <value compclass="GLC">640</value>
+        <value compclass="ICE">704</value>
+        <value compclass="ROF">640</value>
         <value compclass="LND">0</value>
         <value compclass="ESP">0</value>
       </values>
       <desc>ROOTPE (mpi task in MPI_COMM_WORLD) for each component</desc>
     </entry>
-    <entry id="MULTI_DRIVER" value="FALSE">
+    <entry id="MULTI_DRIVER" value="TRUE">
       <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
+      <valid_values>TRUE</valid_values>
       <desc>MULTI_DRIVER mode provides a separate driver/coupler component for each
-    ensemble member.  All components must have an equal number of members.  If
-    MULTI_DRIVER mode is False prognostic components must have the same number
-    of members but data or stub components may also have 1 member. </desc>
+    ensemble member.  All components must have an equal number of members.
+    Multidriver is always true for nuopc, variable is left for compatibility with the mct driver</desc>
     </entry>
-    <entry id="NINST">
+    <entry id="NINST" value="1">
       <type>integer</type>
-      <values>
-        <value compclass="ATM">1</value>
-        <value compclass="OCN">1</value>
-        <value compclass="WAV">1</value>
-        <value compclass="GLC">1</value>
-        <value compclass="ICE">1</value>
-        <value compclass="ROF">1</value>
-        <value compclass="LND">1</value>
-        <value compclass="ESP">1</value>
-      </values>
-      <desc>Number of instances for each component.  If MULTI_DRIVER is True
-    the NINST_MAX value will be used.
+      <desc>Number of instances of the model.
     </desc>
-    </entry>
-    <entry id="NINST_LAYOUT">
-      <type>char</type>
-      <valid_values>sequential,concurrent</valid_values>
-      <values>
-        <value compclass="ATM">concurrent</value>
-        <value compclass="OCN">concurrent</value>
-        <value compclass="WAV">concurrent</value>
-        <value compclass="GLC">concurrent</value>
-        <value compclass="ICE">concurrent</value>
-        <value compclass="ROF">concurrent</value>
-        <value compclass="LND">concurrent</value>
-        <value compclass="ESP">concurrent</value>
-      </values>
-      <desc>Layout of component instances for each component</desc>
     </entry>
     <entry id="PSTRID">
       <type>integer</type>
@@ -168,6 +124,50 @@
         <value compclass="ESP">1</value>
       </values>
       <desc>The mpi global processors stride associated with the mpi tasks for the a component</desc>
+    </entry>
+    <entry id="NGPUS_PER_NODE" value="0">
+      <type>integer</type>
+      <desc> Number of GPUs per node used for simulation </desc>
+    </entry>
+  </group>
+  <group id="mach_pes_last">
+    <entry id="COST_PES" value="2176">
+      <type>integer</type>
+      <desc>pes or cores used relative to MAX_MPITASKS_PER_NODE for accounting (0 means TOTALPES is valid)</desc>
+    </entry>
+    <entry id="TOTALPES" value="2176">
+      <type>integer</type>
+      <desc>total number of MPI tasks (setup automatically - DO NOT EDIT)</desc>
+    </entry>
+    <entry id="MAX_TASKS_PER_NODE" value="128">
+      <type>integer</type>
+      <desc>maximum number of tasks/ threads allowed per node </desc>
+    </entry>
+    <entry id="MAX_MPITASKS_PER_NODE" value="128">
+      <type>integer</type>
+      <desc>pes or cores per node for accounting purposes </desc>
+    </entry>
+    <entry id="MAX_GPUS_PER_NODE" value="0">
+      <type>integer</type>
+      <desc>maximum number of GPUs allowed per node </desc>
+    </entry>
+    <entry id="COSTPES_PER_NODE" value="$MAX_MPITASKS_PER_NODE">
+      <type>integer</type>
+      <desc>pes or cores per node for accounting purposes </desc>
+    </entry>
+  </group>
+  <group id="run_pio">
+    <entry id="PIO_ASYNCIO_NTASKS" value="0">
+      <type>integer</type>
+      <desc>Task count for asyncronous IO, only valid if PIO_ASYNC_INTERFACE is True</desc>
+    </entry>
+    <entry id="PIO_ASYNCIO_STRIDE" value="0">
+      <type>integer</type>
+      <desc>Stride of tasks for asyncronous IO, only valid if PIO_ASYNC_INTERFACE is True</desc>
+    </entry>
+    <entry id="PIO_ASYNCIO_ROOTPE" value="1">
+      <type>integer</type>
+      <desc>RootPE of tasks for asyncronous IO, only valid if PIO_ASYNC_INTERFACE is True</desc>
     </entry>
   </group>
 </file>
