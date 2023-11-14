@@ -51,7 +51,7 @@
       <command name="load">cray-libsci/23.02.1.1</command>
     </modules>
     <modules compiler="nvhpc">
-      <command name="load">nvhpc/23.1</command>
+      <command name="load">nvhpc/23.5</command>
     </modules>
     <modules>
       <command name="load">ncarcompilers/1.0.0</command>
@@ -63,6 +63,9 @@
     <modules mpilib="mpi-serial">
       <command name="load">mpi-serial/2.3.0</command>
     </modules>
+    <modules mpilib="mpich" compiler="nvhpc" gpu_offload="!none">
+      <command name="load">cuda/11.7.1</command>
+    </modules>
     <modules mpilib="mpi-serial">
       <command name="load">netcdf/4.9.2</command>
     </modules>
@@ -71,12 +74,12 @@
       <command name="load">parallel-netcdf/1.12.3</command>
     </modules>
     <modules DEBUG="TRUE">
-      <command name="load">parallelio/2.6.0-debug</command>
-      <command name="load">esmf/8.5.0b23-debug</command>
+      <command name="load">parallelio/2.6.2-debug</command>
+      <command name="load">esmf/8.6.0b04-debug</command>
     </modules>
     <modules DEBUG="FALSE">
-      <command name="load">parallelio/2.6.0</command>
-      <command name="load">esmf/8.5.0b23</command>
+      <command name="load">parallelio/2.6.2</command>
+      <command name="load">esmf/8.6.0b04</command>
     </modules>
   </module_system>
   <environment_variables>
@@ -87,6 +90,9 @@
   <environment_variables comp_interface="nuopc">
     <env name="ESMF_RUNTIME_PROFILE">ON</env>
     <env name="ESMF_RUNTIME_PROFILE_OUTPUT">SUMMARY</env>
+  </environment_variables>
+  <environment_variables compiler="nvhpc" gpu_offload="!none">
+    <env name="RTE_KERNELS">openacc</env>
   </environment_variables>
   <mpirun mpilib="default">
     <executable>mpiexec</executable>

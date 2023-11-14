@@ -147,7 +147,11 @@
       <type>integer</type>
       <desc>pes or cores per node for accounting purposes </desc>
     </entry>
-    <entry id="MAX_GPUS_PER_NODE" value="0">
+    <entry id="MAX_CPUTASKS_PER_GPU_NODE" value="64">
+      <type>integer</type>
+      <desc> Number of CPU cores per GPU node used for simulation </desc>
+    </entry>
+    <entry id="MAX_GPUS_PER_NODE" value="4">
       <type>integer</type>
       <desc>maximum number of GPUs allowed per node </desc>
     </entry>

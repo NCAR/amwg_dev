@@ -3,14 +3,14 @@
 # sharedlib flags, you can edit the cmake_macros in this case. You
 # can change flags for specific sharedlibs only by checking COMP_NAME.
 
-CFLAGS :=  -qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal -march=core-avx2
+CFLAGS :=  -qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal -no-fma -qopt-report -march=core-avx2
 CMAKE_OPTS := -DCMAKE_SYSTEM_NAME=Catamount
 CONFIG_ARGS := --host=cray
 CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -DFORTRANUNDERSCORE -DCPRINTEL -DLINUX -DHAVE_GETTID
 CXX_LDFLAGS :=  -cxxlib
 CXX_LINKER := FORTRAN
 FC_AUTO_R8 := -r8
-FFLAGS :=  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -march=core-avx2
+FFLAGS :=  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -no-fma -qopt-report -march=core-avx2
 FFLAGS_NOOPT := -O0
 FIXEDFLAGS := -fixed
 FREEFLAGS := -free
@@ -29,11 +29,11 @@ SUPPORTS_CXX := TRUE
 
 ifeq "$(COMP_NAME)" "mom"
   CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -Duse_LARGEFILE -DFORTRANUNDERSCORE -DCPRINTEL -DLINUX -DHAVE_GETTID
-  FFLAGS :=  $(FC_AUTO_R8)  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -march=core-avx2
+  FFLAGS :=  $(FC_AUTO_R8)  -qno-opt-dynamic-align  -convert big_endian -assume byterecl -ftz -traceback -assume realloc_lhs -fp-model source -O2 -debug minimal -no-fma -qopt-report -march=core-avx2
 endif
 ifeq "$(COMP_NAME)" "gptl"
   CPPDEFS := $(CPPDEFS)  -DCESMCOUPLED -DFORTRANUNDERSCORE -DCPRINTEL -DLINUX -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY -DHAVE_GETTID -DHAVE_SLASHPROC
 endif
 ifeq "$(COMP_NAME)" "mpi-serial"
-  CFLAGS :=  -qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal -march=core-avx2 -std=c89 
+  CFLAGS :=  -qno-opt-dynamic-align -fp-model precise -std=gnu99 -O2 -debug minimal -no-fma -qopt-report -march=core-avx2 -std=c89 
 endif

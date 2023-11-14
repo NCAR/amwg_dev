@@ -9,7 +9,7 @@
         corresponding MOM_parameter_doc.all file which is generated
         by the model at runtime. */
 
-INPUTDIR = /glade/p/cesmdata/inputdata/ocn/mom/tx2_3v2
+INPUTDIR = /glade/campaign/cesm/cesmdata/inputdata/ocn/mom/tx2_3v2
                                 ! "The directory in which input files are found."
 
 TRIPOLAR_N = True
@@ -169,7 +169,7 @@ USE_CFC_CAP = False
                                 ! "[Boolean] default = False
                                 ! If true, use the MOM_CFC_cap tracer package."
 
-CFC_BC_FILE = /glade/p/cesmdata/inputdata/ocn/mom/grid_indpt/cfc_atm_20230310.nc
+CFC_BC_FILE = /glade/campaign/cesm/cesmdata/inputdata/ocn/mom/grid_indpt/cfc_atm_20230310.nc
                                 ! "The file in which the CFC-11 and CFC-12 atm concentrations can be found (units
                                 ! must be parts per trillion)."
 
@@ -987,7 +987,7 @@ MEKE_GEOMETRIC = True
                                 ! If MEKE_GEOMETRIC is true, uses the GM coefficient formulation from the
                                 ! GEOMETRIC framework (Marshall et al., 2012)."
 
-MEKE_GEOMETRIC_ALPHA = 0.07000000000000001
+MEKE_GEOMETRIC_ALPHA = 0.1
                                 ! "[nondim] default = 0.05
                                 ! The nondimensional coefficient governing the efficiency of the GEOMETRIC
                                 ! thickness diffusion."
