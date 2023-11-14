@@ -1,178 +1,475 @@
-2023-10-06 14:05:28: case.setup starting 
+2023-11-10 13:46:28: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
+ ---------------------------------------------------
+2023-11-10 13:46:29: xmlchange success <command> ./xmlchange PROJECT=CESM0005  </command>
+ ---------------------------------------------------
+2023-11-10 13:46:29: case.setup starting 
+ ---------------------------------------------------
+2023-11-10 13:46:31: case.setup success 
+ ---------------------------------------------------
+2023-11-10 13:46:31: xmlchange success <command> ./xmlchange RUN_REFCASE=b.e21.B1850.f09_g17.CMIP6-piControl.001  </command>
+ ---------------------------------------------------
+2023-11-10 13:46:32: xmlchange success <command> ./xmlchange RUN_REFDATE=0501-01-01  </command>
+ ---------------------------------------------------
+2023-11-10 13:46:32: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
+ ---------------------------------------------------
+2023-11-10 13:46:32: xmlchange success <command> ./xmlchange DOCN_SOM_FILENAME=pop_frc.b.e11.B1850LENS.f09_g16.pi_control.002.20190923.nc  </command>
+ ---------------------------------------------------
+2023-11-10 13:46:46: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CAM.cfg
+Checking status of externals: clm, fates, ptclm, mosart, ww3, cime, cice, pop, cvmix, marbl, cism, source_cism, rtm, cam, clubb, carma, cosp2, chem_proc, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+    ./components/clm
+        clean sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+    ./components/clm/tools/PTCLM
+        clean sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-11-10 14:03:45: case.build success 
+ ---------------------------------------------------
+2023-11-10 14:05:58: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
+ ---------------------------------------------------
+2023-11-10 14:05:58: xmlchange success <command> ./xmlchange DOCN_SOM_FILENAME=pop_frc.b.e11.B1850LENS.f09_g16.pi_control.002.20190923.nc  </command>
+ ---------------------------------------------------
+2023-11-10 14:06:55: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CAM.cfg
+Checking status of externals: clm, fates, ptclm, mosart, ww3, cime, cice, pop, cvmix, marbl, cism, source_cism, rtm, cam, clubb, carma, cosp2, chem_proc, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+    ./components/clm
+        clean sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+    ./components/clm/tools/PTCLM
+        clean sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-11-10 14:07:58: case.build success 
  ---------------------------------------------------
-2023-10-06 14:05:30: case.setup success 
+2023-11-10 14:08:15: xmlchange success <command> ./xmlchange PROJECT=P93300042,JOB_QUEUE=premium,RESUBMIT=10,STOP_N=3,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2023-10-06 14:05:36: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2023-11-10 14:08:16: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
  ---------------------------------------------------
-2023-10-06 14:06:43: case.build starting 
+2023-11-10 14:08:16: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
  ---------------------------------------------------
-2023-10-06 14:19:17: case.build success 
+2023-11-10 14:08:16: case.submit starting 
  ---------------------------------------------------
-2023-10-06 14:19:30: xmlchange success <command> ./xmlchange ROF2OCN_LIQ_RMAPNAME=/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_r05_to_tx2_3_nnsm_e250r250_230914.nc  </command>
+2023-11-10 14:08:39: case.submit success case.run:4142665.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4142666.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-06 14:19:31: xmlchange success <command> ./xmlchange GLC2OCN_LIQ_RMAPNAME=/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_gland4km_to_tx2_3_nnsm_e250r250_230914.nc  </command>
+2023-11-10 14:09:45: case.run starting 
  ---------------------------------------------------
-2023-10-06 14:19:47: case.build starting 
+2023-11-10 14:09:55: model execution starting 
  ---------------------------------------------------
-2023-10-06 14:20:28: case.build success 
+2023-11-10 18:04:20: model execution success 
  ---------------------------------------------------
-2023-10-06 15:07:09: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-11-10 18:04:20: case.run success 
  ---------------------------------------------------
-2023-10-06 15:07:09: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+2023-11-10 18:04:32: st_archive starting 
  ---------------------------------------------------
-2023-10-06 15:07:10: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+2023-11-10 18:04:42: st_archive success 
  ---------------------------------------------------
-2023-10-06 15:07:16: case.submit starting 1430383.desched1
+2023-11-10 18:04:42: case.submit starting 
  ---------------------------------------------------
-2023-10-06 15:07:16: case.submit success 1430383.desched1
+2023-11-10 18:04:44: case.submit success case.run:4146510.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4146511.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-06 15:07:22: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=12,STOP_N=2,STOP_OPTION=nyears  </command>
+2023-11-10 18:06:17: case.run starting 
  ---------------------------------------------------
-2023-10-06 15:07:28: case.run starting 1430382.desched1
+2023-11-10 18:06:31: model execution starting 
  ---------------------------------------------------
-2023-10-06 15:07:32: model execution starting 1430382.desched1
+2023-11-10 22:00:36: model execution success 
  ---------------------------------------------------
-2023-10-06 22:52:23: model execution success 1430382.desched1
+2023-11-10 22:00:36: case.run success 
  ---------------------------------------------------
-2023-10-06 22:52:23: case.run success 1430382.desched1
+2023-11-10 22:01:05: st_archive starting 
  ---------------------------------------------------
-2023-10-06 22:52:35: st_archive starting 1430383.desched1
+2023-11-10 22:01:15: st_archive success 
  ---------------------------------------------------
-2023-10-06 22:52:56: st_archive success 1430383.desched1
+2023-11-10 22:01:15: case.submit starting 
  ---------------------------------------------------
-2023-10-06 22:52:56: case.submit starting 1431292.desched1
+2023-11-10 22:01:16: case.submit success case.run:4146962.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4146963.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-06 22:52:56: case.submit success 1431292.desched1
+2023-11-10 22:02:20: case.run starting 
  ---------------------------------------------------
-2023-10-06 22:53:08: case.run starting 1431291.desched1
+2023-11-10 22:02:33: model execution starting 
  ---------------------------------------------------
-2023-10-06 22:53:11: model execution starting 1431291.desched1
+2023-11-11 01:54:19: model execution success 
  ---------------------------------------------------
-2023-10-07 06:41:24: model execution success 1431291.desched1
+2023-11-11 01:54:19: case.run success 
  ---------------------------------------------------
-2023-10-07 06:41:24: case.run success 1431291.desched1
+2023-11-11 01:54:30: st_archive starting 
  ---------------------------------------------------
-2023-10-07 06:41:55: st_archive starting 1431292.desched1
+2023-11-11 01:54:40: st_archive success 
  ---------------------------------------------------
-2023-10-07 06:42:16: st_archive success 1431292.desched1
+2023-11-11 01:54:40: case.submit starting 
  ---------------------------------------------------
-2023-10-07 06:42:17: case.submit starting 1431524.desched1
+2023-11-11 01:54:41: case.submit success case.run:4147227.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4147228.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-07 06:42:17: case.submit success 1431524.desched1
+2023-11-11 01:57:23: case.run starting 
  ---------------------------------------------------
-2023-10-07 06:42:28: case.run starting 1431523.desched1
+2023-11-11 01:57:35: model execution starting 
  ---------------------------------------------------
-2023-10-07 06:42:31: model execution starting 1431523.desched1
+2023-11-11 05:51:44: model execution success 
  ---------------------------------------------------
-2023-10-07 14:29:08: model execution success 1431523.desched1
+2023-11-11 05:51:44: case.run success 
  ---------------------------------------------------
-2023-10-07 14:29:08: case.run success 1431523.desched1
+2023-11-11 05:51:59: st_archive starting 
  ---------------------------------------------------
-2023-10-07 14:29:19: st_archive starting 1431524.desched1
+2023-11-11 05:52:08: st_archive success 
  ---------------------------------------------------
-2023-10-07 14:29:40: st_archive success 1431524.desched1
+2023-11-11 05:52:08: case.submit starting 
  ---------------------------------------------------
-2023-10-07 14:29:40: case.submit starting 1431825.desched1
+2023-11-11 05:52:16: case.submit success case.run:4148213.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4148214.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-07 14:29:40: case.submit success 1431825.desched1
+2023-11-11 06:01:33: case.run starting 
  ---------------------------------------------------
-2023-10-07 14:29:52: case.run starting 1431824.desched1
+2023-11-11 06:01:52: model execution starting 
  ---------------------------------------------------
-2023-10-07 14:29:55: model execution starting 1431824.desched1
+2023-11-11 10:00:08: model execution success 
  ---------------------------------------------------
-2023-10-07 22:16:45: model execution success 1431824.desched1
+2023-11-11 10:00:08: case.run success 
  ---------------------------------------------------
-2023-10-07 22:16:45: case.run success 1431824.desched1
+2023-11-11 10:00:56: st_archive starting 
  ---------------------------------------------------
-2023-10-07 22:16:58: st_archive starting 1431825.desched1
+2023-11-11 10:01:06: st_archive success 
  ---------------------------------------------------
-2023-10-07 22:17:19: st_archive success 1431825.desched1
+2023-11-11 10:01:06: case.submit starting 
  ---------------------------------------------------
-2023-10-07 22:17:19: case.submit starting 1432021.desched1
+2023-11-11 10:01:06: case.submit success case.run:4149748.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4149749.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-07 22:17:19: case.submit success 1432021.desched1
+2023-11-11 10:16:36: case.run starting 
  ---------------------------------------------------
-2023-10-07 22:17:31: case.run starting 1432020.desched1
+2023-11-11 10:16:51: model execution starting 
  ---------------------------------------------------
-2023-10-07 22:17:35: model execution starting 1432020.desched1
+2023-11-11 14:20:02: model execution success 
  ---------------------------------------------------
-2023-10-08 06:02:57: model execution success 1432020.desched1
+2023-11-11 14:20:02: case.run success 
  ---------------------------------------------------
-2023-10-08 06:02:57: case.run success 1432020.desched1
+2023-11-11 14:20:14: st_archive starting 
  ---------------------------------------------------
-2023-10-08 06:03:16: st_archive starting 1432021.desched1
+2023-11-11 14:20:24: st_archive success 
  ---------------------------------------------------
-2023-10-08 06:03:37: st_archive success 1432021.desched1
+2023-11-11 14:20:24: case.submit starting 
  ---------------------------------------------------
-2023-10-08 06:03:37: case.submit starting 1432289.desched1
+2023-11-11 14:20:25: case.submit success case.run:4150382.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4150383.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-08 06:03:37: case.submit success 1432289.desched1
+2023-11-11 17:54:14: case.run starting 
  ---------------------------------------------------
-2023-10-08 06:03:49: case.run starting 1432288.desched1
+2023-11-11 17:54:32: model execution starting 
  ---------------------------------------------------
-2023-10-08 06:03:52: model execution starting 1432288.desched1
+2023-11-11 21:55:39: model execution success 
  ---------------------------------------------------
-2023-10-08 13:49:06: model execution success 1432288.desched1
+2023-11-11 21:55:39: case.run success 
  ---------------------------------------------------
-2023-10-08 13:49:06: case.run success 1432288.desched1
+2023-11-11 21:56:04: st_archive starting 
  ---------------------------------------------------
-2023-10-08 13:49:18: st_archive starting 1432289.desched1
+2023-11-11 21:56:14: st_archive success 
  ---------------------------------------------------
-2023-10-08 13:49:38: st_archive success 1432289.desched1
+2023-11-11 21:56:14: case.submit starting 
  ---------------------------------------------------
-2023-10-08 13:49:39: case.submit starting 1432591.desched1
+2023-11-11 21:56:15: case.submit success case.run:4154101.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4154102.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-08 13:49:39: case.submit success 1432591.desched1
+2023-11-11 22:02:19: case.run starting 
  ---------------------------------------------------
-2023-10-08 13:49:50: case.run starting 1432590.desched1
+2023-11-11 22:02:31: model execution starting 
  ---------------------------------------------------
-2023-10-08 13:49:53: model execution starting 1432590.desched1
+2023-11-12 02:22:48: model execution success 
  ---------------------------------------------------
-2023-10-08 21:35:01: model execution success 1432590.desched1
+2023-11-12 02:22:48: case.run success 
  ---------------------------------------------------
-2023-10-08 21:35:01: case.run success 1432590.desched1
+2023-11-12 02:23:07: st_archive starting 
  ---------------------------------------------------
-2023-10-08 21:35:13: st_archive starting 1432591.desched1
+2023-11-12 02:23:18: st_archive success 
  ---------------------------------------------------
-2023-10-08 21:35:35: st_archive success 1432591.desched1
+2023-11-12 02:23:18: case.submit starting 
  ---------------------------------------------------
-2023-10-08 21:35:36: case.submit starting 1432915.desched1
+2023-11-12 02:23:19: case.submit success case.run:4154755.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4154756.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-08 21:35:36: case.submit success 1432915.desched1
+2023-11-12 02:26:04: case.run starting 
  ---------------------------------------------------
-2023-10-08 21:35:47: case.run starting 1432914.desched1
+2023-11-12 02:26:21: model execution starting 
  ---------------------------------------------------
-2023-10-08 21:35:50: model execution starting 1432914.desched1
+2023-11-12 06:43:47: model execution success 
  ---------------------------------------------------
-2023-10-09 05:20:47: model execution success 1432914.desched1
+2023-11-12 06:43:47: case.run success 
  ---------------------------------------------------
-2023-10-09 05:20:47: case.run success 1432914.desched1
+2023-11-12 06:43:58: st_archive starting 
  ---------------------------------------------------
-2023-10-09 05:20:59: st_archive starting 1432915.desched1
+2023-11-12 06:44:08: st_archive success 
  ---------------------------------------------------
-2023-10-09 05:21:20: st_archive success 1432915.desched1
+2023-11-12 06:44:08: case.submit starting 
  ---------------------------------------------------
-2023-10-09 05:21:21: case.submit starting 1433303.desched1
+2023-11-12 06:44:09: case.submit success case.run:4155153.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4155154.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-09 05:21:21: case.submit success 1433303.desched1
+2023-11-12 06:44:35: case.run starting 
  ---------------------------------------------------
-2023-10-09 05:21:32: case.run starting 1433302.desched1
+2023-11-12 06:44:43: model execution starting 
  ---------------------------------------------------
-2023-10-09 05:21:36: model execution starting 1433302.desched1
+2023-11-12 09:14:20: xmlchange success <command> ./xmlchange JOB_QUEUE=regular  </command>
  ---------------------------------------------------
-2023-10-09 13:09:36: model execution success 1433302.desched1
+2023-11-12 11:02:47: model execution success 
  ---------------------------------------------------
-2023-10-09 13:09:36: case.run success 1433302.desched1
+2023-11-12 11:02:47: case.run success 
  ---------------------------------------------------
-2023-10-09 13:14:47: st_archive starting 1433303.desched1
+2023-11-12 11:03:01: st_archive starting 
  ---------------------------------------------------
-2023-10-09 13:15:08: st_archive success 1433303.desched1
+2023-11-12 11:03:10: st_archive success 
  ---------------------------------------------------
-2023-10-09 13:15:08: case.submit starting 1434047.desched1
+2023-11-12 11:03:10: case.submit starting 
  ---------------------------------------------------
-2023-10-09 13:15:08: case.submit success 1434047.desched1
+2023-11-12 11:03:11: case.submit success case.run:4155628.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4155629.chadmin1.ib0.cheyenne.ucar.edu
  ---------------------------------------------------
-2023-10-09 13:17:39: case.run starting 1434046.desched1
+2023-11-12 11:04:40: case.run starting 
  ---------------------------------------------------
-2023-10-09 13:17:44: model execution starting 1434046.desched1
+2023-11-12 11:04:49: model execution starting 
+ ---------------------------------------------------
+2023-11-12 15:24:45: model execution success 
+ ---------------------------------------------------
+2023-11-12 15:24:45: case.run success 
+ ---------------------------------------------------
+2023-11-12 15:25:04: st_archive starting 
+ ---------------------------------------------------
+2023-11-12 15:25:14: st_archive success 
+ ---------------------------------------------------
+2023-11-13 13:57:48: xmlchange success <command> ./xmlchange TFREEZE_SALTWATER_OPTION=minus1p8  </command>
+ ---------------------------------------------------
+2023-11-13 14:02:18: xmlchange success <command> ./xmlchange CONTINUE_RUN=TRUE  </command>
+ ---------------------------------------------------
+2023-11-13 14:02:32: xmlchange success <command> ./xmlchange PROJECT=P93300042,JOB_QUEUE=premium,RESUBMIT=15,STOP_N=2,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2023-11-13 14:02:33: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+ ---------------------------------------------------
+2023-11-13 14:02:33: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+ ---------------------------------------------------
+2023-11-13 14:02:33: case.submit starting 
+ ---------------------------------------------------
+2023-11-13 14:02:45: case.submit success case.run:4163208.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4163209.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-11-13 14:02:54: case.run starting 
+ ---------------------------------------------------
+2023-11-13 14:03:16: model execution starting 
+ ---------------------------------------------------
+2023-11-13 14:19:09: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
+ ---------------------------------------------------
+2023-11-13 14:21:58: case.build starting 
+ ---------------------------------------------------
+CESM version is cesm2.1.3-rc.01
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_POP.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : Externals_CAM.cfg
+Checking status of externals: clm, fates, ptclm, mosart, ww3, cime, cice, pop, cvmix, marbl, cism, source_cism, rtm, cam, clubb, carma, cosp2, chem_proc, 
+    ./cime
+        clean sandbox, on cime5.6.32
+    ./components/cam
+        clean sandbox, on cam_cesm2_1_rel_41
+    ./components/cam/chem_proc
+        clean sandbox, on tools/proc_atm/chem_proc/release_tags/chem_proc5_0_03_rel
+    ./components/cam/src/physics/carma/base
+        clean sandbox, on carma/release_tags/carma3_49_rel
+    ./components/cam/src/physics/clubb
+        clean sandbox, on vendor_clubb_r8099_n03
+    ./components/cam/src/physics/cosp2/src
+        clean sandbox, on CFMIP/COSPv2.0/tags/v2.1.4cesm/src
+    ./components/cice
+        clean sandbox, on cice5_cesm2_1_1_20190321
+    ./components/cism
+        clean sandbox, on cism-release-cesm2.1.2_02
+    ./components/cism/source_cism
+        clean sandbox, on release-cism2.1.03
+    ./components/clm
+        clean sandbox, on release-clm5.0.30
+    ./components/clm/src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+    ./components/clm/tools/PTCLM
+        clean sandbox, on PTCLM2_20200121
+    ./components/mosart
+        clean sandbox, on release-cesm2.0.04
+    ./components/pop
+        clean sandbox, on pop2_cesm2_1_rel_n09
+    ./components/pop/externals/CVMix
+        clean sandbox, on v0.93-beta
+    ./components/pop/externals/MARBL
+        clean sandbox, on cesm2.1-n00
+    ./components/rtm
+        clean sandbox, on release-cesm2.0.04
+    ./components/ww3
+        clean sandbox, on ww3_181001
+2023-11-13 14:24:36: case.build success 
+ ---------------------------------------------------
+2023-11-13 14:24:36: xmlchange success <command> ./xmlchange PROJECT=P93300042,JOB_QUEUE=premium,RESUBMIT=15,STOP_N=2,STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2023-11-13 14:24:37: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=1  </command>
+ ---------------------------------------------------
+2023-11-13 14:24:37: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00  </command>
+ ---------------------------------------------------
+2023-11-13 14:24:37: case.submit starting 
+ ---------------------------------------------------
+2023-11-13 14:24:47: case.submit success case.run:4163325.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4163326.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-11-13 14:24:58: case.run starting 
+ ---------------------------------------------------
+2023-11-13 14:25:28: model execution starting 
+ ---------------------------------------------------
+2023-11-13 17:03:37: model execution success 
+ ---------------------------------------------------
+2023-11-13 17:03:37: case.run success 
+ ---------------------------------------------------
+2023-11-13 17:03:48: st_archive starting 
+ ---------------------------------------------------
+2023-11-13 17:03:57: st_archive success 
+ ---------------------------------------------------
+2023-11-13 17:03:57: case.submit starting 
+ ---------------------------------------------------
+2023-11-13 17:03:58: case.submit success case.run:4164515.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4164516.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-11-13 17:07:27: case.run starting 
+ ---------------------------------------------------
+2023-11-13 17:07:41: model execution starting 
+ ---------------------------------------------------
+2023-11-13 19:41:41: model execution success 
+ ---------------------------------------------------
+2023-11-13 19:41:41: case.run success 
+ ---------------------------------------------------
+2023-11-13 19:41:52: st_archive starting 
+ ---------------------------------------------------
+2023-11-13 19:42:01: st_archive success 
+ ---------------------------------------------------
+2023-11-13 19:42:01: case.submit starting 
+ ---------------------------------------------------
+2023-11-13 19:42:02: case.submit success case.run:4165949.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4165950.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-11-13 19:47:08: case.run starting 
+ ---------------------------------------------------
+2023-11-13 19:47:26: model execution starting 
+ ---------------------------------------------------
+2023-11-13 22:20:49: model execution success 
+ ---------------------------------------------------
+2023-11-13 22:20:49: case.run success 
+ ---------------------------------------------------
+2023-11-13 22:21:02: st_archive starting 
+ ---------------------------------------------------
+2023-11-13 22:21:11: st_archive success 
+ ---------------------------------------------------
+2023-11-13 22:21:11: case.submit starting 
+ ---------------------------------------------------
+2023-11-13 22:21:14: case.submit success case.run:4168408.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4168409.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-11-13 22:36:32: case.run starting 
+ ---------------------------------------------------
+2023-11-13 22:36:44: model execution starting 
+ ---------------------------------------------------
+2023-11-14 01:08:26: model execution success 
+ ---------------------------------------------------
+2023-11-14 01:08:26: case.run success 
+ ---------------------------------------------------
+2023-11-14 01:08:39: st_archive starting 
+ ---------------------------------------------------
+2023-11-14 01:08:49: st_archive success 
+ ---------------------------------------------------
+2023-11-14 01:08:49: case.submit starting 
+ ---------------------------------------------------
+2023-11-14 01:08:50: case.submit success case.run:4169090.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4169091.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-11-14 01:12:37: case.run starting 
+ ---------------------------------------------------
+2023-11-14 01:12:50: model execution starting 
+ ---------------------------------------------------
+2023-11-14 03:44:30: model execution success 
+ ---------------------------------------------------
+2023-11-14 03:44:30: case.run success 
+ ---------------------------------------------------
+2023-11-14 03:44:48: st_archive starting 
+ ---------------------------------------------------
+2023-11-14 03:44:56: st_archive success 
+ ---------------------------------------------------
+2023-11-14 03:44:56: case.submit starting 
+ ---------------------------------------------------
+2023-11-14 03:44:57: case.submit success case.run:4169789.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4169790.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-11-14 04:27:02: case.run starting 
+ ---------------------------------------------------
+2023-11-14 04:27:10: model execution starting 
+ ---------------------------------------------------
+2023-11-14 06:57:06: model execution success 
+ ---------------------------------------------------
+2023-11-14 06:57:06: case.run success 
+ ---------------------------------------------------
+2023-11-14 06:57:24: st_archive starting 
+ ---------------------------------------------------
+2023-11-14 06:57:33: st_archive success 
+ ---------------------------------------------------
+2023-11-14 06:57:33: case.submit starting 
+ ---------------------------------------------------
+2023-11-14 06:57:33: case.submit success case.run:4171222.chadmin1.ib0.cheyenne.ucar.edu, case.st_archive:4171223.chadmin1.ib0.cheyenne.ucar.edu
+ ---------------------------------------------------
+2023-11-14 10:15:13: case.run starting 
+ ---------------------------------------------------
+2023-11-14 10:15:24: model execution starting 
  ---------------------------------------------------

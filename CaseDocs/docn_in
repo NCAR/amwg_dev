@@ -1,0 +1,25 @@
+&docn_nml
+  decomp = "1d"
+  force_prognostic_true = .false.
+  restfilm = "undefined"
+  restfils = "undefined"
+  sst_constant_value = -1.0
+/
+&shr_strdata_nml
+  datamode = "SOM"
+  domainfile = "/glade/campaign/cesm/cesmdata/inputdata/share/domains/domain.ocn.gx1v6.090206.nc"
+  dtlimit = 1.5e0
+  fillalgo = "nn"
+  fillmask = "nomask"
+  fillread = "NOT_SET"
+  fillwrite = "NOT_SET"
+  mapalgo = "bilinear"
+  mapmask = "dstmask"
+  mapread = "NOT_SET"
+  mapwrite = "NOT_SET"
+  readmode = "single"
+  streams = "docn.streams.txt.som 1 1 1"
+  taxmode = "cycle"
+  tintalgo = "linear"
+  vectors = "null"
+/

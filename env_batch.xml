@@ -11,6 +11,13 @@
       <desc>The batch system type to use for this machine.</desc>
     </entry>
   </group>
+  <group id="job_submission">
+    <entry id="PROJECT_REQUIRED" value="TRUE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>whether the PROJECT value is required on this machine</desc>
+    </entry>
+  </group>
   <batch_system type="pbs">
     <batch_query args="-f">qstat</batch_query>
     <batch_submit>qsub </batch_submit>
@@ -26,9 +33,9 @@
     <batch_mail_type_flag>-m</batch_mail_type_flag>
     <batch_mail_type>, bea, b, e, a</batch_mail_type>
     <submit_args>
-      <argument> -q $JOB_QUEUE</argument>
-      <argument> -l walltime=$JOB_WALLCLOCK_TIME</argument>
-      <argument> -A $PROJECT</argument>
+      <arg flag="-q" name="$JOB_QUEUE"/>
+      <arg flag="-l walltime=" name="$JOB_WALLCLOCK_TIME"/>
+      <arg flag="-A" name="$PROJECT"/>
     </submit_args>
     <directives>
       <directive>-N {{ job_id }}</directive>
@@ -37,14 +44,29 @@
       <directive> -V </directive>
     </directives>
   </batch_system>
-  <batch_system MACH="derecho" type="pbs">
-    <batch_submit>qsub</batch_submit>
-    <directives>
+  <batch_system MACH="cheyenne" type="pbs">
+    <directives queue="regular">
       <directive default="/bin/bash"> -S {{ shell }}  </directive>
       <directive> -l select={{ num_nodes }}:ncpus={{ max_tasks_per_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}</directive>
     </directives>
+    <directives queue="premium">
+      <directive default="/bin/bash"> -S {{ shell }}  </directive>
+      <directive> -l select={{ num_nodes }}:ncpus={{ max_tasks_per_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}</directive>
+    </directives>
+    <directives queue="economy">
+      <directive default="/bin/bash"> -S {{ shell }}  </directive>
+      <directive> -l select={{ num_nodes }}:ncpus={{ max_tasks_per_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}</directive>
+    </directives>
+    <directives queue="share">
+      <directive default="/bin/bash"> -S {{ shell }}  </directive>
+      <directive> -l select=1:mpiprocs={{ total_tasks }}:ompthreads={{ thread_count }}</directive>
+    </directives>
+    <unknown_queue_directives>regular</unknown_queue_directives>
     <queues>
-      <queue walltimemax="4:00:00" nodemin="1" nodemax="2488">main</queue>
+      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">regular</queue>
+      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">premium</queue>
+      <queue default="true" jobmax="18" jobmin="1" walltimemax="06:00:00">share</queue>
+      <queue nodemax="4032" nodemin="1" walltimemax="12:00:00">economy</queue>
     </queues>
   </batch_system>
 </file>
