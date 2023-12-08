@@ -39,7 +39,87 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL','CLMODIS', 'AODVISdn',
 
-'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ','OMEGA500'
+'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ','OMEGA500',
+
+'C6rt_Skw_fnc','C1_Skw_fnc','C7_Skw_fnc','Richardson_num','Kh_zm','tau_zm','Skw_velocity',
+
+'wp2','up2','vp2','rtp2','thlp2','wprtp','wpthlp','wprcp','upwp','vpwp','rtpthlp',
+
+'rcp2','wp4','wpthvp','rtpthvp','thlpthvp',
+
+'invrs_tau_bkgnd','invrs_tau_shear','invrs_tau_sfc','invrs_tau_no_N2_zm',
+
+'invrs_tau_zm','invrs_tau_wp2_zm','invrs_tau_xp2_zm','invrs_tau_wp3_zm','bv_freq_sqd',
+
+'C11_Skw_fnc','Lscale','wp3','wp2thlp','wp2rtp','wpthlp2','wprtp2','wp2rcp',
+
+'wp2thvp','wprtpthlp','um', 'thlm','rtm',
+
+'wp2_bt', 'wp2_ma', 'wp2_ta', 'wp2_ac', 'wp2_bp', 'wp2_pr1', 'wp2_pr2',
+
+'wp2_pr3', 'wp2_dp1', 'wp2_dp2', 'wp2_sdmp', 'wp2_cl', 'wp2_pd', 'wp2_sf', 'wp2_splat',
+
+'wp2_pr_dfsn', 'vp2_bt', 'vp2_ma', 'vp2_ta', 'vp2_tp', 'vp2_dp1', 'vp2_dp2',
+
+'vp2_pr1', 'vp2_pr2', 'vp2_sdmp', 'vp2_cl', 'vp2_pd', 'vp2_sf', 'vp2_splat',
+
+'up2_bt', 'up2_ma', 'up2_ta', 'up2_tp', 'up2_dp1', 'up2_dp2',
+
+'up2_pr1', 'up2_pr2', 'up2_sdmp', 'up2_cl', 'up2_pd', 'up2_sf', 'up2_splat',
+
+'upwp_bt', 'upwp_ma', 'upwp_ta', 'upwp_tp', 'upwp_ac', 'upwp_bp', 'upwp_pr1',
+
+'upwp_pr2', 'upwp_pr3', 'upwp_pr4', 'upwp_dp1', 'upwp_mfl', 'upwp_cl',
+
+'vpwp_bt', 'vpwp_ma', 'vpwp_ta', 'vpwp_tp', 'vpwp_ac', 'vpwp_bp', 'vpwp_pr1',
+
+'vpwp_pr2', 'vpwp_pr3', 'vpwp_pr4', 'vpwp_dp1', 'vpwp_mfl', 'vpwp_cl',
+
+'wprtp_bt', 'wprtp_ma', 'wprtp_ta', 'wprtp_tp', 'wprtp_ac', 'wprtp_bp',
+
+'wprtp_pr1', 'wprtp_pr2', 'wprtp_pr3', 'wprtp_dp1', 'wprtp_mfl',
+
+'wprtp_cl', 'wprtp_sicl', 'wprtp_pd', 'wprtp_forcing', 'wprtp_mc',
+
+'wpthlp_bt', 'wpthlp_ma', 'wpthlp_ta', 'wpthlp_tp', 'wpthlp_ac',
+
+'wpthlp_bp', 'wpthlp_pr1', 'wpthlp_pr2', 'wpthlp_pr3', 'wpthlp_dp1',
+
+'wpthlp_mfl', 'wpthlp_cl', 'wpthlp_sicl', 'wpthlp_forcing', 'wpthlp_mc',
+
+'rtp2_bt', 'rtp2_ma', 'rtp2_ta', 'rtp2_tp', 'rtp2_dp1', 'rtp2_dp2',
+
+'rtp2_cl', 'rtp2_pd', 'rtp2_sf', 'rtp2_forcing', 'rtp2_mc',
+
+'thlp2_bt', 'thlp2_ma', 'thlp2_ta', 'thlp2_tp', 'thlp2_dp1', 'thlp2_dp2',
+
+'thlp2_cl', 'thlp2_pd', 'thlp2_sf', 'thlp2_forcing', 'thlp2_mc',
+
+'rtpthlp_bt', 'rtpthlp_ma', 'rtpthlp_ta', 'rtpthlp_tp1', 'rtpthlp_tp2', 'rtpthlp_dp1',
+
+'rtpthlp_dp2', 'rtpthlp_cl', 'rtpthlp_sf', 'rtpthlp_forcing', 'rtpthlp_mc',
+
+'rtm_bt', 'rtm_ma', 'rtm_ta', 'rtm_mfl', 'rtm_tacl', 'rtm_cl',
+
+'rtm_forcing', 'rtm_sdmp','rtm_mc', 'rtm_pd', 'rvm_mc', 'rcm_mc', 'rcm_sd_mg_morr',
+
+'thlm_bt', 'thlm_ma', 'thlm_ta', 'thlm_mfl', 'thlm_tacl', 'thlm_cl',
+
+'thlm_forcing', 'thlm_sdmp','thlm_mc',
+
+'um_bt', 'um_ma', 'um_gf', 'um_cf', 'um_ta', 'um_f',
+
+'um_sdmp', 'um_ndg', 'um_mfl',
+
+'vm_bt', 'vm_ma', 'vm_gf', 'vm_cf', 'vm_ta', 'vm_f',
+
+'vm_sdmp', 'vm_ndg', 'vm_mfl',
+
+'wp3_bt', 'wp3_ma', 'wp3_ta', 'wp3_tp', 'wp3_ac', 'wp3_bp1', 'wp3_pr_turb', 'wp3_pr_dfsn',
+
+'wp3_pr1', 'wp3_pr2', 'wp3_pr3', 'wp3_pr_tp', 'wp3_dp1', 'wp3_sdmp', 'wp3_cl', 'wp3_splat'
+
+
 
 
 
@@ -93,7 +173,187 @@ dust_emis_fact = 1.3
 
 
 
-cldfrc2m_do_avg_aist_algs = .false.
+clubb_C1 = 0.800000000000000
+
+clubb_C1b = 0.800000000000000
+
+clubb_C4 = 1.00000000000000
+
+clubb_C_uu_shr = 0.100000000000000
+
+clubb_C_uu_buoy = 0.000000000000000
+
+clubb_C6rt = 1.00000000000000
+
+clubb_C6rtb = 1.00000000000000
+
+clubb_C6rtc = 0.500000000000000
+
+clubb_C6thl = 1.00000000000000
+
+clubb_C6thlb = 1.00000000000000
+
+clubb_C6thlc = 0.500000000000000
+
+clubb_C7b = 0.700000000000000
+
+clubb_C8 = 0.800000000000000
+
+clubb_C11 = 0.500000000000000
+
+clubb_C11b = 0.800000000000000
+
+clubb_C14 = 0.800000000000000
+
+clubb_C_wp3_pr_turb = 1.00000000000000
+
+clubb_wpxp_L_thresh = 100.000000000000
+
+clubb_c_K1 = 1.00000000000000
+
+clubb_c_K2 = 0.100000000000000
+
+clubb_nu2 = 1.00000000000000
+
+clubb_c_K8 = 10.0000000000000
+
+clubb_gamma_coef = 0.250000000000000
+
+clubb_gamma_coefb = 0.320000000000000
+
+clubb_beta = 2.00000000000000
+
+clubb_lambda0_stability_coef = 3.000000000000000E-002
+
+clubb_c_K10 = 0.300000000000000
+
+clubb_c_K10h = 0.350000000000000
+
+clubb_C_invrs_tau_bkgnd = 1.10000000000000
+
+clubb_C_invrs_tau_sfc = 5.000000000000000E-002
+
+clubb_C_invrs_tau_shear = 0.220000000000000
+
+clubb_C_invrs_tau_N2 = 0.300000000000000
+
+clubb_C_invrs_tau_N2_xp2 = 0.000000000000000E+000
+
+clubb_C_invrs_tau_N2_wpxp = 2.00000000000000
+
+clubb_C_invrs_tau_N2_clear_wp3 = 2.00000000000000
+
+
+
+clubb_l_diag_Lscale_from_tau=.true.
+
+clubb_l_stability_correct_tau_zm=.false.
+
+clubb_l_min_wp2_from_corr_wx=.false.
+
+clubb_l_min_xp2_from_corr_wx=.false.
+
+clubb_l_vert_avg_closure=.false.
+
+clubb_l_use_cloud_cover=.false.
+
+clubb_l_damp_wp2_using_em=.true.
+
+clubb_l_use_C7_Richardson=.true.
+
+clubb_l_rcm_supersat_adj=.true.
+
+clubb_l_damp_wp3_Skw_squared=.true.
+
+clubb_l_enable_relaxed_clipping=.true.
+
+
+
+clubb_history = .true.
+
+
+
+clubb_vars_zm = 'C6rt_Skw_fnc','C1_Skw_fnc','C7_Skw_fnc','Richardson_num','Kh_zm','tau_zm','Skw_velocity',
+
+'wp2','up2','vp2','rtp2','thlp2','wprtp','wpthlp','wprcp','upwp','vpwp','rtpthlp',
+
+'rcp2','wp4','wpthvp','rtpthvp','thlpthvp',
+
+'invrs_tau_bkgnd','invrs_tau_shear','invrs_tau_sfc','invrs_tau_no_N2_zm',
+
+'invrs_tau_zm','invrs_tau_wp2_zm','invrs_tau_xp2_zm','invrs_tau_wp3_zm','bv_freq_sqd',
+
+'wp2_bt', 'wp2_ma', 'wp2_ta', 'wp2_ac', 'wp2_bp', 'wp2_pr1', 'wp2_pr2',
+
+'wp2_pr3', 'wp2_dp1', 'wp2_dp2', 'wp2_sdmp', 'wp2_cl', 'wp2_pd', 'wp2_sf', 'wp2_splat',
+
+'wp2_pr_dfsn', 'vp2_bt', 'vp2_ma', 'vp2_ta', 'vp2_tp', 'vp2_dp1', 'vp2_dp2',
+
+'vp2_pr1', 'vp2_pr2', 'vp2_sdmp', 'vp2_cl', 'vp2_pd', 'vp2_sf', 'vp2_splat',
+
+'up2_bt', 'up2_ma', 'up2_ta', 'up2_tp', 'up2_dp1', 'up2_dp2',
+
+'up2_pr1', 'up2_pr2', 'up2_sdmp', 'up2_cl', 'up2_pd', 'up2_sf', 'up2_splat',
+
+'upwp_bt', 'upwp_ma', 'upwp_ta', 'upwp_tp', 'upwp_ac', 'upwp_bp', 'upwp_pr1',
+
+'upwp_pr2', 'upwp_pr3', 'upwp_pr4', 'upwp_dp1', 'upwp_mfl', 'upwp_cl',
+
+'vpwp_bt', 'vpwp_ma', 'vpwp_ta', 'vpwp_tp', 'vpwp_ac', 'vpwp_bp', 'vpwp_pr1',
+
+'vpwp_pr2', 'vpwp_pr3', 'vpwp_pr4', 'vpwp_dp1', 'vpwp_mfl', 'vpwp_cl',
+
+'wprtp_bt', 'wprtp_ma', 'wprtp_ta', 'wprtp_tp', 'wprtp_ac', 'wprtp_bp',
+
+'wprtp_pr1', 'wprtp_pr2', 'wprtp_pr3', 'wprtp_dp1', 'wprtp_mfl',
+
+'wprtp_cl', 'wprtp_sicl', 'wprtp_pd', 'wprtp_forcing', 'wprtp_mc',
+
+'wpthlp_bt', 'wpthlp_ma', 'wpthlp_ta', 'wpthlp_tp', 'wpthlp_ac',
+
+'wpthlp_bp', 'wpthlp_pr1', 'wpthlp_pr2', 'wpthlp_pr3', 'wpthlp_dp1',
+
+'wpthlp_mfl', 'wpthlp_cl', 'wpthlp_sicl', 'wpthlp_forcing', 'wpthlp_mc',
+
+'rtp2_bt', 'rtp2_ma', 'rtp2_ta', 'rtp2_tp', 'rtp2_dp1', 'rtp2_dp2',
+
+'rtp2_cl', 'rtp2_pd', 'rtp2_sf', 'rtp2_forcing', 'rtp2_mc',
+
+'thlp2_bt', 'thlp2_ma', 'thlp2_ta', 'thlp2_tp', 'thlp2_dp1', 'thlp2_dp2',
+
+'thlp2_cl', 'thlp2_pd', 'thlp2_sf', 'thlp2_forcing', 'thlp2_mc',
+
+'rtpthlp_bt', 'rtpthlp_ma', 'rtpthlp_ta', 'rtpthlp_tp1', 'rtpthlp_tp2', 'rtpthlp_dp1',
+
+'rtpthlp_dp2', 'rtpthlp_cl', 'rtpthlp_sf', 'rtpthlp_forcing', 'rtpthlp_mc'
+
+
+
+clubb_vars_zt = 'C11_Skw_fnc','Lscale','wp3','wp2thlp','wp2rtp','wpthlp2','wprtp2','wp2rcp',
+
+'wp2thvp','wprtpthlp','um', 'thlm','rtm',
+
+'rtm_bt', 'rtm_ma', 'rtm_ta', 'rtm_mfl', 'rtm_tacl', 'rtm_cl',
+
+'rtm_forcing', 'rtm_sdmp','rtm_mc', 'rtm_pd', 'rvm_mc', 'rcm_mc', 'rcm_sd_mg_morr',
+
+'thlm_bt', 'thlm_ma', 'thlm_ta', 'thlm_mfl', 'thlm_tacl', 'thlm_cl',
+
+'thlm_forcing', 'thlm_sdmp','thlm_mc',
+
+'um_bt', 'um_ma', 'um_gf', 'um_cf', 'um_ta', 'um_f',
+
+'um_sdmp', 'um_ndg', 'um_mfl',
+
+'vm_bt', 'vm_ma', 'vm_gf', 'vm_cf', 'vm_ta', 'vm_f',
+
+'vm_sdmp', 'vm_ndg', 'vm_mfl',
+
+'wp3_bt', 'wp3_ma', 'wp3_ta', 'wp3_tp', 'wp3_ac', 'wp3_bp1', 'wp3_pr_turb', 'wp3_pr_dfsn',
+
+'wp3_pr1', 'wp3_pr2', 'wp3_pr3', 'wp3_pr_tp', 'wp3_dp1', 'wp3_sdmp', 'wp3_cl', 'wp3_splat'
+
+
 
 
 
