@@ -4,11 +4,21 @@ title: "One line description for your simulation request"
 labels: ["Run request"]
 
 body:
+
+  - type: textarea
+    id: Purpose
+    attributes:
+      label: Purpose of the run
+      description: Please enter a short description of the purpose. (required for the CESM project meeeting) [Required]
+      value: "Enter Purpose"
+    validations:
+      required: true
+
   - type: textarea
     id: Description
     attributes:
       label: Description of the run
-      description: Please enter a short description of the run and its purpose[Required]
+      description: Please enter a short description of the run [Required]
       value: "Enter Description"
     validations:
       required: true
