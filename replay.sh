@@ -2,11 +2,11 @@
 
 set -e
 
-# Created 2023-10-31 02:02:35
+# Created 2023-11-14 14:17:02
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16b.BLT1850.ne30_t232.054"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16g.BLT1850.ne30_t232.058"
 
-/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}"
+/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
@@ -16,9 +16,11 @@ cd "${CASEDIR}"
 
 ./xmlchange --append CAM_CONFIG_OPTS=-cosp
 
-./xmlchange ROF2OCN_LIQ_RMAPNAME=/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_r05_to_tx2_3_nnsm_e250r250_230914.nc
+./case.build
 
-./xmlchange GLC2OCN_LIQ_RMAPNAME=/glade/work/gmarques/cesm/tx2_3/runoff_mapping/map_gland4km_to_tx2_3_nnsm_e250r250_230914.nc
+./case.build
+
+./case.build
 
 ./case.build
 
@@ -32,13 +34,9 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./xmlchange RESUBMIT=20
-
 ./case.submit
 
-./xmlchange RESUBMIT=10
+./xmlchange RESUBMIT=5
 
-./case.submit
-
-./xmlchange RESUBMIT=15
+./xmlchange RESUBMIT=0
 
