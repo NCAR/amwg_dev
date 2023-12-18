@@ -37,7 +37,7 @@
          'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10',
          'UBOT', 'UTGWORO', 'UTGW_TOTAL', 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ',
          'ZMDT', 'N2O', 'CO2', 'CFC11', 'CFC12', 'CLD_MISR', 'FISCCP1_COSP', 'CLD_CAL', 'CLD_MISR', 'CLDTOT_CAL', 'CLDHGH_CAL',
-         'CLDMED_CAL', 'CLDLOW_CAL', 'CLMODIS', 'AODVISdn', 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ', 'OMEGA500'
+         'CLDMED_CAL', 'CLDLOW_CAL', 'CLMODIS', 'AODVISdn', 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ', 'OMEGA500', 'UGUST'
  fincl3		= 'PRECT','PRECC','FLUT','U850','U200','V850','V200','OMEGA','PSL'
  fincl4		= 'PRECC','PRECL'
  fincl5		= 'Uzm','Vzm','Wzm','THzm','VTHzm','WTHzm','UVzm','UWzm'
@@ -224,7 +224,7 @@
  clubb_l_damp_wp2_using_em		=  .false. 
  clubb_l_damp_wp3_skw_squared		=  .false. 
  clubb_l_diag_lscale_from_tau		=  .false. 
- clubb_l_do_expldiff_rtm_thlm		= .true.
+ clubb_l_do_expldiff_rtm_thlm		=  .false. 
  clubb_l_e3sm_config		=  .false. 
  clubb_l_enable_relaxed_clipping		=  .false. 
  clubb_l_godunov_upwind_wpxp_ta		=  .false. 
@@ -400,7 +400,7 @@
  microp_aero_npccn_scale		=   1.D0    
  microp_aero_wsub_min		=   0.1D0    
  microp_aero_wsub_min_asf		=   0.0D0    
- microp_aero_wsub_scale		= 1.0
+ microp_aero_wsub_scale		=   0.375D0  
  microp_aero_wsubi_min		=   0.001D0    
  microp_aero_wsubi_scale		=   1.D0    
 /
