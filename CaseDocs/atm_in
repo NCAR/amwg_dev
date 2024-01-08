@@ -37,7 +37,7 @@
          'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10',
          'UBOT', 'UTGWORO', 'UTGW_TOTAL', 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ',
          'ZMDT', 'N2O', 'CO2', 'CFC11', 'CFC12', 'CLD_MISR', 'FISCCP1_COSP', 'CLD_CAL', 'CLD_MISR', 'CLDTOT_CAL', 'CLDHGH_CAL',
-         'CLDMED_CAL', 'CLDLOW_CAL', 'CLMODIS', 'AODVISdn', 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ', 'OMEGA500'
+         'CLDMED_CAL', 'CLDLOW_CAL', 'CLMODIS', 'AODVISdn', 'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ', 'OMEGA500', 'UGUST'
  fincl3		= 'PRECT','PRECC','FLUT','U850','U200','V850','V200','OMEGA','PSL'
  fincl4		= 'PRECC','PRECL'
  fincl5		= 'Uzm','Vzm','Wzm','THzm','VTHzm','WTHzm','UVzm','UWzm'
@@ -137,10 +137,10 @@
  scenario_ghg		= 'CHEM_LBC_FILE'
 /
 &cldfrc2m_nl
- cldfrc2m_do_avg_aist_algs		= .true.
+ cldfrc2m_do_avg_aist_algs		= .false.
  cldfrc2m_do_subgrid_growth		= .true.
  cldfrc2m_qist_max		= 5.e-3 
- cldfrc2m_qist_min		= 5.e-6 
+ cldfrc2m_qist_min		= 1.e-7
  cldfrc2m_rhmaxi		=   1.0D0  
  cldfrc2m_rhmaxis		=   1.0D0  
  cldfrc2m_rhmini		=   0.80D0  
@@ -555,7 +555,7 @@
  zmconv_c0_ocn		=  0.0300D0 
  zmconv_capelmt		=  70.0    
  zmconv_dmpdz		=  -1.0E-3 
- zmconv_ke		= 1.E-5
+ zmconv_ke		=  5.0E-6 
  zmconv_ke_lnd		=  1.0E-5 
  zmconv_microp		=  .false. 
  zmconv_momcd		=  0.7000D0 

@@ -39,7 +39,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'CLD_MISR','FISCCP1_COSP','CLD_CAL','CLD_MISR','CLDTOT_CAL','CLDHGH_CAL', 'CLDMED_CAL','CLDLOW_CAL','CLMODIS', 'AODVISdn',
 
-'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ','OMEGA500'
+'CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ','OMEGA500','UGUST'
 
 
 
@@ -93,7 +93,9 @@ dust_emis_fact = 1.3
 
 
 
-zmconv_ke = 1.E-5
+cldfrc2m_do_avg_aist_algs = .false.
+
+cldfrc2m_qist_min = 1.e-7
 
 
 
