@@ -191,7 +191,7 @@
  clubb_c6thlc		=  1.0     
  clubb_c7		=  0.1     
  clubb_c7b		=  0.5     
- clubb_c8		= 4.5
+ clubb_c8		=  4.2     
  clubb_c8b		=  0.0     
  clubb_c_invrs_tau_bkgnd		=  1.0     
  clubb_c_invrs_tau_n2		=  0.1     
@@ -224,7 +224,7 @@
  clubb_l_damp_wp2_using_em		=  .false. 
  clubb_l_damp_wp3_skw_squared		=  .false. 
  clubb_l_diag_lscale_from_tau		=  .false. 
- clubb_l_do_expldiff_rtm_thlm		= .true.
+ clubb_l_do_expldiff_rtm_thlm		=  .false. 
  clubb_l_e3sm_config		=  .false. 
  clubb_l_enable_relaxed_clipping		=  .false. 
  clubb_l_godunov_upwind_wpxp_ta		=  .false. 
@@ -400,7 +400,7 @@
  microp_aero_npccn_scale		=   1.D0    
  microp_aero_wsub_min		=   0.1D0    
  microp_aero_wsub_min_asf		=   0.0D0    
- microp_aero_wsub_scale		= 1.0
+ microp_aero_wsub_scale		=   0.375D0  
  microp_aero_wsubi_min		=   0.001D0    
  microp_aero_wsubi_scale		=   1.D0    
 /
@@ -555,7 +555,7 @@
  zmconv_c0_ocn		=  0.0300D0 
  zmconv_capelmt		=  70.0    
  zmconv_dmpdz		=  -1.0E-3 
- zmconv_ke		=  5.0E-6 
+ zmconv_ke		= 1.E-5
  zmconv_ke_lnd		=  1.0E-5 
  zmconv_microp		=  .false. 
  zmconv_momcd		=  0.7000D0 
