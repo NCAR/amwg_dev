@@ -295,7 +295,7 @@ contains
     ! Ug = log(1.0+6.69R-0.476R^2)
     ! Coefficients X by 8640 for mm/s (from cam) -> cm/day (for above forumla)
 
-    ugust(gprec) = log(1._R8+(57801.6_r8/3.0_r8)*gprec-(3.55332096e7_r8/3.0_r8)*(gprec**2))
+    ugust(gprec) = log(1._R8+57801.6_r8*gprec-3.55332096e7_r8*(gprec**2))
 
     ! MDF 25Jul23: Try reducing coefficients? 
     !ugust(gprec) = log(1._R8+28900.8_r8*gprec-2.5754112e7_r8*(gprec**2))
