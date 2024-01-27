@@ -2,11 +2,11 @@
 
 set -e
 
-# Created 2024-01-09 11:49:32
+# Created 2024-01-13 17:56:03
 
-CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16g.BLT1850.ne30_t232.064intel"
+CASEDIR="/glade/p/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16g.BLT1850.ne30_t232.076"
 
-/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722 --compiler intel-oneapi
+/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
@@ -14,15 +14,13 @@ cd "${CASEDIR}"
 
 ./preview_namelists
 
-./xmlchange --append CAM_CONFIG_OPTS=-cosp
+./case.setup
 
 ./preview_namelists
 
 ./case.build
 
-./case.build
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=12,STOP_N=2,STOP_OPTION=nyears
+./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
 
 ./xmlchange REST_OPTION=nyears,REST_N=1
 
@@ -30,11 +28,15 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./xmlchange RESUBMIT=20
-
-./xmlchange RESUBMIT=0
+./case.submit
 
 ./case.submit
 
-./xmlchange RESUBMIT=12
+./case.submit
+
+./xmlchange RESUBMIT=10
+
+./case.submit
+
+./xmlchange RESUBMIT=20
 
