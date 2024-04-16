@@ -1,0 +1,1 @@
+/glade/campaign/cesm/cesmdata/inputdata/ocn/mom/tx2_3v2/woa18_04_initial_conditions.nc

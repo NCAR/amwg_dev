@@ -1,0 +1,1 @@
+/glade/campaign/cesm/cesmdata/inputdata/ocn/mom/tx2_3v2/vgrid_65L_20200626.nc

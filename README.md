@@ -1,6 +1,6 @@
 
 # case: 
-https://github.com/NCAR/amwg_dev/issues/493
+https://github.com/NCAR/amwg_dev/issues/497
 
 
 

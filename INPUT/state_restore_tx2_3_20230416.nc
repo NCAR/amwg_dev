@@ -1,0 +1,1 @@
+/glade/campaign/cesm/cesmdata/inputdata/ocn/mom/tx2_3v2/state_restore_tx2_3_20230416.nc

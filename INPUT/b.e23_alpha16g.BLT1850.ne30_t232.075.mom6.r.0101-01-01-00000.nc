@@ -1,0 +1,1 @@
+/glade/campaign/cesm/cesmdata/inputdata/cesm2_init/b.e23_alpha16g.BLT1850.ne30_t232.075/0101-01-01/b.e23_alpha16g.BLT1850.ne30_t232.075.mom6.r.0101-01-01-00000.nc
