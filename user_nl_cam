@@ -43,8 +43,6 @@ cldfrc2m_qist_min = 1.e-7
 
 bnd_topo = "/glade/campaign/cgd/amp/pel/topo/files/se/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_noleak_20240117.nc"
 se_hypervis_subcycle = 2
+   
+pertlim = 1.e-14
 
- flbc_cycle_yr          = -1                                                                                                                                                                                                            
- flbc_file              = '/glade/campaign/cesm/cesmdata/cseg/inputdata/atm/waccm/lb/LBC_CMIP6_1pctCO2ramp_y1-165_0p5degLat_c180930.nc'
- flbc_type              = 'SERIAL'
- 
