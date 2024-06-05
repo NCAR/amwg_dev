@@ -1,6 +1,2 @@
-# amwg_cases
-
-Issue https://github.com/NCAR/amwg_dev/issues/401
-
-
-
+# case: f.cam6_3_153.FLTHIST_ne30.001
+https://github.com/NCAR/amwg_dev/issues/516
