@@ -46,7 +46,7 @@ NJGLOBAL = 480
                                 ! STATIC_MEMORY_ this is set in MOM_memory.h at compile time.
                                 ! The processor layout that was acutally used."
 
-NK = 65
+NK = 75
                                 ! "[nondim]
                                 ! The number of model layers."
 
@@ -173,27 +173,19 @@ CFC_BC_FILE = /glade/campaign/cesm/cesmdata/inputdata/ocn/mom/grid_indpt/cfc_atm
                                 ! "The file in which the CFC-11 and CFC-12 atm concentrations can be found (units
                                 ! must be parts per trillion)."
 
-COORD_CONFIG = none
-                                ! "This specifies how layers are to be defined:
-                                ! file - read coordinate information from the file
-                                ! specified by (COORD_FILE).
-                                ! linear - linear based on interfaces not layesrs.
-                                ! ts_ref - use reference temperature and salinity
-                                ! ts_range - use range of temperature and salinity
-                                ! (T_REF and S_REF) to determine surface density
-                                ! and GINT calculate internal densities.
-                                ! gprime - use reference density (RHO_0) for surface
-                                ! density and GINT calculate internal densities.
-                                ! ts_profile - use temperature and salinity profiles
-                                ! (read from COORD_FILE) to set layer densities.
-                                ! USER - call a user modified routine.
-                                ! The file from which the coordinate densities are read."
-
 REMAP_UV_USING_OLD_ALG = False
                                 ! "[Boolean] default = True
                                 ! If true, uses the old remapping-via-a-delta-z method for remapping u and v. If
                                 ! false, uses the new method that remaps between grids described by an old and
                                 ! new thickness."
+
+BOUNDARY_EXTRAPOLATION = True
+                                ! "[Boolean] default = False
+                                ! When defined, a proper high-order reconstruction
+                                ! scheme is used within boundary cells rather
+                                ! than PCM. E.g., if PPM is used for remapping, a
+                                ! PPM reconstruction will also be used within
+                                ! boundary cells."
 
 GRID_CONFIG = mosaic
                                 ! "A character string that determines the method for
@@ -231,7 +223,7 @@ TOPO_CONFIG = file
                                 ! seamount - Gaussian bump for spontaneous motion test case.
                                 ! USER - call a user modified routine."
 
-TOPO_FILE = ocean_topog_230413.nc
+TOPO_FILE = ocean_topo_tx2_3v2_240501.nc
                                 ! "default = 'topog.nc'
                                 ! The file from which the bathymetry is read."
 
@@ -252,7 +244,7 @@ MASKING_DEPTH = 0.0
                                 ! The depth below which to mask points as land points, for which all
                                 ! fluxes are zeroed out. MASKING_DEPTH is ignored if negative."
 
-REMAPPING_SCHEME = PPM_H4
+REMAPPING_SCHEME = PPM_CW
                                 ! "default = 'PLM'
                                 ! This sets the reconstruction scheme used
                                 ! for vertical remapping for all variables.
@@ -332,6 +324,11 @@ RESOLN_SCALED_KHTH = True
                                 ! when the first baroclinic deformation radius is well
                                 ! resolved."
 
+RESOLN_SCALED_KHTR = True
+                                ! "[Boolean] default = False
+                                ! If true, the epipycnal tracer diffusivity is scaled away when the first
+                                ! baroclinic deformation radius is well resolved."
+
 USE_GM_WORK_BUG = False
                                 ! "[Boolean] default = True
                                 ! If true, compute the top-layer work tendency on the u-grid with the incorrect
@@ -342,6 +339,10 @@ USE_STORED_SLOPES = True
                                 ! If true, the isopycnal slopes are calculated once and
                                 ! stored for re-use. This uses more memory but avoids calling
                                 ! the equation of state more times than should be necessary."
+
+USE_STANLEY_ISO = True
+                                ! "[Boolean] default = False
+                                ! If true, turn on Stanley SGS T variance parameterization in isopycnal slope code."
 
 ETA_TOLERANCE = 1e-06
                                 ! "[m] default = 3.15E-09
@@ -361,6 +362,12 @@ NDIFF_INTERIOR_ONLY = True
                                 ! If true, only applies neutral diffusion in the ocean interior. That is, the
                                 ! algorithm will exclude the surface and bottomboundary layers."
 
+NDIFF_TAPERING = True
+                                ! "[Boolean] default = False
+                                ! If true, neutral diffusion linearly decays to zero within a transition
+                                ! zone defined using boundary layer depths.  Only applicable when
+                                ! NDIFF_INTERIOR_ONLY = True."
+
 USE_HORIZONTAL_BOUNDARY_DIFFUSION = True
                                 ! "[Boolean] default = False
                                 ! If true, enables the horizontal boundary tracer's diffusion module."
@@ -377,7 +384,7 @@ SIMPLE_TKE_TO_KD = True
                                 ! calculates Kd/TKE and bounds based on exact
                                 ! energetics/nfor an isopycnal layer-formulation."
 
-REGRIDDING_COORDINATE_MODE = Z*
+REGRIDDING_COORDINATE_MODE = HYCOM1
                                 ! "default = 'LAYER'
                                 ! Coordinate mode for vertical regridding.
                                 ! Choose among the following possibilities:
@@ -390,7 +397,7 @@ REGRIDDING_COORDINATE_MODE = Z*
                                 ! SLIGHT - stretched coordinates above continuous isopycnal
                                 ! ADAPTIVE - optimize for smooth neutral density surfaces"
 
-ALE_COORDINATE_CONFIG = "FILE:vgrid_65L_20200626.nc,dz"
+ALE_COORDINATE_CONFIG = "HYBRID:hybrid_75layer_zstar2.50m-2020-11-23.nc,sigma2,dz"
                                 ! "default = 'UNIFORM'
                                 ! Determines how to specify the coordinate
                                 ! resolution. Valid options are:
@@ -407,6 +414,36 @@ ALE_COORDINATE_CONFIG = "FILE:vgrid_65L_20200626.nc,dz"
                                 ! by a comma or space, for sigma-2 and dz. e.g.
                                 ! HYBRID:vgrid.nc,sigma2,dz"
 
+REGRID_COMPRESSIBILITY_FRACTION = 0.01
+                                ! "[not defined] default = 0.0
+                                ! When interpolating potential density profiles we can add
+                                ! some artificial compressibility solely to make homogenous
+                                ! regions appear stratified."
+
+MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.0,.01"
+                                ! "default = 'NONE'
+                                ! Determines how to specify the maximum interface depths.
+                                ! Valid options are:
+                                ! NONE        - there are no maximum interface depths
+                                ! PARAM       - use the vector-parameter MAXIMUM_INTERFACE_DEPTHS
+                                ! FILE:string - read from a file. The string specifies
+                                ! the filename and variable name, separated
+                                ! by a comma or space, e.g. FILE:lev.nc,Z
+                                ! FNC1:string - FNC1:dz_min,H_total,power,precision
+                                ! The list of maximum depths for each interface."
+
+MAX_LAYER_THICKNESS_CONFIG = "FNC1:400,31000.0,0.1,.01"
+                                ! "default = 'NONE'
+                                ! Determines how to specify the maximum layer thicknesses.
+                                ! Valid options are:
+                                ! NONE        - there are no maximum layer thicknesses
+                                ! PARAM       - use the vector-parameter MAX_LAYER_THICKNESS
+                                ! FILE:string - read from a file. The string specifies
+                                ! the filename and variable name, separated
+                                ! by a comma or space, e.g. FILE:lev.nc,Z
+                                ! FNC1:string - FNC1:dz_min,H_total,power,precision
+                                ! The list of maximum thickness for each layer."
+
 BOUND_CORIOLIS = True
                                 ! "[Boolean] default = False
                                 ! If true, the Coriolis terms at u-points are bounded by
@@ -419,6 +456,10 @@ MASS_WEIGHT_IN_PRESSURE_GRADIENT = True
                                 ! "[Boolean] default = False
                                 ! If true, use mass weighting when interpolation T/S for
                                 ! top/bottom integrals in AFV pressure gradient calculation."
+
+USE_STANLEY_PGF = True
+                                ! "[Boolean] default = False
+                                ! If true, turn on Stanley SGS T variance parameterization in PGF code."
 
 LAPLACIAN = True
                                 ! "[Boolean] default = False
@@ -499,11 +540,6 @@ V_TRUNC_FILE = V_velocity_truncations
                                 ! leading to meridional velocity truncations are written.
                                 ! Undefine this for efficiency if this diagnostic is not
                                 ! needed."
-
-KV = 0.0001
-                                ! "[m2 s-1]
-                                ! The background kinematic viscosity in the interior.
-                                ! The molecular value, ~1e-6 m2 s-1, may be used."
 
 MAXVEL = 6.0
                                 ! "[m s-1] default = 3.0E+08
@@ -640,6 +676,12 @@ KHTH = 0.0
                                 ! "[m2 s-1] default = 0.0
                                 ! The background horizontal thickness diffusivity."
 
+STOCH_EOS = True
+                                ! [Boolean] default = False If true, stochastic perturbations are applied to the EOS in the PGF.
+
+STANLEY_COEFF = 0.5
+                                ! [nondim] default = -1.0 Coefficient correlating the temperature gradient and SGS T variance.
+
 USE_KH_IN_MEKE = True
                                 ! "[Boolean] default = False
                                 ! If true, uses the thickness diffusivity calculated here to diffuse MEKE."
@@ -654,6 +696,10 @@ FGNV_C_MIN = 0.01
                                 ! "[m s-1] default = 0.0
                                 ! A minium wave speed used in the Ferrari et al., 2010,
                                 ! streamfunction formulation."
+
+USE_STANLEY_GM = True
+                                ! "[Boolean] default = False
+                                ! If true, turn on Stanley SGS T variance parameterization in GM code."
 
 MIXEDLAYER_RESTRAT = True
                                 ! "[Boolean] default = False
@@ -691,6 +737,10 @@ MLE_MLD_DECAY_TIME = 345600.0
                                 ! the MLD deepens below the current running-mean the running-mean
                                 ! is instantaneously set to the current MLD."
 
+USE_STANLEY_ML = True
+                                ! "[Boolean] default = False
+                                ! If true, turn on Stanley SGS T variance parameterization in ML restrat code."
+
 USE_CVMix_CONVECTION = True
                                 ! "[Boolean] default = False
                                 ! If true, turns on the enhanced mixing due to convection
@@ -721,7 +771,7 @@ HORIZ_VARYING_BACKGROUND = True
                                 !  If true, apply vertically uniform, latitude-dependent background diffusivity,
                                 !  as described in Danabasoglu et al., 2012."
 
-KD = 2e-05
+KD = 0.0
                                 ! "[m2 s-1]
                                 ! The background diapycnal diffusivity of density in the
                                 ! interior. Zero or the molecular value, ~1e-7 m2 s-1,
@@ -737,7 +787,7 @@ PRANDTL_BKGND = 5.0
                                 ! Turbulent Prandtl number used to convert vertical background diffusivities
                                 ! into viscosities."
 
-KD_MIN = 2e-06
+KD_MIN = 2e-07
                                 ! "[m2 s-1] default = 2.0E-07
                                 ! The minimum diapycnal diffusivity.
                                 ! If true, use an internal tidal dissipation scheme to
@@ -821,6 +871,11 @@ TRACER_ADVECTION_SCHEME = "PPM:H3"
                                 ! The horizontal transport scheme for tracers:
                                 ! PLM    - Piecewise Linear Method
                                 ! PPM:H3 - Piecewise Parabolic Method (Huyhn 3rd order)"
+
+KHTR_USE_EBT_STRUCT = True
+                                ! "[Boolean] default = False
+                                ! If true, uses the equivalent barotropic structure as the vertical structure of
+                                ! the tracer diffusivity."
 
 KHTR_MIN = 50.0
                                 ! "[m2 s-1] default = 0.0
@@ -919,18 +974,18 @@ USE_MEKE = True
                                 ! If true, turns on the MEKE scheme which calculates
                                 ! a sub-grid mesoscale eddy kinetic energy budget."
 
-MEKE_GMCOEFF = 0.0
+MEKE_GMCOEFF = 1.0
                                 ! "[nondim] default = -1.0
                                 ! The efficiency of the conversion of potential energy
                                 ! into MEKE by the thickness mixing parameterization.
                                 ! If MEKE_GMCOEFF is negative, this conversion is not
                                 ! used or calculated."
 
-MEKE_KHMEKE_FAC = 0.5
+MEKE_KHMEKE_FAC = 0.75
                                 ! "[nondim] default = 0.0
                                 ! A factor that maps MEKE%Kh to Kh for MEKE itself."
 
-MEKE_VISCOSITY_COEFF_KU = 0.2
+MEKE_VISCOSITY_COEFF_KU = 0.0
                                 ! "[nondim] default = 0.0
                                 ! If non-zero, is the scaling coefficient in the expression forviscosity used to
                                 ! parameterize harmonic lateral momentum mixing byunresolved eddies represented
@@ -966,15 +1021,31 @@ MEKE_ALPHA_GRID = 1.0
                                 ! If positive, is a coefficient weighting the grid-spacing as a scale in the
                                 ! expression for mixing length used in MEKE-derived diffusivity."
 
-MEKE_FRCOEFF = -1.0
+MEKE_FRCOEFF = 0.3
                                 ! "[nondim] default = -1.0
                                 ! If positive, is a coefficient weighting the grid-spacing as a scale in the
                                 ! expression for mixing length used in MEKE-derived diffusivity."
 
-KH_RES_SCALE_COEF = 0.4
+MEKE_POSITIVE = True
+                                ! "[Boolean] default = False
+                                ! If true, it guarantees that MEKE will always be >= 0.
+                                ! "
+
+USE_SIMPLER_EADY_GROWTH_RATE = True
+                                ! "[Boolean] default = False
+                                ! If true, use a simpler method to calculate the Eady growth rate that avoids
+                                ! division by layer thickness. Recommended."
+
+KH_RES_SCALE_COEF = 0.9
                                 ! "[nondim] default = 1.0
                                 ! A coefficient that determines how KhTh is scaled away if RESOLN_SCALED_... is
                                 ! true, as F = 1 / (1 + (KH_RES_SCALE_COEF*Rd/dx)^KH_RES_FN_POWER)."
+
+KH_RES_FN_POWER = 6
+                                ! "[nondim] default = 2
+                                ! The power of dx/Ld in the Kh resolution function.  Any positive integer may be
+                                ! used, although even integers are more efficient to calculate.  Setting this
+                                ! greater than 100 results in a step-function being used."
 
 VISC_RES_SCALE_COEF = 0.4
                                 ! "[nondim] default = 1.0
@@ -987,7 +1058,7 @@ MEKE_GEOMETRIC = True
                                 ! If MEKE_GEOMETRIC is true, uses the GM coefficient formulation from the
                                 ! GEOMETRIC framework (Marshall et al., 2012)."
 
-MEKE_GEOMETRIC_ALPHA = 0.1
+MEKE_GEOMETRIC_ALPHA = 0.09
                                 ! "[nondim] default = 0.05
                                 ! The nondimensional coefficient governing the efficiency of the GEOMETRIC
                                 ! thickness diffusion."
@@ -1000,6 +1071,20 @@ MEKE_KHTR_FAC = 1.0
                                 ! "[nondim] default = 0.0
                                 ! A factor that maps MEKE%Kh to KhTr."
 
+MEKE_CB = 100.0
+                                ! "[nondim] default = 25.0
+                                ! A coefficient in the expression for the ratio of bottom projected eddy energy
+                                ! and mean column energy (see Jansen et al. 2015)."
+
+MEKE_CDRAG = 0.0025
+                                ! "[nondim] default = 0.003
+                                ! Drag coefficient relating the magnitude of the velocity field to the bottom
+                                ! stress in MEKE."
+
+MEKE_MIN_GAMMA2 = 1e-05
+                                ! "[nondim] default = 1.0E-04
+                                ! The minimum allowed value of gamma_b^2."
+
 MEKE_EQUILIBRIUM_ALT = True
                                 ! "[Boolean] default = False
                                 ! If true, use an alternative formula for computing the (equilibrium)initial
@@ -1009,7 +1094,7 @@ MEKE_VISC_DRAG = False
                                 ! "[Boolean] default = True
                                 ! If true, use the vertvisc_type to calculate the bottom drag acting on MEKE."
 
-MEKE_EQUILIBRIUM_RESTORING = True
+MEKE_EQUILIBRIUM_RESTORING = False
                                 ! "[Boolean] default = False
                                 ! If true, restore MEKE back to its equilibrium value, which is calculated
                                 ! at each time step."
@@ -1024,7 +1109,7 @@ MEKE_ADVECTION_FACTOR = 1.0
                                 ! Using unity would be normal but other values could accommodate a mismatch
                                 ! between the advecting barotropic flow and the vertical structure of MEKE."
 
-CHANNEL_CONFIG = none
+CHANNEL_CONFIG = list
                                 ! "default = 'none'
                                 ! A parameter that determines which set of channels are
                                 ! restricted to specific  widths.  Options are:
@@ -1036,6 +1121,10 @@ CHANNEL_CONFIG = none
                                 ! test case.
                                 ! file - Read open face widths everywhere from a
                                 ! NetCDF file on the model grid."
+
+CHANNEL_LIST_FILE = MOM_channels_global_tx2_3v2_240501
+                                ! "default = MOM_channel_list
+                                ! The file from which the list of narrowed channels is read."
 
 KAPPA_SHEAR_ITER_BUG = False
                                 ! [Boolean] default = True If true, use an older, dimensionally inconsistent estimate of the derivative of diffusivity with energy in the Newton's method iteration.  The bug causes undercorrections when dz > 1 m.
@@ -1053,9 +1142,49 @@ BAD_VAL_SST_MIN = -3.0
                                 ! The value of SST below which a bad value message is triggered, if
                                 ! CHECK_BAD_SURFACE_VALS is true."
 
-DEFAULT_2018_ANSWERS = False
+DEFAULT_ANSWER_DATE = 99991231
                                 ! "[Boolean] default = True
-                                ! This sets the default value for the various _2018_ANSWERS parameters."
+                                ! This sets the default value for the various parameters."
+
+DO_GEOTHERMAL = True
+                                ! "[Boolean] default = False
+                                ! If true, apply geothermal heating."
+
+HYCOM1_ONLY_IMPROVES = True
+                                ! "[Boolean] default = False
+                                !  When regridding, an interface is only moved if this improves the fit to the
+                                !  target density."
+
+KV = 0.0
+                                ! "[m2 s-1]
+                                ! kinematic viscosity in the interior. The molecular value, ~1e-6
+                                ! m2 s-1, may be used."
+
+INTERPOLATION_SCHEME = PPM_CW
+                                ! "TODO"
+
+GEOTHERMAL_SCALE = 1.0
+                                ! "[W m-2 or various] default = 0.0
+                                ! The constant geothermal heat flux, a rescaling
+                                ! factor for the heat flux read from GEOTHERMAL_FILE, or
+                                ! 0 to disable the geothermal heating."
+
+GEOTHERMAL_FILE = geothermal_davies2013_tx2_3_20240318_cdf5.nc
+                                ! "default = ''
+                                ! The file from which the geothermal heating is to be
+                                ! read, or blank to use a constant heating rate."
+
+GEOTHERMAL_VARNAME = geothermal_hf
+                                ! "default = 'geo_heat'
+                                ! The name of the geothermal heating variable in
+                                ! GEOTHERMAL_FILE."
+
+AUTO_MASKTABLE = True
+                                ! Turn on automatic mask table generation to eliminate land blocks
+
+GEOM_FILE = "b.e23_alpha17f.BLT1850.ne30_t232.093".mom6.h.ocean_geometry.nc
+                                ! default = ocean_geometry.nc
+                                ! The file into which to write the ocean geometry.
 
 KPP%
 N_SMOOTH = 3

@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cesm2_3_alpha16g">
+    <entry id="MODEL_VERSION" value="cesm2_3_alpha17f">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -44,7 +44,8 @@
     <entry id="MACHINES_SPEC_FILE" value="$SRCROOT/ccs_config/machines/config_machines.xml">
       <type>char</type>
       <desc>file containing machine specifications for target model primary component (for documentation only - DO NOT EDIT)</desc>
-      <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_machines.xsd</schema>
+      <schema version="2.0">$CIMEROOT/CIME/data/config/xml_schemas/config_machines.xsd</schema>
+      <schema version="3.0">$CIMEROOT/CIME/data/config/xml_schemas/config_machines_version3.xsd</schema>
     </entry>
     <entry id="BATCH_SPEC_FILE" value="$SRCROOT/ccs_config/machines/config_batch.xml">
       <type>char</type>
@@ -296,7 +297,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16g.BLT1850.ne30_t232.084b">
+    <entry id="CASEROOT" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLT1850.ne30_t232.093">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +306,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16g">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha17f">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="b.e23_alpha16g.BLT1850.ne30_t232.084b">
+    <entry id="CASE" value="b.e23_alpha17f.BLT1850.ne30_t232.093">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +326,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +344,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="4c3da833821b95481a0c20f52c38434b6fa27348917ac96d7dda5693bc5cabc2">
+    <entry id="CASE_HASH" value="0636c3c5b99fd32aa03ee69d01c72bc6e6ceccac248a35dcdb9f8ff86b71f05f">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
