@@ -1,1 +1,0 @@
-/glade/campaign/cesm/cesmdata/inputdata/ocn/mom/tx2_3v2/ocean_topog_230413.nc

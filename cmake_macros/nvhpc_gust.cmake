@@ -1,6 +1,0 @@
-if (COMP_NAME STREQUAL mpi-serial)
-   string(APPEND CFLAGS " -std=c89 ")
-endif()
-if (NOT DEBUG)
-  string(APPEND FFLAGS " -target=zen3")
-endif()
