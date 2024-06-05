@@ -51,7 +51,7 @@
       <directive> -l select={{ num_nodes }}:ncpus={{ max_cputasks_per_gpu_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}:mem=480GB:ngpus={{ ngpus_per_node }}:mps=1 </directive>
     </directives>
     <queues>
-      <queue walltimemax="12:00:00" nodemin="1" nodemax="2488">main</queue>
+      <queue walltimemax="4:00:00" nodemin="1" nodemax="2488">main</queue>
     </queues>
   </batch_system>
 </file>

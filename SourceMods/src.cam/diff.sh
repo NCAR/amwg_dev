@@ -1,0 +1,9 @@
+diff  ~/src/cam-opt/src/dynamics/se/dyn_grid.F90 dyn_grid.F90
+diff  ~/src/cam-opt/src/dynamics/se/dp_coupling.F90 dp_coupling.F90
+diff  ~/src/cam-opt/src/dynamics/se/dyn_comp.F90 dyn_comp.F90
+diff  ~/src/cam-opt/src/dynamics/se/dycore/fvm_mod.F90 fvm_mod.F90
+diff  ~/src/cam-opt/src/dynamics/se/dycore/prim_advection_mod.F90 prim_advection_mod.F90
+diff  ~/src/cam-opt/src/dynamics/se/dycore/global_norms_mod.F90 global_norms_mod.F90
+diff  ~/src/cam-opt/src/dynamics/se/dycore/prim_driver_mod.F90 prim_driver_mod.F90
+diff  ~/src/cam-opt/src/dynamics/se/dycore/fvm_mapping.F90 fvm_mapping.F90
+diff  ~/src/cam-opt/src/dynamics/se/dycore/prim_advance_mod.F90 prim_advance_mod.F90
