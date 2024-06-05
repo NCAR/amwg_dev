@@ -12,9 +12,9 @@ ndens               =       2,       2,      2,       2,       2,       1,      
 
 interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
 
-interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
+interpolate_nlat    =     180,     180,    180,     180,     180,     180,   180
 
-interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
+interpolate_nlon    =     360,     360,    360,     360,     360,     360,   360 
 
 
 
@@ -86,6 +86,6 @@ se_hypervis_subcycle = 2
 
 
 
-ncdata ="/glade/campaign/cesm/cesmdata/inputdata/atm/cam/inic/se/F2000climo_ne30pg3_mg17_01-01-00000_c200424.nc"
+ncdata ="/glade/campaign/cgd/amp/juliob/ERA5/ne30np4/L42/ERA5_x_ne30np4_L42_Test01_WO.1994-01-01-00000.nc"
 
 / 
