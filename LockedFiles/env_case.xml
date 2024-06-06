@@ -30,7 +30,7 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cesm2_3_alpha16g">
+    <entry id="MODEL_VERSION" value="cam6_3_153">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
@@ -44,7 +44,8 @@
     <entry id="MACHINES_SPEC_FILE" value="$SRCROOT/ccs_config/machines/config_machines.xml">
       <type>char</type>
       <desc>file containing machine specifications for target model primary component (for documentation only - DO NOT EDIT)</desc>
-      <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_machines.xsd</schema>
+      <schema version="2.0">$CIMEROOT/CIME/data/config/xml_schemas/config_machines.xsd</schema>
+      <schema version="3.0">$CIMEROOT/CIME/data/config/xml_schemas/config_machines_version3.xsd</schema>
     </entry>
     <entry id="BATCH_SPEC_FILE" value="$SRCROOT/ccs_config/machines/config_batch.xml">
       <type>char</type>
@@ -183,11 +184,6 @@
     </entry>
   </group>
   <group id="case_comps">
-    <entry id="COMP_ROOT_DIR_ATM" value="$SRCROOT/components/cam/">
-      <type>char</type>
-      <desc>Root directory of the case atmospheric component  </desc>
-      <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_compsets.xsd</schema>
-    </entry>
     <entry id="COMP_ROOT_DIR_CPL" value="$SRCROOT/components/cmeps">
       <type>char</type>
       <desc>Root directory of the case driver/coupler component  </desc>
@@ -232,6 +228,11 @@
       <type>char</type>
       <desc>Root directory of the case external system processing (esp) component  </desc>
       <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_compsets.xsd</schema>
+    </entry>
+    <entry id="COMP_ROOT_DIR_ATM" value="$SRCROOT">
+      <type>char</type>
+      <desc>Root directory of the case atmosphere model component  </desc>
+      <schema>$CIMEROOT/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
   </group>
   <group id="case_comp">
@@ -296,7 +297,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.cam6_3_132.FLTHIST_ne30.82b_mods.001">
+    <entry id="CASEROOT" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.cam6_3_153.FLTHIST_ne30.GLL_grid.001">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -305,15 +306,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_153/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16g">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_153">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.cam6_3_132.FLTHIST_ne30.82b_mods.001">
+    <entry id="CASE" value="f.cam6_3_153.FLTHIST_ne30.GLL_grid.001">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -325,7 +326,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_153/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -343,7 +344,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="4d518748b01e2611f218cff422496aef4023e96dd7ee1f88f2522c94d215610c">
+    <entry id="CASE_HASH" value="e57c125bc2bd50d5c431c5174bb103bdd501656888962f4ba19b5555dfbe8fab">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>

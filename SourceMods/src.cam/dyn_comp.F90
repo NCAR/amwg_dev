@@ -1,4 +1,3 @@
-#define old_cam
 module dyn_comp
 
 ! CAM interfaces to the SE Dynamical Core
@@ -43,11 +42,7 @@ use dimensions_mod,         only: nelemd, nlev, np, npsq, ntrac, nc, fv_nphys
 use dimensions_mod,         only: qsize, use_cslam
 use element_mod,            only: element_t, elem_state_t
 use fvm_control_volume_mod, only: fvm_struct
-#ifdef old_cam
-use time_mod,        only: nsplit
-#else
 use se_dyn_time_mod,        only: nsplit
-#endif
 use edge_mod,               only: initEdgeBuffer, edgeVpack, edgeVunpack, FreeEdgeBuffer
 use edgetype_mod,           only: EdgeBuffer_t
 use bndry_mod,              only: bndry_exchange
@@ -174,7 +169,6 @@ subroutine dyn_readnl(NLFileName)
    real(r8)                     :: se_molecular_diff
    integer                      :: se_pgf_formulation
    integer                      :: se_dribble_in_rsplit_loop
-#ifndef old_cam   
    namelist /dyn_se_inparm/        &
       se_fine_ne,                  & ! For refined meshes
       se_ftype,                    & ! forcing type
@@ -221,53 +215,6 @@ subroutine dyn_readnl(NLFileName)
       se_molecular_diff,           &
       se_pgf_formulation,          &
       se_dribble_in_rsplit_loop
-#else
-   namelist /dyn_se_inparm/        &
-      se_fine_ne,                  & ! For refined meshes
-      se_ftype,                    & ! forcing type
-      se_statediag_numtrac,        &
-      se_fv_nphys,                 &
-      se_hypervis_power,           &
-      se_hypervis_scaling,         &
-      se_hypervis_subcycle,        &
-      se_hypervis_subcycle_sponge, &
-      se_hypervis_subcycle_q,      &
-      se_limiter_option,           &
-      se_max_hypervis_courant,     &
-      se_mesh_file,                & ! Refined mesh definition file
-      se_ne,                       &
-      se_npes,                     &
-      se_nsplit,                   & ! # of dyn steps per physics timestep
-      se_nu,                       &
-      se_nu_div,                   &
-      se_nu_p,                     &
-      se_nu_top,                   &
-      se_sponge_del4_nu_fac,       &
-      se_sponge_del4_nu_div_fac,   &
-      se_sponge_del4_lev,          &
-      se_qsplit,                   &
-      se_refined_mesh,             &
-      se_rsplit,                   &
-      se_statefreq,                & ! number of steps per printstate call
-      se_tstep_type,               &
-      se_vert_remap_T,             &
-      se_vert_remap_uvTq_alg,      &
-      se_vert_remap_tracer_alg,    &
-      se_write_grid_file,          &
-      se_grid_filename,            &
-      se_write_gll_corners,        &
-      se_horz_num_threads,         &
-      se_vert_num_threads,         &
-      se_tracer_num_threads,       &
-      se_write_restart_unstruct,   &
-      se_large_Courant_incr,       &
-      se_fvm_supercycling,         &
-      se_fvm_supercycling_jet,     &
-      se_kmin_jet,                 &
-      se_kmax_jet,                 &
-      se_molecular_diff,           &
-      se_pgf_formulation
-#endif
    !--------------------------------------------------------------------------
 
    ! defaults for variables not set by build-namelist
@@ -341,9 +288,7 @@ subroutine dyn_readnl(NLFileName)
    call MPI_bcast(se_kmax_jet, 1, mpi_integer, masterprocid, mpicom, ierr)
    call MPI_bcast(se_molecular_diff, 1, mpi_real8, masterprocid, mpicom, ierr)
    call MPI_bcast(se_pgf_formulation, 1, mpi_integer, masterprocid, mpicom, ierr)
-#ifndef old_cam   
    call MPI_bcast(se_dribble_in_rsplit_loop, 1, mpi_integer, masterprocid, mpicom, ierr)
-#endif
    if (se_npes <= 0) then
       call endrun('dyn_readnl: ERROR: se_npes must be > 0')
    end if
@@ -411,9 +356,7 @@ subroutine dyn_readnl(NLFileName)
    variable_nsplit          = .false.
    molecular_diff           = se_molecular_diff
    pgf_formulation          = se_pgf_formulation
-#ifndef old_cam      
    dribble_in_rsplit_loop   = se_dribble_in_rsplit_loop
-#endif   
    if (fv_nphys > 0) then
       ! Use finite volume physics grid and CSLAM for tracer advection
       nphys_pts = fv_nphys*fv_nphys
@@ -529,7 +472,7 @@ subroutine dyn_readnl(NLFileName)
          end if
       end if
 
-      if (fv_nphys > 0) then
+      if (use_cslam) then
          write(iulog, '(a)') 'dyn_readnl: physics will run on FVM points; advection by CSLAM'
          write(iulog,'(a,i0)') 'dyn_readnl: se_fv_nphys = ', fv_nphys
       else
@@ -675,12 +618,14 @@ subroutine dyn_init(dyn_in, dyn_out)
    integer :: m_cnst, m
 
    ! variables for initializing energy and axial angular momentum diagnostics
-   integer, parameter                         :: num_stages = 12
-   character (len = 4), dimension(num_stages) :: stage         = (/"dED","dAF","dBD","dAD","dAR","dBF","dBH","dCH","dAH","dBS","dAS","p2d"/)
+   integer, parameter                         :: num_stages = 14
+   character (len = 4), dimension(num_stages) :: stage         = (/"dED","dAF","dBD","dBL","dAL","dAD","dAR","dBF","dBH","dCH","dAH","dBS","dAS","p2d"/)
    character (len = 70),dimension(num_stages) :: stage_txt = (/&
       " end of previous dynamics                           ",& !dED
       " from previous remapping or state passed to dynamics",& !dAF - state in beginning of nsplit loop
       " state after applying CAM forcing                   ",& !dBD - state after applyCAMforcing
+      " before floating dynamics                           ",& !dBL
+      " after floating dynamics                            ",& !dAL
       " before vertical remapping                          ",& !dAD - state before vertical remapping
       " after vertical remapping                           ",& !dAR - state at end of nsplit loop
       " state passed to parameterizations                  ",& !dBF
@@ -984,8 +929,8 @@ subroutine dyn_init(dyn_in, dyn_out)
       !
       ! Register tendency (difference) budgets
       !
-      call cam_budget_em_register('dEdt_floating_dyn'   ,'dAD','dBD','dyn','dif', &
-                      longname="dE/dt floating dynamics (dAD-dBD)"               )
+      call cam_budget_em_register('dEdt_floating_dyn'   ,'dAL','dBL','dyn','dif', &
+                      longname="dE/dt floating dynamics (dAL-dBL)"               )
       call cam_budget_em_register('dEdt_vert_remap'     ,'dAR','dAD','dyn','dif', &
                       longname="dE/dt vertical remapping (dAR-dAD)"              )
       call cam_budget_em_register('dEdt_phys_tot_in_dyn','dBD','dAF','dyn','dif', &
@@ -1041,11 +986,7 @@ subroutine dyn_run(dyn_state)
    use air_composition,  only: thermodynamic_active_species_idx_dycore
    use prim_driver_mod,  only: prim_run_subcycle
    use dimensions_mod,   only: cnst_name_gll
-#ifdef old_cam
-   use time_mod,  only: tstep, nsplit, timelevel_qdp, tevolve
-#else
    use se_dyn_time_mod,  only: tstep, nsplit, timelevel_qdp, tevolve
-#endif
    use hybrid_mod,       only: config_thread_region, get_loop_ranges
    use control_mod,      only: qsplit, rsplit, ftype_conserve
    use thread_mod,       only: horz_num_threads
@@ -1908,7 +1849,7 @@ subroutine set_phis(dyn_in)
    allocate(phis_tmp(npsq,nelemd))
    phis_tmp = 0.0_r8
 
-   if (fv_nphys > 0) then
+   if (use_cslam) then
       allocate(phis_phys_tmp(fv_nphys**2,nelemd))
       phis_phys_tmp = 0.0_r8
       do ie=1,nelemd
@@ -1933,7 +1874,7 @@ subroutine set_phis(dyn_in)
 
       ! Set name of grid object which will be used to read data from file
       ! into internal data structure via PIO.
-      if (fv_nphys == 0) then
+      if (.not.use_cslam) then
          grid_name = 'GLL'
       else
          grid_name = 'physgrid_d'
@@ -1959,19 +1900,19 @@ subroutine set_phis(dyn_in)
 
       fieldname = 'PHIS'
       fieldname_gll = 'PHIS_gll'
-      if (fv_nphys>0.and.dyn_field_exists(fh_topo, trim(fieldname_gll),required=.false.)) then
+!xxx      if (use_cslam.and.dyn_field_exists(fh_topo, trim(fieldname_gll),required=.false.)) then
          !
          ! If physgrid it is recommended to read in PHIS on the GLL grid and then
          ! map to the physgrid in d_p_coupling
          !
          ! This requires a topo file with PHIS_gll on it ...
          !
-         if (masterproc) then
-            write(iulog, *) "Reading in PHIS on GLL grid (mapped to physgrid in d_p_coupling)"
-         end if
-         call read_dyn_var(fieldname_gll, fh_topo, 'ncol_gll', phis_tmp)
-      else if (dyn_field_exists(fh_topo, trim(fieldname))) then
-         if (fv_nphys == 0) then
+!xxx         if (masterproc) then
+!xxx            write(iulog, *) "Reading in PHIS on GLL grid (mapped to physgrid in d_p_coupling)"
+!xxx         end if
+!xxx         call read_dyn_var(fieldname_gll, fh_topo, 'ncol_gll', phis_tmp)
+      if (dyn_field_exists(fh_topo, trim(fieldname))) then!xxx
+         if (.not.use_cslam) then
             if (masterproc) then
                write(iulog, *) "Reading in PHIS"
             end if
@@ -1988,7 +1929,8 @@ subroutine set_phis(dyn_in)
             end if
             call read_phys_field_2d(fieldname, fh_topo, 'ncol', phis_phys_tmp)
             call map_phis_from_physgrid_to_gll(dyn_in%fvm, elem, phis_phys_tmp, &
-                phis_tmp, pmask)
+                 phis_tmp, pmask)
+            deallocate(phis_phys_tmp)
          end if
       else
          call endrun(sub//': Could not find PHIS field on input datafile')
@@ -2036,9 +1978,6 @@ subroutine set_phis(dyn_in)
       end do
    end do
    deallocate(phis_tmp)
-   if (allocated(phis_phys_tmp)) then
-      deallocate(phis_phys_tmp)
-   end if
 
    ! boundary exchange to update the redundent columns in the element objects
    do ie = 1, nelemd

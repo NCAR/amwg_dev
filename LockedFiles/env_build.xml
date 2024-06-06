@@ -213,11 +213,6 @@
       <desc>If set will attach this script to the MPI run command, mapping
     different MPI ranks to different GPUs within the same compute node</desc>
     </entry>
-    <entry id="SMP_PRESENT" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>TRUE implies that at least one of the components is built threaded (DO NOT EDIT)</desc>
-    </entry>
     <entry id="USE_PETSC" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
