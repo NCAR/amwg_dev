@@ -178,7 +178,7 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="1850_CAM%DEV%LT%GHGMAM4_CLM51%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_WW3_SESP">
+    <entry id="COMPSET" value="1850_CAM%DEV%LT%GHGMAM4_CLM51%BGC-CROP_CICE_POP2%ECO_MOSART_CISM2%GRIS-NOEVOLVE_WW3_SESP">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
@@ -194,7 +194,7 @@
       <desc>Root directory of the case driver/coupler component  </desc>
       <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_compsets.xsd</schema>
     </entry>
-    <entry id="COMP_ROOT_DIR_OCN" value="$SRCROOT/components/mom/">
+    <entry id="COMP_ROOT_DIR_OCN" value="$SRCROOT/components/pop/">
       <type>char</type>
       <desc>Root directory of the case ocean component  </desc>
       <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_compsets.xsd</schema>
@@ -265,10 +265,17 @@
       <valid_values>cice</valid_values>
       <desc>Name of sea-ice component</desc>
     </entry>
-    <entry id="COMP_OCN" value="mom">
+    <entry id="COMP_OCN" value="pop">
       <type>char</type>
-      <valid_values>mom</valid_values>
-      <desc>MOM6 ocean component</desc>
+      <valid_values>pop</valid_values>
+      <desc>Name of ocean component</desc>
+    </entry>
+    <entry id="OCN_PE_CHANGE_REQUIRES_REBUILD" value="TRUE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>This component requires a clean build if the pelayout changes, if this variable is
+                not defined for a component it is assumed FALSE
+    </desc>
     </entry>
     <entry id="COMP_ROF" value="mosart">
       <type>char</type>
@@ -297,7 +304,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLT1850.ne30_t232.095">
+    <entry id="CASEROOT" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLT1850.ne30_g17.POP.096">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -314,7 +321,7 @@
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="b.e23_alpha17f.BLT1850.ne30_t232.095">
+    <entry id="CASE" value="b.e23_alpha17f.BLT1850.ne30_g17.POP.096">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -344,7 +351,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="33d41cdd1c756bea28ca66a747f3feb3cd48ffc96cfdeaeeb90e415fafca550b">
+    <entry id="CASE_HASH" value="7f7bf2eb526ab080ab32e8df32293e8299057f0350bcbf4c1103b6632894bcb5">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>
