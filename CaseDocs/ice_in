@@ -3,18 +3,18 @@
   conserv_check = .false.
   days_per_year = 365
   diagfreq = 24
-  dumpfreq = "x"
-  dumpfreq_n = 1
+  dumpfreq = 'x', 'x', 'x', 'x', 'x'
+  dumpfreq_n = 1, 1, 1, 1, 1
   hist_avg = .true., .true., .true., .true., .true.
+  hist_suffix = "x", "1", "2", "3", "4"
   hist_time_axis = "middle"
   histfreq = "m", "x", "x", "x", "x"
   histfreq_n = 1, 0, 0, 0, 0
   history_file = "unknown"
   history_format = "default"
   history_precision = 4
-  ice_ic = "b.e23_alpha16g.BLT1850.ne30_t232.075.cice.r.0101-01-01-00000.nc"
+  ice_ic = '/glade/p/cesmdata/cseg/inputdata/cesm2_init/g.e23_a17f.GJRAv4.TL319_t232_hycom1_N75.2024.057/0016-01-01-00000/g.e23_a17f.GJRAv4.TL319_t232_hycom1_N75.2024.057.cice.r.0016-01-01-00000.nc'
   latpnt = 90.0, -65.0
-  lcdf64 = .true.
   lonpnt = 0.0, -45.0
   ndtd = 1
   numax = 99
@@ -83,10 +83,12 @@
   tr_snow = .false.
 /
 &thermo_nml
+  Tliquidus_max = -0.1
   a_rapid_mode = 0.5e-03
   aspect_rapid_mode = 1.0
   conduct = "MU71"
   dsdt_slow_mode = -1.5e-07
+  hi_min = 0.01
   kitd = 1
   ktherm = 2
   phi_c_slow_mode = 0.05
@@ -201,7 +203,7 @@
   maskhalo_bound = .true.
   maskhalo_dyn = .true.
   maskhalo_remap = .true.
-  max_blocks = 6
+  max_blocks = 7
   ns_boundary_type = "tripole"
   nx_global = 540
   ny_global = 480
@@ -266,11 +268,17 @@
 /
 &icefields_fsd_nml
   f_afsd = "xxxxx"
+  f_afsdn = "xxxxx"
   f_dafsd_latg = "xxxxx"
   f_dafsd_latm = "xxxxx"
   f_dafsd_newi = "xxxxx"
   f_dafsd_wave = "xxxxx"
   f_dafsd_weld = "xxxxx"
+  f_diam_ww = "xxxxx"
+  f_fsdperim = "xxxxx"
+  f_fsdrad = "xxxxx"
+  f_hice_ww = "xxxxx"
+  f_wave_sig_ht = "xxxxx"
 /
 &icefields_mechred_nml
   f_alvl = "xxxxx"
