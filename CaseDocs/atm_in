@@ -311,9 +311,9 @@
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
  se_rsplit		=  3 
- se_sponge_del4_lev		=  -1 
- se_sponge_del4_nu_div_fac		=  -1 
- se_sponge_del4_nu_fac		=  -1 
+ se_sponge_del4_lev		= 4
+ se_sponge_del4_nu_div_fac		= 3.375
+ se_sponge_del4_nu_fac		= 3.375
  se_statediag_numtrac		= 3
  se_statefreq		=  0 
  se_tracer_num_threads		=  0 
