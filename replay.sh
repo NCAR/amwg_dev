@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2024-06-18 15:25:37
+# Created 2024-06-26 09:57:29
 
-CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLTHIST.ne30_t232.098"
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLTHIST.ne30_t232.098b"
 
 /glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime/scripts/create_newcase --compset BLTHIST_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
 
@@ -20,7 +20,7 @@ cd "${CASEDIR}"
 
 ./xmlchange RUN_REFCASE=b.e23_alpha17f.BLT1850.ne30_t232.098
 
-./xmlchange RUN_REFDATE=0101-01-01
+./xmlchange RUN_REFDATE=0125-01-01
 
 ./xmlchange GET_REFCASE=TRUE
 
@@ -30,25 +30,9 @@ cd "${CASEDIR}"
 
 ./preview_namelists
 
-./case.build
-
-./xmlchange RUN_TYPE=hybrid
-
-./xmlchange RUN_REFCASE=b.e23_alpha17f.BLT1850.ne30_t232.098
-
-./xmlchange RUN_REFDATE=0075-01-01
-
-./xmlchange GET_REFCASE=TRUE
-
-./xmlchange RUN_REFDIR=cesm2_init
-
 ./preview_namelists
 
 ./case.build
-
-./case.build
-
-./preview_namelists
 
 ./preview_namelists
 
@@ -63,10 +47,4 @@ cd "${CASEDIR}"
 ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
 
 ./case.submit
-
-./xmlchange RESUBMIT=50
-
-./case.submit
-
-./xmlchange RESUBMIT=0
 
