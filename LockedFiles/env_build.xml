@@ -131,7 +131,7 @@
     </entry>
   </group>
   <group id="build_def">
-    <entry id="CIME_OUTPUT_ROOT" value="/glade/derecho/scratch/hannay">
+    <entry id="CIME_OUTPUT_ROOT" value="/glade/derecho/scratch/gmarques">
       <type>char</type>
       <valid_values/>
       <desc>Output root directory for each machine.
@@ -334,7 +334,7 @@
       <valid_values>eul,fv,fv3,se,mpas</valid_values>
       <desc>CAM dynamical core</desc>
     </entry>
-    <entry id="CAM_CONFIG_OPTS" value="-phys cam_dev -chem ghg_mam4 -nlev 58 -model_top lt -rad rrtmgp">
+    <entry id="CAM_CONFIG_OPTS" value="-phys cam_dev -chem ghg_mam4 -nlev 58 -model_top lt">
       <type>char</type>
       <valid_values/>
       <desc>
