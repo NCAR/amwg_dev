@@ -3,7 +3,7 @@
   conserv_check = .false.
   days_per_year = 365
   diagfreq = 24
-  dumpfreq = "y", "x", "x", "x", "x"
+  dumpfreq = 'x', 'x', 'x', 'x', 'x'
   dumpfreq_n = 1, 1, 1, 1, 1
   hist_avg = .true., .true., .true., .true., .true.
   hist_suffix = "x", "1", "2", "3", "4"
@@ -13,7 +13,7 @@
   history_file = "unknown"
   history_format = "default"
   history_precision = 4
-  ice_ic = "b.e23_alpha17f.BLT1850.ne30_t232.092.cice.r.0101-01-01-00000.nc"
+  ice_ic = "b.e23_alpha17f.BLT1850.ne30_t232.098.cice.r.0075-01-01-00000.nc"
   latpnt = 90.0, -65.0
   lonpnt = 0.0, -45.0
   ndtd = 1
@@ -376,8 +376,8 @@
   f_fmeltt_ai = "xxxxx"
   f_fmelttn_ai = "xxxxx"
   f_frazil = "mdxxx"
-  f_fresh = "mxxxx"
-  f_fresh_ai = "xxxxx"
+  f_fresh = 'mxxxx'
+  f_fresh_ai = 'mxxxx'
   f_frz_onset = "xxxxx"
   f_frzmlt = "xxxxx"
   f_fsalt = "mxxxx"
