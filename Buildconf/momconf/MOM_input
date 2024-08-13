@@ -1174,7 +1174,7 @@ THICKNESS_CONFIG = thickness_file
                                 ! rossby_front - a mixed layer front in thermal wind balance.
                                 ! USER - call a user modified routine."
 
-THICKNESS_FILE = ./b.e23_alpha17f.BLT1850.ne30_t232.098.mom6.r.0125-01-01-00000.nc
+THICKNESS_FILE = ./b.e23_alpha17f.BLT1850.ne30_t232.098.mom6.r.0201-01-01-00000.nc
                                 ! The name of the thickness file
 
 HYCOM1_ONLY_IMPROVES = True
@@ -1202,7 +1202,7 @@ TS_CONFIG = file
                                 ! SCM_ideal_hurr - used in the SCM idealized hurricane test.
                                 ! USER - call a user modified routine."
 
-TS_FILE = ./b.e23_alpha17f.BLT1850.ne30_t232.098.mom6.r.0125-01-01-00000.nc
+TS_FILE = ./b.e23_alpha17f.BLT1850.ne30_t232.098.mom6.r.0201-01-01-00000.nc
                                 ! The initial condition file for the temperature and salinity.
 
 TEMP_IC_VAR = Temp
@@ -1214,7 +1214,7 @@ SALT_IC_VAR = Salt
 VELOCITY_CONFIG = file
                                 ! A string that determines how the initial velocities are specified for a new run.
 
-VELOCITY_FILE = ./b.e23_alpha17f.BLT1850.ne30_t232.098.mom6.r.0125-01-01-00000.nc
+VELOCITY_FILE = ./b.e23_alpha17f.BLT1850.ne30_t232.098.mom6.r.0201-01-01-00000.nc
                                 ! The name of the velocity initial condition file.
 
 KV = 0.0
@@ -1244,7 +1244,7 @@ GEOTHERMAL_VARNAME = geothermal_hf
 AUTO_MASKTABLE = True
                                 ! Turn on automatic mask table generation to eliminate land blocks
 
-GEOM_FILE = "b.e23_alpha17f.BLTHIST.ne30_t232.098b".mom6.h.ocean_geometry.nc
+GEOM_FILE = "b.e23_alpha17f.BLT1850.ne30_t232.100".mom6.h.ocean_geometry.nc
                                 ! default = ocean_geometry.nc
                                 ! The file into which to write the ocean geometry.
 

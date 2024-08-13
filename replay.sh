@@ -2,11 +2,11 @@
 
 set -e
 
-# Created 2024-06-26 09:57:29
+# Created 2024-07-25 09:50:46
 
-CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLTHIST.ne30_t232.098b"
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLT1850.ne30_t232.100"
 
-/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime/scripts/create_newcase --compset BLTHIST_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
+/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
@@ -16,29 +16,75 @@ cd "${CASEDIR}"
 
 ./preview_namelists
 
-./xmlchange RUN_TYPE=hybrid
-
-./xmlchange RUN_REFCASE=b.e23_alpha17f.BLT1850.ne30_t232.098
-
-./xmlchange RUN_REFDATE=0125-01-01
-
-./xmlchange GET_REFCASE=TRUE
-
-./xmlchange RUN_REFDIR=cesm2_init
-
 ./xmlchange MOM6_VERTICAL_GRID=hycom1
 
 ./preview_namelists
 
-./preview_namelists
-
 ./case.build
 
 ./preview_namelists
 
-./case.build
+./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=50,STOP_N=2,STOP_OPTION=nyears
+./xmlchange CHARGE_ACCOUNT=CESM0023
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
+
+./preview_namelists
+
+./xmlchange RUN_REFCASE=b.e23_alpha16g.BLT1850.ne30_t232.098
+
+./xmlchange RUN_REFDATE=0251-01-01
+
+./xmlchange RUN_TYPE=hybrid
+
+./xmlchange GET_REFCASE=true
+
+./xmlchange RUN_REFDIR=cesm2_init
+
+./xmlchange RUN_TYPE=hybrid
+
+./preview_namelists
+
+./preview_namelists
+
+./xmlchange RUN_REFCASE=b.e23_alpha16g.BLT1850.ne30_t232.098
+
+./xmlchange RUN_REFDATE=0201-01-01
+
+./xmlchange RUN_TYPE=hybrid
+
+./xmlchange GET_REFCASE=true
+
+./xmlchange RUN_REFDIR=cesm2_init
+
+./xmlchange RUN_REFCASE=b.e23_alpha16g.BLT1850.ne30_t232.098
+
+./xmlchange RUN_REFDATE=0201-01-01
+
+./xmlchange RUN_TYPE=hybrid
+
+./xmlchange GET_REFCASE=true
+
+./xmlchange RUN_REFDIR=cesm2_init
+
+./preview_namelists
+
+./xmlchange RUN_REFCASE=b.e23_alpha16g.BLT1850.ne30_t232.098
+
+./xmlchange RUN_REFDATE=0201-01-01
+
+./xmlchange RUN_TYPE=hybrid
+
+./xmlchange GET_REFCASE=true
+
+./xmlchange RUN_REFDIR=cesm2_init
+
+./preview_namelists
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
 
 ./xmlchange CHARGE_ACCOUNT=CESM0023
 
@@ -48,43 +94,43 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./xmlchange RESUBMIT=0
+./case.submit
 
-./case.setup --reset
+./xmlchange RUN_REFCASE=b.e23_alpha17f.BLT1850.ne30_t232.098
 
-./case.build --clean
+./xmlchange RUN_REFDATE=0201-01-01
+
+./xmlchange RUN_TYPE=hybrid
+
+./xmlchange GET_REFCASE=true
+
+./xmlchange RUN_REFDIR=cesm2_init
+
+./case.submit
+
+./case.submit
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange CHARGE_ACCOUNT=CESM0023
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
+
+./case.submit
+
+./preview_namelists
+
+./preview_namelists
 
 ./case.build
 
 ./case.submit
 
-./xmlchange RESUBMIT=15
-
-./case.submit
-
-./case.build
-
-./case.submit
-
-./case.setup --reset
-
-./case.build --clean
-
-./case.build
-
 ./case.build
 
 ./case.submit
 
 ./case.submit
-
-./case.submit
-
-./xmlchange RESUBMIT=20
-
-./case.submit
-
-./case.submit
-
-./xmlchange RESUBMIT=30
 
