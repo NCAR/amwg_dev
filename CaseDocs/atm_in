@@ -325,6 +325,7 @@
  se_vert_remap_uvtq_alg		= 'FV3_CS'
 /
 &gw_drag_nl
+ alpha_gw_movmtn		=  0.01d0  
  effgw_beres_dp		= 0.30D0
  effgw_cm		= 1.D0
  effgw_rdg_beta		= 0.5D0
@@ -336,6 +337,7 @@
  gw_dc		= 2.5D0
  gw_dc_long		= 0.D0
  gw_drag_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/waccm/gw/newmfspectra40_dc25.nc'
+ gw_drag_file_mm		= '/glade/campaign/cesm/cesmdata/inputdata/atm/waccm/gw/mfc0lookup_mm.nc'
  gw_limit_tau_without_eff		= .false.
  gw_lndscl_sgh		= .true. 
  gw_oro_south_fac		= 1.d0   
@@ -430,7 +432,7 @@
 /
 &phys_ctl_nl
  cam_chempkg		= 'ghg_mam4'
- cam_physpkg		= 'cam_dev'
+ cam_physpkg		= 'cam7'
  cam_snapshot_after_num		=    -1 
  cam_snapshot_before_num		=   -1 
  cld_macmic_num_steps		=  3 
@@ -460,6 +462,7 @@
  use_gw_convect_sh		= .false.
  use_gw_front		= .true.
  use_gw_front_igw		= .false.
+ use_gw_movmtn_pbl		= .true.
  use_gw_oro		= .false.
  use_hemco		= .false.
  use_hetfrz_classnuc		= .true.
@@ -487,7 +490,7 @@
  prescribed_strataero_use_chemtrop		=   .true.   
 /
 &pumas_stochastic_tau_nl
- pumas_stochastic_tau_kernel_filename		= '/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/components/cam/bld/../src/physics/pumas/KBARF_tau_kernel.dat'
+ pumas_stochastic_tau_kernel_filename		= '/glade/work/hannay/cesm_tags/cesm3_0_beta02/components/cam/bld/../src/physics/pumas/KBARF_tau_kernel.dat'
 /
 &qneg_nl
  print_qneg_warn		= 'summary'
@@ -520,8 +523,8 @@
 /
 &radiation_nl
  graupel_in_rad		=  .false. 
- rrtmgp_coefs_lw_file		= '/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/components/cam/src/physics/rrtmgp/data/rrtmgp-gas-lw-g128.nc'
- rrtmgp_coefs_sw_file		= '/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/components/cam/src/physics/rrtmgp/data/rrtmgp-gas-sw-g112.nc'
+ rrtmgp_coefs_lw_file		= '/glade/work/hannay/cesm_tags/cesm3_0_beta02/components/cam/src/physics/rrtmgp/data/rrtmgp-gas-lw-g128.nc'
+ rrtmgp_coefs_sw_file		= '/glade/work/hannay/cesm_tags/cesm3_0_beta02/components/cam/src/physics/rrtmgp/data/rrtmgp-gas-sw-g112.nc'
 /
 &ref_pres_nl
  clim_modal_aero_top_press		=  1.D-4 

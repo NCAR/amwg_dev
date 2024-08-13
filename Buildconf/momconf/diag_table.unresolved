@@ -57,6 +57,8 @@
 "ocean_model", "T_adx_2d",     "T_adx_2d",     "${CASE}.mom6.h.native%4yr-%2mo", "all", "mean", "none", 2
 "ocean_model", "T_diffy_2d",   "T_diffy_2d",   "${CASE}.mom6.h.native%4yr-%2mo", "all", "mean", "none", 2
 "ocean_model", "T_diffx_2d",   "T_diffx_2d",   "${CASE}.mom6.h.native%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "T_hbd_diffx_2d","T_hbd_diffx_2d","${CASE}.mom6.h.native%4yr-%2mo", "all", "mean", "none", 2
+"ocean_model", "T_hbd_diffy_2d","T_hbd_diffy_2d","${CASE}.mom6.h.native%4yr-%2mo", "all", "mean", "none", 2
 "ocean_model", "diftrelo",     "diftrelo",     "${CASE}.mom6.h.native%4yr-%2mo", "all", "mean", "none", 2
 "ocean_model", "diftrblo",     "diftrblo",     "${CASE}.mom6.h.native%4yr-%2mo", "all", "mean", "none", 2
 "ocean_model", "difmxybo",     "difmxybo",     "${CASE}.mom6.h.native%4yr-%2mo", "all", "mean", "none", 2

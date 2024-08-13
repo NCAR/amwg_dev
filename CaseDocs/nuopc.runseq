@@ -15,17 +15,14 @@ runSeq::
   MED -> LND :remapMethod=redist
   MED med_phases_prep_ice
   MED -> ICE :remapMethod=redist
-  MED med_phases_prep_wav_accum
-  MED med_phases_prep_wav_avg
-  MED -> WAV :remapMethod=redist
   ICE
   LND
-  WAV
   LND -> MED :remapMethod=redist
   MED med_phases_post_lnd
   MED med_phases_diag_lnd
   MED med_phases_diag_rof
   MED med_phases_diag_ice_ice2med
+  MED med_phases_diag_glc
   ICE -> MED :remapMethod=redist
   MED med_phases_post_ice
   MED med_phases_prep_atm
@@ -35,8 +32,6 @@ runSeq::
   MED med_phases_post_atm
   MED med_phases_diag_atm
   MED med_phases_diag_ice_med2ice
-  WAV -> MED :remapMethod=redist
-  MED med_phases_post_wav
   MED med_phases_diag_accum
   MED med_phases_diag_print
 @ 
@@ -52,7 +47,9 @@ runSeq::
 @ 
   MED med_phases_prep_glc
   MED -> GLC :remapMethod=redist
+  GLC
   GLC -> MED :remapMethod=redist
+  MED med_phases_post_glc
   MED med_phases_history_write        
   MED med_phases_restart_write        
   MED med_phases_profile              
