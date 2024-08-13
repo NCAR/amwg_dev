@@ -49,7 +49,7 @@
          'ncl_a2DDF', 'ncl_a3DDF', 'pom_a1DDF', 'pom_a4DDF', 'so4_a1DDF', 'so4_a2DDF', 'so4_a3DDF', 'soa_a1DDF', 'soa_a2DDF',
          'so4_a1_CLXF', 'so4_a2_CLXF', 'SFbc_a4', 'SFpom_a4', 'SFso4_a1', 'SFso4_a2', 'so4_a1_sfgaex1', 'so4_a2_sfgaex1', 'so4_a3_sfgaex1',
          'soa_a1_sfgaex1', 'soa_a2_sfgaex1', 'SFdst_a1', 'SFdst_a2', 'SFdst_a3', 'SFncl_a1', 'SFncl_a2', 'SFncl_a3', 'num_a2_sfnnuc1',
-         'SFSO2', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO'
+         'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO'
  fincl3		= 'PRECT','PRECC','FLUT','U850','U200','V850','V200','OMEGA500','TS','SST','PSL'
  fincl4		= 'PRECC','PRECL'
  fincl5		= 'Uzm','Vzm','Wzm','THzm','VTHzm','WTHzm','UVzm','UWzm'
@@ -93,7 +93,6 @@
  srf_emis_specifier		= 'bc_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_bc_a4_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
          'bc_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_bc_a4_bb_surface_175001-201512_ne30pg3_c20191118.nc',
          'DMS -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_DMS_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'DMS -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_DMS_other_surface_1750_2015_ne30pg3_c20200630.nc',
          'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a1_bb_surface_175001-201512_ne30pg3_c20191118.nc',
          'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a1_anthro-ag-ship_surface_mol_175001-201412_ne30pg3_c20200103.nc',
          'num_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a2_anthro-res_surface_mol_175001-201412_ne30pg3_c20200103.nc',
@@ -425,7 +424,7 @@
 &ocean_emis_nl
  bubble_mediated_transfer		= .false.
  csw_cycle_yr		= 1850 
- csw_specifier		= ' '
+ csw_specifier		= 'DMS -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ocnexch/Csw_DMS_Lana2011_f09f09_1750_2100_20200717a.nc'
  csw_time_type		= 'CYCLICAL'
  ocean_salinity_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ocnexch/SSS_climatology_f09f09_c20230110.nc'
 /
