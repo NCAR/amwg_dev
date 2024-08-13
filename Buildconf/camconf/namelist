@@ -1,5 +1,6 @@
 &comp_inparm 
 
+ ncdata = 'b.e23_alpha17f.BLT1850.ne30_t232.098.cam.i.0125-01-01-00000.nc'
  dtime = 1800
 
 
@@ -37,7 +38,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O', 'CO2','CFC11','CFC12', 
 
-'AODVISdn','CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ','OMEGA500'
+'AODVISdn','CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ','OMEGA500',
 
  'AQSO4_H2O2','AQSO4_O3', 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3', 'ncl_a1',
 
@@ -67,7 +68,9 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 
 
-fincl3 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
+
+
+fincl3 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'PSL', 'TS', 'SST'
 
 
 
@@ -83,6 +86,10 @@ phys_grid_ctem_zm_nbas=120
 
 phys_grid_ctem_za_nlat=90
 
- 
+
+
+ubc_file_path=  "/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ubc/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensAvg123.cam.h0zm.H2O.1849-2014_c240604.nc"
+
+
 
 / 

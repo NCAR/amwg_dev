@@ -1,44 +1,44 @@
-2024-06-07 15:13:13: ./create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLT1850.ne30_t232.098 --run-unsupported --project 93300722
+2024-06-26 09:57:29: ./create_newcase --compset BLTHIST_v0c --res ne30pg3_t232 --case /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLTHIST.ne30_t232.098b --run-unsupported --project 93300722
  ---------------------------------------------------
-2024-06-07 15:13:13: Compset longname is 1850_CAM%DEV%LT%GHGMAM4_CLM51%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_WW3_SESP
+2024-06-26 09:57:29: Compset longname is HIST_CAM%DEV%LT%GHGMAM4_CLM51%BGC-CROP_CICE_MOM6_MOSART_CISM2%GRIS-NOEVOLVE_WW3_SESP
  ---------------------------------------------------
-2024-06-07 15:13:13: Compset specification file is /glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime_config/config_compsets.xml
+2024-06-26 09:57:29: Compset specification file is /glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime_config/config_compsets.xml
  ---------------------------------------------------
-2024-06-07 15:13:13: Pes     specification file is /glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime_config/config_pes.xml
+2024-06-26 09:57:29: Pes     specification file is /glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime_config/config_pes.xml
  ---------------------------------------------------
-2024-06-07 15:13:13: Forcing is 1850
+2024-06-26 09:57:29: Forcing is Historic transient 
  ---------------------------------------------------
-2024-06-07 15:13:13: Using 1 coupler instances
+2024-06-26 09:57:29: Using 1 coupler instances
  ---------------------------------------------------
-2024-06-07 15:13:13: Component ATM is CAM7 development physics:CAM low top model Prognostic GHG chemistry mechanism for CAM7:
+2024-06-26 09:57:29: Component ATM is CAM7 development physics:CAM low top model Prognostic GHG chemistry mechanism for CAM7:
  ---------------------------------------------------
-2024-06-07 15:13:13: ATM_GRID is ne30np4.pg3
+2024-06-26 09:57:29: ATM_GRID is ne30np4.pg3
  ---------------------------------------------------
-2024-06-07 15:13:13: Component LND is clm5.1:BGC (vert. resol. CN and methane) with prognostic crop:
+2024-06-26 09:57:29: Component LND is clm5.1:BGC (vert. resol. CN and methane) with prognostic crop:
  ---------------------------------------------------
-2024-06-07 15:13:13: LND_GRID is ne30np4.pg3
+2024-06-26 09:57:29: LND_GRID is ne30np4.pg3
  ---------------------------------------------------
-2024-06-07 15:13:13: Component ICE is Sea ICE (cice) model version 6
+2024-06-26 09:57:29: Component ICE is Sea ICE (cice) model version 6
  ---------------------------------------------------
-2024-06-07 15:13:13: ICE_GRID is tx2_3v2
+2024-06-26 09:57:29: ICE_GRID is tx2_3v2
  ---------------------------------------------------
-2024-06-07 15:13:13: Component OCN is MOM6 OCEAN 
+2024-06-26 09:57:29: Component OCN is MOM6 OCEAN 
  ---------------------------------------------------
-2024-06-07 15:13:13: OCN_GRID is tx2_3v2
+2024-06-26 09:57:29: OCN_GRID is tx2_3v2
  ---------------------------------------------------
-2024-06-07 15:13:13: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+2024-06-26 09:57:29: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
  ---------------------------------------------------
-2024-06-07 15:13:13: ROF_GRID is r05
+2024-06-26 09:57:29: ROF_GRID is r05
  ---------------------------------------------------
-2024-06-07 15:13:13: Component GLC is cism2:include non-evolving Greenland Ice Sheet:
+2024-06-26 09:57:29: Component GLC is cism2:include non-evolving Greenland Ice Sheet:
  ---------------------------------------------------
-2024-06-07 15:13:13: GLC_GRID is gris4
+2024-06-26 09:57:29: GLC_GRID is gris4
  ---------------------------------------------------
-2024-06-07 15:13:13: Component WAV is Wave Watch
+2024-06-26 09:57:29: Component WAV is Wave Watch
  ---------------------------------------------------
-2024-06-07 15:13:13: WAV_GRID is ww3a
+2024-06-26 09:57:29: WAV_GRID is ww3a
  ---------------------------------------------------
-2024-06-07 15:13:13: Component ESP is Stub external system processing (ESP) component
+2024-06-26 09:57:29: Component ESP is Stub external system processing (ESP) component
  ---------------------------------------------------
-2024-06-07 15:13:13: ESP_GRID is None
+2024-06-26 09:57:29: ESP_GRID is None
  ---------------------------------------------------
