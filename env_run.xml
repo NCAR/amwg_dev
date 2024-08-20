@@ -405,7 +405,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:5516118.desched1, case.st_archive:5516119.desched1">
+    <entry id="JOB_IDS" value="case.run:5729265.desched1, case.st_archive:5729266.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1032,7 +1032,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="1850_cam_lt">
+    <entry id="CAM_NML_USE_CASE" value="1850_cam_mt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the

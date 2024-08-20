@@ -62,7 +62,7 @@
 /
 &cam_initfiles_nl
  bnd_topo		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/topo/se/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_noleak_20240117.nc'
- ncdata		= 'b.e23_alpha17f.BLT1850.ne30_t232.098.cam.i.0201-01-01-00000.nc'
+ ncdata		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/inic/se/c153_ne30pg3_FMTHIST_x02.cam.i.1990-01-01-00000_c240618.nc'
  scale_dry_air_mass		=   98288.0D0 
  use_topo_file		=  .true.  
 /
@@ -192,7 +192,7 @@
  clubb_c6thlc		=  1.0     
  clubb_c7		=  0.1     
  clubb_c7b		=  0.5     
- clubb_c8		= 4.5
+ clubb_c8		= 4.95
  clubb_c8b		=  0.0     
  clubb_c_invrs_tau_bkgnd		=  1.0     
  clubb_c_invrs_tau_n2		=  0.1     
@@ -294,9 +294,9 @@
  se_fvm_supercycling		= -1
  se_fvm_supercycling_jet		= -1
  se_horz_num_threads		=  0 
- se_hypervis_subcycle		=  2 
+ se_hypervis_subcycle		=  3 
  se_hypervis_subcycle_q		= 1                 
- se_hypervis_subcycle_sponge		=  1  
+ se_hypervis_subcycle_sponge		=  3  
  se_kmax_jet		= -1
  se_kmin_jet		= -1
  se_large_courant_incr		=  .true.  
@@ -307,14 +307,14 @@
  se_nu		= -1
  se_nu_div		=  -1 
  se_nu_p		= -1 
- se_nu_top		=  1.25e5 
+ se_nu_top		=  1.0e6 
  se_pgf_formulation		=            1
  se_qsplit		=  1 
  se_refined_mesh		=  .false. 
  se_rsplit		=  3 
- se_sponge_del4_lev		=  -1 
- se_sponge_del4_nu_div_fac		=  -1 
- se_sponge_del4_nu_fac		=  -1 
+ se_sponge_del4_lev		= 4
+ se_sponge_del4_nu_div_fac		= 3.375
+ se_sponge_del4_nu_fac		= 3.375
  se_statediag_numtrac		= 3
  se_statefreq		=  0 
  se_tracer_num_threads		=  0 
@@ -326,7 +326,7 @@
 /
 &gw_drag_nl
  alpha_gw_movmtn		=  0.01d0  
- effgw_beres_dp		= 0.30D0
+ effgw_beres_dp		= 0.70D0
  effgw_cm		= 1.D0
  effgw_rdg_beta		= 0.5D0
  effgw_rdg_beta_max		= 0.5D0
@@ -343,7 +343,8 @@
  gw_oro_south_fac		= 1.d0   
  gw_polar_taper		= .false.
  gw_prndl		= 0.5D0
- gw_qbo_hdepth_scaling		= 1.0D0
+ gw_qbo_hdepth_scaling		= 0.25D0
+ gw_top_taper		= .false.
  n_rdg_beta		= 10
  pgwv		= 32
  pgwv_long		= 0
@@ -492,6 +493,9 @@
 &pumas_stochastic_tau_nl
  pumas_stochastic_tau_kernel_filename		= '/glade/work/hannay/cesm_tags/cesm3_0_beta02/components/cam/bld/../src/physics/pumas/KBARF_tau_kernel.dat'
 /
+&qbo_nl
+ qbo_use_forcing		= .false.
+/
 &qneg_nl
  print_qneg_warn		= 'summary'
 /
@@ -542,14 +546,6 @@
 /
 &tropopause_nl
  tropopause_climo_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/trop_mozart/ub/clim_p_trop.nc'
-/
-&upper_bc_file_opts
- ubc_file_cycle_yr		= 1850
- ubc_file_input_type		= 'CYCLICAL'
- ubc_file_path		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ubc/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensAvg123.cam.h0zm.H2O.185001-201412_c230509cdf5.nc'
-/
-&upper_bc_opts
- ubc_specifier		= 'Q:H2O->UBC_FILE'
 /
 &vert_diff_nl
  diff_cnsrv_mass_check		=  .false. 

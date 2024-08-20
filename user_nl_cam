@@ -49,7 +49,13 @@ phys_grid_ctem_za_nlat=90
          'N:VOLC_MMR1:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode1_c210211.nc', 'N:VOLC_MMR2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode2_c210211.nc',
          'N:VOLC_MMR3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.2_mode3_c210211.nc'
 
-seasalt_emis_scale             = 0.75D0
+ seasalt_emis_scale             = 0.75D0
 
-clubb_c8=  4.5
+clubb_c8=  4.95 
+
+se_sponge_del4_lev = 4
+se_sponge_del4_nu_fac = 3.375
+se_sponge_del4_nu_div_fac = 3.375
+
+ncdata = '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/inic/se/c153_ne30pg3_FMTHIST_x02.cam.i.1990-01-01-00000_c240618.nc'
 

@@ -104,11 +104,23 @@ phys_grid_ctem_za_nlat=90
 
 
 
-seasalt_emis_scale             = 0.75D0
+ seasalt_emis_scale             = 0.75D0
 
 
 
-clubb_c8=  4.5
+clubb_c8=  4.95 
+
+
+
+se_sponge_del4_lev = 4
+
+se_sponge_del4_nu_fac = 3.375
+
+se_sponge_del4_nu_div_fac = 3.375
+
+
+
+ncdata = '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/inic/se/c153_ne30pg3_FMTHIST_x02.cam.i.1990-01-01-00000_c240618.nc'
 
 
 
