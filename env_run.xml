@@ -144,7 +144,7 @@
     </entry>
   </group>
   <group id="run_begin_stop_restart">
-    <entry id="RUN_TYPE" value="startup">
+    <entry id="RUN_TYPE" value="hybrid">
       <type>char</type>
       <valid_values>startup,hybrid,branch</valid_values>
       <desc>
@@ -200,19 +200,19 @@
       a restart file.
     </desc>
     </entry>
-    <entry id="RUN_REFDIR" value="ccsm4_init">
+    <entry id="RUN_REFDIR" value="cesm2_init">
       <type>char</type>
       <desc>
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="case.std">
+    <entry id="RUN_REFCASE" value="b.e23_alpha16g.BLT1850.ne30_t232.075">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="0001-01-01">
+    <entry id="RUN_REFDATE" value="0101-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -224,7 +224,7 @@
       Reference time of day (seconds) for hybrid or branch runs (sssss)
     </desc>
     </entry>
-    <entry id="GET_REFCASE" value="FALSE">
+    <entry id="GET_REFCASE" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:4604556.desched1, case.st_archive:4604557.desched1">
+    <entry id="JOB_IDS" value="case.run:4303240.desched1, case.st_archive:4303241.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -431,6 +431,19 @@
       <desc>Enables the papi hardware counters in gptl
     The papi library must be included in the build step for
     this to work.</desc>
+    </entry>
+    <entry id="ESMF_LOGFILE_KIND" value="ESMF_LOGKIND_NONE">
+      <type>char</type>
+      <valid_values>ESMF_LOGKIND_SINGLE,ESMF_LOGKIND_MULTI,ESMF_LOGKIND_NONE</valid_values>
+      <desc>
+      Determines what ESMF log files (if any) are generated when
+          USE_ESMF_LIB is TRUE.
+      ESMF_LOGKIND_SINGLE: Use a single log file, combining messages from
+          all of the PETs. Not supported on some platforms.
+      ESMF_LOGKIND_MULTI: Use multiple log files -- one per PET.
+      ESMF_LOGKIND_NONE: Do not issue messages to a log file.
+      By default, no ESMF log files are generated.
+    </desc>
     </entry>
     <entry id="ESMF_VERBOSITY_LEVEL" value="off">
       <type>char</type>
@@ -637,7 +650,7 @@
     </entry>
   </group>
   <group id="run_din">
-    <entry id="NODENAME_REGEX" value="UNSET">
+    <entry id="NODENAME_REGEX" value="de.*.hpc.ucar.edu">
       <type>char</type>
       <desc>
       A regular expression to match machine node names to ACME machine.
@@ -1074,29 +1087,15 @@
     </entry>
   </group>
   <group id="run_component_ctsm">
-    <entry id="LND_TUNING_MODE" value="clm5_1_cam6.0">
+    <entry id="LND_TUNING_MODE" value="clm5_1_GSWP3v1">
       <type>char</type>
       <desc>Tuning parameters and initial conditions should be optimized for what CLM model version and what meteorlogical forcing combination?
-          Options for all combinations of CLM physics and atm forcing are given. The buildnml and namelist_defaults will narrow it down to the ones
-          that have been tuned. The buildnml will also warn you if a tuning combination is based on another set.
-          Atm forcing options:
-               CRUv7
-               GSWP3
-               CAM4.0
-               CAM5.0
-               CAM6.0
-               CAM7.0
-               QIAN   (not tuned)
-               1PT    (not tuned)
-               NLDAS2 (not tuned)
-               ERA5   (not tuned)
-          Other atm forcing options are invalid to run CLM and will result in an error.
     </desc>
-      <valid_values>clm5_0_cam6.0,clm5_0_cam7.0,clm5.0_cam5.0,clm5.0_cam4.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm5_0_QIAN,clm5_0_1PT,clm5_0_NLDAS2,clm5_0_ERA5,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_QIAN,clm4_5_cam6.0,clm4_5_cam7.0,clm4_5_cam5.0,clm4_5_cam4.0,clm4_5_1PT,clm4_5_NLDAS2,clm4_5_ERA5,clm5_1_CRUv7,clm5_1_GSWP3v1,clm5_1_cam6.0,clm5_1_QIAN,clm5_1_1PT,clm5_1_NLDAS2,clm5_1_ERA5,clm6_0_CRUv7,clm6_0_GSWP3v1,clm6_0_cam6.0,clm6_0_cam7.0,clm6_0_cam5.0,clm6_0_cam4.0,clm6_0_QIAN,clm6_0_1PT,clm6_0_NLDAS2,clm6_0_ERA5</valid_values>
+      <valid_values>clm5_0_cam6.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_cam6.0,clm5_1_GSWP3v1</valid_values>
     </entry>
     <entry id="CLM_PHYSICS_VERSION" value="clm5_1">
       <type>char</type>
-      <valid_values>clm4_5,clm5_0,clm5_1,clm6_0</valid_values>
+      <valid_values>clm4_5,clm5_0,clm5_1</valid_values>
       <desc>Overall physics version to use.
     This sets the default values for many different namelist options.
     This is typically set by the compset.</desc>
@@ -1243,12 +1242,6 @@
     </entry>
   </group>
   <group id="case_comp">
-    <entry id="MOM6_VERTICAL_GRID" value="hycom1">
-      <type>char</type>
-      <valid_values>zstar_75L,zstar_65L,hycom1,zstar_60L,sigma_shelf_zstar</valid_values>
-      <desc> This variable controls what vertical grid is used in MOM6.
-    </desc>
-    </entry>
     <entry id="OCN_DIAG_MODE" value="production">
       <type>char</type>
       <valid_values>spinup,production,development,none</valid_values>
@@ -1279,28 +1272,6 @@
     </entry>
   </group>
   <group id="run_component_cism">
-    <entry id="GLC_USE_GREENLAND" value="TRUE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether to include the Greenland Ice Sheet in this CISM simulation
-
-    This should generally be set at create_newcase time (via the compset). In principle it
-    can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_GREENLAND, and possibly
-    others).
-    </desc>
-    </entry>
-    <entry id="GLC_USE_ANTARCTICA" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether to include the Antarctica Ice Sheet in this CISM simulation
-
-    This should generally be set at create_newcase time (via the compset). In principle it
-    can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_ANTARCTICA, and possibly
-    others).
-    </desc>
-    </entry>
     <entry id="CISM_USE_GREENLAND" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>

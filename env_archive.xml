@@ -89,11 +89,9 @@
       <rest_file_extension>r</rest_file_extension>
       <hist_file_extension>h(\.\w+)?(\._\d*)?\.[-\d+]+\.nc(\.\d*)?$</hist_file_extension>
       <hist_file_extension>h\.static(\._\d*)?\.nc(\.\d*)?$</hist_file_extension>
-      <hist_file_extension>h\.ocean_geometry\.nc(\.\d*)?$</hist_file_extension>
       <hist_file_ext_regex>\w+\.\w+(\._\d*)?</hist_file_ext_regex>
       <rpointer>
         <rpointer_file>rpointer.ocn$NINST_STRING</rpointer_file>
-        <rpointer_content>$CASE.mom6$NINST_STRING.r.$DATENAME.nc</rpointer_content>
       </rpointer>
     </comp_archive_spec>
     <comp_archive_spec compname="mosart" compclass="rof">

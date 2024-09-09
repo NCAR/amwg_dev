@@ -26,20 +26,20 @@
     <cmd_path lang="csh">module</cmd_path>
     <modules>
       <command name="load">cesmdev/1.0</command>
-      <command name="load">ncarenv/23.09</command>
+      <command name="load">ncarenv/23.06</command>
       <command name="purge"/>
       <command name="load">craype</command>
     </modules>
     <modules compiler="intel">
-      <command name="load">intel/2023.2.1</command>
+      <command name="load">intel/2023.0.0</command>
       <command name="load">mkl</command>
     </modules>
     <modules compiler="intel-oneapi">
-      <command name="load">intel-oneapi/2023.2.1</command>
+      <command name="load">intel-oneapi/2023.0.0</command>
       <command name="load">mkl</command>
     </modules>
     <modules compiler="intel-classic">
-      <command name="load">intel-classic/2023.2.1</command>
+      <command name="load">intel-classic/2023.0.0</command>
       <command name="load">mkl</command>
     </modules>
     <modules compiler="cray">
@@ -51,37 +51,35 @@
       <command name="load">cray-libsci/23.02.1.1</command>
     </modules>
     <modules compiler="nvhpc">
-      <command name="load">nvhpc/24.3</command>
+      <command name="load">nvhpc/23.5</command>
     </modules>
     <modules>
       <command name="load">ncarcompilers/1.0.0</command>
       <command name="load">cmake</command>
     </modules>
     <modules mpilib="mpich">
-      <command name="load">cray-mpich/8.1.27</command>
-    </modules>
-    <modules mpilib="mpich" compiler="nvhpc" gpu_offload="!none">
-      <command name="load">cuda/12.2.1</command>
+      <command name="load">cray-mpich/8.1.25</command>
     </modules>
     <modules mpilib="mpi-serial">
       <command name="load">mpi-serial/2.3.0</command>
+    </modules>
+    <modules mpilib="mpich" compiler="nvhpc" gpu_offload="!none">
+      <command name="load">cuda/11.7.1</command>
+    </modules>
+    <modules mpilib="mpi-serial">
       <command name="load">netcdf/4.9.2</command>
     </modules>
     <modules mpilib="!mpi-serial">
       <command name="load">netcdf-mpi/4.9.2</command>
       <command name="load">parallel-netcdf/1.12.3</command>
     </modules>
+    <modules DEBUG="TRUE">
+      <command name="load">parallelio/2.6.2-debug</command>
+      <command name="load">esmf/8.6.0b04-debug</command>
+    </modules>
     <modules DEBUG="FALSE">
       <command name="load">parallelio/2.6.2</command>
-      <command name="load">esmf/8.6.0</command>
-    </modules>
-    <modules DEBUG="TRUE" mpilib="mpi-serial">
-      <command name="load">parallelio/2.6.2</command>
-      <command name="load">esmf/8.6.0</command>
-    </modules>
-    <modules DEBUG="TRUE" mpilib="!mpi-serial">
-      <command name="load">parallelio/2.6.2-debug</command>
-      <command name="load">esmf/8.6.0-debug</command>
+      <command name="load">esmf/8.6.0b04</command>
     </modules>
   </module_system>
   <environment_variables>
@@ -94,14 +92,14 @@
     <env name="ESMF_RUNTIME_PROFILE_OUTPUT">SUMMARY</env>
   </environment_variables>
   <environment_variables compiler="nvhpc" gpu_offload="!none">
-    <env name="NCAR_LIBS_CUDA">-lcuda -lcudart</env>
+    <env name="RTE_KERNELS">openacc</env>
   </environment_variables>
   <mpirun mpilib="default">
-    <executable>mpibind</executable>
+    <executable>mpiexec</executable>
     <arguments>
       <arg name="label"> --label</arg>
       <arg name="buffer"> --line-buffer</arg>
-      <arg name="separator"> -- </arg>
+      <arg name="num_tasks"> -n {{ total_tasks }}</arg>
     </arguments>
   </mpirun>
 </file>

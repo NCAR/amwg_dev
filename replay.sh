@@ -2,11 +2,11 @@
 
 set -e
 
-# Created 2024-05-23 14:37:23
+# Created 2024-04-26 13:14:48
 
-CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha17f.BLT1850.ne30_t232.093"
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/b.e23_alpha16g.BLT1850.ne30_t232.090b"
 
-/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
+/glade/work/hannay/cesm_tags/cesm2_3_alpha16g/cime/scripts/create_newcase --compset BLT1850_v0c --res ne30pg3_t232 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
@@ -14,17 +14,41 @@ cd "${CASEDIR}"
 
 ./preview_namelists
 
-./xmlchange MOM6_VERTICAL_GRID=hycom1
+./xmlchange RUN_REFCASE=b.e23_alpha16g.BLT1850.ne30_t232.075
 
-./preview_namelists
+./xmlchange RUN_REFDATE=0101-01-01
 
-./xmlchange MOM6_VERTICAL_GRID=hycom1
+./xmlchange RUN_TYPE=hybrid
+
+./xmlchange GET_REFCASE=true
+
+./xmlchange RUN_REFDIR=cesm2_init
 
 ./preview_namelists
 
 ./case.build
 
+./case.build
+
+./case.build
+
+./case.build
+
+./case.build
+
+./xmlchange RUN_REFCASE=b.e23_alpha16g.BLT1850.ne30_t232.075
+
+./xmlchange RUN_REFDATE=0101-01-01
+
+./xmlchange RUN_TYPE=hybrid
+
+./xmlchange GET_REFCASE=true
+
+./xmlchange RUN_REFDIR=cesm2_init
+
 ./preview_namelists
+
+./case.build
 
 ./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
 
@@ -34,43 +58,17 @@ cd "${CASEDIR}"
 
 ./case.submit
 
+./preview_namelists
+
+./case.build
+
+./case.build
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange REST_OPTION=nyears,REST_N=1
+
 ./xmlchange JOB_WALLCLOCK_TIME=12:00:00
-
-./case.submit
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange REST_OPTION=nyears,REST_N=1
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange CHARGE_ACCOUNT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange REST_OPTION=nyears,REST_N=1
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange CHARGE_ACCOUNT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange REST_OPTION=nyears,REST_N=1
-
-./xmlchange JOB_WALLCLOCK_TIME=6:00:00
-
-./case.submit
-
-./case.submit
-
-./xmlchange --append CAM_CONFIG_OPTS="-rad rrtmgp"
-
-./preview_namelists
-
-./case.build
-
-./case.build --clean-all
-
-./preview_namelists
-
-./case.build
 
 ./case.submit
 
