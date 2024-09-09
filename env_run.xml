@@ -13,7 +13,7 @@
       <valid_values>cesm</valid_values>
       <desc>coupling mode</desc>
     </entry>
-    <entry id="CPL_I2O_PER_CAT" value="FALSE">
+    <entry id="CPL_I2O_PER_CAT" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>determine if per ice thickness category fields are passed from ice to ocean - DO NOT EDIT (set by POP build-namelist)</desc>
@@ -144,7 +144,7 @@
     </entry>
   </group>
   <group id="run_begin_stop_restart">
-    <entry id="RUN_TYPE" value="hybrid">
+    <entry id="RUN_TYPE" value="startup">
       <type>char</type>
       <valid_values>startup,hybrid,branch</valid_values>
       <desc>
@@ -200,19 +200,19 @@
       a restart file.
     </desc>
     </entry>
-    <entry id="RUN_REFDIR" value="cesm2_init">
+    <entry id="RUN_REFDIR" value="ccsm4_init">
       <type>char</type>
       <desc>
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="b.e23_alpha17f.BLT1850.ne30_t232.092">
+    <entry id="RUN_REFCASE" value="case.std">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="0101-01-01">
+    <entry id="RUN_REFDATE" value="0001-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -224,7 +224,7 @@
       Reference time of day (seconds) for hybrid or branch runs (sssss)
     </desc>
     </entry>
-    <entry id="GET_REFCASE" value="TRUE">
+    <entry id="GET_REFCASE" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -232,7 +232,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="1850-01-01">
+    <entry id="RUN_STARTDATE" value="0001-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -373,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:4959484.desched1, case.st_archive:4959485.desched1">
+    <entry id="JOB_IDS" value="case.run:4717937.desched1, case.st_archive:4717938.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -547,11 +547,11 @@
       <type>char</type>
       <desc>wav mesh file (full pathname)</desc>
     </entry>
-    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/tx2_3v2_230415_ESMFmesh.nc">
+    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/gx1v7_151008_ESMFmesh.nc">
       <type>char</type>
       <desc>ice mesh file (full pahtname)</desc>
     </entry>
-    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/tx2_3v2_230415_ESMFmesh.nc">
+    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/gx1v7_151008_ESMFmesh.nc">
       <type>char</type>
       <desc>ocn mesh file (full pathname)</desc>
     </entry>
@@ -559,7 +559,7 @@
       <type>char</type>
       <desc>glc mesh file (full pathname)</desc>
     </entry>
-    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/tx2_3v2_230415_ESMFmesh.nc">
+    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/gx1v7_151008_ESMFmesh.nc">
       <type>char</type>
       <desc>mask mesh file (full pathname)</desc>
     </entry>
@@ -575,11 +575,11 @@
       <type>char</type>
       <desc>rof2ocn flux mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e250r250_230914.nc">
+    <entry id="ROF2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_gx1v7_nn_open_ocean_nnsm_e1000r300_marginal_sea_170413.nc">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_ICE_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e1000r1000_230415.nc">
+    <entry id="ROF2OCN_ICE_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_gx1v7_nnsm_e1000r300_170413.nc">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
     </entry>
@@ -587,23 +587,23 @@
       <type>char</type>
       <desc>glc2ice runoff mapping file</desc>
     </entry>
-    <entry id="GLC2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e250r250_230914.nc">
+    <entry id="GLC2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_gx1v7_nn_open_ocean_nnsm_e1000r300_marginal_sea_171105.nc">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for liquid runoff</desc>
     </entry>
-    <entry id="GLC2OCN_ICE_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e1000r300_230415.nc">
+    <entry id="GLC2OCN_ICE_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_gx1v7_nnsm_e1000r300_171105.nc">
       <type>char</type>
       <desc>glc2ocn runoff mapping file for ice runoff</desc>
     </entry>
-    <entry id="OCN2WAV_SMAPNAME" value="unset">
+    <entry id="OCN2WAV_SMAPNAME" value="cpl/gridmaps/gx1v7/map_gx1v7_TO_ww3a_splice_170214.nc">
       <type>char</type>
       <desc>ocn2wav state mapping file</desc>
     </entry>
-    <entry id="ICE2WAV_SMAPNAME" value="unset">
+    <entry id="ICE2WAV_SMAPNAME" value="cpl/gridmaps/gx1v7/map_gx1v7_TO_ww3a_splice_170214.nc">
       <type>char</type>
       <desc>ice2wav state mapping file</desc>
     </entry>
-    <entry id="WAV2OCN_SMAPNAME" value="unset">
+    <entry id="WAV2OCN_SMAPNAME" value="cpl/gridmaps/ww3a/map_ww3a_TO_gx1v7_splice_170214.nc">
       <type>char</type>
       <desc>wav2ocn state mapping file</desc>
     </entry>
@@ -1021,14 +1021,14 @@
     </entry>
   </group>
   <group id="run_physics">
-    <entry id="TFREEZE_SALTWATER_OPTION" value="linear_salt">
+    <entry id="TFREEZE_SALTWATER_OPTION" value="mushy">
       <type>char</type>
       <valid_values>minus1p8,linear_salt,mushy</valid_values>
       <desc>Freezing point calculation for salt water.</desc>
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
+    <entry id="CAM_NML_USE_CASE" value="1850_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1056,15 +1056,15 @@
       <type>char</type>
       <desc>Nitrogen deposition data year first</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="2015">
+    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="1850">
       <type>char</type>
       <desc>Nitrogen deposition data year last</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1850">
+    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1">
       <type>char</type>
       <desc>Nitrogen deposition align CAM_STREAM_NDEP_YEAR_FIRST with this model year</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_DATA_FILENAME" value="$DIN_LOC_ROOT/lnd/clm2/ndepdata/fndep_clm_hist_b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensmean_1849-2015_monthly_0.9x1.25_c180926.nc">
+    <entry id="CAM_STREAM_NDEP_DATA_FILENAME" value="$DIN_LOC_ROOT/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc">
       <type>char</type>
       <desc>Nitrogen deposition data filename</desc>
     </entry>
@@ -1119,7 +1119,7 @@
     subgrid heterogeneity, shallower soil, etc.
     </desc>
     </entry>
-    <entry id="CLM_NML_USE_CASE" value="20thC_transient">
+    <entry id="CLM_NML_USE_CASE" value="1850_control">
       <type>char</type>
       <desc>CLM namelist use_case.
       Determines the use-case that will be sent to the CLM build-namelist utility.
@@ -1242,28 +1242,86 @@
       <desc>CICE specific namelist settings for -namelist option</desc>
     </entry>
   </group>
-  <group id="case_comp">
-    <entry id="MOM6_VERTICAL_GRID" value="hycom1">
+  <group id="run_component_pop">
+    <entry id="OCN_CHL_TYPE" value="prognostic">
       <type>char</type>
-      <valid_values>zstar_75L,zstar_65L,hycom1,zstar_60L,sigma_shelf_zstar</valid_values>
-      <desc> This variable controls what vertical grid is used in MOM6.
+      <valid_values>diagnostic,prognostic</valid_values>
+      <desc>
+      Determines provenance of surface Chl for radiative penetration,
+      computations. This option is used in the POP ecosystem model.
+      The default is diagnostic.
     </desc>
     </entry>
-    <entry id="OCN_DIAG_MODE" value="production">
-      <type>char</type>
-      <valid_values>spinup,production,development,none</valid_values>
-      <desc> This variable is used to choose from a set of predefined ocean diagnostics configurations.
-           Each configuration corresponds to a different combination of frequency, precision, and field lists.
-           Configuration ordered in increasing scope/frequency: "spinup", "production", "development".
-           Further customization of diagnostics may be done by copying an edited version of
-           diag_table file in SourceMods/src.mom/
-    </desc>
-    </entry>
-    <entry id="OCN_DIAG_SECTIONS" value="TRUE">
+    <entry id="OCN_TAVG_TRACER_BUDGET" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
-      <desc> Flag to turn on/off the MOM6 sections diagnostics.
-    </desc>
+      <desc>tavg output control for tracer-budget terms</desc>
+    </entry>
+    <entry id="OCN_TAVG_HIFREQ" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>tavg output control for high-frequency output</desc>
+    </entry>
+    <entry id="OCN_ONEDIM" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE turns off all horizontal motion in POP (single column)</desc>
+    </entry>
+    <entry id="OCN_PHYS_DEV" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE uses development parameter settings that haven't necessarily
+          been scientifically vetted for all compsets in the POP namelist</desc>
+    </entry>
+    <entry id="OCN_NDEP_DRIVER" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>TRUE means pop uses nitrogen deposition provided by coupler</desc>
+    </entry>
+    <entry id="OCN_TRANSIENT" value="unset">
+      <type>char</type>
+      <valid_values>unset,CORE2_NYF,CORE2,CORE2_OMIP,JRA,JRA_OMIP,1850-2000,rcp4.5,rcp8.5,ssp126,ssp245,ssp370,ssp585</valid_values>
+      <desc>Determine settings for transient forcing datasets (e.g., atmospheric pCFC
+      concentrations). The create_newcase command selects the appropriate setting for this
+      variable based on the specified compset. This option is used in the POP ecosystem model.
+      Users should NOT EDIT this setting.</desc>
+    </entry>
+    <entry id="OCN_ICE_FORCING" value="active">
+      <type>char</type>
+      <valid_values>active,inactive</valid_values>
+      <desc>Determine under-ice forcing settings.
+      The active option yields settings that are appropriate for coupling to an active ice model
+      (e.g., a B or G-type compset). The inactive option yields settings that are appropriate for
+      coupling to a data ice model (e.g., a C-type compset). The create_newcase command
+      selects the appropriate setting for this variable based on the specified compset.
+      Users should NOT EDIT this setting.</desc>
+    </entry>
+    <entry id="OCN_CO2_TYPE" value="diagnostic">
+      <type>char</type>
+      <valid_values>constant,prognostic,diagnostic,box_atm_co2</valid_values>
+      <desc>Determines provenance of atmospheric CO2 for gas flux computation.
+      This option is used in the POP ecosystem model.
+      The default is constant.</desc>
+    </entry>
+    <entry id="OCN_BGC_CONFIG" value="latest">
+      <type>char</type>
+      <valid_values>latest,latest+cocco,latest+4p2z,cesm2.1,cesm2.1+cocco,cesm2.0,SPECTRA1.0</valid_values>
+      <desc>Version of ocean BGC tunings to use (default values can be overwritten by user_nl_pop and user_nl_marbl)</desc>
+    </entry>
+    <entry id="POP_PHYS_CYCLE_YEARS_IN_CYCLE" value="0">
+      <type>integer</type>
+      <desc>number of years to run before cycling POP physics
+    POP physics cycling only occurs if POP_PHYS_CYCLE_YEARS_IN_CYCLE&gt;0
+    and pre- and post-run scripts are specified in env vars
+    PRERUN_SCRIPT and POSTRUN_SCRIPT</desc>
+    </entry>
+    <entry id="POP_PHYS_CYCLE_MONTHS_RUN_SINCE_CYCLE" value="0">
+      <type>integer</type>
+      <desc>number of months run since most recent cycling of POP physics</desc>
+    </entry>
+    <entry id="POP_PASSIVE_TRACER_RESTART_OVERRIDE" value="none">
+      <type>char</type>
+      <desc>if not equal to none, then passive tracers modules use this as their restart file</desc>
     </entry>
   </group>
   <group id="run_component_mosart">

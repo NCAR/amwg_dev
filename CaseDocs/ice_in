@@ -3,7 +3,7 @@
   conserv_check = .false.
   days_per_year = 365
   diagfreq = 24
-  dumpfreq = "y", "x", "x", "x", "x"
+  dumpfreq = 'x', 'x', 'x', 'x', 'x'
   dumpfreq_n = 1, 1, 1, 1, 1
   hist_avg = .true., .true., .true., .true., .true.
   hist_suffix = "x", "1", "2", "3", "4"
@@ -13,7 +13,7 @@
   history_file = "unknown"
   history_format = "default"
   history_precision = 4
-  ice_ic = "b.e23_alpha17f.BLT1850.ne30_t232.092.cice.r.0101-01-01-00000.nc"
+  ice_ic = "/glade/campaign/cesm/cesmdata/inputdata/ice/cice/b.e15.B1850G.f09_g16.pi_control.25.cice.r.0041-01-01-00000.nc"
   latpnt = 90.0, -65.0
   lonpnt = 0.0, -45.0
   ndtd = 1
@@ -32,19 +32,19 @@
 /
 &grid_nml
   bathymetry_file = "unknown_bathymetry_file"
-  bathymetry_format = "default"
+  bathymetry_format = "pop"
   close_boundaries = .false.
   dxrect = 30.0e5
   dyrect = 30.0e5
   grid_atm = "A"
-  grid_file = "/glade/work/gmarques/cesm/tx2_3/seaice_files/horiz_grid_20230416.ieeer8"
+  grid_file = "/glade/campaign/cesm/cesmdata/inputdata/ocn/pop/gx1v7/grid/horiz_grid_20010402.ieeer8"
   grid_format = "bin"
   grid_ice = "B"
   grid_ocn = "A"
-  grid_type = "tripole"
+  grid_type = "displaced_pole"
   gridcpl_file = "unknown_gridcpl_file"
   kcatbound = 0
-  kmt_file = "/glade/work/gmarques/cesm/tx2_3/seaice_files/topography_20230416.ieeei4"
+  kmt_file = "/glade/campaign/cesm/cesmdata/inputdata/ocn/pop/gx1v7/grid/topography_20161215.ieeei4"
   nblyr = 3
   ncat = 5
   nfsd = 1
@@ -186,27 +186,27 @@
   nfreq = 25
   restart_coszen = .true.
   rotate_wind = .true.
-  saltflux_option = "prognostic"
+  saltflux_option = "constant"
   tfrz_option = "mushy"
-  update_ocn_f = .true.
+  update_ocn_f = .false.
   ustar_min = 0.005
   wave_spec_file = "unknown_wave_spec_file"
   wave_spec_type = "none"
 /
 &domain_nml
   add_mpi_barriers = .false.
-  block_size_x = 6
+  block_size_x = 5
   block_size_y = 6
-  distribution_type = "sectrobin"
+  distribution_type = "spacecurve"
   distribution_wght = "blockall"
   ew_boundary_type = "cyclic"
   maskhalo_bound = .true.
   maskhalo_dyn = .true.
   maskhalo_remap = .true.
-  max_blocks = 7
-  ns_boundary_type = "tripole"
-  nx_global = 540
-  ny_global = 480
+  max_blocks = 4
+  ns_boundary_type = "open"
+  nx_global = 320
+  ny_global = 384
   processor_shape = "square-ice"
 /
 &ice_prescribed_nml
@@ -376,8 +376,8 @@
   f_fmeltt_ai = "xxxxx"
   f_fmelttn_ai = "xxxxx"
   f_frazil = "mdxxx"
-  f_fresh = "mxxxx"
-  f_fresh_ai = "xxxxx"
+  f_fresh = 'mxxxx'
+  f_fresh_ai = 'mxxxx'
   f_frz_onset = "xxxxx"
   f_frzmlt = "xxxxx"
   f_fsalt = "mxxxx"
