@@ -46,38 +46,6 @@
     namelist group cpl_flds_inparm.
     </desc>
     </entry>
-    <entry id="DMS_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates DMS fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="BRF_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates Bromoform fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="N2O_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates N2O fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="NH3_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates NH3 fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
     <entry id="NCPL_BASE_PERIOD" value="day">
       <type>char</type>
       <valid_values>hour,day,year,decade</valid_values>
@@ -238,13 +206,13 @@
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="b.e23_alpha17f.BLT1850.ne30_t232.098">
+    <entry id="RUN_REFCASE" value="b.e23_alpha17f.BLT1850.ne30_t232.092">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="0201-01-01">
+    <entry id="RUN_REFDATE" value="0101-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -264,7 +232,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="0001-01-01">
+    <entry id="RUN_STARTDATE" value="1850-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -380,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="2">
+    <entry id="RESUBMIT" value="0">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -405,7 +373,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:5913053.desched1, case.st_archive:5913054.desched1">
+    <entry id="JOB_IDS" value="case.run:4959484.desched1, case.st_archive:4959485.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -575,7 +543,7 @@
       <type>char</type>
       <desc>rof mesh file (full pathname)</desc>
     </entry>
-    <entry id="WAV_DOMAIN_MESH" value="UNSET">
+    <entry id="WAV_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ww3a_120222_ESMFmesh.nc">
       <type>char</type>
       <desc>wav mesh file (full pathname)</desc>
     </entry>
@@ -603,6 +571,10 @@
       <type>char</type>
       <desc>rof2lnd flux mapping file</desc>
     </entry>
+    <entry id="ROF2OCN_FMAPNAME" value="unset">
+      <type>char</type>
+      <desc>rof2ocn flux mapping file</desc>
+    </entry>
     <entry id="ROF2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e250r250_230914.nc">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
@@ -610,6 +582,30 @@
     <entry id="ROF2OCN_ICE_RMAPNAME" value="cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e1000r1000_230415.nc">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
+    </entry>
+    <entry id="GLC2ICE_RMAPNAME" value="idmap">
+      <type>char</type>
+      <desc>glc2ice runoff mapping file</desc>
+    </entry>
+    <entry id="GLC2OCN_LIQ_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e250r250_230914.nc">
+      <type>char</type>
+      <desc>glc2ocn runoff mapping file for liquid runoff</desc>
+    </entry>
+    <entry id="GLC2OCN_ICE_RMAPNAME" value="cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e1000r300_230415.nc">
+      <type>char</type>
+      <desc>glc2ocn runoff mapping file for ice runoff</desc>
+    </entry>
+    <entry id="OCN2WAV_SMAPNAME" value="unset">
+      <type>char</type>
+      <desc>ocn2wav state mapping file</desc>
+    </entry>
+    <entry id="ICE2WAV_SMAPNAME" value="unset">
+      <type>char</type>
+      <desc>ice2wav state mapping file</desc>
+    </entry>
+    <entry id="WAV2OCN_SMAPNAME" value="unset">
+      <type>char</type>
+      <desc>wav2ocn state mapping file</desc>
     </entry>
     <entry id="EPS_FRAC" value="1.0e-02">
       <type>char</type>
@@ -942,7 +938,7 @@
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
-      Only used for compsets with DATM and [POP or MOM] (currently C, G and J):
+      Only used for compsets with DATM and POP (currently C, G and J):
       If true, compute albedos to work with daily avg SW down
       If false (default), albedos are computed with the assumption that downward
       solar radiation from the atm component has a diurnal cycle and zenith-angle
@@ -1032,7 +1028,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="1850_cam_lt">
+    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1060,15 +1056,15 @@
       <type>char</type>
       <desc>Nitrogen deposition data year first</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="1850">
+    <entry id="CAM_STREAM_NDEP_YEAR_LAST" value="2015">
       <type>char</type>
       <desc>Nitrogen deposition data year last</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1">
+    <entry id="CAM_STREAM_NDEP_YEAR_ALIGN" value="1850">
       <type>char</type>
       <desc>Nitrogen deposition align CAM_STREAM_NDEP_YEAR_FIRST with this model year</desc>
     </entry>
-    <entry id="CAM_STREAM_NDEP_DATA_FILENAME" value="$DIN_LOC_ROOT/lnd/clm2/ndepdata/fndep_clm_WACCM6_CMIP6piControl001_y21-50avg_1850monthly_0.95x1.25_c180802.nc">
+    <entry id="CAM_STREAM_NDEP_DATA_FILENAME" value="$DIN_LOC_ROOT/lnd/clm2/ndepdata/fndep_clm_hist_b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensmean_1849-2015_monthly_0.9x1.25_c180926.nc">
       <type>char</type>
       <desc>Nitrogen deposition data filename</desc>
     </entry>
@@ -1078,7 +1074,7 @@
     </entry>
   </group>
   <group id="run_component_ctsm">
-    <entry id="LND_TUNING_MODE" value="clm6_0_cam7.0">
+    <entry id="LND_TUNING_MODE" value="clm5_1_cam6.0">
       <type>char</type>
       <desc>Tuning parameters and initial conditions should be optimized for what CLM model version and what meteorlogical forcing combination?
           Options for all combinations of CLM physics and atm forcing are given. The buildnml and namelist_defaults will narrow it down to the ones
@@ -1096,9 +1092,9 @@
                ERA5   (not tuned)
           Other atm forcing options are invalid to run CLM and will result in an error.
     </desc>
-      <valid_values>clm5_0_cam6.0,clm5_0_cam7.0,clm5_0_cam5.0,clm5_0_cam4.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm5_0_QIAN,clm5_0_1PT,clm5_0_NLDAS2,clm5_0_ERA5,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_QIAN,clm4_5_cam6.0,clm4_5_cam7.0,clm4_5_cam5.0,clm4_5_cam4.0,clm4_5_1PT,clm4_5_NLDAS2,clm4_5_ERA5,clm5_1_CRUv7,clm5_1_GSWP3v1,clm5_1_cam6.0,clm5_1_QIAN,clm5_1_1PT,clm5_1_NLDAS2,clm5_1_ERA5,clm6_0_CRUv7,clm6_0_GSWP3v1,clm6_0_cam6.0,clm6_0_cam7.0,clm6_0_cam5.0,clm6_0_cam4.0,clm6_0_QIAN,clm6_0_1PT,clm6_0_NLDAS2,clm6_0_ERA5</valid_values>
+      <valid_values>clm5_0_cam6.0,clm5_0_cam7.0,clm5.0_cam5.0,clm5.0_cam4.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm5_0_QIAN,clm5_0_1PT,clm5_0_NLDAS2,clm5_0_ERA5,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_QIAN,clm4_5_cam6.0,clm4_5_cam7.0,clm4_5_cam5.0,clm4_5_cam4.0,clm4_5_1PT,clm4_5_NLDAS2,clm4_5_ERA5,clm5_1_CRUv7,clm5_1_GSWP3v1,clm5_1_cam6.0,clm5_1_QIAN,clm5_1_1PT,clm5_1_NLDAS2,clm5_1_ERA5,clm6_0_CRUv7,clm6_0_GSWP3v1,clm6_0_cam6.0,clm6_0_cam7.0,clm6_0_cam5.0,clm6_0_cam4.0,clm6_0_QIAN,clm6_0_1PT,clm6_0_NLDAS2,clm6_0_ERA5</valid_values>
     </entry>
-    <entry id="CLM_PHYSICS_VERSION" value="clm6_0">
+    <entry id="CLM_PHYSICS_VERSION" value="clm5_1">
       <type>char</type>
       <valid_values>clm4_5,clm5_0,clm5_1,clm6_0</valid_values>
       <desc>Overall physics version to use.
@@ -1123,7 +1119,7 @@
     subgrid heterogeneity, shallower soil, etc.
     </desc>
     </entry>
-    <entry id="CLM_NML_USE_CASE" value="1850_control">
+    <entry id="CLM_NML_USE_CASE" value="20thC_transient">
       <type>char</type>
       <desc>CLM namelist use_case.
       Determines the use-case that will be sent to the CLM build-namelist utility.
@@ -1282,38 +1278,94 @@
       <desc>Simulation year to start from -- build-namelist options (currently not used)</desc>
     </entry>
   </group>
-  <group id="run_component_dglc">
-    <entry id="DGLC_MODE" value="noevolve">
-      <type>char</type>
-      <valid_values>noevolve</valid_values>
-      <desc>
-      NOEVOLVE mode is used in CESM as follows.
-      In typical runs, CISM is not evolving; CLM computes the surface mass
-      balance (SMB) and sends it to CISM, but CISM&#x2019;s ice sheet geometry
-      remains fixed over the course of the run. In these runs, CISM serves
-      two roles in the system:
-    </desc>
-    </entry>
+  <group id="run_component_cism">
     <entry id="GLC_USE_GREENLAND" value="TRUE">
       <type>logical</type>
-      <desc>Whether to include the Greenland Ice Sheet in this DGLC simulation
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether to include the Greenland Ice Sheet in this CISM simulation
+
     This should generally be set at create_newcase time (via the compset). In principle it
     can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH and possibly others).
+    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_GREENLAND, and possibly
+    others).
     </desc>
     </entry>
     <entry id="GLC_USE_ANTARCTICA" value="FALSE">
       <type>logical</type>
-      <desc>Whether to include the Antarctica Ice Sheet in this DGLC simulation
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether to include the Antarctica Ice Sheet in this CISM simulation
+
     This should generally be set at create_newcase time (via the compset). In principle it
     can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH and possibly others).
+    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_ANTARCTICA, and possibly
+    others).
     </desc>
     </entry>
-    <entry id="DGLC_SKIP_RESTART_READ" value="FALSE">
+    <entry id="CISM_USE_GREENLAND" value="TRUE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
-      <desc> If set to true, than dglc restarts will not be read on a continuation run.
+      <desc>Whether to include the Greenland Ice Sheet in this CISM simulation
+
+    This should generally be set at create_newcase time (via the compset). In principle it
+    can be changed later, but great care is needed to change a number of other variables
+    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_GREENLAND, and possibly
+    others).
+    </desc>
+    </entry>
+    <entry id="CISM_USE_ANTARCTICA" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether to include the Antarctica Ice Sheet in this CISM simulation
+
+    This should generally be set at create_newcase time (via the compset). In principle it
+    can be changed later, but great care is needed to change a number of other variables
+    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_ANTARCTICA, and possibly
+    others).
+    </desc>
+    </entry>
+    <entry id="CISM_PHYS" value="cism2">
+      <type>char</type>
+      <valid_values>cism2</valid_values>
+      <desc>Version of CISM physics/dynamics to use</desc>
+    </entry>
+    <entry id="CISM_EVOLVE_GREENLAND" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether CISM ice evolution is on or off for Greenland.</desc>
+    </entry>
+    <entry id="CISM_EVOLVE_ANTARCTICA" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether CISM ice evolution is on or off for Antarctica.</desc>
+    </entry>
+    <entry id="CISM_EVOLVE" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>Whether CISM ice evolution is on or off for CISM as a whole.
+     This must be TRUE if CISM_EVOLVE_ICESHEET is TRUE for any ICESHEET,
+     and FALSE if CISM_EVOLVE_ICESHEET is FALSE for all ICESHEETs that
+     are present in this run.
+
+     Setting CISM_EVOLVE to FALSE in a hybrid case also forces the use
+     of observed initial conditions, as if you had also set
+     CISM_OBSERVED_IC=TRUE.
+     </desc>
+    </entry>
+    <entry id="CISM_OBSERVED_IC" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>For hybrid runs, whether CISM should use observed initial
+    conditions instead of restart file.
+
+    For hybrid runs, a value of FALSE (default) implies that CISM should
+    use the restart file from the reference case; a value of TRUE
+    implies that CISM should instead use the observed initial conditions
+    that are generally used for startup runs. This variable is ignored
+    for startup runs; for branch runs, it must be FALSE.
+
+    Note that setting CISM_EVOLVE to FALSE in a hybrid case also forces
+    the use of observed initial conditions, as if you had also set
+    CISM_OBSERVED_IC=TRUE.
     </desc>
     </entry>
   </group>
