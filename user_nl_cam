@@ -1,10 +1,10 @@
 
-mfilt    =       0,       5,     20,      8,      12,       120,      1,   1
+mfilt    =       0,       5,     20,      40,      12,       120,      1,   1
 nhtfrq              =       0,     -24,    -24,      -3,       0,       -2,      0,  -8760
 ndens               =       2,       2,      2,       2,       2,       1,      2,   1
-interpolate_output  =  .true.,  .true., .true., .true., .false., .true.,  .true.
-interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
-interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
+interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
+interpolate_nlat    =     180,     180,    180,     180,     180,     180,   180
+interpolate_nlon    =     360,     360,    360,     360,     360,     360,   360 
 
 empty_htapes = .true.
 
@@ -20,14 +20,7 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 fincl3 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA', 'PSL'
 
-fincl4 =  'AODDUST', 'AODVIS', 'AODVISdn','BURDENSEASALT',
-'CLDHGH', 'CLDLOW', 'CLDMED', 'CLDTOT',
-'FLDS', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC', 'FLUT',
-'FSDS', 'FSDSC', 'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA',
-'LHFLX', 'LWCF',  'OMEGA500', 'PBLH', 'PHIS', 'PMID',
-'PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL', 'SHFLX', 'SOLIN', 'SST',  'SWCF',
-'TGCLDIWP', 'TGCLDLWP','TREFHT', 'TS', 'ACTREL', 'ACTREI',
- 'T','U', 'V', 'Q'
+fincl4 =  'PRECC','PRECL'
 
 fincl5 = 'Uzm','Vzm','Wzm','THzm', 'VTHzm','WTHzm','UVzm','UWzm'
 phys_grid_ctem_nfreq=-6
@@ -50,4 +43,5 @@ cldfrc2m_qist_min = 1.e-7
 
 bnd_topo = "/glade/campaign/cgd/amp/pel/topo/files/se/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_noleak_20240117.nc"
 se_hypervis_subcycle = 2
-                                                                             
+
+ncdata ="/glade/campaign/cgd/amp/juliob/ERA5/ne30np4/L42/ERA5_x_ne30np4_L42_Test01_WO.1994-01-01-00000.nc"
