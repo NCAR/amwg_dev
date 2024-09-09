@@ -76,19 +76,19 @@ ALLCOMP_attributes::
      ICE_model = cice
      LND_model = clm
      MED_model = cesm
-     OCN_model = pop
+     OCN_model = mom
      Profiling = 0
      ROF_model = mosart
      ScalarFieldCount = 4
      ScalarFieldIdxGridNX = 1
      ScalarFieldIdxGridNY = 2
      ScalarFieldIdxNextSwCday = 3
-     ScalarFieldIdxPrecipFactor = 4
+     ScalarFieldIdxPrecipFactor = 0
      ScalarFieldName = cpl_scalars
      WAV_model = ww
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = b.e23_alpha17f.BLT1850.ne30_g17.POP.096
+     case_name = b.e23_alpha17f.BLT1850.ne30_t232.095
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      data_assimilation_atm = .false.
@@ -103,7 +103,7 @@ ALLCOMP_attributes::
      flds_co2a = .true.
      flds_co2b = .false.
      flds_co2c = .false.
-     flds_i2o_per_cat = .true.
+     flds_i2o_per_cat = .false.
      flds_r2l_stream_channel_depths = .false.
      flds_wiso = .false.
      flux_convergence = 0.01
@@ -118,10 +118,10 @@ ALLCOMP_attributes::
      mediator_present = true
      mesh_atm = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
      mesh_glc = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/greenland_4km_epsg3413_c170414_ESMFmesh_c20190729.nc
-     mesh_ice = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/gx1v7_151008_ESMFmesh.nc
+     mesh_ice = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/tx2_3v2_230415_ESMFmesh.nc
      mesh_lnd = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
-     mesh_mask = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/gx1v7_151008_ESMFmesh.nc
-     mesh_ocn = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/gx1v7_151008_ESMFmesh.nc
+     mesh_mask = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/tx2_3v2_230415_ESMFmesh.nc
+     mesh_ocn = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/tx2_3v2_230415_ESMFmesh.nc
      model_version = unknown
      ocn2glc_coupling = .false.
      ocn2glc_levels = 1:10:19:26:30:33:35
@@ -135,7 +135,7 @@ ALLCOMP_attributes::
      scol_lon = -999.99
      single_column_lnd_domainfile = UNSET
      start_type = continue
-     tfreeze_option = mushy
+     tfreeze_option = linear_salt
      username = hannay
      wav_coupling_to_cice = .false.
      write_restart_at_endofrun = .false.
@@ -157,14 +157,14 @@ MED_attributes::
      budget_ltann = 1
      budget_ltend = 0
      budget_month = 1
-     budget_table_version = v0
+     budget_table_version = v1
      check_for_nans = .true.
      coupling_mode = cesm
      do_budgets = .true.
      flux_albav = .false.
      glc2ice_rmapname = idmap
-     glc2ocn_ice_rmapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/gland4km/map_gland4km_to_gx1v7_nnsm_e1000r300_171105.nc
-     glc2ocn_liq_rmapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/gland4km/map_gland4km_to_gx1v7_nn_open_ocean_nnsm_e1000r300_marginal_sea_171105.nc
+     glc2ocn_ice_rmapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e1000r300_230415.nc
+     glc2ocn_liq_rmapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/gland4km/map_gland4km_to_tx2_3_nnsm_e250r250_230914.nc
      glc_renormalize_smb = on_if_glc_coupled_fluxes
      gust_fac = 0.0D0
      histaux_atm2med_file1_auxname = atm.1h.inst
@@ -260,9 +260,9 @@ MED_attributes::
      history_option_wav_avg = never
      history_option_wav_inst = never
      ice2atm_map = unset
-     ice2wav_smapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/gx1v7/map_gx1v7_TO_ww3a_splice_170214.nc
-     ice_nx = 320
-     ice_ny = 384
+     ice2wav_smapname = unset
+     ice_nx = 540
+     ice_ny = 480
      info_debug = 1
      lnd2atm_map = idmap
      lnd2rof_map = unset
@@ -270,17 +270,17 @@ MED_attributes::
      lnd_ny = 1
      mapuv_with_cart3d = .true.
      ocn2atm_map = unset
-     ocn2wav_smapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/gx1v7/map_gx1v7_TO_ww3a_splice_170214.nc
-     ocn_nx = 320
-     ocn_ny = 384
+     ocn2wav_smapname = unset
+     ocn_nx = 540
+     ocn_ny = 480
      ocn_surface_flux_scheme = 0
      rof2lnd_map = unset
      rof2ocn_fmapname = unset
-     rof2ocn_ice_rmapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/r05/map_r05_to_gx1v7_nnsm_e1000r300_170413.nc
-     rof2ocn_liq_rmapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/r05/map_r05_to_gx1v7_nn_open_ocean_nnsm_e1000r300_marginal_sea_170413.nc
+     rof2ocn_ice_rmapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e1000r1000_230415.nc
+     rof2ocn_liq_rmapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/r05/map_r05_to_tx2_3_nnsm_e250r250_230914.nc
      rof_nx = 720
      rof_ny = 360
-     wav2ocn_smapname = /glade/campaign/cesm/cesmdata/inputdata/cpl/gridmaps/ww3a/map_ww3a_TO_gx1v7_splice_170214.nc
+     wav2ocn_smapname = unset
      wav_nx = 90
      wav_ny = 50
 ::
@@ -345,8 +345,8 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = med.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = med.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -357,8 +357,8 @@ MED_modelio::
 ::
 
 ATM_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = atm.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = atm.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -369,8 +369,8 @@ ATM_modelio::
 ::
 
 LND_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = lnd.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = lnd.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -381,8 +381,8 @@ LND_modelio::
 ::
 
 ICE_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = ice.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = ice.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -393,8 +393,8 @@ ICE_modelio::
 ::
 
 OCN_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = ocn.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = ocn.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -405,8 +405,8 @@ OCN_modelio::
 ::
 
 ROF_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = rof.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = rof.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -417,8 +417,8 @@ ROF_modelio::
 ::
 
 GLC_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = glc.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = glc.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -429,8 +429,8 @@ GLC_modelio::
 ::
 
 WAV_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = wav.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = wav.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -441,8 +441,8 @@ WAV_modelio::
 ::
 
 ESP_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = esp.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = esp.log.4780483.desched1.240609-040859
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -453,7 +453,7 @@ ESP_modelio::
 ::
 
 DRV_modelio::
-     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_g17.POP.096/run
-     logfile = drv.log.4717937.desched1.240605-110107
+     diro = /glade/derecho/scratch/hannay/b.e23_alpha17f.BLT1850.ne30_t232.095/run
+     logfile = drv.log.4780483.desched1.240609-040859
 ::
 

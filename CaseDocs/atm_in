@@ -180,7 +180,7 @@
  clubb_c6thlc		=  1.0     
  clubb_c7		=  0.1     
  clubb_c7b		=  0.5     
- clubb_c8		=  4.25    
+ clubb_c8		= 4.35
  clubb_c8b		=  0.0     
  clubb_c_invrs_tau_bkgnd		=  1.0     
  clubb_c_invrs_tau_n2		=  0.1     
@@ -441,7 +441,7 @@
  history_waccmx		=                .false.  
  macrop_scheme		= 'CLUBB_SGS'
  microp_scheme		= 'MG'
- radiation_scheme		= 'rrtmg'
+ radiation_scheme		= 'rrtmgp'
  shallow_scheme		= 'CLUBB_SGS'
  srf_flux_avg		= 0
  use_gw_convect_dp		= .true.
@@ -502,12 +502,14 @@
          'A:N2O:N2O', 'A:CH4:CH4',
          'N:CFC11STAR:CFC11', 'A:CFC12:CFC12',
          'M:mam4_mode1:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode1_rrtmg_aeronetdust_sig1.6_dgnh.48_c140304.nc', 'M:mam4_mode2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode2_rrtmg_aitkendust_c141106.nc',
-         'M:mam4_mode3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode3_rrtmg_aeronetdust_c141106.nc', 'M:mam4_mode4:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode4_rrtmg_c130628.nc',
+         'M:mam4_mode3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode3_rrtmg_aeronetdust_sig1.2_dgnl.40_c150219.nc', 'M:mam4_mode4:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode4_rrtmg_c130628.nc',
          'N:VOLC_MMR1:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode1_c210211.nc', 'N:VOLC_MMR2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode2_c210211.nc',
          'N:VOLC_MMR3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.2_mode3_c210211.nc'
 /
 &radiation_nl
  graupel_in_rad		=  .false. 
+ rrtmgp_coefs_lw_file		= '/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/components/cam/src/physics/rrtmgp/data/rrtmgp-gas-lw-g128.nc'
+ rrtmgp_coefs_sw_file		= '/glade/work/hannay/cesm_tags/cesm2_3_alpha17f/components/cam/src/physics/rrtmgp/data/rrtmgp-gas-sw-g112.nc'
 /
 &ref_pres_nl
  clim_modal_aero_top_press		=  1.D-4 
@@ -518,7 +520,6 @@
 &solar_data_opts
  solar_data_type		= 'FIXED'
  solar_data_ymd		=    18500101           
- solar_htng_spctrl_scl		= .true.
  solar_irrad_data_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/solar/SolarForcingCMIP6piControl_c160921.nc'
 /
 &tms_nl
