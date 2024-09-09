@@ -3,8 +3,8 @@ mfilt    =       0,       5,     20,      40,      12,       120,      1,   1
 nhtfrq              =       0,     -24,    -24,      -3,       0,       -2,      0,  -8760
 ndens               =       2,       2,      2,       2,       2,       1,      2,   1
 interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
-interpolate_nlat    =     180,     180,    180,     180,     180,     180,   180
-interpolate_nlon    =     360,     360,    360,     360,     360,     360,   360 
+interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
+interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
 
 empty_htapes = .true.
 
@@ -44,4 +44,4 @@ cldfrc2m_qist_min = 1.e-7
 bnd_topo = "/glade/campaign/cgd/amp/pel/topo/files/se/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_noleak_20240117.nc"
 se_hypervis_subcycle = 2
 
-ncdata ="/glade/campaign/cgd/amp/juliob/ERA5/ne30np4/L42/ERA5_x_ne30np4_L42_Test01_WO.1994-01-01-00000.nc"
+ncdata ="/glade/campaign/cesm/cesmdata/inputdata/atm/cam/inic/se/F2000climo_ne30pg3_mg17_01-01-00000_c200424.nc"
