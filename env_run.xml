@@ -46,6 +46,38 @@
     namelist group cpl_flds_inparm.
     </desc>
     </entry>
+    <entry id="DMS_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates DMS fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="BRF_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates Bromoform fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="N2O_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates N2O fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="NH3_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates NH3 fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
     <entry id="NCPL_BASE_PERIOD" value="day">
       <type>char</type>
       <valid_values>hour,day,year,decade</valid_values>
@@ -77,7 +109,7 @@
     Thisn is used to set the driver namelist ocn_cpl_dt, equal to basedt/OCN_NCPL
     where basedt is equal to NCPL_BASE_PERIOD in seconds.</desc>
     </entry>
-    <entry id="GLC_NCPL" value="1">
+    <entry id="GLC_NCPL" value="$ATM_NCPL">
       <type>integer</type>
       <desc>Number of glc coupling intervals per NCPL_BASE_PERIOD.</desc>
     </entry>
@@ -264,14 +296,14 @@
       negative value implies off
     </desc>
     </entry>
-    <entry id="REST_OPTION" value="nyears">
+    <entry id="REST_OPTION" value="$STOP_OPTION">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
     </entry>
-    <entry id="REST_N" value="1">
+    <entry id="REST_N" value="$STOP_N">
       <type>integer</type>
       <desc>
       sets model restart writes with REST_OPTION and REST_DATE
@@ -373,7 +405,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:5247965.desched1, case.st_archive:5247966.desched1">
+    <entry id="JOB_IDS" value="case.run:5464022.desched1, case.st_archive:5464025.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -494,7 +526,7 @@
     exceeded then the timer is turned off.
     </desc>
     </entry>
-    <entry id="TIMER_LEVEL" value="4">
+    <entry id="TIMER_LEVEL" value="10">
       <type>integer</type>
       <desc>Maximum code stack depth of enabled timers.</desc>
     </entry>
@@ -555,7 +587,7 @@
       <type>char</type>
       <desc>ocn mesh file (full pathname)</desc>
     </entry>
-    <entry id="GLC_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/greenland_4km_epsg3413_c170414_ESMFmesh_c20190729.nc">
+    <entry id="GLC_DOMAIN_MESH" value="UNSET">
       <type>char</type>
       <desc>glc mesh file (full pathname)</desc>
     </entry>
@@ -571,10 +603,6 @@
       <type>char</type>
       <desc>rof2lnd flux mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_FMAPNAME" value="unset">
-      <type>char</type>
-      <desc>rof2ocn flux mapping file</desc>
-    </entry>
     <entry id="ROF2OCN_LIQ_RMAPNAME" value="unset">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
@@ -582,30 +610,6 @@
     <entry id="ROF2OCN_ICE_RMAPNAME" value="unset">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
-    </entry>
-    <entry id="GLC2ICE_RMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>glc2ice runoff mapping file</desc>
-    </entry>
-    <entry id="GLC2OCN_LIQ_RMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>glc2ocn runoff mapping file for liquid runoff</desc>
-    </entry>
-    <entry id="GLC2OCN_ICE_RMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>glc2ocn runoff mapping file for ice runoff</desc>
-    </entry>
-    <entry id="OCN2WAV_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>ocn2wav state mapping file</desc>
-    </entry>
-    <entry id="ICE2WAV_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>ice2wav state mapping file</desc>
-    </entry>
-    <entry id="WAV2OCN_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>wav2ocn state mapping file</desc>
     </entry>
     <entry id="EPS_FRAC" value="1.0e-02">
       <type>char</type>
@@ -938,7 +942,7 @@
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
-      Only used for compsets with DATM and POP (currently C, G and J):
+      Only used for compsets with DATM and [POP or MOM] (currently C, G and J):
       If true, compute albedos to work with daily avg SW down
       If false (default), albedos are computed with the assumption that downward
       solar radiation from the atm component has a diurnal cycle and zenith-angle
@@ -1008,7 +1012,7 @@
       <desc>Number of glacier elevation classes used in CLM.
     Used by both CLM and the coupler (even if CISM is not running, and only SGLC is used).</desc>
     </entry>
-    <entry id="GLC_TWO_WAY_COUPLING" value="TRUE">
+    <entry id="GLC_TWO_WAY_COUPLING" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Whether the glacier component feeds back to the rest of the system
@@ -1074,7 +1078,7 @@
     </entry>
   </group>
   <group id="run_component_ctsm">
-    <entry id="LND_TUNING_MODE" value="clm5_1_cam6.0">
+    <entry id="LND_TUNING_MODE" value="clm6_0_cam7.0">
       <type>char</type>
       <desc>Tuning parameters and initial conditions should be optimized for what CLM model version and what meteorlogical forcing combination?
           Options for all combinations of CLM physics and atm forcing are given. The buildnml and namelist_defaults will narrow it down to the ones
@@ -1092,9 +1096,9 @@
                ERA5   (not tuned)
           Other atm forcing options are invalid to run CLM and will result in an error.
     </desc>
-      <valid_values>clm5_0_cam6.0,clm5_0_cam7.0,clm5.0_cam5.0,clm5.0_cam4.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm5_0_QIAN,clm5_0_1PT,clm5_0_NLDAS2,clm5_0_ERA5,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_QIAN,clm4_5_cam6.0,clm4_5_cam7.0,clm4_5_cam5.0,clm4_5_cam4.0,clm4_5_1PT,clm4_5_NLDAS2,clm4_5_ERA5,clm5_1_CRUv7,clm5_1_GSWP3v1,clm5_1_cam6.0,clm5_1_QIAN,clm5_1_1PT,clm5_1_NLDAS2,clm5_1_ERA5,clm6_0_CRUv7,clm6_0_GSWP3v1,clm6_0_cam6.0,clm6_0_cam7.0,clm6_0_cam5.0,clm6_0_cam4.0,clm6_0_QIAN,clm6_0_1PT,clm6_0_NLDAS2,clm6_0_ERA5</valid_values>
+      <valid_values>clm5_0_cam6.0,clm5_0_cam7.0,clm5_0_cam5.0,clm5_0_cam4.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm5_0_QIAN,clm5_0_1PT,clm5_0_NLDAS2,clm5_0_ERA5,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_QIAN,clm4_5_cam6.0,clm4_5_cam7.0,clm4_5_cam5.0,clm4_5_cam4.0,clm4_5_1PT,clm4_5_NLDAS2,clm4_5_ERA5,clm5_1_CRUv7,clm5_1_GSWP3v1,clm5_1_cam6.0,clm5_1_QIAN,clm5_1_1PT,clm5_1_NLDAS2,clm5_1_ERA5,clm6_0_CRUv7,clm6_0_GSWP3v1,clm6_0_cam6.0,clm6_0_cam7.0,clm6_0_cam5.0,clm6_0_cam4.0,clm6_0_QIAN,clm6_0_1PT,clm6_0_NLDAS2,clm6_0_ERA5</valid_values>
     </entry>
-    <entry id="CLM_PHYSICS_VERSION" value="clm5_1">
+    <entry id="CLM_PHYSICS_VERSION" value="clm6_0">
       <type>char</type>
       <valid_values>clm4_5,clm5_0,clm5_1,clm6_0</valid_values>
       <desc>Overall physics version to use.
@@ -1245,7 +1249,7 @@
   <group id="run_component_docn">
     <entry id="DOCN_MODE" value="prescribed">
       <type>char</type>
-      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,cplhist</valid_values>
+      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,cplhist,multilev</valid_values>
       <desc> DOCN mode. The data ocean component (DOCN) always returns SSTs to the
     driver. The atmosphere/ocean fluxes are computed in the
     coupler. Therefore, the data ocean model does not compute fluxes like
@@ -1399,97 +1403,6 @@
       <type>char</type>
       <valid_values/>
       <desc>Simulation year to start from -- build-namelist options (currently not used)</desc>
-    </entry>
-  </group>
-  <group id="run_component_cism">
-    <entry id="GLC_USE_GREENLAND" value="TRUE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether to include the Greenland Ice Sheet in this CISM simulation
-
-    This should generally be set at create_newcase time (via the compset). In principle it
-    can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_GREENLAND, and possibly
-    others).
-    </desc>
-    </entry>
-    <entry id="GLC_USE_ANTARCTICA" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether to include the Antarctica Ice Sheet in this CISM simulation
-
-    This should generally be set at create_newcase time (via the compset). In principle it
-    can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_ANTARCTICA, and possibly
-    others).
-    </desc>
-    </entry>
-    <entry id="CISM_USE_GREENLAND" value="TRUE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether to include the Greenland Ice Sheet in this CISM simulation
-
-    This should generally be set at create_newcase time (via the compset). In principle it
-    can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_GREENLAND, and possibly
-    others).
-    </desc>
-    </entry>
-    <entry id="CISM_USE_ANTARCTICA" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether to include the Antarctica Ice Sheet in this CISM simulation
-
-    This should generally be set at create_newcase time (via the compset). In principle it
-    can be changed later, but great care is needed to change a number of other variables
-    to be consistent (GLC_GRID, GLC_DOMAIN_MESH, CISM_EVOLVE_ANTARCTICA, and possibly
-    others).
-    </desc>
-    </entry>
-    <entry id="CISM_PHYS" value="cism2">
-      <type>char</type>
-      <valid_values>cism2</valid_values>
-      <desc>Version of CISM physics/dynamics to use</desc>
-    </entry>
-    <entry id="CISM_EVOLVE_GREENLAND" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether CISM ice evolution is on or off for Greenland.</desc>
-    </entry>
-    <entry id="CISM_EVOLVE_ANTARCTICA" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether CISM ice evolution is on or off for Antarctica.</desc>
-    </entry>
-    <entry id="CISM_EVOLVE" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>Whether CISM ice evolution is on or off for CISM as a whole.
-     This must be TRUE if CISM_EVOLVE_ICESHEET is TRUE for any ICESHEET,
-     and FALSE if CISM_EVOLVE_ICESHEET is FALSE for all ICESHEETs that
-     are present in this run.
-
-     Setting CISM_EVOLVE to FALSE in a hybrid case also forces the use
-     of observed initial conditions, as if you had also set
-     CISM_OBSERVED_IC=TRUE.
-     </desc>
-    </entry>
-    <entry id="CISM_OBSERVED_IC" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>For hybrid runs, whether CISM should use observed initial
-    conditions instead of restart file.
-
-    For hybrid runs, a value of FALSE (default) implies that CISM should
-    use the restart file from the reference case; a value of TRUE
-    implies that CISM should instead use the observed initial conditions
-    that are generally used for startup runs. This variable is ignored
-    for startup runs; for branch runs, it must be FALSE.
-
-    Note that setting CISM_EVOLVE to FALSE in a hybrid case also forces
-    the use of observed initial conditions, as if you had also set
-    CISM_OBSERVED_IC=TRUE.
-    </desc>
     </entry>
   </group>
 </file>

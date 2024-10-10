@@ -1,2 +1,2 @@
-# case: f.e23_alpha17f.FLTHIST_ne30.moving_mtn.099
-https://github.com/NCAR/amwg_dev/issues/560
+# case: f.e23_beta02.FLTHIST_ne30.001
+https://github.com/NCAR/amwg_dev/issues/565

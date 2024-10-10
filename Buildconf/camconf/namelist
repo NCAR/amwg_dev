@@ -1,25 +1,21 @@
 &comp_inparm 
 
  dtime = 1800
+ 
 
+mfilt    =       0,       5,     20,      40,      12,       120,      1,   1,12
 
-mfilt    =       0,       5,     20,      40,      12,       120,      1,   1
+nhtfrq              =       0,     -24,    -24,      -3,       0,       -2,      0,  -8760,0,0
 
-nhtfrq              =       0,     -24,    -24,      -3,       0,       -2,      0,  -8760
+ndens               =       2,       2,      2,       2,       2,       1,      2,   1,1
 
-ndens               =       2,       2,      2,       2,       2,       1,      2,   1
+interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true., .false.,.false.
 
-interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
+interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192,   192
 
-interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
-
-interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
-
-
+interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 ,   288
 
 empty_htapes = .true.
-
-
 
 fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 
 
@@ -63,17 +59,17 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'SFdst_a1','SFdst_a2', 'SFdst_a3', 'SFncl_a1', 'SFncl_a2', 'SFncl_a3',
 
-'num_a2_sfnnuc1', 'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO'
+'dgnd_a01','dgnd_a02', 'dgnd_a03', 'dgnd_a04', 'CCN3', 'CCN4', 'CCN5', 'CCN6', 'SFncl_a2', 'SFncl_a3',
+
+'num_a2_sfnnuc1', 'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO', 'Z3', 'PDELDRY','PS', 'PHIS',
+
+  'AODDUSTdn', 'AODSO4dn', 'AODSOAdn', 'AODBCdn', 'AODSSdn'
 
 
 
 fincl3 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
 
-
-
 fincl4 =  'PRECC','PRECL'
-
-
 
 fincl5 = 'Uzm','Vzm','Wzm','THzm', 'VTHzm','WTHzm','UVzm','UWzm'
 
@@ -83,10 +79,10 @@ phys_grid_ctem_zm_nbas=120
 
 phys_grid_ctem_za_nlat=90
 
-
-
 clubb_c8 = 4.35 
 
+avgflag_pertape(9) = 'A'
 
+fincl9 = 'EFIX'
 
 / 
