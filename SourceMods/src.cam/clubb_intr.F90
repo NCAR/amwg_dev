@@ -403,6 +403,20 @@ module clubb_intr
     ztodt_idx,&         ! physics timestep for SILHS
     clubbtop_idx        ! level index for CLUBB top
 
+  !+++jtb
+  !   For GW code
+  integer :: &
+       ttend_clubb_idx, &
+       ttend_clubb_mc_idx, &
+       upwp_clubb_gw_idx, &
+       upwp_clubb_gw_mc_idx, &
+       vpwp_clubb_gw_idx, &
+       vpwp_clubb_gw_mc_idx, &
+       thlp2_clubb_gw_idx, &
+       thlp2_clubb_gw_mc_idx, &
+       wpthlp_clubb_gw_idx, &
+       wpthlp_clubb_gw_mc_idx
+
   ! Indices for microphysical covariance tendencies
   integer :: &
     rtp2_mc_zt_idx,   &
@@ -573,6 +587,21 @@ module clubb_intr
     call pbuf_add_field('WPVP2',      'global', dtype_r8, (/pcols,pverp/), wpvp2_idx)
     call pbuf_add_field('WP2UP2',     'global', dtype_r8, (/pcols,pverp/), wp2up2_idx)
     call pbuf_add_field('WP2VP2',     'global', dtype_r8, (/pcols,pverp/), wp2vp2_idx)
+
+    !+++ jtb
+    ! Things for GW scheme
+    call pbuf_add_field('TTEND_CLUBB',  'physpkg', dtype_r8, (/pcols,pver/),  ttend_clubb_idx)
+    call pbuf_add_field('UPWP_CLUBB_GW',   'physpkg', dtype_r8, (/pcols,pverp/), upwp_clubb_gw_idx)
+    call pbuf_add_field('VPWP_CLUBB_GW',   'physpkg', dtype_r8, (/pcols,pverp/), vpwp_clubb_gw_idx)
+    call pbuf_add_field('THLP2_CLUBB_GW',  'physpkg', dtype_r8, (/pcols,pverp/), thlp2_clubb_gw_idx)
+    call pbuf_add_field('WPTHLP_CLUBB_GW',  'physpkg', dtype_r8, (/pcols,pverp/), wpthlp_clubb_gw_idx)
+
+    call pbuf_add_field('TTEND_CLUBB_MC',   'physpkg', dtype_r8, (/pcols,pverp/), ttend_clubb_mc_idx)
+    call pbuf_add_field('UPWP_CLUBB_GW_MC',   'physpkg', dtype_r8, (/pcols,pverp/), upwp_clubb_gw_mc_idx)
+    call pbuf_add_field('VPWP_CLUBB_GW_MC',   'physpkg', dtype_r8, (/pcols,pverp/), vpwp_clubb_gw_mc_idx)
+    call pbuf_add_field('THLP2_CLUBB_GW_MC',   'physpkg', dtype_r8, (/pcols,pverp/), thlp2_clubb_gw_mc_idx)
+    call pbuf_add_field('WPTHLP_CLUBB_GW_MC',   'physpkg', dtype_r8, (/pcols,pverp/), wpthlp_clubb_gw_mc_idx)
+    !---
 
     ! For SILHS microphysical covariance contributions
     call pbuf_add_field('rtp2_mc_zt', 'global', dtype_r8, (/pcols,pverp/), rtp2_mc_zt_idx)
@@ -1984,6 +2013,20 @@ end subroutine clubb_init_cnst
        call pbuf_set_field(pbuf2d, pdf_zm_varnce_w_2_idx, 0.0_r8)
        call pbuf_set_field(pbuf2d, pdf_zm_mixt_frac_idx, 0.0_r8)
 
+       !+++ jtb (For GW)
+       call pbuf_set_field(pbuf2d,  ttend_clubb_idx, 0.0_r8)
+       call pbuf_set_field(pbuf2d,  upwp_clubb_gw_idx, 0.0_r8)
+       call pbuf_set_field(pbuf2d,  vpwp_clubb_gw_idx, 0.0_r8)
+       call pbuf_set_field(pbuf2d,  thlp2_clubb_gw_idx, 0.0_r8)
+       call pbuf_set_field(pbuf2d,  wpthlp_clubb_gw_idx, 0.0_r8)
+
+       call pbuf_set_field(pbuf2d,  ttend_clubb_mc_idx, 0.0_r8)
+       call pbuf_set_field(pbuf2d,  upwp_clubb_gw_mc_idx, 0.0_r8)
+       call pbuf_set_field(pbuf2d,  vpwp_clubb_gw_mc_idx, 0.0_r8)
+       call pbuf_set_field(pbuf2d,  thlp2_clubb_gw_mc_idx, 0.0_r8)
+       call pbuf_set_field(pbuf2d,  wpthlp_clubb_gw_mc_idx, 0.0_r8)
+       
+
     endif
 
     ! The following is physpkg, so it needs to be initialized every time
@@ -2018,7 +2061,7 @@ end subroutine clubb_init_cnst
 
     use physics_types,  only: physics_state, physics_ptend, &
                               physics_state_copy, physics_ptend_init, &
-                              physics_ptend_sum, physics_update
+                              physics_ptend_sum, physics_update, set_wet_to_dry
 
     use physics_buffer, only: pbuf_old_tim_idx, pbuf_get_field, physics_buffer_desc
     use physics_buffer, only: pbuf_set_field
@@ -2336,7 +2379,7 @@ end subroutine clubb_init_cnst
     character(len=200) :: temp1, sub             ! Strings needed for CLUBB output
     real(kind=time_precision)                 :: time_elapsed                ! time keep track of stats          [s]
     integer :: stats_nsamp, stats_nout           ! Stats sampling and output intervals for CLUBB [timestep]
-
+    integer :: m
     real(r8) :: rtm_integral_vtend(pcols), &
                 rtm_integral_ltend(pcols)
 
@@ -2421,6 +2464,21 @@ end subroutine clubb_init_cnst
     real(r8), pointer, dimension(:,:) :: wpthlp_mc_zt
     real(r8), pointer, dimension(:,:) :: rtpthlp_mc_zt
 
+    !+++ jtb
+    ! Connections to GW param
+    real(r8), pointer, dimension(:,:) :: ttend_clubb
+    real(r8), pointer, dimension(:,:) :: upwp_clubb_gw
+    real(r8), pointer, dimension(:,:) :: vpwp_clubb_gw
+    real(r8), pointer, dimension(:,:) :: thlp2_clubb_gw
+    real(r8), pointer, dimension(:,:) :: wpthlp_clubb_gw
+    
+    real(r8), pointer, dimension(:,:) :: ttend_clubb_mc
+    real(r8), pointer, dimension(:,:) :: upwp_clubb_gw_mc
+    real(r8), pointer, dimension(:,:) :: vpwp_clubb_gw_mc
+    real(r8), pointer, dimension(:,:) :: thlp2_clubb_gw_mc
+    real(r8), pointer, dimension(:,:) :: wpthlp_clubb_gw_mc
+
+    
     real(r8)  qitend(pcols,pver)
     real(r8)  initend(pcols,pver)  ! Needed for ice supersaturation adjustment calculation
 
@@ -2483,7 +2541,7 @@ end subroutine clubb_init_cnst
     real(r8) :: temp2d(pcols,pver), temp2dp(pcols,pverp)  ! temporary array for holding scaled outputs
 
     integer :: nlev
-    integer :: m
+
     intrinsic :: max
 
     character(len=*), parameter :: subr='clubb_tend_cam'
@@ -2552,17 +2610,21 @@ end subroutine clubb_init_cnst
     !  Determine number of columns and which chunk computation is to be performed on
     ncol = state%ncol
     lchnk = state%lchnk
-
+    
     ! constituents are all treated as dry mmr by clubb
+    !    call set_wet_to_dry(state1)!xxx bug
     do m = 1,pcnst
        if (cnst_type(m).eq.'wet') then
           state1%q(:ncol,:,m) = state1%q(:ncol,:,m)*state1%pdel(:ncol,:)/state1%pdeldry(:ncol,:)
        endif
     end do
 
+
     if (clubb_do_liqsupersat) then
       call pbuf_get_field(pbuf, npccn_idx, npccn)
     endif
+
+
 
     !  Determine time step of physics buffer
     itim_old = pbuf_old_tim_idx()
@@ -2647,6 +2709,21 @@ end subroutine clubb_init_cnst
     call pbuf_get_field(pbuf, wpthlp_mc_zt_idx,  wpthlp_mc_zt)
     call pbuf_get_field(pbuf, rtpthlp_mc_zt_idx, rtpthlp_mc_zt)
 
+    !+++jtb
+    ! For GW    
+    call pbuf_get_field(pbuf, ttend_clubb_idx,       ttend_clubb )
+    call pbuf_get_field(pbuf, thlp2_clubb_gw_idx,    thlp2_clubb_gw )
+    call pbuf_get_field(pbuf, upwp_clubb_gw_idx,     upwp_clubb_gw )
+    call pbuf_get_field(pbuf, vpwp_clubb_gw_idx,     vpwp_clubb_gw )
+    call pbuf_get_field(pbuf, wpthlp_clubb_gw_idx,   wpthlp_clubb_gw )
+
+    call pbuf_get_field(pbuf, ttend_clubb_mc_idx,     ttend_clubb_mc )
+    call pbuf_get_field(pbuf, thlp2_clubb_gw_mc_idx,  thlp2_clubb_gw_mc )
+    call pbuf_get_field(pbuf, upwp_clubb_gw_mc_idx,   upwp_clubb_gw_mc )
+    call pbuf_get_field(pbuf, vpwp_clubb_gw_mc_idx,   vpwp_clubb_gw_mc )
+    call pbuf_get_field(pbuf, wpthlp_clubb_gw_mc_idx, wpthlp_clubb_gw_mc )
+    
+    
     ! Allocate pdf_params only if they aren't allocated already.
     if ( .not. allocated(pdf_params_chnk(lchnk)%mixt_frac) ) then
       call init_pdf_params_api( pverp+1-top_lev, ncol, pdf_params_chnk(lchnk) )
@@ -3335,6 +3412,13 @@ end subroutine clubb_init_cnst
 
     endif
 
+    !+++jtb
+    ! need to initialize macmic coupling to zero
+    if (macmic_it==1) ttend_clubb_mc(:ncol,:) = 0._r8
+    if (macmic_it==1) upwp_clubb_gw_mc(:ncol,:) = 0._r8
+    if (macmic_it==1) vpwp_clubb_gw_mc(:ncol,:) = 0._r8
+    if (macmic_it==1) thlp2_clubb_gw_mc(:ncol,:) = 0._r8
+    if (macmic_it==1) wpthlp_clubb_gw_mc(:ncol,:) = 0._r8
 
     do t=1,nadv    ! do needed number of "sub" timesteps for each CAM step
   
@@ -3607,6 +3691,21 @@ end subroutine clubb_init_cnst
       end do
     end do
 
+    !+++ jtb
+    !  Accumulate vars throug macmic subcycle
+    upwp_clubb_gw_mc(:ncol,:)   = upwp_clubb_gw_mc(:ncol,:)   + upwp(:ncol,:)
+    vpwp_clubb_gw_mc(:ncol,:)   = vpwp_clubb_gw_mc(:ncol,:)   + vpwp(:ncol,:)
+    thlp2_clubb_gw_mc(:ncol,:)  = thlp2_clubb_gw_mc(:ncol,:)  + thlp2(:ncol,:)
+    wpthlp_clubb_gw_mc(:ncol,:) = wpthlp_clubb_gw_mc(:ncol,:) + wpthlp(:ncol,:)
+    !+++ jtb
+    ! And average at last macmic step
+    if (macmic_it == cld_macmic_num_steps) then
+       upwp_clubb_gw(:ncol,:)   = upwp_clubb_gw_mc(:ncol,:)/REAL(cld_macmic_num_steps)
+       vpwp_clubb_gw(:ncol,:)   = vpwp_clubb_gw_mc(:ncol,:)/REAL(cld_macmic_num_steps)
+       thlp2_clubb_gw(:ncol,:)  = thlp2_clubb_gw_mc(:ncol,:)/REAL(cld_macmic_num_steps)
+       wpthlp_clubb_gw(:ncol,:) = wpthlp_clubb_gw_mc(:ncol,:)/REAL(cld_macmic_num_steps)
+    end if
+    
     do k=1, nlev+1
       do i=1, ncol
 
@@ -3812,7 +3911,16 @@ end subroutine clubb_init_cnst
 
    rtm_integral_ltend(:) = rtm_integral_ltend(:)/gravit
    rtm_integral_vtend(:) = rtm_integral_vtend(:)/gravit
-     
+
+    !+++ jtb
+    ! Accumulate TTEND for GW parameterization
+    ttend_clubb_mc(:ncol,:pver) = ttend_clubb_mc(:ncol,:pver) + ptend_loc%s(:ncol,:pver)/cpair
+    ! And average at last macmic step
+    if (macmic_it == cld_macmic_num_steps) then
+       ttend_clubb(:ncol,:)  = ttend_clubb_mc(:ncol,:)/REAL(cld_macmic_num_steps)
+    end if
+
+
     if (clubb_do_adv) then
       if (macmic_it == cld_macmic_num_steps) then
 
