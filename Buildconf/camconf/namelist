@@ -111,19 +111,11 @@ fincl8= 'PRECC:I','PRECL:I',
 
 
 
-fincl9 = 'um:I','upwp:I','up2_tp:I','UPWP_UG_CLUBB:I','UPWP_UG_CT_CLUBB:I','DUDZ_CLUBB:I','UPWP_UG_MEAN_LEV:I','UPWP_UG_MIN_LEV:I','UPWP_UG_MAX_LEV:I','UPWP_UG_MEAN_HGT:I'
-
-clubb_vars_zt='um'
-
-clubb_vars_zm='upwp','up2_tp'
-
-clubb_history=.true.
-
-
-
 
 
 fincl10 = 'Z500:I','PSL:I','U10:I','Z250:I','PRECT:A','PRECC:A','uIVT:I','vIVT:I','U850:I','U200:I','V850:I','V200:I','Q850:I','T850:I','FLUT:I'
+
+
 
 
 
@@ -149,6 +141,8 @@ rad_climate= 'A:Q:H2O', 'N:O2:O2',
 
 
 
+
+
 seasalt_emis_scale             = 0.75D0
 
 
@@ -165,7 +159,7 @@ se_statefreq=576
 
 
 
-ncdata = '/glade/campaign/cgd/amp/aherring/restart/inic/ne120/ERA5_x_ne120np4_L58_rgC2_WO.aero.2000-01-01-00000.nc'
+ncdata = '/glade/campaign/cgd/amp/aherring/restart/inic/ne120/ERA5_x_ne120np4_L93_rgC2_WO.2000-01-01-00000.nc'
 
 bnd_topo =
 
@@ -176,6 +170,14 @@ bnd_topo =
 use_gw_front        = .true.
 
 taubgnd        = 1.5D-6
+
+
+
+clubb_l_predict_upwp_vpwp=.false.
+
+clubb_l_mono_flux_lim_um=.false.
+
+clubb_l_mono_flux_lim_vm=.false.
 
 
 

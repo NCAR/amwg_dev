@@ -32,8 +32,6 @@
          'PBLH', 'PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL', 'Q', 'QFLX', 'RELHUM',
          'SHFLX', 'SOLIN', 'SST', 'SWCF', 'T', 'TAUX', 'TAUY', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT',
          'TS', 'U', 'U10', 'V'
- fincl10		= 'Z500:I', 'PSL:I', 'U10:I', 'Z250:I', 'PRECT:A', 'PRECC:A', 'uIVT:I', 'vIVT:I', 'U850:I', 'U200:I', 'V850:I',
-         'V200:I', 'Q850:I', 'T850:I', 'FLUT:I'
  fincl2		= 'PRECT','PRECC','FLUT','U850','U200','V850','V200','OMEGA500','TS','SST','PSL'
  fincl3		= 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn', 'BURDENBC', 'BURDENDUST', 'BURDENPOM',
          'BURDENSEASALT', 'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ',
@@ -56,15 +54,15 @@
  fincl5		= 'SHFLX', 'LHFLX', 'PBLH', 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST',
          'PSL'
  fincl6		= 'PS:I','U:I','V:I','T:I','OMEGA:I','PMID:I','PSDRY:I'
- fincl7		= 'PRECC:A','PRECL:A'
+ fincl7		= 'PRECC','PRECL'
  fincl8		= 'PRECC:I', 'PRECL:I', 'U850:I', 'V850:I', 'T500:I', 'T200:I', 'Z850:I', 'Z500:I', 'Z300:I', 'PSL:I',
          'PS:I', 'U10:I', 'UBOT:I', 'VBOT:I', 'FLUT:I', 'TMQ:I', 'OMEGA500:I', 'uIVT:I', 'vIVT:I'
  interpolate_nlat		= 768,768,192,192,192,192,192,192,192,192
  interpolate_nlon		= 1152,1152,288,288,288,288,288,288,288,288
  interpolate_output		= .true.,.true.,.false.,.false.,.false.,.false.,.false.,.false.,.false.,.false.
- mfilt		= 0,30,0,100,30,4,80,40,4,48
+ mfilt		= 0,30,0,100,30,4,80,40,4,0
  ndens		= 2,2,2,2,2,2,2,2,2,2
- nhtfrq		= 0,-24,0,-24,-24,-6,-3,-3,-6,-1
+ nhtfrq		= 0,-24,0,-24,-24,-6,-3,-3,-6,0
 /
 &cam_initfiles_nl
  bnd_topo		= '/glade/campaign/cgd/amp/aherring/restart/TopoCESM2/cube_to_target/output/ne120pg3_gmted2010_modis_bedmachine_nc3000_Laplace0025_noleak_20240913.nc'

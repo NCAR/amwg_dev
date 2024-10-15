@@ -89,8 +89,7 @@ ncdata = '/glade/campaign/cgd/amp/aherring/restart/inic/ne120/ERA5_x_ne120np4_L9
 bnd_topo =
 '/glade/campaign/cgd/amp/aherring/restart/TopoCESM2/cube_to_target/output/ne120pg3_gmted2010_modis_bedmachine_nc3000_Laplace0025_noleak_20240913.nc'
 
-use_gw_front        = .true.
-taubgnd        = 1.5D-6
+use_gw_front        = .false.
 
 clubb_l_predict_upwp_vpwp=.false.
 clubb_l_mono_flux_lim_um=.false.
