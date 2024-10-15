@@ -1,4 +1,21 @@
-use_init_interp = .true.
+hist_fincl1 = 'QICE_FORC','TSRF_FORC','TOPO_FORC'                      
+hist_fincl2 = 'PCT_LANDUNIT','ATM_TOPO','TSA','LWup','LWdown',         
+             'ALBD','ALBI','ALBGRD','ALBGRI','SWdown','SWup',          
+             'RAIN_ICE','SNOW_ICE','QSNOMELT_ICE','QICE_MELT',         
+             'QSNOFRZ_ICE','QRUNOFF_ICE','QICE','QSOIL_ICE',           
+             'SNOW_DEPTH','SNOWDP','H2OSNO','FSNO','QICE_FRZ', 
+             'QSNOMELT','SOILWATER_10CM','TWS','QFLX_EVAP_TOT',
+             'H2OSOI','TSOI','TSOI_10CM','TSOI_ICE','H2OSNO_ICE' 
+             'QRUNOFF','SNOW','RAIN','FSH','TREFMNAV','TREFMXAV'                             
+hist_avgflag_pertape(1) = 'A'                                           
+hist_avgflag_pertape(2) = 'A'                                           
+hist_nhtfrq = 0,-24                                                     
+hist_mfilt  = 1,365                                                     
+hist_ndens  = 2,2  
 
-finidat = '/glade/campaign/cesm/cesmdata/cseg/inputdata/cesm2_init/b.e30_beta02.BLTHIST.ne30_t232.104/1900-01-01/b.e30_beta02.BLTHIST.ne30_t232.104.clm2.r.1900-01-01-00000.nc'
+flanduse_timeseries = '/glade/derecho/scratch/aherring/restart/ctsm5.2.028/tools/mksurfdata_esmf/landuse.timeseries_ne120pg3_SSP3-7.0_1979-2026_78pfts_c240925.nc' 
+fsurdat = '/glade/derecho/scratch/aherring/restart/ctsm5.2.028/tools/mksurfdata_esmf/surfdata_ne120pg3_SSP3-7.0_1979_78pfts_c240925.nc'
+finidat = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/initdata_map/clmi.F2000.2000-01-01.ne120pg3_mt13_simyr2000_c200728.nc'
+use_init_interp = .true.
+use_excess_ice = .false.
 

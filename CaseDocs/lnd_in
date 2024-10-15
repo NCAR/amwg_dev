@@ -8,20 +8,32 @@
  crop_fsat_equals_zero = .false.
  do_sno_oc = .false.
  downscale_hillslope_meteorology = .true.
- dust_emis_method = 'Zender_2003'
- finidat = '/glade/campaign/cesm/cesmdata/cseg/inputdata/cesm2_init/b.e30_beta02.BLTHIST.ne30_t232.104/1900-01-01/b.e30_beta02.BLTHIST.ne30_t232.104.clm2.r.1900-01-01-00000.nc'
+ finidat = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/initdata_map/clmi.F2000.2000-01-01.ne120pg3_mt13_simyr2000_c200728.nc'
+ flush_gdd20 = .false.
  for_testing_no_crop_seed_replenishment = .false.
  for_testing_run_ncdiopio_tests = .false.
  for_testing_use_repr_structure_pool = .false.
  for_testing_use_second_grain_pool = .false.
  fsnowaging = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc'
  fsnowoptics = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_c013122.nc'
- fsurdat = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/surfdata_esmf/ctsm5.2.0/surfdata_ne30np4.pg3_hist_1850_78pfts_c240216.nc'
+ fsurdat = '/glade/derecho/scratch/aherring/restart/ctsm5.2.028/tools/mksurfdata_esmf/surfdata_ne120pg3_SSP3-7.0_1979_78pfts_c240925.nc'
  glc_do_dynglacier = .false.
  glc_snow_persistence_max_days = 0
  h2osno_max = 10000.0
- hillslope_fsat_equals_zero = .true.
+ hillslope_fsat_equals_zero = .false.
+ hist_avgflag_pertape(1) = 'A'
+ hist_avgflag_pertape(2) = 'A'
  hist_fields_list_file = .false.
+ hist_fincl1 = 'QICE_FORC','TSRF_FORC','TOPO_FORC'
+ hist_fincl2 = 'PCT_LANDUNIT', 'ATM_TOPO', 'TSA', 'LWup', 'LWdown', 'ALBD', 'ALBI', 'ALBGRD', 'ALBGRI',
+         'SWdown', 'SWup', 'RAIN_ICE', 'SNOW_ICE', 'QSNOMELT_ICE', 'QICE_MELT', 'QSNOFRZ_ICE', 'QRUNOFF_ICE', 'QICE',
+         'QSOIL_ICE', 'SNOW_DEPTH', 'SNOWDP', 'H2OSNO', 'FSNO', 'QICE_FRZ', 'QSNOMELT', 'SOILWATER_10CM', 'TWS',
+         'QFLX_EVAP_TOT', 'H2OSOI', 'TSOI', 'TSOI_10CM', 'TSOI_ICE', 'H2OSNO_ICE', 'QRUNOFF', 'SNOW', 'RAIN',
+         'FSH', 'TREFMNAV', 'TREFMXAV'
+ hist_mfilt = 1,365
+ hist_ndens = 2,2
+ hist_nhtfrq = 0,-24
+ hist_wrt_matrixcn_diag = .false.
  irrigate = .false.
  maxpatch_glc = 10
  n_dom_landunits = 0
@@ -29,7 +41,7 @@
  nlevsno = 12
  nsegspc = 35
  o3_veg_stress_method = 'unset'
- paramfile = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/paramdata/ctsm60_params.c240208.nc'
+ paramfile = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/paramdata/ctsm60_params.c240814.nc'
  run_zero_weight_urban = .false.
  snicar_dust_optics = 'sahara'
  snicar_numrad_snw = 5
@@ -50,7 +62,6 @@
  use_bedrock = .true.
  use_cn = .false.
  use_crop = .false.
- use_dynroot = .false.
  use_excess_ice = .false.
  use_fates = .false.
  use_fertilizer = .false.
@@ -63,8 +74,10 @@
  use_lai_streams = .false.
  use_lch4 = .false.
  use_luna = .true.
+ use_matrixcn = .false.
  use_nitrif_denitrif = .false.
  use_snicar_frc = .false.
+ use_soil_matrixcn = .false.
  use_soil_moisture_streams = .false.
  use_subgrid_fluxes = .true.
  use_z0m_snowmelt = .true.
@@ -76,7 +89,7 @@
 /
 &urbantv_streams
  model_year_align_urbantv = 1850
- stream_fldfilename_urbantv = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/urbandata/CTSM52_tbuildmax_OlesonFeddema_2020_0.9x1.25_simyr1849-2106_c200605.nc'
+ stream_fldfilename_urbantv = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/urbandata/CTSM52_urbantv_Li_2024_0.9x1.25_simyr1849-2106_c20230621.nc'
  stream_meshfile_urbantv = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/urbandata/CLM50_tbuildmax_Oleson_2016_0.9x1_ESMFmesh_cdf5_100621.nc'
  stream_year_first_urbantv = 1850
  stream_year_last_urbantv = 2106
@@ -112,9 +125,20 @@
  use_mxmat = .true.
 /
 &cropcal_streams
- model_year_align_cropcal = 1850
- stream_year_first_cropcal = 1850
- stream_year_last_cropcal = 2100
+ cropcals_rx = .false.
+ cropcals_rx_adapt = .true.
+ model_year_align_cropcal_cultivar_gdds = 2000
+ model_year_align_cropcal_swindows = 2000
+ stream_fldfilename_cultivar_gdds = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/cropdata/calendars/processed/gdds_20230829_161011.tweaked_latlons.nc'
+ stream_fldfilename_gdd20_baseline = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/cropdata/calendars/processed/20230714_cropcals_pr2_1deg.actually2deg.1980-2009.from_GDDB20.interpd_halfdeg.tweaked_latlons.nc'
+ stream_fldfilename_swindow_end = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/cropdata/calendars/processed/swindow_ends_ggcmi_crop_calendar_phase3_v1.01.2000-2000.20231005_145103.tweaked_latlons.nc'
+ stream_fldfilename_swindow_start = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/cropdata/calendars/processed/swindow_starts_ggcmi_crop_calendar_phase3_v1.01.2000-2000.20231005_145103.tweaked_latlons.nc'
+ stream_gdd20_seasons = .false.
+ stream_meshfile_cropcal = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/cropdata/calendars/processed/360x720_120830_ESMFmesh_c20210507_cdf5.tweaked_latlons.nc'
+ stream_year_first_cropcal_cultivar_gdds = 2000
+ stream_year_first_cropcal_swindows = 2000
+ stream_year_last_cropcal_cultivar_gdds = 2000
+ stream_year_last_cropcal_swindows = 2000
 /
 &clm_soilhydrology_inparm
 /
@@ -123,7 +147,7 @@
  do_transient_lakes = .true.
  do_transient_pfts = .true.
  do_transient_urban = .true.
- flanduse_timeseries = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/surfdata_esmf/ctsm5.2.0/landuse.timeseries_ne30np4.pg3_SSP2-4.5_1850-2100_78pfts_c240216.nc'
+ flanduse_timeseries = '/glade/derecho/scratch/aherring/restart/ctsm5.2.028/tools/mksurfdata_esmf/landuse.timeseries_ne120pg3_SSP3-7.0_1979-2026_78pfts_c240925.nc'
  reset_dynbal_baselines = .false.
 /
 &cnvegcarbonstate
@@ -178,6 +202,7 @@
 /
 &clmu_inparm
  building_temp_method = 1
+ urban_explicit_ac = .true.
  urban_hac = 'ON_WASTEHEAT'
  urban_traffic = .false.
 /
@@ -266,14 +291,20 @@
 /
 &exice_streams
 /
+&clm_temperature_inparm
+ excess_ice_coldstart_depth = 0.5
+ excess_ice_coldstart_temp = -1.0
+/
 &soilbgc_decomp
  soil_decomp_method = 'None'
 /
 &clm_canopy_inparm
  leaf_mr_vcm = 0.015d00
 /
+&prigentroughness
+ use_prigent_roughness = .false.
+/
 &zendersoilerod
- zender_soil_erod_source = 'atm'
 /
 &scf_swenson_lawrence_2012_inparm
  int_snow_max = 2000.
@@ -282,7 +313,7 @@
 !#--------------------------------------------------------------------------------------------------------------------------
 !# lnd_in:: Comment:
 !# This namelist was created using the following command-line:
-!#     /glade/work/hannay/cesm_tags/cesm3_0_beta02/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cesm3_0_beta02/cime -infile /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta02.FLTHIST.ne30.103/Buildconf/clmconf/namelist -csmdata /glade/campaign/cesm/cesmdata/inputdata -inputdata /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta02.FLTHIST.ne30.103/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=19000101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type default -envxml_dir /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta02.FLTHIST.ne30.103 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta02.FLTHIST.ne30.103/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm6_0_cam7.0 -mask gx1v7
+!#     /glade/work/hannay/cesm_tags/cam6_4_036/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cam6_4_036/cime -infile /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FMTHIST.ne120_L93.001/Buildconf/clmconf/namelist -csmdata /glade/campaign/cesm/cesmdata/inputdata -inputdata /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FMTHIST.ne120_L93.001/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=20000101 /  -no-megan -use_case 20thC_transient -res ne120np4.pg3 -clm_start_type default -envxml_dir /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FMTHIST.ne120_L93.001 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FMTHIST.ne120_L93.001/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm6_0_cam7.0 -mask tx0.1v3
 !# 
-!# For help on options use: /glade/work/hannay/cesm_tags/cesm3_0_beta02/components/clm/bld/CLM build-namelist -help
+!# For help on options use: /glade/work/hannay/cesm_tags/cam6_4_036/components/clm/bld/CLM build-namelist -help
 !#--------------------------------------------------------------------------------------------------------------------------

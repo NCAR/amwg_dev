@@ -195,7 +195,7 @@
 /
 &domain_nml
   add_mpi_barriers = .false.
-  block_size_x = 20
+  block_size_x = 100
   block_size_y = 1
   distribution_type = "roundrobin"
   distribution_wght = "blockall"
@@ -205,7 +205,7 @@
   maskhalo_remap = .true.
   max_blocks = 2
   ns_boundary_type = "open"
-  nx_global = 48600
+  nx_global = 777600
   ny_global = 1
   processor_shape = "square-ice"
 /

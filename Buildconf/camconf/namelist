@@ -1,19 +1,17 @@
 &comp_inparm 
 
- dtime = 1800
+ dtime = 450
+mfilt        =       0,      30,    0,        100,       30,       4,       80,      40,        4,     48
 
+nhtfrq              =       0,     -24,    0,        -24,       -24,      -6,      -3,      -3,       -6,     -1
 
-mfilt    =       0,       5,     20,      40,      12,       120,      1,   1
+ndens               =       2,       2,     2,       2,          2,        2,       2,       2,        2,      2
 
-nhtfrq              =       0,     -24,    -24,      -3,       0,       -2,      0,  -8760
+interpolate_output  =  .true.,  .true., .false., .false.,   .false.,     .false.,  .false., .false., .false.,  .false.
 
-ndens               =       2,       2,      2,       2,       2,       1,      2,   1
+interpolate_nlat    =     768,      768,    192,     192,      192,       192,     192,      192,     192,   192
 
-interpolate_output  =  .true.,  .true., .true., .false., .false., .true.,  .true.
-
-interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
-
-interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
+interpolate_nlon    =     1152,    1152,    288,     288,      288,       288,      288,     288,     288,   288
 
 
 
@@ -21,7 +19,21 @@ empty_htapes = .true.
 
 
 
-fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 
+fincl1 = 'AODDUST', 'AODVIS', 'AODDUSTdn','AODVISdn','BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 
+
+'BURDENSO4', 'BURDENSOA', 'CDNUMC', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLOUD', 'FLDS', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC', 'FLUT', 
+
+'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA', 'ICEFRAC', 'LHFLX', 'LWCF','OMEGA500', 'PBLH','PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL','Q', 
+
+'QFLX', 'RELHUM', 'SHFLX', 'SOLIN', 'SST', 'SWCF', 'T', 'TAUX', 'TAUY', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'U', 'U10', 'V'
+
+
+
+fincl2='PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
+
+
+
+fincl3='ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT', 
 
 'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLOUD', 'CMFMC_DP', 
 
@@ -35,103 +47,109 @@ fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','
 
 'T', 'TAUX', 'TAUY', 'TFIX', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'TTGW', 'U', 'U10', 'UBOT', 'UTGWORO', 'UTGW_TOTAL', 
 
-'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O', 'CO2','CFC11','CFC12', 
+'V', 'VBOT', 'VTGWORO', 'VTGW_TOTAL', 'WPRTP_CLUBB', 'WPTHLP_CLUBB', 'Z3', 'ZMDQ', 'ZMDT', 'N2O', 'CO2','CFC11','CFC12',
 
 'AODVISdn','CCN3', 'CDNUMC', 'H2O', 'NUMICE', 'NUMLIQ','OMEGA500',
 
- 'AQSO4_H2O2','AQSO4_O3', 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3', 'ncl_a1',
+'TROP_P','TROP_T','TROP_Z',
 
-'ncl_a1', 'ncl_a2', 'ncl_a3', 'pom_a1', 'pom_a4', 'so4_a1', 'so4_a2', 'so4_a3', 'soa_a2' ,
+'num_a1','num_a2','num_a3','num_a4',
 
-'soa_a1', 'num_a1', 'num_a2', 'num_a3', 'num_a4',
+'dgnd_a01','dgnd_a02','dgnd_a03','dgnd_a04',
 
-'bc_a1SFWET', 'bc_a4SFWET', 'dst_a1SFWET', 'dst_a2SFWET', 'dst_a3SFWET', 'ncl_a1SFWET',
+'ncl_a1','ncl_a2','ncl_a3',
 
-'ncl_a2SFWET', 'ncl_a3SFWET', 'pom_a1SFWET', 'pom_a4SFWET', 'so4_a1SFWET', 'so4_a2SFWET', 'so4_a3SFWET', 'soa_a1SFWET',
+'bc_a1','bc_a4',
 
-'soa_a2SFWET', 'bc_c1SFWET', 'bc_c4SFWET', 'dst_c1SFWET', 'dst_c2SFWET', 'dst_c3SFWET', 'ncl_c1SFWET', 'ncl_c2SFWET',
+'dst_a1','dst_a3',
 
-'ncl_c3SFWET', 'pom_c1SFWET', 'pom_c4SFWET', 'so4_c1SFWET', 'so4_c2SFWET', 'so4_c3SFWET', 'soa_c1SFWET', 'soa_c2SFWET',
+'pom_a1','pom_a4',
 
-'bc_a1DDF', 'bc_a4DDF', 'dst_a1DDF', 'dst_a2DDF', 'dst_a3DDF', 'ncl_a1DDF', 'ncl_a2DDF', 'ncl_a3DDF',
+'so4_a1','so4_a2','so4_a3',
 
-'pom_a1DDF', 'pom_a4DDF', 'so4_a1DDF', 'so4_a2DDF', 'so4_a3DDF', 'soa_a1DDF', 'soa_a2DDF',
+'soa_a1','soa_a2',
 
-'so4_a1_CLXF', 'so4_a2_CLXF', 'SFbc_a4', 'SFpom_a4', 'SFso4_a1', 'SFso4_a2',
+'CCN3','CCN4',
 
-'so4_a1_sfgaex1', 'so4_a2_sfgaex1', 'so4_a3_sfgaex1', 'soa_a1_sfgaex1', 'soa_a2_sfgaex1',
+'BUTGWSPEC',  'BVTGWSPEC','BVTGWSPEC','TTGWORO','BTTGWSPEC','TAUGWX', 'TAUGWY','TAUBLJX','TAUBLJY', 'UTEND_PHYSTOT', 'UTEND_GWDTOT', 'UTEND_DCONV', 'UTEND_CLUBB', 'UTEND_CORE',
 
-'SFdst_a1','SFdst_a2', 'SFdst_a3', 'SFncl_a1', 'SFncl_a2', 'SFncl_a3',
-
-'num_a2_sfnnuc1', 'SFSO2', 'OCN_FLUX_DMS', 'SAD_SULFC', 'SAD_TROP', 'SAD_AERO',
-
-'NNUCCCO','NNUCCTO','NNUCCDO','NNUDEPO','NHOMO','NNUCCRO',
-
-'NNUCCRIO','NSACWIO','NPRAO','NPSACWSO','NPRAIO','NPRACSO',
-
-'NPRCO','NPRCIO','NCSEDTEN','NISEDTEN','NRSEDTEN','NSSEDTEN',
-
-'NMELTO','NMELTS',
-
-'CCN4',
-
-'QCSEVAP','QISEVAP','QVRES','CMEIOUT','VTRMC','VTRMI',
-
-'QCSEDTEN','QISEDTEN','PRAO','PRCO','MNUCCCO','MNUCCTO',
-
-'MNUCCDO','MNUCCDOhet','MSACWIO','PSACWSO','BERGSO','BERGO',
-
-'MELTO','MELTSTOT','MNUDEPO','HOMOO','QCRESO','PRCIO',
-
-'PRAIO','QIRESO','MNUCCRO','MNUCCRIO','PRACSO','VAPDEPSO',
-
-'MELTSDT','FRZRDT'
+'VTEND_PHYSTOT', 'VTEND_GWDTOT', 'VTEND_DCONV', 'VTEND_CLUBB', 'VTEND_CORE'
 
 
 
-fincl3 = 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
-
-
-
-fincl4 =  'PRECC','PRECL'
-
-
-
-fincl5 = 'Uzm','Vzm','Wzm','THzm', 'VTHzm','WTHzm','UVzm','UWzm'
+fincl4 = 'Uzm','Vzm','Wzm','THzm', 'VTHzm','WTHzm','UVzm','UWzm'    
 
 phys_grid_ctem_nfreq=-6
 
 phys_grid_ctem_zm_nbas=120
 
-phys_grid_ctem_za_nlat=90
+phys_grid_ctem_za_nlat=180
 
 
 
- rad_climate= 'A:Q:H2O', 'N:O2:O2',
+fincl5 = 'SHFLX', 'LHFLX', 'PBLH',      
 
-         'A:CO2:CO2', 'N:ozone:O3',
-
-         'A:N2O:N2O', 'A:CH4:CH4',
-
-         'N:CFC11STAR:CFC11', 'A:CFC12:CFC12',
-
-         'M:mam4_mode1:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode1_rrtmg_aeronetdust_sig1.6_dgnh.48_c140304.nc',
-
-     'M:mam4_mode2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode2_rrtmg_aitkendust_c141106.nc',
-
-         'M:mam4_mode3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode3_rrtmg_aeronetdust_c141106.nc',
-
-     'M:mam4_mode4:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode4_rrtmg_c130628.nc',
-
-         'N:VOLC_MMR1:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode1_c210211.nc',
-
-     'N:VOLC_MMR2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode2_c210211.nc',
-
-         'N:VOLC_MMR3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.2_mode3_c210211.nc'
+'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
 
 
 
- seasalt_emis_scale             = 0.75D0
+fincl6 = 'PS:I','U:I','V:I','T:I','OMEGA:I', 'PMID:I', 'PSDRY:I'
+
+
+
+fincl7= 'PRECC:A', 'PRECL:A'
+
+
+
+fincl8= 'PRECC:I','PRECL:I',
+
+'U850:I','V850:I','T500:I','T200:I','Z850:I','Z500:I','Z300:I','PSL:I','PS:I','U10:I','UBOT:I','VBOT:I',
+
+'FLUT:I','TMQ:I','OMEGA500:I','uIVT:I', 'vIVT:I' 
+
+
+
+fincl9 = 'um:I','upwp:I','up2_tp:I','UPWP_UG_CLUBB:I','UPWP_UG_CT_CLUBB:I','DUDZ_CLUBB:I','UPWP_UG_MEAN_LEV:I','UPWP_UG_MIN_LEV:I','UPWP_UG_MAX_LEV:I','UPWP_UG_MEAN_HGT:I'
+
+clubb_vars_zt='um'
+
+clubb_vars_zm='upwp','up2_tp'
+
+clubb_history=.true.
+
+
+
+fincl10 = 'Z500:I','PSL:I','U10:I','Z250:I','PRECT:A','PRECC:A','uIVT:I','vIVT:I','U850:I','U200:I','V850:I','V200:I','Q850:I','T850:I','FLUT:I'
+
+
+
+rad_climate= 'A:Q:H2O', 'N:O2:O2',
+
+'A:CO2:CO2', 'N:ozone:O3',
+
+'A:N2O:N2O', 'A:CH4:CH4', 'N:CFC11STAR:CFC11', 'A:CFC12:CFC12',
+
+'M:mam4_mode1:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode1_rrtmg_aeronetdust_sig1.6_dgnh.48_c140304.nc',
+
+'M:mam4_mode2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode2_rrtmg_aitkendust_c141106.nc',
+
+'M:mam4_mode3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode3_rrtmg_aeronetdust_c141106.nc',
+
+'M:mam4_mode4:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/mam4_mode4_rrtmg_c130628.nc',
+
+'N:VOLC_MMR1:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode1_c210211.nc',
+
+'N:VOLC_MMR2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode2_c210211.nc',
+
+'N:VOLC_MMR3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.2_mode3_c210211.nc'
+
+
+
+seasalt_emis_scale             = 0.75D0
+
+
+
+clubb_c8=  4.95 
 
 
 
@@ -139,7 +157,21 @@ ubc_file_path=  "/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ubc/b.e21.
 
 
 
-ncdata= '/glade/campaign/cesm/cesmdata/cseg/inputdata/cesm2_init/b.e30_beta02.BLTHIST.ne30_t232.104/1900-01-01/b.e30_beta02.BLTHIST.ne30_t232.104.cam.i.1900-01-01-00000.nc'
+se_statefreq=576  
+
+
+
+ncdata = '/glade/campaign/cgd/amp/aherring/restart/inic/ne120/ERA5_x_ne120np4_L93_rgC2_WO.2000-01-01-00000.nc'
+
+bnd_topo =
+
+'/glade/campaign/cgd/amp/aherring/restart/TopoCESM2/cube_to_target/output/ne120pg3_gmted2010_modis_bedmachine_nc3000_Laplace0025_noleak_20240913.nc'
+
+
+
+use_gw_front        = .true.
+
+taubgnd        = 1.5D-6
 
 
 

@@ -23,6 +23,7 @@
     The following values should not be set by the user since they'll be
     overwritten by scripts: TOTALPES, NTASKS_PER_INST
     </header>
+  <comment>none</comment>
   <group id="mach_pes">
     <entry id="ESMF_AWARE_THREADING" value="FALSE">
       <type>logical</type>
@@ -41,29 +42,29 @@
     <entry id="NTASKS">
       <type>integer</type>
       <values>
-        <value compclass="ATM">2160</value>
-        <value compclass="CPL">2160</value>
-        <value compclass="OCN">2160</value>
-        <value compclass="WAV">2160</value>
-        <value compclass="GLC">2160</value>
-        <value compclass="ICE">2160</value>
-        <value compclass="ROF">2160</value>
-        <value compclass="LND">2160</value>
-        <value compclass="ESP">2160</value>
+        <value compclass="ATM">7680</value>
+        <value compclass="CPL">7680</value>
+        <value compclass="OCN">7680</value>
+        <value compclass="WAV">7680</value>
+        <value compclass="GLC">7680</value>
+        <value compclass="ICE">7680</value>
+        <value compclass="ROF">7680</value>
+        <value compclass="LND">7680</value>
+        <value compclass="ESP">7680</value>
       </values>
       <desc>number of tasks for each component</desc>
     </entry>
     <entry id="NTASKS_PER_INST">
       <type>integer</type>
       <values>
-        <value compclass="ATM">2160</value>
-        <value compclass="OCN">2160</value>
-        <value compclass="WAV">2160</value>
-        <value compclass="GLC">2160</value>
-        <value compclass="ICE">2160</value>
-        <value compclass="ROF">2160</value>
-        <value compclass="LND">2160</value>
-        <value compclass="ESP">2160</value>
+        <value compclass="ATM">7680</value>
+        <value compclass="OCN">7680</value>
+        <value compclass="WAV">7680</value>
+        <value compclass="GLC">7680</value>
+        <value compclass="ICE">7680</value>
+        <value compclass="ROF">7680</value>
+        <value compclass="LND">7680</value>
+        <value compclass="ESP">7680</value>
       </values>
       <desc>Number of tasks per instance for each component. DO NOT EDIT: Set automatically by case.setup based on NTASKS, NINST and MULTI_DRIVER</desc>
     </entry>
@@ -130,11 +131,11 @@
     </entry>
   </group>
   <group id="mach_pes_last">
-    <entry id="COST_PES" value="2176">
+    <entry id="COST_PES" value="7680">
       <type>integer</type>
       <desc>pes or cores used relative to MAX_MPITASKS_PER_NODE for accounting (0 means TOTALPES is valid)</desc>
     </entry>
-    <entry id="TOTALPES" value="2160">
+    <entry id="TOTALPES" value="7680">
       <type>integer</type>
       <desc>total number of MPI tasks (setup automatically - DO NOT EDIT)</desc>
     </entry>

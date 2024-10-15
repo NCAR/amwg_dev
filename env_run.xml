@@ -46,38 +46,6 @@
     namelist group cpl_flds_inparm.
     </desc>
     </entry>
-    <entry id="DMS_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates DMS fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="BRF_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates Bromoform fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="N2O_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates N2O fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="NH3_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates NH3 fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
     <entry id="NCPL_BASE_PERIOD" value="day">
       <type>char</type>
       <valid_values>hour,day,year,decade</valid_values>
@@ -85,7 +53,7 @@
     This xml variable is only used to set the driver namelist variables,
     atm_cpl_dt, lnd_cpl_dt, ocn_cpl_dt, ice_cpl_dt, glc_cpl_dt, rof_cpl_dt, wav_cpl_dt, and esp_dt.</desc>
     </entry>
-    <entry id="ATM_NCPL" value="48">
+    <entry id="ATM_NCPL" value="192">
       <type>integer</type>
       <desc>Number of atm coupling intervals per NCPL_BASE_PERIOD.
     This is used to set the driver namelist atm_cpl_dt, equal to basedt/ATM_NCPL,
@@ -232,19 +200,19 @@
       a restart file.
     </desc>
     </entry>
-    <entry id="RUN_REFDIR" value="cesm2_init">
+    <entry id="RUN_REFDIR" value="ccsm4_init">
       <type>char</type>
       <desc>
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="b.e30_beta02.BLTHIST.ne30_t232.104">
+    <entry id="RUN_REFCASE" value="case.std">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="1900-01-01">
+    <entry id="RUN_REFDATE" value="0001-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -256,7 +224,7 @@
       Reference time of day (seconds) for hybrid or branch runs (sssss)
     </desc>
     </entry>
-    <entry id="GET_REFCASE" value="TRUE">
+    <entry id="GET_REFCASE" value="FALSE">
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
@@ -264,7 +232,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="1900-01-01">
+    <entry id="RUN_STARTDATE" value="2000-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -276,7 +244,7 @@
       Run start time-of-day
     </desc>
     </entry>
-    <entry id="STOP_OPTION" value="nyears">
+    <entry id="STOP_OPTION" value="nmonths">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
@@ -296,14 +264,14 @@
       negative value implies off
     </desc>
     </entry>
-    <entry id="REST_OPTION" value="nyears">
+    <entry id="REST_OPTION" value="nmonths">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
     </entry>
-    <entry id="REST_N" value="1">
+    <entry id="REST_N" value="2">
       <type>integer</type>
       <desc>
       sets model restart writes with REST_OPTION and REST_DATE
@@ -380,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="0">
+    <entry id="RESUBMIT" value="49">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -405,11 +373,11 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:6152652.desched1, case.st_archive:6152653.desched1">
+    <entry id="JOB_IDS" value="case.run:6338030.desched1, case.st_archive:6338031.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
-    <entry id="JOB_PRIORITY" value="regular">
+    <entry id="JOB_PRIORITY" value="premium">
       <type>char</type>
       <valid_values>regular,premium,economy</valid_values>
       <desc>job priority for systems supporting this option</desc>
@@ -563,11 +531,11 @@
       <type>char</type>
       <desc>path of lnd domain file</desc>
     </entry>
-    <entry id="ATM_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="ATM_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>atm mesh file (full pathname)</desc>
     </entry>
-    <entry id="LND_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="LND_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>lnd mesh file (full pathname)</desc>
     </entry>
@@ -579,11 +547,11 @@
       <type>char</type>
       <desc>wav mesh file (full pathname)</desc>
     </entry>
-    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>ice mesh file (full pahtname)</desc>
     </entry>
-    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>ocn mesh file (full pathname)</desc>
     </entry>
@@ -591,7 +559,7 @@
       <type>char</type>
       <desc>glc mesh file (full pathname)</desc>
     </entry>
-    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/gx1v7_151008_ESMFmesh.nc">
+    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/tx0.1v3_ESMFmesh_cdf5_c20211011.nc">
       <type>char</type>
       <desc>mask mesh file (full pathname)</desc>
     </entry>
@@ -942,7 +910,7 @@
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
-      Only used for compsets with DATM and [POP or MOM] (currently C, G and J):
+      Only used for compsets with DATM and POP (currently C, G and J):
       If true, compute albedos to work with daily avg SW down
       If false (default), albedos are computed with the assumption that downward
       solar radiation from the atm component has a diurnal cycle and zenith-angle
@@ -968,6 +936,11 @@
       for use when coupling POP to a DATM. Only used for C, G and J compsets.
       Default is off
     </desc>
+    </entry>
+    <entry id="LND_SETS_DUST_EMIS_DRV_FLDS" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>If CTSM will set the dust settings in drv_flds_in (TRUE), or if ATM (i.e. CAM) will - DO NOT EDIT (set by compset name)</desc>
     </entry>
   </group>
   <group id="med_history">
@@ -1032,7 +1005,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
+    <entry id="CAM_NML_USE_CASE" value="hist_cam_mt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1158,8 +1131,8 @@
     </entry>
     <entry id="CLM_ACCELERATED_SPINUP" value="off">
       <type>char</type>
-      <valid_values>on,off</valid_values>
-      <desc>Turn on any settings for accellerating the model spinup.
+      <valid_values>on,sasu,off</valid_values>
+      <desc>Turn on any settings for accellerating the model spinup. SASU is to run the Semi-Analytic Spin-Up with the CN soil matrix method.
     </desc>
     </entry>
     <entry id="CLM_USRDAT_NAME" value="UNSET">
@@ -1170,7 +1143,8 @@
       to create_newcase.  The default value is UNSET.
       For NEON cases, this can be set to either NEON or NEON.PRISM, the latter of which would
       use PRISM precipitation instead of the default NEON precipitation. NEON cases then also
-      use the variable NEONSITE to specify the exact site.</desc>
+      use the variable NEONSITE to specify the exact site. PLUMBER cases use the variable 
+      PLUMBER2SITE to specify the exact site.</desc>
     </entry>
     <entry id="CLM_USRDAT_DIR" value="UNSET">
       <type>char</type>
@@ -1187,7 +1161,7 @@
       cold start (finidat will be set to blanks).
       A value of on forces the model to spin up from a cold-start
       (arbitrary initial conditions). Setting this value in the xml file will take
-      precedence over any settings for finidat in the $CASEROOT/user_nl_ctsm file.</desc>
+      precedence over any settings for finidat in the $CASEROOT/user_nl_clm file.</desc>
     </entry>
     <entry id="NEONSITE">
       <type>char</type>
@@ -1223,6 +1197,23 @@
       <valid_values>v1,v2,v3,latest</valid_values>
       <desc>Version id of Neon data</desc>
     </entry>
+    <entry id="PLUMBER2SITE">
+      <type>char</type>
+      <valid_values>
+      AR-SLu,AT-Neu,AU-ASM,AU-Cow,AU-Cpr,AU-Ctr,AU-Cum,AU-DaP,AU-DaS,AU-Dry,AU-Emr,AU-Gin,AU-GWW,AU-How,AU-Lit,
+      AU-Otw,AU-Rig,AU-Rob,AU-Sam,AU-Stp,AU-TTE,AU-Tum,AU-Whr,AU-Wrr,AU-Ync,BE-Bra,BE-Lon,BE-Vie,BR-Sa3,BW-Ma1,CA-NS1,
+      CA-NS2,CA-NS4,CA-NS5,CA-NS6,CA-NS7,CA-Qcu,CA-Qfo,CA-SF1,CA-SF2,CA-SF3,CH-Cha,CH-Dav,CH-Fru,CH-Oe1,CN-Cha,CN-Cng,
+      CN-Dan,CN-Din,CN-Du2,CN-HaM,CN-Qia,CZ-wet,DE-Bay,DE-Geb,DE-Gri,DE-Hai,DE-Kli,DE-Meh,DE-Obe,DE-Seh,DE-SfN,DE-Tha,
+      DE-Wet,DK-Fou,DK-Lva,DK-Ris,DK-Sor,DK-ZaH,ES-ES1,ES-ES2,ES-LgS,ES-LMa,ES-VDA,FI-Hyy,FI-Kaa,FI-Lom,FI-Sod,FR-Fon,
+      FR-Gri,FR-Hes,FR-LBr,FR-Lq1,FR-Lq2,FR-Pue,GF-Guy,HU-Bug,ID-Pag,IE-Ca1,IE-Dri,IT-Amp,IT-BCi,IT-CA1,IT-CA2,IT-CA3,
+      IT-Col,IT-Cpz,IT-Isp,IT-Lav,IT-LMa,IT-Mal,IT-MBo,IT-Noe,IT-Non,IT-PT1,IT-Ren,IT-Ro1,IT-Ro2,IT-SR2,IT-SRo,JP-SMF,
+      NL-Ca1,NL-Hor,NL-Loo,PL-wet,PT-Esp,PT-Mi1,PT-Mi2,RU-Che,RU-Fyo,RU-Zot,SD-Dem,SE-Deg,UK-Gri,UK-Ham,UK-PL3,US-AR1,
+      US-AR2,US-ARM,US-Aud,US-Bar,US-Bkg,US-Blo,US-Bo1,US-Cop,US-FPe,US-GLE,US-Goo,US-Ha1,US-Ho1,US-KS2,US-Los,US-Me2,
+      US-Me4,US-Me6,US-MMS,US-MOz,US-Myb,US-Ne1,US-Ne2,US-Ne3,US-NR1,US-PFa,US-Prr,US-SP1,US-SP2,US-SP3,US-SRG,US-SRM,
+      US-Syv,US-Ton,US-Tw4,US-Twt,US-UMB,US-Var,US-WCr,US-Whs,US-Wkg,ZA-Kru,ZM-Mon,
+    </valid_values>
+      <desc>Name of site for PLUMBER tower data</desc>
+    </entry>
   </group>
   <group id="build_component_cice">
     <entry id="CICE_MODE" value="prescribed">
@@ -1249,7 +1240,7 @@
   <group id="run_component_docn">
     <entry id="DOCN_MODE" value="prescribed">
       <type>char</type>
-      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,cplhist,multilev</valid_values>
+      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,cplhist,multilev,multilev_dom</valid_values>
       <desc> DOCN mode. The data ocean component (DOCN) always returns SSTs to the
     driver. The atmosphere/ocean fluxes are computed in the
     coupler. Therefore, the data ocean model does not compute fluxes like
