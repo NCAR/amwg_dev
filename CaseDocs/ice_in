@@ -195,7 +195,7 @@
 /
 &domain_nml
   add_mpi_barriers = .false.
-  block_size_x = 100
+  block_size_x = 150
   block_size_y = 1
   distribution_type = "roundrobin"
   distribution_wght = "blockall"

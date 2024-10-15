@@ -42,6 +42,7 @@ fincl3='ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','BU
 'BUTGWSPEC',  'BVTGWSPEC','BVTGWSPEC','TTGWORO','BTTGWSPEC','TAUGWX', 'TAUGWY','TAUBLJX','TAUBLJY', 'UTEND_PHYSTOT', 'UTEND_GWDTOT', 'UTEND_DCONV', 'UTEND_CLUBB', 'UTEND_CORE',
 'VTEND_PHYSTOT', 'VTEND_GWDTOT', 'VTEND_DCONV', 'VTEND_CLUBB', 'VTEND_CORE'
 
+
 !monthly  (h3)
 fincl4 = 'Uzm','Vzm','Wzm','THzm', 'VTHzm','WTHzm','UVzm','UWzm'    
 phys_grid_ctem_nfreq=-6
@@ -72,6 +73,8 @@ clubb_history=.true.
 !1 hourly - instantaneous for ming (h9)
 fincl10 = 'Z500:I','PSL:I','U10:I','Z250:I','PRECT:A','PRECC:A','uIVT:I','vIVT:I','U850:I','U200:I','V850:I','V200:I','Q850:I','T850:I','FLUT:I'
 
+
+
 rad_climate= 'A:Q:H2O', 'N:O2:O2',
 'A:CO2:CO2', 'N:ozone:O3',
 'A:N2O:N2O', 'A:CH4:CH4', 'N:CFC11STAR:CFC11', 'A:CFC12:CFC12',
@@ -83,7 +86,6 @@ rad_climate= 'A:Q:H2O', 'N:O2:O2',
 'N:VOLC_MMR2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode2_c210211.nc',
 'N:VOLC_MMR3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.2_mode3_c210211.nc'
 
-
 seasalt_emis_scale             = 0.75D0
 
 clubb_c8=  4.95 
@@ -92,11 +94,10 @@ ubc_file_path=  "/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ubc/b.e21.
 
 se_statefreq=576  
 
-ncdata = '/glade/campaign/cgd/amp/aherring/restart/inic/ne120/ERA5_x_ne120np4_L93_rgC2_WO.2000-01-01-00000.nc'
+ncdata = '/glade/campaign/cgd/amp/juliob/ERA5/ne120np4/L32_cdf5/ERA5_x_ne120np4_L32_rgC2_WO_xtnd.2000-01-01-00000.nc'
 bnd_topo =
 '/glade/campaign/cgd/amp/aherring/restart/TopoCESM2/cube_to_target/output/ne120pg3_gmted2010_modis_bedmachine_nc3000_Laplace0025_noleak_20240913.nc'
 
 use_gw_front        = .true.
 taubgnd        = 1.5D-6
-
 
