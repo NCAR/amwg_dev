@@ -77,8 +77,6 @@ fincl3='ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','BU
 
 
 
-
-
 fincl4 = 'Uzm','Vzm','Wzm','THzm', 'VTHzm','WTHzm','UVzm','UWzm'    
 
 phys_grid_ctem_nfreq=-6
@@ -125,10 +123,6 @@ fincl10 = 'Z500:I','PSL:I','U10:I','Z250:I','PRECT:A','PRECC:A','uIVT:I','vIVT:I
 
 
 
-
-
-
-
 rad_climate= 'A:Q:H2O', 'N:O2:O2',
 
 'A:CO2:CO2', 'N:ozone:O3',
@@ -151,6 +145,8 @@ rad_climate= 'A:Q:H2O', 'N:O2:O2',
 
 
 
+
+
 seasalt_emis_scale             = 0.75D0
 
 
@@ -167,7 +163,7 @@ se_statefreq=576
 
 
 
-ncdata = '/glade/campaign/cgd/amp/juliob/ERA5/ne120np4/L32_cdf5/ERA5_x_ne120np4_L32_rgC2_WO_xtnd.2000-01-01-00000.nc'
+ncdata = '/glade/campaign/cgd/amp/aherring/restart/inic/ne120/ERA5_x_ne120np4_L93_rgC2_WO.2000-01-01-00000.nc'
 
 bnd_topo =
 
@@ -178,6 +174,8 @@ bnd_topo =
 use_gw_front        = .true.
 
 taubgnd        = 1.5D-6
+
+
 
 
 
