@@ -30,13 +30,13 @@
       <type>char</type>
       <desc>Scripts root utils directory location (setup automatically to $CIMEROOT/scripts/Tools - DO NOT EDIT)</desc>
     </entry>
-    <entry id="MODEL_VERSION" value="cam6_4_036">
+    <entry id="MODEL_VERSION" value="cam6_3_160">
       <type>char</type>
       <desc>Apparent version of the model used for this case</desc>
     </entry>
   </group>
   <group id="case_last">
-    <entry id="GRIDS_SPEC_FILE" value="$SRCROOT/ccs_config/config_grids_nuopc.xml">
+    <entry id="GRIDS_SPEC_FILE" value="$SRCROOT/ccs_config/config_grids.xml">
       <type>char</type>
       <desc>file containing specification of all supported model grids, domains and mapping files (for documentation only - DO NOT EDIT)</desc>
       <schema>$CIMEROOT/CIME/data/config/xml_schemas/config_grids_v2.2.xsd</schema>
@@ -114,7 +114,7 @@
       <schema version="2.0">$CIMEROOT/CIME/data/config/xml_schemas/entry_id.xsd</schema>
       <schema version="3.0">$CIMEROOT/CIME/data/config/xml_schemas/entry_id_version3.xsd</schema>
     </entry>
-    <entry id="CONFIG_CPL_FILE_MODEL_SPECIFIC" value="$SRCROOT/components/cmeps/cime_config/config_component_$MODEL.xml">
+    <entry id="CONFIG_CPL_FILE_MODEL_SPECIFIC">
       <type>char</type>
       <desc>file containing all component specific driver configuration variables (for documentation only - DO NOT EDIT)</desc>
       <schema version="2.0">$CIMEROOT/CIME/data/config/xml_schemas/entry_id.xsd</schema>
@@ -178,7 +178,7 @@
       <type>char</type>
       <desc> path to buildlib script for the given library </desc>
     </entry>
-    <entry id="COMPSET" value="HIST_CAM70%LT_CLM60%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
+    <entry id="COMPSET" value="HIST_CAM%DEV%MT%GHGMAM4_CLM51%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP">
       <type>char</type>
       <desc>Component set long name (for documentation only - DO NOT EDIT)</desc>
     </entry>
@@ -297,7 +297,7 @@
       <desc> main configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001">
+    <entry id="CASEROOT" value="/glade/p/cesmdata/cseg/runs/cesm2_0/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -306,15 +306,15 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>user is not on the requested machine</desc>
     </entry>
-    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_4_036/cime">
+    <entry id="CIMEROOT" value="/glade/work/hannay/cesm_tags/cam6_3_160/cime">
       <type>char</type>
       <desc>full pathname of CIME source root directory</desc>
     </entry>
-    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_4_036">
+    <entry id="SRCROOT" value="/glade/work/hannay/cesm_tags/cam6_3_160">
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001">
+    <entry id="CASE" value="f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001">
       <type>char</type>
       <desc>case name</desc>
     </entry>
@@ -326,7 +326,7 @@
       <type>char</type>
       <desc>Machine name</desc>
     </entry>
-    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_4_036/ccs_config/machines">
+    <entry id="MACHDIR" value="/glade/work/hannay/cesm_tags/cam6_3_160/ccs_config/machines">
       <type>char</type>
       <desc>Machines directory location</desc>
     </entry>
@@ -344,7 +344,7 @@
       <type>char</type>
       <desc>username of user who created case</desc>
     </entry>
-    <entry id="CASE_HASH" value="13339d7a8f2ed5d0160bce75c1d50d5cb95708d81c04fe8badeabdadef74c044">
+    <entry id="CASE_HASH" value="d7e4b2504b96b1c9d32f42f8a4dd38599560fa44f16286d726b9c5d578c67b35">
       <type>char</type>
       <desc>Unique identifier for case</desc>
     </entry>

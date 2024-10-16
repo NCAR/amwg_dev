@@ -27,43 +27,43 @@ DRIVER_attributes::
 ::
 
 PELAYOUT_attributes::
-     atm_ntasks = 5120
+     atm_ntasks = 2160
      atm_nthreads = 1
      atm_pestride = 1
      atm_rootpe = 0
-     cpl_ntasks = 5120
+     cpl_ntasks = 2160
      cpl_nthreads = 1
      cpl_pestride = 1
      cpl_rootpe = 0
-     esp_ntasks = 5120
+     esp_ntasks = 2160
      esp_nthreads = 1
      esp_pestride = 1
      esp_rootpe = 0
-     glc_ntasks = 5120
+     glc_ntasks = 2160
      glc_nthreads = 1
      glc_pestride = 1
      glc_rootpe = 0
-     ice_ntasks = 5120
+     ice_ntasks = 2160
      ice_nthreads = 1
      ice_pestride = 1
      ice_rootpe = 0
-     lnd_ntasks = 5120
+     lnd_ntasks = 2160
      lnd_nthreads = 1
      lnd_pestride = 1
      lnd_rootpe = 0
      ninst = 1
-     ocn_ntasks = 5120
+     ocn_ntasks = 2160
      ocn_nthreads = 1
      ocn_pestride = 1
      ocn_rootpe = 0
      pio_asyncio_ntasks = 0
      pio_asyncio_rootpe = 1
      pio_asyncio_stride = 0
-     rof_ntasks = 5120
+     rof_ntasks = 2160
      rof_nthreads = 1
      rof_pestride = 1
      rof_rootpe = 0
-     wav_ntasks = 5120
+     wav_ntasks = 2160
      wav_nthreads = 1
      wav_pestride = 1
      wav_rootpe = 0
@@ -88,7 +88,7 @@ ALLCOMP_attributes::
      WAV_model = swav
      brnch_retain_casename = .false.
      case_desc = UNSET
-     case_name = f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001
+     case_name = f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001
      cism_evolve = .false.
      coldair_outbreak_mod = .true.
      data_assimilation_atm = .false.
@@ -110,20 +110,20 @@ ALLCOMP_attributes::
      flux_max_iteration = 5
      glc_nec = 10
      histaux_l2x1yrg = .false.
-     histaux_wav2med_file1_enabled = .false.
      history_n = -999
      history_option = never
      hostname = derecho
      ice_ncat = 1
      mediator_present = true
-     mesh_atm = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc
+     mesh_atm = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
      mesh_glc = UNSET
-     mesh_ice = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc
-     mesh_lnd = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc
-     mesh_mask = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/tx0.1v3_ESMFmesh_cdf5_c20211011.nc
-     mesh_ocn = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc
+     mesh_ice = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
+     mesh_lnd = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
+     mesh_mask = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/gx1v7_151008_ESMFmesh.nc
+     mesh_ocn = /glade/campaign/cesm/cesmdata/inputdata/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc
      model_version = unknown
      ocn2glc_coupling = .false.
+     ocn2glc_levels = 1:10:19:26:30:33:35
      orb_eccen = 1.e36
      orb_iyear = 1850
      orb_iyear_align = 1850
@@ -148,7 +148,7 @@ MED_attributes::
      atm2lnd_map = idmap
      atm2ocn_map = idmap
      atm2wav_map = unset
-     atm_nx = 777600
+     atm_nx = 48600
      atm_ny = 1
      budget_ann = 1
      budget_daily = 0
@@ -161,6 +161,9 @@ MED_attributes::
      coupling_mode = cesm
      do_budgets = .false.
      flux_albav = .false.
+     glc2ice_rmapname = idmap
+     glc2ocn_ice_rmapname = idmap
+     glc2ocn_liq_rmapname = idmap
      glc_renormalize_smb = on_if_glc_coupled_fluxes
      gust_fac = 0.0D0
      histaux_atm2med_file1_auxname = atm.1h.inst
@@ -219,12 +222,6 @@ MED_attributes::
      histaux_rof2med_file1_history_n = 3
      histaux_rof2med_file1_history_option = nhours
      histaux_rof2med_file1_ntperfile = 2
-     histaux_wav2med_file1_auxname = wav.24h.avg
-     histaux_wav2med_file1_doavg = .false.
-     histaux_wav2med_file1_flds = Sw_hs_avg:Sw_Tm1_avg:Sw_thm_avg:Sw_u_avg:Sw_v_avg:Sw_ustokes_avg:Sw_vstokes_avg:Sw_tusx_avg:Sw_tusy_avg:Sw_thp0_avg:Sw_fp0_avg:Sw_phs0_avg:Sw_phs1_avg:Sw_pdir0_avg:Sw_pdir1_avg:Sw_pTm10_avg:Sw_pTm11_avg
-     histaux_wav2med_file1_history_n = 1
-     histaux_wav2med_file1_history_option = ndays
-     histaux_wav2med_file1_ntperfile = 30
      history_n_atm_avg = -999
      history_n_atm_inst = -999
      history_n_glc_avg = -999
@@ -256,53 +253,55 @@ MED_attributes::
      history_option_wav_avg = never
      history_option_wav_inst = never
      ice2atm_map = idmap
-     ice_nx = 777600
+     ice2wav_smapname = unset
+     ice_nx = 48600
      ice_ny = 1
      info_debug = 1
      lnd2atm_map = idmap
      lnd2rof_map = unset
-     lnd_nx = 777600
+     lnd_nx = 48600
      lnd_ny = 1
      mapuv_with_cart3d = .false.
      ocn2atm_map = idmap
-     ocn_nx = 777600
+     ocn2wav_smapname = unset
+     ocn_nx = 48600
      ocn_ny = 1
      ocn_surface_flux_scheme = 0
-     remove_negative_runoff_glc = .false.
-     remove_negative_runoff_lnd = .true.
      rof2lnd_map = unset
+     rof2ocn_fmapname = unset
      rof2ocn_ice_rmapname = unset
      rof2ocn_liq_rmapname = unset
      rof_nx = 720
      rof_ny = 360
+     wav2ocn_smapname = unset
      wav_nx = 0
      wav_ny = 0
 ::
 
 CLOCK_attributes::
-     atm_cpl_dt = 450
+     atm_cpl_dt = 1800
      calendar = NO_LEAP
      end_restart = .false.
      glc_avg_period = yearly
-     glc_cpl_dt = 450
+     glc_cpl_dt = 1800
      history_ymd = -999
-     ice_cpl_dt = 450
-     lnd_cpl_dt = 450
-     ocn_cpl_dt = 450
-     restart_n = 2
-     restart_option = nmonths
+     ice_cpl_dt = 1800
+     lnd_cpl_dt = 1800
+     ocn_cpl_dt = 1800
+     restart_n = 1
+     restart_option = nyears
      restart_ymd = -999
      rof_cpl_dt = 10800
      start_tod = 0
-     start_ymd = 20000101
+     start_ymd = 19950101
      stop_n = 2
-     stop_option = nmonths
+     stop_option = nyears
      stop_tod = 0
      stop_ymd = -999
      tprof_n = -999
      tprof_option = never
      tprof_ymd = -999
-     wav_cpl_dt = 450
+     wav_cpl_dt = 1800
 ::
 
 ATM_attributes::
@@ -339,8 +338,8 @@ WAV_attributes::
 ::
 
 MED_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = med.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = med.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -351,8 +350,8 @@ MED_modelio::
 ::
 
 ATM_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = atm.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = atm.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -363,8 +362,8 @@ ATM_modelio::
 ::
 
 LND_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = lnd.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = lnd.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -375,8 +374,8 @@ LND_modelio::
 ::
 
 ICE_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = ice.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = ice.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -387,8 +386,8 @@ ICE_modelio::
 ::
 
 OCN_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = ocn.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = ocn.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -399,8 +398,8 @@ OCN_modelio::
 ::
 
 ROF_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = rof.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = rof.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -411,8 +410,8 @@ ROF_modelio::
 ::
 
 GLC_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = glc.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = glc.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -423,8 +422,8 @@ GLC_modelio::
 ::
 
 WAV_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = wav.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = wav.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -435,8 +434,8 @@ WAV_modelio::
 ::
 
 ESP_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = esp.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = esp.log.4921547.desched1.240621-230410
      pio_async_interface = .false.
      pio_netcdf_format = 64bit_offset
      pio_numiotasks = -99
@@ -447,7 +446,7 @@ ESP_modelio::
 ::
 
 DRV_modelio::
-     diro = /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001/run
-     logfile = drv.log.6337297.desched1.241015-114644
+     diro = /glade/derecho/scratch/hannay/f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001/run
+     logfile = drv.log.4921547.desched1.240621-230410
 ::
 

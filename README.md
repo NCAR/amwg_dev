@@ -1,2 +1,2 @@
-# case: f.e30_cam6_4_036.FLTHIST.ne120_L32.SST4K.001
-https://github.com/NCAR/amwg_dev/issues/595
+# case: f.cam6_3_160.FMTHIST_ne30.unstable_Ri_mixing.001
+https://github.com/NCAR/amwg_dev/issues/541
