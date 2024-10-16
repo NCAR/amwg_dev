@@ -46,6 +46,38 @@
     namelist group cpl_flds_inparm.
     </desc>
     </entry>
+    <entry id="DMS_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates DMS fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="BRF_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates Bromoform fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="N2O_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates N2O fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="NH3_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates NH3 fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
     <entry id="NCPL_BASE_PERIOD" value="day">
       <type>char</type>
       <valid_values>hour,day,year,decade</valid_values>
@@ -144,7 +176,7 @@
     </entry>
   </group>
   <group id="run_begin_stop_restart">
-    <entry id="RUN_TYPE" value="hybrid">
+    <entry id="RUN_TYPE" value="startup">
       <type>char</type>
       <valid_values>startup,hybrid,branch</valid_values>
       <desc>
@@ -206,13 +238,13 @@
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="f.cam6_3_110.FMTHIST_v0c.ne30.tuningF.001">
+    <entry id="RUN_REFCASE" value="b.e30_beta02.BLTHIST.ne30_t232.104">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="1996-01-01">
+    <entry id="RUN_REFDATE" value="1900-01-01">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -232,7 +264,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="1995-01-01">
+    <entry id="RUN_STARTDATE" value="1900-01-01">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -373,7 +405,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:4921547.desched1, case.st_archive:4921548.desched1">
+    <entry id="JOB_IDS" value="case.run:6161488.desched1, case.st_archive:6161489.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -571,10 +603,6 @@
       <type>char</type>
       <desc>rof2lnd flux mapping file</desc>
     </entry>
-    <entry id="ROF2OCN_FMAPNAME" value="unset">
-      <type>char</type>
-      <desc>rof2ocn flux mapping file</desc>
-    </entry>
     <entry id="ROF2OCN_LIQ_RMAPNAME" value="unset">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
@@ -582,30 +610,6 @@
     <entry id="ROF2OCN_ICE_RMAPNAME" value="unset">
       <type>char</type>
       <desc>rof2ocn runoff mapping file</desc>
-    </entry>
-    <entry id="GLC2ICE_RMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>glc2ice runoff mapping file</desc>
-    </entry>
-    <entry id="GLC2OCN_LIQ_RMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>glc2ocn runoff mapping file for liquid runoff</desc>
-    </entry>
-    <entry id="GLC2OCN_ICE_RMAPNAME" value="idmap">
-      <type>char</type>
-      <desc>glc2ocn runoff mapping file for ice runoff</desc>
-    </entry>
-    <entry id="OCN2WAV_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>ocn2wav state mapping file</desc>
-    </entry>
-    <entry id="ICE2WAV_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>ice2wav state mapping file</desc>
-    </entry>
-    <entry id="WAV2OCN_SMAPNAME" value="unset">
-      <type>char</type>
-      <desc>wav2ocn state mapping file</desc>
     </entry>
     <entry id="EPS_FRAC" value="1.0e-02">
       <type>char</type>
@@ -637,7 +641,7 @@
     </entry>
   </group>
   <group id="run_din">
-    <entry id="NODENAME_REGEX" value="de.*.hpc.ucar.edu">
+    <entry id="NODENAME_REGEX" value="UNSET">
       <type>char</type>
       <desc>
       A regular expression to match machine node names to ACME machine.
@@ -938,7 +942,7 @@
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
-      Only used for compsets with DATM and POP (currently C, G and J):
+      Only used for compsets with DATM and [POP or MOM] (currently C, G and J):
       If true, compute albedos to work with daily avg SW down
       If false (default), albedos are computed with the assumption that downward
       solar radiation from the atm component has a diurnal cycle and zenith-angle
@@ -1028,7 +1032,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="hist_cam_mt">
+    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1074,15 +1078,29 @@
     </entry>
   </group>
   <group id="run_component_ctsm">
-    <entry id="LND_TUNING_MODE" value="clm5_1_GSWP3v1">
+    <entry id="LND_TUNING_MODE" value="clm6_0_cam7.0">
       <type>char</type>
       <desc>Tuning parameters and initial conditions should be optimized for what CLM model version and what meteorlogical forcing combination?
+          Options for all combinations of CLM physics and atm forcing are given. The buildnml and namelist_defaults will narrow it down to the ones
+          that have been tuned. The buildnml will also warn you if a tuning combination is based on another set.
+          Atm forcing options:
+               CRUv7
+               GSWP3
+               CAM4.0
+               CAM5.0
+               CAM6.0
+               CAM7.0
+               QIAN   (not tuned)
+               1PT    (not tuned)
+               NLDAS2 (not tuned)
+               ERA5   (not tuned)
+          Other atm forcing options are invalid to run CLM and will result in an error.
     </desc>
-      <valid_values>clm5_0_cam6.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_cam6.0,clm5_1_GSWP3v1</valid_values>
+      <valid_values>clm5_0_cam6.0,clm5_0_cam7.0,clm5_0_cam5.0,clm5_0_cam4.0,clm5_0_GSWP3v1,clm5_0_CRUv7,clm5_0_QIAN,clm5_0_1PT,clm5_0_NLDAS2,clm5_0_ERA5,clm4_5_CRUv7,clm4_5_GSWP3v1,clm4_5_QIAN,clm4_5_cam6.0,clm4_5_cam7.0,clm4_5_cam5.0,clm4_5_cam4.0,clm4_5_1PT,clm4_5_NLDAS2,clm4_5_ERA5,clm5_1_CRUv7,clm5_1_GSWP3v1,clm5_1_cam6.0,clm5_1_QIAN,clm5_1_1PT,clm5_1_NLDAS2,clm5_1_ERA5,clm6_0_CRUv7,clm6_0_GSWP3v1,clm6_0_cam6.0,clm6_0_cam7.0,clm6_0_cam5.0,clm6_0_cam4.0,clm6_0_QIAN,clm6_0_1PT,clm6_0_NLDAS2,clm6_0_ERA5</valid_values>
     </entry>
-    <entry id="CLM_PHYSICS_VERSION" value="clm5_1">
+    <entry id="CLM_PHYSICS_VERSION" value="clm6_0">
       <type>char</type>
-      <valid_values>clm4_5,clm5_0,clm5_1</valid_values>
+      <valid_values>clm4_5,clm5_0,clm5_1,clm6_0</valid_values>
       <desc>Overall physics version to use.
     This sets the default values for many different namelist options.
     This is typically set by the compset.</desc>
@@ -1231,7 +1249,7 @@
   <group id="run_component_docn">
     <entry id="DOCN_MODE" value="prescribed">
       <type>char</type>
-      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,cplhist</valid_values>
+      <valid_values>prescribed,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,som,som_aquap,sst_aquap_constant,interannual,cplhist,multilev</valid_values>
       <desc> DOCN mode. The data ocean component (DOCN) always returns SSTs to the
     driver. The atmosphere/ocean fluxes are computed in the
     coupler. Therefore, the data ocean model does not compute fluxes like

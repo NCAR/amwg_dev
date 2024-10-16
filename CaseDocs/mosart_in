@@ -1,21 +1,23 @@
 &mosart_inparm
+  budget_frq = -24
   bypass_routing_option = "direct_to_outlet"
   coupling_period = 10800
   decomp_option = "roundrobin"
   delt_mosart = 3600
-  do_rtmflood = .false.
-  finidat_rtm = "f.cam6_3_110.FMTHIST_v0c.ne30.tuningF.001.mosart.r.1996-01-01-00000.nc"
-  frivinp_rtm = "/glade/campaign/cesm/cesmdata/inputdata/rof/mosart/MOSART_routing_Global_0.5x0.5_c170601.nc"
+  fexcl1 = ""
+  fexcl2 = ""
+  fexcl3 = ""
+  fincl1 = ""
+  fincl2 = ""
+  fincl3 = ""
+  finidat = " "
+  frivinp = "/glade/campaign/cesm/cesmdata/inputdata/rof/mosart/MOSART_routing_Global_0.5x0.5_c170601.nc"
   ice_runoff = .true.
+  mfilt = 1
+  mosart_euler_calc = "T:F"
+  mosart_tracers = "LIQ:ICE"
+  ndens = 1
+  nhtfrq = 0
   qgwl_runoff_option = "negative"
-  rtmhist_fexcl1 = ""
-  rtmhist_fexcl2 = ""
-  rtmhist_fexcl3 = ""
-  rtmhist_fincl1 = ""
-  rtmhist_fincl2 = ""
-  rtmhist_fincl3 = ""
-  rtmhist_mfilt = 1
-  rtmhist_ndens = 1
-  rtmhist_nhtfrq = 0
-  smat_option = "Xonly"
+  use_halo_option = .false.
 /
