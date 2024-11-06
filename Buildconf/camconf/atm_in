@@ -69,8 +69,8 @@
  nhtfrq		= 0,-24,0,-24,-24,-6,-3,-3,-6,-1
 /
 &cam_initfiles_nl
- bnd_topo		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/topo/se/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0100_noleak_20240117.nc'
- ncdata		= '/glade/campaign/cgd/amp/juliob/ERA5/ne30np4/L93_cdf5/ERA5_x_ne30np4_L93_rgC2_WO_aero.2000-01-01-00000.nc'
+ bnd_topo		= '/glade/campaign/cgd/amp/aherring/restart/TopoCESM2/cube_to_target/output/ne120pg3_gmted2010_modis_bedmachine_nc3000_Laplace0025_noleak_20240913.nc'
+ ncdata		= '/glade/campaign/cgd/amp/aherring/restart/inic/ne120/ERA5_x_ne120np4_L93_rgC2_WO.2000-01-01-00000.nc'
  scale_dry_air_mass		=   98288.0D0 
  use_topo_file		=  .true.  
 /
@@ -81,54 +81,54 @@
  bndtvg		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/ggas/noaamisc.r8.nc'
  chem_use_chemtrop		= .true.
  depvel_lnd_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/trop_mozart/dvel/regrid_vegetation.nc'
- drydep_srf_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/trop_mam/atmsrf_ne30pg3_180522.nc'
+ drydep_srf_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/trop_mam/atmsrf_ne120np4_110920.nc'
  exo_coldens_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/trop_mozart/phot/exo_coldens.nc'
- ext_frc_specifier		= 'bc_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_bc_a4_aircraft_vertical_1750-2015_ne30pg3_c20231112.nc',
-         'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a1_anthro-ene_vertical_mol_175001-201412_ne30pg3_c20200103.nc',
-         'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_a1_so4_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
-         'num_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_a2_so4_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
-         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_bc_a4_aircraft_vertical_1750-2015_ne30pg3_c20231112.nc',
-         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SO2_aircraft_vertical_1750-2015_ne30pg3_c20231112.nc',
-         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SO2_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
-         'so4_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a1_anthro-ene_vertical_mol_175001-201412_ne30pg3_c20200103.nc',
-         'so4_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a1_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc',
-         'so4_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a2_contvolcano_vertical_850-5000_ne30pg3_c20200125.nc'
+ ext_frc_specifier		= 'bc_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_bc_a4_aircraft_vertical_1750-2015_0.9x1.25_c20170608.nc',
+         'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_so4_a1_anthro-ene_vertical_1750-2015_0.9x1.25_c20170616.nc',
+         'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_a1_so4_contvolcano_vertical_850-5000_0.9x1.25_c20170724.nc',
+         'num_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_a2_so4_contvolcano_vertical_850-5000_0.9x1.25_c20170724.nc',
+         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_bc_a4_aircraft_vertical_1750-2015_0.9x1.25_c20170608.nc',
+         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SO2_aircraft_vertical_1750-2015_0.9x1.25_c20170608.nc',
+         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SO2_contvolcano_vertical_850-5000_0.9x1.25_c20170724.nc',
+         'so4_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_so4_a1_anthro-ene_vertical_1750-2015_0.9x1.25_c20170616.nc',
+         'so4_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_so4_a1_contvolcano_vertical_850-5000_0.9x1.25_c20170724.nc',
+         'so4_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_so4_a2_contvolcano_vertical_850-5000_0.9x1.25_c20170724.nc'
  ext_frc_type		= 'INTERP_MISSING_MONTHS'
  fstrat_list		= ' '
  ghg_chem		= .true.
  h2orates		= '/glade/campaign/cesm/cesmdata/inputdata/atm/waccm/phot/xh2o_c080826.nc'
  photo_max_zen		= 88.85D0
  rsf_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/waccm/phot/RSF_GT200nm_v3.0_c080811.nc'
- srf_emis_specifier		= 'bc_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_bc_a4_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
-         'bc_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_bc_a4_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'DMS -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_DMS_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a1_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a1_anthro-ag-ship_surface_mol_175001-201412_ne30pg3_c20200103.nc',
-         'num_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_so4_a2_anthro-res_surface_mol_175001-201412_ne30pg3_c20200103.nc',
-         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_bc_a4_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_bc_a4_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
-         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_pom_a4_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
-         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_num_pom_a4_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'pom_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_pom_a4_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
-         'pom_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_pom_a4_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SO2_anthro-ag-ship-res_surface_mol_175001-201412_ne30pg3_c20200103.nc',
-         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SO2_anthro-ene_surface_mol_175001-201412_ne30pg3_c20200103.nc',
-         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SO2_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'so4_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a1_anthro-ag-ship_surface_mol_175001-201412_ne30pg3_c20200103.nc',
-         'so4_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a1_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'so4_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_so4_a2_anthro-res_surface_mol_175001-201412_ne30pg3_c20200103.nc',
-         'SOAE -> 2.5592D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_BENZENE_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
-         'SOAE -> 2.5592D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_BENZENE_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'SOAE -> 0.5954D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_ISOP_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'SOAE -> 8.5371D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_IVOC_anthro_surface_175001-201412_ne30pg3_c20200103.nc',
-         'SOAE -> 8.5371D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_IVOC_bb_surface_175001-201512_ne30pg3_c20191119.nc',
-         'SOAE -> 5.1004D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_MTERP_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'SOAE -> 16.650D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SVOC_anthro_surface_175001-201412_ne30pg3_c20200103.nc',
-         'SOAE -> 16.650D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_SVOC_bb_surface_175001-201512_ne30pg3_c20191119.nc',
-         'SOAE -> 8.2367D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_TOLUENE_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
-         'SOAE -> 8.2367D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_TOLUENE_bb_surface_175001-201512_ne30pg3_c20191118.nc',
-         'SOAE -> 6.5013D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_XYLENES_anthro_surface_175001-201412_ne30pg3_c20191118.nc',
-         'SOAE -> 6.5013D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/historical_ne30pg3/emissions-cmip6_XYLENES_bb_surface_175001-201512_ne30pg3_c20191118.nc'
+ srf_emis_specifier		= 'bc_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_bc_a4_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'bc_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_bc_a4_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'DMS -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_DMS_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_so4_a1_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'num_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_so4_a1_anthro-ag-ship_surface_1750-2015_0.9x1.25_c20170616.nc',
+         'num_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_so4_a2_anthro-res_surface_1750-2015_0.9x1.25_c20170616.nc',
+         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_bc_a4_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_bc_a4_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_pom_a4_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_pom_a4_bb_surface_1750-2015_0.9x1.25_c20170509.nc',
+         'pom_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_pom_a4_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'pom_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_pom_a4_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SO2_anthro-ag-ship-res_surface_1750-2015_0.9x1.25_c20170616.nc',
+         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SO2_anthro-ene_surface_1750-2015_0.9x1.25_c20170616.nc',
+         'SO2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SO2_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'so4_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_so4_a1_anthro-ag-ship_surface_1750-2015_0.9x1.25_c20170616.nc',
+         'so4_a1 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_so4_a1_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'so4_a2 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_so4_a2_anthro-res_surface_1750-2015_0.9x1.25_c20170616.nc',
+         'SOAE -> 2.5592D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_BENZENE_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'SOAE -> 2.5592D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_BENZENE_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'SOAE -> 0.5954D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_ISOP_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'SOAE -> 8.5371D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_IVOC_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'SOAE -> 8.5371D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_IVOC_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'SOAE -> 5.1004D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_MTERP_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'SOAE -> 16.650D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SVOC_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'SOAE -> 16.650D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_SVOC_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'SOAE -> 8.2367D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_TOLUENE_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'SOAE -> 8.2367D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_TOLUENE_bb_surface_1750-2015_0.9x1.25_c20170322.nc',
+         'SOAE -> 6.5013D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_XYLENES_anthro_surface_1750-2015_0.9x1.25_c20170608.nc',
+         'SOAE -> 6.5013D0*/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_XYLENES_bb_surface_1750-2015_0.9x1.25_c20170322.nc'
  srf_emis_type		= 'INTERP_MISSING_MONTHS'
  tracer_cnst_datapath		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/tracer_cnst'
  tracer_cnst_file		= 'tracer_cnst_halons_3D_L70_1849-2015_CMIP6ensAvg_c180927.nc'
@@ -307,14 +307,14 @@
  se_horz_num_threads		=  0 
  se_hypervis_subcycle		=  3 
  se_hypervis_subcycle_q		= 1                 
- se_hypervis_subcycle_sponge		=  3  
+ se_hypervis_subcycle_sponge		= 9
  se_kmax_jet		= -1
  se_kmin_jet		= -1
  se_large_courant_incr		=  .true.  
  se_limiter_option		=  8 
  se_molecular_diff		=   0.0 
- se_ne		= 30
- se_nsplit		=   2  
+ se_ne		= 120
+ se_nsplit		=                    2 
  se_nu		= -1
  se_nu_div		=  -1 
  se_nu_p		= -1 
@@ -327,7 +327,7 @@
  se_sponge_del4_nu_div_fac		=  -1 
  se_sponge_del4_nu_fac		=  -1 
  se_statediag_numtrac		= 3
- se_statefreq		= 144
+ se_statefreq		= 576
  se_tracer_num_threads		=  0 
  se_tstep_type		=  4 
  se_vert_num_threads		=  0 
@@ -342,7 +342,7 @@
  effgw_rdg_beta		= 0.5D0
  effgw_rdg_beta_max		= 0.5D0
  front_gaussian_width		=  30.D0 
- frontgfc		= 3.00D-15
+ frontgfc		= 1.25D-15
  gw_apply_tndmax		= .false.
  gw_dc		= 2.5D0
  gw_dc_long		= 0.D0
@@ -445,7 +445,7 @@
  cam_physpkg		= 'cam7'
  cam_snapshot_after_num		=    -1 
  cam_snapshot_before_num		=   -1 
- cld_macmic_num_steps		=  3 
+ cld_macmic_num_steps		=  2 
  convproc_do_aer		= .true.
  deep_scheme		= 'ZM'
  do_clubb_sgs		=  .true.  
@@ -482,7 +482,7 @@
 /
 &phys_grid_ctem_opts
  phys_grid_ctem_nfreq		= -6
- phys_grid_ctem_za_nlat		= 90
+ phys_grid_ctem_za_nlat		= 180
  phys_grid_ctem_zm_nbas		= 120
 /
 &prescribed_ozone_nl
