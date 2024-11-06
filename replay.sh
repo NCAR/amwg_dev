@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2024-10-16 10:13:11
+# Created 2024-10-16 10:37:29
 
-CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L58.001"
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L58.SST4K.001"
 
 /glade/work/hannay/cesm_tags/cam6_4_036/cime/scripts/create_newcase --compset FLTHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --project 93300722
 
@@ -12,21 +12,15 @@ cd "${CASEDIR}"
 
 ./xmlchange --append CAM_CONFIG_OPTS="-rad rrtmgp"
 
+./xmlchange NTASKS=2160
+
 ./case.setup
 
 ./xmlchange RUN_STARTDATE=2000-01-01
 
-./preview_namelists
+./xmlchange SSTICE_DATA_FILENAME=/glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_SST4K_c241009.nc
 
 ./preview_namelists
-
-./case.build
-
-./xmlchange NTASKS=2160
-
-./case.setup --reset
-
-./case.build --clean
 
 ./preview_namelists
 
