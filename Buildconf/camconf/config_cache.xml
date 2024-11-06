@@ -3,7 +3,7 @@
 <config_definition>
 
 <commandline>
-/glade/work/hannay/cesm_tags/cam6_4_036/bld/configure -s -fc_type intel -dyn se -hgrid ne30np4.pg3 -cpl nuopc -usr_src /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L32.SST4K.001/SourceMods/src.cam -spmd -nosmp -ocn docn -phys cam7 -nlev 32 -model_top lt -rad rrtmgp
+/glade/work/hannay/cesm_tags/cam6_4_036/bld/configure -s -fc_type intel -dyn se -hgrid ne30np4.pg3 -cpl nuopc -usr_src /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L58.001/SourceMods/src.cam -spmd -nosmp -ocn docn -phys cam7 -nlev 58 -model_top lt -rad rrtmgp
 </commandline>
 <entry id="age_of_air_trcs" value="0" list="" valid_values="0,1">
 Switch on (off) age of air tracers: 0=off, 1=on.
@@ -22,7 +22,7 @@ be set to DOCN.
 <entry id="build_chem_proc" value="0,1" list="" valid_values="">
 Switch to force the build of the chemistry preprocessor.
 </entry>
-<entry id="cam_bld" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L32.SST4K.001/Buildconf/camconf" list="" valid_values="">
+<entry id="cam_bld" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L58.001/Buildconf/camconf" list="" valid_values="">
 CAM build directory; contains .o and .mod files.
 </entry>
 <entry id="cam_dir" value="/glade/work/hannay/cesm_tags/cam6_4_036" list="" valid_values="">
@@ -202,7 +202,7 @@ Directory containing NetCDF module files.
 <entry id="nlat" value="1" list="" valid_values="">
 Number of unique latitude points in rectangular lat/lon grid.
 </entry>
-<entry id="nlev" value="32" list="" valid_values="">
+<entry id="nlev" value="58" list="" valid_values="">
 Number of vertical levels.
 </entry>
 <entry id="nlon" value="1" list="" valid_values="">
@@ -319,7 +319,7 @@ Switch to turn on UNICON package: 0 => off, 1 => on
 <entry id="usr_mech_infile" value="" list="" valid_values="">
 Path and file name of the user supplied chemistry mechanism file.
 </entry>
-<entry id="usr_src" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L32.SST4K.001/SourceMods/src.cam" list="1" valid_values="">
+<entry id="usr_src" value="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L58.001/SourceMods/src.cam" list="1" valid_values="">
 User source directories to prepend to the filepath.  Multiple directories
 are specified as a comma separated list with no embedded white space.
 </entry>
