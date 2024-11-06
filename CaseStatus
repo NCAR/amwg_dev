@@ -1,584 +1,134 @@
-2024-10-18 11:39:46: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam7 -nlev 32 -model_top lt -rad rrtmgp  </command>
+2024-10-26 10:18:31: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
  ---------------------------------------------------
-2024-10-18 11:39:48: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam5 -nlev 32  </command>
+2024-10-26 10:18:32: xmlchange success <command> ./xmlchange NTASKS=2304  </command>
  ---------------------------------------------------
-2024-10-18 11:40:59: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam7 -nlev 32 -model_top lt -rad rrtmgp  </command>
+2024-10-26 10:18:32: case.setup starting 
  ---------------------------------------------------
-2024-10-18 11:41:00: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam5 -nlev 32  </command>
+2024-10-26 10:18:36: case.setup success 
  ---------------------------------------------------
-2024-10-18 11:41:00: xmlchange success <command> ./xmlchange NTASKS=1280  </command>
+2024-10-26 10:18:36:   local git repository created
  ---------------------------------------------------
-2024-10-18 11:41:00: case.setup starting 
+2024-10-26 10:18:43: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
  ---------------------------------------------------
-2024-10-18 11:41:03: case.setup success 
+2024-10-26 10:19:19: case.build starting 
  ---------------------------------------------------
-2024-10-18 11:41:03: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
+2024-10-26 10:32:06: case.build success 
  ---------------------------------------------------
-2024-10-18 11:42:00: case.build starting 
+2024-10-26 10:32:10: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2024-10-18 11:54:13: case.build success 
+2024-10-26 10:32:27: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
  ---------------------------------------------------
-2024-10-18 12:04:33: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
+2024-10-26 10:32:27: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
  ---------------------------------------------------
-2024-10-18 12:04:33: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=ndays  </command>
+2024-10-26 10:32:28: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
  ---------------------------------------------------
-2024-10-18 12:04:34: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
+2024-10-26 10:32:29: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
  ---------------------------------------------------
-2024-10-18 12:04:34: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
+2024-10-26 10:32:30: xmlchange success <command> ./xmlchange JOB_PRIORITY=premium  </command>
  ---------------------------------------------------
-2024-10-18 12:04:35: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
+2024-10-26 10:32:52: case.submit starting 6441205.desched1
  ---------------------------------------------------
-2024-10-18 12:04:35: xmlchange success <command> ./xmlchange JOB_PRIORITY=premium  </command>
+2024-10-26 10:33:15: case.submit success 6441205.desched1
  ---------------------------------------------------
-2024-10-18 12:04:48: case.submit starting 6362062.desched1
+2024-10-26 10:40:17: case.run starting 6441204.desched1
  ---------------------------------------------------
-2024-10-18 12:04:48: case.submit success 6362062.desched1
+2024-10-26 10:42:20: model execution starting 6441204.desched1
  ---------------------------------------------------
-2024-10-18 12:06:05: case.build starting 
+2024-10-26 10:48:22: model execution success 6441204.desched1
  ---------------------------------------------------
-2024-10-18 12:09:07: case.build success 
- ---------------------------------------------------
-2024-10-18 12:13:33: case.run starting 6362061.desched1
- ---------------------------------------------------
-2024-10-18 12:13:47: model execution starting 6362061.desched1
- ---------------------------------------------------
-2024-10-18 12:16:03: model execution success 6362061.desched1
- ---------------------------------------------------
-2024-10-18 12:16:03: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6362061.desched1.241018-121333 
+2024-10-26 10:50:59: case.run error 
+ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_alpha04a.FMTHIST.ne30_L93.001/run/med.log.6441204.desched1.241026-104017 
  
  ---------------------------------------------------
-2024-10-18 12:53:41: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
+2024-10-26 11:11:34: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2024-10-18 12:53:42: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=ndays  </command>
+2024-10-26 11:11:38: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
  ---------------------------------------------------
-2024-10-18 12:53:43: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
+2024-10-26 11:11:39: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
  ---------------------------------------------------
-2024-10-18 12:53:43: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
+2024-10-26 11:11:40: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
  ---------------------------------------------------
-2024-10-18 12:53:44: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
+2024-10-26 11:11:41: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
  ---------------------------------------------------
-2024-10-18 12:53:44: xmlchange success <command> ./xmlchange JOB_PRIORITY=premium  </command>
+2024-10-26 11:11:42: xmlchange success <command> ./xmlchange JOB_PRIORITY=premium  </command>
  ---------------------------------------------------
-2024-10-18 12:54:51: case.submit starting 6362351.desched1
+2024-10-26 11:11:59: case.submit starting 6441749.desched1
  ---------------------------------------------------
-2024-10-18 12:54:51: case.submit success 6362351.desched1
+2024-10-26 11:12:00: case.submit success 6441749.desched1
  ---------------------------------------------------
-2024-10-18 13:05:56: case.run starting 6362350.desched1
+2024-10-26 11:39:10: case.run starting 6441748.desched1
  ---------------------------------------------------
-2024-10-18 13:06:09: model execution starting 6362350.desched1
+2024-10-26 11:39:21: model execution starting 6441748.desched1
  ---------------------------------------------------
-2024-10-18 13:07:59: model execution success 6362350.desched1
+2024-10-26 20:44:56: model execution success 6441748.desched1
  ---------------------------------------------------
-2024-10-18 13:07:59: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6362350.desched1.241018-130556 
- 
+2024-10-26 20:44:57: case.run success 6441748.desched1
  ---------------------------------------------------
-2024-10-18 13:25:48: case.submit starting 6362457.desched1
+2024-10-26 20:45:16: st_archive starting 6441749.desched1
  ---------------------------------------------------
-2024-10-18 13:25:48: case.submit success 6362457.desched1
+2024-10-26 20:47:50: st_archive success 6441749.desched1
  ---------------------------------------------------
-2024-10-18 13:42:45: case.run starting 6362456.desched1
+2024-10-26 20:47:51: case.submit starting 6444900.desched1
  ---------------------------------------------------
-2024-10-18 13:42:57: model execution starting 6362456.desched1
+2024-10-26 20:47:51: case.submit success 6444900.desched1
  ---------------------------------------------------
-2024-10-18 13:45:44: model execution success 6362456.desched1
+2024-10-26 20:52:04: case.run starting 6444899.desched1
  ---------------------------------------------------
-2024-10-18 13:45:44: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6362456.desched1.241018-134245 
- 
+2024-10-26 20:52:23: model execution starting 6444899.desched1
  ---------------------------------------------------
-2024-10-18 15:14:06: case.submit starting 6363026.desched1
+2024-10-27 05:46:16: model execution success 6444899.desched1
  ---------------------------------------------------
-2024-10-18 15:14:06: case.submit success 6363026.desched1
+2024-10-27 05:46:17: case.run success 6444899.desched1
  ---------------------------------------------------
-2024-10-18 15:37:30: case.run starting 6363024.desched1
+2024-10-27 05:46:37: st_archive starting 6444900.desched1
  ---------------------------------------------------
-2024-10-18 15:37:40: model execution starting 6363024.desched1
+2024-10-27 05:48:47: st_archive success 6444900.desched1
  ---------------------------------------------------
-2024-10-18 15:40:32: model execution success 6363024.desched1
+2024-10-27 05:48:48: case.submit starting 6447192.desched1
  ---------------------------------------------------
-2024-10-18 15:40:32: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6363024.desched1.241018-153730 
- 
+2024-10-27 05:48:49: case.submit success 6447192.desched1
  ---------------------------------------------------
-2024-10-18 16:05:59: case.submit starting 6363291.desched1
+2024-10-27 05:49:03: case.run starting 6447191.desched1
  ---------------------------------------------------
-2024-10-18 16:05:59: case.submit success 6363291.desched1
+2024-10-27 05:49:10: model execution starting 6447191.desched1
  ---------------------------------------------------
-2024-10-18 16:08:52: case.run starting 6363290.desched1
+2024-10-27 14:31:16: model execution success 6447191.desched1
  ---------------------------------------------------
-2024-10-18 16:09:12: model execution starting 6363290.desched1
+2024-10-27 14:31:17: case.run success 6447191.desched1
  ---------------------------------------------------
-2024-10-18 16:10:40: case.submit starting 
+2024-10-27 14:31:38: st_archive starting 6447192.desched1
  ---------------------------------------------------
-2024-10-18 16:12:22: model execution success 6363290.desched1
+2024-10-27 14:34:51: st_archive success 6447192.desched1
  ---------------------------------------------------
-2024-10-18 16:12:22: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6363290.desched1.241018-160852 
- 
+2024-10-27 14:34:56: case.submit starting 6449666.desched1
  ---------------------------------------------------
-2024-10-18 17:19:06: case.submit starting 6363694.desched1
+2024-10-27 14:34:56: case.submit success 6449666.desched1
  ---------------------------------------------------
-2024-10-18 17:19:06: case.submit success 6363694.desched1
+2024-10-27 14:35:20: case.run starting 6449664.desched1
  ---------------------------------------------------
-2024-10-18 17:21:31: case.run starting 6363693.desched1
+2024-10-27 14:35:33: model execution starting 6449664.desched1
  ---------------------------------------------------
-2024-10-18 17:21:44: model execution starting 6363693.desched1
+2024-10-27 23:28:45: model execution success 6449664.desched1
  ---------------------------------------------------
-2024-10-18 17:24:57: model execution success 6363693.desched1
+2024-10-27 23:28:45: case.run success 6449664.desched1
  ---------------------------------------------------
-2024-10-18 17:24:57: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6363693.desched1.241018-172131 
- 
+2024-10-27 23:29:20: st_archive starting 6449666.desched1
  ---------------------------------------------------
-2024-10-21 16:30:11: case.submit starting 6379845.desched1
+2024-10-27 23:31:43: st_archive success 6449666.desched1
  ---------------------------------------------------
-2024-10-21 16:30:11: case.submit success 6379845.desched1
+2024-10-27 23:31:44: case.submit starting 6452739.desched1
  ---------------------------------------------------
-2024-10-21 16:43:18: case.run starting 6379844.desched1
+2024-10-27 23:31:45: case.submit success 6452739.desched1
  ---------------------------------------------------
-2024-10-21 16:43:29: model execution starting 6379844.desched1
+2024-10-27 23:32:05: case.run starting 6452738.desched1
  ---------------------------------------------------
-2024-10-21 16:45:44: model execution success 6379844.desched1
+2024-10-27 23:32:14: model execution starting 6452738.desched1
  ---------------------------------------------------
-2024-10-21 16:45:44: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6379844.desched1.241021-164318 
- 
+2024-10-28 08:17:21: model execution success 6452738.desched1
  ---------------------------------------------------
-2024-10-21 16:50:40: case.submit starting 
+2024-10-28 08:17:21: case.run success 6452738.desched1
  ---------------------------------------------------
-2024-10-21 16:50:40: case.submit error 
-
+2024-10-28 08:17:43: st_archive starting 6452739.desched1
  ---------------------------------------------------
-2024-10-21 16:51:54: case.submit starting 6379945.desched1
- ---------------------------------------------------
-2024-10-21 16:51:54: case.submit success 6379945.desched1
- ---------------------------------------------------
-2024-10-21 16:53:14: case.submit starting 6379947.desched1
- ---------------------------------------------------
-2024-10-21 16:53:14: case.submit success 6379947.desched1
- ---------------------------------------------------
-2024-10-21 16:57:28: case.run starting 6379944.desched1
- ---------------------------------------------------
-2024-10-21 16:57:42: model execution starting 6379944.desched1
- ---------------------------------------------------
-2024-10-21 17:01:42: case.run starting 6379946.desched1
- ---------------------------------------------------
-2024-10-21 17:01:51: model execution starting 6379946.desched1
- ---------------------------------------------------
-2024-10-21 17:02:14: model execution success 6379944.desched1
- ---------------------------------------------------
-2024-10-21 17:02:14: case.run success 6379944.desched1
- ---------------------------------------------------
-2024-10-21 17:02:37: st_archive starting 6379945.desched1
- ---------------------------------------------------
-2024-10-21 17:03:24: st_archive success 6379945.desched1
- ---------------------------------------------------
-2024-10-21 17:03:25: case.submit starting 6379998.desched1
- ---------------------------------------------------
-2024-10-21 17:03:25: case.submit success 6379998.desched1
- ---------------------------------------------------
-2024-10-21 17:07:13: model execution success 6379946.desched1
- ---------------------------------------------------
-2024-10-21 17:07:13: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6379946.desched1.241021-170142 
- 
- ---------------------------------------------------
-2024-10-21 17:07:39: case.run starting 6379997.desched1
- ---------------------------------------------------
-2024-10-21 17:07:46: model execution starting 6379997.desched1
- ---------------------------------------------------
-2024-10-21 17:13:03: model execution success 6379997.desched1
- ---------------------------------------------------
-2024-10-21 17:13:03: case.run success 6379997.desched1
- ---------------------------------------------------
-2024-10-21 17:13:39: st_archive starting 6379998.desched1
- ---------------------------------------------------
-2024-10-21 17:14:22: st_archive success 6379998.desched1
- ---------------------------------------------------
-2024-10-21 17:14:25: case.submit starting 6380057.desched1
- ---------------------------------------------------
-2024-10-21 17:14:25: case.submit success 6380057.desched1
- ---------------------------------------------------
-2024-10-21 17:23:00: case.run starting 6380056.desched1
- ---------------------------------------------------
-2024-10-21 17:23:20: model execution starting 6380056.desched1
- ---------------------------------------------------
-2024-10-21 17:28:59: model execution success 6380056.desched1
- ---------------------------------------------------
-2024-10-21 17:28:59: case.run success 6380056.desched1
- ---------------------------------------------------
-2024-10-21 17:29:33: st_archive starting 6380057.desched1
- ---------------------------------------------------
-2024-10-21 17:30:13: st_archive success 6380057.desched1
- ---------------------------------------------------
-2024-10-21 17:30:15: case.submit starting 6380291.desched1
- ---------------------------------------------------
-2024-10-21 17:30:15: case.submit success 6380291.desched1
- ---------------------------------------------------
-2024-10-21 17:40:14: case.run starting 6380289.desched1
- ---------------------------------------------------
-2024-10-21 17:40:25: model execution starting 6380289.desched1
- ---------------------------------------------------
-2024-10-21 17:45:38: model execution success 6380289.desched1
- ---------------------------------------------------
-2024-10-21 17:45:38: case.run success 6380289.desched1
- ---------------------------------------------------
-2024-10-21 17:46:09: st_archive starting 6380291.desched1
- ---------------------------------------------------
-2024-10-21 17:46:45: st_archive success 6380291.desched1
- ---------------------------------------------------
-2024-10-21 17:46:47: case.submit starting 6380337.desched1
- ---------------------------------------------------
-2024-10-21 17:46:47: case.submit success 6380337.desched1
- ---------------------------------------------------
-2024-10-21 17:57:41: case.run starting 6380336.desched1
- ---------------------------------------------------
-2024-10-21 17:57:56: model execution starting 6380336.desched1
- ---------------------------------------------------
-2024-10-21 18:03:07: model execution success 6380336.desched1
- ---------------------------------------------------
-2024-10-21 18:03:07: case.run success 6380336.desched1
- ---------------------------------------------------
-2024-10-21 18:03:29: st_archive starting 6380337.desched1
- ---------------------------------------------------
-2024-10-21 18:04:16: st_archive success 6380337.desched1
- ---------------------------------------------------
-2024-10-22 10:18:41: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2024-10-22 10:18:41: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
- ---------------------------------------------------
-2024-10-22 10:18:42: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
- ---------------------------------------------------
-2024-10-22 10:18:42: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
- ---------------------------------------------------
-2024-10-22 10:18:43: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
- ---------------------------------------------------
-2024-10-22 10:18:59: case.submit starting 6388847.desched1
- ---------------------------------------------------
-2024-10-22 10:18:59: case.submit success 6388847.desched1
- ---------------------------------------------------
-2024-10-22 10:20:12: case.run starting 6388846.desched1
- ---------------------------------------------------
-2024-10-22 10:20:26: model execution starting 6388846.desched1
- ---------------------------------------------------
-2024-10-22 13:45:31: model execution success 6388846.desched1
- ---------------------------------------------------
-2024-10-22 13:45:31: case.run success 6388846.desched1
- ---------------------------------------------------
-2024-10-22 13:45:58: st_archive starting 6388847.desched1
- ---------------------------------------------------
-2024-10-22 13:47:24: st_archive success 6388847.desched1
- ---------------------------------------------------
-2024-10-22 13:47:25: case.submit starting 6391422.desched1
- ---------------------------------------------------
-2024-10-22 13:47:25: case.submit success 6391422.desched1
- ---------------------------------------------------
-2024-10-22 13:48:32: case.run starting 6391421.desched1
- ---------------------------------------------------
-2024-10-22 13:48:42: model execution starting 6391421.desched1
- ---------------------------------------------------
-2024-10-22 15:03:03: case.build starting 
- ---------------------------------------------------
-2024-10-22 15:04:44: case.build success 
- ---------------------------------------------------
-2024-10-22 15:04:46: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2024-10-22 15:04:48: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
- ---------------------------------------------------
-2024-10-22 15:04:48: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
- ---------------------------------------------------
-2024-10-22 15:04:49: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
- ---------------------------------------------------
-2024-10-22 15:04:49: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
- ---------------------------------------------------
-2024-10-22 15:04:58: case.submit starting 6392439.desched1
- ---------------------------------------------------
-2024-10-22 15:04:58: case.submit success 6392439.desched1
- ---------------------------------------------------
-2024-10-22 15:07:17: case.run starting 6392438.desched1
- ---------------------------------------------------
-2024-10-22 15:07:26: model execution starting 6392438.desched1
- ---------------------------------------------------
-2024-10-22 18:42:09: model execution success 6392438.desched1
- ---------------------------------------------------
-2024-10-22 18:42:09: case.run success 6392438.desched1
- ---------------------------------------------------
-2024-10-22 18:42:45: st_archive starting 6392439.desched1
- ---------------------------------------------------
-2024-10-22 18:44:12: st_archive success 6392439.desched1
- ---------------------------------------------------
-2024-10-22 18:44:12: case.submit starting 6395182.desched1
- ---------------------------------------------------
-2024-10-22 18:44:12: case.submit success 6395182.desched1
- ---------------------------------------------------
-2024-10-22 18:44:47: case.run starting 6395181.desched1
- ---------------------------------------------------
-2024-10-22 18:44:55: model execution starting 6395181.desched1
- ---------------------------------------------------
-2024-10-22 22:14:36: model execution success 6395181.desched1
- ---------------------------------------------------
-2024-10-22 22:14:36: case.run success 6395181.desched1
- ---------------------------------------------------
-2024-10-22 22:15:21: st_archive starting 6395182.desched1
- ---------------------------------------------------
-2024-10-22 22:16:47: st_archive success 6395182.desched1
- ---------------------------------------------------
-2024-10-22 22:16:48: case.submit starting 6397618.desched1
- ---------------------------------------------------
-2024-10-22 22:16:48: case.submit success 6397618.desched1
- ---------------------------------------------------
-2024-10-22 22:22:16: case.run starting 6397617.desched1
- ---------------------------------------------------
-2024-10-22 22:22:39: model execution starting 6397617.desched1
- ---------------------------------------------------
-2024-10-22 23:54:17: model execution success 6397617.desched1
- ---------------------------------------------------
-2024-10-22 23:54:17: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6397617.desched1.241022-222216 
- 
- ---------------------------------------------------
-2024-10-24 10:33:39: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam7 -nlev 32 -model_top lt -rad rrtmgp  </command>
- ---------------------------------------------------
-2024-10-24 10:33:39: xmlchange success <command> ./xmlchange CAM_CONFIG_OPTS=-phys cam5 -nlev 32  </command>
- ---------------------------------------------------
-2024-10-24 10:33:40: xmlchange success <command> ./xmlchange NTASKS=1280  </command>
- ---------------------------------------------------
-2024-10-24 10:33:40: case.setup starting 
- ---------------------------------------------------
-2024-10-24 10:33:45: case.setup success 
- ---------------------------------------------------
-2024-10-24 10:33:46: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
- ---------------------------------------------------
-2024-10-24 10:49:10: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
- ---------------------------------------------------
-2024-10-24 10:50:05: case.build starting 
- ---------------------------------------------------
-2024-10-24 10:50:05: case.build error 
-ERROR: For your changes to take effect, run:
-./case.build --clean-all
-./case.build
- ---------------------------------------------------
-2024-10-24 10:50:30: case.build starting 
- ---------------------------------------------------
-2024-10-24 10:50:30: case.build error 
-ERROR: For your changes to take effect, run:
-./case.build --clean-all
-./case.build
- ---------------------------------------------------
-2024-10-24 10:50:41: case.build starting 
- ---------------------------------------------------
-2024-10-24 10:50:41: case.build error 
-ERROR: For your changes to take effect, run:
-./case.build --clean-all
-./case.build
- ---------------------------------------------------
-2024-10-24 10:50:56: xmlchange success <command> ./xmlchange CONTINUE_RUN=TRUE  </command>
- ---------------------------------------------------
-2024-10-24 10:51:06: build.clean starting 
- ---------------------------------------------------
-2024-10-24 10:51:17: build.clean success 
- ---------------------------------------------------
-2024-10-24 10:53:01: case.build starting 
- ---------------------------------------------------
-2024-10-24 10:59:42: case.build starting 
- ---------------------------------------------------
-2024-10-24 11:10:25: case.build success 
- ---------------------------------------------------
-2024-10-24 11:10:26: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2024-10-24 11:10:27: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
- ---------------------------------------------------
-2024-10-24 11:10:27: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
- ---------------------------------------------------
-2024-10-24 11:10:28: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
- ---------------------------------------------------
-2024-10-24 11:10:28: xmlchange success <command> ./xmlchange JOB_PRIORITY=premium  </command>
- ---------------------------------------------------
-2024-10-24 11:10:38: case.submit starting 6416329.desched1
- ---------------------------------------------------
-2024-10-24 11:10:38: case.submit success 6416329.desched1
- ---------------------------------------------------
-2024-10-24 11:19:29: case.run starting 6416328.desched1
- ---------------------------------------------------
-2024-10-24 11:19:34: model execution starting 6416328.desched1
- ---------------------------------------------------
-2024-10-24 12:54:25: model execution success 6416328.desched1
- ---------------------------------------------------
-2024-10-24 12:54:25: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6416328.desched1.241024-111929 
- 
- ---------------------------------------------------
-2024-10-24 12:57:33: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
- ---------------------------------------------------
-2024-10-24 12:58:02: case.build starting 
- ---------------------------------------------------
-2024-10-24 12:59:53: case.build success 
- ---------------------------------------------------
-2024-10-24 13:00:02: case.submit starting 6417008.desched1
- ---------------------------------------------------
-2024-10-24 13:00:02: case.submit success 6417008.desched1
- ---------------------------------------------------
-2024-10-24 13:03:25: case.run starting 6417007.desched1
- ---------------------------------------------------
-2024-10-24 13:03:32: model execution starting 6417007.desched1
- ---------------------------------------------------
-2024-10-24 13:07:03: model execution success 6417007.desched1
- ---------------------------------------------------
-2024-10-24 13:07:03: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6417007.desched1.241024-130325 
- 
- ---------------------------------------------------
-2024-10-24 14:35:08: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2024-10-24 14:35:08: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
- ---------------------------------------------------
-2024-10-24 14:35:09: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
- ---------------------------------------------------
-2024-10-24 14:35:09: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
- ---------------------------------------------------
-2024-10-24 14:35:10: xmlchange success <command> ./xmlchange JOB_PRIORITY=premium  </command>
- ---------------------------------------------------
-2024-10-24 14:36:09: case.submit starting 6417608.desched1
- ---------------------------------------------------
-2024-10-24 14:36:09: case.submit success 6417608.desched1
- ---------------------------------------------------
-2024-10-24 14:36:47: case.run starting 6417607.desched1
- ---------------------------------------------------
-2024-10-24 14:37:23: model execution starting 6417607.desched1
- ---------------------------------------------------
-2024-10-24 14:38:52: model execution success 6417607.desched1
- ---------------------------------------------------
-2024-10-24 14:38:52: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6417607.desched1.241024-143647 
- 
- ---------------------------------------------------
-2024-10-24 14:42:58: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2024-10-24 14:42:59: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
- ---------------------------------------------------
-2024-10-24 14:42:59: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
- ---------------------------------------------------
-2024-10-24 14:43:00: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
- ---------------------------------------------------
-2024-10-24 14:43:00: xmlchange success <command> ./xmlchange JOB_PRIORITY=premium  </command>
- ---------------------------------------------------
-2024-10-24 14:43:12: case.submit starting 6417623.desched1
- ---------------------------------------------------
-2024-10-24 14:43:12: case.submit success 6417623.desched1
- ---------------------------------------------------
-2024-10-24 14:51:28: case.run starting 6417622.desched1
- ---------------------------------------------------
-2024-10-24 14:51:32: model execution starting 6417622.desched1
- ---------------------------------------------------
-2024-10-24 14:53:13: model execution success 6417622.desched1
- ---------------------------------------------------
-2024-10-24 14:53:13: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6417622.desched1.241024-145128 
- 
- ---------------------------------------------------
-2024-10-24 14:58:24: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
- ---------------------------------------------------
-2024-10-24 14:58:24: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
- ---------------------------------------------------
-2024-10-24 14:58:25: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
- ---------------------------------------------------
-2024-10-24 14:58:25: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
- ---------------------------------------------------
-2024-10-24 14:58:26: xmlchange success <command> ./xmlchange JOB_PRIORITY=premium  </command>
- ---------------------------------------------------
-2024-10-24 14:59:38: case.submit starting 6417685.desched1
- ---------------------------------------------------
-2024-10-24 14:59:38: case.submit success 6417685.desched1
- ---------------------------------------------------
-2024-10-24 15:02:13: case.run starting 6417684.desched1
- ---------------------------------------------------
-2024-10-24 15:02:25: model execution starting 6417684.desched1
- ---------------------------------------------------
-2024-10-24 15:03:32: model execution success 6417684.desched1
- ---------------------------------------------------
-2024-10-24 15:03:32: case.run error 
-ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001/run/med.log.6417684.desched1.241024-150213 
- 
- ---------------------------------------------------
-2024-10-24 15:09:26: case.submit starting 6417725.desched1
- ---------------------------------------------------
-2024-10-24 15:09:26: case.submit success 6417725.desched1
- ---------------------------------------------------
-2024-10-24 15:16:15: case.run starting 6417724.desched1
- ---------------------------------------------------
-2024-10-24 15:16:23: model execution starting 6417724.desched1
- ---------------------------------------------------
-2024-10-24 18:27:02: model execution success 6417724.desched1
- ---------------------------------------------------
-2024-10-24 18:27:02: case.run success 6417724.desched1
- ---------------------------------------------------
-2024-10-24 18:27:32: st_archive starting 6417725.desched1
- ---------------------------------------------------
-2024-10-24 18:28:56: st_archive success 6417725.desched1
- ---------------------------------------------------
-2024-10-24 18:28:57: case.submit starting 6419790.desched1
- ---------------------------------------------------
-2024-10-24 18:28:57: case.submit success 6419790.desched1
- ---------------------------------------------------
-2024-10-24 18:30:04: case.run starting 6419789.desched1
- ---------------------------------------------------
-2024-10-24 18:30:12: model execution starting 6419789.desched1
- ---------------------------------------------------
-2024-10-24 21:42:14: model execution success 6419789.desched1
- ---------------------------------------------------
-2024-10-24 21:42:14: case.run success 6419789.desched1
- ---------------------------------------------------
-2024-10-24 21:42:40: st_archive starting 6419790.desched1
- ---------------------------------------------------
-2024-10-24 21:44:06: st_archive success 6419790.desched1
- ---------------------------------------------------
-2024-10-24 21:44:06: case.submit starting 6421527.desched1
- ---------------------------------------------------
-2024-10-24 21:44:06: case.submit success 6421527.desched1
- ---------------------------------------------------
-2024-10-24 21:49:00: case.run starting 6421526.desched1
- ---------------------------------------------------
-2024-10-24 21:49:06: model execution starting 6421526.desched1
- ---------------------------------------------------
-2024-10-25 00:53:58: model execution success 6421526.desched1
- ---------------------------------------------------
-2024-10-25 00:53:58: case.run success 6421526.desched1
- ---------------------------------------------------
-2024-10-25 00:54:20: st_archive starting 6421527.desched1
- ---------------------------------------------------
-2024-10-25 00:55:27: st_archive success 6421527.desched1
- ---------------------------------------------------
-2024-10-25 00:55:28: case.submit starting 6423342.desched1
- ---------------------------------------------------
-2024-10-25 00:55:28: case.submit success 6423342.desched1
- ---------------------------------------------------
-2024-10-25 00:56:26: case.run starting 6423341.desched1
- ---------------------------------------------------
-2024-10-25 00:56:34: model execution starting 6423341.desched1
- ---------------------------------------------------
-2024-10-25 04:01:49: model execution success 6423341.desched1
- ---------------------------------------------------
-2024-10-25 04:01:49: case.run success 6423341.desched1
- ---------------------------------------------------
-2024-10-25 04:02:22: st_archive starting 6423342.desched1
- ---------------------------------------------------
-2024-10-25 04:02:59: st_archive success 6423342.desched1
- ---------------------------------------------------
-2024-10-25 04:03:00: case.submit starting 6424776.desched1
- ---------------------------------------------------
-2024-10-25 04:03:00: case.submit success 6424776.desched1
- ---------------------------------------------------
-2024-10-25 04:06:20: case.run starting 6424775.desched1
- ---------------------------------------------------
-2024-10-25 04:06:28: model execution starting 6424775.desched1
- ---------------------------------------------------
-2024-10-25 07:06:48: model execution success 6424775.desched1
- ---------------------------------------------------
-2024-10-25 07:06:48: case.run success 6424775.desched1
- ---------------------------------------------------
-2024-10-25 07:07:16: st_archive starting 6424776.desched1
- ---------------------------------------------------
-2024-10-25 07:09:45: st_archive success 6424776.desched1
+2024-10-28 08:19:14: st_archive success 6452739.desched1
  ---------------------------------------------------

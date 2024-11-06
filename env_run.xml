@@ -46,6 +46,38 @@
     namelist group cpl_flds_inparm.
     </desc>
     </entry>
+    <entry id="DMS_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates DMS fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="BRF_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates Bromoform fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="N2O_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates N2O fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
+    <entry id="NH3_EMIS_OCN" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>
+      Activates NH3 fluxes to be sent from ocn to atm.
+      Currently this is only available with BLOM ocean component.
+    </desc>
+    </entry>
     <entry id="NCPL_BASE_PERIOD" value="day">
       <type>char</type>
       <valid_values>hour,day,year,decade</valid_values>
@@ -241,7 +273,7 @@
     <entry id="START_TOD" value="0">
       <type>integer</type>
       <desc>
-      Run start time-of-day
+      Run start time-of-day, units are seconds with values from 0 to 86400.
     </desc>
     </entry>
     <entry id="STOP_OPTION" value="nyears">
@@ -264,14 +296,14 @@
       negative value implies off
     </desc>
     </entry>
-    <entry id="REST_OPTION" value="$STOP_OPTION">
+    <entry id="REST_OPTION" value="nyears">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
     </entry>
-    <entry id="REST_N" value="$STOP_N">
+    <entry id="REST_N" value="2">
       <type>integer</type>
       <desc>
       sets model restart writes with REST_OPTION and REST_DATE
@@ -373,7 +405,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:6424775.desched1, case.st_archive:6424776.desched1">
+    <entry id="JOB_IDS" value="case.run:6452738.desched1, case.st_archive:6452739.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -772,15 +804,15 @@
     https://www.unidata.ucar.edu/software/netcdf/docs/data_type.html
     </desc>
       <values>
-        <value compclass="ATM">64bit_offset</value>
-        <value compclass="CPL">64bit_offset</value>
-        <value compclass="OCN">64bit_offset</value>
-        <value compclass="WAV">64bit_offset</value>
-        <value compclass="GLC">64bit_offset</value>
-        <value compclass="ICE">64bit_offset</value>
-        <value compclass="ROF">64bit_offset</value>
-        <value compclass="LND">64bit_offset</value>
-        <value compclass="ESP">64bit_offset</value>
+        <value compclass="ATM">64bit_data</value>
+        <value compclass="CPL">64bit_data</value>
+        <value compclass="OCN">64bit_data</value>
+        <value compclass="WAV">64bit_data</value>
+        <value compclass="GLC">64bit_data</value>
+        <value compclass="ICE">64bit_data</value>
+        <value compclass="ROF">64bit_data</value>
+        <value compclass="LND">64bit_data</value>
+        <value compclass="ESP">64bit_data</value>
       </values>
     </entry>
     <entry id="PIO_STRIDE">
@@ -910,7 +942,7 @@
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
-      Only used for compsets with DATM and POP (currently C, G and J):
+      Only used for compsets with DATM and [POP or MOM] (currently C, G and J):
       If true, compute albedos to work with daily avg SW down
       If false (default), albedos are computed with the assumption that downward
       solar radiation from the atm component has a diurnal cycle and zenith-angle
@@ -1005,7 +1037,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
+    <entry id="CAM_NML_USE_CASE" value="hist_cam_mt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
