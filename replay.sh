@@ -2,21 +2,25 @@
 
 set -e
 
-# Created 2024-10-09 15:55:29
+# Created 2024-10-18 11:39:39
 
-CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FMTHIST.ne120_L93.SST4K.001"
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001"
 
-/glade/work/hannay/cesm_tags/cam6_4_036/cime/scripts/create_newcase --compset FMTHIST --res ne120pg3_ne120pg3_mt13 --case "${CASEDIR}" --run-unsupported --project 93300722
+/glade/work/hannay/cesm_tags/cam6_4_036/cime/scripts/create_newcase --compset FLTHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
 
-./xmlchange --append CAM_CONFIG_OPTS="-rad rrtmgp"
+./xmlchange CAM_CONFIG_OPTS="-phys cam7 -nlev 32 -model_top lt -rad rrtmgp"
 
-./xmlchange NTASKS=6144
+./xmlchange CAM_CONFIG_OPTS="-phys cam5 -nlev 32"
+
+./xmlchange CAM_CONFIG_OPTS="-phys cam7 -nlev 32 -model_top lt -rad rrtmgp"
+
+./xmlchange CAM_CONFIG_OPTS="-phys cam5 -nlev 32"
+
+./xmlchange NTASKS=1280
 
 ./case.setup
-
-./preview_namelists
 
 ./xmlchange RUN_STARTDATE=2000-01-01
 
@@ -26,59 +30,139 @@ cd "${CASEDIR}"
 
 ./case.build
 
-./xmlchange SSTICE=/glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_SST4K_c241009.nc
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=ndays
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=59,STOP_N=2,STOP_OPTION=nmonths
-
-./xmlchange CHARGE_ACCOUNT=CESM0023
-
-./xmlchange REST_OPTION=nmonths,REST_N=2
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
 
 ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
+
+./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive
 
 ./xmlchange JOB_PRIORITY=premium
 
 ./case.submit
 
+./case.build
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=ndays
+
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
+
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
+
+./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive
+
 ./xmlchange JOB_PRIORITY=premium
 
-./xmlchange SSTICE=/glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_SST4K_c241009.nc
+./case.submit
 
-./xmlchange SSTICE_DATA_FILENAME=/glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_SST4K_c241009.nc
+./case.submit
 
-./xmlchange NTASKS=7680
+./case.submit
 
-./case.setup --reset
+./case.submit
 
-./case.build --clean
+./case.submit
+
+./case.submit
+
+./preview_namelists
+
+./case.submit
+
+./preview_namelists
+
+./case.submit
+
+./case.submit
+
+./case.submit
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
+
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
+
+./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive
+
+./xmlchange JOB_PRIORITY=regular
+
+./case.submit
 
 ./preview_namelists
 
 ./case.build
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
+
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
+
+./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive
+
+./xmlchange JOB_PRIORITY=regular
+
+./case.submit
+
+./xmlchange CAM_CONFIG_OPTS="-phys cam7 -nlev 32 -model_top lt -rad rrtmgp"
+
+./xmlchange CAM_CONFIG_OPTS="-phys cam5 -nlev 32"
+
+./xmlchange NTASKS=1280
+
+./case.setup
+
+./xmlchange RUN_STARTDATE=2000-01-01
+
+./xmlchange RUN_STARTDATE=2000-01-01
+
+./preview_namelists
+
+./case.build
+
+./case.build
+
+./case.build
+
+./xmlchange CONTINUE_RUN=TRUE
+
+./case.build --clean-all
+
+./preview_namelists
+
+./case.build
+
+./preview_namelists
+
+./case.build
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
+
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
+
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
+
+./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive
+
+./xmlchange JOB_PRIORITY=premium
+
+./case.submit
 
 ./xmlchange CONTINUE_RUN=FALSE
 
-./case.submit
-
-./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive
-
-./preview_namelists
-
-./preview_namelists
-
 ./case.build
 
-./xmlchange CONTINUE_RUN=FALSE
+./case.submit
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
 
-./xmlchange PROJECT=CESM0023,RESUBMIT=29,STOP_N=2,STOP_OPTION=nmonths
-
-./xmlchange CHARGE_ACCOUNT=CESM0023
-
-./xmlchange REST_OPTION=nmonths,REST_N=2
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
 
 ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
 
@@ -88,25 +172,9 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./case.build
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
 
-./case.build
-
-./case.build
-
-./preview_namelists
-
-./case.build
-
-./xmlchange SSTICE_DATA_FILENAME=/glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_SST4K_c241009.nc
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=29,STOP_N=2,STOP_OPTION=nmonths
-
-./xmlchange CHARGE_ACCOUNT=CESM0023
-
-./xmlchange REST_OPTION=nmonths,REST_N=2
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
 
 ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
 
@@ -116,17 +184,9 @@ cd "${CASEDIR}"
 
 ./case.submit
 
-./xmlchange CONTINUE_RUN=FALSE
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
 
-./xmlchange SSTICE_DATA_FILENAME=/glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_SST4K_c241009.nc
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
-
-./xmlchange PROJECT=CESM0023,RESUBMIT=29,STOP_N=2,STOP_OPTION=nmonths
-
-./xmlchange CHARGE_ACCOUNT=CESM0023
-
-./xmlchange REST_OPTION=nmonths,REST_N=2
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
 
 ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
 
@@ -135,22 +195,6 @@ cd "${CASEDIR}"
 ./xmlchange JOB_PRIORITY=premium
 
 ./case.submit
-
-./case.submit
-
-./case.submit
-
-./case.submit
-
-./xmlchange PROJECT=CESM0024
-
-./case.submit
-
-./xmlchange PROJECT=CESM0023
-
-./case.submit
-
-./xmlchange JOB_PRIORITY=regular,PROJECT=P93300642
 
 ./case.submit
 

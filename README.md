@@ -1,2 +1,2 @@
-# case: f.e30_cam6_4_036.FMTHIST.ne120_L93.SST4K.001
-https://github.com/NCAR/amwg_dev/issues/601
+# case: f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.001
+https://github.com/NCAR/amwg_dev/issues/603

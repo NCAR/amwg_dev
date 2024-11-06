@@ -53,7 +53,7 @@
     This xml variable is only used to set the driver namelist variables,
     atm_cpl_dt, lnd_cpl_dt, ocn_cpl_dt, ice_cpl_dt, glc_cpl_dt, rof_cpl_dt, wav_cpl_dt, and esp_dt.</desc>
     </entry>
-    <entry id="ATM_NCPL" value="192">
+    <entry id="ATM_NCPL" value="48">
       <type>integer</type>
       <desc>Number of atm coupling intervals per NCPL_BASE_PERIOD.
     This is used to set the driver namelist atm_cpl_dt, equal to basedt/ATM_NCPL,
@@ -244,7 +244,7 @@
       Run start time-of-day
     </desc>
     </entry>
-    <entry id="STOP_OPTION" value="nmonths">
+    <entry id="STOP_OPTION" value="nyears">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
@@ -264,14 +264,14 @@
       negative value implies off
     </desc>
     </entry>
-    <entry id="REST_OPTION" value="nmonths">
+    <entry id="REST_OPTION" value="$STOP_OPTION">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
     </entry>
-    <entry id="REST_N" value="2">
+    <entry id="REST_N" value="$STOP_N">
       <type>integer</type>
       <desc>
       sets model restart writes with REST_OPTION and REST_DATE
@@ -373,11 +373,11 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:6495601.desched1, case.st_archive:6495602.desched1">
+    <entry id="JOB_IDS" value="case.run:6424775.desched1, case.st_archive:6424776.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
-    <entry id="JOB_PRIORITY" value="regular">
+    <entry id="JOB_PRIORITY" value="premium">
       <type>char</type>
       <valid_values>regular,premium,economy</valid_values>
       <desc>job priority for systems supporting this option</desc>
@@ -531,11 +531,11 @@
       <type>char</type>
       <desc>path of lnd domain file</desc>
     </entry>
-    <entry id="ATM_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="ATM_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>atm mesh file (full pathname)</desc>
     </entry>
-    <entry id="LND_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="LND_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>lnd mesh file (full pathname)</desc>
     </entry>
@@ -547,11 +547,11 @@
       <type>char</type>
       <desc>wav mesh file (full pathname)</desc>
     </entry>
-    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="ICE_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>ice mesh file (full pahtname)</desc>
     </entry>
-    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc">
+    <entry id="OCN_DOMAIN_MESH" value="$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc">
       <type>char</type>
       <desc>ocn mesh file (full pathname)</desc>
     </entry>
@@ -559,7 +559,7 @@
       <type>char</type>
       <desc>glc mesh file (full pathname)</desc>
     </entry>
-    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/tx0.1v3_ESMFmesh_cdf5_c20211011.nc">
+    <entry id="MASK_MESH" value="$DIN_LOC_ROOT/share/meshes/gx1v7_151008_ESMFmesh.nc">
       <type>char</type>
       <desc>mask mesh file (full pathname)</desc>
     </entry>
@@ -1005,7 +1005,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="hist_cam_mt">
+    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the
@@ -1297,7 +1297,7 @@
     Sets SST and ice coverage stream name.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_DATA_FILENAME" value="/glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_SST4K_c241009.nc">
+    <entry id="SSTICE_DATA_FILENAME" value="$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_c120422.nc">
       <type>char</type>
       <valid_values/>
       <desc>Prescribed SST and ice coverage data file name.
