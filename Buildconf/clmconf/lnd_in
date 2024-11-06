@@ -306,7 +306,9 @@
  leaf_mr_vcm = 0.015d00
 /
 &prigentroughness
- use_prigent_roughness = .false.
+ stream_fldfilename_prigentroughness = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/dustemisdata/Prigent_2005_roughness_0.25x0.25_cdf5_c240127.nc'
+ stream_meshfile_prigentroughness = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/dustemisdata/dust_0.25x0.25_ESMFmesh_cdf5_c240222.nc'
+ use_prigent_roughness = .true.
 /
 &zendersoilerod
 /
@@ -317,7 +319,7 @@
 !#--------------------------------------------------------------------------------------------------------------------------
 !# lnd_in:: Comment:
 !# This namelist was created using the following command-line:
-!#     /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/cime -infile /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.001/Buildconf/clmconf/namelist -csmdata /glade/campaign/cesm/cesmdata/inputdata -inputdata /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.001/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=20000101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type default -envxml_dir /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.001 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.001/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm6_0_cam7.0 -mask gx1v7
+!#     /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/cime -infile /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.002/Buildconf/clmconf/namelist -csmdata /glade/campaign/cesm/cesmdata/inputdata -inputdata /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.002/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=20000101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type default -envxml_dir /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.002 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.002/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm6_0_cam7.0 -mask gx1v7
 !# 
 !# For help on options use: /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/components/clm/bld/CLM build-namelist -help
 !#--------------------------------------------------------------------------------------------------------------------------

@@ -76,8 +76,8 @@
          'PS:I', 'U10:I', 'UBOT:I', 'VBOT:I', 'FLUT:I', 'TMQ:I', 'OMEGA500:I', 'uIVT:I', 'vIVT:I'
  fincl9		= 'um:I', 'upwp:I', 'up2_tp:I', 'UPWP_UG_CLUBB:I', 'UPWP_UG_CT_CLUBB:I', 'DUDZ_CLUBB:I',
          'UPWP_UG_MEAN_LEV:I', 'UPWP_UG_MIN_LEV:I', 'UPWP_UG_MAX_LEV:I', 'UPWP_UG_MEAN_HGT:I'
- interpolate_nlat		= 768,768,192,192,192,192,192,192,192,192
- interpolate_nlon		= 1152,1152,288,288,288,288,288,288,288,288
+ interpolate_nlat		= 192,192,192,192,192,192,192,192,192,192
+ interpolate_nlon		= 288,288,288,288,288,288,288,288,288,288
  interpolate_output		= .true.,.true.,.false.,.false.,.false.,.false.,.false.,.false.,.false.,.false.
  mfilt		= 0,30,0,100,30,4,80,40,4,48
  ndens		= 2,2,2,2,2,2,2,2,2,2
@@ -311,7 +311,6 @@
 /
 &dust_nl
  dust_emis_fact		= 1.30D0
- soil_erod_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/dst/dst_source2x2tunedcam6-2x2-04062017.nc'
 /
 &dyn_se_inparm
  se_dribble_in_rsplit_loop		=     0
