@@ -14,7 +14,7 @@ fincl1 = 'AODDUST', 'AODVIS', 'AODDUSTdn','AODVISdn','AODBCdn','AODSOAdn','AODSS
 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT',
 'BURDENSO4', 'BURDENSOA', 'CDNUMC', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLOUD', 'FLDS', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC', 'FLUT',
 'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA', 'ICEFRAC', 'LHFLX', 'LWCF','OMEGA500', 'PBLH','PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL','Q',
-'QFLX', 'RELHUM', 'SHFLX', 'SOLIN', 'SST', 'SWCF', 'T', 'TAUX', 'TAUY', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'U', 'U10', 'V'
+'QFLX', 'RELHUM', 'SHFLX', 'SOLIN', 'SST', 'SWCF', 'T', 'TAUX', 'TAUY', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'U', 'U10', 'V', 'LANDFRAC'
 
 !output for MDTF (h1)
 fincl2='PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
@@ -103,9 +103,8 @@ rad_climate = 'A:Q:H2O', 'N:O2:O2',
 'N:VOLC_MMR2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode2_c210211.nc',
 'N:VOLC_MMR3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.2_mode3_c210211.nc'
 
-seasalt_emis_scale = 0.75D0
-
-clubb_c8 = 4.95
+seasalt_emis_scale = 1.5D0
+clubb_c8 = 4.25
 
 ubc_file_path= "/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ubc/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensAvg123.cam.h0zm.H2O.1849-2014_c240604.nc"
 

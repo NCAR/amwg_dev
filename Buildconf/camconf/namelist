@@ -27,7 +27,7 @@ fincl1 = 'AODDUST', 'AODVIS', 'AODDUSTdn','AODVISdn','AODBCdn','AODSOAdn','AODSS
 
 'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'FSNTOA', 'ICEFRAC', 'LHFLX', 'LWCF','OMEGA500', 'PBLH','PRECC', 'PRECL', 'PRECSC', 'PRECSL', 'PRECT', 'PS', 'PSL','Q',
 
-'QFLX', 'RELHUM', 'SHFLX', 'SOLIN', 'SST', 'SWCF', 'T', 'TAUX', 'TAUY', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'U', 'U10', 'V'
+'QFLX', 'RELHUM', 'SHFLX', 'SOLIN', 'SST', 'SWCF', 'T', 'TAUX', 'TAUY', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'U', 'U10', 'V', 'LANDFRAC'
 
 
 
@@ -183,11 +183,9 @@ rad_climate = 'A:Q:H2O', 'N:O2:O2',
 
 
 
-seasalt_emis_scale = 0.75D0
+seasalt_emis_scale = 1.5D0
 
-
-
-clubb_c8 = 4.95
+clubb_c8 = 4.25
 
 
 

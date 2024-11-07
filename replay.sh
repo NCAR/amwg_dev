@@ -2,13 +2,15 @@
 
 set -e
 
-# Created 2024-10-29 15:10:01
+# Created 2024-11-06 10:22:20
 
-CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.002"
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.003"
 
 /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/cime/scripts/create_newcase --compset FMTHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --project 93300722
 
 cd "${CASEDIR}"
+
+./xmlchange --append CAM_CONFIG_OPTS="-rad rrtmgp"
 
 ./xmlchange NTASKS=2304
 
@@ -22,31 +24,7 @@ cd "${CASEDIR}"
 
 ./preview_namelists
 
-./preview_namelists
-
 ./case.build
-
-./xmlchange --append CAM_CONFIG_OPTS="-rad rrtmgp"
-
-./case.setup --reset
-
-./preview_namelists
-
-./case.build
-
-./case.setup --reset
-
-./case.build --clean
-
-./preview_namelists
-
-./preview_namelists
-
-./case.build
-
-./preview_namelists
-
-./preview_namelists
 
 ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
 
@@ -58,7 +36,7 @@ cd "${CASEDIR}"
 
 ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive
 
-./xmlchange JOB_PRIORITY=premium
+./xmlchange JOB_PRIORITY=regular
 
 ./case.submit
 
