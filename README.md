@@ -1,2 +1,2 @@
-# case: f.e30_alpha04a.FMTHIST.ne30_L93.sponge_fix.005
-https://github.com/NCAR/amwg_dev/issues/608
+# case: f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.002
+https://github.com/NCAR/amwg_dev/issues/609

@@ -46,38 +46,6 @@
     namelist group cpl_flds_inparm.
     </desc>
     </entry>
-    <entry id="DMS_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates DMS fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="BRF_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates Bromoform fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="N2O_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates N2O fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
-    <entry id="NH3_EMIS_OCN" value="FALSE">
-      <type>logical</type>
-      <valid_values>TRUE,FALSE</valid_values>
-      <desc>
-      Activates NH3 fluxes to be sent from ocn to atm.
-      Currently this is only available with BLOM ocean component.
-    </desc>
-    </entry>
     <entry id="NCPL_BASE_PERIOD" value="day">
       <type>char</type>
       <valid_values>hour,day,year,decade</valid_values>
@@ -273,7 +241,7 @@
     <entry id="START_TOD" value="0">
       <type>integer</type>
       <desc>
-      Run start time-of-day, units are seconds with values from 0 to 86400.
+      Run start time-of-day
     </desc>
     </entry>
     <entry id="STOP_OPTION" value="nyears">
@@ -296,14 +264,14 @@
       negative value implies off
     </desc>
     </entry>
-    <entry id="REST_OPTION" value="nyears">
+    <entry id="REST_OPTION" value="$STOP_OPTION">
       <type>char</type>
       <valid_values>none,never,nsteps,nseconds,nminutes,nhours,ndays,nmonths,nyears,date,end</valid_values>
       <desc>
       sets frequency of model restart writes (same options as STOP_OPTION)
     </desc>
     </entry>
-    <entry id="REST_N" value="2">
+    <entry id="REST_N" value="$STOP_N">
       <type>integer</type>
       <desc>
       sets model restart writes with REST_OPTION and REST_DATE
@@ -380,7 +348,7 @@
       A setting of TRUE implies a continuation run for mediator only
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="3">
+    <entry id="RESUBMIT" value="0">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -405,11 +373,11 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:6549841.desched1, case.st_archive:6549842.desched1">
+    <entry id="JOB_IDS" value="case.run:6490224.desched1, case.st_archive:6490225.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
-    <entry id="JOB_PRIORITY" value="regular">
+    <entry id="JOB_PRIORITY" value="premium">
       <type>char</type>
       <valid_values>regular,premium,economy</valid_values>
       <desc>job priority for systems supporting this option</desc>
@@ -804,15 +772,15 @@
     https://www.unidata.ucar.edu/software/netcdf/docs/data_type.html
     </desc>
       <values>
-        <value compclass="ATM">64bit_data</value>
-        <value compclass="CPL">64bit_data</value>
-        <value compclass="OCN">64bit_data</value>
-        <value compclass="WAV">64bit_data</value>
-        <value compclass="GLC">64bit_data</value>
-        <value compclass="ICE">64bit_data</value>
-        <value compclass="ROF">64bit_data</value>
-        <value compclass="LND">64bit_data</value>
-        <value compclass="ESP">64bit_data</value>
+        <value compclass="ATM">64bit_offset</value>
+        <value compclass="CPL">64bit_offset</value>
+        <value compclass="OCN">64bit_offset</value>
+        <value compclass="WAV">64bit_offset</value>
+        <value compclass="GLC">64bit_offset</value>
+        <value compclass="ICE">64bit_offset</value>
+        <value compclass="ROF">64bit_offset</value>
+        <value compclass="LND">64bit_offset</value>
+        <value compclass="ESP">64bit_offset</value>
       </values>
     </entry>
     <entry id="PIO_STRIDE">
@@ -942,7 +910,7 @@
       <type>logical</type>
       <valid_values>TRUE,FALSE</valid_values>
       <desc>
-      Only used for compsets with DATM and [POP or MOM] (currently C, G and J):
+      Only used for compsets with DATM and POP (currently C, G and J):
       If true, compute albedos to work with daily avg SW down
       If false (default), albedos are computed with the assumption that downward
       solar radiation from the atm component has a diurnal cycle and zenith-angle
@@ -1037,7 +1005,7 @@
     </entry>
   </group>
   <group id="run_component_cam">
-    <entry id="CAM_NML_USE_CASE" value="hist_cam_mt">
+    <entry id="CAM_NML_USE_CASE" value="hist_cam_lt">
       <type>char</type>
       <valid_values/>
       <desc>CAM namelist use_case.  Provides the use_case option for the

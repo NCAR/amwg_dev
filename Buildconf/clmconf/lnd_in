@@ -16,7 +16,7 @@
  for_testing_use_second_grain_pool = .false.
  fsnowaging = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc'
  fsnowoptics = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_c013122.nc'
- fsurdat = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/surfdata_esmf/ctsm5.3.0/surfdata_ne30np4.pg3_hist_1850_78pfts_c240908.nc'
+ fsurdat = '/glade/derecho/scratch/aherring/restart/ctsm5.2.028/tools/mksurfdata_esmf/surfdata_ne30pg3_SSP3-7.0_1979_78pfts_c241014.nc'
  glc_do_dynglacier = .false.
  glc_snow_persistence_max_days = 0
  h2osno_max = 10000.0
@@ -41,7 +41,7 @@
  nlevsno = 12
  nsegspc = 35
  o3_veg_stress_method = 'unset'
- paramfile = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/paramdata/ctsm60_params.c240822.nc'
+ paramfile = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/paramdata/ctsm60_params.c240814.nc'
  run_zero_weight_urban = .false.
  snicar_dust_optics = 'sahara'
  snicar_numrad_snw = 5
@@ -62,7 +62,7 @@
  use_bedrock = .true.
  use_cn = .false.
  use_crop = .false.
- use_excess_ice = .true.
+ use_excess_ice = .false.
  use_fates = .false.
  use_fertilizer = .false.
  use_fun = .false.
@@ -147,7 +147,7 @@
  do_transient_lakes = .true.
  do_transient_pfts = .true.
  do_transient_urban = .true.
- flanduse_timeseries = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/surfdata_esmf/ctsm5.3.0/landuse.timeseries_ne30np4.pg3_SSP2-4.5_1850-2100_78pfts_c240908.nc'
+ flanduse_timeseries = '/glade/derecho/scratch/aherring/restart/ctsm5.2.028/tools/mksurfdata_esmf/landuse.timeseries_ne30pg3_SSP3-7.0_1979-2026_78pfts_c241014.nc'
  reset_dynbal_baselines = .false.
 /
 &cnvegcarbonstate
@@ -238,9 +238,9 @@
 &cnprecision_inparm
 /
 &clm_glacier_behavior
- glacier_region_behavior = 'single_at_atm_topo','UNSET','virtual','multiple'
- glacier_region_ice_runoff_behavior = 'melted','UNSET','remains_ice','remains_ice'
- glacier_region_melt_behavior = 'remains_in_place','UNSET','replaced_by_ice','replaced_by_ice'
+ glacier_region_behavior = 'single_at_atm_topo','virtual','virtual','multiple'
+ glacier_region_ice_runoff_behavior = 'melted','melted','remains_ice','remains_ice'
+ glacier_region_melt_behavior = 'remains_in_place','replaced_by_ice','replaced_by_ice','replaced_by_ice'
 /
 &crop_inparm
 /
@@ -290,14 +290,10 @@
 &ch4finundated
 /
 &exice_streams
- stream_fldfilename_exice = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/paramdata/exice_init_0.125x0.125_c20220516.nc'
- stream_mapalgo_exice = 'bilinear'
- stream_meshfile_exice = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/paramdata/exice_init_0.125x0.125_ESMFmesh_cdf5_c20220802.nc'
- use_excess_ice_streams = .true.
 /
 &clm_temperature_inparm
  excess_ice_coldstart_depth = 0.5
- excess_ice_coldstart_temp = -3.15
+ excess_ice_coldstart_temp = -1.0
 /
 &soilbgc_decomp
  soil_decomp_method = 'None'
@@ -306,9 +302,7 @@
  leaf_mr_vcm = 0.015d00
 /
 &prigentroughness
- stream_fldfilename_prigentroughness = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/dustemisdata/Prigent_2005_roughness_0.25x0.25_cdf5_c240127.nc'
- stream_meshfile_prigentroughness = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/dustemisdata/dust_0.25x0.25_ESMFmesh_cdf5_c240222.nc'
- use_prigent_roughness = .true.
+ use_prigent_roughness = .false.
 /
 &zendersoilerod
 /
@@ -319,7 +313,7 @@
 !#--------------------------------------------------------------------------------------------------------------------------
 !# lnd_in:: Comment:
 !# This namelist was created using the following command-line:
-!#     /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/cime -infile /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.sponge_fix.005/Buildconf/clmconf/namelist -csmdata /glade/campaign/cesm/cesmdata/inputdata -inputdata /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.sponge_fix.005/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=20000101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type default -envxml_dir /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.sponge_fix.005 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93.sponge_fix.005/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm6_0_cam7.0 -mask gx1v7
+!#     /glade/work/hannay/cesm_tags/cam6_4_036/components/clm/bld/CLM build-namelist -cimeroot /glade/work/hannay/cesm_tags/cam6_4_036/cime -infile /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.002/Buildconf/clmconf/namelist -csmdata /glade/campaign/cesm/cesmdata/inputdata -inputdata /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.002/Buildconf/ctsm.input_data_list -ignore_ic_year -namelist &clm_inparm  start_ymd=20000101 /  -no-megan -use_case 20thC_transient -res ne30np4.pg3 -clm_start_type default -envxml_dir /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.002 -configuration clm -structure standard -glc_nec 10 -co2_ppmv 284.7 -co2_type diagnostic -config /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_036.FLTHIST.ne30_L32.cam5.002/Buildconf/clmconf/config_cache.xml -driver nuopc -bgc sp -clm_accelerated_spinup off -lnd_tuning_mode clm6_0_cam7.0 -mask gx1v7
 !# 
-!# For help on options use: /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/components/clm/bld/CLM build-namelist -help
+!# For help on options use: /glade/work/hannay/cesm_tags/cam6_4_036/components/clm/bld/CLM build-namelist -help
 !#--------------------------------------------------------------------------------------------------------------------------

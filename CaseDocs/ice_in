@@ -130,12 +130,12 @@
   albicev = 0.75
   albsnowi = 0.73
   albsnowv = 0.98
-  dt_mlt = 1.50
+  dt_mlt = 1.00
   kalg = 0.0
   r_ice = 0.0
   r_pnd = 0.0
-  r_snw = 1.25
-  rsnw_mlt = 1500.
+  r_snw = 1.75
+  rsnw_mlt = 1000.
   shortwave = "dEdd"
   sw_dtemp = 0.01d0
   sw_frac = 1.0d0
@@ -195,7 +195,7 @@
 /
 &domain_nml
   add_mpi_barriers = .false.
-  block_size_x = 20
+  block_size_x = 36
   block_size_y = 1
   distribution_type = "roundrobin"
   distribution_wght = "blockall"
