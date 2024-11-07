@@ -126,7 +126,7 @@
  cldfrc_premib		=  700.0D2 
  cldfrc_premit		=  40000.0D0 
  cldfrc_rhminh		=  0.800D0 
- cldfrc_rhminl		= 0.88750D0
+ cldfrc_rhminl		=  0.8975D0 
  cldfrc_rhminl_adj_land		=  0.100D0 
  cldfrc_sh1		=  0.04D0 
  cldfrc_sh2		=  500.0D0 
@@ -367,7 +367,7 @@
  ubc_specifier		= 'Q:H2O->UBC_FILE'
 /
 &uwshcu_nl
- uwshcu_rpen		= 10
+ uwshcu_rpen		= 5
 /
 &vert_diff_nl
  diff_cnsrv_mass_check		=  .false. 

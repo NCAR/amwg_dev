@@ -106,8 +106,7 @@ tracer_cnst_type= 'INTERP_MISSING_MONTHS'
   'so4_a1    -> /glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/chem/trop_mozart_aero/emis/rcp45_1999-2100/RCP45_mam3_so4_a1_surf_2000-2100_c20111116.nc',
   'so4_a2    -> /glade/campaign/cesm/cesmdata/cseg/inputdata/atm/cam/chem/trop_mozart_aero/emis/rcp45_1999-2100/RCP45_mam3_so4_a2_surf_2000-2100_c20111116.nc'
 
-uwshcu_rpen = 10
 zmconv_ke = 1e-6
 zmconv_ke_lnd = 1e-6
 use_gw_convect_dp = .true.
-cldfrc_rhminl= 0.88750D0
+uwshcu_rpen = 5
