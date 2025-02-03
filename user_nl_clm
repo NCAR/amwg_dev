@@ -13,10 +13,7 @@ hist_nhtfrq = 0,-24
 hist_mfilt  = 1,365                                                     
 hist_ndens  = 2,2  
 
-
-fsurdat = '/glade/derecho/scratch/aherring/restart/ctsm5.2.028/tools/mksurfdata_esmf/surfdata_ne30pg3_SSP3-7.0_1979_78pfts_c241014.nc'
-flanduse_timeseries = '/glade/derecho/scratch/aherring/restart/ctsm5.2.028/tools/mksurfdata_esmf/landuse.timeseries_ne30pg3_SSP3-7.0_1979-2026_78pfts_c241014.nc' 
 finidat = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/initdata_esmf/ctsm5.3/ctsm53n04ctsm52028_ne30pg3t232_BgcCrop_exice_hist.clm60.r.2000-01-01.nc'
+
 use_init_interp = .true.
-use_excess_ice = .false.
 
