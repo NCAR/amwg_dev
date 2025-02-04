@@ -34,7 +34,7 @@
          'TAUY', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'U', 'U10', 'V', 'LANDFRAC'
  fincl10		= 'Z500:I', 'PSL:I', 'U10:I', 'Z250:I', 'PRECT:A', 'PRECC:A', 'uIVT:I', 'vIVT:I', 'U850:I', 'U200:I', 'V850:I',
          'V200:I', 'Q850:I', 'T850:I', 'FLUT:I'
- fincl2		= 'PRECT','PRECC','FLUT','U850','U200','V850','V200','OMEGA500','TS','SST','PSL'
+ fincl2		= 'PRECT','PRECC','FLUT','U850','U200','V850','V200','OMEGA500','TS','SST','PSL','Z500'
  fincl3		= 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn', 'AODDUSTdn', 'AODVISdn',
          'AODBCdn', 'AODSOAdn', 'AODSSdn', 'AODPOMdn', 'AODSO4dn', 'BURDENBC', 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT',
          'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ',
@@ -310,7 +310,7 @@
  conv_water_in_rad		=  1 
 /
 &dust_nl
- dust_emis_fact		= 1.30D0
+ dust_emis_fact		= 2.3
 /
 &dyn_se_inparm
  se_dribble_in_rsplit_loop		=     0

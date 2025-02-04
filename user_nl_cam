@@ -17,7 +17,7 @@ fincl1 = 'AODDUST', 'AODVIS', 'AODDUSTdn','AODVISdn','AODBCdn','AODSOAdn','AODSS
 'QFLX', 'RELHUM', 'SHFLX', 'SOLIN', 'SST', 'SWCF', 'T', 'TAUX', 'TAUY', 'TGCLDIWP', 'TGCLDLWP', 'TMQ', 'TREFHT', 'TS', 'U', 'U10', 'V', 'LANDFRAC'
 
 !output for MDTF (h1)
-fincl2='PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
+fincl2='PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL', 'Z500'
 
 ! native grid
 !monthly (h2)
@@ -103,9 +103,6 @@ rad_climate = 'A:Q:H2O', 'N:O2:O2',
 'N:VOLC_MMR2:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.6_mode2_c210211.nc',
 'N:VOLC_MMR3:/glade/campaign/cesm/cesmdata/inputdata/atm/cam/physprops/volc_camRRTMG_byradius_sigma1.2_mode3_c210211.nc'
 
-seasalt_emis_scale = 0.75D0
-clubb_c8 = 4.95
-
 ubc_file_path= "/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ubc/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensAvg123.cam.h0zm.H2O.1849-2014_c240604.nc"
 
 se_statefreq=144
@@ -115,5 +112,8 @@ ncdata = '/glade/campaign/cgd/amp/juliob/ERA5/ne30np4/L93_cdf5/ERA5_x_ne30np4_L9
 use_gw_front = .true.
 taubgnd  = 1.25D-3
 
+seasalt_emis_scale = 0.75D0
+clubb_c8 = 4.95
 dust_emis_method = 'Leung_2023'
+dust_emis_fact = 2.3 
 

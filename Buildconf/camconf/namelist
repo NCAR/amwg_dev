@@ -31,7 +31,7 @@ fincl1 = 'AODDUST', 'AODVIS', 'AODDUSTdn','AODVISdn','AODBCdn','AODSOAdn','AODSS
 
 
 
-fincl2='PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
+fincl2='PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL', 'Z500'
 
 
 
@@ -183,12 +183,6 @@ rad_climate = 'A:Q:H2O', 'N:O2:O2',
 
 
 
-seasalt_emis_scale = 0.75D0
-
-clubb_c8 = 4.95
-
-
-
 ubc_file_path= "/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/ubc/b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensAvg123.cam.h0zm.H2O.1849-2014_c240604.nc"
 
 
@@ -207,7 +201,13 @@ taubgnd  = 1.25D-3
 
 
 
+seasalt_emis_scale = 0.75D0
+
+clubb_c8 = 4.95
+
 dust_emis_method = 'Leung_2023'
+
+dust_emis_fact = 2.3 
 
 
 
