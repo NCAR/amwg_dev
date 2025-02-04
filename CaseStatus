@@ -1,112 +1,112 @@
-2024-12-20 15:10:17: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
+2024-12-20 15:14:49: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
  ---------------------------------------------------
-2024-12-20 15:10:17: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2024-12-20 15:14:49: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2024-12-20 15:10:17: xmlchange success <command> ./xmlchange NTASKS=2160  </command>
+2024-12-20 15:14:50: xmlchange success <command> ./xmlchange NTASKS=2160  </command>
  ---------------------------------------------------
-2024-12-20 15:10:18: case.setup starting 
+2024-12-20 15:14:50: case.setup starting 
  ---------------------------------------------------
-2024-12-20 15:10:20: case.setup success 
+2024-12-20 15:14:52: case.setup success 
  ---------------------------------------------------
-2024-12-20 15:10:20:   local git repository created
+2024-12-20 15:14:52:   local git repository created
  ---------------------------------------------------
-2024-12-20 15:10:22: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
+2024-12-20 15:14:54: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
  ---------------------------------------------------
-2024-12-20 15:10:49: case.build starting 
+2024-12-20 15:15:17: case.build starting 
  ---------------------------------------------------
-2024-12-20 15:19:56: case.build success 
+2024-12-20 15:23:58: case.build success 
  ---------------------------------------------------
-2024-12-20 15:22:39: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
+2024-12-20 15:23:59: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
  ---------------------------------------------------
-2024-12-20 15:22:39: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
+2024-12-20 15:24:00: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2024-12-20 15:22:40: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
+2024-12-20 15:24:00: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
  ---------------------------------------------------
-2024-12-20 15:22:41: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
+2024-12-20 15:24:01: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
  ---------------------------------------------------
-2024-12-20 15:22:42: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
+2024-12-20 15:24:01: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
  ---------------------------------------------------
-2024-12-20 15:22:42: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
+2024-12-20 15:24:02: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
  ---------------------------------------------------
-2024-12-20 15:22:43: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
+2024-12-20 15:24:03: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
  ---------------------------------------------------
-2024-12-20 15:22:49: case.submit starting 7291955.desched1
+2024-12-20 15:24:09: case.submit starting 7291963.desched1
  ---------------------------------------------------
-2024-12-20 15:22:49: case.submit success 7291955.desched1
+2024-12-20 15:24:09: case.submit success 7291963.desched1
  ---------------------------------------------------
-2024-12-20 15:23:04: case.run starting 7291954.desched1
+2024-12-20 15:24:23: case.run starting 7291961.desched1
  ---------------------------------------------------
-2024-12-20 15:23:10: model execution starting 7291954.desched1
+2024-12-20 15:24:30: model execution starting 7291961.desched1
  ---------------------------------------------------
-2024-12-20 21:39:32: model execution success 7291954.desched1
+2024-12-20 21:40:37: model execution success 7291961.desched1
  ---------------------------------------------------
-2024-12-20 21:39:33: case.run success 7291954.desched1
+2024-12-20 21:40:38: case.run success 7291961.desched1
  ---------------------------------------------------
-2024-12-20 21:39:48: st_archive starting 7291955.desched1
+2024-12-20 21:40:57: st_archive starting 7291963.desched1
  ---------------------------------------------------
-2024-12-20 21:40:11: st_archive success 7291955.desched1
+2024-12-20 21:41:20: st_archive success 7291963.desched1
  ---------------------------------------------------
-2024-12-20 21:40:12: case.submit starting 7293736.desched1
+2024-12-20 21:41:20: case.submit starting 7293739.desched1
  ---------------------------------------------------
-2024-12-20 21:40:12: case.submit success 7293736.desched1
+2024-12-20 21:41:21: case.submit success 7293739.desched1
  ---------------------------------------------------
-2024-12-20 21:40:33: case.run starting 7293735.desched1
+2024-12-20 21:41:35: case.run starting 7293738.desched1
  ---------------------------------------------------
-2024-12-20 21:40:41: model execution starting 7293735.desched1
+2024-12-20 21:41:42: model execution starting 7293738.desched1
  ---------------------------------------------------
-2024-12-21 04:01:29: model execution success 7293735.desched1
+2024-12-21 03:58:29: model execution success 7293738.desched1
  ---------------------------------------------------
-2024-12-21 04:01:30: case.run success 7293735.desched1
+2024-12-21 03:58:29: case.run success 7293738.desched1
  ---------------------------------------------------
-2024-12-21 04:01:48: st_archive starting 7293736.desched1
+2024-12-21 03:58:48: st_archive starting 7293739.desched1
  ---------------------------------------------------
-2024-12-21 04:02:25: st_archive success 7293736.desched1
+2024-12-21 03:59:18: st_archive success 7293739.desched1
  ---------------------------------------------------
-2024-12-21 04:02:28: case.submit starting 7294870.desched1
+2024-12-21 03:59:19: case.submit starting 7294863.desched1
  ---------------------------------------------------
-2024-12-21 04:02:28: case.submit success 7294870.desched1
+2024-12-21 03:59:19: case.submit success 7294863.desched1
  ---------------------------------------------------
-2024-12-21 04:02:44: case.run starting 7294869.desched1
+2024-12-21 03:59:33: case.run starting 7294862.desched1
  ---------------------------------------------------
-2024-12-21 04:02:50: model execution starting 7294869.desched1
+2024-12-21 03:59:39: model execution starting 7294862.desched1
  ---------------------------------------------------
-2024-12-21 10:19:06: model execution success 7294869.desched1
+2024-12-21 10:14:31: model execution success 7294862.desched1
  ---------------------------------------------------
-2024-12-21 10:19:06: case.run success 7294869.desched1
+2024-12-21 10:14:32: case.run success 7294862.desched1
  ---------------------------------------------------
-2024-12-21 10:19:22: st_archive starting 7294870.desched1
+2024-12-21 10:14:46: st_archive starting 7294863.desched1
  ---------------------------------------------------
-2024-12-21 10:19:46: st_archive success 7294870.desched1
+2024-12-21 10:15:11: st_archive success 7294863.desched1
  ---------------------------------------------------
-2024-12-21 10:19:48: case.submit starting 7297739.desched1
+2024-12-21 10:15:11: case.submit starting 7297712.desched1
  ---------------------------------------------------
-2024-12-21 10:19:48: case.submit success 7297739.desched1
+2024-12-21 10:15:11: case.submit success 7297712.desched1
  ---------------------------------------------------
-2024-12-21 10:20:03: case.run starting 7297738.desched1
+2024-12-21 10:15:28: case.run starting 7297711.desched1
  ---------------------------------------------------
-2024-12-21 10:20:07: model execution starting 7297738.desched1
+2024-12-21 10:15:32: model execution starting 7297711.desched1
  ---------------------------------------------------
-2024-12-21 16:38:56: model execution success 7297738.desched1
+2024-12-21 16:31:05: model execution success 7297711.desched1
  ---------------------------------------------------
-2024-12-21 16:38:56: case.run success 7297738.desched1
+2024-12-21 16:31:05: case.run success 7297711.desched1
  ---------------------------------------------------
-2024-12-21 16:39:12: st_archive starting 7297739.desched1
+2024-12-21 16:31:19: st_archive starting 7297712.desched1
  ---------------------------------------------------
-2024-12-21 16:39:36: st_archive success 7297739.desched1
+2024-12-21 16:31:57: st_archive success 7297712.desched1
  ---------------------------------------------------
-2024-12-21 16:39:38: case.submit starting 7300151.desched1
+2024-12-21 16:31:57: case.submit starting 7300121.desched1
  ---------------------------------------------------
-2024-12-21 16:39:38: case.submit success 7300151.desched1
+2024-12-21 16:31:57: case.submit success 7300121.desched1
  ---------------------------------------------------
-2024-12-21 16:39:57: case.run starting 7300150.desched1
+2024-12-21 16:32:15: case.run starting 7300120.desched1
  ---------------------------------------------------
-2024-12-21 16:40:03: model execution starting 7300150.desched1
+2024-12-21 16:32:21: model execution starting 7300120.desched1
  ---------------------------------------------------
-2024-12-21 22:56:22: model execution success 7300150.desched1
+2024-12-21 22:49:28: model execution success 7300120.desched1
  ---------------------------------------------------
-2024-12-21 22:56:22: case.run success 7300150.desched1
+2024-12-21 22:49:29: case.run success 7300120.desched1
  ---------------------------------------------------
-2024-12-21 22:56:37: st_archive starting 7300151.desched1
+2024-12-21 22:49:47: st_archive starting 7300121.desched1
  ---------------------------------------------------
-2024-12-21 22:57:01: st_archive success 7300151.desched1
+2024-12-21 22:50:10: st_archive success 7300121.desched1
  ---------------------------------------------------
