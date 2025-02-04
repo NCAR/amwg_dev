@@ -146,7 +146,7 @@
  cldfrc2m_qist_min		= 1.e-7 
  cldfrc2m_rhmaxi		=   1.0D0  
  cldfrc2m_rhmaxis		=   1.0D0  
- cldfrc2m_rhmini		=   0.80D0  
+ cldfrc2m_rhmini		= 0.60
  cldfrc2m_rhminis		=   1.0D0 
 /
 &cldfrc_nl
@@ -399,7 +399,7 @@
  micro_mg_precip_frac_method		= 'in_cloud'
  micro_mg_sub_version		=     0          
  micro_mg_version		=     3          
- micro_mg_vtrmi_factor		= 0.75
+ micro_mg_vtrmi_factor		=   1.D0    
  micro_mg_vtrms_factor		=   1.D0    
  micro_mg_warm_rain		= 'kk2000'
 /
