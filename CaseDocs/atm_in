@@ -147,7 +147,7 @@
  cldfrc2m_rhmaxi		=   1.0D0  
  cldfrc2m_rhmaxis		=   1.0D0  
  cldfrc2m_rhmini		=   0.80D0  
- cldfrc2m_rhminis		= 0.80
+ cldfrc2m_rhminis		=   1.0D0 
 /
 &cldfrc_nl
  cldfrc_dp1		=  0.10D0 
@@ -439,7 +439,7 @@
  cam_snapshot_after_num		=    -1 
  cam_snapshot_before_num		=   -1 
  cld_macmic_num_steps		=  3 
- convproc_do_aer		= .true.
+ convproc_do_aer		= .false.
  deep_scheme		= 'ZM'
  do_clubb_sgs		=  .true.  
  do_hb_above_clubb		= .true.   

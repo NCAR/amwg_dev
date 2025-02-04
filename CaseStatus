@@ -1,110 +1,110 @@
-2025-01-19 21:12:04: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
+2025-01-19 21:25:43: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
  ---------------------------------------------------
-2025-01-19 21:12:05: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2025-01-19 21:25:43: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2025-01-19 21:12:05: xmlchange success <command> ./xmlchange NTASKS=2160  </command>
+2025-01-19 21:25:44: xmlchange success <command> ./xmlchange NTASKS=2160  </command>
  ---------------------------------------------------
-2025-01-19 21:12:05: case.setup starting 
+2025-01-19 21:25:44: case.setup starting 
  ---------------------------------------------------
-2025-01-19 21:12:08: case.setup success 
+2025-01-19 21:25:46: case.setup success 
  ---------------------------------------------------
-2025-01-19 21:12:08:   local git repository created
+2025-01-19 21:25:46:   local git repository created
  ---------------------------------------------------
-2025-01-19 21:12:10: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
+2025-01-19 21:25:48: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
  ---------------------------------------------------
-2025-01-19 21:12:34: case.build starting 
+2025-01-19 21:26:10: case.build starting 
  ---------------------------------------------------
-2025-01-19 21:20:59: case.build success 
+2025-01-19 21:34:42: case.build success 
  ---------------------------------------------------
-2025-01-19 21:21:01: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
+2025-01-19 21:34:44: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2025-01-19 21:21:02: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
+2025-01-19 21:34:45: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
  ---------------------------------------------------
-2025-01-19 21:21:03: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
+2025-01-19 21:34:46: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
  ---------------------------------------------------
-2025-01-19 21:21:03: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
+2025-01-19 21:34:46: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
  ---------------------------------------------------
-2025-01-19 21:21:04: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
+2025-01-19 21:34:47: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
  ---------------------------------------------------
-2025-01-19 21:21:05: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
+2025-01-19 21:34:48: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
  ---------------------------------------------------
-2025-01-19 21:21:11: case.submit starting 7530473.desched1
+2025-01-19 21:34:55: case.submit starting 7530529.desched1
  ---------------------------------------------------
-2025-01-19 21:21:11: case.submit success 7530473.desched1
+2025-01-19 21:34:55: case.submit success 7530529.desched1
  ---------------------------------------------------
-2025-01-19 21:24:46: case.run starting 7530472.desched1
+2025-01-19 21:42:55: case.run starting 7530528.desched1
  ---------------------------------------------------
-2025-01-19 21:24:51: model execution starting 7530472.desched1
+2025-01-19 21:43:01: model execution starting 7530528.desched1
  ---------------------------------------------------
-2025-01-20 03:40:43: model execution success 7530472.desched1
+2025-01-20 03:53:32: model execution success 7530528.desched1
  ---------------------------------------------------
-2025-01-20 03:40:43: case.run success 7530472.desched1
+2025-01-20 03:53:32: case.run success 7530528.desched1
  ---------------------------------------------------
-2025-01-20 03:41:01: st_archive starting 7530473.desched1
+2025-01-20 03:53:48: st_archive starting 7530529.desched1
  ---------------------------------------------------
-2025-01-20 03:41:38: st_archive success 7530473.desched1
+2025-01-20 03:54:36: st_archive success 7530529.desched1
  ---------------------------------------------------
-2025-01-20 03:41:39: case.submit starting 7531805.desched1
+2025-01-20 03:54:36: case.submit starting 7531821.desched1
  ---------------------------------------------------
-2025-01-20 03:41:39: case.submit success 7531805.desched1
+2025-01-20 03:54:36: case.submit success 7531821.desched1
  ---------------------------------------------------
-2025-01-20 04:41:41: case.run starting 7531804.desched1
+2025-01-20 04:45:55: case.run starting 7531820.desched1
  ---------------------------------------------------
-2025-01-20 04:41:46: model execution starting 7531804.desched1
+2025-01-20 04:46:00: model execution starting 7531820.desched1
  ---------------------------------------------------
-2025-01-20 10:55:47: model execution success 7531804.desched1
+2025-01-20 10:56:24: model execution success 7531820.desched1
  ---------------------------------------------------
-2025-01-20 10:55:47: case.run success 7531804.desched1
+2025-01-20 10:56:25: case.run success 7531820.desched1
  ---------------------------------------------------
-2025-01-20 10:56:04: st_archive starting 7531805.desched1
+2025-01-20 10:56:39: st_archive starting 7531821.desched1
  ---------------------------------------------------
-2025-01-20 10:56:48: st_archive success 7531805.desched1
+2025-01-20 10:57:20: st_archive success 7531821.desched1
  ---------------------------------------------------
-2025-01-20 10:56:48: case.submit starting 7533048.desched1
+2025-01-20 10:57:20: case.submit starting 7533051.desched1
  ---------------------------------------------------
-2025-01-20 10:56:49: case.submit success 7533048.desched1
+2025-01-20 10:57:20: case.submit success 7533051.desched1
  ---------------------------------------------------
-2025-01-20 10:57:04: case.run starting 7533047.desched1
+2025-01-20 10:57:37: case.run starting 7533050.desched1
  ---------------------------------------------------
-2025-01-20 10:57:08: model execution starting 7533047.desched1
+2025-01-20 10:57:42: model execution starting 7533050.desched1
  ---------------------------------------------------
-2025-01-20 17:10:32: model execution success 7533047.desched1
+2025-01-20 17:09:29: model execution success 7533050.desched1
  ---------------------------------------------------
-2025-01-20 17:10:32: case.run success 7533047.desched1
+2025-01-20 17:09:30: case.run success 7533050.desched1
  ---------------------------------------------------
-2025-01-20 17:10:48: st_archive starting 7533048.desched1
+2025-01-20 17:09:49: st_archive starting 7533051.desched1
  ---------------------------------------------------
-2025-01-20 17:11:13: st_archive success 7533048.desched1
+2025-01-20 17:10:12: st_archive success 7533051.desched1
  ---------------------------------------------------
-2025-01-20 17:11:16: case.submit starting 7534819.desched1
+2025-01-20 17:10:15: case.submit starting 7534815.desched1
  ---------------------------------------------------
-2025-01-20 17:11:16: case.submit success 7534819.desched1
+2025-01-20 17:10:16: case.submit success 7534815.desched1
  ---------------------------------------------------
-2025-01-20 17:11:31: case.run starting 7534816.desched1
+2025-01-20 17:10:32: case.run starting 7534814.desched1
  ---------------------------------------------------
-2025-01-20 17:11:36: model execution starting 7534816.desched1
+2025-01-20 17:10:36: model execution starting 7534814.desched1
  ---------------------------------------------------
-2025-01-20 23:26:12: model execution success 7534816.desched1
+2025-01-20 23:20:55: model execution success 7534814.desched1
  ---------------------------------------------------
-2025-01-20 23:26:13: case.run success 7534816.desched1
+2025-01-20 23:20:55: case.run success 7534814.desched1
  ---------------------------------------------------
-2025-01-20 23:26:30: st_archive starting 7534819.desched1
+2025-01-20 23:21:12: st_archive starting 7534815.desched1
  ---------------------------------------------------
-2025-01-20 23:26:56: st_archive success 7534819.desched1
+2025-01-20 23:21:41: st_archive success 7534815.desched1
  ---------------------------------------------------
-2025-01-20 23:26:56: case.submit starting 7535967.desched1
+2025-01-20 23:21:41: case.submit starting 7535955.desched1
  ---------------------------------------------------
-2025-01-20 23:26:57: case.submit success 7535967.desched1
+2025-01-20 23:21:41: case.submit success 7535955.desched1
  ---------------------------------------------------
-2025-01-20 23:27:11: case.run starting 7535966.desched1
+2025-01-20 23:21:56: case.run starting 7535954.desched1
  ---------------------------------------------------
-2025-01-20 23:27:15: model execution starting 7535966.desched1
+2025-01-20 23:22:00: model execution starting 7535954.desched1
  ---------------------------------------------------
-2025-01-21 05:41:15: model execution success 7535966.desched1
+2025-01-21 05:32:27: model execution success 7535954.desched1
  ---------------------------------------------------
-2025-01-21 05:41:15: case.run success 7535966.desched1
+2025-01-21 05:32:27: case.run success 7535954.desched1
  ---------------------------------------------------
-2025-01-21 05:41:32: st_archive starting 7535967.desched1
+2025-01-21 05:32:47: st_archive starting 7535955.desched1
  ---------------------------------------------------
-2025-01-21 05:41:59: st_archive success 7535967.desched1
+2025-01-21 05:33:10: st_archive success 7535955.desched1
  ---------------------------------------------------
