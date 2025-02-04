@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2024-12-19 15:28:27
+# Created 2024-12-20 15:10:16
 
-CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta04.FLTHIST.ne30.rhmini0.7.001"
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta04.FLTHIST.ne30.jmaxb0.001"
 
 /glade/work/hannay/cesm_tags/cesm3_0_beta04/cime/scripts/create_newcase --compset FLTHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --project 93300722
 
@@ -25,6 +25,8 @@ cd "${CASEDIR}"
 ./preview_namelists
 
 ./case.build
+
+./xmlchange CONTINUE_RUN=FALSE
 
 ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
 
