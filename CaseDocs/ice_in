@@ -8,8 +8,8 @@
   hist_avg = .true., .true., .true., .true., .true.
   hist_suffix = "x", "1", "2", "3", "4"
   hist_time_axis = "middle"
-  histfreq = "m", "x", "x", "x", "x"
-  histfreq_n = 1, 0, 0, 0, 0
+  histfreq = "m", "d", "x", "x", "x"
+  histfreq_n = 1, 1, 0, 0, 0
   history_file = "unknown"
   history_format = "default"
   history_precision = 4
@@ -19,7 +19,7 @@
   ndtd = 1
   numax = 99
   numin = 11
-  pointer_file = "./rpointer.ice"
+  pointer_file = "rpointer.ice.2008-01-01-00000"
   print_global = .true.
   print_points = .false.
   restart_ext = .false.
@@ -70,6 +70,7 @@
   restart_iso = .false.
   restart_lvl = .false.
   restart_pond_lvl = .false.
+  restart_pond_sealvl = .false.
   restart_pond_topo = .false.
   restart_snow = .false.
   tr_aero = .false.
@@ -79,8 +80,9 @@
   tr_iso = .false.
   tr_lvl = .true.
   tr_pond_lvl = .true.
+  tr_pond_sealvl = .false.
   tr_pond_topo = .false.
-  tr_snow = .false.
+  tr_snow = .true.
 /
 &thermo_nml
   Tliquidus_max = -0.1
@@ -147,9 +149,10 @@
   hp1 = 0.01
   hs0 = 0.0
   hs1 = 0.03
-  pndaspect = 0.8
+  pndaspect = 0.8d0
   rfracmax = 0.85
   rfracmin = 0.15
+  tscale_pnd_drain = 0.5d0
 /
 &snow_nml
   drhosdwind = 27.3
@@ -168,7 +171,7 @@
   snw_tau_fname = "unknown"
   snwgrain = .false.
   snwlvlfac = 0.3
-  snwredist = "none"
+  snwredist = "snwITDrdg"
   use_smliq_pnd = .false.
   windmin = 10.0
 /
@@ -176,6 +179,7 @@
   atmbndy = "default"
   calc_strair = .true.
   calc_tsfc = .true.
+  congel_freeze = "one-step"
   emissivity = 0.95d0
   fbot_xfer_type = "constant"
   formdrag = .false.
@@ -308,11 +312,23 @@
   f_apond = "xxxxx"
   f_apond_ai = "xxxxx"
   f_apondn = "xxxxx"
+  f_expnd = "xxxxx"
+  f_expndn = "xxxxx"
+  f_flpnd = "xxxxx"
+  f_flpndn = "xxxxx"
+  f_frpnd = "xxxxx"
+  f_frpndn = "xxxxx"
   f_hpond = "xxxxx"
   f_hpond_ai = "xxxxx"
   f_hpondn = "xxxxx"
+  f_ilpnd = "xxxxx"
+  f_ilpndn = "xxxxx"
   f_ipond = "xxxxx"
   f_ipond_ai = "xxxxx"
+  f_mipnd = "xxxxx"
+  f_rdpnd = "xxxxx"
+  f_rfpnd = "xxxxx"
+  f_rfpndn = "xxxxx"
 /
 &icefields_snow_nml
   f_fsloss = "xxxxx"
@@ -394,7 +410,7 @@
   f_fswint_ai = "xxxxx"
   f_fswthru = "xxxxx"
   f_fswthru_ai = "xxxxx"
-  f_fswup = "mxxxx"
+  f_fswup = "mdxxx"
   f_fy = "xxxxx"
   f_hi = "xxxxx"
   f_hisnap = "xxxxx"
@@ -421,7 +437,7 @@
   f_snoice = "xxxxx"
   f_snow = "xxxxx"
   f_snow_ai = "xxxxx"
-  f_snowfrac = "mxxxx"
+  f_snowfrac = "mnxxx"
   f_snowfracn = "xxxxx"
   f_sss = "xxxxx"
   f_sst = "xxxxx"
