@@ -9,7 +9,7 @@
  aer_wetdep_list		= 'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3', 'ncl_a1', 'ncl_a2', 'ncl_a3', 'num_a1', 'num_a2', 'num_a3',
          'num_a4', 'pom_a1', 'pom_a4', 'so4_a1', 'so4_a2', 'so4_a3', 'soa_a1', 'soa_a2'
  modal_accum_coarse_exch		= .true.
- seasalt_emis_scale		= 1.0D0
+ seasalt_emis_scale		= 1.5D0
  sol_factb_interstitial		= 0.1D0
  sol_facti_cloud_borne		= 1.0D0
  sol_factic_interstitial		= 0.4D0
@@ -69,7 +69,7 @@
          'VTEND_CLUBB', 'VTEND_CORE'
  fincl4		= 'Uzm','Vzm','Wzm','THzm','VTHzm','WTHzm','UVzm','UWzm'
  fincl5		= 'SHFLX', 'LHFLX', 'PBLH', 'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST',
-         'PSL', 'Z500'
+         'PSL'
  fincl6		= 'PS:I','U:I','V:I','T:I','OMEGA:I','PMID:I','PSDRY:I'
  fincl7		= 'PRECC:A','PRECL:A'
  fincl8		= 'PRECC:I', 'PRECL:I', 'U850:I', 'V850:I', 'T500:I', 'T200:I', 'Z850:I', 'Z500:I', 'Z300:I', 'PSL:I',
