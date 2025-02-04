@@ -127,7 +127,7 @@ phys_grid_ctem_za_nlat=90
 
 fincl5 = 'SHFLX', 'LHFLX', 'PBLH',
 
-'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL'
+'PRECT', 'PRECC', 'FLUT', 'U850', 'U200', 'V850', 'V200', 'OMEGA500', 'TS', 'SST', 'PSL', 'Z500'
 
 
 
@@ -201,9 +201,9 @@ taubgnd  = 1.25D-3
 
 
 
-seasalt_emis_scale = 1.5D0
+seasalt_emis_scale = 1.0D0
 
-clubb_c8 = 4.95
+clubb_c8 = 4.4
 
 dust_emis_method = 'Leung_2023'
 
