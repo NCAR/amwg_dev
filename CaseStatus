@@ -1,141 +1,122 @@
-2025-01-29 13:39:24: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
+2025-01-31 15:03:55: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
  ---------------------------------------------------
-2025-01-29 13:39:24: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2025-01-31 15:03:56: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2025-01-29 13:39:25: xmlchange success <command> ./xmlchange NTASKS=2160  </command>
+2025-01-31 15:03:56: xmlchange success <command> ./xmlchange NTASKS=2160  </command>
  ---------------------------------------------------
-2025-01-29 13:39:25: case.setup starting 
+2025-01-31 15:03:56: case.setup starting 
  ---------------------------------------------------
-2025-01-29 13:39:28: case.setup success 
+2025-01-31 15:03:59: case.setup success 
  ---------------------------------------------------
-2025-01-29 13:39:28:   local git repository created
+2025-01-31 15:03:59:   local git repository created
  ---------------------------------------------------
-2025-01-29 13:39:30: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
+2025-01-31 15:04:00: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
  ---------------------------------------------------
-2025-01-29 13:40:45: case.build starting 
+2025-01-31 15:04:25: case.build starting 
  ---------------------------------------------------
-2025-01-29 13:49:21: case.build success 
+2025-01-31 15:09:19: case.build starting 
  ---------------------------------------------------
-2025-01-29 13:49:24: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
+2025-01-31 15:15:07: case.build error 
+ERROR: BUILD FAIL: buildexe failed, cat /glade/derecho/scratch/hannay/f.e30_beta04.FLTHIST.ne30.001_pia/bld/cesm.bldlog.250131-150920
  ---------------------------------------------------
-2025-01-29 13:49:25: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
+2025-01-31 15:15:08: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2025-01-29 13:49:26: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
+2025-01-31 15:15:09: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
  ---------------------------------------------------
-2025-01-29 13:49:27: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
+2025-01-31 15:15:09: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
  ---------------------------------------------------
-2025-01-29 13:49:28: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
+2025-01-31 15:15:10: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
  ---------------------------------------------------
-2025-01-29 13:49:37: case.submit starting 
+2025-01-31 15:15:11: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
  ---------------------------------------------------
-2025-01-29 13:49:37: case.submit error 
-ERROR: Command: 'qsub -q main -l walltime=12:00:00 -A 93300722 -l job_priority=regular -v ARGS_FOR_SCRIPT='--resubmit' /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta04.FLTHIST.ne30.dcs600.001/.case.run' failed with error 'qsub: Invalid account for CPU usage, available accounts:
-Project, Status, Active
-P93300624, Expired, True
-P93300065, Normal, True
-CESM0019, Normal, True
-P93300042, Normal, True
-P93300324, Normal, True
-CESM0002, Normal, True
-CESM0023, Normal, True
-P93300642, Expired, True
-P93300606, Normal, True
-CESM0024, Normal, True
-P93300641, Expired, True
-P03010039, Normal, True
-NCGD0006, Normal, True' from dir '/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta04.FLTHIST.ne30.dcs600.001'
+2025-01-31 15:15:11: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
  ---------------------------------------------------
-2025-01-29 14:26:06: xmlchange success <command> ./xmlchange CONTINUE_RUN=FALSE  </command>
+2025-01-31 15:15:17: case.submit starting 
  ---------------------------------------------------
-2025-01-29 14:26:07: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
+2025-01-31 15:15:17: case.submit error 
+ERROR: Build complete is not True please rebuild the model by calling case.build
  ---------------------------------------------------
-2025-01-29 14:26:08: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
+2025-02-03 08:59:09: case.build starting 
  ---------------------------------------------------
-2025-01-29 14:26:09: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
+2025-02-03 08:59:53: case.build error 
+ERROR: BUILD FAIL: buildexe failed, cat /glade/derecho/scratch/hannay/f.e30_beta04.FLTHIST.ne30.001_pia/bld/cesm.bldlog.250203-085910
  ---------------------------------------------------
-2025-01-29 14:26:09: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
+2025-02-03 08:59:58: case.submit starting 
  ---------------------------------------------------
-2025-01-29 14:26:10: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
+2025-02-03 08:59:59: case.submit error 
+ERROR: Build complete is not True please rebuild the model by calling case.build
  ---------------------------------------------------
-2025-01-29 14:26:10: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
+2025-02-03 09:04:47: case.build starting 
  ---------------------------------------------------
-2025-01-29 14:26:19: case.submit starting 7609593.desched1
+2025-02-03 09:05:14: case.build error 
+ERROR: BUILD FAIL: buildexe failed, cat /glade/derecho/scratch/hannay/f.e30_beta04.FLTHIST.ne30.001_pia/bld/cesm.bldlog.250203-090447
  ---------------------------------------------------
-2025-01-29 14:26:19: case.submit success 7609593.desched1
+2025-02-03 09:06:15: case.build starting 
  ---------------------------------------------------
-2025-01-29 15:08:43: case.run starting 7609592.desched1
+2025-02-03 09:06:42: case.build error 
+ERROR: BUILD FAIL: buildexe failed, cat /glade/derecho/scratch/hannay/f.e30_beta04.FLTHIST.ne30.001_pia/bld/cesm.bldlog.250203-090615
  ---------------------------------------------------
-2025-01-29 15:08:51: model execution starting 7609592.desched1
+2025-02-03 09:07:24: build.clean starting 
  ---------------------------------------------------
-2025-01-29 21:26:07: model execution success 7609592.desched1
+2025-02-03 09:07:35: build.clean success 
  ---------------------------------------------------
-2025-01-29 21:26:07: case.run success 7609592.desched1
+2025-02-03 09:09:44: case.build starting 
  ---------------------------------------------------
-2025-01-29 21:26:37: st_archive starting 7609593.desched1
+2025-02-03 09:16:50: case.build success 
  ---------------------------------------------------
-2025-01-29 21:27:00: st_archive success 7609593.desched1
+2025-02-03 09:18:57: case.submit starting 7646774.desched1
  ---------------------------------------------------
-2025-01-29 21:27:01: case.submit starting 7616589.desched1
+2025-02-03 09:18:58: case.submit success 7646774.desched1
  ---------------------------------------------------
-2025-01-29 21:27:01: case.submit success 7616589.desched1
+2025-02-03 09:19:13: case.run starting 7646773.desched1
  ---------------------------------------------------
-2025-01-29 21:27:29: case.run starting 7616588.desched1
+2025-02-03 09:19:17: model execution starting 7646773.desched1
  ---------------------------------------------------
-2025-01-29 21:27:35: model execution starting 7616588.desched1
+2025-02-03 15:34:12: model execution success 7646773.desched1
  ---------------------------------------------------
-2025-01-30 03:42:15: model execution success 7616588.desched1
+2025-02-03 15:34:12: case.run success 7646773.desched1
  ---------------------------------------------------
-2025-01-30 03:42:15: case.run success 7616588.desched1
+2025-02-03 15:34:35: st_archive starting 7646774.desched1
  ---------------------------------------------------
-2025-01-30 03:42:31: st_archive starting 7616589.desched1
+2025-02-03 15:35:13: st_archive success 7646774.desched1
  ---------------------------------------------------
-2025-01-30 03:42:53: st_archive success 7616589.desched1
+2025-02-03 15:35:15: case.submit starting 7650451.desched1
  ---------------------------------------------------
-2025-01-30 03:42:55: case.submit starting 7619073.desched1
+2025-02-03 15:35:15: case.submit success 7650451.desched1
  ---------------------------------------------------
-2025-01-30 03:42:56: case.submit success 7619073.desched1
+2025-02-03 15:35:32: case.run starting 7650450.desched1
  ---------------------------------------------------
-2025-01-30 09:26:53: case.run starting 7619072.desched1
+2025-02-03 15:35:38: model execution starting 7650450.desched1
  ---------------------------------------------------
-2025-01-30 09:26:58: model execution starting 7619072.desched1
+2025-02-03 21:47:50: model execution success 7650450.desched1
  ---------------------------------------------------
-2025-01-30 15:41:27: model execution success 7619072.desched1
+2025-02-03 21:47:50: case.run success 7650450.desched1
  ---------------------------------------------------
-2025-01-30 15:41:28: case.run success 7619072.desched1
+2025-02-03 21:48:08: st_archive starting 7650451.desched1
  ---------------------------------------------------
-2025-01-30 15:41:56: st_archive starting 7619073.desched1
+2025-02-03 21:48:34: st_archive success 7650451.desched1
  ---------------------------------------------------
-2025-01-30 15:42:22: st_archive success 7619073.desched1
+2025-02-03 21:48:35: case.submit starting 7652885.desched1
  ---------------------------------------------------
-2025-01-30 15:42:25: case.submit starting 7623051.desched1
+2025-02-03 21:48:35: case.submit success 7652885.desched1
  ---------------------------------------------------
-2025-01-30 15:42:26: case.submit success 7623051.desched1
+2025-02-03 21:48:52: case.run starting 7652884.desched1
  ---------------------------------------------------
-2025-01-30 16:20:40: case.run starting 7623050.desched1
+2025-02-03 21:48:58: model execution starting 7652884.desched1
  ---------------------------------------------------
-2025-01-30 16:20:44: model execution starting 7623050.desched1
+2025-02-04 04:00:38: model execution success 7652884.desched1
  ---------------------------------------------------
-2025-01-30 22:32:49: model execution success 7623050.desched1
+2025-02-04 04:00:38: case.run success 7652884.desched1
  ---------------------------------------------------
-2025-01-30 22:32:49: case.run success 7623050.desched1
+2025-02-04 04:00:57: st_archive starting 7652885.desched1
  ---------------------------------------------------
-2025-01-30 22:33:08: st_archive starting 7623051.desched1
+2025-02-04 04:01:23: st_archive success 7652885.desched1
  ---------------------------------------------------
-2025-01-30 22:33:32: st_archive success 7623051.desched1
+2025-02-04 04:01:24: case.submit starting 7654595.desched1
  ---------------------------------------------------
-2025-01-30 22:33:35: case.submit starting 7625198.desched1
+2025-02-04 04:01:24: case.submit success 7654595.desched1
  ---------------------------------------------------
-2025-01-30 22:33:35: case.submit success 7625198.desched1
+2025-02-04 04:01:43: case.run starting 7654594.desched1
  ---------------------------------------------------
-2025-01-30 22:33:56: case.run starting 7625197.desched1
- ---------------------------------------------------
-2025-01-30 22:34:01: model execution starting 7625197.desched1
- ---------------------------------------------------
-2025-01-31 04:46:50: model execution success 7625197.desched1
- ---------------------------------------------------
-2025-01-31 04:46:50: case.run success 7625197.desched1
- ---------------------------------------------------
-2025-01-31 04:47:06: st_archive starting 7625198.desched1
- ---------------------------------------------------
-2025-01-31 04:47:28: st_archive success 7625198.desched1
+2025-02-04 04:01:48: model execution starting 7654594.desched1
  ---------------------------------------------------
