@@ -146,7 +146,7 @@
  cldfrc2m_qist_min		= 1.e-7 
  cldfrc2m_rhmaxi		=   1.0D0  
  cldfrc2m_rhmaxis		=   1.0D0  
- cldfrc2m_rhmini		= 1.00
+ cldfrc2m_rhmini		=   0.80D0  
  cldfrc2m_rhminis		=   1.0D0 
 /
 &cldfrc_nl
@@ -387,7 +387,7 @@
  micro_mg_autocon_lwp_exp		=   2.47D0    
  micro_mg_autocon_nd_exp		=   -1.1D0    
  micro_mg_berg_eff_factor		=   1.D0    
- micro_mg_dcs		= 500.D-6
+ micro_mg_dcs		= 600.D-6
  micro_mg_do_graupel		=  .true. 
  micro_mg_do_hail		=  .false. 
  micro_mg_effi_factor		=   1.D0    
