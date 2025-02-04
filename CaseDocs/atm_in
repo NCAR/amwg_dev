@@ -376,7 +376,7 @@
 /
 &hetfrz_classnuc_nl
  hetfrz_bc_scalfac		= 0.01D0
- hetfrz_dust_scalfac		= 0.10
+ hetfrz_dust_scalfac		= 0.05D0
 /
 &micro_mg_nl
  micro_do_massless_droplet_destroyer		=   .false. 
@@ -410,7 +410,7 @@
  microp_aero_wsub_min_asf		=   0.0D0    
  microp_aero_wsub_scale		=   1.D0     
  microp_aero_wsubi_min		=   0.001D0    
- microp_aero_wsubi_scale		=   1.D0    
+ microp_aero_wsubi_scale		= 1.5
 /
 &ndep_stream_nl
  stream_ndep_data_filename		= '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/ndepdata/fndep_clm_hist_b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensmean_1849-2015_monthly_0.9x1.25_c180926.nc'
