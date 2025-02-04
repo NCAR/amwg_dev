@@ -2,9 +2,9 @@
 
 set -e
 
-# Created 2024-11-08 20:12:19
+# Created 2024-11-08 20:15:43
 
-CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93_tuning.009"
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_alpha04a.FMTHIST.ne30_L93_tuning.010"
 
 /glade/work/hannay/cesm_tags/cesm3_0_alpha04a/cime/scripts/create_newcase --compset FMTHIST --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --project 93300722
 
