@@ -150,7 +150,7 @@
  cldfrc2m_rhminis		=   1.0D0 
 /
 &cldfrc_nl
- cldfrc_dp1		= 0.05D0
+ cldfrc_dp1		=  0.10D0 
  cldfrc_dp2		=  500.0D0 
  cldfrc_freeze_dry		= .true.
  cldfrc_ice		= .true.
@@ -559,7 +559,7 @@
 /
 &zmconv_nl
  zmconv_c0_lnd		=  0.0075D0 
- zmconv_c0_ocn		=  0.0300D0 
+ zmconv_c0_ocn		= 0.0450D0
  zmconv_capelmt		=  70.0    
  zmconv_dmpdz		=  -1.0E-3 
  zmconv_ke		=  5.0E-6 
