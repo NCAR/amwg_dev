@@ -1,34 +1,34 @@
-2025-02-25 10:30:16: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
+2025-02-25 10:53:00: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-rad rrtmgp  </command>
  ---------------------------------------------------
-2025-02-25 10:30:16: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
+2025-02-25 10:53:00: xmlchange success <command> ./xmlchange --append CAM_CONFIG_OPTS=-cosp  </command>
  ---------------------------------------------------
-2025-02-25 10:30:16: xmlchange success <command> ./xmlchange NTASKS=2160  </command>
+2025-02-25 10:53:01: xmlchange success <command> ./xmlchange NTASKS=2160  </command>
  ---------------------------------------------------
-2025-02-25 10:30:17: case.setup starting 
+2025-02-25 10:53:01: case.setup starting 
  ---------------------------------------------------
-2025-02-25 10:30:19: case.setup success 
+2025-02-25 10:53:03: case.setup success 
  ---------------------------------------------------
-2025-02-25 10:30:19:   local git repository created
+2025-02-25 10:53:03:   local git repository created
  ---------------------------------------------------
-2025-02-25 10:30:21: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
+2025-02-25 10:53:05: xmlchange success <command> ./xmlchange RUN_STARTDATE=2000-01-01  </command>
  ---------------------------------------------------
-2025-02-25 10:30:58: case.build starting 
+2025-02-25 10:54:08: case.build starting 
  ---------------------------------------------------
-2025-02-25 10:39:38: case.build success 
+2025-02-25 11:02:55: case.build success 
  ---------------------------------------------------
-2025-02-25 10:39:42: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
+2025-02-25 11:02:57: xmlchange success <command> ./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears  </command>
  ---------------------------------------------------
-2025-02-25 10:39:43: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
+2025-02-25 11:02:58: xmlchange success <command> ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023  </command>
  ---------------------------------------------------
-2025-02-25 10:39:44: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
+2025-02-25 11:02:58: xmlchange success <command> ./xmlchange REST_OPTION=nyears,REST_N=2  </command>
  ---------------------------------------------------
-2025-02-25 10:39:45: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
+2025-02-25 11:02:59: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run  </command>
  ---------------------------------------------------
-2025-02-25 10:39:45: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
+2025-02-25 11:03:00: xmlchange success <command> ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive  </command>
  ---------------------------------------------------
-2025-02-25 10:39:46: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
+2025-02-25 11:03:01: xmlchange success <command> ./xmlchange JOB_PRIORITY=regular  </command>
  ---------------------------------------------------
-2025-02-25 10:39:54: case.submit starting 7895130.desched1
+2025-02-25 11:03:07: case.submit starting 7896140.desched1
  ---------------------------------------------------
-2025-02-25 10:39:55: case.submit success 7895130.desched1
+2025-02-25 11:03:08: case.submit success 7896140.desched1
  ---------------------------------------------------
