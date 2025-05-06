@@ -539,14 +539,9 @@ contains
 
 
       if ( IsProgBuildTemp() )then
-         !+++ hannay
-         !call BuildingTemperature(bounds, num_urbanl, filter_urbanl, num_nolakec, filter_nolakec, &
-         !                         tk(bounds%begc:bounds%endc, :), urbanparams_inst,               &
-         !                         temperature_inst, energyflux_inst, urbantv_inst, atm2lnd_inst)
          call BuildingTemperature(bounds, num_urbanl, filter_urbanl, num_nolakec, filter_nolakec, &
                                   tk(bounds%begc:bounds%endc, :), urbanparams_inst,               &
-                                  temperature_inst, energyflux_inst, urbantv_inst)
-         !--- hannay
+                                  temperature_inst, energyflux_inst, urbantv_inst, atm2lnd_inst)
       end if
 
       do fc = 1,num_nolakec
