@@ -1,21 +1,46 @@
+&comp_inparm 
+
+ dtime = 1800
 mfilt        =       0,       0,     20,      40,      12,       120,      1,   1
+
 nhtfrq              =       0,       0,    -24,      -3,       0,       -2,      0,  -8760
+
 ndens               =       2,       2,      2,       2,       2,       1,      2,   1
+
 interpolate_output  =  .true.,  .false., .true., .true., .false., .true.,  .true.
+
 interpolate_nlat    =     192,     192,    192,     192,     192,     192,   192
+
 interpolate_nlon    =     288,     288,    288,     288,     288,     288,   288 
+
+
 
 empty_htapes = .true.
 
+
+
 fincl1 = 'ACTNI', 'ACTNL', 'ACTREI', 'ACTREL', 'AODDUST', 'AODVIS', 'AODVISdn','BURDENBC',
+
 'BURDENDUST', 'BURDENPOM', 'BURDENSEASALT',
+
 'BURDENSO4', 'BURDENSOA', 'CAPE', 'CCN3', 'CDNUMC', 'CH4', 'CLDHGH', 'CLDICE', 'CLDLIQ', 'CLDLOW',
+
 'CLDMED', 'CLDTOT', 'CLOUD', 'CMFMC_DP',
+
+
 
 bnd_topo = '/glade/campaign/cgd/amp/pel/topo/cesm3/ne30pg3_gmted2010_modis_bedmachine_nc3000_Laplace0050_noleak_20250409_28kmGRISrough.nc'
 
+
+
 micro_mg_dcs= 600.D-6
+
 cldfrc_dp1 =  0.05
+
+
 
 inithist = 'MONTHLY'
 
+
+
+/ 
