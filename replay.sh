@@ -28,3 +28,5 @@ cd "${CASEDIR}"
 
 ./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
 
+./xmlchange JOB_WALLCLOCK_TIME=12:00:00 --subgroup case.run
+
