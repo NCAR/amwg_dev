@@ -46,3 +46,7 @@ cd "${CASEDIR}"
 
 ./xmlchange CONTINUE_RUN=FALSE
 
+./preview_namelists
+
+./case.build
+
