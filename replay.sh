@@ -18,3 +18,9 @@ cd "${CASEDIR}"
 
 ./xmlchange RUN_STARTDATE=1994-01-01
 
+./preview_namelists
+
+./preview_namelists
+
+./xmlchange PROJECT=CESM0023,RESUBMIT=4,STOP_N=2,STOP_OPTION=nyears
+
