@@ -134,3 +134,5 @@ cd "${CASEDIR}"
 
 ./xmlchange JOB_WALLCLOCK_TIME=06:00:00 --subgroup case.st_archive
 
+./xmlchange JOB_PRIORITY=regular
+
