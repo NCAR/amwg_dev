@@ -38,3 +38,7 @@ cd "${CASEDIR}"
 
 ./xmlchange RUN_STARTDATE=1990-01-01
 
+./preview_namelists
+
+./case.build
+
