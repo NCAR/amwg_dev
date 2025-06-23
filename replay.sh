@@ -120,3 +120,7 @@ cd "${CASEDIR}"
 
 ./case.build --clean-all
 
+./preview_namelists
+
+./case.build
+
