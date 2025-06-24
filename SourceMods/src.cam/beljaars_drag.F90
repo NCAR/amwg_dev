@@ -105,8 +105,9 @@ contains
     n2    = -2.8_r8
 
     Cmd   = 0.005_r8
-    Ccorr = 0.6_r8 * 20._r8
-
+!    Ccorr = 0.6_r8 * 5._r8!default
+!    Ccorr = 0.6_r8 * 4._r8 * 5._r8!166
+    Ccorr = 0.6_r8 * 9._r8 * 5._r8!166
     kflt  = 0.00035_r8  ! m-1
     k1    = 0.003_r8    ! m-1
     IH    = 0.00102_r8  ! m-1
