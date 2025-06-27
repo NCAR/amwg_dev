@@ -1,0 +1,20 @@
+&drydep_inparm
+ dep_data_file		= '/glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/trop_mozart/dvel/dep_data_c20221208.nc'
+/
+&megan_emis_nl
+/
+&fire_emis_nl
+/
+&carma_inparm
+/
+&ndep_inparm
+/
+&ozone_coupling_nl
+ atm_ozone_frequency		= 'multiday_average'
+/
+&lightning_coupling_nl
+ atm_provides_lightning		= .true.
+/
+&dust_emis_inparm
+ dust_emis_method		= 'Leung_2023'
+/
