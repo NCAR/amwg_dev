@@ -62,3 +62,10 @@ ERROR: Model did not complete - see /glade/derecho/scratch/hannay/f.e30_cam6_4_0
  ---------------------------------------------------
 2025-06-27 14:43:56: case.submit starting 
  ---------------------------------------------------
+2025-06-27 14:43:56: case.submit error 
+ERROR: Command /glade/work/hannay/cesm_tags/cam6_4_078/bld/build-namelist -ntasks 2160 -csmdata /glade/campaign/cesm/cesmdata/inputdata -infile /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_078.FHISTC_LTso.ne30.baseline156_nochem.001/Buildconf/camconf/namelist -start_ymd 19940101 -ignore_ic_year -use_case hist_cam_lt -inputdata /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_078.FHISTC_LTso.ne30.baseline156_nochem.001/Buildconf/cam.input_data_list -namelist " &atmexp /"  -cmeps failed rc=255
+out=
+err=Smartmatch is deprecated at /glade/work/hannay/cesm_tags/cam6_4_078/bld/perl5lib/Build/ChemNamelist.pm line 300.
+Smartmatch is deprecated at /glade/work/hannay/cesm_tags/cam6_4_078/bld/build-namelist line 2330.
+ERROR(Build::Namelist::_parse_next): expect a equal '=' sign instead got: ', 'NUMLIQ','OMEGA500', 'vIVT'
+ ---------------------------------------------------
