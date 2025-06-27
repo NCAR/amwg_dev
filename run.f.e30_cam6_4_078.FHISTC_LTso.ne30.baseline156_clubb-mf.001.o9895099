@@ -1,0 +1,41 @@
+Generating namelists for /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_078.FHISTC_LTso.ne30.baseline156_clubb-mf.001
+  2025-06-27 15:39:07 atm 
+Create namelist for component cam
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/cime_config/buildnml
+CAM namelist copy: file1 /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_078.FHISTC_LTso.ne30.baseline156_clubb-mf.001/Buildconf/camconf/atm_in file2 /glade/derecho/scratch/hannay/f.e30_cam6_4_078.FHISTC_LTso.ne30.baseline156_clubb-mf.001/run/atm_in 
+  2025-06-27 15:39:08 lnd 
+Create namelist for component clm
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/components/clm//cime_config/buildnml
+  2025-06-27 15:39:09 ice 
+Create namelist for component cice
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/components/cice//cime_config/buildnml
+RUN: /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/components/cice/bld/generate_cice_decomp.pl -ccsmroot /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero -res ne30np4.pg3 -nx 48600 -ny 1 -nproc 2160 -thrds 1 -output all 
+FROM: /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_078.FHISTC_LTso.ne30.baseline156_clubb-mf.001
+  output: 48600 1 20 1 2 roundrobin square-ice
+
+  2025-06-27 15:39:09 ocn 
+Create namelist for component docn
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/components/cdeps/docn/cime_config/buildnml
+docn_mode is prescribed
+  2025-06-27 15:39:10 rof 
+Create namelist for component mosart
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/components/mosart//cime_config/buildnml
+  2025-06-27 15:39:10 glc 
+Create namelist for component dglc
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/components/cdeps/dglc/cime_config/buildnml
+  2025-06-27 15:39:10 wav 
+Create namelist for component swav
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+  2025-06-27 15:39:10 esp 
+Create namelist for component sesp
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+  2025-06-27 15:39:10 cpl 
+Create namelist for component drv
+   Calling /glade/campaign/cgd/amp/aherring/src/CLUBB-MF/cam6_4_078.mfaero/components/cmeps/cime_config/buildnml
+Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+-------------------------------------------------------------------------
+ - Prestage required restarts into /glade/derecho/scratch/hannay/f.e30_cam6_4_078.FHISTC_LTso.ne30.baseline156_clubb-mf.001/run
+ - Case input data directory (DIN_LOC_ROOT) is /glade/campaign/cesm/cesmdata/inputdata 
+ - Checking for required input datasets in DIN_LOC_ROOT
+-------------------------------------------------------------------------
+run command is mpibind  --label  --line-buffer  --  /glade/derecho/scratch/hannay/f.e30_cam6_4_078.FHISTC_LTso.ne30.baseline156_clubb-mf.001/bld/cesm.exe   >> cesm.log.$LID 2>&1  
