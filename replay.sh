@@ -42,3 +42,5 @@ cd "${CASEDIR}"
 
 ./xmlchange RESUBMIT=4
 
+./xmlchange CASE_GIT_REPOSITORY=git@github.com:NCAR/amwg_dev.git
+
