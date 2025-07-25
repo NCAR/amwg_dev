@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<file id="stream" version="2.0">
+
+  <stream_info name="prescribed">
+   <taxmode>cycle</taxmode>
+   <tintalgo>linear</tintalgo>
+   <readmode>single</readmode>
+   <mapalgo>bilinear</mapalgo>
+   <dtlimit>1.5</dtlimit>
+   <year_first>1850</year_first>
+   <year_last>2021</year_last>
+   <year_align>1850</year_align>
+   <vectors>null</vectors>
+   <meshfile>/glade/campaign/cesm/cesmdata/inputdata/share/meshes/fv0.9x1.25_141008_polemod_ESMFmesh.nc</meshfile>
+   <lev_dimname>null</lev_dimname>
+   <datafiles>
+      <file>/glade/campaign/cesm/cesmdata/inputdata/atm/cam/sst/sst_HadOIBl_bc_0.9x1.25_1850_2021_c120422.nc</file>
+   </datafiles>
+   <datavars>
+      <var>SST_cpl So_t</var>
+   </datavars>
+   <offset>0</offset>
+  </stream_info>
+
+</file>
