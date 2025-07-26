@@ -217,15 +217,19 @@ clubb_c8 = 4.6
 
 
 
- ext_frc_cycle_yr               =  1850
+ ext_frc_specifier= 'bc_a4 -> /glade/campaign/cgd/cas/islas/CESM_input/CMIP6_emissions_1750_2015/emissions-cmip6_bc_a4_aircraft_vertical_1750-2015_ne30pg3_c20170608.nc',  
 
- ext_frc_specifier              = 'num_a1 -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_num_so4_a1_anthro-ene_vertical_1750-2015_ne30pg3_c20250711.nc',
+         'num_a1 -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_num_so4_a1_anthro-ene_vertical_1750-2015_ne30pg3_c20250711.nc',
 
          'num_a1 -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_num_a1_so4_contvolcano_vertical_850-5000_ne30pg3_c20250711.nc',
 
          'num_a2 -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_num_a2_so4_contvolcano_vertical_850-5000_ne30pg3_c20250711.nc',
 
-         'SO2    -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_SO2_contvolcano_vertical_850-5000_ne30pg3_c20250711.nc',
+         'num_a4 -> /glade/campaign/cesm/cesmdata/inputdata/atm/cam/chem/emis/CMIP6_emissions_1750_2015/emissions-cmip6_num_bc_a4_aircraft_vertical_1750-2015_0.9x1.25_c20170608.nc',
+
+         'SO2 -> /glade/campaign/cgd/cas/islas/CESM_input/CMIP6_emissions_1750_2015/emissions-cmip6_SO2_aircraft_vertical_1750-2015_ne30pg3_c20170608.nc',  
+
+         'SO2 -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_SO2_contvolcano_vertical_850-5000_ne30pg3_c20250711.nc'
 
          'so4_a1 -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_so4_a1_anthro-ene_vertical_1750-2015_ne30pg3_c20250711.nc',
 
@@ -233,11 +237,7 @@ clubb_c8 = 4.6
 
          'so4_a2 -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_so4_a2_contvolcano_vertical_850-5000_ne30pg3_c20250711.nc'
 
- ext_frc_type           = 'CYCLICAL'
 
-
-
- srf_emis_cycle_yr              = 1850
 
  srf_emis_specifier             = 'bc_a4    -> /glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_bc_a4_anthro_surface_1750-2015_ne30pg3_c20250711.nc',
 
@@ -298,8 +298,6 @@ clubb_c8 = 4.6
          'SOAE -> 6.5013D0*/glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_XYLENES_anthro_surface_1750-2015_ne30pg3_c20250711.nc',
 
          'SOAE -> 6.5013D0*/glade/derecho/scratch/nanr/regrid/ne30/emissions-cmip6_XYLENES_bb_surface_1750-2015_ne30pg3_c20250711.nc'
-
- srf_emis_type          = 'CYCLICAL'
 
 
 
