@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+# Created 2025-07-29 13:56:03
+
+CASEDIR="/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_beta06.FHISTC_LTso.ne30.b183_oldDMS.001"
+
+/glade/derecho/scratch/cacraig/cam6_4_089/cime/scripts/create_newcase --compset HIST_CAM70%LT_CLM60%SP_CICE%PRES_DOCN%DOM_MOSART_DGLC%NOEVOLVE_SWAV_SESP --res ne30pg3_ne30pg3_mg17 --case "${CASEDIR}" --run-unsupported --project 93300722
+
+cd "${CASEDIR}"
+
+./xmlchange --append CAM_CONFIG_OPTS=-cosp
+
+./xmlchange NTASKS=2160
+
+./case.setup
+
