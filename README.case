@@ -1,0 +1,34 @@
+2025-08-06 11:12:04: ./create_newcase --compset HIST_CAM70%MT_CLM50%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP --res ne30pg3_ne30pg3_mg17 --case /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_097.FHISTC_MTso.ne30_greendlndantarcsgh30fac2.5_clm5.001 --run-unsupported --project 93300722
+ ---------------------------------------------------
+2025-08-06 11:12:04: Compset longname is HIST_CAM70%MT_CLM50%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP
+ ---------------------------------------------------
+2025-08-06 11:12:04: Compset specification file is /glade/work/hannay/cesm_tags/cam6_4_097/cime_config/config_compsets.xml
+ ---------------------------------------------------
+2025-08-06 11:12:04: Pes     specification file is /glade/work/hannay/cesm_tags/cam6_4_097/cime_config/config_pes.xml
+ ---------------------------------------------------
+2025-08-06 11:12:04: Forcing is Historic transient 
+ ---------------------------------------------------
+2025-08-06 11:12:04: Using 1 coupler instances
+ ---------------------------------------------------
+2025-08-06 11:12:04: Component ATM is CAM cam7 physics:CAM mid top model 
+ ---------------------------------------------------
+2025-08-06 11:12:04: ATM_GRID is ne30np4.pg3
+ ---------------------------------------------------
+2025-08-06 11:12:04: Component LND is clm5.0:Satellite phenology:
+ ---------------------------------------------------
+2025-08-06 11:12:04: LND_GRID is ne30np4.pg3
+ ---------------------------------------------------
+2025-08-06 11:12:04: Component ICE is Sea ICE (cice) model version 6 :prescribed cice
+ ---------------------------------------------------
+2025-08-06 11:12:04: ICE_GRID is ne30np4.pg3
+ ---------------------------------------------------
+2025-08-06 11:12:04: Component OCN is DOCN   prescribed ocean mode
+ ---------------------------------------------------
+2025-08-06 11:12:04: OCN_GRID is ne30np4.pg3
+ ---------------------------------------------------
+2025-08-06 11:12:04: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+ ---------------------------------------------------
+2025-08-06 11:12:04: ROF_GRID is r05
+ ---------------------------------------------------
+2025-08-06 11:12:05: ESP_GRID is None
+ ---------------------------------------------------
