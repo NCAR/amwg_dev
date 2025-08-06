@@ -25,5 +25,6 @@
  atm_provides_lightning		= .true.
 /
 &dust_emis_inparm
- dust_emis_method		= 'Leung_2023'
+ dust_emis_method		= 'Zender_2003'
+ zender_soil_erod_source		= 'atm'
 /
