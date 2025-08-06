@@ -279,7 +279,9 @@
  leaf_mr_vcm = 0.015d00
 /
 &prigentroughness
- use_prigent_roughness = .false.
+ stream_fldfilename_prigentroughness = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/dustemisdata/Prigent_2005_roughness_0.25x0.25_cdf5_c240127.nc'
+ stream_meshfile_prigentroughness = '/glade/campaign/cesm/cesmdata/inputdata/lnd/clm2/dustemisdata/dust_0.25x0.25_ESMFmesh_cdf5_c240222.nc'
+ use_prigent_roughness = .true.
 /
 &zendersoilerod
 /
