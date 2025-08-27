@@ -14,3 +14,10 @@
  ---------------------------------------------------
 2025-08-27 17:15:10: case.build starting 
  ---------------------------------------------------
+2025-08-27 17:15:14: case.build error 
+ERROR: Command /glade/work/hannay/cesm_tags/cam6_4_107/bld/build-namelist -ntasks 2160 -csmdata /glade/campaign/cesm/cesmdata/inputdata -infile /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_107.FHISTC_LTso.ne30.lwoff_expldiffF.001/Buildconf/camconf/namelist -start_ymd 19900101 -ignore_ic_year -use_case hist_cam_lt -inputdata /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_107.FHISTC_LTso.ne30.lwoff_expldiffF.001/Buildconf/cam.input_data_list -namelist " &atmexp /"  -cmeps failed rc=255
+out=
+err=Smartmatch is deprecated at /glade/work/hannay/cesm_tags/cam6_4_107/bld/perl5lib/Build/ChemNamelist.pm line 300.
+Smartmatch is deprecated at /glade/work/hannay/cesm_tags/cam6_4_107/bld/build-namelist line 2332.
+ERROR(Build::Namelist::_parse_next): expect a equal '=' sign instead got: clubb_c4=   5.497635
+ ---------------------------------------------------
