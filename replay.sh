@@ -70,3 +70,7 @@ cd "${CASEDIR}"
 
 ./case.build --clean
 
+./preview_namelists
+
+./case.build
+
