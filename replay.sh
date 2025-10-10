@@ -96,3 +96,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_YEAR_ALIGN=1990
 
+./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
+
