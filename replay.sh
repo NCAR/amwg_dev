@@ -60,3 +60,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_MESH_FILENAME=/glade/campaign/cgd/amp/juliob/NOAA_OI_SST/sst_ice_NOAA_QxQ_ESMFmesh.nc
 
+./xmlchange SSTICE_YEAR_START=1990
+
