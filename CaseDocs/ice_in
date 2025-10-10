@@ -215,7 +215,7 @@
 /
 &ice_prescribed_nml
   prescribed_ice_mode = .true.
-  stream_datafiles = "/glade/derecho/scratch/hannay/sst_ne120/sst_input_0.25_CDR-19900101-19901231.nc"
+  stream_datafiles = "/glade/derecho/scratch/jubliob/sst_ne120/sst_QxQ_tmp.nc"
   stream_mapalgo = "bilinear"
   stream_meshfile = "/glade/campaign/cgd/amp/juliob/NOAA_OI_SST/sst_ice_NOAA_QxQ_ESMFmesh.nc"
   stream_varname = "ice_cov"
