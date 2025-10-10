@@ -122,3 +122,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_DATA_FILENAME=/glade/derecho/scratch/hannay/sst_ne120/sst_input_0.25_CDR-19900101-19901231.nc
 
+./xmlchange SSTICE_MESH_FILENAME=/glade/campaign/cgd/amp/juliob/NOAA_OI_SST/sst_ice_NOAA_QxQ_ESMFmesh.nc
+
