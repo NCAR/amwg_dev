@@ -116,3 +116,5 @@ cd "${CASEDIR}"
 
 ./xmlchange DOUT_S_ROOT=/glade/campaign/cesm/community/amwg/cam_hr/$CASE
 
+./case.build
+
