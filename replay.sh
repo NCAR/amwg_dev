@@ -130,3 +130,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_YEAR_ALIGN=1990
 
+./xmlchange DOUT_S_ROOT=/glade/campaign/cesm/community/amwg/cam_hr/$CASE
+
