@@ -64,3 +64,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_YEAR_END=1990
 
+./xmlchange SSTICE_YEAR_ALIGN=1990
+
