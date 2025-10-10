@@ -32,3 +32,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_DATA_FILENAME=$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_c120422.nc
 
+./xmlchange SSTICE_DATA_FILENAME=/glade/work/xueliu/data/cesm_input/SST/SSTinput_CDR_noleap/sst_input_0.25_CDR-19900101-19901231.nc
+
