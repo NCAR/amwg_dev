@@ -42,3 +42,7 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_YEAR_ALIGN=1990
 
+./preview_namelists
+
+./case.build
+
