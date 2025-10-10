@@ -120,3 +120,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_DATA_FILENAME=/glade/work/xueliu/data/cesm_input/SST/SSTinput_CDR_noleap/sst_input_0.25_CDR-19900101-19901231.nc
 
+./xmlchange SSTICE_DATA_FILENAME=/glade/derecho/scratch/hannay/sst_ne120/sst_input_0.25_CDR-19900101-19901231.nc
+
