@@ -150,3 +150,5 @@ cd "${CASEDIR}"
 
 ./case.submit
 
+./xmlchange SSTICE_DATA_FILENAME=/glade/derecho/scratch/jubliob/sst_ne120/sst_QxQ_tmp.nc
+

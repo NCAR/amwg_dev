@@ -412,7 +412,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:3332818.desched1, case.st_archive:3332819.desched1">
+    <entry id="JOB_IDS" value="case.run:3332971.desched1, case.st_archive:3332972.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -1330,7 +1330,7 @@
     Sets SST and ice coverage stream name.
     This is only used when DOCN_MODE=prescribed.</desc>
     </entry>
-    <entry id="SSTICE_DATA_FILENAME" value="/glade/derecho/scratch/hannay/sst_ne120/sst_input_0.25_CDR-19900101-19901231.nc">
+    <entry id="SSTICE_DATA_FILENAME" value="/glade/derecho/scratch/jubliob/sst_ne120/sst_QxQ_tmp.nc">
       <type>char</type>
       <valid_values/>
       <desc>Prescribed SST and ice coverage data file name.
