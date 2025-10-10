@@ -412,7 +412,7 @@
       <valid_values>TRUE,FALSE</valid_values>
       <desc>Logical to determine whether run has been submitted with the submit script or not</desc>
     </entry>
-    <entry id="JOB_IDS" value="case.run:3332512.desched1, case.st_archive:3332513.desched1">
+    <entry id="JOB_IDS" value="case.run:3332818.desched1, case.st_archive:3332819.desched1">
       <type>char</type>
       <desc>List of job ids for most recent case.submit</desc>
     </entry>
@@ -718,7 +718,7 @@
     </entry>
   </group>
   <group id="run_dout">
-    <entry id="DOUT_S_ROOT" value="$CIME_OUTPUT_ROOT/archive/$CASE">
+    <entry id="DOUT_S_ROOT" value="/glade/campaign/cesm/community/amwg/cam_hr/$CASE">
       <type>char</type>
       <desc>Root directory for short term archiving. This directory must be visible to compute nodes.</desc>
     </entry>
