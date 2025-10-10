@@ -28,3 +28,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_DATA_FILENAME=$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_c120422.nc
 
+./xmlchange PROJECT=CESM0023,RESUBMIT=10,STOP_N=2,STOP_OPTION=nyears
+
