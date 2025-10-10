@@ -30,3 +30,5 @@ cd "${CASEDIR}"
 
 ./case.build
 
+./xmlchange SSTICE_DATA_FILENAME=$DIN_LOC_ROOT/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_c120422.nc
+
