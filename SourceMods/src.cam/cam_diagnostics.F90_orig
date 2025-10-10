@@ -237,9 +237,7 @@ contains
     call addfld ('Z3',         (/ 'lev' /), 'A', 'm',         'Geopotential Height (above sea level)')
     call addfld ('Z1000',      horiz_only,  'A', 'm',         'Geopotential Z at 1000 mbar pressure surface')
     call addfld ('Z700',       horiz_only,  'A', 'm',         'Geopotential Z at 700 mbar pressure surface')
-    call addfld ('Z850',       horiz_only,  'A', 'm',         'Geopotential Z at 850 mbar pressure surface')
     call addfld ('Z500',       horiz_only,  'A', 'm',         'Geopotential Z at 500 mbar pressure surface')
-    call addfld ('Z250',       horiz_only,  'A', 'm',         'Geopotential Z at 250 mbar pressure surface')
     call addfld ('Z300',       horiz_only,  'A', 'm',         'Geopotential Z at 300 mbar pressure surface')
     call addfld ('Z200',       horiz_only,  'A', 'm',         'Geopotential Z at 200 mbar pressure surface')
     call addfld ('Z100',       horiz_only,  'A', 'm',         'Geopotential Z at 100 mbar pressure surface')
@@ -978,17 +976,8 @@ contains
       call vertinterp(ncol, pcols, pver, state%pmid, 70000._r8, z3, p_surf, &
           extrapolate='Z', ln_interp=.true., ps=state%ps, phis=state%phis, tbot=state%t(:,pver))
       call outfld('Z700    ', p_surf, pcols, lchnk)
-   end if
-   if (hist_fld_active('Z850')) then
-      call vertinterp(ncol, pcols, pver, state%pmid, 85000._r8, z3, p_surf, &
-           extrapolate='Z', ln_interp=.true., ps=state%ps, phis=state%phis, tbot=state%t(:,pver))
-      call outfld('Z850    ', p_surf, pcols, lchnk)
-   end if
-   if (hist_fld_active('Z250')) then
-      call vertinterp(ncol, pcols, pver, state%pmid, 25000._r8, z3, p_surf, ln_interp=.true.)
-      call outfld('Z250    ', p_surf, pcols, lchnk)
-   end if
-   if (hist_fld_active('Z500')) then
+    end if
+    if (hist_fld_active('Z500')) then
       call vertinterp(ncol, pcols, pver, state%pmid, 50000._r8, z3, p_surf, &
           extrapolate='Z', ln_interp=.true., ps=state%ps, phis=state%phis, tbot=state%t(:,pver))
       call outfld('Z500    ', p_surf, pcols, lchnk)
