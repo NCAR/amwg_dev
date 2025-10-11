@@ -7,14 +7,14 @@
    <readmode>single</readmode>
    <mapalgo>bilinear</mapalgo>
    <dtlimit>1.5</dtlimit>
-   <year_first>1850</year_first>
-   <year_last>2021</year_last>
+   <year_first>1989</year_first>
+   <year_last>2001</year_last>
    <year_align>1850</year_align>
    <vectors>null</vectors>
-   <meshfile>/glade/campaign/cesm/cesmdata/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_clim_c101029_ESMFmesh_120520.nc</meshfile>
+   <meshfile>/glade/campaign/cgd/amp/juliob/NOAA_OI_SST/sst_ice_NOAA_QxQ_ESMFmesh.nc</meshfile>
    <lev_dimname>null</lev_dimname>
    <datafiles>
-      <file>/glade/campaign/cesm/cesmdata/inputdata/atm/cam/sst/sst_HadOIBl_bc_1x1_1850_2021_c120422.nc</file>
+      <file>glade/derecho/scratch/juliob/SSTinput_CDR_noleap/decades_cdf5/sst_input_0.25_CDR-19890101-20011231.nc</file>
    </datafiles>
    <datavars>
       <var>SST_cpl So_t</var>
