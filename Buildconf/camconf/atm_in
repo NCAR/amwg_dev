@@ -53,7 +53,7 @@
          'V850:I', 'V200:I', 'Q850:I', 'T850:I', 'FLUT:I', 'OMEGA500:I', 'TGCLDIWP:I'
  interpolate_nlat		= 720,720,720,720,720,720,720
  interpolate_nlon		= 1440,1440,1440,1440,1440,1440,1440
- interpolate_output		= .true.,.true.,.true.,.false.,.false.,.true.,.false.
+ interpolate_output		= .true.,.false.,.true.,.false.,.false.,.true.,.false.
  mfilt		= 1,1,30,240,240,360,4
  ndens		= 2,2,2,2,2,2,2
  nhtfrq		= 0,0,-24,-3,-3,-1,-6
