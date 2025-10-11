@@ -718,7 +718,7 @@
     </entry>
   </group>
   <group id="run_dout">
-    <entry id="DOUT_S_ROOT" value="$CIME_OUTPUT_ROOT/archive/$CASE">
+    <entry id="DOUT_S_ROOT" value="/glade/campaign/cesm/community/amwg/cam_hr/$CASE">
       <type>char</type>
       <desc>Root directory for short term archiving. This directory must be visible to compute nodes.</desc>
     </entry>
