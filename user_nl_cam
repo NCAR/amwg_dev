@@ -1,12 +1,12 @@
 ncdata = '/glade/campaign/cgd/amp/aherring/restart/inic/ne120/ERA5_x_ne120np4_L58_rgC2_WO.aero.2000-01-01-00000.nc'
 
-! file                      h0       h1     h2       h3          h4        h5       h6       
+! file                      h0       h1     h2       h3          h4        h5      h6       
 nhtfrq              =       0,       0,    -24,     -3,         -3,      -1,      -6,      
-mfilt        =       1,       1,     1,       1,          1,       1,       4,      
+mfilt        =       1,       1,     30,       240,      240,     360,       4,      
 ndens               =       2,       2,     2,       2,          2,       2,       2,      
 interpolate_output  =  .true.,    .true., .true.,  .false.,   .false.,    .true.,  .false., 
 interpolate_nlat    =     720,      720,    720,     720,      720,       720,     720,      
-interpolate_nlon    =     1440,    1440,    1440,   1440,    1440,    1440,  1440,   
+interpolate_nlon    =     1440,    1440,    1440,   1440,       1440,    1440,     1440,   
 
 empty_htapes = .true.
 cosp_histfile_num=7
