@@ -54,7 +54,7 @@
  interpolate_nlat		= 720,720,720,720,720,720,720
  interpolate_nlon		= 1440,1440,1440,1440,1440,1440,1440
  interpolate_output		= .true.,.true.,.true.,.false.,.false.,.true.,.false.
- mfilt		= 1,1,1,1,1,1,4
+ mfilt		= 1,1,30,240,240,360,4
  ndens		= 2,2,2,2,2,2,2
  nhtfrq		= 0,0,-24,-3,-3,-1,-6
 /
