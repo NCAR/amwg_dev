@@ -112,3 +112,5 @@ cd "${CASEDIR}"
 
 ./xmlchange SSTICE_DATA_FILENAME=/glade/derecho/scratch/juliob/SSTinput_CDR_noleap/decades_cdf5/sst_input_0.25_CDR-19890101-20011231.nc
 
+./case.submit
+
