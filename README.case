@@ -1,0 +1,34 @@
+2025-10-11 10:39:17: ./create_newcase --compset FHISTC_LTso --res ne120pg3_ne120pg3_mt13 --case /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_116.FHISTC_LTso.ne120_L58.test003 --run-unsupported --project 93300722
+ ---------------------------------------------------
+2025-10-11 10:39:17: Compset longname is HIST_CAM70%LT_CLM60%SP_CICE%PRES_DOCN%DOM_MOSART_SGLC_SWAV_SESP
+ ---------------------------------------------------
+2025-10-11 10:39:17: Compset specification file is /glade/work/hannay/cesm_tags/cam6_4_116/cime_config/config_compsets.xml
+ ---------------------------------------------------
+2025-10-11 10:39:17: Pes     specification file is /glade/work/hannay/cesm_tags/cam6_4_116/cime_config/config_pes.xml
+ ---------------------------------------------------
+2025-10-11 10:39:17: Forcing is Historic transient 
+ ---------------------------------------------------
+2025-10-11 10:39:17: Using 1 coupler instances
+ ---------------------------------------------------
+2025-10-11 10:39:17: Component ATM is CAM cam7 physics:CAM low top model 
+ ---------------------------------------------------
+2025-10-11 10:39:17: ATM_GRID is ne120np4.pg3
+ ---------------------------------------------------
+2025-10-11 10:39:17: Component LND is clm6.0:Satellite phenology:
+ ---------------------------------------------------
+2025-10-11 10:39:17: LND_GRID is ne120np4.pg3
+ ---------------------------------------------------
+2025-10-11 10:39:17: Component ICE is Sea ICE (cice) model version 6 :prescribed cice
+ ---------------------------------------------------
+2025-10-11 10:39:17: ICE_GRID is ne120np4.pg3
+ ---------------------------------------------------
+2025-10-11 10:39:17: Component OCN is DOCN   prescribed ocean mode
+ ---------------------------------------------------
+2025-10-11 10:39:17: OCN_GRID is ne120np4.pg3
+ ---------------------------------------------------
+2025-10-11 10:39:17: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+ ---------------------------------------------------
+2025-10-11 10:39:17: ROF_GRID is r05
+ ---------------------------------------------------
+2025-10-11 10:39:17: ESP_GRID is None
+ ---------------------------------------------------
