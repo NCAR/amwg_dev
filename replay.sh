@@ -28,3 +28,5 @@ cd "${CASEDIR}"
 
 ./preview_namelists
 
+./xmlchange CHARGE_ACCOUNT=CESM0023,PROJECT=CESM0023
+
