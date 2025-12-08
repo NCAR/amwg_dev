@@ -1,0 +1,38 @@
+2025-12-08 11:22:22: ./create_newcase --compset HIST_CAM70%LT_CLM60%SP_CICE%PRES_DOCN%DOM_MOSART_DGLC%NOEVOLVE_SWAV_SESP --res ne30pg3_ne30pg3_mg17 --case /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_134.FHISTC_LTso.ne30.baseline_DGLC.001 --run-unsupported --project 93300722
+ ---------------------------------------------------
+2025-12-08 11:22:22: Compset longname is HIST_CAM70%LT_CLM60%SP_CICE%PRES_DOCN%DOM_MOSART_DGLC%NOEVOLVE_SWAV_SESP
+ ---------------------------------------------------
+2025-12-08 11:22:22: Compset specification file is /glade/work/hannay/cesm_tags/cam6_4_134/cime_config/config_compsets.xml
+ ---------------------------------------------------
+2025-12-08 11:22:22: Pes     specification file is /glade/work/hannay/cesm_tags/cam6_4_134/cime_config/config_pes.xml
+ ---------------------------------------------------
+2025-12-08 11:22:22: Forcing is Historic transient 
+ ---------------------------------------------------
+2025-12-08 11:22:22: Using 1 coupler instances
+ ---------------------------------------------------
+2025-12-08 11:22:22: Component ATM is CAM cam7 physics:CAM low top model 
+ ---------------------------------------------------
+2025-12-08 11:22:22: ATM_GRID is ne30np4.pg3
+ ---------------------------------------------------
+2025-12-08 11:22:22: Component LND is clm6.0:Satellite phenology:
+ ---------------------------------------------------
+2025-12-08 11:22:22: LND_GRID is ne30np4.pg3
+ ---------------------------------------------------
+2025-12-08 11:22:22: Component ICE is Sea ICE (cice) model version 6 :prescribed cice
+ ---------------------------------------------------
+2025-12-08 11:22:22: ICE_GRID is ne30np4.pg3
+ ---------------------------------------------------
+2025-12-08 11:22:22: Component OCN is DOCN   prescribed ocean mode
+ ---------------------------------------------------
+2025-12-08 11:22:22: OCN_GRID is ne30np4.pg3
+ ---------------------------------------------------
+2025-12-08 11:22:22: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+ ---------------------------------------------------
+2025-12-08 11:22:22: ROF_GRID is r05
+ ---------------------------------------------------
+2025-12-08 11:22:22: Component GLC is Data glc model (DGLC) no evolve mode 
+ ---------------------------------------------------
+2025-12-08 11:22:22: GLC_GRID is gris4
+ ---------------------------------------------------
+2025-12-08 11:22:22: ESP_GRID is None
+ ---------------------------------------------------
