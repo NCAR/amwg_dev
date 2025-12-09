@@ -36,3 +36,5 @@ cd "${CASEDIR}"
 
 ./xmlchange REST_OPTION=nyears,REST_N=1,DOUT_S_SAVE_INTERIM_RESTART_FILES=TRUE
 
+./xmlchange JOB_WALLCLOCK_TIME=24:00:00 --subgroup case.run
+
