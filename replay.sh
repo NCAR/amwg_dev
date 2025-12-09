@@ -26,3 +26,7 @@ cd "${CASEDIR}"
 
 ./xmlchange NTASKS=2700
 
+./case.setup --reset
+
+./xmlchange DOUT_S_ROOT=/glade/campaign/cesm/community/amwg/cam_hr/$CASE
+
