@@ -42,3 +42,7 @@ cd "${CASEDIR}"
 
 ./xmlchange JOB_PRIORITY=premium
 
+./preview_namelists
+
+./case.build
+
