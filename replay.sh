@@ -48,3 +48,5 @@ cd "${CASEDIR}"
 
 ./xmlchange DOUT_S_ROOT=/glade/campaign/cesm/community/amwg/cam_hr/$CASE
 
+./xmlchange PROJECT=CESM0023,RESUBMIT=3,STOP_N=5,STOP_OPTION=nyears
+
