@@ -20,3 +20,9 @@ cd "${CASEDIR}"
 
 ./xmlchange CASE_GIT_REPOSITORY=git@github.com:NCAR/amwg_dev.git
 
+./preview_namelists
+
+./preview_namelists
+
+./case.build
+
