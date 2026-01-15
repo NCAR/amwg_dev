@@ -807,3 +807,4 @@ Submitting job script qsub -q develop -l walltime=06:00:00 -A CESM0023 -l job_pr
 Submitted job id is 4641859.desched1
 Submitted job case.run with id 4641858.desched1
 Submitted job case.st_archive with id 4641859.desched1
+ERROR: Command: 'git -C /glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_142.FHISTC_LTso.ne30.271_pda.001 commit -m "case.run:4641858.desched1, case.st_archive:4641859.desched1"' failed with error 'fatal: cannot lock ref 'HEAD': is at d355c8e451e97db9d32a6d67adea5ef201824d5d but expected a3303ad070f2c070e9996a99c1cfc71bcc47969f' from dir '/glade/campaign/cesm/cesmdata/cseg/runs/cesm2_0/f.e30_cam6_4_142.FHISTC_LTso.ne30.271_pda.001'
